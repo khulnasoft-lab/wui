@@ -1,0 +1,14 @@
+.euiHeaderBreadcrumbs {
+  .euiBreadcrumb {
+    &::after {
+      content: '>';
+      margin: 0 $euiBreadcrumbSpacing;
+      font-size: $euiSize;
+      opacity: .6;
+      transform: none;
+      width: unset;
+      height: unset;
+      background: transparent;
+    }
+  }
+}

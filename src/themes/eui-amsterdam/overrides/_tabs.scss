@@ -1,0 +1,22 @@
+// Fixed heights ensure proper alignment with pixel grid
+
+.euiTab {
+  font-weight: $euiFontWeightMedium;
+  height: $euiSizeXXL + $euiSizeS;
+
+  &.euiTab-isSelected {
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.euiTabs--small .euiTab {
+  height: $euiSizeXXL;
+}
+
+.euiTabs--large .euiTab {
+  @include fontSize($euiTabFontSizeL);
+  height: $euiSizeXXL + $euiSizeS;
+}
