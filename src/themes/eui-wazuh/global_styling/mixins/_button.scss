@@ -17,7 +17,7 @@
   }
 }
 
-// Creates the Amsterdam style of button with a transparent background
+// Creates the Wazuh style of button with a transparent background
 @mixin euiButtonDefaultStyle($color, $transparency: .8) {
   $percentConversion: $transparency * 100%;
   // This variable simulates the possibly darkest background the button could be on

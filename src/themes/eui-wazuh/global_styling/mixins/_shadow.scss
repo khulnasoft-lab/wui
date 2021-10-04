@@ -56,7 +56,7 @@
 @mixin euiBottomShadow(
   $color: $euiShadowColorLarge,
   $opacity: 0,
-  $adjustBorders: false  // Deprecated in Amsterdam but left for BWC
+  $adjustBorders: false  // Deprecated in Wazuh but left for BWC
 ) {
   box-shadow:
     0 1px 5px rgba($color, shadowOpacity(.1)),
@@ -72,7 +72,7 @@
 @mixin euiBottomShadowLarge(
   $color: $euiShadowColorLarge,
   $opacity: 0,
-  $adjustBorders: false, // Deprecated in Amsterdam but left for BWC
+  $adjustBorders: false, // Deprecated in Wazuh but left for BWC
   $reverse: false
 ) {
   @if ($reverse) {

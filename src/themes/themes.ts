@@ -32,11 +32,11 @@ export const EUI_THEMES: EUI_THEME[] = [
     value: 'dark',
   },
   {
-    text: 'Amsterdam: Light',
-    value: 'amsterdam-light',
+    text: 'Wazuh: Light',
+    value: 'wazuh-light',
   },
   {
-    text: 'Amsterdam: Dark',
-    value: 'amsterdam-dark',
+    text: 'Wazuh: Dark',
+    value: 'wazuh-dark',
   },
 ];

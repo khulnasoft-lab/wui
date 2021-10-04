@@ -1,8 +1,8 @@
 // This is the default theme.
-@import 'themes/eui-amsterdam/eui_amsterdam_colors_light';
+@import 'themes/eui-wazuh/eui_wazuh_colors_light';
 
 // Global styling
-@import 'themes/eui-amsterdam/global_styling/index';
+@import 'themes/eui-wazuh/global_styling/index';
 
 // Components
 @import 'components/index';
@@ -12,4 +12,4 @@
 
 // Component overrides
 // Comes after the component import and overrides via cascade
-@import 'themes/eui-amsterdam/overrides/index';
+@import 'themes/eui-wazuh/overrides/index';

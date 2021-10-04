@@ -42,7 +42,7 @@
     display: none !important; // sass-lint:disable-line no-important
   }
 
-  // Only the header breadcrumbs get the new Amsterdam style so that there can
+  // Only the header breadcrumbs get the new Wazuh style so that there can
   // still be default text only breadcrumbs for places like EuiControlBar
   .euiBreadcrumb {
     @include euiButtonDefaultStyle($euiTextColor);
