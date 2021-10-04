@@ -3,7 +3,7 @@ $euiFormControlCompressedBorderRadius: $euiBorderRadiusSmall;
 
 $euiFormControlBoxShadow: 0 0;
 
-$euiCheckboxBorderRadius: $euiBorderRadiusSmall;
+$euiCheckboxBorderRadius: $euiBorderRadiusSmall * .5;
 
 // Focus
 $euiFocusBorderColorGeneral: $euiFocusBorderColor;
