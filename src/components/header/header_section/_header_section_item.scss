@@ -13,6 +13,10 @@
     background: $euiBorderColor;
     left: 0;
   }
+
+  &.euiHeaderSectionItem--grow {
+    flex-grow: 1;
+  }
 }
 
 .euiHeaderSectionItem__button {

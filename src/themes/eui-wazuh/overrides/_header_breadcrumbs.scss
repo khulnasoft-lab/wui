@@ -1,10 +1,18 @@
 .euiHeaderBreadcrumbs {
-  .euiBreadcrumb {
-    &::after {
+  .euiBreadcrumbSeparator {
+    flex-shrink: 0;
+    display: inline-block;
+    margin-right: 8px;
+    width: unset;
+    height: 30px;
+    transform: none;
+    background: transparent;
+    opacity: .6;
+
+    & ::after {
       content: '>';
       margin: 0 $euiBreadcrumbSpacing;
       font-size: $euiSize;
-      opacity: .6;
       transform: none;
       width: unset;
       height: unset;

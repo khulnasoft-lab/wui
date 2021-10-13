@@ -37,6 +37,7 @@ export type FlyoutMenuItem = EuiListGroupItemProps & {
 
 export interface EuiNavDrawerGroupProps extends EuiListGroupProps {
   listItems?: FlyoutMenuItem[];
+  navIsLocked?: any;
 
   /**
    * While not normally required, it is required to pass a function for handling
@@ -58,6 +59,7 @@ export interface EuiNavDrawerGroupProps extends EuiListGroupProps {
 export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
   className,
   listItems,
+  navIsLocked,
   flyoutMenuButtonClick,
   onClose = () => {},
   ...rest

@@ -35,6 +35,15 @@
     }
   }
 
+  &--compressed {
+    box-shadow: none;
+    padding: 0;
+
+    .euiDatePicker {
+      height: $euiFormControlLayoutGroupInputCompressedHeight;
+    }
+  }
+
   // Direct descendent selectors to override `> span`
 
   > .euiDatePickerRange__delimeter {

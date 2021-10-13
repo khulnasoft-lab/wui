@@ -1,7 +1,8 @@
-import React, { Fragment, useState, useRef } from 'react';
+import React, { Fragment, useState, useRef, useEffect } from 'react';
 
 import {
-  EuiAvatar,
+  EuiFlexGroup,
+  EuiFlexItem,
   EuiButton,
   EuiFocusTrap,
   EuiHeader,
@@ -25,10 +26,25 @@ import {
   EuiPageHeaderSection,
   EuiShowFor,
   EuiTitle,
+  EuiFormRow,
+  EuiButtonToggle,
+  EuiToolTip,
+  EuiButtonIcon,
+  EuiButtonEmpty,
 } from '../../../../src/components';
+import classNames from 'classnames';
+import { DatePicker, MultiSelect, Searchbar } from './components';
 
 export default () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [toggleAdvanced, setToggleAdvanced] = useState(false);
+  const [isNavDrawerLocked, setIsNavDrawerLocked] = useState(false);
+
+  const onToggleAdvancedChange = e => setToggleAdvanced(e.target.checked);
+
+  useEffect(() => {
+    document.body.classList.add('euiBody--headerIsFixed--triple');
+  }, []);
 
   const faveExtraAction = {
     color: 'subdued',
@@ -379,6 +395,8 @@ export default () => {
 
   const toggleFullScreen = () => setIsFullScreen(isFullScreen => !isFullScreen);
 
+  const onNavDrawerLocked = isLocked => setIsNavDrawerLocked(isLocked);
+
   const renderLogo = () => (
     <EuiHeaderLogo
       iconType="logoKibana"
@@ -407,27 +425,10 @@ export default () => {
         className: 'customClass',
       },
       {
-        text: 'Truncation test is here for a really long item',
+        text: 'Agents',
         href: '#',
         onClick: e => {
           e.preventDefault();
-          console.log('You clicked truncation test');
-        },
-      },
-      {
-        text: 'hidden',
-        href: '#',
-        onClick: e => {
-          e.preventDefault();
-          console.log('You clicked hidden');
-        },
-      },
-      {
-        text: 'Users',
-        href: '#',
-        onClick: e => {
-          e.preventDefault();
-          console.log('You clicked users');
         },
       },
       {
@@ -442,6 +443,11 @@ export default () => {
 
   let fullScreenDisplay;
 
+  const headerClasses = classNames(
+    { 'euiNavDrawer--expanded': isNavDrawerLocked },
+    { 'euiHeader--collapsed': !toggleAdvanced }
+  );
+
   if (isFullScreen) {
     fullScreenDisplay = (
       <EuiFocusTrap>
@@ -453,7 +459,7 @@ export default () => {
             height: '100%',
             width: '100%',
           }}>
-          <EuiHeader>
+          <EuiHeader position="fixed">
             <EuiHeaderSection grow={false}>
               <EuiShowFor sizes={['xs', 's']}>
                 <EuiHeaderSectionItem border="right">
@@ -464,23 +470,112 @@ export default () => {
                 {renderLogo()}
               </EuiHeaderSectionItem>
               <EuiHeaderSectionItem border="right">
-                <EuiHeaderSectionItemButton aria-label="Spaces menu">
-                  <EuiAvatar type="space" name="Sales Team" size="s" />
-                </EuiHeaderSectionItemButton>
+                {renderBreadcrumbs()}
               </EuiHeaderSectionItem>
             </EuiHeaderSection>
-
-            {renderBreadcrumbs()}
-
-            <EuiHeaderSection side="right">
+            {/* Basic filters */}
+            <EuiHeaderSection grow={false}>
               <EuiHeaderSectionItem>
-                <EuiHeaderSectionItemButton aria-label="Account menu">
-                  <EuiAvatar name="John Username" size="s" />
+                {!toggleAdvanced ? (
+                  <EuiFlexGroup gutterSize="xs" justifyContent="spaceEvenly">
+                    <EuiFlexItem grow={false}>
+                      <EuiFormRow display="rowCompressed">
+                        <MultiSelect />
+                      </EuiFormRow>
+                    </EuiFlexItem>
+                    <EuiFlexItem grow={false}>
+                      <EuiFormRow display="rowCompressed">
+                        <MultiSelect />
+                      </EuiFormRow>
+                    </EuiFlexItem>
+                  </EuiFlexGroup>
+                ) : (
+                  <></>
+                )}
+              </EuiHeaderSectionItem>
+            </EuiHeaderSection>
+            <EuiHeaderSection grow={false}>
+              <EuiHeaderSectionItem>
+                {!toggleAdvanced ? (
+                  <EuiFlexGroup gutterSize="l">
+                    <EuiFlexItem grow={false}>
+                      <EuiFormRow display="rowCompressed">
+                        <DatePicker />
+                      </EuiFormRow>
+                    </EuiFlexItem>
+                  </EuiFlexGroup>
+                ) : (
+                  <></>
+                )}
+              </EuiHeaderSectionItem>
+            </EuiHeaderSection>
+            {/**** Notifications ****/}
+            <EuiHeaderSection grow={false}>
+              {/**** Advanced button ****/}
+              <EuiHeaderSectionItem>
+                <EuiFormRow display="rowCompressed">
+                  <EuiToolTip content="Advanced search">
+                    <EuiButtonToggle
+                      iconType="controlsHorizontal"
+                      label={'Advanced'}
+                      fill={toggleAdvanced}
+                      onChange={onToggleAdvancedChange}
+                      isSelected={toggleAdvanced}
+                      size={'s'}
+                    />
+                  </EuiToolTip>
+                </EuiFormRow>
+              </EuiHeaderSectionItem>
+              <EuiHeaderSectionItem>
+                <EuiHeaderSectionItemButton aria-label="Notifications">
+                  <EuiToolTip content="Notifications">
+                    <EuiIcon
+                      color="primary"
+                      size="s"
+                      aria-label="Notifications"
+                      type="bell"
+                    />
+                  </EuiToolTip>
                 </EuiHeaderSectionItemButton>
               </EuiHeaderSectionItem>
             </EuiHeaderSection>
           </EuiHeader>
-          <EuiNavDrawer ref={navDrawerRef}>
+          {/**** Advanced Filtering Navbar ****/}
+          <EuiHeader position="fixed" className={headerClasses}>
+            <EuiHeaderSection grow>
+              <EuiHeaderSectionItem grow>
+                <Searchbar />
+              </EuiHeaderSectionItem>
+            </EuiHeaderSection>
+          </EuiHeader>
+          {/**** Selected Items Navbar ****/}
+          <EuiHeader position="fixed" className={headerClasses}>
+            <EuiHeaderSection grow={false}>
+              <EuiHeaderSectionItem>
+                <EuiToolTip content="Add filter">
+                  <EuiButtonIcon
+                    size="s"
+                    aria-label="Add filter"
+                    iconType="plusInCircle"
+                  />
+                </EuiToolTip>
+                <EuiButtonEmpty>agent.name: Windows 3.11</EuiButtonEmpty>
+                <EuiButtonIcon
+                  size="s"
+                  aria-label="Remove filter"
+                  iconType="cross"
+                />
+                <EuiButtonEmpty>rule.level: 14</EuiButtonEmpty>
+                <EuiButtonIcon
+                  size="s"
+                  aria-label="Remove filter"
+                  iconType="cross"
+                />
+              </EuiHeaderSectionItem>
+            </EuiHeaderSection>
+          </EuiHeader>
+          {/**** Navigation Side Panel ****/}
+          <EuiNavDrawer ref={navDrawerRef} onIsLockedUpdate={onNavDrawerLocked}>
             <EuiNavDrawerGroup listItems={topLinks} />
             <EuiHorizontalRule margin="none" />
             <EuiNavDrawerGroup listItems={analyzeLinks} />

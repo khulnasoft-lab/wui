@@ -18,27 +18,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
           class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction navDrawerExpandButton-isCollapsed"
+            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
-            <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+            <button
+              class="euiListGroupItem__button"
+              data-test-subj="navDrawerExpandButton-isCollapsed"
+              type="button"
             >
-              <button
-                class="euiListGroupItem__button"
-                data-test-subj="navDrawerExpandButton-isCollapsed"
-                type="button"
+              <div
+                class="euiListGroupItem__icon"
+                data-euiicon-type="lockOpen"
+              />
+              <span
+                class="euiListGroupItem__label"
+                title="Undocked"
               >
-                <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="menuRight"
-                />
-                <span
-                  class="euiListGroupItem__label"
-                >
-                  Expand
-                </span>
-              </button>
-            </span>
+                Undocked
+              </span>
+            </button>
           </li>
         </ul>
         <ul
@@ -285,27 +282,24 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
           class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction navDrawerExpandButton-isCollapsed"
+            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
-            <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+            <button
+              class="euiListGroupItem__button"
+              data-test-subj="navDrawerExpandButton-isCollapsed"
+              type="button"
             >
-              <button
-                class="euiListGroupItem__button"
-                data-test-subj="navDrawerExpandButton-isCollapsed"
-                type="button"
+              <div
+                class="euiListGroupItem__icon"
+                data-euiicon-type="lockOpen"
+              />
+              <span
+                class="euiListGroupItem__label"
+                title="Undocked"
               >
-                <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="menuRight"
-                />
-                <span
-                  class="euiListGroupItem__label"
-                >
-                  Expand
-                </span>
-              </button>
-            </span>
+                Undocked
+              </span>
+            </button>
           </li>
         </ul>
         <ul
@@ -498,27 +492,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
           class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction navDrawerExpandButton-isCollapsed"
+            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
-            <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+            <button
+              class="euiListGroupItem__button"
+              data-test-subj="navDrawerExpandButton-isCollapsed"
+              type="button"
             >
-              <button
-                class="euiListGroupItem__button"
-                data-test-subj="navDrawerExpandButton-isCollapsed"
-                type="button"
+              <div
+                class="euiListGroupItem__icon"
+                data-euiicon-type="lockOpen"
+              />
+              <span
+                class="euiListGroupItem__label"
+                title="Undocked"
               >
-                <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="menuRight"
-                />
-                <span
-                  class="euiListGroupItem__label"
-                >
-                  Expand
-                </span>
-              </button>
-            </span>
+                Undocked
+              </span>
+            </button>
           </li>
         </ul>
         <ul

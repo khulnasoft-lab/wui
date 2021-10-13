@@ -36,6 +36,7 @@ export type EuiHeaderSectionItemProps = CommonProps & {
    * Not supported in Wazuh theme.
    */
   border?: Border;
+  grow?: boolean;
   /**
    * ReactNode to render as this component's content
    */
@@ -44,6 +45,7 @@ export type EuiHeaderSectionItemProps = CommonProps & {
 
 export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> = ({
   border = 'left',
+  grow = false,
   children,
   className,
   ...rest
@@ -51,6 +53,7 @@ export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> 
   const classes = classNames(
     'euiHeaderSectionItem',
     borderToClassNameMap[border],
+    { 'euiHeaderSectionItem--grow': grow },
     className
   );
 

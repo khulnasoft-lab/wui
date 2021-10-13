@@ -38,6 +38,7 @@ import { EuiI18n } from '../i18n';
 import { EuiFlexItem, EuiFlexGroup } from '../flex';
 import { throttle } from '../color_picker/utils';
 import { CommonProps } from '../common';
+import { EuiAccordion } from '../accordion';
 
 const MENU_ELEMENT_ID = 'navDrawerMenu';
 
@@ -142,7 +143,7 @@ export class EuiNavDrawer extends Component<
 
     this.setState({
       isLocked: !isLocked,
-      isCollapsed: false,
+      isCollapsed: isLocked,
       outsideClickDisabled: !isLocked,
     });
   };
@@ -313,13 +314,27 @@ export class EuiNavDrawer extends Component<
 
         // Check if child is an EuiNavDrawerGroup and if it does have a flyout, add the expand function
         if (child.type === EuiNavDrawerGroup) {
-          return React.cloneElement(child, {
-            flyoutMenuButtonClick: this.expandFlyout,
-            showToolTips: this.state.toolTipsEnabled && this.props.showToolTips,
-          });
+          return !this.state.isLocked
+            ? React.cloneElement(child, {
+                flyoutMenuButtonClick: this.expandFlyout,
+                showToolTips:
+                  this.state.toolTipsEnabled && this.props.showToolTips,
+              })
+            : child.props.listItems.map((listItem: any) => (
+                <EuiAccordion
+                  id={listItem.label}
+                  paddingSize="s"
+                  arrowDisplay="right"
+                  buttonContent={<EuiListGroup listItems={[listItem]} />}>
+                  <EuiListGroup
+                    flush={true}
+                    listItems={listItem?.flyoutMenu?.listItems}
+                    size="s"
+                  />
+                </EuiAccordion>
+              ));
         }
       }
-
       return child;
     });
   };
@@ -353,26 +368,11 @@ export class EuiNavDrawer extends Component<
         <EuiListGroup className="euiNavDrawer__expandButton" flush>
           <EuiI18n
             tokens={[
-              'euiNavDrawer.sideNavCollapse',
-              'euiNavDrawer.sideNavExpand',
-              'euiNavDrawer.sideNavLockAriaLabel',
               'euiNavDrawer.sideNavLockExpanded',
               'euiNavDrawer.sideNavLockCollapsed',
             ]}
-            defaults={[
-              'Collapse',
-              'Expand',
-              'Dock navigation',
-              'Navigation is docked',
-              'Navigation is undocked',
-            ]}>
-            {([
-              sideNavCollapse,
-              sideNavExpand,
-              sideNavLockAriaLabel,
-              sideNavLockExpanded,
-              sideNavLockCollapsed,
-            ]: string[]) => (
+            defaults={['Docked', 'Undocked']}>
+            {([sideNavLockExpanded, sideNavLockCollapsed]: string[]) => (
               <EuiListGroupItem
                 buttonRef={this.expandButtonRef}
                 className={
@@ -385,22 +385,14 @@ export class EuiNavDrawer extends Component<
                     ? 'navDrawerExpandButton-isCollapsed'
                     : 'navDrawerExpandButton-isExpanded'
                 }
-                extraAction={{
-                  'aria-label': sideNavLockAriaLabel,
-                  'aria-pressed': this.state.isLocked ? true : false,
-                  className: 'euiNavDrawer__expandButtonLockAction',
-                  color: 'text',
-                  iconType: this.state.isLocked ? 'lock' : 'lockOpen',
-                  iconSize: 's',
-                  onClick: this.sideNavLockClicked,
-                  title: this.state.isLocked
+                iconType={this.state.isLocked ? 'lock' : 'lockOpen'}
+                label={
+                  this.state.isLocked
                     ? sideNavLockExpanded
-                    : sideNavLockCollapsed,
-                }}
-                iconType={this.state.isCollapsed ? 'menuRight' : 'menuLeft'}
-                label={this.state.isCollapsed ? sideNavExpand : sideNavCollapse}
-                onClick={this.collapseButtonClick}
-                showToolTip={this.state.isCollapsed}
+                    : sideNavLockCollapsed
+                }
+                onClick={this.sideNavLockClicked}
+                showToolTip={this.state.isLocked}
                 size="s"
               />
             )}
@@ -409,7 +401,7 @@ export class EuiNavDrawer extends Component<
       );
     }
 
-    const flyoutContent = (
+    const flyoutContent = !this.state.isLocked ? (
       <EuiNavDrawerFlyout
         id="navDrawerFlyout"
         isCollapsed={this.state.flyoutIsCollapsed}
@@ -418,6 +410,8 @@ export class EuiNavDrawer extends Component<
         title={this.state.navFlyoutTitle}
         wrapText
       />
+    ) : (
+      <></>
     );
 
     // Add an onClick that expands the flyout sub menu for any list items (links) that have a flyoutMenu prop (sub links)
@@ -440,7 +434,6 @@ export class EuiNavDrawer extends Component<
                 id={MENU_ELEMENT_ID}
                 className={menuClasses}
                 onClick={this.handleDrawerMenuClick}>
-                {/* TODO: Add a "skip navigation" keyboard only button */}
                 {footerContent}
                 {modifiedChildren}
               </div>

@@ -1,3 +1,6 @@
-.euiFilterButton {
-  border-radius: 0;
+.euiFormRow--compressed {
+  .euiFilterGroup {
+    box-shadow: none;
+    border-radius: $euiBorderRadiusSmall;
+  }
 }

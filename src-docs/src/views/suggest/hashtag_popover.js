@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 import {
   EuiButton,
-  EuiButtonEmpty,
+  EuiButtonIcon,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiIcon,
   EuiListGroup,
   EuiListGroupItem,
   EuiPopover,
@@ -26,13 +25,12 @@ export default props => {
   };
 
   const hashtagButton = (
-    <EuiButtonEmpty
+    <EuiButtonIcon
       onClick={togglePopover}
-      size="xs"
-      iconType="arrowDown"
-      iconSide="right">
-      <EuiIcon type="number" />
-    </EuiButtonEmpty>
+      size="m"
+      iconSize="m"
+      iconType="save"
+    />
   );
 
   return (
