@@ -30,6 +30,7 @@ export default props => {
       size="m"
       iconSize="m"
       iconType="save"
+      aria-label="Save"
     />
   );
 

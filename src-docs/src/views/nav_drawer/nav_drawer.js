@@ -33,7 +33,7 @@ import {
   EuiButtonEmpty,
 } from '../../../../src/components';
 import classNames from 'classnames';
-import { DatePicker, MultiSelect, Searchbar } from './components';
+import { DatePicker, MultiSelect, Searchbar, Notice } from './components';
 
 export default () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -515,28 +515,35 @@ export default () => {
               <EuiHeaderSectionItem>
                 <EuiFormRow display="rowCompressed">
                   <EuiToolTip content="Advanced search">
-                    <EuiButtonToggle
-                      iconType="controlsHorizontal"
-                      label={'Advanced'}
-                      fill={toggleAdvanced}
-                      onChange={onToggleAdvancedChange}
-                      isSelected={toggleAdvanced}
-                      size={'s'}
-                    />
+                    <Notice active={true} top={45} right={3}>
+                      <EuiButtonToggle
+                        iconType="controlsHorizontal"
+                        label={'Advanced'}
+                        aria-label={'Advanced'}
+                        fill={toggleAdvanced}
+                        onChange={onToggleAdvancedChange}
+                        isSelected={toggleAdvanced}
+                        size={'s'}
+                      />
+                    </Notice>
                   </EuiToolTip>
                 </EuiFormRow>
               </EuiHeaderSectionItem>
               <EuiHeaderSectionItem>
-                <EuiHeaderSectionItemButton aria-label="Notifications">
+                <EuiFormRow display="rowCompressed">
                   <EuiToolTip content="Notifications">
-                    <EuiIcon
-                      color="primary"
-                      size="s"
-                      aria-label="Notifications"
-                      type="bell"
-                    />
+                    <Notice active={true} top={20} right={21}>
+                      <EuiButtonIcon
+                        iconType="bell"
+                        aria-label={'Notifications'}
+                        label={'Notifications'}
+                        color="primary"
+                        size={'m'}
+                        iconSize={'s'}
+                      />
+                    </Notice>
                   </EuiToolTip>
-                </EuiHeaderSectionItemButton>
+                </EuiFormRow>
               </EuiHeaderSectionItem>
             </EuiHeaderSection>
           </EuiHeader>

@@ -139,8 +139,8 @@ export class EuiNavDrawer extends Component<
       window.addEventListener('resize', this.functionToCallOnWindowResize);
     }
 
+    this.collapseFlyout();
     this.returnOnIsLockedUpdate(!isLocked);
-
     this.setState({
       isLocked: !isLocked,
       isCollapsed: isLocked,
@@ -325,7 +325,13 @@ export class EuiNavDrawer extends Component<
                   id={listItem.label}
                   paddingSize="s"
                   arrowDisplay="right"
-                  buttonContent={<EuiListGroup listItems={[listItem]} />}>
+                  buttonContent={
+                    <EuiListGroup
+                      listItems={[
+                        { label: listItem.label, iconType: listItem.iconType },
+                      ]}
+                    />
+                  }>
                   <EuiListGroup
                     flush={true}
                     listItems={listItem?.flyoutMenu?.listItems}

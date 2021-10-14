@@ -1,5 +1,36 @@
-.euiFormRow--compressed {
-  .euiSuperDatePicker {
-    height: 32px;
+.euiFormRow--compressed .euiSuperDatePicker {
+  $leftSideRadiusSmall: $euiFormControlCompressedBorderRadius 0 0 $euiFormControlCompressedBorderRadius;
+  $rightSideRadiusSmall: 0 $euiFormControlCompressedBorderRadius $euiFormControlCompressedBorderRadius 0;
+
+  height: 32px;
+  border-radius: $euiBorderRadiusSmall;
+
+  .euiFormControlLayout__prepend:first-child {
+    border-radius: $leftSideRadiusSmall;
+
+    [class*='euiButton'] {
+      border-radius: $leftSideRadiusSmall;
+    }
+  }
+
+  .euiFormControlLayout__append:last-child {
+    border-radius: $rightSideRadiusSmall;
+
+    [class*='euiButton'] {
+      border-radius: $rightSideRadiusSmall;
+    }
+  }
+
+  .euiFormControlLayout__childrenWrapper:nth-child(2) [class*='euiField'],
+  .euiFormControlLayout__childrenWrapper:nth-child(3) [class*='euiField'] {
+    border-radius: 0;
+  }
+
+  .euiFormControlLayout__childrenWrapper:first-child [class*='euiField'] {
+    border-radius: $leftSideRadiusSmall;
+  }
+
+  .euiFormControlLayout__childrenWrapper:last-child [class*='euiField'] {
+    border-radius: $rightSideRadiusSmall;
   }
 }
