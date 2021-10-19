@@ -1,5 +1,6 @@
 .euiCallOut {
   border-left: none;
+  border-radius: $euiBorderRadiusSmall;
 
   .euiCallOutHeader__title {
     font-weight: $euiFontWeightMedium;
