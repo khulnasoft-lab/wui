@@ -2,15 +2,9 @@
 @mixin euiFormControlFocusStyle($borderOnly: false) {
   // sass-lint:disable-block indentation, empty-args
   background-color: tintOrShade($euiColorEmptyShade, 0%, 40%);
-  border: 1px solid $euiFocusBorderColorGeneral;
+  box-shadow: inset 0 0 0 1px $euiFocusBorderColorGeneral;
   background-size: 100% 100%; // 1
 
-  @if ($borderOnly) {
-    box-shadow: inset 0 0 0 1px $euiFormBorderColor;
-  } @else {
-    box-shadow:
-      inset 0 0 0 1px $euiFormBorderColor;
-  }
 }
 
 // Removes euiSlightShadow
