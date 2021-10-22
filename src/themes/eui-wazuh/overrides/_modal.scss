@@ -1,3 +1,8 @@
 .euiModal {
   border: none;
 }
+
+.euiModal__closeIcon {
+  right: $euiSizeS;
+  top: $euiSizeS;
+}
