@@ -37,7 +37,7 @@ if (args.dry_run) {
   }
 
   // ensure git is on the master branch
-  await ensureMasterBranch();
+  //await ensureMasterBranch();
 
   // run linting and unit tests
   if (args.steps.indexOf('test') > -1) {
@@ -50,36 +50,36 @@ if (args.dry_run) {
   }
 
   
-  if (args.steps.indexOf('version') > -1) {
+  //if (args.steps.indexOf('version') > -1) {
     // prompt user for what type of version bump to make (major|minor|patch)
-    const versionTarget = await getVersionTypeFromChangelog();
+    //const versionTarget = await getVersionTypeFromChangelog();
 
     // build may have generated a new src-docs/src/i18ntokens.json file, dirtying the git workspace
     // it's important to track those changes with this release, so determine the changes and write them
     // to src-docs/src/i18ntokens_changelog.json, comitting both to the workspace before running `npm version`
-    execSync(`npm run update-token-changelog -- ${versionTarget}`, execOptions);
+    //execSync(`npm run update-token-changelog -- ${versionTarget}`, execOptions);
 
     // update package.json & package-lock.json version, git commit, git tag
-    execSync(`npm version ${versionTarget}`, execOptions);
-  }
+   // execSync(`npm version ${versionTarget}`, execOptions);
+  //}
 
-  if (args.steps.indexOf('tag') > -1) {
+  //if (args.steps.indexOf('tag') > -1) {
     // push the version commit & tag to upstream
-    execSync('git push upstream --tags', execOptions);
-  }
+  //  execSync('git push upstream --tags', execOptions);
+  //}
 
   if (args.steps.indexOf('publish') > -1) {
     // prompt user for npm 2FA
-    const otp = await getOneTimePassword();
+    //const otp = await getOneTimePassword();
 
     // publish new version to npm
-    execSync(`npm publish --otp=${otp}`, execOptions);
+    execSync(`npm publish`, execOptions);
   }
 
-  if (args.steps.indexOf('docs') > -1) {
+  //if (args.steps.indexOf('docs') > -1) {
     // update docs, git commit, git push
-    execSync('npm run sync-docs', execOptions);
-  }
+    //execSync('npm run sync-docs', execOptions);
+  //}
 }()).catch(e => console.error(e));
 
 function parseArguments() {
