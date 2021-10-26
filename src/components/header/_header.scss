@@ -19,13 +19,15 @@
   }
 }
 
-.euiHeader--fixed + .euiHeader--fixed {
+.euiHeader--fixed + .euiHeader--fixed,
+.euiHeader--fixed + .euiHeader--fixed + .euiHeader--fixed {
   top: $euiHeaderHeightCompensation;
   transition: all 150ms;
 
   &.euiHeader--collapsed {
     top: 0;
     z-index: 0;
+    box-shadow: none;
   }
 
   &.euiNavDrawer--expanded {
@@ -35,16 +37,6 @@
 
 .euiHeader--fixed + .euiHeader--fixed + .euiHeader--fixed {
   top: $euiHeaderHeightCompensation * 2;
-  transition: all 150ms;
-
-  &.euiHeader--collapsed {
-    top: 0;
-    z-index: 0;
-  }
-
-  &.euiNavDrawer--expanded {
-    padding-left: $euiNavDrawerWidthExpanded + $euiSizeM;
-  }
 }
 
 .euiHeader--dark {

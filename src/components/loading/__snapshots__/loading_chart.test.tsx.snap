@@ -1,98 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EuiLoadingChart is rendered 1`] = `
-<span
+<div
   aria-label="aria-label"
   class="euiLoadingChart testClass1 testClass2 euiLoadingChart--medium"
   data-test-subj="test subject string"
 >
-  <span
-    class="euiLoadingChart__bar"
+  <div
+    aria-label="animation"
+    role="button"
+    style="width:100%;height:100%;overflow:hidden;margin:0 auto;outline:none"
+    tabindex="0"
+    title=""
   />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-</span>
+</div>
 `;
 
 exports[`EuiLoadingChart mono is rendered 1`] = `
-<span
+<div
   class="euiLoadingChart euiLoadingChart--mono euiLoadingChart--medium"
 >
-  <span
-    class="euiLoadingChart__bar"
+  <div
+    aria-label="animation"
+    role="button"
+    style="width:100%;height:100%;overflow:hidden;margin:0 auto;outline:none"
+    tabindex="0"
+    title=""
   />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-</span>
+</div>
 `;
 
 exports[`EuiLoadingChart size l is rendered 1`] = `
-<span
+<div
   class="euiLoadingChart euiLoadingChart--large"
 >
-  <span
-    class="euiLoadingChart__bar"
+  <div
+    aria-label="animation"
+    role="button"
+    style="width:100%;height:100%;overflow:hidden;margin:0 auto;outline:none"
+    tabindex="0"
+    title=""
   />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-</span>
+</div>
 `;
 
 exports[`EuiLoadingChart size m is rendered 1`] = `
-<span
+<div
   class="euiLoadingChart euiLoadingChart--medium"
 >
-  <span
-    class="euiLoadingChart__bar"
+  <div
+    aria-label="animation"
+    role="button"
+    style="width:100%;height:100%;overflow:hidden;margin:0 auto;outline:none"
+    tabindex="0"
+    title=""
   />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-</span>
+</div>
 `;
 
 exports[`EuiLoadingChart size xl is rendered 1`] = `
-<span
+<div
   class="euiLoadingChart euiLoadingChart--xLarge"
 >
-  <span
-    class="euiLoadingChart__bar"
+  <div
+    aria-label="animation"
+    role="button"
+    style="width:100%;height:100%;overflow:hidden;margin:0 auto;outline:none"
+    tabindex="0"
+    title=""
   />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-  <span
-    class="euiLoadingChart__bar"
-  />
-</span>
+</div>
 `;
