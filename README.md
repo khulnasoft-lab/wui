@@ -12,7 +12,7 @@ You should check out our [living style guide][docs], which contains many example
 To install the Elastic UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
 
 ```
-yarn add @elastic/eui
+yarn add wazuh-wui
 ```
 
 Note that EUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume EUI][consuming].

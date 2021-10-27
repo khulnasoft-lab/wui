@@ -296,6 +296,7 @@ export default () => {
     {
       label: 'Enterprise Search',
       iconType: 'logoAppSearch',
+      isActive: true,
       flyoutMenu: {
         title: 'Enterprise search',
         listItems: [
@@ -314,6 +315,7 @@ export default () => {
             label: 'App search',
             href: '#/layout/nav-drawer',
             iconType: 'searchProfilerApp',
+            isActive: true,
             extraAction: {
               color: 'subdued',
               iconType: 'starEmpty',
@@ -399,7 +401,7 @@ export default () => {
 
   const renderLogo = () => (
     <EuiHeaderLogo
-      iconType="logoKibana"
+      iconType="logoWazuh"
       href="#/layout/nav-drawer"
       aria-label="Goes to home"
     />

@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import Lottie from 'react-lottie';
 import { CommonProps, keysOf } from '../common';
-import animation from './animations/loading-chart.json';
+import animation from './animations/loading-chart';
 
 const sizeToClassNameMap = {
   m: 'euiLoadingChart--medium',

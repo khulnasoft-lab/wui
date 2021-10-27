@@ -3,8 +3,6 @@
     "baseUrl": ".",
     "rootDir": ".",
 
-    "resolveJsonModule": true,
-
     // emit files to the `types` dir, these are ignored by everything but TS needs _somewhere_ to emit
     "outDir": "types",
 
