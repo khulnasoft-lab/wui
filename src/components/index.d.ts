@@ -23,3 +23,8 @@ declare module 'wazuh-wui' {
   // @ts-ignore path only exists at build time
   export * from 'wazuh-wui/src/components/date_picker/react-datepicker'; // eslint-disable-line import/no-unresolved
 }
+
+declare module '*.json' {
+  const value: any;
+  export default value;
+}

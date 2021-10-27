@@ -23,6 +23,14 @@
     &-hasFooter {
       margin-bottom: $euiSizeXXL;
     }
+
+    .euiAccordion__button {
+      padding: $euiSizeS;
+    }
+
+    .euiListGroupItem__button {
+      padding: $euiSizeM $euiSize;
+    }
   }
 
   .euiNavDrawer__expandButton {
@@ -34,9 +42,6 @@
     transition: width $euiAnimSpeedExtraFast;
     z-index: $euiZHeader + 1;
 
-    .euiListGroupItem__button {
-      padding: $euiSizeM $euiSize;
-    }
 
     .navDrawerExpandButton-isCollapsed .euiListGroupItem__button {
       max-width: 100%;
@@ -58,10 +63,6 @@
       &::-webkit-scrollbar {
         width: 0;
         height: 0;
-      }
-
-      .euiListGroup:not(.euiNavDrawer__expandButton) .euiListGroupItem__button {
-        max-width: $euiSizeXL;
       }
 
       .euiListGroupItem__extraAction {

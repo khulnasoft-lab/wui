@@ -323,19 +323,21 @@ export class EuiNavDrawer extends Component<
             : child.props.listItems.map((listItem: any) => (
                 <EuiAccordion
                   id={listItem.label}
-                  paddingSize="s"
+                  paddingSize="none"
                   arrowDisplay="right"
                   buttonContent={
                     <EuiListGroup
+                      flush
+                      gutterSize="none"
                       listItems={[
                         { label: listItem.label, iconType: listItem.iconType },
                       ]}
+                      className={this.props.className}
                     />
                   }>
                   <EuiListGroup
-                    flush={true}
+                    flush
                     listItems={listItem?.flyoutMenu?.listItems}
-                    size="s"
                   />
                 </EuiAccordion>
               ));
@@ -371,7 +373,10 @@ export class EuiNavDrawer extends Component<
     let footerContent;
     if (showExpandButton) {
       footerContent = (
-        <EuiListGroup className="euiNavDrawer__expandButton" flush>
+        <EuiListGroup
+          className="euiNavDrawer__expandButton"
+          flush
+          gutterSize="none">
           <EuiI18n
             tokens={[
               'euiNavDrawer.sideNavLockExpanded',
@@ -399,7 +404,6 @@ export class EuiNavDrawer extends Component<
                 }
                 onClick={this.sideNavLockClicked}
                 showToolTip={this.state.isLocked}
-                size="s"
               />
             )}
           </EuiI18n>

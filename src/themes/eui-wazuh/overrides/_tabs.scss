@@ -3,6 +3,7 @@
 .euiTab {
   font-weight: $euiFontWeightMedium;
   height: $euiSizeXXL + $euiSizeS;
+  border-radius: $euiSizeS $euiSizeS 0 0;
 
   &.euiTab-isSelected {
 
@@ -14,6 +15,7 @@
 
 .euiTabs--small .euiTab {
   height: $euiSizeXXL;
+  border-radius: $euiSizeXS $euiSizeXS 0 0;
 }
 
 .euiTabs--large .euiTab {

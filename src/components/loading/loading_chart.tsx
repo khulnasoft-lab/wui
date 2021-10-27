@@ -19,7 +19,9 @@
 
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import Lottie from 'react-lottie';
 import { CommonProps, keysOf } from '../common';
+import animation from './animations/loading-chart';
 
 const sizeToClassNameMap = {
   m: 'euiLoadingChart--medium',
@@ -45,13 +47,14 @@ export const EuiLoadingChart: FunctionComponent<CommonProps &
     className,
     sizeToClassNameMap[size]
   );
-
+  const options = {
+    animationData: animation,
+    loop: true,
+    autoPlay: true,
+  };
   return (
-    <span className={classes} {...rest}>
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
-    </span>
+    <div className={classes} {...rest}>
+      <Lottie options={options} />
+    </div>
   );
 };

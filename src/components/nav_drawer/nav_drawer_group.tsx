@@ -113,6 +113,8 @@ export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
     <EuiListGroup
       className={classNames('euiNavDrawerGroup', className)}
       listItems={newListItems}
+      flush
+      size={'l'}
       {...rest}
     />
   );

@@ -12,11 +12,16 @@
   display: none !important; // sass-lint:disable-line no-important
 }
 
+.euiHeaderSectionItem__button {
+  border-radius: $euiSizeS;
+}
+
 .euiHeaderLogo {
   @include euiBreakpoint('xs') {
     padding-left: $euiSizeXS;
   }
 
+  border-radius: $euiSizeS;
   padding-left: $euiSizeS;
   padding-right: $euiSizeS;
   min-width: $euiHeaderChildSize;

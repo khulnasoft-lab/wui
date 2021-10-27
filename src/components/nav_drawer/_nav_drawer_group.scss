@@ -8,7 +8,6 @@
 
     &:focus {
       background-color: $euiFocusBackgroundColor;
-      border-radius: $euiBorderRadius;
     }
   }
 
@@ -36,5 +35,15 @@
     left: -$euiSizeXS;
     right: -$euiSizeXS;
     bottom: -$euiSizeXS;
+  }
+}
+
+.euiNavDrawerMenu {
+  .euiListGroupItem:not(:first-of-type) {
+    margin-top: 0;
+  }
+
+  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button {
+    box-shadow: 3px 0 0 inset $euiColorPrimary;
   }
 }
