@@ -1,9 +1,13 @@
 ## Wazuh UI v1.0.0
 
 ### Added
+
 - Wazuh UI Theme and Removed Amsterdam theme [#5](https://github.com/wazuh/wui/pull/5)
 
-- Support for Wazuh 4.2.4
+### Changed
+
+- Refactored Nav Drawer
+
 
 ## [`master`](https://github.com/elastic/eui/tree/master)
 
