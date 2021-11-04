@@ -155,3 +155,8 @@
     width: $euiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
   }
 }
+
+.euiBody--navDrawerIsDocked {
+  padding-left: $euiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
+  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+}
