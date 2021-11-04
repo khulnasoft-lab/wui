@@ -110,11 +110,21 @@ export class EuiNavDrawer extends Component<
     if (this.props.isLocked) {
       window.addEventListener('resize', this.functionToCallOnWindowResize);
     }
+    this.setBodyDockedClass(this.props.isLocked);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.functionToCallOnWindowResize);
+    this.setBodyDockedClass(false);
   }
+
+  setBodyDockedClass = (navIsDocked: boolean | undefined) => {
+    if (navIsDocked) {
+      document.body.classList.add('euiBody--navDrawerIsDocked');
+    } else {
+      document.body.classList.remove('euiBody--navDrawerIsDocked');
+    }
+  };
 
   returnOnIsLockedUpdate = (isLockedState: EuiNavDrawerState['isLocked']) => {
     if (this.props.onIsLockedUpdate) {
@@ -141,6 +151,7 @@ export class EuiNavDrawer extends Component<
 
     this.collapseFlyout();
     this.returnOnIsLockedUpdate(!isLocked);
+    this.setBodyDockedClass(!isLocked);
     this.setState({
       isLocked: !isLocked,
       isCollapsed: isLocked,
