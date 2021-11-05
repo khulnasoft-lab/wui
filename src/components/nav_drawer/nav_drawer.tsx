@@ -331,27 +331,45 @@ export class EuiNavDrawer extends Component<
                 showToolTips:
                   this.state.toolTipsEnabled && this.props.showToolTips,
               })
-            : child.props.listItems.map((listItem: any) => (
-                <EuiAccordion
-                  id={listItem.label}
-                  paddingSize="none"
-                  arrowDisplay="right"
-                  buttonContent={
+            : child.props.listItems.map((listItem: any) =>
+                listItem?.flyoutMenu?.listItems.length ? (
+                  <EuiAccordion
+                    id={listItem.label}
+                    paddingSize="none"
+                    arrowDisplay="right"
+                    buttonContent={
+                      <EuiListGroup
+                        flush
+                        gutterSize="none"
+                        listItems={[
+                          {
+                            label: listItem.label,
+                            iconType: listItem.iconType,
+                          },
+                        ]}
+                        className={this.props.className}
+                      />
+                    }>
                     <EuiListGroup
                       flush
-                      gutterSize="none"
-                      listItems={[
-                        { label: listItem.label, iconType: listItem.iconType },
-                      ]}
-                      className={this.props.className}
+                      listItems={listItem?.flyoutMenu?.listItems}
                     />
-                  }>
+                  </EuiAccordion>
+                ) : (
                   <EuiListGroup
                     flush
-                    listItems={listItem?.flyoutMenu?.listItems}
+                    gutterSize="none"
+                    listItems={[
+                      {
+                        label: listItem.label,
+                        iconType: listItem.iconType,
+                        href: listItem.href,
+                      },
+                    ]}
+                    className={this.props.className}
                   />
-                </EuiAccordion>
-              ));
+                )
+              );
         }
       }
       return child;

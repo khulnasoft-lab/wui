@@ -46,4 +46,9 @@
   .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button {
     box-shadow: 3px 0 0 inset $euiColorPrimary;
   }
+
+  .euiAccordion__button > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
