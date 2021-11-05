@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import Lottie from 'react-lottie';
 import { CommonProps, keysOf } from '../common';
-import animation from './animations/loading-chart';
+import { chartGrey, chartColor } from './animations';
 
 const sizeToClassNameMap = {
   m: 'euiLoadingChart--medium',
@@ -43,12 +43,11 @@ export const EuiLoadingChart: FunctionComponent<CommonProps &
   }> = ({ size = 'm', mono = false, className, ...rest }) => {
   const classes = classNames(
     'euiLoadingChart',
-    { 'euiLoadingChart--mono': mono },
     className,
     sizeToClassNameMap[size]
   );
   const options = {
-    animationData: animation,
+    animationData: mono ? chartGrey : chartColor,
     loop: true,
     autoPlay: true,
   };
