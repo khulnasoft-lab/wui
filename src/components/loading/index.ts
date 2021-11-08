@@ -22,3 +22,5 @@ export { EuiLoadingElastic } from './loading_elastic';
 export { EuiLoadingChart } from './loading_chart';
 export { EuiLoadingContent } from './loading_content';
 export { EuiLoadingSpinner } from './loading_spinner';
+export { EuiLoadingRunningLines } from './loading_running_lines';
+export { EuiLoadingDots } from './loading_dots';
