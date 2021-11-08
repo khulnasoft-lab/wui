@@ -13941,7 +13941,7 @@ rehype-raw@^4.0.1:
   dependencies:
     hast-util-raw "^5.0.0"
 
-rehype-react@^6.0.0:
+rehype-react@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/rehype-react/-/rehype-react-6.1.0.tgz#95f8c936eea2159f92adfbf58e5e90be86a97cbf"
   integrity sha512-hQ4DSGOJKA1a87Ei4fJtSHzopbfgoHkwjWMCFpLrcVR5+AIyCOtHy4oQcpGF11kTZOU6oKmJ9UKzO/JpI/XZWA==
