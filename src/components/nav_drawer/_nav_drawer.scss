@@ -94,7 +94,21 @@
   }
 }
 
+.euiBody--navDrawerIsDocked {
+  padding-left: $euiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
+  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+}
+
+.euiBody--navDrawerNotDocked {
+  padding-left: $euiNavDrawerWidthCollapsed !important; // sass-lint:disable-line no-important
+  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+}
+
 @include euiBreakpoint('xs', 's') {
+  .euiBody--navDrawerNotDocked {
+    padding-left: unset !important; // sass-lint:disable-line no-important
+  }
+
   .euiNavDrawer {
     width: 0;
 
@@ -154,9 +168,4 @@
   .euiNavDrawer-isExpanded.euiNavDrawer-flyoutIsExpanded {
     width: $euiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
   }
-}
-
-.euiBody--navDrawerIsDocked {
-  padding-left: $euiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
-  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
 }

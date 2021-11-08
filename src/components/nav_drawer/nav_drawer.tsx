@@ -120,9 +120,11 @@ export class EuiNavDrawer extends Component<
 
   setBodyDockedClass = (navIsDocked: boolean | undefined) => {
     if (navIsDocked) {
+      document.body.classList.remove('euiBody--navDrawerNotDocked');
       document.body.classList.add('euiBody--navDrawerIsDocked');
     } else {
       document.body.classList.remove('euiBody--navDrawerIsDocked');
+      document.body.classList.add('euiBody--navDrawerNotDocked');
     }
   };
 
