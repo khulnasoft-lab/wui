@@ -11,6 +11,8 @@ import {
   EuiLoadingSpinner,
   EuiLoadingChart,
   EuiLoadingContent,
+  EuiLoadingRunningLines,
+  EuiLoadingDots,
 } from '../../../../src/components';
 import {
   loadingElasticConfig,
@@ -40,11 +42,19 @@ import LoadingContent from './loading_content';
 const loadingContentSource = require('!!raw-loader!./loading_content');
 const loadingContentHtml = renderToHtml(LoadingContent);
 
+import LoadingRunningLines from './loading_running_lines';
+const loadingRunningLinesSource = require('!!raw-loader!./loading_running_lines');
+const loadingRunningLinesHtml = renderToHtml(LoadingRunningLines);
+
+import LoadingDots from './loading_dots';
+const loadingDotsSource = require('!!raw-loader!./loading_dots');
+const loadingDotsHtml = renderToHtml(LoadingDots);
+
 export const LoadingExample = {
   title: 'Loading',
   sections: [
     {
-      title: 'Elastic',
+      title: 'Wazuh',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -66,7 +76,7 @@ export const LoadingExample = {
       snippet: '<EuiLoadingElastic size="m" />',
     },
     {
-      title: 'Kibana',
+      title: 'Wazuh bounce',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -149,6 +159,48 @@ export const LoadingExample = {
       props: { EuiLoadingContent },
       demo: <LoadingContent />,
       snippet: '<EuiLoadingContent lines={3} />',
+    },
+    {
+      title: 'Dots',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: loadingDotsSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: loadingDotsHtml,
+        },
+      ],
+      text: (
+        <p>
+          A big loading animation for displaying big placeholder containers.
+        </p>
+      ),
+      props: { EuiLoadingDots },
+      demo: <LoadingDots />,
+      snippet: '<EuiLoadingDots />',
+    },
+    {
+      title: 'Running lines',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: loadingRunningLinesSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: loadingRunningLinesHtml,
+        },
+      ],
+      text: (
+        <p>
+          A simple loading animation for displaying placeholder text content.
+        </p>
+      ),
+      props: { EuiLoadingRunningLines },
+      demo: <LoadingRunningLines />,
+      snippet: '<EuiLoadingRunningLines />',
     },
   ],
   playground: [

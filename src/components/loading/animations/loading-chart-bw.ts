@@ -24,7 +24,7 @@ export default {
   op: 91,
   w: 360,
   h: 360,
-  nm: 'SMALL LOADING ANIMATION',
+  nm: 'SMALL LOADING ANIMATION-B&W',
   ddd: 0,
   assets: [],
   layers: [
@@ -105,11 +105,7 @@ export default {
             },
             {
               ty: 'st',
-              c: {
-                a: 0,
-                k: [0.207843154669, 0.521568655968, 0.976470649242, 1],
-                ix: 3,
-              },
+              c: { a: 0, k: [0, 0, 0, 1], ix: 3 },
               o: { a: 0, k: 100, ix: 4 },
               w: { a: 0, k: 10, ix: 5 },
               lc: 2,

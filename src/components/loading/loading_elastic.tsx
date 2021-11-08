@@ -46,7 +46,7 @@ export const EuiLoadingElastic: FunctionComponent<CommonProps &
 
   return (
     <span className={classes} {...rest}>
-      <EuiIcon type="logoElastic" size={size} />
+      <EuiIcon type="logoWazuh" size={size} />
     </span>
   );
 };
