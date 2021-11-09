@@ -1,7 +1,7 @@
 {
   "name": "wazuh-wui",
   "description": "Wazuh UI Component Library",
-  "version": "35.3.0",
+  "version": "35.4.0",
   "license": "Apache-2.0",
   "main": "lib",
   "module": "es",
