@@ -28,5 +28,9 @@
   .euiNavDrawerFlyout__listGroup {
     padding-left: 0;
     padding-right: 0;
+
+    .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button {
+      box-shadow: 3px 0 0 inset $euiColorPrimary;
+    }
   }
 }
