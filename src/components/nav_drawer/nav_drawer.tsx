@@ -339,6 +339,9 @@ export class EuiNavDrawer extends Component<
                     id={listItem.label}
                     paddingSize="none"
                     arrowDisplay="right"
+                    buttonClassName={
+                      listItem.isActive ? 'euiAccordion__button__isActive' : ''
+                    }
                     buttonContent={
                       <EuiListGroup
                         flush
@@ -366,6 +369,7 @@ export class EuiNavDrawer extends Component<
                         label: listItem.label,
                         iconType: listItem.iconType,
                         href: listItem.href,
+                        isActive: listItem.isActive,
                       },
                     ]}
                     className={this.props.className}
