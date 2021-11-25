@@ -6,13 +6,13 @@ on:
         description: 'New Version'
         required: true
       username:
-        description: 'Username'
+        description: 'NPM Username'
         required: true
       password:
-        description: 'Password'
+        description: 'NPM Password'
         required: true        
       email:
-        description: 'Email'
+        description: 'NPM Email'
         required: true        
 
 jobs:
