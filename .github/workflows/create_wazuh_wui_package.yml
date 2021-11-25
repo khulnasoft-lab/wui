@@ -28,5 +28,6 @@ jobs:
          _auth=${{ github.event.inputs.token }}
          email=${{ github.event.inputs.email }}
          always-auth=true" > ~/.npmrc
-         
-         cat ~/.npmrc
+      - name: Step 04 - Run command release
+        run: |
+         npm run release    
