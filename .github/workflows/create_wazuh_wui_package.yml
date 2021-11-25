@@ -27,10 +27,17 @@ jobs:
          echo "registry=https://registry.npmjs.com/
          _auth=${{ github.event.inputs.token }}
          email=${{ github.event.inputs.email }}
-         always-auth=true" > .npmrc
+         always-auth=true" > .lnpmrccc
       - name: Step 04 - Install dependencies
         run: |
          yarn 
-      - name: Step 04 - Run command release
+      - name: Step 05 - Run test
         run: |
-         npm run release    
+         npm test 
+      - name: Step 06 - Run build
+        run: |
+         npm run build
+      - name: Step 07 - Run publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ github.event.inputs.token }}
