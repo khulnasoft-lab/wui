@@ -27,7 +27,7 @@ jobs:
          echo "registry=https://registry.npmjs.com/
          _auth=${{ github.event.inputs.token }}
          email=${{ github.event.inputs.email }}
-         always-auth=true" > ~/.npmrc
+         always-auth=true" > .npmrc
       - name: Step 04 - Install dependencies
         run: |
          yarn 
