@@ -22,12 +22,8 @@ jobs:
           node-version: '10.24.1'
       - name: Step 02 - Checkout current project 
         uses: actions/checkout@v2
-      - name: Step 03 - Login to NPM
+      - name: Step 03 - Create .npmrc to login NPM
         run: |
-         echo "New Version ${{ github.event.inputs.new_version }}"
-         echo "password ${{ github.event.inputs.token }}"
-         echo "email ${{ github.event.inputs.email }}"
-         
          echo "registry=https://registry.npmjs.com/
          _auth=${{ github.event.inputs.token }}
          email=${{ github.event.inputs.email }}
