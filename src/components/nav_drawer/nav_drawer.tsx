@@ -333,10 +333,11 @@ export class EuiNavDrawer extends Component<
                 showToolTips:
                   this.state.toolTipsEnabled && this.props.showToolTips,
               })
-            : child.props.listItems.map((listItem: any) =>
+            : child.props.listItems.map((listItem: any, key: number) =>
                 listItem?.flyoutMenu?.listItems.length ? (
                   <EuiAccordion
                     id={listItem.label}
+                    key={key}
                     paddingSize="none"
                     arrowDisplay="right"
                     buttonClassName={
@@ -362,6 +363,7 @@ export class EuiNavDrawer extends Component<
                   </EuiAccordion>
                 ) : (
                   <EuiListGroup
+                    key={key}
                     flush
                     gutterSize="none"
                     listItems={[
