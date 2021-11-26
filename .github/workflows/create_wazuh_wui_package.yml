@@ -4,10 +4,7 @@ on:
     inputs:
       token:
         description: 'NPM Token'
-        required: true        
-      email:
-        description: 'NPM Email'
-        required: true             
+        required: true                   
 jobs:
   create_wazuh_wui_package:
     runs-on: ubuntu-18.04
@@ -18,22 +15,16 @@ jobs:
           node-version: '10.24.1'
       - name: Step 02 - Checkout current project 
         uses: actions/checkout@v2
-      - name: Step 03 - Create .npmrc to login NPM
-        run: |
-         echo "registry=https://registry.npmjs.com/
-         _auth=${{ github.event.inputs.token }}
-         email=${{ github.event.inputs.email }}
-         always-auth=true" > .npmrc
-      - name: Step 04 - Install dependencies
+      - name: Step 03 - Install dependencies
         run: |
          yarn 
-      - name: Step 05 - Run test
+      - name: Step 04 - Run test
         run: |
          npm test 
-      - name: Step 06 - Run build
+      - name: Step 05 - Run build
         run: |
          npm run build
-      - name: Step 07 - Run publish
+      - name: Step 06 - Run publish
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ github.event.inputs.token }}
