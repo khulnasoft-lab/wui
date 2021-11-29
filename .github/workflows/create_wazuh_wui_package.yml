@@ -1,10 +1,6 @@
 name: Create Wazuh wui package
 on:
   workflow_dispatch:
-    inputs:
-      token:
-        description: 'NPM Token'
-        required: true                   
 jobs:
   create_wazuh_wui_package:
     runs-on: ubuntu-18.04
@@ -27,4 +23,4 @@ jobs:
       - name: Step 06 - Run publish
         uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ github.event.inputs.token }}
+          token: ${{ secrets.NPM_TOKEN }}
