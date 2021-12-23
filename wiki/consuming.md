@@ -1,10 +1,10 @@
-# Consuming Wazuh Wui
+# Consuming Wazuh WUI
 
 ## What's available
 
-Wazuh wui publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [Elastic UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
+Wazuh WUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [Elastic UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
 
-Wui is published through [NPM](https://www.npmjs.com/package/wazuh-wui) as a dependency.
+WUI is published through [NPM](https://www.npmjs.com/package/wazuh-wui) as a dependency.
 
 ### Components
 
