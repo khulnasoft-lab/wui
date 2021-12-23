@@ -17,43 +17,39 @@
  * under the License.
  */
 
+import Lottie from 'react-lottie';
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import Lottie from 'react-lottie';
-import { CommonProps, keysOf } from '../common';
-import { chartGrey, chartColor } from './animations';
+import { CommonProps } from '../common';
+import { contentGrey, contentColor } from './animations';
+import { EuiFlexGroup, EuiFlexItem } from '../flex';
 
-const sizeToClassNameMap = {
-  m: 'euiLoadingChart--medium',
-  l: 'euiLoadingChart--large',
-  xl: 'euiLoadingChart--xLarge',
-};
-
-export const SIZES = keysOf(sizeToClassNameMap);
-
-export type EuiLoadingChartSize = keyof typeof sizeToClassNameMap;
-
-export const EuiLoadingChart: FunctionComponent<CommonProps &
+export const EuiLoadingRunningLines: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
      */
     mono?: boolean;
-    size?: EuiLoadingChartSize;
-  }> = ({ size = 'm', mono = false, className, ...rest }) => {
-  const classes = classNames(
-    'euiLoadingChart',
-    className,
-    sizeToClassNameMap[size]
-  );
+  }> = ({ mono = false, className }) => {
+  const classes = classNames(className);
   const options = {
-    animationData: mono ? chartGrey : chartColor,
+    animationData: mono ? contentGrey : contentColor,
     loop: true,
     autoPlay: true,
   };
   return (
-    <div className={classes} {...rest}>
-      <Lottie options={options} />
-    </div>
+    <EuiFlexGroup
+      direction="row"
+      alignItems="center"
+      justifyContent="flexStart"
+      responsive={false}
+      style={{ marginLeft: '0' }}
+      className={classes}>
+      <EuiFlexItem grow={false} style={{ margin: '0' }}>
+        <div className="euiLoadingRunningLines__wrapper">
+          <Lottie options={options} />
+        </div>
+      </EuiFlexItem>
+    </EuiFlexGroup>
   );
 };

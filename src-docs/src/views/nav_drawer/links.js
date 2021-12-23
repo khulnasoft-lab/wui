@@ -81,7 +81,7 @@ const topLinks = [
 ];
 const adminLinks = [
   {
-    label: 'Admin',
+    label: 'Admin soy un texto muy largo',
     iconType: 'managementApp',
     flyoutMenu: {
       title: 'Tools and settings',
@@ -127,77 +127,7 @@ const analyzeLinks = [
   {
     label: 'Analyze',
     iconType: 'logoBusinessAnalytics',
-    flyoutMenu: {
-      title: 'Analyze your data',
-      listItems: [
-        {
-          label: 'Discover',
-          href: '#/layout/nav-drawer',
-          iconType: 'discoverApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Discover to favorites',
-          },
-        },
-        {
-          label: 'Visualize',
-          href: '#/layout/nav-drawer',
-          iconType: 'visualizeApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Visualize to favorites',
-          },
-        },
-        {
-          label: 'Canvas',
-          href: '#/layout/nav-drawer',
-          iconType: 'canvasApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Canvas to favorites',
-          },
-        },
-        {
-          label: 'Maps',
-          href: '#/layout/nav-drawer',
-          iconType: 'gisApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Maps to favorites',
-          },
-        },
-        {
-          label: 'Machine Learning',
-          href: '#/layout/nav-drawer',
-          iconType: 'machineLearningApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Machine Learning to favorites',
-          },
-        },
-        {
-          label: 'Graph',
-          href: '#/layout/nav-drawer',
-          iconType: 'graphApp',
-          extraAction: {
-            color: 'subdued',
-            iconType: 'starEmpty',
-            iconSize: 's',
-            'aria-label': 'Add Graph to favorites',
-          },
-        },
-      ],
-    },
+    href: '#/layout/nav-drawer',
   },
 ];
 const securityLinks = [

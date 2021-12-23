@@ -17,10 +17,11 @@
  * under the License.
  */
 
-export { EuiLoadingKibana } from './loading_kibana';
-export { EuiLoadingElastic } from './loading_elastic';
-export { EuiLoadingChart } from './loading_chart';
-export { EuiLoadingContent } from './loading_content';
-export { EuiLoadingSpinner } from './loading_spinner';
-export { EuiLoadingRunningLines } from './loading_running_lines';
-export { EuiLoadingDots } from './loading_dots';
+import chartColor from './loading-chart';
+import chartGrey from './loading-chart-bw';
+import contentColor from './loading-content';
+import contentGrey from './loading-content-bw';
+import bigColor from './loading-big';
+import bigGrey from './loading-big-bw';
+
+export { chartColor, chartGrey, contentColor, contentGrey, bigColor, bigGrey };

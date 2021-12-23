@@ -46,7 +46,7 @@ export const EuiLoadingKibana: FunctionComponent<CommonProps &
   return (
     <span className={classes} {...rest}>
       <span className="euiLoadingKibana__icon">
-        <EuiIcon type="logoKibana" size={size} />
+        <EuiIcon type="logoWazuh" size={size} />
       </span>
     </span>
   );
