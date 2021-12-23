@@ -1,0 +1,26 @@
+name: Create Wazuh wui package
+on:
+  workflow_dispatch:
+jobs:
+  create_wazuh_wui_package:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Step 01 - Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '10.24.1'
+      - name: Step 02 - Checkout current project 
+        uses: actions/checkout@v2
+      - name: Step 03 - Install dependencies
+        run: |
+         yarn 
+      - name: Step 04 - Run test
+        run: |
+         npm test 
+      - name: Step 05 - Run build
+        run: |
+         npm run build
+      - name: Step 06 - Run publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}

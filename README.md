@@ -1,15 +1,15 @@
 <img src="https://repository-images.githubusercontent.com/107422373/d4a9f100-4734-11ea-8bb9-bf6a193cb8fb" />
 
-# Elastic UI Framework
+# Wazuh UI Framework
 
-> The Elastic UI Framework is a collection of React UI components for quickly building user interfaces
-> at Elastic. Not using React? No problem! You can still use the CSS behind each component.
+> The Wazuh UI Framework is a collection of React UI components for quickly building user interfaces
+> at Wazuh. Not using React? No problem! You can still use the CSS behind each component.
 
 You should check out our [living style guide][docs], which contains many examples of components in the EUI framework aesthetic, and how to use them in your products. We also have a [FAQ][faq] that covers common usage questions.
 
 ## Installation
 
-To install the Elastic UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
+To install the Wazuh UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
 
 ```
 yarn add wazuh-wui
@@ -18,7 +18,7 @@ yarn add wazuh-wui
 Note that EUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume EUI][consuming].
 
 ```
-yarn add @elastic/eui @elastic/datemath moment prop-types
+yarn add wazuh-wui @elastic/datemath moment prop-types
 ```
 
 
@@ -54,7 +54,7 @@ yarn start --port 9000
 ## Goals
 
 The primary goal of this library is to provide reusable UI components that can be used throughout
-Elastic's web products. As React components, they remove CSS from the process of building UIs.
+Wazuh's web products. As React components, they remove CSS from the process of building UIs.
 As a single source of truth, the framework allows our designers to make changes to our aesthetic
 directly in the code. And unit test coverage for the UI components allows us to deliver a stable
 "API for user interfaces".
