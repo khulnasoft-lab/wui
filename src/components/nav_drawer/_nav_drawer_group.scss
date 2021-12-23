@@ -13,6 +13,7 @@
 
   .euiListGroupItem__icon {
     max-width: $euiSize;
+    white-space: nowrap;
   }
 }
 
@@ -43,7 +44,13 @@
     margin-top: 0;
   }
 
-  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button {
+  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button,
+  .euiAccordion__button__isActive {
     box-shadow: 3px 0 0 inset $euiColorPrimary;
+  }
+
+  .euiAccordion__button > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }

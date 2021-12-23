@@ -18,7 +18,7 @@ exports[`EuiLoadingChart is rendered 1`] = `
 
 exports[`EuiLoadingChart mono is rendered 1`] = `
 <div
-  class="euiLoadingChart euiLoadingChart--mono euiLoadingChart--medium"
+  class="euiLoadingChart euiLoadingChart--medium"
 >
   <div
     aria-label="animation"

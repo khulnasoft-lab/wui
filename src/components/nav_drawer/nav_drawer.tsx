@@ -110,11 +110,23 @@ export class EuiNavDrawer extends Component<
     if (this.props.isLocked) {
       window.addEventListener('resize', this.functionToCallOnWindowResize);
     }
+    this.setBodyDockedClass(this.props.isLocked);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.functionToCallOnWindowResize);
+    this.setBodyDockedClass(false);
   }
+
+  setBodyDockedClass = (navIsDocked: boolean | undefined) => {
+    if (navIsDocked) {
+      document.body.classList.remove('euiBody--navDrawerNotDocked');
+      document.body.classList.add('euiBody--navDrawerIsDocked');
+    } else {
+      document.body.classList.remove('euiBody--navDrawerIsDocked');
+      document.body.classList.add('euiBody--navDrawerNotDocked');
+    }
+  };
 
   returnOnIsLockedUpdate = (isLockedState: EuiNavDrawerState['isLocked']) => {
     if (this.props.onIsLockedUpdate) {
@@ -141,6 +153,7 @@ export class EuiNavDrawer extends Component<
 
     this.collapseFlyout();
     this.returnOnIsLockedUpdate(!isLocked);
+    this.setBodyDockedClass(!isLocked);
     this.setState({
       isLocked: !isLocked,
       isCollapsed: isLocked,
@@ -320,27 +333,51 @@ export class EuiNavDrawer extends Component<
                 showToolTips:
                   this.state.toolTipsEnabled && this.props.showToolTips,
               })
-            : child.props.listItems.map((listItem: any) => (
-                <EuiAccordion
-                  id={listItem.label}
-                  paddingSize="none"
-                  arrowDisplay="right"
-                  buttonContent={
+            : child.props.listItems.map((listItem: any, key: number) =>
+                listItem?.flyoutMenu?.listItems.length ? (
+                  <EuiAccordion
+                    id={listItem.label}
+                    key={key}
+                    paddingSize="none"
+                    arrowDisplay="right"
+                    buttonClassName={
+                      listItem.isActive ? 'euiAccordion__button__isActive' : ''
+                    }
+                    buttonContent={
+                      <EuiListGroup
+                        flush
+                        gutterSize="none"
+                        listItems={[
+                          {
+                            label: listItem.label,
+                            iconType: listItem.iconType,
+                          },
+                        ]}
+                        className={this.props.className}
+                      />
+                    }>
                     <EuiListGroup
                       flush
-                      gutterSize="none"
-                      listItems={[
-                        { label: listItem.label, iconType: listItem.iconType },
-                      ]}
-                      className={this.props.className}
+                      listItems={listItem?.flyoutMenu?.listItems}
                     />
-                  }>
+                  </EuiAccordion>
+                ) : (
                   <EuiListGroup
+                    key={key}
                     flush
-                    listItems={listItem?.flyoutMenu?.listItems}
+                    gutterSize="none"
+                    listItems={[
+                      {
+                        label: listItem.label,
+                        iconType: listItem.iconType,
+                        href: listItem.href,
+                        isActive: listItem.isActive,
+                      },
+                    ]}
+                    className={this.props.className}
                   />
-                </EuiAccordion>
-              ));
+                )
+              );
         }
       }
       return child;
