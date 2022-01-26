@@ -29,7 +29,7 @@ export default () => (
         key={iconSize}
         style={{ width: '340px' }}>
         <WuiPanel>
-          <WuiIcon type="logoElasticStack" size={iconSize} />
+          <WuiIcon type="logoWazuh" size={iconSize} />
           <WuiText size="s">
             <p>{iconSize}</p>
           </WuiText>

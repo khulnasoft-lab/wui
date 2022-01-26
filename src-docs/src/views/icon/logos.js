@@ -20,28 +20,7 @@ import {
   WuiCopy,
 } from '../../../../src/components';
 
-const iconTypes = [
-  'logoAppSearch',
-  'logoBeats',
-  'logoBusinessAnalytics',
-  'logoCode',
-  'logoCloud',
-  'logoCloudEnterprise',
-  'logoElastic',
-  'logoElasticStack',
-  'logoElasticsearch',
-  'logoEnterpriseSearch',
-  'logoKibana',
-  'logoLogging',
-  'logoLogstash',
-  'logoMaps',
-  'logoMetrics',
-  'logoObservability',
-  'logoSecurity',
-  'logoSiteSearch',
-  'logoUptime',
-  'logoWorkplaceSearch',
-].sort();
+const iconTypes = ['logoWazuh'];
 
 export default () => (
   <WuiFlexGrid columns={4}>

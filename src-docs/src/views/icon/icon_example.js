@@ -45,13 +45,13 @@ import Ml from './ml';
 const mlSnippet = '<WuiIcon type="dataVisualizer" size="xl" />';
 
 import Logos from './logos';
-const logosSnippet = '<WuiIcon type="logoElasticsearch" size="xl" />';
+const logosSnippet = '<WuiIcon type="logoWazuh" size="xl" />';
 
 import LogosThird from './logos_third';
 const logosThirdSnippet = '<WuiIcon type="logoApache" size="xl" />';
 
 import IconSizes from './icon_sizes';
-const iconSizesSnippet = '<WuiIcon type="logoElasticStack" size="xl" />';
+const iconSizesSnippet = '<WuiIcon type="logoWazuh" size="xl" />';
 
 import IconColors from './icon_colors';
 const iconColorsSnippet = [
@@ -63,7 +63,7 @@ import IconTypes from './icon_types';
 const iconTypesSource = require('!!raw-loader!./icon_types');
 const iconTypesHtml = renderToHtml(IconTypes);
 const iconTypesSnippet = [
-  '<WuiIcon type="logoElastic" size="xl" />',
+  '<WuiIcon type="logoWazuh" size="xl" />',
   '<WuiIcon type={reactSVGElement} size="xl" />',
   '<WuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" size="xl" title="My SVG logo" />',
   '<WuiButton iconType={reactSVGElement}>Works in other components too</WuiButton>',
@@ -172,7 +172,7 @@ export const IconExample = {
       demo: <Ml />,
     },
     {
-      title: 'Elastic logos',
+      title: 'Wazuh logos',
       text: (
         <p>
           Product logos follow similar rules as app logos. Note the use of{' '}

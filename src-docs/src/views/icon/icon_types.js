@@ -18,9 +18,9 @@ export default () => (
     <WuiFlexGrid columns={4}>
       <WuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
         <WuiPanel>
-          <WuiIcon type="logoElastic" size="xl" />
+          <WuiIcon type="logoWazuh" size="xl" />
           <WuiText size="s">
-            <p>logoElastic</p>
+            <p>logoWazuh</p>
           </WuiText>
         </WuiPanel>
       </WuiFlexItem>
