@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonIcon,
-  EuiPopover,
-  EuiContextMenu,
-  EuiPopoverTitle,
+  WuiButtonIcon,
+  WuiPopover,
+  WuiContextMenu,
+  WuiPopoverTitle,
 } from '../../../../src/components';
 
 function flattenPanelTree(tree, array = []) {
@@ -89,11 +89,11 @@ export default () => {
   };
 
   return (
-    <EuiPopover
+    <WuiPopover
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       button={
-        <EuiButtonIcon
+        <WuiButtonIcon
           onClick={togglePopover}
           color="text"
           iconType="filter"
@@ -104,8 +104,8 @@ export default () => {
       anchorPosition="downCenter"
       panelPaddingSize="none"
       withTitle>
-      <EuiPopoverTitle>Change all filters</EuiPopoverTitle>
-      <EuiContextMenu initialPanelId={0} panels={flattenPanelTree(panelTree)} />
-    </EuiPopover>
+      <WuiPopoverTitle>Change all filters</WuiPopoverTitle>
+      <WuiContextMenu initialPanelId={0} panels={flattenPanelTree(panelTree)} />
+    </WuiPopover>
   );
 };

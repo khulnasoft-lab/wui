@@ -23,7 +23,7 @@ import { requiredProps } from '../../test/required_props';
 import cheerio from 'cheerio';
 
 import {
-  EuiIcon,
+  WuiIcon,
   SIZES,
   TYPES,
   COLORS,
@@ -32,7 +32,7 @@ import {
 } from './icon';
 import { PropsOf } from '../common';
 // @ts-ignore importing from a JS file
-import { icon as EuiIconVideoPlayer } from './assets/videoPlayer.js';
+import { icon as WuiIconVideoPlayer } from './assets/videoPlayer.js';
 
 jest.mock('./icon', () => {
   return require.requireActual('./icon');
@@ -42,7 +42,7 @@ beforeEach(() => clearIconComponentCache());
 
 const prettyHtml = cheerio.load('');
 
-function testIcon(props: PropsOf<EuiIcon>) {
+function testIcon(props: PropsOf<WuiIcon>) {
   return () => {
     expect.assertions(1);
     return new Promise(resolve => {
@@ -51,12 +51,12 @@ function testIcon(props: PropsOf<EuiIcon>) {
         expect(prettyHtml(component.html())).toMatchSnapshot();
         resolve();
       };
-      const component = mount(<EuiIcon {...props} onIconLoad={onIconLoad} />);
+      const component = mount(<WuiIcon {...props} onIconLoad={onIconLoad} />);
     });
   };
 }
 
-describe('EuiIcon', () => {
+describe('WuiIcon', () => {
   test('is rendered', testIcon({ type: 'search', ...requiredProps }));
 
   describe('props', () => {
@@ -132,36 +132,36 @@ describe('EuiIcon', () => {
         </span>
       );
     };
-    const component = mount(<EuiIcon type={CustomIcon} />);
+    const component = mount(<WuiIcon type={CustomIcon} />);
     expect(prettyHtml(component.html())).toMatchSnapshot();
   });
 
   describe('appendIconComponentCache', () => {
     it('does nothing if not called', () => {
-      const component = mount(<EuiIcon type="videoPlayer" />);
+      const component = mount(<WuiIcon type="videoPlayer" />);
       expect(
-        component.find('EuiIcon[type="videoPlayer"] > EuiIconEmpty').length
+        component.find('WuiIcon[type="videoPlayer"] > WuiIconEmpty').length
       ).toBe(1);
     });
 
     it('injects the specified icon', () => {
       appendIconComponentCache({
-        videoPlayer: EuiIconVideoPlayer,
+        videoPlayer: WuiIconVideoPlayer,
       });
-      const component = mount(<EuiIcon type="videoPlayer" />);
+      const component = mount(<WuiIcon type="videoPlayer" />);
       expect(
-        component.find('EuiIcon[type="videoPlayer"] > EuiIconVideoPlayer')
+        component.find('WuiIcon[type="videoPlayer"] > WuiIconVideoPlayer')
           .length
       ).toBe(1);
     });
 
     it('does not impact non-loaded icons', () => {
       appendIconComponentCache({
-        videoPlayer: EuiIconVideoPlayer,
+        videoPlayer: WuiIconVideoPlayer,
       });
-      const component = mount(<EuiIcon type="accessibility" />);
+      const component = mount(<WuiIcon type="accessibility" />);
       expect(
-        component.find('EuiIcon[type="accessibility"] > EuiIconEmpty').length
+        component.find('WuiIcon[type="accessibility"] > WuiIconEmpty').length
       ).toBe(1);
     });
   });

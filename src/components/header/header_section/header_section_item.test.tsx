@@ -21,20 +21,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderSectionItem } from './header_section_item';
+import { WuiHeaderSectionItem } from './header_section_item';
 
-describe('EuiHeaderSectionItem', () => {
+describe('WuiHeaderSectionItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSectionItem {...requiredProps} />);
+    const component = render(<WuiHeaderSectionItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeaderSectionItem>
+      <WuiHeaderSectionItem>
         <span>Call me Ishmael.</span>
-      </EuiHeaderSectionItem>
+      </WuiHeaderSectionItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,13 +42,13 @@ describe('EuiHeaderSectionItem', () => {
 
   describe('border', () => {
     test('defaults to left', () => {
-      const component = render(<EuiHeaderSectionItem />);
+      const component = render(<WuiHeaderSectionItem />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders right', () => {
-      const component = render(<EuiHeaderSectionItem border="right" />);
+      const component = render(<WuiHeaderSectionItem border="right" />);
 
       expect(component).toMatchSnapshot();
     });

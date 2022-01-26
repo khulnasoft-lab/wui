@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
 import {
-  EuiLink,
-  EuiText,
-  EuiSpacer,
-  EuiTourStep,
+  WuiLink,
+  WuiText,
+  WuiSpacer,
+  WuiTourStep,
 } from '../../../../src/components';
 
 export default () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <div>
-      <EuiTourStep
+      <WuiTourStep
         content={
-          <EuiText>
+          <WuiText>
             <p>The tour step content.</p>
-          </EuiText>
+          </WuiText>
         }
         isStepOpen={isOpen}
         minWidth={300}
@@ -25,13 +25,13 @@ export default () => {
         title="Title of the current step"
         subtitle="Title of the full tour"
         anchorPosition="rightUp">
-        <EuiText>
+        <WuiText>
           The tour step{' '}
-          <EuiLink onClick={() => setIsOpen(!isOpen)}>anchor point</EuiLink>.
-        </EuiText>
-      </EuiTourStep>
-      <EuiSpacer size="xxl" />
-      <EuiSpacer size="xxl" />
+          <WuiLink onClick={() => setIsOpen(!isOpen)}>anchor point</WuiLink>.
+        </WuiText>
+      </WuiTourStep>
+      <WuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
     </div>
   );
 };

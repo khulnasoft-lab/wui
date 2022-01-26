@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiHighlight, EuiMark } from '../../../../src/components/';
+import { WuiHighlight, WuiMark } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const highlightConfig = () => {
-  const docgenInfo = Array.isArray(EuiHighlight.__docgenInfo)
-    ? EuiHighlight.__docgenInfo[0]
-    : EuiHighlight.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiHighlight.__docgenInfo)
+    ? WuiHighlight.__docgenInfo[0]
+    : WuiHighlight.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -23,14 +23,14 @@ export const highlightConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiHighlight',
+      componentName: 'WuiHighlight',
       props: propsToUse,
       scope: {
-        EuiHighlight,
+        WuiHighlight,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiHighlight'],
+        '@wazuh/wui': {
+          named: ['WuiHighlight'],
         },
       },
     },
@@ -38,23 +38,23 @@ export const highlightConfig = () => {
 };
 
 export const markConfig = () => {
-  const docgenInfo = Array.isArray(EuiMark.__docgenInfo)
-    ? EuiMark.__docgenInfo[0]
-    : EuiMark.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiMark.__docgenInfo)
+    ? WuiMark.__docgenInfo[0]
+    : WuiMark.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children.value = 'mark';
 
   return {
     config: {
-      componentName: 'EuiMark',
+      componentName: 'WuiMark',
       props: propsToUse,
       scope: {
-        EuiMark,
+        WuiMark,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiMark'],
+        '@wazuh/wui': {
+          named: ['WuiMark'],
         },
       },
     },

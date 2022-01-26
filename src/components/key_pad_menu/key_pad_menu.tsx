@@ -22,14 +22,14 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-export type EuiKeyPadMenuProps = CommonProps & HTMLAttributes<HTMLUListElement>;
+export type WuiKeyPadMenuProps = CommonProps & HTMLAttributes<HTMLUListElement>;
 
-export const EuiKeyPadMenu: FunctionComponent<EuiKeyPadMenuProps> = ({
+export const WuiKeyPadMenu: FunctionComponent<WuiKeyPadMenuProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiKeyPadMenu', className);
+  const classes = classNames('wuiKeyPadMenu', className);
 
   return (
     <ul className={classes} {...rest}>

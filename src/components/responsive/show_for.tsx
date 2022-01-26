@@ -23,24 +23,24 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { EuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { WuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
 import { throttle } from '../color_picker/utils';
 
-export type EuiShowForBreakpoints = EuiBreakpointSize;
+export type WuiShowForBreakpoints = WuiBreakpointSize;
 
-export interface EuiShowForProps {
+export interface WuiShowForProps {
   /**
    * Required otherwise nothing ever gets returned
    */
   children: ReactNode;
   /**
    * List of all the responsive sizes to show the children for.
-   * Array of #EuiBreakpointSize
+   * Array of #WuiBreakpointSize
    */
-  sizes: EuiShowForBreakpoints[] | 'all' | 'none';
+  sizes: WuiShowForBreakpoints[] | 'all' | 'none';
 }
 
-export const EuiShowFor: FunctionComponent<EuiShowForProps> = ({
+export const WuiShowFor: FunctionComponent<WuiShowForProps> = ({
   children,
   sizes,
 }) => {
@@ -67,7 +67,7 @@ export const EuiShowFor: FunctionComponent<EuiShowForProps> = ({
 
   if (
     sizes === 'all' ||
-    sizes.includes(currentBreakpoint as EuiBreakpointSize)
+    sizes.includes(currentBreakpoint as WuiBreakpointSize)
   ) {
     return <>{children}</>;
   }

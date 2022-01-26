@@ -3,12 +3,12 @@
  * 2. IE requires a unit to grow.
  */
 
-.euiFlexGroup {
+.wuiFlexGroup {
   display: flex;
   align-items: stretch;
   flex-grow: 1; /* 1 */
 
-  .euiFlexItem {
+  .wuiFlexItem {
     @include internetExplorerOnly {
       min-width: 1px;
     }
@@ -30,78 +30,78 @@ $gutterTypes: (
 @each $gutterName, $gutterSize in $gutterTypes {
   $halfGutterSize: $gutterSize * .5;
 
-  .euiFlexGroup--#{$gutterName} {
+  .wuiFlexGroup--#{$gutterName} {
     margin: -$halfGutterSize;
 
-    & > .euiFlexItem {
+    & > .wuiFlexItem {
       margin: $halfGutterSize;
     }
   }
 }
 
 // Justify the grid
-.euiFlexGroup--justifyContentSpaceEvenly {
+.wuiFlexGroup--justifyContentSpaceEvenly {
   justify-content: space-evenly;
 }
 
-.euiFlexGroup--justifyContentSpaceBetween {
+.wuiFlexGroup--justifyContentSpaceBetween {
   justify-content: space-between;
 }
 
-.euiFlexGroup--justifyContentSpaceAround {
+.wuiFlexGroup--justifyContentSpaceAround {
   justify-content: space-around;
 }
 
-.euiFlexGroup--justifyContentCenter {
+.wuiFlexGroup--justifyContentCenter {
   justify-content: center;
 }
 
-.euiFlexGroup--justifyContentFlexEnd {
+.wuiFlexGroup--justifyContentFlexEnd {
   justify-content: flex-end;
 }
 
 // Align Items
-.euiFlexGroup--alignItemsFlexStart {
+.wuiFlexGroup--alignItemsFlexStart {
   align-items: flex-start;
 }
 
-.euiFlexGroup--alignItemsCenter {
+.wuiFlexGroup--alignItemsCenter {
   align-items: center;
 }
 
-.euiFlexGroup--alignItemsFlexEnd {
+.wuiFlexGroup--alignItemsFlexEnd {
   align-items: flex-end;
 }
 
-.euiFlexGroup--alignItemsBaseline {
+.wuiFlexGroup--alignItemsBaseline {
   align-items: baseline;
 }
 
 // Direction
 
-.euiFlexGroup--directionRow {
+.wuiFlexGroup--directionRow {
   flex-direction: row;
 }
 
-.euiFlexGroup--directionRowReverse {
+.wuiFlexGroup--directionRowReverse {
   flex-direction: row-reverse;
 }
 
-.euiFlexGroup--directionColumn {
+.wuiFlexGroup--directionColumn {
   flex-direction: column;
 }
 
-.euiFlexGroup--directionColumnReverse {
+.wuiFlexGroup--directionColumnReverse {
   flex-direction: column-reverse;
 }
 
 // Wrap
-.euiFlexGroup--wrap {
+.wuiFlexGroup--wrap {
   flex-wrap: wrap;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiFlexGroup--responsive {
+@include wuiBreakpoint('xs', 's') {
+  .wuiFlexGroup--responsive {
     flex-wrap: wrap;
     margin-left: 0;
     margin-right: 0;

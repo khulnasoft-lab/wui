@@ -1,10 +1,10 @@
-import { EuiAvatar, checkValidColor } from '../../../../src/components/avatar';
+import { WuiAvatar, checkValidColor } from '../../../../src/components/avatar';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiAvatar.__docgenInfo)
-    ? EuiAvatar.__docgenInfo[0]
-    : EuiAvatar.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiAvatar.__docgenInfo)
+    ? WuiAvatar.__docgenInfo[0]
+    : WuiAvatar.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
   propsToUse.name.value = 'Avatar';
 
@@ -26,14 +26,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiAvatar',
+      componentName: 'WuiAvatar',
       props: propsToUse,
       scope: {
-        EuiAvatar,
+        WuiAvatar,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAvatar'],
+        '@wazuh/wui': {
+          named: ['WuiAvatar'],
         },
       },
     },

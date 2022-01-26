@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFocusTrap, FocusTarget } from './focus_trap';
+export { WuiFocusTrap, FocusTarget } from './focus_trap';

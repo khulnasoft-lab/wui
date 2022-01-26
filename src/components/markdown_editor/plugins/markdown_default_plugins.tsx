@@ -24,15 +24,15 @@ import * as MarkdownTooltip from './markdown_tooltip';
 import * as MarkdownCheckbox from './markdown_checkbox';
 import { markdownLinkValidator } from './markdown_link_validator';
 import React, { createElement } from 'react';
-import { EuiLink } from '../../link';
-import { EuiCodeBlock, EuiCode } from '../../code';
+import { WuiLink } from '../../link';
+import { WuiCodeBlock, WuiCode } from '../../code';
 import markdown from 'remark-parse';
 import highlight from 'remark-highlight.js';
 import emoji from 'remark-emoji';
 import { RemarkRehypeHandler } from '../markdown_types';
 import all from 'mdast-util-to-hast/lib/all';
 
-export const getDefaultEuiMarkdownParsingPlugins = (): PluggableList => [
+export const getDefaultWuiMarkdownParsingPlugins = (): PluggableList => [
   [markdown, {}],
   [highlight, {}],
   [emoji, { emoticon: true }],
@@ -41,7 +41,7 @@ export const getDefaultEuiMarkdownParsingPlugins = (): PluggableList => [
   [markdownLinkValidator, {}],
 ];
 
-export const defaultParsingPlugins = getDefaultEuiMarkdownParsingPlugins();
+export const defaultParsingPlugins = getDefaultWuiMarkdownParsingPlugins();
 
 const unknownHandler: RemarkRehypeHandler = (h, node) => {
   return h(node.position!, node.type, node, all(h, node));
@@ -58,7 +58,7 @@ interface Rehype2ReactOptions {
   [key: string]: any;
 }
 
-export const getDefaultEuiMarkdownProcessingPlugins = (): [
+export const getDefaultWuiMarkdownProcessingPlugins = (): [
   [typeof remark2rehype, Remark2RehypeOptions], // first is well known
   [typeof rehype2react, Rehype2ReactOptions], // second is well known
   ...PluggableList // any additional are generic
@@ -76,13 +76,13 @@ export const getDefaultEuiMarkdownProcessingPlugins = (): [
     {
       createElement: createElement,
       components: {
-        a: EuiLink,
+        a: WuiLink,
         code: (props: any) =>
           // If there are linebreaks use codeblock, otherwise code
           /\r|\n/.exec(props.children) ? (
-            <EuiCodeBlock fontSize="m" paddingSize="s" {...props} />
+            <WuiCodeBlock fontSize="m" paddingSize="s" {...props} />
           ) : (
-            <EuiCode {...props} />
+            <WuiCode {...props} />
           ),
         tooltipPlugin: MarkdownTooltip.renderer,
         checkboxPlugin: MarkdownCheckbox.renderer,
@@ -91,4 +91,4 @@ export const getDefaultEuiMarkdownProcessingPlugins = (): [
   ],
 ];
 
-export const defaultProcessingPlugins = getDefaultEuiMarkdownProcessingPlugins();
+export const defaultProcessingPlugins = getDefaultWuiMarkdownProcessingPlugins();

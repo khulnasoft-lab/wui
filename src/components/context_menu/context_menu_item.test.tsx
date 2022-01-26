@@ -21,12 +21,12 @@ import React from 'react';
 import { render, shallow, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiContextMenuItem } from './context_menu_item';
+import { WuiContextMenuItem } from './context_menu_item';
 
-describe('EuiContextMenuItem', () => {
+describe('WuiContextMenuItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiContextMenuItem {...requiredProps}>Hello</EuiContextMenuItem>
+      <WuiContextMenuItem {...requiredProps}>Hello</WuiContextMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('EuiContextMenuItem', () => {
     describe('icon', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem icon={<span className="euiIcon fa-user" />} />
+          <WuiContextMenuItem icon={<span className="wuiIcon fa-user" />} />
         );
 
         expect(component).toMatchSnapshot();
@@ -45,7 +45,7 @@ describe('EuiContextMenuItem', () => {
 
     describe('disabled', () => {
       test('is rendered', () => {
-        const component = render(<EuiContextMenuItem disabled />);
+        const component = render(<WuiContextMenuItem disabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -54,7 +54,7 @@ describe('EuiContextMenuItem', () => {
     describe('onClick', () => {
       test('renders a button', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} onClick={() => {}} />
+          <WuiContextMenuItem {...requiredProps} onClick={() => {}} />
         );
 
         expect(component).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('EuiContextMenuItem', () => {
       test("isn't called upon instantiation", () => {
         const onClickHandler = jest.fn();
 
-        shallow(<EuiContextMenuItem onClick={onClickHandler} />);
+        shallow(<WuiContextMenuItem onClick={onClickHandler} />);
 
         expect(onClickHandler).not.toHaveBeenCalled();
       });
@@ -72,7 +72,7 @@ describe('EuiContextMenuItem', () => {
         const onClickHandler = jest.fn();
 
         const component = shallow(
-          <EuiContextMenuItem onClick={onClickHandler} />
+          <WuiContextMenuItem onClick={onClickHandler} />
         );
 
         component.simulate('click');
@@ -84,7 +84,7 @@ describe('EuiContextMenuItem', () => {
         const onClickHandler = jest.fn();
 
         const component = mount(
-          <EuiContextMenuItem disabled onClick={onClickHandler} />
+          <WuiContextMenuItem disabled onClick={onClickHandler} />
         );
 
         component.simulate('click');
@@ -96,7 +96,7 @@ describe('EuiContextMenuItem', () => {
     describe('href', () => {
       test('renders a link', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" />
+          <WuiContextMenuItem {...requiredProps} href="url" />
         );
 
         expect(component).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe('EuiContextMenuItem', () => {
     describe('rel', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" rel="help" />
+          <WuiContextMenuItem {...requiredProps} href="url" rel="help" />
         );
 
         expect(component).toMatchSnapshot();
@@ -116,7 +116,7 @@ describe('EuiContextMenuItem', () => {
     describe('target', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" target="_blank" />
+          <WuiContextMenuItem {...requiredProps} href="url" target="_blank" />
         );
 
         expect(component).toMatchSnapshot();
@@ -125,7 +125,7 @@ describe('EuiContextMenuItem', () => {
 
     describe('hasPanel', () => {
       test('is rendered', () => {
-        const component = render(<EuiContextMenuItem hasPanel />);
+        const component = render(<WuiContextMenuItem hasPanel />);
 
         expect(component).toMatchSnapshot();
       });

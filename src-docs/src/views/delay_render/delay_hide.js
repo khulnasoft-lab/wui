@@ -1,11 +1,11 @@
 import React, { useState, Fragment } from 'react';
 import {
-  EuiDelayHide,
-  EuiFlexItem,
-  EuiCheckbox,
-  EuiFormRow,
-  EuiFieldNumber,
-  EuiLoadingSpinner,
+  WuiDelayHide,
+  WuiFlexItem,
+  WuiCheckbox,
+  WuiFormRow,
+  WuiFieldNumber,
+  WuiLoadingSpinner,
 } from '../../../../src/components';
 
 export default () => {
@@ -22,30 +22,30 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexItem>
-        <EuiFormRow>
-          <EuiCheckbox
+      <WuiFlexItem>
+        <WuiFormRow>
+          <WuiCheckbox
             id="dummy-id"
             checked={hide}
             onChange={onChangeHide}
             label="Hide child"
           />
-        </EuiFormRow>
-        <EuiFormRow label="Minimum duration">
-          <EuiFieldNumber
+        </WuiFormRow>
+        <WuiFormRow label="Minimum duration">
+          <WuiFieldNumber
             value={minimumDuration}
             onChange={onChangeMinimumDuration}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiFormRow label="Child to render">
-          <EuiDelayHide
+        <WuiFormRow label="Child to render">
+          <WuiDelayHide
             hide={hide}
             minimumDuration={minimumDuration}
-            render={() => <EuiLoadingSpinner size="m" />}
+            render={() => <WuiLoadingSpinner size="m" />}
           />
-        </EuiFormRow>
-      </EuiFlexItem>
+        </WuiFormRow>
+      </WuiFlexItem>
     </Fragment>
   );
 };

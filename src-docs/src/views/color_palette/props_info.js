@@ -1,5 +1,5 @@
 export const qualitativePropsInfo = {
-  euiPaletteColorBlind: {
+  wuiPaletteColorBlind: {
     __docgenInfo: {
       props: {
         rotations: {

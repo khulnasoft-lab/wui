@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -21,13 +21,13 @@ export const selectionSection = {
   ],
   text: (
     <p>
-      The following example shows how to use <strong>EuiInMemoryTable</strong>{' '}
+      The following example shows how to use <strong>WuiInMemoryTable</strong>{' '}
       along with item selection. It also shows how you can display messages,
       errors and show loading indication. You can set items to be selected
       initially by passing an array of items as the{' '}
-      <EuiCode>initialSelected</EuiCode> value inside{' '}
-      <EuiCode>selection</EuiCode> property. You can also use the{' '}
-      <EuiCode>setSelection</EuiCode> method to take complete control over table
+      <WuiCode>initialSelected</WuiCode> value inside{' '}
+      <WuiCode>selection</WuiCode> property. You can also use the{' '}
+      <WuiCode>setSelection</WuiCode> method to take complete control over table
       selection. This can be useful if you want to handle selection in table
       based on user interaction with another part of the UI.
     </p>

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiPopoverFooter,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiPopoverFooter,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiText,
   EuiTextColor,
 } from '../../../../src/components';
 
@@ -29,93 +29,93 @@ export default () => {
   const closePopover3 = () => setIsPopoverOpen3(false);
 
   return (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <WuiFlexGroup>
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick1}>
               With title
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen1}
           closePopover={closePopover1}
           anchorPosition="downCenter">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <WuiPopoverTitle>Hello, I&rsquo;m a popover title</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick2}>
               With footer
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen2}
           closePopover={closePopover2}
           anchorPosition="upCenter">
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </WuiText>
           </div>
-          <EuiPopoverFooter>
+          <WuiPopoverFooter>
             <EuiTextColor color="subdued">
               Hello, I&rsquo;m a small popover footer caption
             </EuiTextColor>
-          </EuiPopoverFooter>
-        </EuiPopover>
-      </EuiFlexItem>
+          </WuiPopoverFooter>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick3}>
               With title and footer button
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen3}
           closePopover={closePopover3}
           anchorPosition="upCenter">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <WuiPopoverTitle>Hello, I&rsquo;m a popover title</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </WuiText>
           </div>
-          <EuiPopoverFooter>
-            <EuiButton fullWidth size="s">
+          <WuiPopoverFooter>
+            <WuiButton fullWidth size="s">
               Manage this thing
-            </EuiButton>
-          </EuiPopoverFooter>
-        </EuiPopover>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+            </WuiButton>
+          </WuiPopoverFooter>
+        </WuiPopover>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

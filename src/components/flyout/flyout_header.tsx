@@ -21,23 +21,23 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiFlyoutHeaderProps = FunctionComponent<
+export type WuiFlyoutHeaderProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> &
     CommonProps & {
       hasBorder?: boolean;
     }
 >;
 
-export const EuiFlyoutHeader: EuiFlyoutHeaderProps = ({
+export const WuiFlyoutHeader: WuiFlyoutHeaderProps = ({
   children,
   className,
   hasBorder = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiFlyoutHeader',
+    'wuiFlyoutHeader',
     {
-      'euiFlyoutHeader--hasBorder': hasBorder,
+      'wuiFlyoutHeader--hasBorder': hasBorder,
     },
     className
   );

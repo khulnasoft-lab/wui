@@ -35,17 +35,17 @@ export {
 } from './visualization_colors';
 export { colorPalette } from './color_palette';
 export {
-  euiPaletteForLightBackground,
-  euiPaletteForDarkBackground,
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
-} from './eui_palettes';
+  wuiPaletteForLightBackground,
+  wuiPaletteForDarkBackground,
+  wuiPaletteColorBlind,
+  wuiPaletteColorBlindBehindText,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteComplimentary,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteCool,
+  wuiPaletteWarm,
+  wuiPaletteGray,
+} from './wui_palettes';
 export { rgbDef, HSV, RGB } from './color_types';

@@ -30,7 +30,7 @@ time, mark, audio, video {
 }
 
 code, pre, kbd, samp {
-  font-family: $euiCodeFontFamily;
+  font-family: $wuiCodeFontFamily;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 input, textarea, select, button {
-  font-family: $euiFontFamily;
+  font-family: $wuiFontFamily;
 }
 
 em {
@@ -58,11 +58,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html {
-  @include euiFont;
+  @include wuiFont;
   font-size: $euiFontSize;
   color: $euiTextColor;
   height: 100%;
-  background-color: $euiPageBackgroundColor;
+  background-color: $wuiPageBackgroundColor;
 }
 
 body {
@@ -85,7 +85,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $euiColorPrimary;
+  color: $wuiColorPrimary;
 
   &:hover {
     text-decoration: none;

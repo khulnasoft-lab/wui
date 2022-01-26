@@ -20,7 +20,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { EuiQuickSelect } from './quick_select';
+import { WuiQuickSelect } from './quick_select';
 
 const noop = () => {};
 const defaultProps = {
@@ -34,16 +34,16 @@ jest.mock('../../../../services/accessibility/html_id_generator', () => ({
   htmlIdGenerator: () => () => 'htmlId',
 }));
 
-describe('EuiQuickSelect', () => {
+describe('WuiQuickSelect', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiQuickSelect {...defaultProps} />);
+    const component = shallow(<WuiQuickSelect {...defaultProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('prevQuickSelect', () => {
     const component = shallow(
-      <EuiQuickSelect
+      <WuiQuickSelect
         {...defaultProps}
         prevQuickSelect={{
           timeTense: 'Next',

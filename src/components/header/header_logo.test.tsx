@@ -21,30 +21,30 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiHeaderLogo } from './header_logo';
+import { WuiHeaderLogo } from './header_logo';
 
-describe('EuiHeaderLogo', () => {
+describe('WuiHeaderLogo', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLogo {...requiredProps} />);
+    const component = render(<WuiHeaderLogo {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders href', () => {
-    const component = render(<EuiHeaderLogo href="#" />);
+    const component = render(<WuiHeaderLogo href="#" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders href with rel', () => {
-    const component = render(<EuiHeaderLogo href="#" rel="noreferrer" />);
+    const component = render(<WuiHeaderLogo href="#" rel="noreferrer" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders optional props', () => {
     const component = render(
-      <EuiHeaderLogo
+      <WuiHeaderLogo
         iconType="alert"
         iconTitle="Moby Dick"
         style={{ color: 'red' }}

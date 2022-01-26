@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiEmptyPrompt, EuiButton } from '../../../../src/components/';
+import { WuiEmptyPrompt, WuiButton } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiEmptyPrompt.__docgenInfo)
-    ? EuiEmptyPrompt.__docgenInfo[0]
-    : EuiEmptyPrompt.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiEmptyPrompt.__docgenInfo)
+    ? WuiEmptyPrompt.__docgenInfo[0]
+    : WuiEmptyPrompt.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title = {
@@ -43,15 +43,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiEmptyPrompt',
+      componentName: 'WuiEmptyPrompt',
       props: propsToUse,
       scope: {
-        EuiEmptyPrompt,
-        EuiButton,
+        WuiEmptyPrompt,
+        WuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiEmptyPrompt', 'EuiButton'],
+        '@wazuh/wui': {
+          named: ['WuiEmptyPrompt', 'WuiButton'],
         },
       },
     },

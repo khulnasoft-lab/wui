@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiToolTip } from '../../../../src/components/';
+import { WuiToolTip } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -7,9 +7,9 @@ import {
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiToolTip.__docgenInfo)
-    ? EuiToolTip.__docgenInfo[0]
-    : EuiToolTip.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiToolTip.__docgenInfo)
+    ? WuiToolTip.__docgenInfo[0]
+    : WuiToolTip.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -35,14 +35,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiToolTip',
+      componentName: 'WuiToolTip',
       props: propsToUse,
       scope: {
-        EuiToolTip,
+        WuiToolTip,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiToolTip'],
+        '@wazuh/wui': {
+          named: ['WuiToolTip'],
         },
       },
       customProps: {

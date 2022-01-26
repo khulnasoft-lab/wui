@@ -1,36 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiNavDrawer is rendered 1`] = `
+exports[`WuiNavDrawer is rendered 1`] = `
 <nav
-  class="euiNavDrawer euiNavDrawer-isCollapsed euiNavDrawer-flyoutIsCollapsed"
+  class="wuiNavDrawer wuiNavDrawer-isCollapsed wuiNavDrawer-flyoutIsCollapsed"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--directionRow"
+    class="wuiFlexGroup wuiFlexGroup--directionRow"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       <div
-        class="euiNavDrawerMenu euiNavDrawerMenu-hasFooter"
+        class="wuiNavDrawerMenu wuiNavDrawerMenu-hasFooter"
         id="navDrawerMenu"
       >
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup-maxWidthDefault wuiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
+            class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
             <button
-              class="euiListGroupItem__button"
+              class="wuiListGroupItem__button"
               data-test-subj="navDrawerExpandButton-isCollapsed"
               type="button"
             >
               <div
-                class="euiListGroupItem__icon"
-                data-euiicon-type="lockOpen"
+                class="wuiListGroupItem__icon"
+                data-wuiicon-type="lockOpen"
               />
               <span
-                class="euiListGroupItem__label"
+                class="wuiListGroupItem__label"
                 title="Undocked"
               >
                 Undocked
@@ -39,27 +39,27 @@ exports[`EuiNavDrawer is rendered 1`] = `
           </li>
         </ul>
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawerGroup"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiNavDrawerGroup"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <button
                 aria-expanded="false"
                 aria-label="Recently viewed"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Recently viewed"
                 type="button"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="clock"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="clock"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Recently viewed
                 </span>
@@ -67,24 +67,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <button
                 aria-expanded="false"
                 aria-label="Favorites"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Favorites"
                 type="button"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="starEmpty"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="starEmpty"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Favorites
                 </span>
@@ -93,27 +93,27 @@ exports[`EuiNavDrawer is rendered 1`] = `
           </li>
         </ul>
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawerGroup"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiNavDrawerGroup"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isActive euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isActive wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Canvas"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Canvas"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="canvasApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="canvasApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Canvas
                 </span>
@@ -121,24 +121,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Discover"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Discover"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="discoverApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="discoverApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Discover
                 </span>
@@ -146,24 +146,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Visualize"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Visualize"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="visualizeApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="visualizeApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Visualize
                 </span>
@@ -171,24 +171,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Dashboard"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Dashboard"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="dashboardApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="dashboardApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Dashboard
                 </span>
@@ -196,24 +196,24 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Machine learning"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Machine learning"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="machineLearningApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="machineLearningApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Machine learning
                 </span>
@@ -221,25 +221,25 @@ exports[`EuiNavDrawer is rendered 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Custom Plugin (no icon)"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Custom Plugin (no icon)"
                 href="#"
                 rel="noreferrer"
               >
                 <span
-                  class="euiListGroupItem__icon euiNavDrawerGroup__itemDefaultIcon"
+                  class="wuiListGroupItem__icon wuiNavDrawerGroup__itemDefaultIcon"
                 >
                   CP
                 </span>
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Custom Plugin (no icon)
                 </span>
@@ -251,11 +251,11 @@ exports[`EuiNavDrawer is rendered 1`] = `
     </div>
     <div
       aria-labelledby="navDrawerFlyoutTitle"
-      class="euiNavDrawerFlyout euiNavDrawerFlyout-isCollapsed"
+      class="wuiNavDrawerFlyout wuiNavDrawerFlyout-isCollapsed"
       id="navDrawerFlyout"
     >
       <div
-        class="euiTitle euiTitle--xxsmall euiNavDrawerFlyout__title"
+        class="wuiTitle wuiTitle--xxsmall wuiNavDrawerFlyout__title"
         id="navDrawerFlyoutTitle"
         tabindex="-1"
       />
@@ -264,37 +264,37 @@ exports[`EuiNavDrawer is rendered 1`] = `
 </nav>
 `;
 
-exports[`EuiNavDrawer renders with falsy children 1`] = `
+exports[`WuiNavDrawer renders with falsy children 1`] = `
 <nav
-  class="euiNavDrawer euiNavDrawer-isCollapsed euiNavDrawer-flyoutIsCollapsed"
+  class="wuiNavDrawer wuiNavDrawer-isCollapsed wuiNavDrawer-flyoutIsCollapsed"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--directionRow"
+    class="wuiFlexGroup wuiFlexGroup--directionRow"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       <div
-        class="euiNavDrawerMenu euiNavDrawerMenu-hasFooter"
+        class="wuiNavDrawerMenu wuiNavDrawerMenu-hasFooter"
         id="navDrawerMenu"
       >
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup-maxWidthDefault wuiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
+            class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
             <button
-              class="euiListGroupItem__button"
+              class="wuiListGroupItem__button"
               data-test-subj="navDrawerExpandButton-isCollapsed"
               type="button"
             >
               <div
-                class="euiListGroupItem__icon"
-                data-euiicon-type="lockOpen"
+                class="wuiListGroupItem__icon"
+                data-wuiicon-type="lockOpen"
               />
               <span
-                class="euiListGroupItem__label"
+                class="wuiListGroupItem__label"
                 title="Undocked"
               >
                 Undocked
@@ -303,27 +303,27 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
           </li>
         </ul>
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawerGroup"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiNavDrawerGroup"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isActive euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isActive wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Canvas"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Canvas"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="canvasApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="canvasApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Canvas
                 </span>
@@ -331,24 +331,24 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Discover"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Discover"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="discoverApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="discoverApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Discover
                 </span>
@@ -356,24 +356,24 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Visualize"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Visualize"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="visualizeApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="visualizeApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Visualize
                 </span>
@@ -381,24 +381,24 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Dashboard"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Dashboard"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="dashboardApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="dashboardApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Dashboard
                 </span>
@@ -406,24 +406,24 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Machine learning"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Machine learning"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="machineLearningApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="machineLearningApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Machine learning
                 </span>
@@ -431,25 +431,25 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Custom Plugin (no icon)"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Custom Plugin (no icon)"
                 href="#"
                 rel="noreferrer"
               >
                 <span
-                  class="euiListGroupItem__icon euiNavDrawerGroup__itemDefaultIcon"
+                  class="wuiListGroupItem__icon wuiNavDrawerGroup__itemDefaultIcon"
                 >
                   CP
                 </span>
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Custom Plugin (no icon)
                 </span>
@@ -461,11 +461,11 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
     </div>
     <div
       aria-labelledby="navDrawerFlyoutTitle"
-      class="euiNavDrawerFlyout euiNavDrawerFlyout-isCollapsed"
+      class="wuiNavDrawerFlyout wuiNavDrawerFlyout-isCollapsed"
       id="navDrawerFlyout"
     >
       <div
-        class="euiTitle euiTitle--xxsmall euiNavDrawerFlyout__title"
+        class="wuiTitle wuiTitle--xxsmall wuiNavDrawerFlyout__title"
         id="navDrawerFlyoutTitle"
         tabindex="-1"
       />
@@ -474,37 +474,37 @@ exports[`EuiNavDrawer renders with falsy children 1`] = `
 </nav>
 `;
 
-exports[`EuiNavDrawer renders with fragments 1`] = `
+exports[`WuiNavDrawer renders with fragments 1`] = `
 <nav
-  class="euiNavDrawer euiNavDrawer-isCollapsed euiNavDrawer-flyoutIsCollapsed"
+  class="wuiNavDrawer wuiNavDrawer-isCollapsed wuiNavDrawer-flyoutIsCollapsed"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--directionRow"
+    class="wuiFlexGroup wuiFlexGroup--directionRow"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       <div
-        class="euiNavDrawerMenu euiNavDrawerMenu-hasFooter"
+        class="wuiNavDrawerMenu wuiNavDrawerMenu-hasFooter"
         id="navDrawerMenu"
       >
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup-maxWidthDefault euiNavDrawer__expandButton"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup-maxWidthDefault wuiNavDrawer__expandButton"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
+            class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable navDrawerExpandButton-isCollapsed"
           >
             <button
-              class="euiListGroupItem__button"
+              class="wuiListGroupItem__button"
               data-test-subj="navDrawerExpandButton-isCollapsed"
               type="button"
             >
               <div
-                class="euiListGroupItem__icon"
-                data-euiicon-type="lockOpen"
+                class="wuiListGroupItem__icon"
+                data-wuiicon-type="lockOpen"
               />
               <span
-                class="euiListGroupItem__label"
+                class="wuiListGroupItem__label"
                 title="Undocked"
               >
                 Undocked
@@ -513,27 +513,27 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
           </li>
         </ul>
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawerGroup"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiNavDrawerGroup"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <button
                 aria-expanded="false"
                 aria-label="Recently viewed"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Recently viewed"
                 type="button"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="clock"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="clock"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Recently viewed
                 </span>
@@ -541,24 +541,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <button
                 aria-expanded="false"
                 aria-label="Favorites"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Favorites"
                 type="button"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="starEmpty"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="starEmpty"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Favorites
                 </span>
@@ -567,27 +567,27 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
           </li>
         </ul>
         <ul
-          class="euiListGroup euiListGroup-flush euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiNavDrawerGroup"
+          class="wuiListGroup wuiListGroup-flush wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiNavDrawerGroup"
         >
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isActive euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isActive wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Canvas"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Canvas"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="canvasApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="canvasApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Canvas
                 </span>
@@ -595,24 +595,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Discover"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Discover"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="discoverApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="discoverApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Discover
                 </span>
@@ -620,24 +620,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Visualize"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Visualize"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="visualizeApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="visualizeApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Visualize
                 </span>
@@ -645,24 +645,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Dashboard"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Dashboard"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="dashboardApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="dashboardApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Dashboard
                 </span>
@@ -670,24 +670,24 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Machine learning"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Machine learning"
                 href="#"
                 rel="noreferrer"
               >
                 <div
-                  class="euiListGroupItem__icon"
-                  data-euiicon-type="machineLearningApp"
+                  class="wuiListGroupItem__icon"
+                  data-wuiicon-type="machineLearningApp"
                 />
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Machine learning
                 </span>
@@ -695,25 +695,25 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
             </span>
           </li>
           <li
-            class="euiListGroupItem euiListGroupItem--small euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiNavDrawerGroup__item"
+            class="wuiListGroupItem wuiListGroupItem--small wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiNavDrawerGroup__item"
           >
             <span
-              class="euiToolTipAnchor euiListGroupItem__tooltip"
+              class="wuiToolTipAnchor wuiListGroupItem__tooltip"
             >
               <a
                 aria-label="Custom Plugin (no icon)"
-                class="euiListGroupItem__button"
+                class="wuiListGroupItem__button"
                 data-name="Custom Plugin (no icon)"
                 href="#"
                 rel="noreferrer"
               >
                 <span
-                  class="euiListGroupItem__icon euiNavDrawerGroup__itemDefaultIcon"
+                  class="wuiListGroupItem__icon wuiNavDrawerGroup__itemDefaultIcon"
                 >
                   CP
                 </span>
                 <span
-                  class="euiListGroupItem__label"
+                  class="wuiListGroupItem__label"
                 >
                   Custom Plugin (no icon)
                 </span>
@@ -725,11 +725,11 @@ exports[`EuiNavDrawer renders with fragments 1`] = `
     </div>
     <div
       aria-labelledby="navDrawerFlyoutTitle"
-      class="euiNavDrawerFlyout euiNavDrawerFlyout-isCollapsed"
+      class="wuiNavDrawerFlyout wuiNavDrawerFlyout-isCollapsed"
       id="navDrawerFlyout"
     >
       <div
-        class="euiTitle euiTitle--xxsmall euiNavDrawerFlyout__title"
+        class="wuiTitle wuiTitle--xxsmall wuiNavDrawerFlyout__title"
         id="navDrawerFlyoutTitle"
         tabindex="-1"
       />

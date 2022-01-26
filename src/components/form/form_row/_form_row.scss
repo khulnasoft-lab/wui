@@ -2,100 +2,100 @@
  * 1. Coerce inline form elements to behave as block-level elements.
  * 2. For inline forms, we need to add margin if the label doesn't exist.
  */
-.euiFormRow {
+.wuiFormRow {
   display: flex; /* 1 */
   flex-direction: column; /* 1 */
-  max-width: $euiFormMaxWidth;
+  max-width: $wuiFormMaxWidth;
 
-  + .euiFormRow,
-  + .euiButton {
+  + .wuiFormRow,
+  + .wuiButton {
     margin-top: $euiSize;
   }
 }
 
-.euiFormRow--fullWidth {
+.wuiFormRow--fullWidth {
   max-width: 100%;
 }
 
-.euiFormRow--hasEmptyLabelSpace {
-  margin-top: ($euiFontSizeXS * $euiLineHeight) + $euiSizeXS; /* 2 */
+.wuiFormRow--hasEmptyLabelSpace {
+  margin-top: ($euiFontSizeXS * $wuiLineHeight) + $euiSizeXS; /* 2 */
   // the following ensure that contents that aren't inherently the same height
   // as inputs will align to the vertical center
-  min-height: $euiFormControlHeight;
+  min-height: $wuiFormControlHeight;
   padding-bottom: 0;
   justify-content: center;
 }
 
-.euiFormRow__labelWrapper {
+.wuiFormRow__labelWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: $euiSizeXS;
 }
 
-.euiFormRow--horizontal {
+.wuiFormRow--horizontal {
   flex-direction: row;
   align-items: stretch;
 
-  .euiFormRow__label {
-    @include euiTextBreakWord;
+  .wuiFormRow__label {
+    @include wuiTextBreakWord;
     hyphens: auto;
     max-width: 100%; // Fixes IE
   }
 
-  .euiFormRow__labelWrapper {
+  .wuiFormRow__labelWrapper {
     display: block;
-    line-height: $euiFormControlCompressedHeight - 1px; // The 1px less helps the alignment of the text baseline
+    line-height: $wuiFormControlCompressedHeight - 1px; // The 1px less helps the alignment of the text baseline
     width: calc(33% - #{$euiSizeS});
     margin-right: $euiSizeS;
     margin-bottom: 0;
   }
 
-  .euiFormRow__fieldWrapper {
+  .wuiFormRow__fieldWrapper {
     width: 67%;
   }
 
-  + .euiFormRow--horizontal {
+  + .wuiFormRow--horizontal {
     margin-top: $euiSizeS;
   }
 
-  + .euiFormRow--horizontal.euiFormRow--hasSwitch {
+  + .wuiFormRow--horizontal.wuiFormRow--hasSwitch {
     margin-top: $euiSizeM; // More spacing since we reduced the height to match that of the switch
   }
 
-  &.euiFormRow--hasSwitch {
-    .euiFormRow__labelWrapper {
-      line-height: $euiSwitchHeight - 1px; // The 1px less helps the alignment of the text baseline
+  &.wuiFormRow--hasSwitch {
+    .wuiFormRow__labelWrapper {
+      line-height: $wuiSwitchHeight - 1px; // The 1px less helps the alignment of the text baseline
       width: auto;
       min-width: calc(33% - #{$euiSizeS});
     }
 
-    .euiFormRow__fieldWrapper {
+    .wuiFormRow__fieldWrapper {
       width: auto;
 
-      .euiSwitch--compressed {
+      .wuiSwitch--compressed {
         margin-top: $euiSizeXS / 2; // Better vertical alignment of a compressed switch to the horizontal label
       }
     }
 
-    + .euiFormRow--horizontal {
+    + .wuiFormRow--horizontal {
       margin-top: $euiSizeM; // More spacing since we reduced the height to match that of the switch
     }
   }
 }
 
-.euiFormRow__fieldWrapperDisplayOnly {
-  min-height: $euiFormControlHeight;
+.wuiFormRow__fieldWrapperDisplayOnly {
+  min-height: $wuiFormControlHeight;
   display: flex;
   align-items: center;
 }
 
-.euiFormRow--compressed {
-  &.euiFormRow--hasEmptyLabelSpace {
-    min-height: $euiFormControlCompressedHeight;
+.wuiFormRow--compressed {
+  &.wuiFormRow--hasEmptyLabelSpace {
+    min-height: $wuiFormControlCompressedHeight;
   }
 
-  .euiFormRow__fieldWrapperDisplayOnly {
-    min-height: $euiFormControlCompressedHeight;
+  .wuiFormRow__fieldWrapperDisplayOnly {
+    min-height: $wuiFormControlCompressedHeight;
   }
 }

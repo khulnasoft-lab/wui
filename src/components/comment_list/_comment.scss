@@ -1,14 +1,14 @@
-.euiComment {
+.wuiComment {
   font-size: $euiFontSizeS;
   display: flex;
   padding-bottom: $euiSize;
   min-height: $euiSize * 3.5;
 
-  .euiCommentEvent {
+  .wuiCommentEvent {
     flex-grow: 1;
   }
 
-  .euiCommentTimeline {
+  .wuiCommentTimeline {
     position: relative;
     flex-grow: 0;
     margin-right: $euiSize;
@@ -19,20 +19,20 @@
       left: $euiSizeXXL / 2;
       top: $euiSizeL;
       width: $euiSizeXS / 2;
-      background-color: $euiColorLightShade;
+      background-color: $wuiColorLightShade;
       height: calc(100% + #{$euiSizeL});
     }
   }
 }
 
-.euiComment:last-of-type {
-  .euiCommentTimeline {
+.wuiComment:last-of-type {
+  .wuiCommentTimeline {
     &::before {
       display: none;
     }
   }
 }
 
-.euiComment--update:not(.euiComment--hasBody) {
+.wuiComment--update:not(.wuiComment--hasBody) {
   align-items: center;
 }

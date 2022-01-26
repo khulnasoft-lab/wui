@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageContentBody } from './page_content_body';
+import { WuiPageContentBody } from './page_content_body';
 
-describe('EuiPageContentBody', () => {
+describe('WuiPageContentBody', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageContentBody {...requiredProps} />);
+    const component = render(<WuiPageContentBody {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

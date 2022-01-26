@@ -1,4 +1,4 @@
-.euiToken {
+.wuiToken {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -9,77 +9,77 @@
   }
 }
 
-.euiToken--circle {
+.wuiToken--circle {
   border-radius: 50%;
 }
 
-.euiToken--square {
+.wuiToken--square {
   // These are pretty small elements, the standard size
   // is just slightly too large.
-  border-radius: $euiBorderRadius - 1px;
+  border-radius: $wuiBorderRadius - 1px;
 }
 
-.euiToken--xsmall {
+.wuiToken--xsmall {
   width: $euiSizeM;
   height: $euiSizeM;
 
-  &.euiToken--rectangle {
+  &.wuiToken--rectangle {
     padding: 0 $euiSizeXS;
   }
 }
 
-.euiToken--small {
+.wuiToken--small {
   width: $euiSize;
   height: $euiSize;
 
-  &.euiToken--rectangle {
+  &.wuiToken--rectangle {
     padding: 0 $euiSizeXS;
   }
 }
 
-.euiToken--medium {
+.wuiToken--medium {
   width: $euiSizeL;
   height: $euiSizeL;
 
-  &.euiToken--rectangle {
+  &.wuiToken--rectangle {
     padding: 0 $euiSizeS;
   }
 }
 
-.euiToken--large {
+.wuiToken--large {
   width: $euiSizeXL;
   height: $euiSizeXL;
 
-  &.euiToken--rectangle {
+  &.wuiToken--rectangle {
     padding: 0 ($euiSize * .5);
   }
 }
 
-.euiToken--rectangle {
+.wuiToken--rectangle {
   box-sizing: content-box;
 }
 
-@each $type in $euiTokenTypeKeys {
-  .euiToken--#{$type} {
-    $color: map-get(map-get($euiTokenTypes, $type), 'graphic');
+@each $type in $wuiTokenTypeKeys {
+  .wuiToken--#{$type} {
+    $color: map-get(map-get($wuiTokenTypes, $type), 'graphic');
     $backgroundColor: tintOrShade($color, 90%, 70%);
     $fillColor: makeHighContrastColor($color, $backgroundColor);
 
     // Without a background, the fill color should be the graphic color
     color: $color;
 
-    &.euiToken--light {
+    &.wuiToken--light {
       color: $fillColor;
       background-color: $backgroundColor;
       box-shadow: inset 0 0 0 1px tintOrShade($color, 70%, 60%);
     }
 
     // Dark tokens uses the main color as the background against light or dark text
-    $color: map-get(map-get($euiTokenTypes, $type), 'behindText');
+    $color: map-get(map-get($wuiTokenTypes, $type), 'behindText');
 
-    &.euiToken--dark {
+    &.wuiToken--dark {
       background-color: $color;
-      color: chooseLightOrDarkText($color, $euiColorGhost, $euiColorInk);
+      color: chooseLightOrDarkText($color, $euiColorGhost, $wuiColorInk);
     }
   }
 }

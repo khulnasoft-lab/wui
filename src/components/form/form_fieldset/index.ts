@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiFormFieldset, EuiFormFieldsetProps } from './form_fieldset';
-export { EuiFormLegend, EuiFormLegendProps } from './form_legend';
+export { WuiFormFieldset, WuiFormFieldsetProps } from './form_fieldset';
+export { WuiFormLegend, WuiFormLegendProps } from './form_legend';

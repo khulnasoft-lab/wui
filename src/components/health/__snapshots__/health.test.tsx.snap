@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHealth is rendered 1`] = `
+exports[`WuiHealth is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiHealth testClass1 testClass2"
+  class="wuiHealth testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--gutterExtraSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+    class="wuiFlexGroup wuiFlexGroup--gutterExtraSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       <div
-        data-euiicon-type="dot"
+        data-wuiicon-type="dot"
       />
     </div>
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     />
   </div>
 </div>

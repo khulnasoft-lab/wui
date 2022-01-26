@@ -23,7 +23,7 @@ import { CommonProps } from '../../common';
 
 type ComponentTypes = keyof JSX.IntrinsicElements | ComponentType<any>;
 
-export type EuiPageBodyProps<T extends ComponentTypes = 'main'> = CommonProps &
+export type WuiPageBodyProps<T extends ComponentTypes = 'main'> = CommonProps &
   ComponentProps<T> & {
     /**
      * Sets the max-width of the page,
@@ -34,32 +34,32 @@ export type EuiPageBodyProps<T extends ComponentTypes = 'main'> = CommonProps &
      */
     restrictWidth?: boolean | number | string;
     /**
-     * Sets the HTML element for `EuiPageBody`.
+     * Sets the HTML element for `WuiPageBody`.
      */
     component?: T;
   };
 
-export const EuiPageBody = <T extends ComponentTypes>({
+export const WuiPageBody = <T extends ComponentTypes>({
   children,
   restrictWidth = false,
   style,
   className,
   component: Component = 'main' as T,
   ...rest
-}: PropsWithChildren<EuiPageBodyProps<T>>) => {
+}: PropsWithChildren<WuiPageBodyProps<T>>) => {
   let widthClassname;
   let newStyle;
 
   if (restrictWidth === true) {
-    widthClassname = 'euiPageBody--restrictWidth-default';
+    widthClassname = 'wuiPageBody--restrictWidth-default';
   } else if (restrictWidth !== false) {
-    widthClassname = 'euiPageBody--restrictWidth-custom';
+    widthClassname = 'wuiPageBody--restrictWidth-custom';
     const value =
       typeof restrictWidth === 'number' ? `${restrictWidth}px` : restrictWidth;
     newStyle = { ...style, maxWidth: value };
   }
 
-  const classes = classNames('euiPageBody', widthClassname, className);
+  const classes = classNames('wuiPageBody', widthClassname, className);
 
   return (
     <Component className={classes} style={newStyle || style} {...rest}>

@@ -1,4 +1,4 @@
-@mixin createStepsNumber($size: $euiStepNumberSize, $fontSize: $euiFontSize) {
+@mixin createStepsNumber($size: $wuiStepNumberSize, $fontSize: $euiFontSize) {
   @include size($size);
 
   display: inline-block;
@@ -6,7 +6,7 @@
   border-radius: $size;
   text-align: center;
   color: $euiColorEmptyShade;
-  background-color: $euiColorPrimary;
+  background-color: $wuiColorPrimary;
   font-size: $fontSize;
-  font-weight: $euiFontWeightMedium;
+  font-weight: $wuiFontWeightMedium;
 }

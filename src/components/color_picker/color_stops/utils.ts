@@ -21,7 +21,7 @@ import { getEventPosition, getChromaColor } from '../utils';
 import { DEFAULT_VISUALIZATION_COLOR } from '../../../services';
 import { ColorStop } from './color_stop_thumb';
 
-const EUI_THUMB_SIZE = 16; // Same as $euiRangeThumbHeight & $euiRangeThumbWidth
+const WUI_THUMB_SIZE = 16; // Same as $wuiRangeThumbHeight & $wuiRangeThumbWidth
 
 export const removeStop = (colorStops: ColorStop[], index: number) => {
   if (colorStops.length === 1) {
@@ -100,7 +100,7 @@ export const isInvalid = (
 };
 
 export const calculateScale = (trackWidth: number) => {
-  const thumbToTrackRatio = EUI_THUMB_SIZE / trackWidth;
+  const thumbToTrackRatio = WUI_THUMB_SIZE / trackWidth;
   return (1 - thumbToTrackRatio) * 100;
 };
 

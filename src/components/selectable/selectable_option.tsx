@@ -20,9 +20,9 @@
 import React, { HTMLAttributes } from 'react';
 import { CommonProps, ExclusiveUnion } from '../common';
 
-export type EuiSelectableOptionCheckedType = 'on' | 'off' | undefined;
+export type WuiSelectableOptionCheckedType = 'on' | 'off' | undefined;
 
-export type EuiSelectableOptionBase = CommonProps & {
+export type WuiSelectableOptionBase = CommonProps & {
   /**
    * Visible label of option.
    * Must be unique across items if `key` is not supplied
@@ -43,7 +43,7 @@ export type EuiSelectableOptionBase = CommonProps & {
    * 'on' to indicate inclusion and
    * 'off' to indicate exclusion
    */
-  checked?: EuiSelectableOptionCheckedType;
+  checked?: WuiSelectableOptionCheckedType;
   disabled?: boolean;
   /**
    * Optional `boolean`.
@@ -66,23 +66,23 @@ export type EuiSelectableOptionBase = CommonProps & {
   id?: never;
 };
 
-type _EuiSelectableGroupLabelOption = Omit<
-  EuiSelectableOptionBase,
+type _WuiSelectableGroupLabelOption = Omit<
+  WuiSelectableOptionBase,
   'isGroupLabel'
 > &
   Exclude<HTMLAttributes<HTMLDivElement>, 'id'> & {
     isGroupLabel: true;
   };
 
-export type EuiSelectableGroupLabelOption<T> = _EuiSelectableGroupLabelOption &
+export type WuiSelectableGroupLabelOption<T> = _WuiSelectableGroupLabelOption &
   T;
 
-type _EuiSelectableLIOption = EuiSelectableOptionBase &
+type _WuiSelectableLIOption = WuiSelectableOptionBase &
   Exclude<HTMLAttributes<HTMLLIElement>, 'id'>;
 
-export type EuiSelectableLIOption<T> = _EuiSelectableLIOption & T;
+export type WuiSelectableLIOption<T> = _WuiSelectableLIOption & T;
 
-export type EuiSelectableOption<T = {}> = ExclusiveUnion<
-  EuiSelectableGroupLabelOption<T>,
-  EuiSelectableLIOption<T>
+export type WuiSelectableOption<T = {}> = ExclusiveUnion<
+  WuiSelectableGroupLabelOption<T>,
+  WuiSelectableLIOption<T>
 >;

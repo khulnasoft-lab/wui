@@ -21,23 +21,23 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldPassword, EuiFieldPasswordProps } from './field_password';
+import { WuiFieldPassword, WuiFieldPasswordProps } from './field_password';
 
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  WuiValidatableControl: 'wui-validatable-control',
 }));
 
-const TYPES: Array<EuiFieldPasswordProps['type']> = [
+const TYPES: Array<WuiFieldPasswordProps['type']> = [
   'password',
   'text',
   'dual',
 ];
 
-describe('EuiFieldPassword', () => {
+describe('WuiFieldPassword', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldPassword
-        name="elastic"
+      <WuiFieldPassword
+        name="wazuh"
         id="1"
         placeholder="Placeholder"
         value="1"
@@ -51,33 +51,33 @@ describe('EuiFieldPassword', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldPassword isInvalid />);
+      const component = render(<WuiFieldPassword isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldPassword fullWidth />);
+      const component = render(<WuiFieldPassword fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldPassword isLoading />);
+      const component = render(<WuiFieldPassword isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('prepend and append is rendered', () => {
       const component = render(
-        <EuiFieldPassword prepend="String" append="String" />
+        <WuiFieldPassword prepend="String" append="String" />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('compressed is rendered', () => {
-      const component = render(<EuiFieldPassword compressed />);
+      const component = render(<WuiFieldPassword compressed />);
 
       expect(component).toMatchSnapshot();
     });
@@ -85,7 +85,7 @@ describe('EuiFieldPassword', () => {
     describe('type', () => {
       TYPES.forEach(type => {
         test(`${type} is rendered`, () => {
-          const component = render(<EuiFieldPassword type={type} />);
+          const component = render(<WuiFieldPassword type={type} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -95,7 +95,7 @@ describe('EuiFieldPassword', () => {
     describe('dual', () => {
       test('dualToggleProps is rendered', () => {
         const component = render(
-          <EuiFieldPassword type="dual" dualToggleProps={requiredProps} />
+          <WuiFieldPassword type="dual" dualToggleProps={requiredProps} />
         );
 
         expect(component).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe('EuiFieldPassword', () => {
 
       test('dual type also renders append', () => {
         const component = render(
-          <EuiFieldPassword
+          <WuiFieldPassword
             type="dual"
             append={['String', <span>Span</span>]}
           />
@@ -113,21 +113,21 @@ describe('EuiFieldPassword', () => {
       });
 
       test('dual does not mutate the append array prop', () => {
-        const props: EuiFieldPasswordProps = {
+        const props: WuiFieldPasswordProps = {
           type: 'dual',
           append: ['one', 'two'],
           dualToggleProps: {
             'data-test-subj': 'toggleButton',
           },
         };
-        const component = mount(<EuiFieldPassword {...props} />);
+        const component = mount(<WuiFieldPassword {...props} />);
 
         expect(
           component.find('button[data-test-subj="toggleButton"]').length
         ).toBe(1);
         expect(
           component
-            .find('button[data-test-subj="toggleButton"] EuiIcon')
+            .find('button[data-test-subj="toggleButton"] WuiIcon')
             .props().type
         ).toBe('eye');
 
@@ -140,7 +140,7 @@ describe('EuiFieldPassword', () => {
         ).toBe(1);
         expect(
           component
-            .find('button[data-test-subj="toggleButton"] EuiIcon')
+            .find('button[data-test-subj="toggleButton"] WuiIcon')
             .props().type
         ).toBe('eyeClosed');
       });

@@ -20,30 +20,30 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiScreenReaderOnly } from './screen_reader';
+import { WuiScreenReaderOnly } from './screen_reader';
 
-describe('EuiScreenReaderOnly', () => {
+describe('WuiScreenReaderOnly', () => {
   describe('adds an accessibility class to a child element', () => {
     test('when used with no props', () => {
       const $paragraph = render(
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <p>
             This paragraph is not visibile to sighted users but will be read by
             screenreaders.
           </p>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       );
 
       expect($paragraph).toMatchSnapshot();
     });
     test('and combines other classNames (foo, bar) given as props on the child', () => {
       const $paragraph = render(
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <p className="foo bar">
             This paragraph is not visibile to sighted users but will be read by
             screenreaders.
           </p>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       );
 
       expect($paragraph).toMatchSnapshot();
@@ -52,9 +52,9 @@ describe('EuiScreenReaderOnly', () => {
 
   test('will show on focus', () => {
     const component = render(
-      <EuiScreenReaderOnly showOnFocus>
+      <WuiScreenReaderOnly showOnFocus>
         <a href="#">Link</a>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     );
 
     expect(component).toMatchSnapshot();

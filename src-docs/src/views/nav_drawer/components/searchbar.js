@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSuggest,
-  EuiSuperDatePicker,
-  EuiFormRow,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSuggest,
+  WuiSuperDatePicker,
+  WuiFormRow,
 } from '../../../../../src/components';
 
 import HashtagPopover from '../../suggest/hashtag_popover';
@@ -60,12 +60,12 @@ export default () => {
     alert('Time changed');
   };
 
-  const append = <EuiButtonEmpty size={'s'}>KQL</EuiButtonEmpty>;
+  const append = <WuiButtonEmpty size={'s'}>KQL</WuiButtonEmpty>;
 
   return (
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem>
-        <EuiSuggest
+    <WuiFlexGroup gutterSize="s">
+      <WuiFlexItem>
+        <WuiSuggest
           status={status}
           prepend={<HashtagPopover value={value} />}
           append={append}
@@ -74,15 +74,15 @@ export default () => {
           onInputChange={getInputValue}
           compressed={true}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} className="savedQueriesInput__datepicker">
-        <EuiFormRow display="rowCompressed">
-          <EuiSuperDatePicker
+      </WuiFlexItem>
+      <WuiFlexItem grow={false} className="savedQueriesInput__datepicker">
+        <WuiFormRow display="rowCompressed">
+          <WuiSuperDatePicker
             showUpdateButton={false}
             onTimeChange={onTimeChange}
           />
-        </EuiFormRow>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiFormRow>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

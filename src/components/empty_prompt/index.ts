@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiEmptyPrompt, EuiEmptyPromptProps } from './empty_prompt';
+export { WuiEmptyPrompt, WuiEmptyPromptProps } from './empty_prompt';

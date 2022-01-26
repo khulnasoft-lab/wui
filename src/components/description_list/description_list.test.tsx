@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
+import { WuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
 
-describe('EuiDescriptionList', () => {
+describe('WuiDescriptionList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDescriptionList {...requiredProps}>Content</EuiDescriptionList>
+      <WuiDescriptionList {...requiredProps}>Content</WuiDescriptionList>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,9 +51,9 @@ describe('EuiDescriptionList', () => {
         ];
 
         const component = render(
-          <EuiDescriptionList listItems={listItems}>
+          <WuiDescriptionList listItems={listItems}>
             listItems will render instead of this content
-          </EuiDescriptionList>
+          </WuiDescriptionList>
         );
 
         expect(component).toMatchSnapshot();
@@ -62,7 +62,7 @@ describe('EuiDescriptionList', () => {
 
     describe('compressed', () => {
       test('is rendered', () => {
-        const component = render(<EuiDescriptionList compressed />);
+        const component = render(<WuiDescriptionList compressed />);
 
         expect(component).toMatchSnapshot();
       });
@@ -71,7 +71,7 @@ describe('EuiDescriptionList', () => {
     describe('type', () => {
       TYPES.forEach(type => {
         test(`${type} is rendered`, () => {
-          const component = render(<EuiDescriptionList type={type} />);
+          const component = render(<WuiDescriptionList type={type} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -81,7 +81,7 @@ describe('EuiDescriptionList', () => {
     describe('align', () => {
       ALIGNMENTS.forEach(alignment => {
         test(`${alignment} is rendered`, () => {
-          const component = render(<EuiDescriptionList align={alignment} />);
+          const component = render(<WuiDescriptionList align={alignment} />);
 
           expect(component).toMatchSnapshot();
         });

@@ -21,24 +21,24 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingChart, SIZES } from './loading_chart';
+import { WuiLoadingChart, SIZES } from './loading_chart';
 
-describe('EuiLoadingChart', () => {
+describe('WuiLoadingChart', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingChart {...requiredProps} />);
+    const component = render(<WuiLoadingChart {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('mono is rendered', () => {
-    const component = render(<EuiLoadingChart mono />);
+    const component = render(<WuiLoadingChart mono />);
 
     expect(component).toMatchSnapshot();
   });
   describe('size', () => {
     SIZES.forEach(size => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiLoadingChart size={size} />);
+        const component = render(<WuiLoadingChart size={size} />);
 
         expect(component).toMatchSnapshot();
       });

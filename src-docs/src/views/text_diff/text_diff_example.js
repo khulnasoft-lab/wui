@@ -5,8 +5,8 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode } from '../../../../src/components';
-import { useEuiTextDiffProp } from './props';
+import { WuiCode } from '../../../../src/components';
+import { useWuiTextDiffProp } from './props';
 import TextDiff from './text_diff';
 const textDiffSource = require('!!raw-loader!./text_diff');
 const textDiffHtml = renderToHtml(TextDiff);
@@ -33,29 +33,29 @@ export const TextDiffExample = {
       text: (
         <>
           <p>
-            The hook, <strong>useEuiTextDiff</strong>, generates a set of
+            The hook, <strong>useWuiTextDiff</strong>, generates a set of
             changes between two strings. It returns both React elements for
             displaying the diff and an object representing the identified
-            changes. The <EuiCode>timeout</EuiCode> prop is used to set how many
+            changes. The <WuiCode>timeout</WuiCode> prop is used to set how many
             seconds any diff&apos;s exploration phase may take. The default
             value is 0.1, a value of 0 disables the timeout and lets diff run
             until completion. The higher the timeout, the more detailed the
             comparison.
           </p>
           <p>
-            <EuiCode language="tsx">
+            <WuiCode language="tsx">
               {
-                'const [rendered, textDiffObject] = useEuiTextDiff({ beforeText, afterText })'
+                'const [rendered, textDiffObject] = useWuiTextDiff({ beforeText, afterText })'
               }
-            </EuiCode>
+            </WuiCode>
           </p>
         </>
       ),
       demo: <TextDiff />,
-      props: { useEuiTextDiffProp },
-      snippet: `const [rendered, textDiffObject] = useEuiTextDiff({ beforeText, afterText })
+      props: { useWuiTextDiffProp },
+      snippet: `const [rendered, textDiffObject] = useWuiTextDiff({ beforeText, afterText })
 
-<EuiText><p>{rendered}</p></EuiText>`,
+<WuiText><p>{rendered}</p></WuiText>`,
     },
     {
       title: 'Custom rendered elements',
@@ -73,36 +73,36 @@ export const TextDiffExample = {
         <>
           <p>
             By default, the hook will wrap deletions with{' '}
-            <EuiCode>{'<del>'}</EuiCode> and insertions with{' '}
-            <EuiCode>{'<ins>'}</EuiCode> elements. You can replace these
-            elements with the <EuiCode>deleteComponent</EuiCode> and{' '}
-            <EuiCode>insertComponent</EuiCode>
+            <WuiCode>{'<del>'}</WuiCode> and insertions with{' '}
+            <WuiCode>{'<ins>'}</WuiCode> elements. You can replace these
+            elements with the <WuiCode>deleteComponent</WuiCode> and{' '}
+            <WuiCode>insertComponent</WuiCode>
             props respectively.
           </p>
           <p>
-            Also, since <EuiCode>rendered</EuiCode> is simple html string, you
+            Also, since <WuiCode>rendered</WuiCode> is simple html string, you
             can wrap it in any contextual element like{' '}
             <Link to="/display/text">
-              <strong>EuiText</strong>
+              <strong>WuiText</strong>
             </Link>{' '}
             or{' '}
             <Link to="/display/code">
-              <strong>EuiCodeBlock</strong>
+              <strong>WuiCodeBlock</strong>
             </Link>
             .
           </p>
         </>
       ),
       demo: <TextDiffCustomComponents />,
-      snippet: `const [rendered] = useEuiTextDiff({
+      snippet: `const [rendered] = useWuiTextDiff({
   beforeText,
   afterText,
   insertComponent: 'strong',
 });
 
-<EuiCodeBlock fontSize="m" paddingSize="m">
+<WuiCodeBlock fontSize="m" paddingSize="m">
   {rendered}
-</EuiCodeBlock>`,
+</WuiCodeBlock>`,
     },
   ],
 };

@@ -26,23 +26,23 @@ import React, {
   HTMLAttributes,
 } from 'react';
 import classNames from 'classnames';
-import { EuiListGroup, EuiListGroupItem } from '../list_group';
-import { EuiNavDrawerFlyout } from './nav_drawer_flyout';
+import { WuiListGroup, WuiListGroupItem } from '../list_group';
+import { WuiNavDrawerFlyout } from './nav_drawer_flyout';
 import {
-  EuiNavDrawerGroup,
+  WuiNavDrawerGroup,
   ATTR_SELECTOR,
   FlyoutMenuItem,
 } from './nav_drawer_group';
-import { EuiOutsideClickDetector } from '../outside_click_detector';
-import { EuiI18n } from '../i18n';
-import { EuiFlexItem, EuiFlexGroup } from '../flex';
+import { WuiOutsideClickDetector } from '../outside_click_detector';
+import { WuiI18n } from '../i18n';
+import { WuiFlexItem, WuiFlexGroup } from '../flex';
 import { throttle } from '../color_picker/utils';
 import { CommonProps } from '../common';
-import { EuiAccordion } from '../accordion';
+import { WuiAccordion } from '../accordion';
 
 const MENU_ELEMENT_ID = 'navDrawerMenu';
 
-export interface EuiNavDrawerProps
+export interface WuiNavDrawerProps
   extends CommonProps,
     HTMLAttributes<HTMLElement> {
   /**
@@ -71,7 +71,7 @@ export interface EuiNavDrawerProps
   showToolTips?: boolean;
 }
 
-interface EuiNavDrawerState {
+interface WuiNavDrawerState {
   flyoutIsCollapsed: boolean;
   flyoutListItems: FlyoutMenuItem[] | null;
   focusReturnRef: ReactNode | null;
@@ -83,16 +83,16 @@ interface EuiNavDrawerState {
   toolTipsEnabled: boolean;
 }
 
-export class EuiNavDrawer extends Component<
-  EuiNavDrawerProps,
-  EuiNavDrawerState
+export class WuiNavDrawer extends Component<
+  WuiNavDrawerProps,
+  WuiNavDrawerState
 > {
   static defaultProps = {
     showExpandButton: true,
     showToolTips: true,
   };
 
-  state: EuiNavDrawerState = {
+  state: WuiNavDrawerState = {
     flyoutIsCollapsed: true,
     flyoutListItems: null,
     focusReturnRef: null,
@@ -120,15 +120,15 @@ export class EuiNavDrawer extends Component<
 
   setBodyDockedClass = (navIsDocked: boolean | undefined) => {
     if (navIsDocked) {
-      document.body.classList.remove('euiBody--navDrawerNotDocked');
-      document.body.classList.add('euiBody--navDrawerIsDocked');
+      document.body.classList.remove('wuiBody--navDrawerNotDocked');
+      document.body.classList.add('wuiBody--navDrawerIsDocked');
     } else {
-      document.body.classList.remove('euiBody--navDrawerIsDocked');
-      document.body.classList.add('euiBody--navDrawerNotDocked');
+      document.body.classList.remove('wuiBody--navDrawerIsDocked');
+      document.body.classList.add('wuiBody--navDrawerNotDocked');
     }
   };
 
-  returnOnIsLockedUpdate = (isLockedState: EuiNavDrawerState['isLocked']) => {
+  returnOnIsLockedUpdate = (isLockedState: WuiNavDrawerState['isLocked']) => {
     if (this.props.onIsLockedUpdate) {
       this.props.onIsLockedUpdate(isLockedState);
     }
@@ -315,7 +315,7 @@ export class EuiNavDrawer extends Component<
   };
 
   modifyChildren = (children: ReactNode | ReactNode[]): ReactNode => {
-    // Loop through the EuiNavDrawer children (EuiListGroup, EuiHorizontalRules, etc)
+    // Loop through the WuiNavDrawer children (WuiListGroup, WuiHorizontalRules, etc)
     // Filter out falsy items
     const filteredChildren = React.Children.toArray(children);
     return React.Children.map(filteredChildren, child => {
@@ -325,8 +325,8 @@ export class EuiNavDrawer extends Component<
           return this.modifyChildren(child.props.children);
         }
 
-        // Check if child is an EuiNavDrawerGroup and if it does have a flyout, add the expand function
-        if (child.type === EuiNavDrawerGroup) {
+        // Check if child is an WuiNavDrawerGroup and if it does have a flyout, add the expand function
+        if (child.type === WuiNavDrawerGroup) {
           return !this.state.isLocked
             ? React.cloneElement(child, {
                 flyoutMenuButtonClick: this.expandFlyout,
@@ -335,16 +335,16 @@ export class EuiNavDrawer extends Component<
               })
             : child.props.listItems.map((listItem: any, key: number) =>
                 listItem?.flyoutMenu?.listItems.length ? (
-                  <EuiAccordion
+                  <WuiAccordion
                     id={listItem.label}
                     key={key}
                     paddingSize="none"
                     arrowDisplay="right"
                     buttonClassName={
-                      listItem.isActive ? 'euiAccordion__button__isActive' : ''
+                      listItem.isActive ? 'wuiAccordion__button__isActive' : ''
                     }
                     buttonContent={
-                      <EuiListGroup
+                      <WuiListGroup
                         flush
                         gutterSize="none"
                         listItems={[
@@ -356,13 +356,13 @@ export class EuiNavDrawer extends Component<
                         className={this.props.className}
                       />
                     }>
-                    <EuiListGroup
+                    <WuiListGroup
                       flush
                       listItems={listItem?.flyoutMenu?.listItems}
                     />
-                  </EuiAccordion>
+                  </WuiAccordion>
                 ) : (
-                  <EuiListGroup
+                  <WuiListGroup
                     key={key}
                     flush
                     gutterSize="none"
@@ -396,13 +396,13 @@ export class EuiNavDrawer extends Component<
     } = this.props;
 
     const classes = classNames(
-      'euiNavDrawer',
+      'wuiNavDrawer',
       {
-        'euiNavDrawer-isCollapsed': this.state.isCollapsed,
-        'euiNavDrawer-isExpanded': !this.state.isCollapsed,
-        'euiNavDrawer-isLocked': this.state.isLocked,
-        'euiNavDrawer-flyoutIsCollapsed': this.state.flyoutIsCollapsed,
-        'euiNavDrawer-flyoutIsExpanded': !this.state.flyoutIsCollapsed,
+        'wuiNavDrawer-isCollapsed': this.state.isCollapsed,
+        'wuiNavDrawer-isExpanded': !this.state.isCollapsed,
+        'wuiNavDrawer-isLocked': this.state.isLocked,
+        'wuiNavDrawer-flyoutIsCollapsed': this.state.flyoutIsCollapsed,
+        'wuiNavDrawer-flyoutIsExpanded': !this.state.flyoutIsCollapsed,
       },
       className
     );
@@ -410,18 +410,18 @@ export class EuiNavDrawer extends Component<
     let footerContent;
     if (showExpandButton) {
       footerContent = (
-        <EuiListGroup
-          className="euiNavDrawer__expandButton"
+        <WuiListGroup
+          className="wuiNavDrawer__expandButton"
           flush
           gutterSize="none">
-          <EuiI18n
+          <WuiI18n
             tokens={[
-              'euiNavDrawer.sideNavLockExpanded',
-              'euiNavDrawer.sideNavLockCollapsed',
+              'wuiNavDrawer.sideNavLockExpanded',
+              'wuiNavDrawer.sideNavLockCollapsed',
             ]}
             defaults={['Docked', 'Undocked']}>
             {([sideNavLockExpanded, sideNavLockCollapsed]: string[]) => (
-              <EuiListGroupItem
+              <WuiListGroupItem
                 buttonRef={this.expandButtonRef}
                 className={
                   this.state.isCollapsed
@@ -443,13 +443,13 @@ export class EuiNavDrawer extends Component<
                 showToolTip={this.state.isLocked}
               />
             )}
-          </EuiI18n>
-        </EuiListGroup>
+          </WuiI18n>
+        </WuiListGroup>
       );
     }
 
     const flyoutContent = !this.state.isLocked ? (
-      <EuiNavDrawerFlyout
+      <WuiNavDrawerFlyout
         id="navDrawerFlyout"
         isCollapsed={this.state.flyoutIsCollapsed}
         listItems={this.state.flyoutListItems}
@@ -466,17 +466,17 @@ export class EuiNavDrawer extends Component<
 
     modifiedChildren = this.modifyChildren(this.props.children);
 
-    const menuClasses = classNames('euiNavDrawerMenu', {
-      'euiNavDrawerMenu-hasFooter': footerContent,
+    const menuClasses = classNames('wuiNavDrawerMenu', {
+      'wuiNavDrawerMenu-hasFooter': footerContent,
     });
 
     return (
-      <EuiOutsideClickDetector
+      <WuiOutsideClickDetector
         onOutsideClick={() => this.closeBoth()}
         isDisabled={this.state.outsideClickDisabled}>
         <nav className={classes} {...rest}>
-          <EuiFlexGroup gutterSize="none" responsive={false}>
-            <EuiFlexItem grow={false}>
+          <WuiFlexGroup gutterSize="none" responsive={false}>
+            <WuiFlexItem grow={false}>
               <div
                 id={MENU_ELEMENT_ID}
                 className={menuClasses}
@@ -484,11 +484,11 @@ export class EuiNavDrawer extends Component<
                 {footerContent}
                 {modifiedChildren}
               </div>
-            </EuiFlexItem>
+            </WuiFlexItem>
             {flyoutContent}
-          </EuiFlexGroup>
+          </WuiFlexGroup>
         </nav>
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
     );
   }
 }

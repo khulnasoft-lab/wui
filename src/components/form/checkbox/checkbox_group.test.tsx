@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiCheckboxGroup } from './checkbox_group';
+import { WuiCheckboxGroup } from './checkbox_group';
 
-jest.mock('./checkbox', () => ({ EuiCheckbox: 'eui_checkbox' }));
+jest.mock('./checkbox', () => ({ WuiCheckbox: 'wui_checkbox' }));
 
 const checkboxGroupRequiredProps = {
   options: [],
@@ -31,10 +31,10 @@ const checkboxGroupRequiredProps = {
   onChange: () => {},
 };
 
-describe('EuiCheckboxGroup (mocked checkbox)', () => {
+describe('WuiCheckboxGroup (mocked checkbox)', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         onChange={() => {}}
         {...checkboxGroupRequiredProps}
         {...requiredProps}
@@ -46,11 +46,11 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('options are rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
-          { id: '2', label: 'elastic' },
+          { id: '2', label: 'wazuh' },
         ]}
       />
     );
@@ -60,11 +60,11 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('idToSelectedMap is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
-          { id: '2', label: 'elastic' },
+          { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{
           '1': true,
@@ -78,11 +78,11 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('disabled is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
-          { id: '2', label: 'elastic' },
+          { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{
           '1': true,
@@ -97,11 +97,11 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('individual disabled is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana', disabled: true },
-          { id: '2', label: 'elastic' },
+          { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{
           '1': true,
@@ -115,7 +115,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('legend is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         legend={{
           children: 'A legend',

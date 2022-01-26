@@ -1,33 +1,33 @@
 import React from 'react';
 
-import { EuiFacetButton, EuiIcon, EuiAvatar } from '../../../../src/components';
+import { WuiFacetButton, WuiIcon, WuiAvatar } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFacetButton quantity={6}>Simple, no icon</EuiFacetButton>
+    <WuiFacetButton quantity={6}>Simple, no icon</WuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isSelected>
+    <WuiFacetButton quantity={6} isSelected>
       Simple, selected
-    </EuiFacetButton>
+    </WuiFacetButton>
     <br />
-    <EuiFacetButton
+    <WuiFacetButton
       quantity={6}
-      icon={<EuiIcon type="dot" color="secondary" />}>
+      icon={<WuiIcon type="dot" color="secondary" />}>
       Label or color indicator
-    </EuiFacetButton>
+    </WuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isDisabled>
+    <WuiFacetButton quantity={6} isDisabled>
       Disabled
-    </EuiFacetButton>
+    </WuiFacetButton>
     <br />
-    <EuiFacetButton
+    <WuiFacetButton
       quantity={6}
-      icon={<EuiAvatar size="s" name="Avatar Jones" />}>
+      icon={<WuiAvatar size="s" name="Avatar Jones" />}>
       Avatar as icon
-    </EuiFacetButton>
+    </WuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isLoading>
+    <WuiFacetButton quantity={6} isLoading>
       Loading
-    </EuiFacetButton>
+    </WuiFacetButton>
   </div>
 );

@@ -28,7 +28,7 @@ import { FocusOn } from 'react-focus-on';
 import { ReactFocusOnProps } from 'react-focus-on/dist/es5/types';
 
 import { CommonProps } from '../common';
-import { EuiOutsideClickDetector } from '../outside_click_detector';
+import { WuiOutsideClickDetector } from '../outside_click_detector';
 
 interface DetectorProps {
   handleEvent: EventHandler<any>;
@@ -53,7 +53,7 @@ const OutsideEventDetector: FunctionComponent<DetectorProps> = ({
  */
 export type FocusTarget = HTMLElement | string | (() => HTMLElement);
 
-interface EuiFocusTrapInterface {
+interface WuiFocusTrapInterface {
   /**
    * Clicking outside the trap area will disable the trap
    */
@@ -66,16 +66,16 @@ interface EuiFocusTrapInterface {
   disabled?: boolean;
 }
 
-export interface EuiFocusTrapProps
+export interface WuiFocusTrapProps
   extends CommonProps,
     Omit<ReactFocusOnProps, 'enabled'>, // Inverted `disabled` prop used instead
-    EuiFocusTrapInterface {}
+    WuiFocusTrapInterface {}
 
 interface State {
   hasBeenDisabledByClick: boolean;
 }
 
-export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
+export class WuiFocusTrap extends Component<WuiFocusTrapProps, State> {
   state: State = {
     hasBeenDisabledByClick: false,
   };
@@ -87,7 +87,7 @@ export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
     this.setInitialFocus(this.props.initialFocus);
   }
 
-  componentDidUpdate(prevProps: EuiFocusTrapProps) {
+  componentDidUpdate(prevProps: WuiFocusTrapProps) {
     if (prevProps.disabled === true && this.props.disabled === false) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ hasBeenDisabledByClick: false });
@@ -166,13 +166,13 @@ export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
       ...rest,
     };
     return clickOutsideDisables ? (
-      <EuiOutsideClickDetector
+      <WuiOutsideClickDetector
         isDisabled={isDisabled}
         onOutsideClick={this.handleOutsideClick}>
         <OutsideEventDetector handleEvent={this.handleBubbledEvent}>
           <FocusOn {...focusOnProps}>{children}</FocusOn>
         </OutsideEventDetector>
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
     ) : (
       <FocusOn {...focusOnProps}>{children}</FocusOn>
     );

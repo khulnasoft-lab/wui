@@ -1,31 +1,31 @@
 import React from 'react';
 
-import { EuiFlexGrid, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGrid, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <div>
-    <EuiFlexGrid columns={2} direction="column">
-      <EuiFlexItem>
+    <WuiFlexGrid columns={2} direction="column">
+      <WuiFlexItem>
         <div>One</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Two</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Three</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Four</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Five</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Six</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <div>Seven</div>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+      </WuiFlexItem>
+    </WuiFlexGrid>
   </div>
 );

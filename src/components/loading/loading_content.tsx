@@ -23,17 +23,17 @@ import { CommonProps } from '../common';
 
 export type LineRange = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
-export const EuiLoadingContent: FunctionComponent<CommonProps &
+export const WuiLoadingContent: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     lines?: LineRange;
   }> = ({ lines = 3, className, ...rest }) => {
-  const classes = classNames('euiLoadingContent', className);
+  const classes = classNames('wuiLoadingContent', className);
   const lineElements = [];
 
   for (let i = 0; i < lines; i++) {
     lineElements.push(
-      <span key={i} className="euiLoadingContent__singleLine">
-        <span className="euiLoadingContent__singleLineBackground" />
+      <span key={i} className="wuiLoadingContent__singleLine">
+        <span className="wuiLoadingContent__singleLineBackground" />
       </span>
     );
   }

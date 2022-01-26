@@ -20,12 +20,12 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiIconProps, EuiIcon } from '../../../components/icon';
-import { EuiAvatarProps, EuiAvatar } from '../../../components/avatar/avatar';
-import { EuiSelectableOption } from '../selectable_option';
-import { EuiHighlight } from '../../../components/highlight';
+import { WuiIconProps, WuiIcon } from '../../../components/icon';
+import { WuiAvatarProps, WuiAvatar } from '../../../components/avatar/avatar';
+import { WuiSelectableOption } from '../selectable_option';
+import { WuiHighlight } from '../../../components/highlight';
 
-export interface EuiSelectableTemplateSitewideMetaData extends CommonProps {
+export interface WuiSelectableTemplateSitewideMetaData extends CommonProps {
   /**
    * Required to display the metadata
    */
@@ -34,7 +34,7 @@ export interface EuiSelectableTemplateSitewideMetaData extends CommonProps {
    * Styles the metadata according to Elastic's schema.
    * Can be one of 'application', 'deployment', 'article', 'case', 'platform',
    * or a custom string to associate with your own schema.
-   * Appends the string to the class name as `euiSelectableTemplateSitewide__optionMeta--[type]`
+   * Appends the string to the class name as `wuiSelectableTemplateSitewide__optionMeta--[type]`
    */
   type?:
     | 'application'
@@ -44,7 +44,7 @@ export interface EuiSelectableTemplateSitewideMetaData extends CommonProps {
     | 'platform'
     | string;
   /**
-   * Will wrap the meta tag in EuiHighlight to mark the portions that match the search text
+   * Will wrap the meta tag in WuiHighlight to mark the portions that match the search text
    */
   highlightSearchString?: boolean;
 }
@@ -53,27 +53,27 @@ export interface EuiSelectableTemplateSitewideMetaData extends CommonProps {
  * The generic extension allows consumers to keep their data objects
  * intact without needing to do key lookups when using `renderOption`
  */
-export type EuiSelectableTemplateSitewideOption<T = { [key: string]: any }> = {
+export type WuiSelectableTemplateSitewideOption<T = { [key: string]: any }> = {
   /**
    * Displayed on the left (`prepend`).
-   * Object of `EuiIconProps` for display of the solution/application's logo
+   * Object of `WuiIconProps` for display of the solution/application's logo
    */
-  icon?: EuiIconProps;
+  icon?: WuiIconProps;
   /**
    * Displayed on the right (`append`).
-   * Object of `EuiAvatarProps` for display of the space (default) or user
+   * Object of `WuiAvatarProps` for display of the space (default) or user
    */
-  avatar?: EuiAvatarProps;
+  avatar?: WuiAvatarProps;
   /**
    * An array of inline #MetaData displayed beneath the label and separated by bullets.
    */
-  meta?: EuiSelectableTemplateSitewideMetaData[];
-} & EuiSelectableOption<T>;
+  meta?: WuiSelectableTemplateSitewideMetaData[];
+} & WuiSelectableOption<T>;
 
-export const euiSelectableTemplateSitewideFormatOptions = (
-  options: EuiSelectableTemplateSitewideOption[]
+export const wuiSelectableTemplateSitewideFormatOptions = (
+  options: WuiSelectableTemplateSitewideOption[]
 ) => {
-  return options.map((item: EuiSelectableTemplateSitewideOption) => {
+  return options.map((item: WuiSelectableTemplateSitewideOption) => {
     let title = item.label;
     if (item.meta && item.meta.length) {
       title += ` •${renderOptionMeta(item.meta, '', true)}`;
@@ -85,16 +85,16 @@ export const euiSelectableTemplateSitewideFormatOptions = (
       title,
       ...item,
       className: classNames(
-        'euiSelectableTemplateSitewide__listItem',
+        'wuiSelectableTemplateSitewide__listItem',
         item.className
       ),
       prepend: item.icon ? (
-        <EuiIcon color="subdued" size="l" {...item.icon} />
+        <WuiIcon color="subdued" size="l" {...item.icon} />
       ) : (
         item.prepend
       ),
       append: item.avatar ? (
-        <EuiAvatar type="space" size="s" {...item.avatar} />
+        <WuiAvatar type="space" size="s" {...item.avatar} />
       ) : (
         item.append
       ),
@@ -102,30 +102,30 @@ export const euiSelectableTemplateSitewideFormatOptions = (
   });
 };
 
-export const euiSelectableTemplateSitewideRenderOptions = (
-  option: EuiSelectableTemplateSitewideOption,
+export const wuiSelectableTemplateSitewideRenderOptions = (
+  option: WuiSelectableTemplateSitewideOption,
   searchValue: string
 ) => {
   return (
     <>
-      <EuiHighlight
-        className="euiSelectableTemplateSitewide__listItemTitle"
+      <WuiHighlight
+        className="wuiSelectableTemplateSitewide__listItemTitle"
         search={searchValue}>
         {option.label}
-      </EuiHighlight>
+      </WuiHighlight>
       {renderOptionMeta(option.meta, searchValue)}
     </>
   );
 };
 
 function renderOptionMeta(
-  meta?: EuiSelectableTemplateSitewideMetaData[],
+  meta?: WuiSelectableTemplateSitewideMetaData[],
   searchValue: string = '',
   stringsOnly: boolean = false
 ): ReactNode {
   if (!meta || meta.length < 1) return;
   const metas: ReactNode = meta.map(
-    (meta: EuiSelectableTemplateSitewideMetaData) => {
+    (meta: WuiSelectableTemplateSitewideMetaData) => {
       const { text, highlightSearchString, className, ...rest } = meta;
       if (stringsOnly) {
         return ` ${text}`;
@@ -133,26 +133,26 @@ function renderOptionMeta(
 
       // Start with the base and custom classes
       let metaClasses = classNames(
-        'euiSelectableTemplateSitewide__optionMeta',
+        'wuiSelectableTemplateSitewide__optionMeta',
         className
       );
 
       // If they provided a type, create the class and append
       if (meta.type) {
         metaClasses = classNames(
-          [`euiSelectableTemplateSitewide__optionMeta--${meta.type}`],
+          [`wuiSelectableTemplateSitewide__optionMeta--${meta.type}`],
           metaClasses
         );
       }
 
       return (
-        <EuiHighlight
+        <WuiHighlight
           search={highlightSearchString ? searchValue : ''}
           className={metaClasses}
           key={text}
           {...rest}>
           {text}
-        </EuiHighlight>
+        </WuiHighlight>
       );
     }
   );
@@ -160,7 +160,7 @@ function renderOptionMeta(
   return stringsOnly ? (
     metas
   ) : (
-    <span className="euiSelectableTemplateSitewide__optionMetasList">
+    <span className="wuiSelectableTemplateSitewide__optionMetasList">
       {metas}
     </span>
   );

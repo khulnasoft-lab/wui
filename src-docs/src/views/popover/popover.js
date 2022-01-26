@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPopover, EuiButton } from '../../../../src/components';
+import { WuiPopover, WuiButton } from '../../../../src/components';
 
 export default () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -9,13 +9,13 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       ownFocus
       button={button}
       isOpen={isPopoverOpen}
@@ -23,6 +23,6 @@ export default () => {
       <div style={{ width: '300px' }}>
         Popover content that&rsquo;s wider than the default width
       </div>
-    </EuiPopover>
+    </WuiPopover>
   );
 };

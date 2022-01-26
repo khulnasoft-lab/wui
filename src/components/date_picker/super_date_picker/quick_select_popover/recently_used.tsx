@@ -20,22 +20,22 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import { prettyDuration } from '../pretty_duration';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
-import { EuiTitle } from '../../../title';
-import { EuiSpacer } from '../../../spacer';
-import { EuiLink } from '../../../link';
-import { EuiText } from '../../../text';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
+import { WuiFlexGroup, WuiFlexItem } from '../../../flex';
+import { WuiTitle } from '../../../title';
+import { WuiSpacer } from '../../../spacer';
+import { WuiLink } from '../../../link';
+import { WuiText } from '../../../text';
+import { WuiHorizontalRule } from '../../../horizontal_rule';
 import { DurationRange, ApplyTime } from '../../types';
 
-export interface EuiRecentlyUsedProps {
+export interface WuiRecentlyUsedProps {
   applyTime: ApplyTime;
   commonlyUsedRanges: DurationRange[];
   dateFormat: string;
   recentlyUsedRanges?: DurationRange[];
 }
 
-export const EuiRecentlyUsed: FunctionComponent<EuiRecentlyUsedProps> = ({
+export const WuiRecentlyUsed: FunctionComponent<WuiRecentlyUsedProps> = ({
   applyTime,
   commonlyUsedRanges,
   dateFormat,
@@ -50,28 +50,28 @@ export const EuiRecentlyUsed: FunctionComponent<EuiRecentlyUsedProps> = ({
       applyTime({ start, end });
     };
     return (
-      <EuiFlexItem grow={false} key={`${start}-${end}`}>
-        <EuiLink onClick={applyRecentlyUsed}>
+      <WuiFlexItem grow={false} key={`${start}-${end}`}>
+        <WuiLink onClick={applyRecentlyUsed}>
           {prettyDuration(start, end, commonlyUsedRanges, dateFormat)}
-        </EuiLink>
-      </EuiFlexItem>
+        </WuiLink>
+      </WuiFlexItem>
     );
   });
 
   return (
     <Fragment>
-      <EuiTitle size="xxxs">
+      <WuiTitle size="xxxs">
         <span>Recently used date ranges</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiText size="s" className="euiQuickSelectPopover__section">
-        <EuiFlexGroup gutterSize="s" direction="column">
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiText size="s" className="wuiQuickSelectPopover__section">
+        <WuiFlexGroup gutterSize="s" direction="column">
           {links}
-        </EuiFlexGroup>
-      </EuiText>
-      <EuiHorizontalRule margin="s" />
+        </WuiFlexGroup>
+      </WuiText>
+      <WuiHorizontalRule margin="s" />
     </Fragment>
   );
 };
 
-EuiRecentlyUsed.displayName = 'EuiRecentlyUsed';
+WuiRecentlyUsed.displayName = 'WuiRecentlyUsed';

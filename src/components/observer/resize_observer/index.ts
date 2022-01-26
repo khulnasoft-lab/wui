@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiResizeObserver, useResizeObserver } from './resize_observer';
+export { WuiResizeObserver, useResizeObserver } from './resize_observer';

@@ -21,18 +21,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFlyoutHeader } from './flyout_header';
+import { WuiFlyoutHeader } from './flyout_header';
 
-describe('EuiFlyoutHeader', () => {
+describe('WuiFlyoutHeader', () => {
   test('is rendered', () => {
-    const component = render(<EuiFlyoutHeader {...requiredProps} />);
+    const component = render(<WuiFlyoutHeader {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('border is rendered', () => {
-      const component = render(<EuiFlyoutHeader hasBorder />);
+      const component = render(<WuiFlyoutHeader hasBorder />);
 
       expect(component).toMatchSnapshot();
     });

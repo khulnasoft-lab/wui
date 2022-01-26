@@ -1,29 +1,29 @@
 import React from 'react';
 
-import { EuiText, EuiTextAlign, EuiSpacer } from '../../../../src/components';
+import { WuiText, WuiTextAlign, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiText>
-      <EuiTextAlign textAlign="left">
+    <WuiText>
+      <WuiTextAlign textAlign="left">
         <p>Left aligned paragraph.</p>
-      </EuiTextAlign>
-      <EuiTextAlign textAlign="center">
+      </WuiTextAlign>
+      <WuiTextAlign textAlign="center">
         <p>Center aligned paragraph.</p>
-      </EuiTextAlign>
-      <EuiTextAlign textAlign="right">
+      </WuiTextAlign>
+      <WuiTextAlign textAlign="right">
         <p>Right aligned paragraph.</p>
-      </EuiTextAlign>
-    </EuiText>
-    <EuiSpacer />
-    <EuiText textAlign="center">
+      </WuiTextAlign>
+    </WuiText>
+    <WuiSpacer />
+    <WuiText textAlign="center">
       <p>
-        You can also pass alignment to <strong>EuiText</strong> directly with a
+        You can also pass alignment to <strong>WuiText</strong> directly with a
         prop
       </p>
-    </EuiText>
-    <EuiText textAlign="center" color="secondary">
+    </WuiText>
+    <WuiText textAlign="center" color="secondary">
       <p>And in conjunction with coloring.</p>
-    </EuiText>
+    </WuiText>
   </div>
 );

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiToggle, ToggleType, TYPES as TOGGLE_TYPES } from './toggle';
+export { WuiToggle, ToggleType, TYPES as TOGGLE_TYPES } from './toggle';

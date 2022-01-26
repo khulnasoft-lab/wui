@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiBottomBar } from './bottom_bar';
+export { WuiBottomBar } from './bottom_bar';

@@ -22,9 +22,9 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 import { bigGrey, bigColor } from './animations';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-export const EuiLoadingDots: FunctionComponent<CommonProps &
+export const WuiLoadingDots: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
@@ -38,17 +38,17 @@ export const EuiLoadingDots: FunctionComponent<CommonProps &
     autoPlay: true,
   };
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       direction="row"
       alignItems="center"
       justifyContent="flexStart"
       responsive={false}
       className={classes}>
-      <EuiFlexItem grow={false}>
-        <div className="euiLoadingDots__wrapper">
+      <WuiFlexItem grow={false}>
+        <div className="wuiLoadingDots__wrapper">
           <Lottie options={options} />
         </div>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

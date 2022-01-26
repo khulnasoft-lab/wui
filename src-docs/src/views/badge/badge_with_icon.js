@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { EuiBadge } from '../../../../src/components';
+import { WuiBadge } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiBadge color="hollow" iconType="cross" iconSide="right">
+    <WuiBadge color="hollow" iconType="cross" iconSide="right">
       Hollow
-    </EuiBadge>
+    </WuiBadge>
 
-    <EuiBadge iconType="check">Default</EuiBadge>
+    <WuiBadge iconType="check">Default</WuiBadge>
 
-    <EuiBadge iconType="returnKey" />
+    <WuiBadge iconType="returnKey" />
   </div>
 );

@@ -18,16 +18,16 @@
  */
 
 export {
-  EuiCommonlyUsedTimeRanges,
-  EuiCommonlyUsedTimeRangesProps,
+  WuiCommonlyUsedTimeRanges,
+  WuiCommonlyUsedTimeRangesProps,
 } from './commonly_used_time_ranges';
 export {
-  EuiQuickSelectPopover,
-  EuiQuickSelectPopoverProps,
+  WuiQuickSelectPopover,
+  WuiQuickSelectPopoverProps,
 } from './quick_select_popover';
-export { EuiQuickSelect, EuiQuickSelectProps } from './quick_select';
-export { EuiRecentlyUsed, EuiRecentlyUsedProps } from './recently_used';
+export { WuiQuickSelect, WuiQuickSelectProps } from './quick_select';
+export { WuiRecentlyUsed, WuiRecentlyUsedProps } from './recently_used';
 export {
-  EuiRefreshInterval,
-  EuiRefreshIntervalProps,
+  WuiRefreshInterval,
+  WuiRefreshIntervalProps,
 } from './refresh_interval';

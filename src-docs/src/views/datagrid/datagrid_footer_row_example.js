@@ -3,20 +3,20 @@ import React, { Fragment } from 'react';
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiDataGrid, EuiCodeBlock, EuiCode } from '../../../../src/components';
+import { WuiDataGrid, WuiCodeBlock, WuiCode } from '../../../../src/components';
 
 import DataGridFooterRow from './footer_row';
 const dataGridControlColumnsSource = require('!!raw-loader!./footer_row');
 const dataGridControlColumnsHtml = renderToHtml(DataGridFooterRow);
 
-import { EuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
-import { EuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
+import { WuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
+import { WuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
 
 const gridSnippet = `const footerCellValues = {
   // desired data
 };
 
-<EuiDataGrid
+<WuiDataGrid
   {...usualProps}
   renderFooterCellValue={({ columnId }) =>
     footerCellValues[columnId] || null
@@ -47,23 +47,23 @@ export const DataGridFooterRowExample = {
           </p>
           <p>
             The footer row is defined by passing{' '}
-            <EuiCode>renderFooterCellValue</EuiCode> function prop into
-            EuiDataGrid. <EuiCode>renderFooterCellValue</EuiCode> acts like a
+            <WuiCode>renderFooterCellValue</WuiCode> function prop into
+            WuiDataGrid. <WuiCode>renderFooterCellValue</WuiCode> acts like a
             React component, receiving{' '}
-            <EuiCode>EuiDataGridCellValueElementProps</EuiCode> and returning a
+            <WuiCode>WuiDataGridCellValueElementProps</WuiCode> and returning a
             React node.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <WuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridFooterRow },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridControlColumn,
-        EuiDataGridCellValueElementProps,
+        WuiDataGrid,
+        WuiDataGridControlColumn,
+        WuiDataGridCellValueElementProps,
       },
       demo: <DataGridFooterRow />,
     },

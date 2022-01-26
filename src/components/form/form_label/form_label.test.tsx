@@ -21,30 +21,30 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormLabel } from './form_label';
+import { WuiFormLabel } from './form_label';
 
-describe('EuiFormLabel', () => {
+describe('WuiFormLabel', () => {
   test('is rendered', () => {
-    const component = render(<EuiFormLabel {...requiredProps} />);
+    const component = render(<WuiFormLabel {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('isFocused is rendered', () => {
-      const component = render(<EuiFormLabel isFocused />);
+      const component = render(<WuiFormLabel isFocused />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFormLabel isInvalid />);
+      const component = render(<WuiFormLabel isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('type can be changed to legend', () => {
-      const component = render(<EuiFormLabel type="legend" />);
+      const component = render(<WuiFormLabel type="legend" />);
 
       expect(component).toMatchSnapshot();
     });

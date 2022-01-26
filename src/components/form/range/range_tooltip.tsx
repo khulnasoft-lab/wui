@@ -20,7 +20,7 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeTooltipProps {
+export interface WuiRangeTooltipProps {
   value?: number | string;
   valueAppend?: ReactNode;
   valuePrepend?: ReactNode;
@@ -31,7 +31,7 @@ export interface EuiRangeTooltipProps {
   compressed?: boolean;
 }
 
-export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
+export const WuiRangeTooltip: FunctionComponent<WuiRangeTooltipProps> = ({
   value,
   valueAppend,
   valuePrepend,
@@ -41,8 +41,8 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
   showTicks,
   compressed,
 }) => {
-  const classes = classNames('euiRangeTooltip', {
-    'euiRangeTooltip--compressed': compressed,
+  const classes = classNames('wuiRangeTooltip', {
+    'wuiRangeTooltip--compressed': compressed,
   });
 
   // Calculate the left position based on value
@@ -69,10 +69,10 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
 
   // Change left/right position based on value (half way point)
   const valueClasses = classNames(
-    'euiRangeTooltip__value',
-    `euiRangeTooltip__value--${valuePositionSide}`,
+    'wuiRangeTooltip__value',
+    `wuiRangeTooltip__value--${valuePositionSide}`,
     {
-      'euiRangeTooltip__value--hasTicks': showTicks,
+      'wuiRangeTooltip__value--hasTicks': showTicks,
     }
   );
 

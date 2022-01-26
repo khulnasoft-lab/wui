@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiSelect, EuiSelectProps, EuiSelectOption } from './select';
+export { WuiSelect, WuiSelectProps, WuiSelectOption } from './select';

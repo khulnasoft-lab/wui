@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiSuperDatePicker,
-  EuiSwitch,
-  EuiSpacer,
-  EuiLink,
+  WuiSuperDatePicker,
+  WuiSwitch,
+  WuiSpacer,
+  WuiLink,
 } from '../../../../src/components';
 
 function MyCustomQuickSelectPanel({ applyTime }) {
@@ -13,7 +13,7 @@ function MyCustomQuickSelectPanel({ applyTime }) {
   }
 
   return (
-    <EuiLink onClick={applyMyCustomTime}>entire dataset timerange</EuiLink>
+    <WuiLink onClick={applyMyCustomTime}>entire dataset timerange</WuiLink>
   );
 }
 
@@ -82,14 +82,14 @@ export default () => {
   }
   return (
     <Fragment>
-      <EuiSwitch
+      <WuiSwitch
         label="Show custom quick menu panel"
         onChange={toggleShowCustomQuickSelectPanel}
         checked={showCustomQuickSelectPanel}
       />
       &emsp;
-      <EuiSpacer />
-      <EuiSuperDatePicker
+      <WuiSpacer />
+      <WuiSuperDatePicker
         isLoading={isLoading}
         start={start}
         end={end}
@@ -101,7 +101,7 @@ export default () => {
         recentlyUsedRanges={recentlyUsedRanges}
         customQuickSelectPanels={customQuickSelectPanels}
       />
-      <EuiSpacer />
+      <WuiSpacer />
     </Fragment>
   );
 };

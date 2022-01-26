@@ -19,12 +19,12 @@
 
 import React, { FunctionComponent } from 'react';
 
-import { EuiTabbedContent, EuiTabbedContentProps } from '../../../tabs';
-import { EuiText } from '../../../text';
-import { EuiButton } from '../../../button';
+import { WuiTabbedContent, WuiTabbedContentProps } from '../../../tabs';
+import { WuiText } from '../../../text';
+import { WuiButton } from '../../../button';
 
-import { EuiAbsoluteTab } from './absolute_tab';
-import { EuiRelativeTab } from './relative_tab';
+import { WuiAbsoluteTab } from './absolute_tab';
+import { WuiRelativeTab } from './relative_tab';
 
 import {
   getDateMode,
@@ -34,7 +34,7 @@ import {
 } from '../date_modes';
 import { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
 
-export interface EuiDatePopoverContentProps {
+export interface WuiDatePopoverContentProps {
   value: string;
   onChange(date: string | null, event?: React.SyntheticEvent<any>): void;
   roundUp?: boolean;
@@ -45,7 +45,7 @@ export interface EuiDatePopoverContentProps {
   utcOffset?: number;
 }
 
-export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps> = ({
+export const WuiDatePopoverContent: FunctionComponent<WuiDatePopoverContentProps> = ({
   value,
   roundUp = false,
   onChange,
@@ -55,7 +55,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   position,
   utcOffset,
 }) => {
-  const onTabClick: EuiTabbedContentProps['onTabClick'] = selectedTab => {
+  const onTabClick: WuiTabbedContentProps['onTabClick'] = selectedTab => {
     switch (selectedTab.id) {
       case DATE_MODES.ABSOLUTE:
         onChange(toAbsoluteString(value, roundUp));
@@ -73,7 +73,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.ABSOLUTE,
       name: 'Absolute',
       content: (
-        <EuiAbsoluteTab
+        <WuiAbsoluteTab
           dateFormat={dateFormat}
           timeFormat={timeFormat}
           locale={locale}
@@ -91,7 +91,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.RELATIVE,
       name: 'Relative',
       content: (
-        <EuiRelativeTab
+        <WuiRelativeTab
           dateFormat={dateFormat}
           locale={locale}
           value={toAbsoluteString(value, roundUp)}
@@ -107,15 +107,15 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.NOW,
       name: 'Now',
       content: (
-        <EuiText
+        <WuiText
           size="s"
           color="subdued"
-          className="euiDatePopoverContent__padded--large">
+          className="wuiDatePopoverContent__padded--large">
           <p>
             Setting the time to &quot;now&quot; means that on every refresh this
             time will be set to the time of the refresh.
           </p>
-          <EuiButton
+          <WuiButton
             data-test-subj="superDatePickerNowButton"
             onClick={() => {
               onChange('now');
@@ -124,8 +124,8 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
             size="s"
             fill>
             Set {position} date and time to now
-          </EuiButton>
-        </EuiText>
+          </WuiButton>
+        </WuiText>
       ),
       'data-test-subj': 'superDatePickerNowTab',
       'aria-label': `${ariaLabel} Now`,
@@ -137,8 +137,8 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   );
 
   return (
-    <EuiTabbedContent
-      className="euiDatePopoverContent"
+    <WuiTabbedContent
+      className="wuiDatePopoverContent"
       tabs={renderTabs}
       autoFocus="selected"
       initialSelectedTab={initialSelectedTab}
@@ -149,4 +149,4 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   );
 };
 
-EuiDatePopoverContent.displayName = 'EuiDatePopoverContent';
+WuiDatePopoverContent.displayName = 'WuiDatePopoverContent';

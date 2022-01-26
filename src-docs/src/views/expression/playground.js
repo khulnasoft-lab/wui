@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiExpression } from '../../../../src/components/';
+import { WuiExpression } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
 
 export const expressionConfig = () => {
-  const docgenInfo = Array.isArray(EuiExpression.__docgenInfo)
-    ? EuiExpression.__docgenInfo[0]
-    : EuiExpression.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiExpression.__docgenInfo)
+    ? WuiExpression.__docgenInfo[0]
+    : WuiExpression.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -41,14 +41,14 @@ export const expressionConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiExpression',
+      componentName: 'WuiExpression',
       props: propsToUse,
       scope: {
-        EuiExpression,
+        WuiExpression,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiExpression'],
+        '@wazuh/wui': {
+          named: ['WuiExpression'],
         },
       },
       customProps: {

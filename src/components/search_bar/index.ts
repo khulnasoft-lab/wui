@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiSearchBar,
-  EuiSearchBarProps,
+  WuiSearchBar,
+  WuiSearchBarProps,
   QueryType,
   Query,
   Ast,

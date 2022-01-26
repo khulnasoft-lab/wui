@@ -24,10 +24,10 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiIcon, IconType } from '../../icon';
+import { WuiIcon, IconType } from '../../icon';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
-export type EuiFormControlLayoutCustomIconProps = CommonProps &
+export type WuiFormControlLayoutCustomIconProps = CommonProps &
   ExclusiveUnion<
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>,
     HTMLAttributes<HTMLSpanElement>
@@ -38,15 +38,15 @@ export type EuiFormControlLayoutCustomIconProps = CommonProps &
       | ((el: HTMLButtonElement | HTMLSpanElement | null) => void);
   };
 
-export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLayoutCustomIconProps> = ({
+export const WuiFormControlLayoutCustomIcon: FunctionComponent<WuiFormControlLayoutCustomIconProps> = ({
   className,
   onClick,
   type,
   iconRef,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutCustomIcon', className, {
-    'euiFormControlLayoutCustomIcon--clickable': onClick,
+  const classes = classNames('wuiFormControlLayoutCustomIcon', className, {
+    'wuiFormControlLayoutCustomIcon--clickable': onClick,
   });
 
   if (onClick) {
@@ -57,8 +57,8 @@ export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLay
         className={classes}
         ref={iconRef}
         {...rest}>
-        <EuiIcon
-          className="euiFormControlLayoutCustomIcon__icon"
+        <WuiIcon
+          className="wuiFormControlLayoutCustomIcon__icon"
           aria-hidden="true"
           type={type}
         />
@@ -68,8 +68,8 @@ export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLay
 
   return (
     <span className={classes} ref={iconRef} {...rest}>
-      <EuiIcon
-        className="euiFormControlLayoutCustomIcon__icon"
+      <WuiIcon
+        className="wuiFormControlLayoutCustomIcon__icon"
         aria-hidden="true"
         type={type}
       />

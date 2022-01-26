@@ -21,13 +21,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingContent, LineRange } from './loading_content';
+import { WuiLoadingContent, LineRange } from './loading_content';
 
 const lines: LineRange[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-describe('EuiLoadingContent', () => {
+describe('WuiLoadingContent', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingContent {...requiredProps} />);
+    const component = render(<WuiLoadingContent {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -35,7 +35,7 @@ describe('EuiLoadingContent', () => {
   describe('lines', () => {
     lines.forEach(line => {
       test(`${line} is rendered`, () => {
-        const component = render(<EuiLoadingContent lines={line} />);
+        const component = render(<WuiLoadingContent lines={line} />);
 
         expect(component).toMatchSnapshot();
       });

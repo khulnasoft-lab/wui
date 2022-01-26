@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import { euiPaletteColorBlind } from '../../services/color/eui_palettes';
+import { wuiPaletteColorBlind } from '../../services/color/wui_palettes';
 import { DEFAULT_VISUALIZATION_COLOR } from '../../services/color/visualization_colors';
 import {
   PartialTheme,
@@ -30,18 +30,18 @@ import { RecursivePartial } from '../../components/common';
 // @ts-ignore typescript doesn't understand the webpack loader
 import lightColors from '!!sass-vars-to-js-loader!../../global_styling/variables/_colors.scss';
 // @ts-ignore typescript doesn't understand the webpack loader
-import darkColors from '!!sass-vars-to-js-loader!../../themes/eui/eui_colors_dark.scss';
+import darkColors from '!!sass-vars-to-js-loader!../../themes/wui/wui_colors_dark.scss';
 
 const fontFamily = `'Inter UI', -apple-system, BlinkMacSystemFont,
   'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`;
 
-export interface EuiChartThemeType {
+export interface WuiChartThemeType {
   lineAnnotation: LineAnnotationStyle;
   theme: PartialTheme;
   partition: RecursivePartial<PartitionConfig>;
 }
 
-function createTheme(colors: any): EuiChartThemeType {
+function createTheme(colors: any): WuiChartThemeType {
   return {
     lineAnnotation: {
       line: {
@@ -69,7 +69,7 @@ function createTheme(colors: any): EuiChartThemeType {
       linkLabel: {
         maxCount: 5,
         fontSize: 11,
-        textColor: colors.euiColorDarkestShade.rgba,
+        textColor: colors.wuiColorDarkestShade.rgba,
       },
       outerSizeRatio: 1,
       circlePadding: 4,
@@ -125,14 +125,14 @@ function createTheme(colors: any): EuiChartThemeType {
         axisTitle: {
           fontSize: 12,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkestShade.rgba,
+          fill: colors.wuiColorDarkestShade.rgba,
           padding: {
             inner: 10,
             outer: 0,
           },
         },
         axisLine: {
-          stroke: colors.euiColorChartLines.rgba,
+          stroke: colors.wuiColorChartLines.rgba,
         },
         tickLabel: {
           fontSize: 10,
@@ -145,20 +145,20 @@ function createTheme(colors: any): EuiChartThemeType {
         },
         tickLine: {
           visible: false,
-          stroke: colors.euiColorChartLines.rgba,
+          stroke: colors.wuiColorChartLines.rgba,
           strokeWidth: 1,
         },
         gridLine: {
           horizontal: {
             visible: true,
-            stroke: colors.euiColorChartLines.rgba,
+            stroke: colors.wuiColorChartLines.rgba,
             strokeWidth: 1,
             opacity: 1,
             dash: [0, 0],
           },
           vertical: {
             visible: true,
-            stroke: colors.euiColorChartLines.rgba,
+            stroke: colors.wuiColorChartLines.rgba,
             strokeWidth: 1,
             opacity: 1,
             dash: [4, 4],
@@ -166,12 +166,12 @@ function createTheme(colors: any): EuiChartThemeType {
         },
       },
       colors: {
-        vizColors: euiPaletteColorBlind({ sortBy: 'natural' }),
+        vizColors: wuiPaletteColorBlind({ sortBy: 'natural' }),
         defaultVizColor: DEFAULT_VISUALIZATION_COLOR,
       },
       crosshair: {
         band: {
-          fill: colors.euiColorChartBand.rgba,
+          fill: colors.wuiColorChartBand.rgba,
         },
         line: {
           stroke: colors.euiColorDarkShade.rgba,
@@ -183,12 +183,12 @@ function createTheme(colors: any): EuiChartThemeType {
   };
 }
 
-export const EUI_CHARTS_THEME_LIGHT: EuiChartThemeType = createTheme(
+export const WUI_CHARTS_THEME_LIGHT: WuiChartThemeType = createTheme(
   lightColors
 );
-export const EUI_CHARTS_THEME_DARK: EuiChartThemeType = createTheme(darkColors);
+export const WUI_CHARTS_THEME_DARK: WuiChartThemeType = createTheme(darkColors);
 
-export const EUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
+export const WUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
   lineSeriesStyle: {
     point: {
       visible: false,

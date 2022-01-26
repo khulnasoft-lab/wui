@@ -20,11 +20,11 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiNavDrawer } from './nav_drawer';
-import { EuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
-import { EuiListGroupItemProps } from '../list_group';
+import { WuiNavDrawer } from './nav_drawer';
+import { WuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
+import { WuiListGroupItemProps } from '../list_group';
 
-const extraAction: EuiListGroupItemProps['extraAction'] = {
+const extraAction: WuiListGroupItemProps['extraAction'] = {
   color: 'subdued',
   iconType: 'pin',
   iconSize: 's',
@@ -133,13 +133,13 @@ const exploreLinks: FlyoutMenuItem[] = [
   },
 ];
 
-describe('EuiNavDrawer', () => {
+describe('WuiNavDrawer', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNavDrawer>
-        <EuiNavDrawerGroup listItems={topLinks} />
-        <EuiNavDrawerGroup listItems={exploreLinks} />
-      </EuiNavDrawer>
+      <WuiNavDrawer>
+        <WuiNavDrawerGroup listItems={topLinks} />
+        <WuiNavDrawerGroup listItems={exploreLinks} />
+      </WuiNavDrawer>
     );
 
     expect(component).toMatchSnapshot();
@@ -148,12 +148,12 @@ describe('EuiNavDrawer', () => {
   describe('renders', () => {
     test('with fragments', () => {
       const component = render(
-        <EuiNavDrawer>
+        <WuiNavDrawer>
           <>
-            <EuiNavDrawerGroup listItems={topLinks} />
-            <EuiNavDrawerGroup listItems={exploreLinks} />
+            <WuiNavDrawerGroup listItems={topLinks} />
+            <WuiNavDrawerGroup listItems={exploreLinks} />
           </>
-        </EuiNavDrawer>
+        </WuiNavDrawer>
       );
 
       expect(component).toMatchSnapshot();
@@ -161,11 +161,11 @@ describe('EuiNavDrawer', () => {
 
     test('with falsy children', () => {
       const component = render(
-        <EuiNavDrawer>
-          {false && <EuiNavDrawerGroup listItems={topLinks} />}
-          {true ? undefined : <EuiNavDrawerGroup listItems={topLinks} />}
-          <EuiNavDrawerGroup listItems={exploreLinks} />
-        </EuiNavDrawer>
+        <WuiNavDrawer>
+          {false && <WuiNavDrawerGroup listItems={topLinks} />}
+          {true ? undefined : <WuiNavDrawerGroup listItems={topLinks} />}
+          <WuiNavDrawerGroup listItems={exploreLinks} />
+        </WuiNavDrawer>
       );
 
       expect(component).toMatchSnapshot();

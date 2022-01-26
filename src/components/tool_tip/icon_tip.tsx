@@ -20,10 +20,10 @@
 import React, { FunctionComponent } from 'react';
 
 import { PropsOf } from '../common';
-import { EuiIcon, IconSize, IconType } from '../icon';
-import { EuiToolTip, Props as EuiToolTipProps } from './tool_tip';
+import { WuiIcon, IconSize, IconType } from '../icon';
+import { WuiToolTip, Props as WuiToolTipProps } from './tool_tip';
 
-export interface EuiIconTipProps {
+export interface WuiIconTipProps {
   /**
    * The icon color.
    */
@@ -42,23 +42,23 @@ export interface EuiIconTipProps {
   'aria-label'?: string;
 
   /**
-   * Pass certain props down to `EuiIcon`
+   * Pass certain props down to `WuiIcon`
    */
-  // EuiIconTip's `type` is passed to EuiIcon, so we want to exclude `type` from
+  // WuiIconTip's `type` is passed to WuiIcon, so we want to exclude `type` from
   // iconProps; however, due to TS's bivariant function arguments `type` could be
   // passed without any error/feedback so we explicitly set it to `never` type
-  iconProps?: Omit<PropsOf<EuiIcon>, 'type'> & { type?: never };
+  iconProps?: Omit<PropsOf<WuiIcon>, 'type'> & { type?: never };
 }
 
-type Props = Omit<EuiToolTipProps, 'children' | 'delay' | 'position'> &
-  EuiIconTipProps & {
-    // This are copied from EuiToolTipProps, but made optional. Defaults
+type Props = Omit<WuiToolTipProps, 'children' | 'delay' | 'position'> &
+  WuiIconTipProps & {
+    // This are copied from WuiToolTipProps, but made optional. Defaults
     // are applied below.
-    delay?: EuiToolTipProps['delay'];
-    position?: EuiToolTipProps['position'];
+    delay?: WuiToolTipProps['delay'];
+    position?: WuiToolTipProps['position'];
   };
 
-export const EuiIconTip: FunctionComponent<Props> = ({
+export const WuiIconTip: FunctionComponent<Props> = ({
   type = 'questionInCircle',
   'aria-label': ariaLabel = 'Info',
   color,
@@ -68,8 +68,8 @@ export const EuiIconTip: FunctionComponent<Props> = ({
   delay = 'regular',
   ...rest
 }) => (
-  <EuiToolTip position={position} delay={delay} {...rest}>
-    <EuiIcon
+  <WuiToolTip position={position} delay={delay} {...rest}>
+    <WuiIcon
       tabIndex={0}
       type={type}
       color={color}
@@ -77,5 +77,5 @@ export const EuiIconTip: FunctionComponent<Props> = ({
       aria-label={ariaLabel}
       {...iconProps}
     />
-  </EuiToolTip>
+  </WuiToolTip>
 );

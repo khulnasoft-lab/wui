@@ -21,13 +21,13 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiButtonEmpty, COLORS, SIZES, FLUSH_TYPES } from './button_empty';
+import { WuiButtonEmpty, COLORS, SIZES, FLUSH_TYPES } from './button_empty';
 import { ICON_SIDES } from '../button_content';
 
-describe('EuiButtonEmpty', () => {
+describe('WuiButtonEmpty', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiButtonEmpty {...requiredProps}>Content</EuiButtonEmpty>
+      <WuiButtonEmpty {...requiredProps}>Content</WuiButtonEmpty>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,19 +36,19 @@ describe('EuiButtonEmpty', () => {
   describe('props', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(<EuiButtonEmpty isDisabled />);
+        const component = render(<WuiButtonEmpty isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
 
       it('renders a button even when href is defined', () => {
-        const component = render(<EuiButtonEmpty href="#" isDisabled />);
+        const component = render(<WuiButtonEmpty href="#" isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
 
       it('renders if passed simply as disabled', () => {
-        const component = render(<EuiButtonEmpty disabled />);
+        const component = render(<WuiButtonEmpty disabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -56,7 +56,7 @@ describe('EuiButtonEmpty', () => {
 
     describe('isLoading', () => {
       it('is rendered', () => {
-        const component = render(<EuiButtonEmpty isLoading />);
+        const component = render(<WuiButtonEmpty isLoading />);
 
         expect(component).toMatchSnapshot();
       });
@@ -64,7 +64,7 @@ describe('EuiButtonEmpty', () => {
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<EuiButtonEmpty iconType="user" />);
+        const component = render(<WuiButtonEmpty iconType="user" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -73,7 +73,7 @@ describe('EuiButtonEmpty', () => {
     describe('color', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiButtonEmpty color={color} />);
+          const component = render(<WuiButtonEmpty color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -83,7 +83,7 @@ describe('EuiButtonEmpty', () => {
     describe('size', () => {
       SIZES.forEach(size => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiButtonEmpty size={size} />);
+          const component = render(<WuiButtonEmpty size={size} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -94,9 +94,9 @@ describe('EuiButtonEmpty', () => {
       ICON_SIDES.forEach(iconSide => {
         test(`${iconSide} is rendered`, () => {
           const component = render(
-            <EuiButtonEmpty iconType="user" iconSide={iconSide}>
+            <WuiButtonEmpty iconType="user" iconSide={iconSide}>
               Content
-            </EuiButtonEmpty>
+            </WuiButtonEmpty>
           );
 
           expect(component).toMatchSnapshot();
@@ -107,7 +107,7 @@ describe('EuiButtonEmpty', () => {
     describe('flush', () => {
       FLUSH_TYPES.forEach(flushType => {
         test(`${flushType} is rendered`, () => {
-          const component = render(<EuiButtonEmpty flush={flushType} />);
+          const component = render(<WuiButtonEmpty flush={flushType} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -116,7 +116,7 @@ describe('EuiButtonEmpty', () => {
 
     describe('href', () => {
       it('secures the rel attribute when the target is _blank', () => {
-        const component = render(<EuiButtonEmpty href="#" target="_blank" />);
+        const component = render(<WuiButtonEmpty href="#" target="_blank" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -125,14 +125,14 @@ describe('EuiButtonEmpty', () => {
     describe('onClick', () => {
       it('supports onClick and href', () => {
         const handler = jest.fn();
-        const component = mount(<EuiButtonEmpty href="#" onClick={handler} />);
+        const component = mount(<WuiButtonEmpty href="#" onClick={handler} />);
         component.find('a').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
       });
 
       it('supports onClick as a button', () => {
         const handler = jest.fn();
-        const component = mount(<EuiButtonEmpty onClick={handler} />);
+        const component = mount(<WuiButtonEmpty onClick={handler} />);
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
       });
@@ -140,7 +140,7 @@ describe('EuiButtonEmpty', () => {
 
     test('contentProps is rendered', () => {
       const component = render(
-        <EuiButtonEmpty contentProps={requiredProps}>Content</EuiButtonEmpty>
+        <WuiButtonEmpty contentProps={requiredProps}>Content</WuiButtonEmpty>
       );
 
       expect(component).toMatchSnapshot();
@@ -148,7 +148,7 @@ describe('EuiButtonEmpty', () => {
 
     test('textProps is rendered', () => {
       const component = render(
-        <EuiButtonEmpty textProps={requiredProps}>Content</EuiButtonEmpty>
+        <WuiButtonEmpty textProps={requiredProps}>Content</WuiButtonEmpty>
       );
 
       expect(component).toMatchSnapshot();

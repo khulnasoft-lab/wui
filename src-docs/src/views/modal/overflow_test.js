@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiText,
+  WuiButton,
+  WuiModal,
+  WuiModalBody,
+  WuiModalFooter,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiOverlayMask,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -21,14 +21,14 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiOverlayMask onClick={closeModal}>
-        <EuiModal onClose={closeModal}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Overflow test</EuiModalHeaderTitle>
-          </EuiModalHeader>
+      <WuiOverlayMask onClick={closeModal}>
+        <WuiModal onClose={closeModal}>
+          <WuiModalHeader>
+            <WuiModalHeaderTitle>Overflow test</WuiModalHeaderTitle>
+          </WuiModalHeader>
 
-          <EuiModalBody>
-            <EuiText>
+          <WuiModalBody>
+            <WuiText>
               <p>
                 KING. Whats he that wishes so? My cousin, Westmorland? No, my
                 fair cousin; If we are mark&rsquo;d to die, we are enow To do
@@ -68,21 +68,21 @@ export default () => {
                 whiles any speaks That fought with us upon Saint Crispin&rsquo;s
                 day.
               </p>
-            </EuiText>
-          </EuiModalBody>
+            </WuiText>
+          </WuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButton onClick={closeModal} fill>
+          <WuiModalFooter>
+            <WuiButton onClick={closeModal} fill>
               Close
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiModal>
-      </EuiOverlayMask>
+            </WuiButton>
+          </WuiModalFooter>
+        </WuiModal>
+      </WuiOverlayMask>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <WuiButton onClick={showModal}>Show modal</WuiButton>
 
       {modal}
     </div>

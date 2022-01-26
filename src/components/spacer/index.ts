@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiSpacer } from './spacer';
+export { WuiSpacer } from './spacer';

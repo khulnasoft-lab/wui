@@ -5,15 +5,15 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiMarkdownEditor,
-  EuiText,
-  EuiTitle,
-  EuiSpacer,
-  EuiDescriptionList,
-  EuiHorizontalRule,
-  EuiCodeBlock,
-  EuiCode,
-  EuiLink,
+  WuiMarkdownEditor,
+  WuiText,
+  WuiTitle,
+  WuiSpacer,
+  WuiDescriptionList,
+  WuiHorizontalRule,
+  WuiCodeBlock,
+  WuiCode,
+  WuiLink,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ import MarkdownEditorWithPlugins from './markdown_editor_with_plugins';
 const markdownEditorWithPluginsSource = require('!!raw-loader!./markdown_editor_with_plugins');
 const markdownEditorWithPluginsHtml = renderToHtml(MarkdownEditorWithPlugins);
 
-const pluginSnippet = `<EuiMarkdownEditor
+const pluginSnippet = `<WuiMarkdownEditor
   uiPlugin={myPluginUI}
   parsingPluginList={myPluginParsingList}
   processingPluginList={myPluginProcessingList}
@@ -30,7 +30,7 @@ const pluginSnippet = `<EuiMarkdownEditor
 />
 
 <!-- Note that the format component does not need a UI prop. -->
-<EuiMarkdownFormat
+<WuiMarkdownFormat
   parsingPluginList={myPluginParsingList}
   processingPluginList={myPluginProcessingList}
 />
@@ -135,89 +135,89 @@ export const MarkdownPluginExample = {
   isNew: true,
   intro: (
     <Fragment>
-      <EuiText>
+      <WuiText>
         <p>
           Both{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-editor/">EuiMarkdownEditor</Link>
+            <Link to="/editors-syntax/markdown-editor/">WuiMarkdownEditor</Link>
           </strong>{' '}
           and{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-format/">EuiMarkdownFormat</Link>
+            <Link to="/editors-syntax/markdown-format/">WuiMarkdownFormat</Link>
           </strong>{' '}
           utilize the same underlying plugin architecture to transform string
           based syntax into React components. At a high level{' '}
-          <EuiLink href="https://www.npmjs.com/package/unified" target="_blank">
+          <WuiLink href="https://www.npmjs.com/package/unified" target="_blank">
             Unified JS
-          </EuiLink>{' '}
+          </WuiLink>{' '}
           is used in combination with{' '}
-          <EuiLink
+          <WuiLink
             href="https://www.npmjs.com/package/remark-parse"
             target="_blank">
             Remark
-          </EuiLink>{' '}
-          to provide EUI&apos;s markdown components, which are separated into a{' '}
+          </WuiLink>{' '}
+          to provide WUI&apos;s markdown components, which are separated into a{' '}
           <strong>parsing</strong> and <strong>processing</strong> layer. These
-          two concepts are kept distinct in EUI components to provide concrete
+          two concepts are kept distinct in WUI components to provide concrete
           locations for your plugins to be injected, be it editing or rendering.
           Finally you provide <strong>UI</strong> to the component to handle
           interactions with the editor.
         </p>
         <p>
           In addition to running the full pipeline,{' '}
-          <strong>EuiMarkdownEditor</strong> uses just the parsing configuration
+          <strong>WuiMarkdownEditor</strong> uses just the parsing configuration
           to determine the input&apos;s validity, provide messages back to the
           application, and allow the toolbar buttons to interact with existing
           markdown tags.
         </p>
-      </EuiText>
-      <EuiHorizontalRule />
-      <EuiTitle>
+      </WuiText>
+      <WuiHorizontalRule />
+      <WuiTitle>
         <h2>Plugin development</h2>
-      </EuiTitle>
-      <EuiSpacer size="m" />
-      <EuiText>
+      </WuiTitle>
+      <WuiSpacer size="m" />
+      <WuiText>
         <p>
-          An <strong>EuiMarkdown plugin</strong> is comprised of three major
+          An <strong>WuiMarkdown plugin</strong> is comprised of three major
           pieces, which are passed searpately as props.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCodeBlock size="s" language="html">
+      </WuiText>
+      <WuiSpacer />
+      <WuiCodeBlock size="s" language="html">
         {pluginSnippet}
-      </EuiCodeBlock>
-      <EuiSpacer />
-      <EuiDescriptionList
+      </WuiCodeBlock>
+      <WuiSpacer />
+      <WuiDescriptionList
         compressed
         listItems={pluginConcepts}
         type="responsiveColumn"
         titleProps={{ style: { width: '20%' } }}
         descriptionProps={{ style: { width: '80%' } }}
       />
-      <EuiSpacer />
-      <EuiHorizontalRule />
-      <EuiTitle>
+      <WuiSpacer />
+      <WuiHorizontalRule />
+      <WuiTitle>
         <h3>uiPlugin</h3>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiCodeBlock size="s" language="javascript">
+      </WuiTitle>
+      <WuiSpacer />
+      <WuiCodeBlock size="s" language="javascript">
         {uiPluginSnippet}
-      </EuiCodeBlock>
-      <EuiSpacer />
-      <EuiDescriptionList
+      </WuiCodeBlock>
+      <WuiSpacer />
+      <WuiDescriptionList
         compressed
         listItems={uiPluginConcepts}
         type="responsiveColumn"
         titleProps={{ style: { width: '20%' } }}
         descriptionProps={{ style: { width: '80%' } }}
       />
-      <EuiSpacer />
-      <EuiHorizontalRule />
-      <EuiTitle>
+      <WuiSpacer />
+      <WuiHorizontalRule />
+      <WuiTitle>
         <h3>parsingPluginList</h3>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiText>
+      </WuiTitle>
+      <WuiSpacer />
+      <WuiText>
         <Fragment>
           <p>
             <a
@@ -252,22 +252,22 @@ export const MarkdownPluginExample = {
           <h4>Inline vs block</h4>
           <p>
             Inline tags are allowed at any point in text, and will be rendered
-            somewhere within a <EuiCode>{'<p>'}</EuiCode> element. For better
+            somewhere within a <WuiCode>{'<p>'}</WuiCode> element. For better
             performance, inline parsers must provide a locate method which
             reports the location where their next tag might be found. They are
             not allowed to span multiple lines of the input.
           </p>
 
           <p>
-            Block tags are rendered inside <EuiCode>{'<span>'}</EuiCode>{' '}
+            Block tags are rendered inside <WuiCode>{'<span>'}</WuiCode>{' '}
             elements, and do not have a locate method. They can consume as much
             input text as desired, across multiple lines.
           </p>
         </Fragment>
-      </EuiText>
-      <EuiSpacer />
+      </WuiText>
+      <WuiSpacer />
 
-      <EuiCodeBlock size="s" language="javascript">{`// example plugin parser
+      <WuiCodeBlock size="s" language="javascript">{`// example plugin parser
 function EmojiMarkdownParser() {
   const Parser = this.Parser;
   const tokenizers = Parser.prototype.inlineTokenizers;
@@ -312,26 +312,26 @@ function EmojiMarkdownParser() {
 }
 
 // add the parser for \`emojiPlugin\`
-const parsingList = getDefaultEuiMarkdownParsingPlugins();
-parsingList.push(EmojiMarkdownParser);`}</EuiCodeBlock>
-      <EuiSpacer />
-      <EuiHorizontalRule />
-      <EuiTitle>
+const parsingList = getDefaultWuiMarkdownParsingPlugins();
+parsingList.push(EmojiMarkdownParser);`}</WuiCodeBlock>
+      <WuiSpacer />
+      <WuiHorizontalRule />
+      <WuiTitle>
         <h3>processingPluginList</h3>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiText>
+      </WuiTitle>
+      <WuiSpacer />
+      <WuiText>
         <p>
           After parsing the input into an AST, the nodes need to be transformed
           into React elements. This is performed by a list of processors, the
           default set converts remark AST into rehype and then into React.
           Plugins need to define themselves within this transformation process,
           identifying with the same type its parser uses in its{' '}
-          <EuiCode>eat</EuiCode> call.
+          <WuiCode>eat</WuiCode> call.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCodeBlock size="s" language="javascript">{`// example plugin processor
+      </WuiText>
+      <WuiSpacer />
+      <WuiCodeBlock size="s" language="javascript">{`// example plugin processor
 
 // receives the configuration from the parser and renders
 const EmojiMarkdownRenderer = ({ emoji }) => {
@@ -339,9 +339,9 @@ const EmojiMarkdownRenderer = ({ emoji }) => {
 };
 
 // add the renderer for \`emojiPlugin\`
-const processingList = getDefaultEuiMarkdownProcessingPlugins();
-processingList[1][1].components.emojiPlugin = EmojiMarkdownRenderer;`}</EuiCodeBlock>
-      <EuiSpacer size="xxl" />
+const processingList = getDefaultWuiMarkdownProcessingPlugins();
+processingList[1][1].components.emojiPlugin = EmojiMarkdownRenderer;`}</WuiCodeBlock>
+      <WuiSpacer size="xxl" />
     </Fragment>
   ),
   sections: [
@@ -365,15 +365,15 @@ processingList[1][1].components.emojiPlugin = EmojiMarkdownRenderer;`}</EuiCodeB
             toolbar.
           </p>
           <p>
-            Note that the <strong>EuiMarkdownEditor</strong> and{' '}
-            <strong>EuiMarkdownFormat</strong> examples utilize the same prop
+            Note that the <strong>WuiMarkdownEditor</strong> and{' '}
+            <strong>WuiMarkdownFormat</strong> examples utilize the same prop
             list. The editor manages additional controls through the{' '}
-            <EuiCode>uiPlugins</EuiCode> prop.
+            <WuiCode>uiPlugins</WuiCode> prop.
           </p>
         </Fragment>
       ),
       props: {
-        EuiMarkdownEditor,
+        WuiMarkdownEditor,
       },
       demo: <MarkdownEditorWithPlugins />,
     },

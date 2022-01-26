@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiNotificationBadge } from './badge_notification';
+export { WuiNotificationBadge } from './badge_notification';

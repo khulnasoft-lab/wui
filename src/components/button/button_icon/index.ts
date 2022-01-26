@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiButtonIcon,
-  EuiButtonIconColor,
-  EuiButtonIconProps,
-  EuiButtonIconPropsForButton,
+  WuiButtonIcon,
+  WuiButtonIconColor,
+  WuiButtonIconProps,
+  WuiButtonIconPropsForButton,
 } from './button_icon';

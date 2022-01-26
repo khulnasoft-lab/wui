@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconTokenMethod = ({ title, titleId, ...props }) => (
+const WuiIconTokenMethod = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconTokenMethod = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenMethod;
+export const icon = WuiIconTokenMethod;

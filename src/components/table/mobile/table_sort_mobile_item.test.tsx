@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiTableSortMobileItem } from './table_sort_mobile_item';
+import { WuiTableSortMobileItem } from './table_sort_mobile_item';
 
-describe('EuiTableSortMobileItem', () => {
+describe('WuiTableSortMobileItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableSortMobileItem {...requiredProps} />);
+    const component = render(<WuiTableSortMobileItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

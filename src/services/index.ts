@@ -56,18 +56,18 @@ export {
   VISUALIZATION_COLORS,
   DEFAULT_VISUALIZATION_COLOR,
   colorPalette,
-  euiPaletteForLightBackground,
-  euiPaletteForDarkBackground,
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  wuiPaletteForLightBackground,
+  wuiPaletteForDarkBackground,
+  wuiPaletteColorBlind,
+  wuiPaletteColorBlindBehindText,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteComplimentary,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteCool,
+  wuiPaletteWarm,
+  wuiPaletteGray,
   HSV,
 } from './color';
 
@@ -113,6 +113,6 @@ export {
   performOnFrame,
 } from './transition';
 
-export { EuiWindowEvent } from './window_event';
+export { WuiWindowEvent } from './window_event';
 
 export { useCombinedRefs, useDependentState } from './hooks';

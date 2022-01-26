@@ -6,10 +6,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiModal,
-  EuiConfirmModal,
-  EuiOverlayMask,
+  WuiCode,
+  WuiModal,
+  WuiConfirmModal,
+  WuiOverlayMask,
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 
@@ -25,30 +25,30 @@ import OverflowTest from './overflow_test';
 const overflowTestSource = require('!!raw-loader!./overflow_test');
 const overflowTestHtml = renderToHtml(OverflowTest);
 
-const modalSnippet = `<EuiModal onClose={closeModal}>
-  <EuiModalHeader>
-    <EuiModalHeaderTitle><!-- Modal title --></EuiModalHeaderTitle>
-  </EuiModalHeader>
+const modalSnippet = `<WuiModal onClose={closeModal}>
+  <WuiModalHeader>
+    <WuiModalHeaderTitle><!-- Modal title --></WuiModalHeaderTitle>
+  </WuiModalHeader>
 
-  <EuiModalBody>
+  <WuiModalBody>
     <!-- Modal body -->
-  </EuiModalBody>
+  </WuiModalBody>
 
-  <EuiModalFooter>
+  <WuiModalFooter>
     <!-- Modal footer -->
-  </EuiModalFooter>
-</EuiModal>`;
+  </WuiModalFooter>
+</WuiModal>`;
 
 const confirmModalSnippet = [
-  `<EuiConfirmModal
+  `<WuiConfirmModal
   title={title}
   onCancel={closeModal}
   onConfirm={closeModal}
   cancelButtonText={cancelText}
   confirmButtonText={confirmText}>
   <!-- ConfirmModal content -->
-</EuiConfirmModal>`,
-  `<EuiConfirmModal
+</WuiConfirmModal>`,
+  `<WuiConfirmModal
   title={title}
   onCancel={closeDestroyModal}
   onConfirm={closeDestroyModal}
@@ -56,7 +56,7 @@ const confirmModalSnippet = [
   confirmButtonText={confirmText}
   buttonColor="danger">
   <!-- Dangerous ConfirmModal content -->
-</EuiConfirmModal>`,
+</WuiConfirmModal>`,
 ];
 
 export const ModalExample = {
@@ -80,7 +80,7 @@ export const ModalExample = {
           <Link to="/layout/modal/guidelines">modal usage guidelines</Link>.
         </p>
       ),
-      props: { EuiModal, EuiOverlayMask },
+      props: { WuiModal, WuiOverlayMask },
       snippet: modalSnippet,
       demo: <Modal />,
     },
@@ -98,13 +98,13 @@ export const ModalExample = {
       ],
       text: (
         <p>
-          Use the <strong>EuiConfirmModal</strong> to ask the user to confirm a
+          Use the <strong>WuiConfirmModal</strong> to ask the user to confirm a
           decision. The default type is a positive or neutral confirmation. To
-          change the main button color change the <EuiCode>buttonColor</EuiCode>{' '}
+          change the main button color change the <WuiCode>buttonColor</WuiCode>{' '}
           property to any of the button color options.
         </p>
       ),
-      props: { EuiConfirmModal },
+      props: { WuiConfirmModal },
       snippet: confirmModalSnippet,
       demo: <ConfirmModal />,
     },
@@ -121,7 +121,7 @@ export const ModalExample = {
         },
       ],
       text: <p>This demo is to test long overflowing body content.</p>,
-      props: { EuiConfirmModal },
+      props: { WuiConfirmModal },
       demo: <OverflowTest />,
     },
   ],

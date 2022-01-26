@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiProgress,
-  EuiSpacer,
-  EuiButton,
-  EuiText,
-  EuiPanel,
-  EuiCallOut,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiPortal,
+  WuiProgress,
+  WuiSpacer,
+  WuiButton,
+  WuiText,
+  WuiPanel,
+  WuiCallOut,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiHeader,
+  WuiHeaderLogo,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiPortal,
 } from '../../../../src/components';
 
 export default () => {
@@ -61,10 +61,10 @@ export default () => {
   if (showProgress) {
     progress2 = (
       <div>
-        <EuiCallOut title="Look up!" color="warning" iconType="sortUp">
+        <WuiCallOut title="Look up!" color="warning" iconType="sortUp">
           <p>The progress bar is fixed to the top of your browser.</p>
-        </EuiCallOut>
-        <EuiProgress value={value} max={100} size="s" position="fixed" />
+        </WuiCallOut>
+        <WuiProgress value={value} max={100} size="s" position="fixed" />
       </div>
     );
   }
@@ -72,28 +72,28 @@ export default () => {
   if (showHeader) {
     progress2 = (
       <div>
-        <EuiCallOut title="Look up!" color="warning" iconType="sortUp">
+        <WuiCallOut title="Look up!" color="warning" iconType="sortUp">
           <p>
             The progress bar is fixed to the top of your browser and positioned
-            above an <strong>EuiHeader</strong>.
+            above an <strong>WuiHeader</strong>.
           </p>
-        </EuiCallOut>
-        <EuiHeader
+        </WuiCallOut>
+        <WuiHeader
           style={{ position: 'fixed', top: 0, left: 0, width: '100%' }}>
-          <EuiHeaderSection grow={false}>
-            <EuiHeaderSectionItem border="right">
-              <EuiHeaderLogo
+          <WuiHeaderSection grow={false}>
+            <WuiHeaderSectionItem border="right">
+              <WuiHeaderLogo
                 iconType="logoKibana"
                 href="#"
                 aria-label="Go to home page"
               />
-            </EuiHeaderSectionItem>
-          </EuiHeaderSection>
-        </EuiHeader>
+            </WuiHeaderSectionItem>
+          </WuiHeaderSection>
+        </WuiHeader>
         <div style={{ position: 'absolute', zIndex: '5' }}>
-          <EuiPortal>
-            <EuiProgress size="xs" color="accent" position="fixed" />
-          </EuiPortal>
+          <WuiPortal>
+            <WuiProgress size="xs" color="accent" position="fixed" />
+          </WuiPortal>
         </div>
       </div>
     );
@@ -101,33 +101,33 @@ export default () => {
 
   return (
     <div>
-      <EuiPanel style={{ width: 300, position: 'relative' }}>
-        <EuiProgress size="xs" color="accent" position="absolute" />
-        <EuiText>
+      <WuiPanel style={{ width: 300, position: 'relative' }}>
+        <WuiProgress size="xs" color="accent" position="absolute" />
+        <WuiText>
           <h2>Absolutely!</h2>
           <p>
             The progress bar is absolutely positioned in this panel. You could
             see how this might be useful in our Toast component.
           </p>
-        </EuiText>
-      </EuiPanel>
+        </WuiText>
+      </WuiPanel>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiFlexGroup gutterSize="s" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton size="s" onClick={toggleProgress}>
+      <WuiFlexGroup gutterSize="s" alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiButton size="s" onClick={toggleProgress}>
             Toggle a fixed bar
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton size="s" onClick={toggleHeader}>
+          </WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiButton size="s" onClick={toggleHeader}>
             Toggle a fixed bar with header
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiButton>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
       {progress2}
     </div>

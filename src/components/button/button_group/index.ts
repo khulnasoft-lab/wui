@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiButtonGroup,
-  EuiButtonGroupOption,
-  EuiButtonGroupProps,
+  WuiButtonGroup,
+  WuiButtonGroupOption,
+  WuiButtonGroupProps,
 } from './button_group';

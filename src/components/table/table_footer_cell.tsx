@@ -36,7 +36,7 @@ type Props = CommonProps &
     width?: string | number;
   };
 
-export const EuiTableFooterCell: FunctionComponent<Props> = ({
+export const WuiTableFooterCell: FunctionComponent<Props> = ({
   children,
   align = LEFT_ALIGNMENT,
   className,
@@ -44,17 +44,17 @@ export const EuiTableFooterCell: FunctionComponent<Props> = ({
   style,
   ...rest
 }) => {
-  const classes = classNames('euiTableFooterCell', className);
-  const contentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
+  const classes = classNames('wuiTableFooterCell', className);
+  const contentClasses = classNames('wuiTableCellContent', className, {
+    'wuiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
+    'wuiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
   });
   const styleObj = resolveWidthAsStyle(style, width);
 
   return (
     <td className={classes} style={styleObj} {...rest}>
       <div className={contentClasses}>
-        <span className="euiTableCellContent__text">{children}</span>
+        <span className="wuiTableCellContent__text">{children}</span>
       </div>
     </td>
   );

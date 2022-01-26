@@ -1,9 +1,9 @@
-.euiButtonGroup {
+.wuiButtonGroup {
   max-width: 100%;
   display: flex;
 }
 
-.euiButtonGroup__fieldset {
+.wuiButtonGroup__fieldset {
   display: inline-block;
   max-width: 100%;
 
@@ -12,13 +12,13 @@
   }
 }
 
-.euiButtonGroup--fullWidth {
-  .euiButtonGroup__toggle {
+.wuiButtonGroup--fullWidth {
+  .wuiButtonGroup__toggle {
     flex: 1;
   }
 }
 
-.euiButtonGroup__toggle {
+.wuiButtonGroup__toggle {
   margin-left: -1px;
   z-index: 1;
 
@@ -37,7 +37,7 @@
     }
   }
 
-  .euiButtonGroup__button {
+  .wuiButtonGroup__button {
     border-radius: 0;
     width: 100%;
 
@@ -49,90 +49,90 @@
 
     // always the same border color unless it's selected
     &:not([class*='fill']) {
-      border-color: $euiButtonToggleBorderColor;
+      border-color: $wuiButtonToggleBorderColor;
     }
 
     // don't colorize the shadows
     &:enabled {
-      @include euiSlightShadow;
+      @include wuiSlightShadow;
     }
   }
 
   &:first-child {
     margin-left: 0;
 
-    .euiButtonGroup__button {
-      border-top-left-radius: $euiBorderRadius;
-      border-bottom-left-radius: $euiBorderRadius;
+    .wuiButtonGroup__button {
+      border-top-left-radius: $wuiBorderRadius;
+      border-bottom-left-radius: $wuiBorderRadius;
     }
   }
 
-  &:last-child .euiButtonGroup__button {
-    border-top-right-radius: $euiBorderRadius;
-    border-bottom-right-radius: $euiBorderRadius;
+  &:last-child .wuiButtonGroup__button {
+    border-top-right-radius: $wuiBorderRadius;
+    border-bottom-right-radius: $wuiBorderRadius;
   }
 
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiButtonGroup__fieldset {
+@include wuiBreakpoint('xs', 's') {
+  .wuiButtonGroup__fieldset {
     display: block;
   }
 
-  .euiButtonGroup__toggle {
+  .wuiButtonGroup__toggle {
     flex: 1;
     min-width: 0;
 
-    .euiButtonGroup__button {
+    .wuiButtonGroup__button {
       min-width: 0;
     }
   }
 }
 
-.euiButtonGroup--compressed {
-  border: 1px solid $euiFormBorderColor;
-  border-radius: $euiFormControlCompressedBorderRadius;
-  background-color: $euiFormBackgroundColor;
+.wuiButtonGroup--compressed {
+  border: 1px solid $wuiFormBorderColor;
+  border-radius: $wuiFormControlCompressedBorderRadius;
+  background-color: $wuiFormBackgroundColor;
 
-  .euiButtonGroup__button {
-    height: $euiFormControlCompressedHeight - 2px;
+  .wuiButtonGroup__button {
+    height: $wuiFormControlCompressedHeight - 2px;
     // sass-lint:disable-block no-important
     box-shadow: none !important;
     font-size: $euiFontSizeS;
     min-width: 0;
     border: none;
-    border-radius: $euiBorderRadius;
+    border-radius: $wuiBorderRadius;
     // Offset the background color from the border by 2px
     // by clipping background to before the padding starts
     padding: 2px;
     background-clip: content-box;
 
-    &:not(.euiButtonGroup__button--selected):not(:disabled) {
+    &:not(.wuiButtonGroup__button--selected):not(:disabled) {
       color: $euiColorDarkShade;
     }
 
-    .euiButton__content {
+    .wuiButton__content {
       padding-left: $euiSizeS;
       padding-right: $euiSizeS;
     }
   }
 
-  .euiButtonGroup__toggle {
+  .wuiButtonGroup__toggle {
     flex: 1;
     min-width: 0;
   }
 
-  .euiButtonToggle__input:enabled:hover + .euiButtonGroup__button,
-  .euiButtonToggle__input:enabled:focus + .euiButtonGroup__button {
-    background-color: transparentize($euiFormInputGroupLabelBackground, .5);
+  .wuiButtonToggle__input:enabled:hover + .wuiButtonGroup__button,
+  .wuiButtonToggle__input:enabled:focus + .wuiButtonGroup__button {
+    background-color: transparentize($wuiFormInputGroupLabelBackground, .5);
   }
 
-  .euiButtonToggle__input:enabled:focus + .euiButtonGroup__button {
-    outline: 2px solid $euiFocusRingColor;
+  .wuiButtonToggle__input:enabled:focus + .wuiButtonGroup__button {
+    outline: 2px solid $wuiFocusRingColor;
   }
 
-  .euiButtonGroup__button--selected {
-    font-weight: $euiFontWeightSemiBold;
-    background-color: $euiFormInputGroupLabelBackground;
+  .wuiButtonGroup__button--selected {
+    font-weight: $wuiFontWeightSemiBold;
+    background-color: $wuiFormInputGroupLabelBackground;
   }
 }

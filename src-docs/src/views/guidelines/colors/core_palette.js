@@ -2,11 +2,11 @@ import React from 'react';
 import { getSassVars } from '../_get_sass_vars';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiCopy,
-  EuiScreenReaderOnly,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
+  WuiCopy,
+  WuiScreenReaderOnly,
 } from '../../../../../src/components';
 import { rgbToHex } from '../../../../../src/services';
 import { scrollToSelector } from '../../../components/guide_page/guide_page_chrome';
@@ -17,13 +17,13 @@ export const CorePalette = ({ theme, colors }) => {
   function renderPaletteColor(palette, color, index) {
     const hex = palette[color];
     const iconClass =
-      color === 'euiColorLightestShade' || color === 'euiColorEmptyShade'
+      color === 'wuiColorLightestShade' || color === 'euiColorEmptyShade'
         ? 'colorGuidelines_colorPreviewTooLight'
         : undefined;
 
     return (
-      <EuiFlexItem key={index} grow={false}>
-        <EuiCopy
+      <WuiFlexItem key={index} grow={false}>
+        <WuiCopy
           title={`$${color}:
           ${rgbToHex(hex.rgba).toUpperCase()}`}
           beforeMessage={
@@ -37,28 +37,28 @@ export const CorePalette = ({ theme, colors }) => {
           textToCopy={color}>
           {copy => (
             <button
-              className="eui-isFocusable"
+              className="wui-isFocusable"
               onClick={e => {
                 e.shiftKey ? scrollToSelector(`#${color}`) : copy();
               }}>
-              <EuiIcon
+              <WuiIcon
                 className={iconClass}
                 size="xxl"
                 type="stopFilled"
                 color={rgbToHex(hex.rgba)}
               />
-              <EuiScreenReaderOnly>
+              <WuiScreenReaderOnly>
                 <span>{color}</span>
-              </EuiScreenReaderOnly>
+              </WuiScreenReaderOnly>
             </button>
           )}
-        </EuiCopy>
-      </EuiFlexItem>
+        </WuiCopy>
+      </WuiFlexItem>
     );
   }
 
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       className="guideSection__shadedBox"
       gutterSize="s"
       wrap
@@ -66,6 +66,6 @@ export const CorePalette = ({ theme, colors }) => {
       {colors.map(function(color, index) {
         return renderPaletteColor(palette, color, index);
       })}
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   );
 };

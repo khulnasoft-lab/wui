@@ -21,47 +21,47 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiSuperSelectControl } from './super_select_control';
+import { WuiSuperSelectControl } from './super_select_control';
 
 jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
-describe('EuiSuperSelectControl', () => {
+describe('WuiSuperSelectControl', () => {
   test('is rendered', () => {
-    const component = render(<EuiSuperSelectControl {...requiredProps} />);
+    const component = render(<WuiSuperSelectControl {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('fullWidth is rendered', () => {
-      const component = render(<EuiSuperSelectControl fullWidth />);
+      const component = render(<WuiSuperSelectControl fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('compressed is rendered', () => {
-      const component = render(<EuiSuperSelectControl compressed />);
+      const component = render(<WuiSuperSelectControl compressed />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiSuperSelectControl isLoading />);
+      const component = render(<WuiSuperSelectControl isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiSuperSelectControl isInvalid />);
+      const component = render(<WuiSuperSelectControl isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('disabled options are rendered', () => {
       const component = render(
-        <EuiSuperSelectControl
+        <WuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1', disabled: false },
             { value: '2', inputDisplay: 'Option #2', disabled: true },
@@ -74,7 +74,7 @@ describe('EuiSuperSelectControl', () => {
 
     test('value option is rendered', () => {
       const component = render(
-        <EuiSuperSelectControl
+        <WuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },
@@ -90,7 +90,7 @@ describe('EuiSuperSelectControl', () => {
     test('empty value option is rendered', () => {
       const value = undefined;
       const component = render(
-        <EuiSuperSelectControl
+        <WuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },

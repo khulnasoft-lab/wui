@@ -21,22 +21,22 @@ import React, { FunctionComponent, ButtonHTMLAttributes } from 'react';
 
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiIcon } from '../../icon';
-import { EuiI18n } from '../../i18n';
+import { WuiIcon } from '../../icon';
+import { WuiI18n } from '../../i18n';
 
-export type EuiFormControlLayoutClearButtonProps = CommonProps &
+export type WuiFormControlLayoutClearButtonProps = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLayoutClearButtonProps> = ({
+export const WuiFormControlLayoutClearButton: FunctionComponent<WuiFormControlLayoutClearButtonProps> = ({
   className,
   onClick,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutClearButton', className);
+  const classes = classNames('wuiFormControlLayoutClearButton', className);
 
   return (
-    <EuiI18n
-      token="euiFormControlLayoutClearButton.label"
+    <WuiI18n
+      token="wuiFormControlLayoutClearButton.label"
       default="Clear input">
       {(label: string) => (
         <button
@@ -45,12 +45,12 @@ export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLa
           onClick={onClick}
           aria-label={label}
           {...rest}>
-          <EuiIcon
-            className="euiFormControlLayoutClearButton__icon"
+          <WuiIcon
+            className="wuiFormControlLayoutClearButton__icon"
             type="cross"
           />
         </button>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

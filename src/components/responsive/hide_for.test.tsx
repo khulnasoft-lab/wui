@@ -20,20 +20,20 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiHideForBreakpoints, EuiHideFor } from './hide_for';
+import { WuiHideForBreakpoints, WuiHideFor } from './hide_for';
 
-const BREAKPOINTS: EuiHideForBreakpoints[] = ['xs', 's', 'm', 'l', 'xl'];
+const BREAKPOINTS: WuiHideForBreakpoints[] = ['xs', 's', 'm', 'l', 'xl'];
 
-describe('EuiHideFor', () => {
+describe('WuiHideFor', () => {
   // @ts-ignore innerWidth might be read only but we can still override it for the sake of testing
   beforeAll(() => (window.innerWidth = 670));
   afterAll(() => 1024); // reset to jsdom's default
 
   test('renders', () => {
     const component = render(
-      <EuiHideFor sizes={['s']}>
+      <WuiHideFor sizes={['s']}>
         <span>Child</span>
-      </EuiHideFor>
+      </WuiHideFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,9 +42,9 @@ describe('EuiHideFor', () => {
   BREAKPOINTS.forEach(size => {
     test(`${size} is rendered`, () => {
       const component = render(
-        <EuiHideFor sizes={[size]}>
+        <WuiHideFor sizes={[size]}>
           <span>Child</span>
-        </EuiHideFor>
+        </WuiHideFor>
       );
 
       expect(component).toMatchSnapshot();
@@ -53,9 +53,9 @@ describe('EuiHideFor', () => {
 
   test('renders for multiple breakpoints', () => {
     const component = render(
-      <EuiHideFor sizes={['s', 'l']}>
+      <WuiHideFor sizes={['s', 'l']}>
         <span>Child</span>
-      </EuiHideFor>
+      </WuiHideFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -63,9 +63,9 @@ describe('EuiHideFor', () => {
 
   test('renders for "none"', () => {
     const component = render(
-      <EuiHideFor sizes={'none'}>
+      <WuiHideFor sizes={'none'}>
         <span>Child</span>
-      </EuiHideFor>
+      </WuiHideFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -73,9 +73,9 @@ describe('EuiHideFor', () => {
 
   test('never renders for "all"', () => {
     const component = render(
-      <EuiHideFor sizes={'all'}>
+      <WuiHideFor sizes={'all'}>
         <span>Child</span>
-      </EuiHideFor>
+      </WuiHideFor>
     );
 
     expect(component).toMatchSnapshot();

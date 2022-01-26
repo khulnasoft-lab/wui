@@ -23,16 +23,16 @@ import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 import { keysOf } from '../common';
 
-import { EuiBottomBar, paddingSizeToClassNameMap } from './bottom_bar';
+import { WuiBottomBar, paddingSizeToClassNameMap } from './bottom_bar';
 
 // @ts-ignore TODO: Temporary hack which we can remove once react-test-renderer supports portals.
 // More info at https://github.com/facebook/react/issues/11565.
 ReactDOM.createPortal = node => node;
 
-describe('EuiBottomBar', () => {
+describe('WuiBottomBar', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiBottomBar {...requiredProps}>Content</EuiBottomBar>
+      <WuiBottomBar {...requiredProps}>Content</WuiBottomBar>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('EuiBottomBar', () => {
     describe('paddingSize', () => {
       keysOf(paddingSizeToClassNameMap).forEach(paddingSize => {
         test(`${paddingSize} is rendered`, () => {
-          const component = render(<EuiBottomBar paddingSize={paddingSize} />);
+          const component = render(<WuiBottomBar paddingSize={paddingSize} />);
 
           expect(component).toMatchSnapshot();
         });

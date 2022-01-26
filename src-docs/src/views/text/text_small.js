@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHorizontalRule,
+  WuiText,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiHorizontalRule,
 } from '../../../../src/components';
 
 const exampleText = (
@@ -88,7 +88,7 @@ const exampleText = (
 
     <h6>This is Heading Six</h6>
 
-    <EuiHorizontalRule />
+    <WuiHorizontalRule />
 
     <dl>
       <dt>The Elder Scrolls: Morrowind</dt>
@@ -102,12 +102,12 @@ const exampleText = (
 );
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
-      <EuiText size="s">{exampleText}</EuiText>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiText size="xs">{exampleText}</EuiText>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup>
+    <WuiFlexItem>
+      <WuiText size="s">{exampleText}</WuiText>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiText size="xs">{exampleText}</WuiText>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

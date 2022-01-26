@@ -1,41 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPagination is rendered 1`] = `
+exports[`WuiPagination is rendered 1`] = `
 <nav
   aria-label="aria-label"
-  class="euiPagination testClass1 testClass2"
+  class="wuiPagination testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <button
     aria-label="Previous page, 1"
-    class="euiButtonIcon euiButtonIcon--text"
+    class="wuiButtonIcon wuiButtonIcon--text"
     data-test-subj="pagination-button-previous"
     type="button"
   >
     <div
       aria-hidden="true"
-      class="euiButtonIcon__icon"
-      data-euiicon-type="arrowLeft"
+      class="wuiButtonIcon__icon"
+      data-wuiicon-type="arrowLeft"
     />
   </button>
   <ul
     aria-label="aria-label"
-    class="euiPagination__list"
+    class="wuiPagination__list"
   >
     <li
-      class="euiPagination__item"
+      class="wuiPagination__item"
     >
       <button
         aria-label="Page 1 of 1"
-        class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiPaginationButton euiPaginationButton--hideOnMobile"
+        class="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall wuiPaginationButton wuiPaginationButton--hideOnMobile"
         data-test-subj="pagination-button-0"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="wuiButtonContent wuiButtonEmpty__content"
         >
           <span
-            class="euiButtonEmpty__text"
+            class="wuiButtonEmpty__text"
           >
             1
           </span>
@@ -45,14 +45,14 @@ exports[`EuiPagination is rendered 1`] = `
   </ul>
   <button
     aria-label="Next page, 3"
-    class="euiButtonIcon euiButtonIcon--text"
+    class="wuiButtonIcon wuiButtonIcon--text"
     data-test-subj="pagination-button-next"
     type="button"
   >
     <div
       aria-hidden="true"
-      class="euiButtonIcon__icon"
-      data-euiicon-type="arrowRight"
+      class="wuiButtonIcon__icon"
+      data-wuiicon-type="arrowRight"
     />
   </button>
 </nav>

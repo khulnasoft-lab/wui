@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconVisTagCloud = ({ title, titleId, ...props }) => (
+const WuiIconVisTagCloud = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconVisTagCloud = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconVisTagCloud;
+export const icon = WuiIconVisTagCloud;

@@ -5,28 +5,28 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiIcon,
-  EuiToken,
-  EuiLink,
-  EuiText,
-  EuiSpacer,
-  EuiCallOut,
+  WuiCode,
+  WuiIcon,
+  WuiToken,
+  WuiLink,
+  WuiText,
+  WuiSpacer,
+  WuiCallOut,
 } from '../../../../src/components';
 import iconConfig from './playground';
 
 import Icons from './icons';
-const iconsSnippet = '<EuiIcon type="alert" />';
+const iconsSnippet = '<WuiIcon type="alert" />';
 
 import Tokens from './tokens';
 const tokensSnippet = [
-  '<EuiToken iconType="tokenAnnotation" />',
-  `<EuiToken
+  '<WuiToken iconType="tokenAnnotation" />',
+  `<WuiToken
   iconType="tokenElement"
-  color="euiColorVis07"
+  color="wuiColorVis07"
   shape="circle"
 />`,
-  `<EuiToken
+  `<WuiToken
   iconType="visMapCoordinate"
   size="l"
   color="#FF0000"
@@ -36,47 +36,47 @@ const tokensSnippet = [
 ];
 
 import Apps from './apps';
-const appsSnippet = '<EuiIcon type="addDataApp" size="xl" />';
+const appsSnippet = '<WuiIcon type="addDataApp" size="xl" />';
 
 import Editor from './editor';
-const editorSnippet = '<EuiIcon type="editorAlignLeft" />';
+const editorSnippet = '<WuiIcon type="editorAlignLeft" />';
 
 import Ml from './ml';
-const mlSnippet = '<EuiIcon type="dataVisualizer" size="xl" />';
+const mlSnippet = '<WuiIcon type="dataVisualizer" size="xl" />';
 
 import Logos from './logos';
-const logosSnippet = '<EuiIcon type="logoElasticsearch" size="xl" />';
+const logosSnippet = '<WuiIcon type="logoElasticsearch" size="xl" />';
 
 import LogosThird from './logos_third';
-const logosThirdSnippet = '<EuiIcon type="logoApache" size="xl" />';
+const logosThirdSnippet = '<WuiIcon type="logoApache" size="xl" />';
 
 import IconSizes from './icon_sizes';
-const iconSizesSnippet = '<EuiIcon type="logoElasticStack" size="xl" />';
+const iconSizesSnippet = '<WuiIcon type="logoElasticStack" size="xl" />';
 
 import IconColors from './icon_colors';
 const iconColorsSnippet = [
-  '<EuiIcon type="brush" color="primary" />',
-  '<EuiIcon type="brush" color="#DA8B45" />',
+  '<WuiIcon type="brush" color="primary" />',
+  '<WuiIcon type="brush" color="#DA8B45" />',
 ];
 
 import IconTypes from './icon_types';
 const iconTypesSource = require('!!raw-loader!./icon_types');
 const iconTypesHtml = renderToHtml(IconTypes);
 const iconTypesSnippet = [
-  '<EuiIcon type="logoElastic" size="xl" />',
-  '<EuiIcon type={reactSVGElement} size="xl" />',
-  '<EuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" size="xl" title="My SVG logo" />',
-  '<EuiButton iconType={reactSVGElement}>Works in other components too</EuiButton>',
+  '<WuiIcon type="logoElastic" size="xl" />',
+  '<WuiIcon type={reactSVGElement} size="xl" />',
+  '<WuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" size="xl" title="My SVG logo" />',
+  '<WuiButton iconType={reactSVGElement}>Works in other components too</WuiButton>',
 ];
 
 export const IconExample = {
   title: 'Icons',
   intro: (
     <div>
-      <EuiText>
+      <WuiText>
         <p>
-          <strong>EuiIcon</strong> is a handy component for using our custom
-          glyphs and logos. The <EuiCode>type</EuiCode> prop accepts either an
+          <strong>WuiIcon</strong> is a handy component for using our custom
+          glyphs and logos. The <WuiCode>type</WuiCode> prop accepts either an
           enumerated name from one of the sets below, a location to a custom SVG
           asset, or a React Element.
         </p>
@@ -85,22 +85,22 @@ export const IconExample = {
           <strong>remove all fill attributes</strong> on the SVG and utilize the
           CSS helpers if you have complex logos that need to work with theming.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCallOut
+      </WuiText>
+      <WuiSpacer />
+      <WuiCallOut
         title={
           <>
             For better accessibility it's always recommended to give a
-            descriptive <EuiCode>title</EuiCode> based on the icon use.
+            descriptive <WuiCode>title</WuiCode> based on the icon use.
           </>
         }
         color="warning">
         <p>
           If no title is provided the icon is going to be purely decorative and
-          it will get by default an <EuiCode language="js">aria-hidden=true</EuiCode>.
+          it will get by default an <WuiCode language="js">aria-hidden=true</WuiCode>.
         </p>
-      </EuiCallOut>
-      <EuiSpacer />
+      </WuiCallOut>
+      <WuiSpacer />
     </div>
   ),
   sections: [
@@ -111,12 +111,12 @@ export const IconExample = {
           <p>
             Glyphs are small, monochromatic icons that typically should always
             use the default size of{' '}
-            <EuiCode language="js">size=&quot;m&quot;</EuiCode>. They tend to be
+            <WuiCode language="js">size=&quot;m&quot;</WuiCode>. They tend to be
             pixel perfect and don&apos;t scale very well into larger sizes.
           </p>
         </div>
       ),
-      props: { EuiIcon },
+      props: { WuiIcon },
       snippet: iconsSnippet,
       demo: <Icons />,
     },
@@ -125,7 +125,7 @@ export const IconExample = {
       text: (
         <p>
           Editor icons relate to the visual styling of elements and are commonly
-          used within <strong>EuiButtonGroup</strong> components.
+          used within <strong>WuiButtonGroup</strong> components.
         </p>
       ),
       snippet: editorSnippet,
@@ -135,7 +135,7 @@ export const IconExample = {
       title: 'Apps',
       text: (
         <p>
-          App logos are usually displayed at <EuiCode>32x32</EuiCode> or above
+          App logos are usually displayed at <WuiCode>32x32</WuiCode> or above
           and can contain multiple colors.
         </p>
       ),
@@ -148,15 +148,15 @@ export const IconExample = {
         <div>
           <p>
             Tokens are most commonly used to visually signify field or code
-            types. An <strong>EuiToken</strong> accepts any valid{' '}
-            <strong>EuiIcon</strong> as its
-            <EuiCode>iconType</EuiCode> property. However, icons designed
-            specifically for use in the <strong>EuiToken</strong> are prefixed
+            types. An <strong>WuiToken</strong> accepts any valid{' '}
+            <strong>WuiIcon</strong> as its
+            <WuiCode>iconType</WuiCode> property. However, icons designed
+            specifically for use in the <strong>WuiToken</strong> are prefixed
             with &quot;token&quot; in their name and have pre-defined styles.
           </p>
         </div>
       ),
-      props: { EuiToken },
+      props: { WuiToken },
       snippet: tokensSnippet,
       demo: <Tokens />,
     },
@@ -165,7 +165,7 @@ export const IconExample = {
       text: (
         <p>
           ML has some specific icons for job creation. Again, these are made for{' '}
-          <EuiCode>32x32</EuiCode>.
+          <WuiCode>32x32</WuiCode>.
         </p>
       ),
       snippet: mlSnippet,
@@ -176,7 +176,7 @@ export const IconExample = {
       text: (
         <p>
           Product logos follow similar rules as app logos. Note the use of{' '}
-          <EuiCode>.euiIcon__fillNegative</EuiCode> on portions of the SVGs to
+          <WuiCode>.wuiIcon__fillNegative</WuiCode> on portions of the SVGs to
           handle flipping colors for dark mode.
         </p>
       ),
@@ -187,8 +187,8 @@ export const IconExample = {
       title: 'Sizes',
       text: (
         <p>
-          Use the <EuiCode>size</EuiCode> prop to automatically size your icons.
-          Medium is the default, and will output a <EuiCode>16x16</EuiCode>{' '}
+          Use the <WuiCode>size</WuiCode> prop to automatically size your icons.
+          Medium is the default, and will output a <WuiCode>16x16</WuiCode>{' '}
           icon.
         </p>
       ),
@@ -200,16 +200,16 @@ export const IconExample = {
       text: (
         <p>
           The default behavior of icons is to inherit from the text color. You
-          can use the <EuiCode>color</EuiCode> prop to assign a custom color
+          can use the <WuiCode>color</WuiCode> prop to assign a custom color
           which accepts a named color from our palette or a valid&nbsp;
-          <EuiLink
+          <WuiLink
             target="_blank"
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">
             CSS color data type
-          </EuiLink>
+          </WuiLink>
           &nbsp;which will be passed down through the inline-style{' '}
-          <EuiCode>fill</EuiCode>&nbsp; property.{' '}
-          <strong>We recommend relying on the EUI named color palette</strong>
+          <WuiCode>fill</WuiCode>&nbsp; property.{' '}
+          <strong>We recommend relying on the WUI named color palette</strong>
           &nbsp; unless the custom color is initiated by the user (like as a
           graph color).
         </p>
@@ -221,11 +221,11 @@ export const IconExample = {
       title: 'Custom SVGs',
       text: (
         <p>
-          The <EuiCode>type</EuiCode> prop can accept a valid enum, string or
+          The <WuiCode>type</WuiCode> prop can accept a valid enum, string or
           React SVG Element. When using a custom SVG, please make sure it sits
-          on a square canvas and preferably utilizes one of EUI&apos;s sizes
+          on a square canvas and preferably utilizes one of WUI&apos;s sizes
           (16x16, 32x32...etc). For IE11 compatibility, the SVG file{' '}
-          <em>must</em> contain a <EuiCode>viewBox</EuiCode>.
+          <em>must</em> contain a <WuiCode>viewBox</WuiCode>.
         </p>
       ),
       source: [
@@ -238,7 +238,7 @@ export const IconExample = {
           code: iconTypesHtml,
         },
       ],
-      props: { EuiIcon },
+      props: { WuiIcon },
       snippet: iconTypesSnippet,
       demo: <IconTypes />,
     },
@@ -246,8 +246,8 @@ export const IconExample = {
       title: 'Third party logos',
       text: (
         <p>
-          EUI's library of third party logos are mostly maintained for legacy
-          usages. <strong>EuiIcon</strong> now accepts custom SVG and image
+          WUI's library of third party logos are mostly maintained for legacy
+          usages. <strong>WuiIcon</strong> now accepts custom SVG and image
           content which is how we recommend displaying external logos.
         </p>
       ),

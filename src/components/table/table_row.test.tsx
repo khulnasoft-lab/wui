@@ -21,15 +21,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableRow } from './table_row';
+import { WuiTableRow } from './table_row';
 
-import { EuiTableRowCell } from './table_row_cell';
+import { WuiTableRowCell } from './table_row_cell';
 
-test('renders EuiTableRow', () => {
+test('renders WuiTableRow', () => {
   const component = (
-    <EuiTableRow {...requiredProps}>
-      <EuiTableRowCell>hi</EuiTableRowCell>
-    </EuiTableRow>
+    <WuiTableRow {...requiredProps}>
+      <WuiTableRowCell>hi</WuiTableRowCell>
+    </WuiTableRow>
   );
 
   expect(render(component)).toMatchSnapshot();
@@ -38,9 +38,9 @@ test('renders EuiTableRow', () => {
 describe('isSelected', () => {
   test('renders true when specified', () => {
     const component = (
-      <EuiTableRow isSelected={true}>
-        <EuiTableRowCell />
-      </EuiTableRow>
+      <WuiTableRow isSelected={true}>
+        <WuiTableRowCell />
+      </WuiTableRow>
     );
 
     expect(render(component)).toMatchSnapshot();

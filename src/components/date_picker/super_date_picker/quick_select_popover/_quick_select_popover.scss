@@ -1,10 +1,10 @@
-.euiQuickSelectPopover__content {
-  width: $euiFormMaxWidth;
+.wuiQuickSelectPopover__content {
+  width: $wuiFormMaxWidth;
   max-width: 100%;
 }
 
-.euiQuickSelectPopover__section {
-  @include euiScrollBar;
+.wuiQuickSelectPopover__section {
+  @include wuiScrollBar;
   max-height: $euiSizeM * 11;
   overflow: hidden;
   overflow-y: auto;
@@ -12,11 +12,11 @@
 }
 
 // sass-lint:disable no-important
-.euiQuickSelectPopover__buttonText {
+.wuiQuickSelectPopover__buttonText {
   // Override specificity from universal and sibling selectors
   margin-right: $euiSizeXS !important;
 }
 
-.euiQuickSelectPopover__anchor {
+.wuiQuickSelectPopover__anchor {
   height: 100%;
 }

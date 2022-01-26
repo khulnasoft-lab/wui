@@ -1,11 +1,11 @@
 {
-  "name": "@elastic/eui",
-  "description": "Elastic UI Component Library",
+  "name": "@wazuh/wui",
+  "description": "Wazuh UI Component Library",
   "version": "29.3.2",
   "license": "Apache-2.0",
   "main": "lib",
   "module": "es",
-  "types": "eui.d.ts",
+  "types": "wui.d.ts",
   "docker_image": "node:10",
   "sideEffects": [
     "*.css",
@@ -16,7 +16,7 @@
     "test-docker": "node ./scripts/test-docker.js",
     "sync-docs": "node ./scripts/docs-sync.js",
     "build-docs": "cross-env BABEL_MODULES=false cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src-docs/webpack.config.js",
-    "build": "yarn extract-i18n-strings && node ./scripts/compile-clean.js && node ./scripts/compile-eui.js && node ./scripts/compile-scss.js $npm_package_name",
+    "build": "yarn extract-i18n-strings && node ./scripts/compile-clean.js && node ./scripts/compile-wui.js && node ./scripts/compile-scss.js $npm_package_name",
     "compile-icons": "node ./scripts/compile-icons.js && prettier --write --loglevel=warn \"./src/components/icon/assets/**/*.js\"",
     "extract-i18n-strings": "node ./scripts/babel/fetch-i18n-strings",
     "lint": "yarn tsc --noEmit && yarn lint-es && yarn lint-sass",
@@ -31,19 +31,19 @@
     "test-staged": "yarn lint && node scripts/test-staged.js",
     "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config src-docs/webpack.config.js --port 9999",
     "test-visual": "wdio test/wdio.conf.js",
-    "yo-component": "yo ./generator-eui/app/component.js",
+    "yo-component": "yo ./generator-wui/app/component.js",
     "test-visual-tests": "node ./scripts/run-visual-tests.js",
     "update-token-changelog": "node ./scripts/update-token-changelog.js",
     "start-test-server-and-visual-test": "start-server-and-test start-test-server http-get://localhost:9999 test-visual",
     "start-test-server-and-a11y-test": "start-server-and-test start-test-server http-get://localhost:9999 test-a11y",
-    "yo-doc": "yo ./generator-eui/app/documentation.js",
+    "yo-doc": "yo ./generator-wui/app/documentation.js",
     "release": "node ./scripts/release.js",
     "postinstall": "node ./scripts/postinstall.js",
     "version": "node ./scripts/update-changelog-version.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elastic/eui.git"
+    "url": "https://github.com/wazuh/wui.git"
   },
   "pre-commit": [
     "test-staged"

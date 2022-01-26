@@ -1,40 +1,40 @@
-.euiContextMenuPanel {
+.wuiContextMenuPanel {
   width: 100%;
   visibility: visible;
 
-  &.euiContextMenuPanel-txInLeft {
+  &.wuiContextMenuPanel-txInLeft {
     pointer-events: none;
-    animation: euiContextMenuPanelTxInLeft $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxInLeft $euiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txOutLeft {
+  &.wuiContextMenuPanel-txOutLeft {
     pointer-events: none;
-    animation: euiContextMenuPanelTxOutLeft $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxOutLeft $euiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txInRight {
+  &.wuiContextMenuPanel-txInRight {
     pointer-events: none;
-    animation: euiContextMenuPanelTxInRight $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxInRight $euiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txOutRight {
+  &.wuiContextMenuPanel-txOutRight {
     pointer-events: none;
-    animation: euiContextMenuPanelTxOutRight $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxOutRight $euiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 }
 
-.euiContextMenuPanel--next {
-  transform: translateX($euiContextMenuWidth);
+.wuiContextMenuPanel--next {
+  transform: translateX($wuiContextMenuWidth);
   visibility: hidden;
 }
 
-.euiContextMenuPanel--previous {
-  transform: translateX(-$euiContextMenuWidth);
+.wuiContextMenuPanel--previous {
+  transform: translateX(-$wuiContextMenuWidth);
   visibility: hidden;
 }
 
-.euiContextMenuPanelTitle {
-  @include euiPopoverTitle;
+.wuiContextMenuPanelTitle {
+  @include wuiPopoverTitle;
 
   width: 100%;
   text-align: left;
@@ -45,9 +45,9 @@
   }
 }
 
-@keyframes euiContextMenuPanelTxInLeft {
+@keyframes wuiContextMenuPanelTxInLeft {
   0% {
-    transform: translateX($euiContextMenuWidth);
+    transform: translateX($wuiContextMenuWidth);
   }
 
   100% {
@@ -55,19 +55,19 @@
   }
 }
 
-@keyframes euiContextMenuPanelTxOutLeft {
+@keyframes wuiContextMenuPanelTxOutLeft {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-$euiContextMenuWidth);
+    transform: translateX(-$wuiContextMenuWidth);
   }
 }
 
-@keyframes euiContextMenuPanelTxInRight {
+@keyframes wuiContextMenuPanelTxInRight {
   0% {
-    transform: translateX(-$euiContextMenuWidth);
+    transform: translateX(-$wuiContextMenuWidth);
   }
 
   100% {
@@ -75,12 +75,12 @@
   }
 }
 
-@keyframes euiContextMenuPanelTxOutRight {
+@keyframes wuiContextMenuPanelTxOutRight {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX($euiContextMenuWidth);
+    transform: translateX($wuiContextMenuWidth);
   }
 }

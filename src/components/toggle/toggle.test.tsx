@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiToggle } from './toggle';
+import { WuiToggle } from './toggle';
 
-describe('EuiToggle', () => {
+describe('WuiToggle', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToggle label="Is toggle on?" {...requiredProps} />
+      <WuiToggle label="Is toggle on?" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,14 +34,14 @@ describe('EuiToggle', () => {
 
   describe('props', () => {
     test('isDisabled is rendered', () => {
-      const component = render(<EuiToggle label="Is toggle on?" isDisabled />);
+      const component = render(<WuiToggle label="Is toggle on?" isDisabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('onChange is rendered', () => {
       const component = render(
-        <EuiToggle
+        <WuiToggle
           label="Is toggle on?"
           onChange={jest.fn()}
           {...requiredProps}
@@ -53,7 +53,7 @@ describe('EuiToggle', () => {
 
     test('type is rendered', () => {
       const component = render(
-        <EuiToggle label="Is toggle on?" type="single" {...requiredProps} />
+        <WuiToggle label="Is toggle on?" type="single" {...requiredProps} />
       );
 
       expect(component).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe('EuiToggle', () => {
 
     test('checked is rendered', () => {
       const component = render(
-        <EuiToggle
+        <WuiToggle
           label="Is toggle on?"
           checked
           {...requiredProps}

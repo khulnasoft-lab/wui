@@ -29,9 +29,9 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonIcon, EuiButtonIconPropsForButton } from '../button';
-import { EuiIcon, IconType } from '../icon';
-import { EuiToolTip } from '../tool_tip';
+import { WuiButtonIcon, WuiButtonIconPropsForButton } from '../button';
+import { WuiIcon, IconType } from '../icon';
+import { WuiToolTip } from '../tool_tip';
 import { useInnerText } from '../inner_text';
 import { ExclusiveUnion, CommonProps } from '../common';
 
@@ -40,24 +40,24 @@ import { validateHref } from '../../services/security/href_validator';
 
 type ItemSize = 'xs' | 's' | 'm' | 'l';
 const sizeToClassNameMap: { [size in ItemSize]: string } = {
-  xs: 'euiListGroupItem--xSmall',
-  s: 'euiListGroupItem--small',
-  m: 'euiListGroupItem--medium',
-  l: 'euiListGroupItem--large',
+  xs: 'wuiListGroupItem--xSmall',
+  s: 'wuiListGroupItem--small',
+  m: 'wuiListGroupItem--medium',
+  l: 'wuiListGroupItem--large',
 };
 export const SIZES = Object.keys(sizeToClassNameMap) as ItemSize[];
 
 type Color = 'inherit' | 'primary' | 'text' | 'subdued' | 'ghost';
 const colorToClassNameMap: { [color in Color]: string } = {
   inherit: '',
-  primary: 'euiListGroupItem--primary',
-  text: 'euiListGroupItem--text',
-  subdued: 'euiListGroupItem--subdued',
-  ghost: 'euiListGroupItem--ghost',
+  primary: 'wuiListGroupItem--primary',
+  text: 'wuiListGroupItem--text',
+  subdued: 'wuiListGroupItem--subdued',
+  ghost: 'wuiListGroupItem--ghost',
 };
 export const COLORS = Object.keys(colorToClassNameMap) as Color[];
 
-export type EuiListGroupItemProps = CommonProps &
+export type WuiListGroupItemProps = CommonProps &
   Omit<
     ExclusiveUnion<
       ExclusiveUnion<
@@ -104,7 +104,7 @@ export type EuiListGroupItemProps = CommonProps &
     rel?: string;
 
     /**
-     * Adds `EuiIcon` of `EuiIcon.type`
+     * Adds `WuiIcon` of `WuiIcon.type`
      */
     iconType?: IconType;
 
@@ -120,10 +120,10 @@ export type EuiListGroupItemProps = CommonProps &
     showToolTip?: boolean;
 
     /**
-     * Adds an `EuiButtonIcon` to the right side of the item; `iconType` is required;
+     * Adds an `WuiButtonIcon` to the right side of the item; `iconType` is required;
      * pass `alwaysShow` if you don't want the default behavior of only showing on hover
      */
-    extraAction?: EuiButtonIconPropsForButton & {
+    extraAction?: WuiButtonIconPropsForButton & {
       alwaysShow?: boolean;
     };
 
@@ -145,7 +145,7 @@ export type EuiListGroupItemProps = CommonProps &
     buttonRef?: React.Ref<HTMLButtonElement>;
   };
 
-export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
+export const WuiListGroupItem: FunctionComponent<WuiListGroupItemProps> = ({
   label,
   isActive = false,
   isDisabled: _isDisabled = false,
@@ -168,15 +168,15 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   const isDisabled = _isDisabled || !isHrefValid;
 
   const classes = classNames(
-    'euiListGroupItem',
+    'wuiListGroupItem',
     sizeToClassNameMap[size],
     colorToClassNameMap[color],
     {
-      'euiListGroupItem-isActive': isActive,
-      'euiListGroupItem-isDisabled': isDisabled,
-      'euiListGroupItem-isClickable': href || onClick,
-      'euiListGroupItem-hasExtraAction': extraAction,
-      'euiListGroupItem--wrapText': wrapText,
+      'wuiListGroupItem-isActive': isActive,
+      'wuiListGroupItem-isDisabled': isDisabled,
+      'wuiListGroupItem-isClickable': href || onClick,
+      'wuiListGroupItem-hasExtraAction': extraAction,
+      'wuiListGroupItem--wrapText': wrapText,
     },
     className
   );
@@ -184,16 +184,16 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   let iconNode;
 
   if (iconType) {
-    iconNode = <EuiIcon className="euiListGroupItem__icon" type={iconType} />;
+    iconNode = <WuiIcon className="wuiListGroupItem__icon" type={iconType} />;
 
     if (icon) {
       console.warn(
-        'Both `iconType` and `icon` were passed to EuiListGroupItem but only one can exist. The `iconType` was used.'
+        'Both `iconType` and `icon` were passed to WuiListGroupItem but only one can exist. The `iconType` was used.'
       );
     }
   } else if (icon) {
     iconNode = React.cloneElement(icon, {
-      className: classNames('euiListGroupItem__icon', icon.props.className),
+      className: classNames('wuiListGroupItem__icon', icon.props.className),
     });
   }
 
@@ -203,15 +203,15 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     const { iconType, alwaysShow, className, ...rest } = extraAction;
 
     const extraActionClasses = classNames(
-      'euiListGroupItem__extraAction',
+      'wuiListGroupItem__extraAction',
       {
-        'euiListGroupItem__extraAction-alwaysShow': alwaysShow,
+        'wuiListGroupItem__extraAction-alwaysShow': alwaysShow,
       },
       className
     );
 
     extraActionNode = (
-      <EuiButtonIcon
+      <WuiButtonIcon
         className={extraActionClasses}
         iconType={iconType}
         {...rest}
@@ -227,12 +227,12 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   const labelContent = shouldRenderTitle ? (
     <span
       ref={ref}
-      className="euiListGroupItem__label"
+      className="wuiListGroupItem__label"
       title={typeof label === 'string' ? label : innerText}>
       {label}
     </span>
   ) : (
-    <span className="euiListGroupItem__label">{label}</span>
+    <span className="wuiListGroupItem__label">{label}</span>
   );
 
   // Handle the variety of interaction behavior
@@ -243,7 +243,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   if (href && !isDisabled) {
     itemContent = (
       <a
-        className="euiListGroupItem__button"
+        className="wuiListGroupItem__button"
         href={href}
         target={target}
         rel={secureRel}
@@ -257,7 +257,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     itemContent = (
       <button
         type="button"
-        className="euiListGroupItem__button"
+        className="wuiListGroupItem__button"
         disabled={isDisabled}
         onClick={onClick}
         ref={buttonRef}
@@ -268,7 +268,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     );
   } else {
     itemContent = (
-      <span className="euiListGroupItem__text" {...rest}>
+      <span className="wuiListGroupItem__text" {...rest}>
         {iconNode}
         {labelContent}
       </span>
@@ -278,13 +278,13 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   if (showToolTip) {
     itemContent = (
       <li className={classes}>
-        <EuiToolTip
-          anchorClassName="euiListGroupItem__tooltip"
+        <WuiToolTip
+          anchorClassName="wuiListGroupItem__tooltip"
           content={label}
           position="right"
           delay="long">
           {itemContent}
-        </EuiToolTip>
+        </WuiToolTip>
       </li>
     );
   } else {

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFilePicker, EuiFilePickerProps } from './file_picker';
+export { WuiFilePicker, WuiFilePickerProps } from './file_picker';

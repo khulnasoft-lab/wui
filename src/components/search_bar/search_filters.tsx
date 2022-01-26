@@ -20,19 +20,19 @@
 import React, { Component, Fragment, ReactElement } from 'react';
 import { createFilter, SearchFilterConfig } from './filters';
 import { Query } from './query';
-import { EuiFilterGroup } from '../filter_group';
+import { WuiFilterGroup } from '../filter_group';
 
 export { SearchFilterConfig } from './filters';
 
-interface EuiSearchFiltersProps {
+interface WuiSearchFiltersProps {
   query: Query;
   onChange: (query: Query) => void;
   filters: SearchFilterConfig[];
 }
 
-type DefaultProps = Pick<EuiSearchFiltersProps, 'filters'>;
+type DefaultProps = Pick<WuiSearchFiltersProps, 'filters'>;
 
-export class EuiSearchFilters extends Component<EuiSearchFiltersProps> {
+export class WuiSearchFilters extends Component<WuiSearchFiltersProps> {
   static defaultProps: DefaultProps = {
     filters: [],
   };
@@ -51,6 +51,6 @@ export class EuiSearchFilters extends Component<EuiSearchFiltersProps> {
       items.push(<Fragment key={key}>{control}</Fragment>);
     });
 
-    return <EuiFilterGroup>{items}</EuiFilterGroup>;
+    return <WuiFilterGroup>{items}</WuiFilterGroup>;
   }
 }

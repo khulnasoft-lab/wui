@@ -27,14 +27,14 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
 import { getSecureRelForTarget } from '../../services';
-import { EuiText } from '../text';
-import { EuiTitle } from '../title';
-import { EuiBetaBadge } from '../badge/beta_badge';
-import { EuiIconProps } from '../icon';
+import { WuiText } from '../text';
+import { WuiTitle } from '../title';
+import { WuiBetaBadge } from '../badge/beta_badge';
+import { WuiIconProps } from '../icon';
 import {
-  EuiCardSelect,
-  EuiCardSelectProps,
-  euiCardSelectableColor,
+  WuiCardSelect,
+  WuiCardSelectProps,
+  wuiCardSelectableColor,
 } from './card_select';
 import { htmlIdGenerator } from '../../services/accessibility';
 import { validateHref } from '../../services/security/href_validator';
@@ -42,9 +42,9 @@ import { validateHref } from '../../services/security/href_validator';
 type CardAlignment = 'left' | 'center' | 'right';
 
 const textAlignToClassNameMap: { [alignment in CardAlignment]: string } = {
-  left: 'euiCard--leftAligned',
-  center: 'euiCard--centerAligned',
-  right: 'euiCard--rightAligned',
+  left: 'wuiCard--leftAligned',
+  center: 'wuiCard--centerAligned',
+  right: 'wuiCard--rightAligned',
 };
 
 export const ALIGNMENTS = keysOf(textAlignToClassNameMap);
@@ -53,7 +53,7 @@ type CardLayout = 'vertical' | 'horizontal';
 
 const layoutToClassNameMap: { [layout in CardLayout]: string } = {
   vertical: '',
-  horizontal: 'euiCard--horizontal',
+  horizontal: 'wuiCard--horizontal',
 };
 
 export const LAYOUT_ALIGNMENTS = keysOf(layoutToClassNameMap);
@@ -62,14 +62,14 @@ type CardDisplay = 'panel' | 'plain';
 
 const displayToClassNameMap: { [display in CardDisplay]: string } = {
   panel: '',
-  plain: 'euiCard--plain',
+  plain: 'wuiCard--plain',
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
 type CardPaddingSize = 'none' | 's' | 'm' | 'l';
 
-export type EuiCardProps = Omit<CommonProps, 'aria-label'> & {
+export type WuiCardProps = Omit<CommonProps, 'aria-label'> & {
   /**
    * Card's are required to have at least a title and description
    */
@@ -81,7 +81,7 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> & {
   titleElement?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 
   /**
-   * Determines the title's size, matching that of EuiTitle.
+   * Determines the title's size, matching that of WuiTitle.
    * Though, card titles can't be too large or small relative to the description text.
    */
   titleSize?: 's' | 'xs';
@@ -92,9 +92,9 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> & {
   description: NonNullable<ReactNode>;
 
   /**
-   * Accepts an `<EuiIcon>` node or `null`
+   * Accepts an `<WuiIcon>` node or `null`
    */
-  icon?: ReactElement<EuiIconProps> | null;
+  icon?: ReactElement<WuiIconProps> | null;
 
   /**
    * Accepts a url in string form or ReactElement for a custom image component
@@ -150,7 +150,7 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> & {
   /**
    * Adds a button to the bottom of the card to allow for in-place selection
    */
-  selectable?: EuiCardSelectProps;
+  selectable?: WuiCardSelectProps;
 
   /**
    * Visual display of the card. Display as 'panel' or 'plain'.
@@ -166,15 +166,15 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> & {
 const paddingSizeToClassNameMap: {
   [paddingSize in CardPaddingSize]: string;
 } = {
-  none: 'euiCard--paddingNone',
-  s: 'euiCard--paddingSmall',
-  m: 'euiCard--paddingMedium',
-  l: 'euiCard--paddingLarge',
+  none: 'wuiCard--paddingNone',
+  s: 'wuiCard--paddingSmall',
+  m: 'wuiCard--paddingMedium',
+  l: 'wuiCard--paddingLarge',
 };
 
 export const SIZES = keysOf(paddingSizeToClassNameMap);
 
-export const EuiCard: FunctionComponent<EuiCardProps> = ({
+export const WuiCard: FunctionComponent<WuiCardProps> = ({
   className,
   description,
   isDisabled: _isDisabled,
@@ -217,33 +217,33 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (layout === 'horizontal') {
     if (image || footer) {
       throw new Error(
-        "EuiCard: layout = horizontal' cannot be used in conjunction with 'image', 'footer', or 'textAlign'."
+        "WuiCard: layout = horizontal' cannot be used in conjunction with 'image', 'footer', or 'textAlign'."
       );
     }
   }
 
   const selectableColorClass = selectable
-    ? `euiCard--isSelectable--${euiCardSelectableColor(
+    ? `wuiCard--isSelectable--${wuiCardSelectableColor(
         selectable.color,
         selectable.isSelected
       )}`
     : undefined;
 
   const classes = classNames(
-    'euiCard',
+    'wuiCard',
     paddingSizeToClassNameMap[paddingSize],
     displayToClassNameMap[display],
     textAlignToClassNameMap[textAlign],
     layoutToClassNameMap[layout],
     {
-      'euiCard--isClickable':
+      'wuiCard--isClickable':
         onClick || href || (selectable && !selectable.isDisabled),
-      'euiCard--hasBetaBadge': betaBadgeLabel,
-      'euiCard--hasIcon': icon,
-      'euiCard--hasChildren': children,
-      'euiCard--isSelectable': selectable,
-      'euiCard-isSelected': selectable && selectable.isSelected,
-      'euiCard-isDisabled': isDisabled,
+      'wuiCard--hasBetaBadge': betaBadgeLabel,
+      'wuiCard--hasIcon': icon,
+      'wuiCard--hasChildren': children,
+      'wuiCard--isSelectable': selectable,
+      'wuiCard-isSelected': selectable && selectable.isSelected,
+      'wuiCard-isDisabled': isDisabled,
     },
     selectableColorClass,
     className
@@ -259,7 +259,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (image && layout === 'vertical') {
     if (isValidElement(image) || typeof image === 'string') {
       imageNode = (
-        <div className="euiCard__image">
+        <div className="wuiCard__image">
           {isValidElement(image) ? image : <img src={image} alt="" />}
         </div>
       );
@@ -271,14 +271,14 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   let iconNode;
   if (icon) {
     iconNode = React.cloneElement(icon, {
-      className: classNames(icon.props.className, 'euiCard__icon'),
+      className: classNames(icon.props.className, 'wuiCard__icon'),
     });
   }
 
   let optionalCardTop;
   if (imageNode || iconNode) {
     optionalCardTop = (
-      <div className="euiCard__top">
+      <div className="wuiCard__top">
         {imageNode}
         {iconNode}
       </div>
@@ -286,7 +286,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   }
 
   /**
-   * Optional EuiBetaBadge
+   * Optional WuiBetaBadge
    */
 
   let optionalBetaBadge;
@@ -294,13 +294,13 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (betaBadgeLabel) {
     optionalBetaBadgeID = `${ariaId}BetaBadge`;
     optionalBetaBadge = (
-      <span className="euiCard__betaBadgeWrapper">
-        <EuiBetaBadge
+      <span className="wuiCard__betaBadgeWrapper">
+        <WuiBetaBadge
           id={optionalBetaBadgeID}
           label={betaBadgeLabel}
           title={betaBadgeTitle}
           tooltipContent={betaBadgeTooltipContent}
-          className="euiCard__betaBadge"
+          className="wuiCard__betaBadge"
         />
       </span>
     );
@@ -317,7 +317,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   let optionalSelectButton;
   if (selectable) {
     optionalSelectButton = (
-      <EuiCardSelect
+      <WuiCardSelect
         aria-describedby={`${ariaId}Title ${ariaId}Description`}
         {...selectable}
         buttonRef={node => {
@@ -336,7 +336,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (!isDisabled && href) {
     theTitle = (
       <a
-        className="euiCard__titleAnchor"
+        className="wuiCard__titleAnchor"
         onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
         href={href}
         target={target}
@@ -351,7 +351,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   } else if (isDisabled || onClick) {
     theTitle = (
       <button
-        className="euiCard__titleButton"
+        className="wuiCard__titleButton"
         onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
         disabled={isDisabled}
         aria-describedby={`${optionalBetaBadgeID} ${ariaId}Description`}
@@ -375,20 +375,20 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
     <div className={classes} onClick={outerOnClick} {...rest}>
       {optionalCardTop}
 
-      <div className="euiCard__content">
-        <EuiTitle
+      <div className="wuiCard__content">
+        <WuiTitle
           id={`${ariaId}Title`}
-          className="euiCard__title"
+          className="wuiCard__title"
           size={titleSize}>
           <TitleElement>{theTitle}</TitleElement>
-        </EuiTitle>
+        </WuiTitle>
 
-        <EuiText
+        <WuiText
           id={`${ariaId}Description`}
           size="s"
-          className="euiCard__description">
+          className="wuiCard__description">
           <p>{description}</p>
-        </EuiText>
+        </WuiText>
 
         {children}
       </div>
@@ -397,7 +397,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
       {optionalBetaBadge}
 
       {layout === 'vertical' && footer && (
-        <div className="euiCard__footer">{footer}</div>
+        <div className="wuiCard__footer">{footer}</div>
       )}
       {optionalSelectButton}
     </div>

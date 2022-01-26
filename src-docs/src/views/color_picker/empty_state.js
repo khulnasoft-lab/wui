@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import { EuiColorPicker, EuiFormRow } from '../../../../src/components';
+import { WuiColorPicker, WuiFormRow } from '../../../../src/components';
 
 import { useColorPickerState } from '../../../../src/services';
 
@@ -10,15 +10,15 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a color" isInvalid={isInvalid} error={errors}>
-        <EuiColorPicker
+      <WuiFormRow label="Pick a color" isInvalid={isInvalid} error={errors}>
+        <WuiColorPicker
           onChange={setColor}
           color={color}
           isInvalid={isInvalid}
           placeholder="Auto"
           isClearable={true}
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </React.Fragment>
   );
 };

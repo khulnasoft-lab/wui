@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPopoverFooter } from './popover_footer';
+import { WuiPopoverFooter } from './popover_footer';
 
-describe('EuiPopoverFooter', () => {
+describe('WuiPopoverFooter', () => {
   test('is rendered', () => {
-    const component = render(<EuiPopoverFooter {...requiredProps} />);
+    const component = render(<WuiPopoverFooter {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,39 +1,39 @@
-@include euiPanel($selector: '.euiCheckableCard');
+@include wuiPanel($selector: '.wuiCheckableCard');
 
-.euiCheckableCard {
+.wuiCheckableCard {
   transition: border-color $euiAnimSpeedNormal ease-in;
   overflow: hidden; // Hides background color inside panel rounded corners
 
-  &:not(.euiCheckableCard-isDisabled) {
-    &.euiCheckableCard-isChecked {
-      border-color: $euiColorPrimary;
+  &:not(.wuiCheckableCard-isDisabled) {
+    &.wuiCheckableCard-isChecked {
+      border-color: $wuiColorPrimary;
     }
 
     &:focus-within {
-      @include euiFocusRing;
+      @include wuiFocusRing;
     }
   }
 }
 
-.euiCheckableCard__row {
+.wuiCheckableCard__row {
   display: flex;
   align-items: stretch;
 }
 
-.euiCheckableCard__control {
+.wuiCheckableCard__control {
   display: flex;
   flex: 0 0 $euiSizeXXL;
   justify-content: center;
   align-items: center;
-  background-color: map-get($euiCardSelectButtonBackgrounds, 'text');
+  background-color: map-get($wuiCardSelectButtonBackgrounds, 'text');
   transition: background-color $euiAnimSpeedNormal ease-in;
 
-  .euiCheckableCard-isChecked & {
-    background-color: map-get($euiCardSelectButtonBackgrounds, 'primary');
+  .wuiCheckableCard-isChecked & {
+    background-color: map-get($wuiCardSelectButtonBackgrounds, 'primary');
   }
 }
 
-.euiCheckableCard__label {
+.wuiCheckableCard__label {
   flex-grow: 1;
   font-size: $euiFontSize;
   line-height: $euiSizeL;
@@ -41,11 +41,11 @@
   cursor: pointer;
 }
 
-.euiCheckableCard__label-isDisabled {
-  color: $euiFormControlDisabledColor;
+.wuiCheckableCard__label-isDisabled {
+  color: $wuiFormControlDisabledColor;
   cursor: not-allowed;
 }
 
-.euiCheckableCard__children {
+.wuiCheckableCard__children {
   padding:  0 $euiSizeS $euiSizeS $euiSize;
 }

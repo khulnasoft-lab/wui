@@ -4,21 +4,21 @@
 // is handled through absolute positioning and then animated through the use
 // of transforms.
 
-.euiPopover {
+.wuiPopover {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   max-width: 100%;
 }
 
-.euiPopover__anchor {
+.wuiPopover__anchor {
   display: inline-block;
 }
 
-.euiPopover--displayBlock {
+.wuiPopover--displayBlock {
   display: block;
 
-  .euiPopover__anchor {
+  .wuiPopover__anchor {
     display: block;
   }
 }
@@ -28,30 +28,30 @@
  * 2. Animation happens on the panel.
  * 3. Make sure the panel stays within the window.
  */
-.euiPopover__panel {
+.wuiPopover__panel {
   // Ignore linting for legibility of transition property, and the mixin performs an overwrite
   // sass-lint:disable-block indentation, mixins-before-declarations
   position: absolute;
-  min-width: $euiButtonMinWidth; /* 1 */
+  min-width: $wuiButtonMinWidth; /* 1 */
   max-width: calc(100vw - #{$euiSizeXL}); /* 3 */
   backface-visibility: hidden;
   pointer-events: none;
   transition: /* 2 */
-    opacity $euiAnimSlightBounce $euiAnimSpeedSlow,
-    visibility $euiAnimSlightBounce $euiAnimSpeedSlow,
-    transform $euiAnimSlightBounce ($euiAnimSpeedSlow + 100ms);
+    opacity $wuiAnimSlightBounce $wuiAnimSpeedSlow,
+    visibility $wuiAnimSlightBounce $wuiAnimSpeedSlow,
+    transform $wuiAnimSlightBounce ($wuiAnimSpeedSlow + 100ms);
   opacity: 0; /* 2 */
   visibility: hidden; /* 2 */
   transform: translateY(0) translateX(0) translateZ(0); /* 2 */
-  @include euiBottomShadow($adjustBorders: true);
+  @include wuiBottomShadow($adjustBorders: true);
 
-  &.euiPopover__panel-isOpen {
+  &.wuiPopover__panel-isOpen {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
-  .euiPopover__panelArrow {
+  .wuiPopover__panelArrow {
     position: absolute;
     width: 0;
     height: 0;
@@ -72,107 +72,107 @@
       width: 0;
     }
 
-    &.euiPopover__panelArrow--top {
+    &.wuiPopover__panelArrow--top {
       &:before {
-        bottom: -$euiPopoverArrowSize + 2;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-top: $euiPopoverArrowSize solid $euiBorderColor;
+        bottom: -$wuiPopoverArrowSize + 2;
+        border-left: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid transparent;
+        border-top: $wuiPopoverArrowSize solid $wuiBorderColor;
       }
 
       &:after {
-        bottom: -$euiPopoverArrowSize + 3;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-top: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        bottom: -$wuiPopoverArrowSize + 3;
+        border-left: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid transparent;
+        border-top: $wuiPopoverArrowSize solid $euiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--right {
+    &.wuiPopover__panelArrow--right {
       &:before {
-        left: -$euiPopoverArrowSize;
+        left: -$wuiPopoverArrowSize;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid $euiBorderColor;
+        border-top: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid $wuiBorderColor;
       }
 
       &:after {
-        left: -$euiPopoverArrowSize + 1;
+        left: -$wuiPopoverArrowSize + 1;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        border-top: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid $euiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--bottom {
+    &.wuiPopover__panelArrow--bottom {
       &:before {
-        top: -$euiPopoverArrowSize;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid $euiBorderColor;
+        top: -$wuiPopoverArrowSize;
+        border-left: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid $wuiBorderColor;
       }
 
       &:after {
-        top: -$euiPopoverArrowSize + 1;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        top: -$wuiPopoverArrowSize + 1;
+        border-left: $wuiPopoverArrowSize solid transparent;
+        border-right: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid $euiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--left {
+    &.wuiPopover__panelArrow--left {
       &:before {
-        right: -$euiPopoverArrowSize + 1;
+        right: -$wuiPopoverArrowSize + 1;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-left: $euiPopoverArrowSize solid $euiBorderColor;
+        border-top: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid transparent;
+        border-left: $wuiPopoverArrowSize solid $wuiBorderColor;
       }
 
       &:after {
-        right: -$euiPopoverArrowSize + 2;
+        right: -$wuiPopoverArrowSize + 2;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-left: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        border-top: $wuiPopoverArrowSize solid transparent;
+        border-bottom: $wuiPopoverArrowSize solid transparent;
+        border-left: $wuiPopoverArrowSize solid $euiColorEmptyShade;
       }
     }
   }
 
 
-  &.euiPopover__panel-noArrow .euiPopover__panelArrow {
+  &.wuiPopover__panel-noArrow .wuiPopover__panelArrow {
     display: none;
   }
 
-  &.euiPopover__panel-isAttached.euiPopover__panel--bottom {
-    border-top-color: transparentize($euiBorderColor, .2);
+  &.wuiPopover__panel-isAttached.wuiPopover__panel--bottom {
+    border-top-color: transparentize($wuiBorderColor, .2);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 
-  &.euiPopover__panel-isAttached.euiPopover__panel--top {
-    @include euiBottomShadowFlat;
+  &.wuiPopover__panel-isAttached.wuiPopover__panel--top {
+    @include wuiBottomShadowFlat;
 
-    border-bottom-color: transparentize($euiBorderColor, .2);
+    border-bottom-color: transparentize($wuiBorderColor, .2);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--top {
-  transform: translateY($euiPopoverTranslateDistance) translateZ(0);
+.wuiPopover__panel.wuiPopover__panel-isOpen.wuiPopover__panel--top {
+  transform: translateY($wuiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--bottom {
-  transform: translateY(-$euiPopoverTranslateDistance) translateZ(0);
+.wuiPopover__panel.wuiPopover__panel-isOpen.wuiPopover__panel--bottom {
+  transform: translateY(-$wuiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--left {
-  transform: translateX($euiPopoverTranslateDistance) translateZ(0);
+.wuiPopover__panel.wuiPopover__panel-isOpen.wuiPopover__panel--left {
+  transform: translateX($wuiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--right {
-  transform: translateX(-$euiPopoverTranslateDistance) translateZ(0);
+.wuiPopover__panel.wuiPopover__panel-isOpen.wuiPopover__panel--right {
+  transform: translateX(-$wuiPopoverTranslateDistance) translateZ(0);
 }

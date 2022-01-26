@@ -26,25 +26,25 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiI18n } from '../i18n';
 
-import { IconType, EuiIcon } from '../icon';
+import { IconType, WuiIcon } from '../icon';
 
-import { EuiText } from '../text';
+import { WuiText } from '../text';
 
 type ToastColor = 'primary' | 'success' | 'warning' | 'danger';
 
 const colorToClassNameMap: { [color in ToastColor]: string } = {
-  primary: 'euiToast--primary',
-  success: 'euiToast--success',
-  warning: 'euiToast--warning',
-  danger: 'euiToast--danger',
+  primary: 'wuiToast--primary',
+  success: 'wuiToast--success',
+  warning: 'wuiToast--warning',
+  danger: 'wuiToast--danger',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
-export interface EuiToastProps
+export interface WuiToastProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   title?: ReactNode;
@@ -53,7 +53,7 @@ export interface EuiToastProps
   onClose?: () => void;
 }
 
-export const EuiToast: FunctionComponent<EuiToastProps> = ({
+export const WuiToast: FunctionComponent<WuiToastProps> = ({
   title,
   color,
   iconType,
@@ -63,20 +63,20 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiToast',
+    'wuiToast',
     color ? colorToClassNameMap[color] : null,
     className
   );
-  const headerClasses = classNames('euiToastHeader', {
-    'euiToastHeader--withBody': children,
+  const headerClasses = classNames('wuiToastHeader', {
+    'wuiToastHeader--withBody': children,
   });
 
   let headerIcon: ReactElement;
 
   if (iconType) {
     headerIcon = (
-      <EuiIcon
-        className="euiToastHeader__icon"
+      <WuiIcon
+        className="wuiToastHeader__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -88,18 +88,18 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
 
   if (onClose) {
     closeButton = (
-      <EuiI18n token="euiToast.dismissToast" default="Dismiss toast">
+      <WuiI18n token="wuiToast.dismissToast" default="Dismiss toast">
         {(dismissToast: string) => (
           <button
             type="button"
-            className="euiToast__closeButton"
+            className="wuiToast__closeButton"
             aria-label={dismissToast}
             onClick={onClose}
             data-test-subj="toastCloseButton">
-            <EuiIcon type="cross" size="m" aria-hidden="true" />
+            <WuiIcon type="cross" size="m" aria-hidden="true" />
           </button>
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 
@@ -107,35 +107,35 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
 
   if (children) {
     optionalBody = (
-      <EuiText size="s" className="euiToastBody">
+      <WuiText size="s" className="wuiToastBody">
         {children}
-      </EuiText>
+      </WuiText>
     );
   }
 
   return (
     <div className={classes} {...rest}>
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <p>
-          <EuiI18n
-            token="euiToast.newNotification"
+          <WuiI18n
+            token="wuiToast.newNotification"
             default="A new notification appears"
           />
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
 
-      <EuiI18n token="euiToast.notification" default="Notification">
+      <WuiI18n token="wuiToast.notification" default="Notification">
         {(notification: string) => (
           <div
             className={headerClasses}
             aria-label={notification}
-            data-test-subj="euiToastHeader">
+            data-test-subj="wuiToastHeader">
             {headerIcon}
 
-            <span className="euiToastHeader__title">{title}</span>
+            <span className="wuiToastHeader__title">{title}</span>
           </div>
         )}
-      </EuiI18n>
+      </WuiI18n>
 
       {closeButton}
       {optionalBody}

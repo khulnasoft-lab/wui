@@ -25,12 +25,12 @@ import { CommonProps } from '../../common';
 type Border = 'left' | 'right' | 'none';
 
 const borderToClassNameMap: { [border in Border]: string | undefined } = {
-  left: 'euiHeaderSectionItem--borderLeft',
-  right: 'euiHeaderSectionItem--borderRight',
+  left: 'wuiHeaderSectionItem--borderLeft',
+  right: 'wuiHeaderSectionItem--borderRight',
   none: undefined,
 };
 
-export type EuiHeaderSectionItemProps = CommonProps & {
+export type WuiHeaderSectionItemProps = CommonProps & {
   /**
    * Side to display a short border on.
    * Not supported in Wazuh theme.
@@ -43,7 +43,7 @@ export type EuiHeaderSectionItemProps = CommonProps & {
   children?: ReactNode;
 };
 
-export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> = ({
+export const WuiHeaderSectionItem: FunctionComponent<WuiHeaderSectionItemProps> = ({
   border = 'left',
   grow = false,
   children,
@@ -51,9 +51,9 @@ export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> 
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSectionItem',
+    'wuiHeaderSectionItem',
     borderToClassNameMap[border],
-    { 'euiHeaderSectionItem--grow': grow },
+    { 'wuiHeaderSectionItem--grow': grow },
     className
   );
 

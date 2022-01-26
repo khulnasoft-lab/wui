@@ -4,12 +4,12 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiSideNav } from '../../../../src/components';
+import { WuiCode, WuiSideNav } from '../../../../src/components';
 
 import SideNav from './side_nav';
 const sideNavSource = require('!!raw-loader!./side_nav');
 const sideNavHtml = renderToHtml(SideNav);
-const sideNavSnippet = `<EuiSideNav
+const sideNavSnippet = `<WuiSideNav
   mobileTitle="Navbar Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -37,14 +37,14 @@ const sideNavSnippet = `<EuiSideNav
 import SideNavComplex from './side_nav_complex';
 const sideNavComplexSource = require('!!raw-loader!./side_nav_complex');
 const sideNavComplexHtml = renderToHtml(SideNavComplex);
-const sideNavComplexSnippet = `<EuiSideNav
+const sideNavComplexSnippet = `<WuiSideNav
   mobileTitle="Navbar Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
       name: 'Elasticsearch',
-      icon: <EuiIcon type="logoElasticsearch" />,
+      icon: <WuiIcon type="logoElasticsearch" />,
       id: '0',
       items: [
         {
@@ -61,7 +61,7 @@ const sideNavComplexSnippet = `<EuiSideNav
     },
     {
       name: 'Kibana',
-      icon: <EuiIcon type="logoKibana" />,
+      icon: <WuiIcon type="logoKibana" />,
       id: '1',
       items: [
         {
@@ -103,7 +103,7 @@ const sideNavComplexSnippet = `<EuiSideNav
 import SideNavForceOpen from './side_nav_force_open';
 const sideNavForceOpenSource = require('!!raw-loader!./side_nav_force_open');
 const sideNavForceOpenHtml = renderToHtml(SideNavForceOpen);
-const sideNavForceSnippet = `<EuiSideNav
+const sideNavForceSnippet = `<WuiSideNav
   mobileTitle="Navbar Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -179,20 +179,20 @@ export const SideNavExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSideNav</strong> is a responsive menu system that usually
+            <strong>WuiSideNav</strong> is a responsive menu system that usually
             sits on the left side of a page layout. It will expand to the width
             of its container. This is the menu that is used on the left side of
             the page you are currently looking at.
           </p>
 
           <p>
-            Configure the content of a <strong>EuiSideNav</strong> by passing in
-            an <EuiCode>items</EuiCode> prop. Refer to the source code for an
+            Configure the content of a <strong>WuiSideNav</strong> by passing in
+            an <WuiCode>items</WuiCode> prop. Refer to the source code for an
             example of this data structure&rsquo;s anatomy.
           </p>
         </div>
       ),
-      props: { EuiSideNav, EuiSideNavItem: SideNavItem },
+      props: { WuiSideNav, WuiSideNavItem: SideNavItem },
       snippet: sideNavSnippet,
       demo: <SideNav />,
     },
@@ -210,7 +210,7 @@ export const SideNavExample = {
       ],
       text: (
         <p>
-          <strong>EuiSideNav</strong> also supports deeply-nested tree-based
+          <strong>WuiSideNav</strong> also supports deeply-nested tree-based
           data.
         </p>
       ),
@@ -231,8 +231,8 @@ export const SideNavExample = {
       ],
       text: (
         <p>
-          <strong>EuiSideNav</strong> items can be forced open by setting{' '}
-          <EuiCode>items[n].forceOpen = true</EuiCode>
+          <strong>WuiSideNav</strong> items can be forced open by setting{' '}
+          <WuiCode>items[n].forceOpen = true</WuiCode>
         </p>
       ),
       snippet: sideNavForceSnippet,

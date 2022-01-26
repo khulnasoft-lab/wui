@@ -17,31 +17,31 @@
  * under the License.
  */
 
-import { EuiPopoverPosition } from './types';
+import { WuiPopoverPosition } from './types';
 
-interface EuiPopoverBoundingBox {
+interface WuiPopoverBoundingBox {
   top: number;
   left: number;
   width: number;
   height: number;
 }
 
-interface EuiPopoverAnchorRect extends EuiPopoverBoundingBox {
+interface WuiPopoverAnchorRect extends WuiPopoverBoundingBox {
   right: number;
   bottom: number;
 }
 
-interface EuiPopoverDimensions {
+interface WuiPopoverDimensions {
   width: number;
   height: number;
 }
 
-interface EuiPopoverPositionedBox extends EuiPopoverBoundingBox {
-  position: EuiPopoverPosition;
+interface WuiPopoverPositionedBox extends WuiPopoverBoundingBox {
+  position: WuiPopoverPosition;
 }
 
 const getVisibleArea = (
-  bounds: EuiPopoverBoundingBox,
+  bounds: WuiPopoverBoundingBox,
   windowWidth: number,
   windowHeight: number
 ): number => {
@@ -53,11 +53,11 @@ const getVisibleArea = (
 };
 
 type Positioner = (
-  bounds: EuiPopoverAnchorRect,
+  bounds: WuiPopoverAnchorRect,
   width: number,
   height: number,
   buffer: number
-) => EuiPopoverBoundingBox;
+) => WuiPopoverBoundingBox;
 
 const positionAtTop: Positioner = (anchorBounds, width, height, buffer) => {
   const widthDifference = width - anchorBounds.width;
@@ -107,12 +107,12 @@ const positionToPositionerMap: { [position: string]: Positioner } = {
  * @returns {Object} With properties position (one of ["top", "right", "bottom", "left"]), left, top, width, and height.
  */
 export function calculatePopoverPosition(
-  anchorBounds: EuiPopoverAnchorRect,
-  popoverBounds: EuiPopoverDimensions,
-  requestedPosition: EuiPopoverPosition,
+  anchorBounds: WuiPopoverAnchorRect,
+  popoverBounds: WuiPopoverDimensions,
+  requestedPosition: WuiPopoverPosition,
   buffer: number = 16,
-  positions: EuiPopoverPosition[] = ['top', 'right', 'bottom', 'left']
-): EuiPopoverPositionedBox {
+  positions: WuiPopoverPosition[] = ['top', 'right', 'bottom', 'left']
+): WuiPopoverPositionedBox {
   if (typeof buffer !== 'number') {
     throw new Error(
       `calculatePopoverPosition received a buffer argument of ${buffer}' but expected a number`
@@ -123,7 +123,7 @@ export function calculatePopoverPosition(
   const windowHeight = window.innerHeight;
   const { width: popoverWidth, height: popoverHeight } = popoverBounds;
 
-  const positionToBoundsMap: { [position: string]: EuiPopoverBoundingBox } = {};
+  const positionToBoundsMap: { [position: string]: WuiPopoverBoundingBox } = {};
   const positionToVisibleAreaMap: { [positon: string]: number } = {};
 
   positions.forEach(position => {

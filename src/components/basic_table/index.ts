@@ -18,17 +18,17 @@
  */
 
 export {
-  EuiBasicTable,
-  EuiBasicTableProps,
-  EuiBasicTableColumn,
+  WuiBasicTable,
+  WuiBasicTableProps,
+  WuiBasicTableColumn,
 } from './basic_table';
-export { EuiInMemoryTable, EuiInMemoryTableProps } from './in_memory_table';
+export { WuiInMemoryTable, WuiInMemoryTableProps } from './in_memory_table';
 export {
-  EuiTableDataType,
-  EuiTableFooterProps,
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  WuiTableDataType,
+  WuiTableFooterProps,
+  WuiTableFieldDataColumnType,
+  WuiTableComputedColumnType,
+  WuiTableActionsColumnType,
+  WuiTableSelectionType,
+  WuiTableSortingType,
 } from './table_types';

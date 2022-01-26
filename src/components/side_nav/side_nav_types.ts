@@ -21,7 +21,7 @@ import { ReactElement, ReactNode, MouseEventHandler } from 'react';
 
 import { RenderItem } from './side_nav_item';
 
-export interface EuiSideNavItemType<T> {
+export interface WuiSideNavItemType<T> {
   /**
    * A value that is passed to React as the `key` for this item
    */
@@ -47,7 +47,7 @@ export interface EuiSideNavItemType<T> {
   /**
    * Array containing additional item objects, representing nested children of this navigation item.
    */
-  items?: Array<EuiSideNavItemType<T>>;
+  items?: Array<WuiSideNavItemType<T>>;
   /**
    * React node representing the text to render for this item (usually a string will suffice).
    */

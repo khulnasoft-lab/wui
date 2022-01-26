@@ -76,7 +76,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains both', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://wwwelastic.co/',
+          href: 'https://wwwwazuh.co/',
           target: '_blank',
           rel: 'noopener noreferrer',
         })
@@ -86,7 +86,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains noopener', () => {
       expect(
         getSecureRelForTarget({
-          href: 'wss://www.elastic.co/',
+          href: 'wss://www.wazuh.co/',
           target: '_blank',
           rel: 'noopener',
         })
@@ -96,7 +96,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains noreferrer', () => {
       expect(
         getSecureRelForTarget({
-          href: 'smb://www.elastic.co/',
+          href: 'smb://www.wazuh.co/',
           target: '_blank',
           rel: 'noreferrer',
         })
@@ -118,7 +118,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains neither', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://www.elastic.co',
+          href: 'https://www.wazuh.co',
           target: '_blank',
           rel: undefined,
         })
@@ -128,7 +128,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains both', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://www.elastic.co',
+          href: 'https://www.wazuh.co',
           target: '_blank',
           rel: 'noopener noreferrer',
         })
@@ -138,7 +138,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains noopener', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://docs.elastic.co',
+          href: 'https://docs.wazuh.co',
           target: '_blank',
           rel: 'noopener',
         })
@@ -148,7 +148,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel contains noreferrer', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://elastic.co',
+          href: 'https://wazuh.co',
           target: '_blank',
           rel: 'noreferrer',
         })
@@ -158,7 +158,7 @@ describe('getSecureRelForTarget', () => {
     test('including the original rel value', () => {
       expect(
         getSecureRelForTarget({
-          href: 'http://discuss.elastic.co',
+          href: 'http://discuss.wazuh.co',
           target: '_blank',
           rel: 'nofollow',
         })
@@ -170,7 +170,7 @@ describe('getSecureRelForTarget', () => {
     test('when target and rel is undefined', () => {
       expect(
         getSecureRelForTarget({
-          href: 'http://discuss.elastic.co',
+          href: 'http://discuss.wazuh.co',
           target: undefined,
           rel: undefined,
         })
@@ -180,7 +180,7 @@ describe('getSecureRelForTarget', () => {
     test('when rel is specified', () => {
       expect(
         getSecureRelForTarget({
-          href: 'https://discuss.elastic.co',
+          href: 'https://discuss.wazuh.co',
           target: undefined,
           rel: 'nofollow',
         })

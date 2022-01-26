@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFlyoutBody } from './flyout_body';
+import { WuiFlyoutBody } from './flyout_body';
 
-describe('EuiFlyoutBody', () => {
+describe('WuiFlyoutBody', () => {
   test('is rendered', () => {
-    const component = render(<EuiFlyoutBody {...requiredProps} />);
+    const component = render(<WuiFlyoutBody {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

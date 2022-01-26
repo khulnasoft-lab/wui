@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiBeacon, EuiBeaconProps } from './beacon';
+export { WuiBeacon, WuiBeaconProps } from './beacon';

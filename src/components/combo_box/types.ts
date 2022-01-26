@@ -21,25 +21,25 @@ import { ButtonHTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
 // note similarity to `Option` in `components/selectable/types.tsx`
-export type EuiComboBoxOptionOption<
+export type WuiComboBoxOptionOption<
   T = string | number | string[] | undefined
 > = CommonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> & {
     isGroupLabelOption?: boolean;
     label: string;
-    options?: Array<EuiComboBoxOptionOption<T>>;
+    options?: Array<WuiComboBoxOptionOption<T>>;
     value?: T;
   };
 
 export type UpdatePositionHandler = (
   listElement?: RefInstance<HTMLDivElement>
 ) => void;
-export type OptionHandler<T> = (option: EuiComboBoxOptionOption<T>) => void;
+export type OptionHandler<T> = (option: WuiComboBoxOptionOption<T>) => void;
 
 export type RefInstance<T> = T | null;
 
-export type EuiComboBoxOptionsListPosition = 'top' | 'bottom';
+export type WuiComboBoxOptionsListPosition = 'top' | 'bottom';
 
-export interface EuiComboBoxSingleSelectionShape {
+export interface WuiComboBoxSingleSelectionShape {
   asPlainText?: boolean;
 }

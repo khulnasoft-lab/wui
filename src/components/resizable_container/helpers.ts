@@ -21,18 +21,18 @@ import { useCallback, MouseEvent, TouchEvent } from 'react';
 
 import { keys } from '../../services';
 import {
-  EuiResizableButtonMouseEvent,
-  EuiResizableButtonKeyDownEvent,
+  WuiResizableButtonMouseEvent,
+  WuiResizableButtonKeyDownEvent,
 } from './resizable_button';
-import { EuiResizablePanelRegistry } from './context';
-import { EuiResizableContainerState } from './resizable_container';
+import { WuiResizablePanelRegistry } from './context';
+import { WuiResizableContainerState } from './resizable_container';
 
 interface Params {
   isHorizontal: boolean;
-  state: EuiResizableContainerState;
-  setState: React.Dispatch<React.SetStateAction<EuiResizableContainerState>>;
+  state: WuiResizableContainerState;
+  setState: React.Dispatch<React.SetStateAction<WuiResizableContainerState>>;
   containerRef: React.RefObject<HTMLDivElement>;
-  registryRef: React.MutableRefObject<EuiResizablePanelRegistry>;
+  registryRef: React.MutableRefObject<WuiResizablePanelRegistry>;
   onPanelWidthChange?: ({}: { [key: string]: number }) => any;
 }
 
@@ -86,7 +86,7 @@ export const useContainerCallbacks = ({
   }, [registryRef, isHorizontal]);
 
   const onMouseDown = useCallback(
-    (event: EuiResizableButtonMouseEvent) => {
+    (event: WuiResizableButtonMouseEvent) => {
       const currentTarget = event.currentTarget;
       const clientX = isMouseEvent(event)
         ? event.clientX
@@ -107,7 +107,7 @@ export const useContainerCallbacks = ({
   );
 
   const onKeyDown = useCallback(
-    (event: EuiResizableButtonKeyDownEvent) => {
+    (event: WuiResizableButtonKeyDownEvent) => {
       const { key, currentTarget } = event;
       const shouldResizeHorizontalPanel =
         isHorizontal && (key === keys.ARROW_LEFT || key === keys.ARROW_RIGHT);

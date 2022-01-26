@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCommentTimeline } from './comment_timeline';
-import { EuiAvatar } from '../avatar';
+import { WuiCommentTimeline } from './comment_timeline';
+import { WuiAvatar } from '../avatar';
 
-describe('EuiCommentTimeline', () => {
+describe('WuiCommentTimeline', () => {
   test('is rendered', () => {
-    const component = render(<EuiCommentTimeline {...requiredProps} />);
+    const component = render(<WuiCommentTimeline {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiCommentTimeline', () => {
   describe('props', () => {
     describe('type', () => {
       it('is rendered', () => {
-        const component = render(<EuiCommentTimeline type="update" />);
+        const component = render(<WuiCommentTimeline type="update" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -43,8 +43,8 @@ describe('EuiCommentTimeline', () => {
     describe('timelineIcon', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentTimeline
-            timelineIcon={<EuiAvatar size="l" name="Mario" />}
+          <WuiCommentTimeline
+            timelineIcon={<WuiAvatar size="l" name="Mario" />}
           />
         );
 

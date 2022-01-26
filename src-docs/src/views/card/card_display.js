@@ -1,48 +1,48 @@
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiSpacer,
+  WuiCard,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>
-        <EuiCard
+    <WuiSpacer size="s" />
+    <WuiFlexGroup gutterSize="l">
+      <WuiFlexItem>
+        <WuiCard
           layout="horizontal"
-          icon={<EuiIcon size="xl" type="logoLogging" />}
+          icon={<WuiIcon size="xl" type="logoLogging" />}
           onClick={() => {}}
           title="Logs"
           display="plain"
-          description="The Elastic Stack is the most popular open source logging platform."
+          description="Wazuh is the most popular open source security platform."
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
-          icon={<EuiIcon size="xl" type="logoLogging" />}
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiCard
+          icon={<WuiIcon size="xl" type="logoLogging" />}
           title="Logs"
           display="plain"
-          description="The Elastic Stack is the most popular open source logging platform."
+          description="Wazuh is the most popular open source security platform."
           onClick={() => {}}
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiCard
           layout="horizontal"
-          icon={<EuiIcon size="xl" type="logoLogging" />}
+          icon={<WuiIcon size="xl" type="logoLogging" />}
           title="Logs"
           display="plain"
-          description="The Elastic Stack is the most popular open source logging platform."
+          description="Wazuh is the most popular open source security platform."
           betaBadgeLabel="Beta"
           betaBadgeTooltipContent="This module is not GA. Please help us by reporting any bugs."
           onClick={() => {}}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

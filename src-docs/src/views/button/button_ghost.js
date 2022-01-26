@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonToggle,
-  EuiPanel,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiButtonToggle,
+  WuiPanel,
 } from '../../../../src/components';
 
 export default () => {
@@ -18,67 +18,67 @@ export default () => {
   };
 
   return (
-    <EuiPanel paddingSize="l" className="guideDemo__ghostBackground">
-      <EuiFlexGroup wrap gutterSize="s" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton
+    <WuiPanel paddingSize="l" className="guideDemo__ghostBackground">
+      <WuiFlexGroup wrap gutterSize="s" alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiButton
             color="ghost"
             onClick={() => window.alert('Button clicked')}>
             Ghost
-          </EuiButton>
-        </EuiFlexItem>
+          </WuiButton>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButton
+        <WuiFlexItem grow={false}>
+          <WuiButton
             fill
             color="ghost"
             size="s"
             iconType="check"
             onClick={() => window.alert('Button clicked')}>
             Filled
-          </EuiButton>
-        </EuiFlexItem>
+          </WuiButton>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButtonEmpty
+        <WuiFlexItem grow={false}>
+          <WuiButtonEmpty
             size="s"
             color="ghost"
             onClick={() => window.alert('Button clicked')}>
             small
-          </EuiButtonEmpty>
-        </EuiFlexItem>
+          </WuiButtonEmpty>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButtonIcon
+        <WuiFlexItem grow={false}>
+          <WuiButtonIcon
             size="s"
             color="ghost"
             iconType="user"
             onClick={() => window.alert('Button clicked')}
             aria-label="Your account"
           />
-        </EuiFlexItem>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButton color="ghost" isLoading fill size="s">
+        <WuiFlexItem grow={false}>
+          <WuiButton color="ghost" isLoading fill size="s">
             Loading&hellip;
-          </EuiButton>
-        </EuiFlexItem>
+          </WuiButton>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButton color="ghost" isLoading>
+        <WuiFlexItem grow={false}>
+          <WuiButton color="ghost" isLoading>
             Loading&hellip;
-          </EuiButton>
-        </EuiFlexItem>
+          </WuiButton>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButtonToggle
+        <WuiFlexItem grow={false}>
+          <WuiButtonToggle
             color="ghost"
             label="Toggle Me"
             fill={toggle0On}
             onChange={onToggle0Change}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiPanel>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiPanel>
   );
 };

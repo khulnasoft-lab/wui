@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiPageSideBarProps
+export interface WuiPageSideBarProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {}
 
-export const EuiPageSideBar: FunctionComponent<EuiPageSideBarProps> = ({
+export const WuiPageSideBar: FunctionComponent<WuiPageSideBarProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiPageSideBar', className);
+  const classes = classNames('wuiPageSideBar', className);
 
   return (
     <div className={classes} {...rest}>

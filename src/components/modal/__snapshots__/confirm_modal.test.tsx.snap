@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiConfirmModal renders EuiConfirmModal 1`] = `
+exports[`WuiConfirmModal renders WuiConfirmModal 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -17,42 +17,42 @@ Array [
   >
     <div
       aria-label="aria-label"
-      class="euiModal euiModal--maxWidth-default euiModal--confirmation testClass1 testClass2"
+      class="wuiModal wuiModal--maxWidth-default wuiModal--confirmation testClass1 testClass2"
       data-test-subj="test subject string"
       tabindex="0"
     >
       <button
         aria-label="Closes this modal window"
-        class="euiButtonIcon euiButtonIcon--text euiModal__closeIcon"
+        class="wuiButtonIcon wuiButtonIcon--text wuiModal__closeIcon"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
       <div
-        class="euiModal__flex"
+        class="wuiModal__flex"
       >
         <div
-          class="euiModalHeader"
+          class="wuiModalHeader"
         >
           <div
-            class="euiModalHeader__title"
+            class="wuiModalHeader__title"
             data-test-subj="confirmModalTitleText"
           >
             A confirmation modal
           </div>
         </div>
         <div
-          class="euiModalBody"
+          class="wuiModalBody"
         >
           <div
-            class="euiModalBody__overflow"
+            class="wuiModalBody__overflow"
           >
             <div
-              class="euiText euiText--medium"
+              class="wuiText wuiText--medium"
               data-test-subj="confirmModalBodyText"
             >
               <p>
@@ -62,33 +62,33 @@ Array [
           </div>
         </div>
         <div
-          class="euiModalFooter"
+          class="wuiModalFooter"
         >
           <button
-            class="euiButtonEmpty euiButtonEmpty--primary"
+            class="wuiButtonEmpty wuiButtonEmpty--primary"
             data-test-subj="confirmModalCancelButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="wuiButtonContent wuiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="wuiButtonEmpty__text"
               >
                 Cancel Button Text
               </span>
             </span>
           </button>
           <button
-            class="euiButton euiButton--primary euiButton--fill"
+            class="wuiButton wuiButton--primary wuiButton--fill"
             data-test-subj="confirmModalConfirmButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButton__content"
+              class="wuiButtonContent wuiButton__content"
             >
               <span
-                class="euiButton__text"
+                class="wuiButton__text"
               >
                 Confirm Button Text
               </span>
@@ -106,7 +106,7 @@ Array [
 ]
 `;
 
-exports[`EuiConfirmModal renders EuiConfirmModal without EuiModalBody, if empty 1`] = `
+exports[`WuiConfirmModal renders WuiConfirmModal without WuiModalBody, if empty 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -123,62 +123,62 @@ Array [
   >
     <div
       aria-label="aria-label"
-      class="euiModal euiModal--maxWidth-default euiModal--confirmation testClass1 testClass2"
+      class="wuiModal wuiModal--maxWidth-default wuiModal--confirmation testClass1 testClass2"
       data-test-subj="test subject string"
       tabindex="0"
     >
       <button
         aria-label="Closes this modal window"
-        class="euiButtonIcon euiButtonIcon--text euiModal__closeIcon"
+        class="wuiButtonIcon wuiButtonIcon--text wuiModal__closeIcon"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
       <div
-        class="euiModal__flex"
+        class="wuiModal__flex"
       >
         <div
-          class="euiModalHeader"
+          class="wuiModalHeader"
         >
           <div
-            class="euiModalHeader__title"
+            class="wuiModalHeader__title"
             data-test-subj="confirmModalTitleText"
           >
             A confirmation modal
           </div>
         </div>
         <div
-          class="euiModalFooter"
+          class="wuiModalFooter"
         >
           <button
-            class="euiButtonEmpty euiButtonEmpty--primary"
+            class="wuiButtonEmpty wuiButtonEmpty--primary"
             data-test-subj="confirmModalCancelButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="wuiButtonContent wuiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="wuiButtonEmpty__text"
               >
                 Cancel Button Text
               </span>
             </span>
           </button>
           <button
-            class="euiButton euiButton--primary euiButton--fill"
+            class="wuiButton wuiButton--primary wuiButton--fill"
             data-test-subj="confirmModalConfirmButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButton__content"
+              class="wuiButtonContent wuiButton__content"
             >
               <span
-                class="euiButton__text"
+                class="wuiButton__text"
               >
                 Confirm Button Text
               </span>

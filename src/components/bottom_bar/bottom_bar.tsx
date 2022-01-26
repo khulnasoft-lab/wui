@@ -19,10 +19,10 @@
 
 import classNames from 'classnames';
 import React, { Component } from 'react';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiScreenReaderOnly } from '../accessibility';
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiPortal } from '../portal';
+import { WuiI18n } from '../i18n';
+import { WuiPortal } from '../portal';
 
 type BottomBarPaddingSize = 'none' | 's' | 'm' | 'l';
 
@@ -31,9 +31,9 @@ export const paddingSizeToClassNameMap: {
   [value in BottomBarPaddingSize]: string | null;
 } = {
   none: null,
-  s: 'euiBottomBar--paddingSmall',
-  m: 'euiBottomBar--paddingMedium',
-  l: 'euiBottomBar--paddingLarge',
+  s: 'wuiBottomBar--paddingSmall',
+  m: 'wuiBottomBar--paddingMedium',
+  l: 'wuiBottomBar--paddingLarge',
 };
 
 interface Props extends CommonProps {
@@ -53,7 +53,7 @@ interface Props extends CommonProps {
   landmarkHeading?: string;
 }
 
-export class EuiBottomBar extends Component<Props> {
+export class WuiBottomBar extends Component<Props> {
   private bar: HTMLElement | null = null;
 
   componentDidMount() {
@@ -82,15 +82,15 @@ export class EuiBottomBar extends Component<Props> {
     } = this.props;
 
     const classes = classNames(
-      'euiBottomBar',
+      'wuiBottomBar',
       paddingSizeToClassNameMap[paddingSize],
       className
     );
 
     return (
-      <EuiPortal>
-        <EuiI18n
-          token="euiBottomBar.screenReaderHeading"
+      <WuiPortal>
+        <WuiI18n
+          token="wuiBottomBar.screenReaderHeading"
           default="Page level controls">
           {(screenReaderHeading: string) => (
             // Though it would be better to use aria-labelledby than aria-label and not repeat the same string twice
@@ -104,32 +104,32 @@ export class EuiBottomBar extends Component<Props> {
                 this.bar = node;
               }}
               {...rest}>
-              <EuiScreenReaderOnly>
+              <WuiScreenReaderOnly>
                 <h2>
                   {landmarkHeading ? landmarkHeading : screenReaderHeading}
                 </h2>
-              </EuiScreenReaderOnly>
+              </WuiScreenReaderOnly>
               {children}
             </section>
           )}
-        </EuiI18n>
-        <EuiScreenReaderOnly>
+        </WuiI18n>
+        <WuiScreenReaderOnly>
           <p aria-live="assertive">
             {landmarkHeading ? (
-              <EuiI18n
-                token="euiBottomBar.customScreenReaderAnnouncement"
+              <WuiI18n
+                token="wuiBottomBar.customScreenReaderAnnouncement"
                 default="There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
                 values={{ landmarkHeading }}
               />
             ) : (
-              <EuiI18n
-                token="euiBottomBar.screenReaderAnnouncement"
+              <WuiI18n
+                token="wuiBottomBar.screenReaderAnnouncement"
                 default="There is a new region landmark with page level controls at the end of the document."
               />
             )}
           </p>
-        </EuiScreenReaderOnly>
-      </EuiPortal>
+        </WuiScreenReaderOnly>
+      </WuiPortal>
     );
   }
 }

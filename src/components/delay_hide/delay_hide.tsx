@@ -26,20 +26,20 @@ function isComponentBecomingVisible(
   return prevHide === true && nextHide === false;
 }
 
-export interface EuiDelayHideProps {
+export interface WuiDelayHideProps {
   hide: boolean;
   minimumDuration: number;
   render: () => ReactNode;
 }
 
-interface EuiDelayHideState {
+interface WuiDelayHideState {
   hide: boolean;
   countdownExpired?: boolean;
 }
 
-export class EuiDelayHide extends Component<
-  EuiDelayHideProps,
-  EuiDelayHideState
+export class WuiDelayHide extends Component<
+  WuiDelayHideProps,
+  WuiDelayHideState
 > {
   static defaultProps = {
     hide: false,
@@ -47,8 +47,8 @@ export class EuiDelayHide extends Component<
   };
 
   static getDerivedStateFromProps(
-    nextProps: EuiDelayHideProps,
-    prevState: EuiDelayHideState
+    nextProps: WuiDelayHideProps,
+    prevState: WuiDelayHideState
   ) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevState.hide,
@@ -74,7 +74,7 @@ export class EuiDelayHide extends Component<
     }
   }
 
-  componentDidUpdate(prevProps: EuiDelayHideProps) {
+  componentDidUpdate(prevProps: WuiDelayHideProps) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevProps.hide,
       this.props.hide

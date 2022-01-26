@@ -18,35 +18,35 @@
  */
 
 import React, { FunctionComponent, ReactChild } from 'react';
-import { EuiI18n } from '../i18n';
-import { EuiDraggable } from '../drag_and_drop';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiButtonIcon, EuiButtonGroup } from '../button';
-import { EuiIcon } from '../icon';
-import { EuiText } from '../text';
+import { WuiI18n } from '../i18n';
+import { WuiDraggable } from '../drag_and_drop';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
+import { WuiButtonIcon, WuiButtonGroup } from '../button';
+import { WuiIcon } from '../icon';
+import { WuiText } from '../text';
 import {
   getDetailsForSchema,
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  WuiDataGridSchema,
+  WuiDataGridSchemaDetector,
 } from './data_grid_schema';
-import { EuiDataGridSorting } from './data_grid_types';
-import { EuiToken } from '../token';
+import { WuiDataGridSorting } from './data_grid_types';
+import { WuiToken } from '../token';
 
-export interface EuiDataGridColumnSortingDraggableProps {
+export interface WuiDataGridColumnSortingDraggableProps {
   id: string;
   direction: string;
   index: number;
-  sorting: EuiDataGridSorting;
-  schema: EuiDataGridSchema;
-  schemaDetectors: EuiDataGridSchemaDetector[];
+  sorting: WuiDataGridSorting;
+  schema: WuiDataGridSchema;
+  schemaDetectors: WuiDataGridSchemaDetector[];
   /**
    * Value to be shown in column sorting popover.
    */
   display: string;
 }
 
-export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridColumnSortingDraggableProps> = ({
+export const WuiDataGridColumnSortingDraggable: FunctionComponent<WuiDataGridColumnSortingDraggableProps> = ({
   id,
   display,
   direction,
@@ -65,15 +65,15 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
     schemaDetails != null ? (
       schemaDetails.sortTextAsc
     ) : (
-      <EuiI18n token="euiColumnSortingDraggable.defaultSortAsc" default="A-Z" />
+      <WuiI18n token="wuiColumnSortingDraggable.defaultSortAsc" default="A-Z" />
     );
 
   const textSortDesc =
     schemaDetails != null ? (
       schemaDetails.sortTextDesc
     ) : (
-      <EuiI18n
-        token="euiColumnSortingDraggable.defaultSortDesc"
+      <WuiI18n
+        token="wuiColumnSortingDraggable.defaultSortDesc"
         default="Z-A"
       />
     );
@@ -83,49 +83,49 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
       id: `${id}Asc`,
       value: 'asc',
       label: textSortAsc,
-      'data-test-subj': `euiDataGridColumnSorting-sortColumn-${id}-asc`,
+      'data-test-subj': `wuiDataGridColumnSorting-sortColumn-${id}-asc`,
     },
     {
       id: `${id}Desc`,
       value: 'desc',
       label: textSortDesc,
-      'data-test-subj': `euiDataGridColumnSorting-sortColumn-${id}-desc`,
+      'data-test-subj': `wuiDataGridColumnSorting-sortColumn-${id}-desc`,
     },
   ];
 
   return (
-    <EuiDraggable draggableId={id} index={index} {...rest}>
+    <WuiDraggable draggableId={id} index={index} {...rest}>
       {(provided, state) => (
         <div
-          className={`euiDataGridColumnSorting__item ${state.isDragging &&
-            'euiDataGridColumnSorting__item-isDragging'}`}>
-          <EuiScreenReaderOnly>
+          className={`wuiDataGridColumnSorting__item ${state.isDragging &&
+            'wuiDataGridColumnSorting__item-isDragging'}`}>
+          <WuiScreenReaderOnly>
             <p>
-              <EuiI18n
-                token="euiColumnSortingDraggable.activeSortLabel"
+              <WuiI18n
+                token="wuiColumnSortingDraggable.activeSortLabel"
                 default="is sorting this data grid">
                 {(activeSortLabel: ReactChild) => (
                   <span>
                     {display} {activeSortLabel}
                   </span>
                 )}
-              </EuiI18n>
+              </WuiI18n>
             </p>
-          </EuiScreenReaderOnly>
-          <EuiFlexGroup
+          </WuiScreenReaderOnly>
+          <WuiFlexGroup
             gutterSize="xs"
             alignItems="center"
             responsive={false}
-            data-test-subj={`euiDataGridColumnSorting-sortColumn-${id}`}>
-            <EuiFlexItem grow={false}>
-              <EuiI18n
-                token="euiColumnSortingDraggable.removeSortLabel"
+            data-test-subj={`wuiDataGridColumnSorting-sortColumn-${id}`}>
+            <WuiFlexItem grow={false}>
+              <WuiI18n
+                token="wuiColumnSortingDraggable.removeSortLabel"
                 default="Remove from data grid sort:">
                 {(removeSortLabel: ReactChild) => (
-                  <EuiButtonIcon
+                  <WuiButtonIcon
                     color="text"
                     size="s"
-                    className="euiDataGridColumnSorting__button"
+                    className="wuiDataGridColumnSorting__button"
                     aria-label={`${removeSortLabel} ${id}`}
                     iconType="cross"
                     onClick={() => {
@@ -138,33 +138,33 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
                     }}
                   />
                 )}
-              </EuiI18n>
-            </EuiFlexItem>
+              </WuiI18n>
+            </WuiFlexItem>
 
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 color={schemaDetails != null ? schemaDetails.color : undefined}
                 iconType={
                   schemaDetails != null ? schemaDetails.icon : 'tokenString'
                 }
               />
-            </EuiFlexItem>
-            <EuiFlexItem aria-hidden>
-              <EuiText size="xs">
+            </WuiFlexItem>
+            <WuiFlexItem aria-hidden>
+              <WuiText size="xs">
                 <p>{display}</p>
-              </EuiText>
-            </EuiFlexItem>
-            <EuiFlexItem className="euiDataGridColumnSorting__orderButtons">
-              <EuiI18n
-                token="euiColumnSortingDraggable.toggleLegend"
+              </WuiText>
+            </WuiFlexItem>
+            <WuiFlexItem className="wuiDataGridColumnSorting__orderButtons">
+              <WuiI18n
+                token="wuiColumnSortingDraggable.toggleLegend"
                 default="Select sorting method for field: ">
                 {(toggleLegend: ReactChild) => (
-                  <EuiButtonGroup
+                  <WuiButtonGroup
                     legend={`${toggleLegend} ${id}`}
                     options={toggleOptions}
                     data-test-subj={`-${direction}`}
                     buttonSize="compressed"
-                    className="euiDataGridColumnSorting__order"
+                    className="wuiDataGridColumnSorting__order"
                     idSelected={direction === 'asc' ? `${id}Asc` : `${id}Desc`}
                     onChange={(_, direction) => {
                       const nextColumns = [...sorting.columns];
@@ -179,16 +179,16 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
                     }}
                   />
                 )}
-              </EuiI18n>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false} {...provided.dragHandleProps}>
+              </WuiI18n>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false} {...provided.dragHandleProps}>
               <div {...provided.dragHandleProps}>
-                <EuiIcon type="grab" color="subdued" />
+                <WuiIcon type="grab" color="subdued" />
               </div>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         </div>
       )}
-    </EuiDraggable>
+    </WuiDraggable>
   );
 };

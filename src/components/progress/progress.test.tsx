@@ -21,23 +21,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiProgress } from './progress';
+import { WuiProgress } from './progress';
 
-describe('EuiProgress', () => {
+describe('WuiProgress', () => {
   test('is rendered', () => {
-    const component = render(<EuiProgress {...requiredProps} />);
+    const component = render(<WuiProgress {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('has max', () => {
-    const component = render(<EuiProgress max={100} {...requiredProps} />);
+    const component = render(<WuiProgress max={100} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('has value', () => {
-    const component = render(<EuiProgress value={100} {...requiredProps} />);
+    const component = render(<WuiProgress value={100} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -45,7 +45,7 @@ describe('EuiProgress', () => {
   test('is determinate', () => {
     const val = 50;
     const component = render(
-      <EuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
+      <WuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -54,7 +54,7 @@ describe('EuiProgress', () => {
   test('is indeterminate', () => {
     const val = undefined;
     const component = render(
-      <EuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
+      <WuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -62,7 +62,7 @@ describe('EuiProgress', () => {
 
   test('has valueText and label', () => {
     const component = render(
-      <EuiProgress
+      <WuiProgress
         valueText="150"
         label="Label"
         value={50}
@@ -76,7 +76,7 @@ describe('EuiProgress', () => {
 
   test('valueText is true', () => {
     const component = render(
-      <EuiProgress valueText={true} value={50} max={100} {...requiredProps} />
+      <WuiProgress valueText={true} value={50} max={100} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('EuiProgress', () => {
 
   test('has labelProps', () => {
     const component = render(
-      <EuiProgress
+      <WuiProgress
         max={100}
         value={50}
         labelProps={{ title: 'Custom title' }}

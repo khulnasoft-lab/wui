@@ -24,8 +24,8 @@ import { resetServerContext } from 'react-beautiful-dnd';
 import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDragDropContext, EuiDroppable } from './';
-import { EuiDroppableContext } from './droppable';
+import { WuiDragDropContext, WuiDroppable } from './';
+import { WuiDroppableContext } from './droppable';
 
 function snapshotDragDropContext(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -35,7 +35,7 @@ function snapshotDragDropContext(component: ReactWrapper) {
   return container.firstChild;
 }
 
-describe('EuiDroppable', () => {
+describe('WuiDroppable', () => {
   afterEach(() => {
     resetServerContext();
   });
@@ -50,9 +50,9 @@ describe('EuiDroppable', () => {
       };
     });
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">{() => <div />}</EuiDroppable>
-      </EuiDragDropContext>
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <WuiDroppable droppableId="testDroppable">{() => <div />}</WuiDroppable>
+      </WuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -68,11 +68,11 @@ describe('EuiDroppable', () => {
       };
     });
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <WuiDroppable droppableId="testDroppable">
           <div />
-        </EuiDroppable>
-      </EuiDragDropContext>
+        </WuiDroppable>
+      </WuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -89,13 +89,13 @@ describe('EuiDroppable', () => {
     });
 
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <WuiDroppable droppableId="testDroppable">
           <div />
           <div />
           <div />
-        </EuiDroppable>
-      </EuiDragDropContext>
+        </WuiDroppable>
+      </WuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -114,17 +114,17 @@ describe('EuiDroppable', () => {
       test('sets `cloneItems` on proprietary context', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDroppable droppableId="testDroppable" cloneDraggables={true}>
-              <EuiDroppableContext.Consumer>
+          <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <WuiDroppable droppableId="testDroppable" cloneDraggables={true}>
+              <WuiDroppableContext.Consumer>
                 {({ cloneItems }) => (
                   <div data-test-subj="child">
                     {cloneItems ? 'true' : 'false'}
                   </div>
                 )}
-              </EuiDroppableContext.Consumer>
-            </EuiDroppable>
-          </EuiDragDropContext>
+              </WuiDroppableContext.Consumer>
+            </WuiDroppable>
+          </WuiDragDropContext>
         );
 
         expect(findTestSubject(component, 'child').text()).toBe('true');
@@ -133,20 +133,20 @@ describe('EuiDroppable', () => {
       test('sets `isDropDisabled`', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDroppable droppableId="testDroppable" cloneDraggables={true}>
-              <EuiDroppableContext.Consumer>
+          <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <WuiDroppable droppableId="testDroppable" cloneDraggables={true}>
+              <WuiDroppableContext.Consumer>
                 {({ cloneItems }) => (
                   <div data-test-subj="child">
                     {cloneItems ? 'true' : 'false'}
                   </div>
                 )}
-              </EuiDroppableContext.Consumer>
-            </EuiDroppable>
-          </EuiDragDropContext>
+              </WuiDroppableContext.Consumer>
+            </WuiDroppable>
+          </WuiDragDropContext>
         );
 
-        expect(component.find('.euiDroppable--isDisabled').length).toBe(1);
+        expect(component.find('.wuiDroppable--isDisabled').length).toBe(1);
       });
     });
   });

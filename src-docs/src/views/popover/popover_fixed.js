@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiButton, EuiPopover } from '../../../../src/components';
+import { WuiButton, WuiPopover } from '../../../../src/components';
 
 export default () => {
   const [isExampleShown, setIsExampleShown] = useState(false);
@@ -13,20 +13,20 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton
+    <WuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}
       style={{ background: 'white' }}>
       Show fixed popover
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
     <React.Fragment>
-      <EuiButton onClick={toggleExample}>Toggle Example</EuiButton>
+      <WuiButton onClick={toggleExample}>Toggle Example</WuiButton>
       {isExampleShown && (
-        <EuiPopover
+        <WuiPopover
           ownFocus
           button={button}
           isOpen={isPopoverOpen}
@@ -34,7 +34,7 @@ export default () => {
           style={{ position: 'fixed', bottom: 50, right: 50, zIndex: 10 }}
           repositionOnScroll={true}>
           <div>This popover scrolls with the button element!</div>
-        </EuiPopover>
+        </WuiPopover>
       )}
     </React.Fragment>
   );

@@ -4,15 +4,15 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiHealth } from '../../../../src/components';
+import { WuiHealth } from '../../../../src/components';
 import healthConfig from './playground';
 
 import Health from './health';
 const healthSource = require('!!raw-loader!./health');
 const healthHtml = renderToHtml(Health);
 const healthSnippet = [
-  '<EuiHealth color="success">Healthy</EuiHealth>',
-  '<EuiHealth color="#33CC33">Custom color as hex</EuiHealth>',
+  '<WuiHealth color="success">Healthy</WuiHealth>',
+  '<WuiHealth color="#33CC33">Custom color as hex</WuiHealth>',
 ];
 
 export const HealthExample = {
@@ -31,7 +31,7 @@ export const HealthExample = {
       ],
       text: (
         <p>
-          The <strong>EuiHealth</strong> component should be used when showing
+          The <strong>WuiHealth</strong> component should be used when showing
           comparitive health of listed objects (like servers, HTTP response
           status codes(as per convenience), nodes, indexes..etc). Because icons
           are vague and bulky and color alone does not work, color plus text
@@ -40,7 +40,7 @@ export const HealthExample = {
         </p>
       ),
       snippet: healthSnippet,
-      props: { EuiHealth },
+      props: { WuiHealth },
       demo: <Health />,
     },
   ],

@@ -21,16 +21,16 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSaturation } from './saturation';
+import { WuiSaturation } from './saturation';
 
 const onChange = () => {
   /* empty */
 };
 
-describe('EuiHue', () => {
+describe('WuiHue', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSaturation onChange={onChange} {...requiredProps} />
+      <WuiSaturation onChange={onChange} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('EuiHue', () => {
 
   test('accepts a color', () => {
     const component = render(
-      <EuiSaturation
+      <WuiSaturation
         color={[180, 1, 0.5]}
         onChange={onChange}
         {...requiredProps}

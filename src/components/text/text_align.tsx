@@ -22,9 +22,9 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 export const alignmentToClassNameMap = {
-  left: 'euiTextAlign--left',
-  right: 'euiTextAlign--right',
-  center: 'euiTextAlign--center',
+  left: 'wuiTextAlign--left',
+  right: 'wuiTextAlign--right',
+  center: 'wuiTextAlign--center',
 };
 
 export type TextAlignment = keyof typeof alignmentToClassNameMap;
@@ -36,14 +36,14 @@ type Props = CommonProps &
     textAlign?: TextAlignment;
   };
 
-export const EuiTextAlign: FunctionComponent<Props> = ({
+export const WuiTextAlign: FunctionComponent<Props> = ({
   children,
   className,
   textAlign = 'left',
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextAlign',
+    'wuiTextAlign',
     alignmentToClassNameMap[textAlign],
     className
   );

@@ -17,10 +17,9 @@
  * under the License.
  */
 
-export { EuiLoadingKibana } from './loading_kibana';
-export { EuiLoadingElastic } from './loading_elastic';
-export { EuiLoadingChart } from './loading_chart';
-export { EuiLoadingContent } from './loading_content';
-export { EuiLoadingSpinner } from './loading_spinner';
-export { EuiLoadingRunningLines } from './loading_running_lines';
-export { EuiLoadingDots } from './loading_dots';
+export { WuiLoadingWazuh } from './loading_wazuh';
+export { WuiLoadingChart } from './loading_chart';
+export { WuiLoadingContent } from './loading_content';
+export { WuiLoadingSpinner } from './loading_spinner';
+export { WuiLoadingRunningLines } from './loading_running_lines';
+export { WuiLoadingDots } from './loading_dots';

@@ -10,7 +10,7 @@
 
 // Mixes a provided color with black.
 @function shade($color, $percent) {
-  @return mix($euiColorInk, $color, $percent);
+  @return mix($wuiColorInk, $color, $percent);
 }
 
 // For theming. Checks the text color and tells us whether it's light or dark.
@@ -89,7 +89,7 @@
 
 // ex: makeContrastColor($lightPink, #FFF) would continually shade the pink until
 //     it had higher than 4.5 contrast on a white background.
-@function makeHighContrastColor($foreground, $background: $euiPageBackgroundColor, $ratio: 4.5) {
+@function makeHighContrastColor($foreground, $background: $wuiPageBackgroundColor, $ratio: 4.5) {
   $contrast: contrastRatio($foreground, $background);
 
   // Determine the lightness factor of the background color first to
@@ -125,6 +125,6 @@
 // Therefore, we can reuse the `makeHighContrastColor()` function but only attain a min contrast of 3.0.
 // It is still recommended to use `makeHighContrastColor()` to attain a 4.5:1 ratio if the graphic is small or thinly stroked.
 // https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Informational_Graphic_Contrast_(Minimum)
-@function makeGraphicContrastColor($color, $background: $euiPageBackgroundColor) {
+@function makeGraphicContrastColor($color, $background: $wuiPageBackgroundColor) {
   @return makeHighContrastColor($color, $background, 3);
 }

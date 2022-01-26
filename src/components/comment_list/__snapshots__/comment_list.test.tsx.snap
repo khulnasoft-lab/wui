@@ -1,45 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCommentList is rendered 1`] = `
+exports[`WuiCommentList is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiCommentList testClass1 testClass2"
+  class="wuiCommentList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiComment"
+    class="wuiComment"
   >
     <div
-      class="euiCommentTimeline"
+      class="wuiCommentTimeline"
     >
       <div
-        class="euiCommentTimeline__content"
+        class="wuiCommentTimeline__content"
       >
         <div
-          class="euiCommentTimeline__icon--default euiCommentTimeline__icon--regular"
+          class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--regular"
         >
           <div
-            data-euiicon-type="user"
+            data-wuiicon-type="user"
           />
         </div>
       </div>
     </div>
     <figure
-      class="euiCommentEvent euiCommentEvent--regular"
+      class="wuiCommentEvent wuiCommentEvent--regular"
     >
       <figcaption
-        class="euiCommentEvent__header"
+        class="wuiCommentEvent__header"
       >
         <div
-          class="euiCommentEvent__headerData"
+          class="wuiCommentEvent__headerData"
         >
           <div
-            class="euiCommentEvent__headerUsername"
+            class="wuiCommentEvent__headerUsername"
           >
             janed
           </div>
           <div
-            class="euiCommentEvent__headerEvent"
+            class="wuiCommentEvent__headerEvent"
           />
         </div>
       </figcaption>

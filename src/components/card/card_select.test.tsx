@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiCardSelect } from './card_select';
+import { WuiCardSelect } from './card_select';
 
-describe('EuiCardSelect', () => {
+describe('WuiCardSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCardSelect onClick={() => {}} {...requiredProps} />
+      <WuiCardSelect onClick={() => {}} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,20 +34,20 @@ describe('EuiCardSelect', () => {
 
   describe('props', () => {
     test('isSelected', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isSelected />);
+      const component = render(<WuiCardSelect onClick={() => {}} isSelected />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isDisabled', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isDisabled />);
+      const component = render(<WuiCardSelect onClick={() => {}} isDisabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can override color', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} color="danger" />
+        <WuiCardSelect onClick={() => {}} color="danger" />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('EuiCardSelect', () => {
 
     test('can override text', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} children="Custom text" />
+        <WuiCardSelect onClick={() => {}} children="Custom text" />
       );
 
       expect(component).toMatchSnapshot();

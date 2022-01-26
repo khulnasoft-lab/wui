@@ -1,56 +1,56 @@
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiFieldText,
-  EuiI18n,
-  EuiFormRow,
-  EuiTitle,
-  useEuiI18n,
-  EuiSpacer,
+  WuiCode,
+  WuiFieldText,
+  WuiI18n,
+  WuiFormRow,
+  WuiTitle,
+  useWuiI18n,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
   return (
     <>
-      <EuiTitle size="xs">
-        <h3>useEuiI18n used in an attribute</h3>
-      </EuiTitle>
+      <WuiTitle size="xs">
+        <h3>useWuiI18n used in an attribute</h3>
+      </WuiTitle>
       <p>
-        <EuiFormRow
+        <WuiFormRow
           label={
             <>
               This text field&apos;s placeholder reads from{' '}
-              <EuiCode>euiI18nAttribute.placeholderName</EuiCode>
+              <WuiCode>wuiI18nAttribute.placeholderName</WuiCode>
             </>
           }>
-          <EuiFieldText
-            placeholder={useEuiI18n(
-              'euiI18nAttribute.placeholderName',
+          <WuiFieldText
+            placeholder={useWuiI18n(
+              'wuiI18nAttribute.placeholderName',
               'John Doe'
             )}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       </p>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>EuiI18n used as a render prop</h3>
-      </EuiTitle>
-      <EuiI18n token="euiI18nAttribute.placeholderName" default="John Doe">
+      <WuiTitle size="xs">
+        <h3>WuiI18n used as a render prop</h3>
+      </WuiTitle>
+      <WuiI18n token="wuiI18nAttribute.placeholderName" default="John Doe">
         {placeholderName => (
-          <EuiFormRow
+          <WuiFormRow
             label={
               <>
                 This text field&apos;s placeholder reads from{' '}
-                <EuiCode>euiI18nAttribute.placeholderName</EuiCode>
+                <WuiCode>wuiI18nAttribute.placeholderName</WuiCode>
               </>
             }>
-            <EuiFieldText placeholder={placeholderName} />
-          </EuiFormRow>
+            <WuiFieldText placeholder={placeholderName} />
+          </WuiFormRow>
         )}
-      </EuiI18n>
+      </WuiI18n>
     </>
   );
 };

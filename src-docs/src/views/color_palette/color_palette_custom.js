@@ -1,20 +1,20 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiRange,
-  EuiFormRow,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiRange,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
-import { euiPaletteColorBlind, colorPalette } from '../../../../src/services';
+import { wuiPaletteColorBlind, colorPalette } from '../../../../src/services';
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 const customPalettes = [
-  [euiPaletteColorBlind()[3]],
-  [euiPaletteColorBlind()[3], euiPaletteColorBlind()[4]],
-  [euiPaletteColorBlind()[3], euiPaletteColorBlind()[4]],
+  [wuiPaletteColorBlind()[3]],
+  [wuiPaletteColorBlind()[3], wuiPaletteColorBlind()[4]],
+  [wuiPaletteColorBlind()[3], wuiPaletteColorBlind()[4]],
 ];
 
 export default () => {
@@ -26,8 +26,8 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFormRow label="Number of steps" display="columnCompressed">
-        <EuiRange
+      <WuiFormRow label="Number of steps" display="columnCompressed">
+        <WuiRange
           value={length}
           onChange={onLengthChange}
           min={2}
@@ -35,23 +35,23 @@ export default () => {
           compressed
           showValue
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
       {customPalettes.map((palette, i) => (
-        <EuiFlexGroup alignItems="center" key={i}>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup
+        <WuiFlexGroup alignItems="center" key={i}>
+          <WuiFlexItem grow={false}>
+            <WuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               responsive={false}>
               {colorPalette(palette, Number(length), i > 1).map(hexCode => (
                 <ColorPaletteFlexItem hexCode={hexCode} key={hexCode} />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </WuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem>
             <ColorPaletteCopyCode
               textToCopy={`colorPalette([], ${length}${
                 i > 1 ? ', true' : ''
@@ -60,8 +60,8 @@ export default () => {
                 i > 1 ? ', true' : ''
               });`}
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
       ))}
     </Fragment>
   );

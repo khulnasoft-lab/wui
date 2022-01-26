@@ -18,7 +18,7 @@
  */
 
 import React, { Component } from 'react';
-import { EuiFilterButton } from '../../filter_group';
+import { WuiFilterButton } from '../../filter_group';
 import { Query } from '../query';
 import { OperatorType } from '../query/ast';
 
@@ -85,7 +85,7 @@ export class FieldValueToggleGroupFilter extends Component<
       const key = `field_value_toggle_filter_item_${index}`;
       const isLastItem = index === config.items.length - 1;
       return (
-        <EuiFilterButton
+        <WuiFilterButton
           key={key}
           onClick={onClick}
           hasActiveFilters={active}
@@ -93,7 +93,7 @@ export class FieldValueToggleGroupFilter extends Component<
           aria-pressed={!!active}
           withNext={!isLastItem}>
           {name}
-        </EuiFilterButton>
+        </WuiFilterButton>
       );
     });
   }

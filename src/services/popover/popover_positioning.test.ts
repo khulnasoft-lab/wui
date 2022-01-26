@@ -23,7 +23,7 @@ import {
   getElementBoundingBox,
   getPopoverScreenCoordinates,
   getVisibleFit,
-  EuiClientRect,
+  WuiClientRect,
   POSITIONS,
 } from './popover_positioning';
 
@@ -32,7 +32,7 @@ function makeBB(
   right: number,
   bottom: number,
   left: number
-): EuiClientRect {
+): WuiClientRect {
   return {
     top,
     right,

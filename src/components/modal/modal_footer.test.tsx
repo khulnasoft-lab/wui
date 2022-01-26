@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiModalFooter } from './modal_footer';
+import { WuiModalFooter } from './modal_footer';
 
-test('renders EuiModalFooter', () => {
+test('renders WuiModalFooter', () => {
   const component = (
-    <EuiModalFooter {...requiredProps}>children</EuiModalFooter>
+    <WuiModalFooter {...requiredProps}>children</WuiModalFooter>
   );
   expect(render(component)).toMatchSnapshot();
 });

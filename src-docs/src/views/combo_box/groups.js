@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { WuiComboBox } from '../../../../src/components';
 
 const colorGroup = {
   label: 'Colors',
@@ -97,7 +97,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <WuiComboBox
       placeholder="These options are grouped"
       options={allOptions}
       selectedOptions={selectedOptions}

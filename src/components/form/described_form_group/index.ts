@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiDescribedFormGroup,
-  EuiDescribedFormGroupProps,
+  WuiDescribedFormGroup,
+  WuiDescribedFormGroupProps,
 } from './described_form_group';

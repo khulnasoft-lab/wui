@@ -9,8 +9,8 @@
     margin-bottom: $euiSizeS;
     flex-grow: 1; /* 1 */
 
-    &:not(.euiPanel) {
-      padding-bottom: $euiSize; // only change the bottom padding if it's not an euiPanel
+    &:not(.wuiPanel) {
+      padding-bottom: $euiSize; // only change the bottom padding if it's not an wuiPanel
     }
   }
 
@@ -21,35 +21,35 @@
 
   .guideRule__caption {
     @include euiFontSizeS;
-    max-height: $euiFontSizeS * $euiLineHeight; /* 1 */
+    max-height: $euiFontSizeS * $wuiLineHeight; /* 1 */
     overflow-y: visible; /* 1 */
   }
 
   // Coloring
   &.guideRule__example--do {
     .guideRule__example__panel {
-      border-bottom-color: $euiColorSuccess;
+      border-bottom-color: $wuiColorSuccess;
     }
 
     .guideRule__caption {
-      color: $euiColorSuccessText;
+      color: $wuiColorSuccessText;
     }
   }
 
   &.guideRule__example--dont {
     .guideRule__example__panel {
-      border-bottom-color: $euiColorDanger;
+      border-bottom-color: $wuiColorDanger;
     }
 
     .guideRule__caption {
-      color: $euiColorDanger;
+      color: $wuiColorDanger;
     }
   }
 
   &.guideRule__example--frame {
     .guideRule__example__panel {
       padding: $euiSizeL;
-      background-color: $euiColorLightestShade;
+      background-color: $wuiColorLightestShade;
       display: flex;
       align-items: center;
       justify-content: space-around;

@@ -18,10 +18,10 @@
  */
 
 import React, { FunctionComponent, useContext } from 'react';
-import { EuiCheckbox } from '../../form/checkbox';
-import { EuiMarkdownContext } from '../markdown_context';
+import { WuiCheckbox } from '../../form/checkbox';
+import { WuiMarkdownContext } from '../markdown_context';
 import { htmlIdGenerator } from '../../../services/accessibility';
-import { EuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
+import { WuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
 import { Plugin } from 'unified';
 
 interface CheckboxNodeDetails {
@@ -77,11 +77,11 @@ const CheckboxParser: Plugin = function CheckboxParser() {
 };
 
 const CheckboxMarkdownRenderer: FunctionComponent<CheckboxNodeDetails & {
-  position: EuiMarkdownAstNodePosition;
+  position: WuiMarkdownAstNodePosition;
 }> = ({ position, lead, label, isChecked, children }) => {
-  const { replaceNode } = useContext(EuiMarkdownContext);
+  const { replaceNode } = useContext(WuiMarkdownContext);
   return (
-    <EuiCheckbox
+    <WuiCheckbox
       id={htmlIdGenerator()()}
       checked={isChecked}
       label={children}

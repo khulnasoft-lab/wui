@@ -21,15 +21,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiStep } from './step';
+import { WuiStep } from './step';
 import { STATUS } from './step_number';
 
-describe('EuiStep', () => {
+describe('WuiStep', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStep {...requiredProps} title={'First step'}>
+      <WuiStep {...requiredProps} title={'First step'}>
         <p>Do this</p>
-      </EuiStep>
+      </WuiStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +38,9 @@ describe('EuiStep', () => {
   describe('props', () => {
     test('headingElement', () => {
       const component = render(
-        <EuiStep headingElement={'h3'} title={'First step'}>
+        <WuiStep headingElement={'h3'} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -48,9 +48,9 @@ describe('EuiStep', () => {
 
     test('step', () => {
       const component = render(
-        <EuiStep step={5} title={'First step'}>
+        <WuiStep step={5} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe('EuiStep', () => {
 
     test('titleSize', () => {
       const component = render(
-        <EuiStep titleSize="xs" title={'First step'}>
+        <WuiStep titleSize="xs" title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -70,9 +70,9 @@ describe('EuiStep', () => {
       STATUS.forEach(status => {
         test(`${status} is rendered`, () => {
           const component = render(
-            <EuiStep status={status} title={'First step'}>
+            <WuiStep status={status} title={'First step'}>
               <p>Do this</p>
-            </EuiStep>
+            </WuiStep>
           );
 
           expect(component).toMatchSnapshot();

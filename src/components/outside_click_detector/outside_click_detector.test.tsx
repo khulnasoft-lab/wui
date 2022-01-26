@@ -20,14 +20,14 @@
 import React, { EventHandler, MouseEvent as ReactMouseEvent } from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiOutsideClickDetector, EuiEvent } from './outside_click_detector';
+import { WuiOutsideClickDetector, WuiEvent } from './outside_click_detector';
 
-describe('EuiOutsideClickDetector', () => {
+describe('WuiOutsideClickDetector', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiOutsideClickDetector onOutsideClick={() => {}}>
+      <WuiOutsideClickDetector onOutsideClick={() => {}}>
         <div />
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
     );
 
     expect(component).toMatchSnapshot();
@@ -43,18 +43,18 @@ describe('EuiOutsideClickDetector', () => {
       // but that's where the click detector listener is,
       // pass the top-level mounted component's click event on to document
       const triggerDocumentMouseDown: EventHandler<any> = (
-        e: ReactMouseEvent<any, EuiEvent>
+        e: ReactMouseEvent<any, WuiEvent>
       ) => {
-        const event = new Event('mousedown') as EuiEvent;
-        event.euiGeneratedBy = e.nativeEvent.euiGeneratedBy;
+        const event = new Event('mousedown') as WuiEvent;
+        event.wuiGeneratedBy = e.nativeEvent.wuiGeneratedBy;
         document.dispatchEvent(event);
       };
 
       const triggerDocumentMouseUp: EventHandler<any> = (
-        e: ReactMouseEvent<any, EuiEvent>
+        e: ReactMouseEvent<any, WuiEvent>
       ) => {
-        const event = new Event('mouseup') as EuiEvent;
-        event.euiGeneratedBy = e.nativeEvent.euiGeneratedBy;
+        const event = new Event('mouseup') as WuiEvent;
+        event.wuiGeneratedBy = e.nativeEvent.wuiGeneratedBy;
         document.dispatchEvent(event);
       };
 
@@ -63,18 +63,18 @@ describe('EuiOutsideClickDetector', () => {
           onMouseDown={triggerDocumentMouseDown}
           onMouseUp={triggerDocumentMouseUp}>
           <div>
-            <EuiOutsideClickDetector onOutsideClick={parentDetector}>
+            <WuiOutsideClickDetector onOutsideClick={parentDetector}>
               <div>
-                <EuiOutsideClickDetector onOutsideClick={childDetector}>
+                <WuiOutsideClickDetector onOutsideClick={childDetector}>
                   <div data-test-subj="target" />
-                </EuiOutsideClickDetector>
+                </WuiOutsideClickDetector>
               </div>
-            </EuiOutsideClickDetector>
+            </WuiOutsideClickDetector>
           </div>
 
-          <EuiOutsideClickDetector onOutsideClick={unrelatedDetector}>
+          <WuiOutsideClickDetector onOutsideClick={unrelatedDetector}>
             <div />
-          </EuiOutsideClickDetector>
+          </WuiOutsideClickDetector>
         </div>
       );
 

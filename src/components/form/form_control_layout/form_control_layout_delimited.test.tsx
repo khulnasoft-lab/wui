@@ -21,13 +21,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormControlLayoutDelimited } from './form_control_layout_delimited';
-import { EuiIcon } from '../../icon';
+import { WuiFormControlLayoutDelimited } from './form_control_layout_delimited';
+import { WuiIcon } from '../../icon';
 
-describe('EuiFormControlLayoutDelimited', () => {
+describe('WuiFormControlLayoutDelimited', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormControlLayoutDelimited
+      <WuiFormControlLayoutDelimited
         startControl={<span>start</span>}
         endControl={<span>end</span>}
         {...requiredProps}
@@ -42,7 +42,7 @@ describe('EuiFormControlLayoutDelimited', () => {
       describe('is rendered', () => {
         test('as a string', () => {
           const component = render(
-            <EuiFormControlLayoutDelimited
+            <WuiFormControlLayoutDelimited
               startControl={<span>start</span>}
               endControl={<span>end</span>}
               delimiter="+"
@@ -53,10 +53,10 @@ describe('EuiFormControlLayoutDelimited', () => {
         });
 
         test('as a node', () => {
-          const icon = <EuiIcon type="alert" />;
+          const icon = <WuiIcon type="alert" />;
 
           const component = render(
-            <EuiFormControlLayoutDelimited
+            <WuiFormControlLayoutDelimited
               startControl={<span>start</span>}
               endControl={<span>end</span>}
               delimiter={icon}

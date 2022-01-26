@@ -18,7 +18,7 @@
  */
 
 import React from 'react';
-export const EuiCodeBlockImpl = ({
+export const WuiCodeBlockImpl = ({
   children,
   inline,
   'data-test-subj': dataTestSubj,

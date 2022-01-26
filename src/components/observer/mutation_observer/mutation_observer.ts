@@ -19,7 +19,7 @@
 
 import { ReactNode } from 'react';
 
-import { EuiObserver } from '../observer';
+import { WuiObserver } from '../observer';
 
 interface Props {
   /**
@@ -30,8 +30,8 @@ interface Props {
   observerOptions?: MutationObserverInit;
 }
 
-export class EuiMutationObserver extends EuiObserver<Props> {
-  name = 'EuiMutationObserver';
+export class WuiMutationObserver extends WuiObserver<Props> {
+  name = 'WuiMutationObserver';
 
   // the `onMutation` prop may change while the observer is bound, abstracting
   // it out into a separate function means the current `onMutation` value is used

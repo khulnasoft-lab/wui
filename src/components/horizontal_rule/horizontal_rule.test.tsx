@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiHorizontalRule } from './horizontal_rule';
+import { WuiHorizontalRule } from './horizontal_rule';
 
-describe('EuiHorizontalRule', () => {
+describe('WuiHorizontalRule', () => {
   test('is rendered', () => {
-    const component = render(<EuiHorizontalRule {...requiredProps} />);
+    const component = render(<WuiHorizontalRule {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

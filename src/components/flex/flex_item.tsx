@@ -36,16 +36,16 @@ export type FlexItemGrowSize =
   | false
   | null;
 
-export interface EuiFlexItemProps {
+export interface WuiFlexItemProps {
   grow?: FlexItemGrowSize;
   component?: keyof JSX.IntrinsicElements;
 }
 
 export const GROW_SIZES: FlexItemGrowSize[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-export const EuiFlexItem: FunctionComponent<CommonProps &
+export const WuiFlexItem: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement | HTMLSpanElement> &
-  EuiFlexItemProps> = ({
+  WuiFlexItemProps> = ({
   children,
   className,
   grow = true,
@@ -55,10 +55,10 @@ export const EuiFlexItem: FunctionComponent<CommonProps &
   validateGrowValue(grow);
 
   const classes = classNames(
-    'euiFlexItem',
+    'wuiFlexItem',
     {
-      'euiFlexItem--flexGrowZero': !grow,
-      [`euiFlexItem--flexGrow${grow}`]:
+      'wuiFlexItem--flexGrowZero': !grow,
+      [`wuiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
     },
     className
@@ -72,12 +72,12 @@ export const EuiFlexItem: FunctionComponent<CommonProps &
   );
 };
 
-function validateGrowValue(value: EuiFlexItemProps['grow']) {
+function validateGrowValue(value: WuiFlexItemProps['grow']) {
   const validValues = [null, undefined, true, false, ...GROW_SIZES];
 
   if (validValues.indexOf(value) === -1) {
     throw new Error(
-      `Prop \`grow\` passed to \`EuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+      `Prop \`grow\` passed to \`WuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
     );
   }
 }

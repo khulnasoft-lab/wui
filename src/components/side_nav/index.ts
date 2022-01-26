@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiSideNav } from './side_nav';
+export { WuiSideNav } from './side_nav';
 
 export * from './side_nav_types';

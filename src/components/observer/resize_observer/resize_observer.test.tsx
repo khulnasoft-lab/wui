@@ -19,7 +19,7 @@
 
 import React, { FunctionComponent, useState } from 'react';
 import { mount } from 'enzyme';
-import { EuiResizeObserver, useResizeObserver } from './resize_observer';
+import { WuiResizeObserver, useResizeObserver } from './resize_observer';
 import { sleep } from '../../../test';
 import { act } from 'react-dom/test-utils';
 
@@ -29,7 +29,7 @@ export async function waitforResizeObserver(period = 30) {
 }
 
 describe('testResizeObservers', () => {
-  // refactor the tests structure to make sure that `EuiResizeObserver` test can get
+  // refactor the tests structure to make sure that `WuiResizeObserver` test can get
   // the proper size of the dom element.
   type GetBoundingClientRect = typeof HTMLElement['prototype']['getBoundingClientRect'];
   let _originalgetBoundingClientRect: undefined | GetBoundingClientRect;
@@ -47,18 +47,18 @@ describe('testResizeObservers', () => {
     HTMLElement.prototype.getBoundingClientRect = _originalgetBoundingClientRect!;
   });
 
-  describe('EuiResizeObserver', () => {
+  describe('WuiResizeObserver', () => {
     it('watches for a resize', async () => {
       expect.assertions(2);
       const onResize = jest.fn();
 
       const Wrapper: FunctionComponent<{}> = ({ children }) => {
         return (
-          <EuiResizeObserver onResize={onResize}>
+          <WuiResizeObserver onResize={onResize}>
             {(resizeRef: (e: HTMLElement | null) => void) => (
               <div ref={resizeRef}>{children}</div>
             )}
-          </EuiResizeObserver>
+          </WuiResizeObserver>
         );
       };
 

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPanel } from './panel';
+import { WuiPanel } from './panel';
 
-describe('EuiPanel', () => {
+describe('WuiPanel', () => {
   test('is rendered', () => {
-    const component = render(<EuiPanel {...requiredProps} />);
+    const component = render(<WuiPanel {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

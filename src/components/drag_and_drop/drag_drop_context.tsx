@@ -26,19 +26,19 @@ import {
   ResponderProvided,
 } from 'react-beautiful-dnd';
 
-// export interface EuiDragDropContextProps extends DragDropContextProps {}
+// export interface WuiDragDropContextProps extends DragDropContextProps {}
 
-type EuiDraggingType = string | null;
+type WuiDraggingType = string | null;
 
-interface EuiDraggingContext {
-  isDraggingType: EuiDraggingType;
+interface WuiDraggingContext {
+  isDraggingType: WuiDraggingType;
 }
 
-export const EuiDragDropContextContext = createContext<EuiDraggingContext>({
+export const WuiDragDropContextContext = createContext<WuiDraggingContext>({
   isDraggingType: null,
 });
 
-export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
+export const WuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   onBeforeDragStart,
   onDragStart,
   onDragUpdate,
@@ -46,8 +46,8 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   children,
   ...rest
 }) => {
-  const [isDraggingType, setIsDraggingType] = useState<EuiDraggingType>(null);
-  const euiOnDragStart = (
+  const [isDraggingType, setIsDraggingType] = useState<WuiDraggingType>(null);
+  const wuiOnDragStart = (
     start: DragStart,
     provided: ResponderProvided
   ): void => {
@@ -56,7 +56,7 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
       onDragStart(start, provided);
     }
   };
-  const euiOnDragEnd = (
+  const wuiOnDragEnd = (
     result: DropResult,
     provided: ResponderProvided
   ): void => {
@@ -68,16 +68,16 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   return (
     <DragDropContext
       onBeforeDragStart={onBeforeDragStart}
-      onDragStart={euiOnDragStart}
+      onDragStart={wuiOnDragStart}
       onDragUpdate={onDragUpdate}
-      onDragEnd={euiOnDragEnd}
+      onDragEnd={wuiOnDragEnd}
       {...rest}>
-      <EuiDragDropContextContext.Provider
+      <WuiDragDropContextContext.Provider
         value={{
           isDraggingType,
         }}>
         {children}
-      </EuiDragDropContextContext.Provider>
+      </WuiDragDropContextContext.Provider>
     </DragDropContext>
   );
 };

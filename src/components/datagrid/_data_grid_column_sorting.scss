@@ -1,12 +1,12 @@
-.euiDataGridColumnSorting__item {
+.wuiDataGridColumnSorting__item {
 
   &-isDragging {
-    @include euiBottomShadow;
+    @include wuiBottomShadow;
     background: $euiColorEmptyShade;
   }
 }
 
-.euiDataGridColumnSortingPopover {
+.wuiDataGridColumnSortingPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
   // sass-lint:disable-block no-important
   transform: none !important;
@@ -16,7 +16,7 @@
   min-width: $euiSize * 12;
 }
 
-.euiDataGridColumnSorting__button {
+.wuiDataGridColumnSorting__button {
   // The button for sorting needs to be a bit more compact
   // sass-lint:disable-block no-important
   height: $euiSize + $euiSizeXS !important;
@@ -24,12 +24,12 @@
   padding: $euiSizeXS / 2 !important;
 }
 
-.euiDataGridColumnSorting__fieldList {
+.wuiDataGridColumnSorting__fieldList {
   @include euiYScrollWithShadows;
   max-height: 300px;
 }
 
-.euiDataGridColumnSorting__field {
+.wuiDataGridColumnSorting__field {
   display: block;
   padding: $euiSizeXS;
   width: 100%;
@@ -40,10 +40,10 @@
   }
 }
 
-.euiDataGridColumnSorting__orderButtons {
+.wuiDataGridColumnSorting__orderButtons {
   padding-left: $euiSizeL;
 
-  .euiDataGridColumnSorting__order {
+  .wuiDataGridColumnSorting__order {
     min-width: 200px;
     border: none;
 

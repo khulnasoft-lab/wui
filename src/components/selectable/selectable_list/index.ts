@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiSelectableList,
-  EuiSelectableOptionsListProps,
+  WuiSelectableList,
+  WuiSelectableOptionsListProps,
 } from './selectable_list';
-export { EuiSelectableListItem } from './selectable_list_item';
+export { WuiSelectableListItem } from './selectable_list_item';

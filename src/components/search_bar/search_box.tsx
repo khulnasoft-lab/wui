@@ -18,7 +18,7 @@
  */
 
 import React, { Component } from 'react';
-import { EuiFieldSearch, EuiFieldSearchProps } from '../form';
+import { WuiFieldSearch, WuiFieldSearchProps } from '../form';
 
 export interface SchemaType {
   strict?: boolean;
@@ -26,15 +26,15 @@ export interface SchemaType {
   flags?: string[];
 }
 
-export interface EuiSearchBoxProps extends EuiFieldSearchProps {
+export interface WuiSearchBoxProps extends WuiFieldSearchProps {
   query: string;
-  // This is optional in EuiFieldSearchProps
+  // This is optional in WuiFieldSearchProps
   onSearch: (queryText: string) => void;
 }
 
-type DefaultProps = Pick<EuiSearchBoxProps, 'placeholder' | 'incremental'>;
+type DefaultProps = Pick<WuiSearchBoxProps, 'placeholder' | 'incremental'>;
 
-export class EuiSearchBox extends Component<EuiSearchBoxProps> {
+export class WuiSearchBox extends Component<WuiSearchBoxProps> {
   static defaultProps: DefaultProps = {
     placeholder: 'Search...',
     incremental: false,
@@ -42,7 +42,7 @@ export class EuiSearchBox extends Component<EuiSearchBoxProps> {
 
   private inputElement: HTMLInputElement | null = null;
 
-  componentDidUpdate(oldProps: EuiSearchBoxProps) {
+  componentDidUpdate(oldProps: WuiSearchBoxProps) {
     if (oldProps.query !== this.props.query && this.inputElement != null) {
       this.inputElement.value = this.props.query;
       this.inputElement.dispatchEvent(new Event('change'));
@@ -62,7 +62,7 @@ export class EuiSearchBox extends Component<EuiSearchBoxProps> {
     }
 
     return (
-      <EuiFieldSearch
+      <WuiFieldSearch
         inputRef={input => (this.inputElement = input)}
         fullWidth
         defaultValue={query}

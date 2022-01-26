@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPagination } from './pagination';
+import { WuiPagination } from './pagination';
 
-describe('EuiPagination', () => {
+describe('WuiPagination', () => {
   test('is rendered', () => {
-    const component = render(<EuiPagination {...requiredProps} />);
+    const component = render(<WuiPagination {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

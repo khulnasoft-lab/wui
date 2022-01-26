@@ -1,33 +1,33 @@
 import React from 'react';
 
 import {
-  EuiI18n,
-  EuiTitle,
-  EuiSpacer,
-  useEuiI18n,
+  WuiI18n,
+  WuiTitle,
+  WuiSpacer,
+  useWuiI18n,
 } from '../../../../src/components';
 
 export default () => {
   return (
     <>
-      <EuiTitle size="xs">
-        <h3>Basic useEuiI18n usage</h3>
-      </EuiTitle>
+      <WuiTitle size="xs">
+        <h3>Basic useWuiI18n usage</h3>
+      </WuiTitle>
       <p>
-        {useEuiI18n(
-          'euiI18nBasic.basicexample',
+        {useWuiI18n(
+          'wuiI18nBasic.basicexample',
           'This is the English copy that would be replaced by a translation defined by the i18n.basicexample token.'
         )}
       </p>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>Basic EuiI18n usage</h3>
-      </EuiTitle>
+      <WuiTitle size="xs">
+        <h3>Basic WuiI18n usage</h3>
+      </WuiTitle>
       <p>
-        <EuiI18n
-          token="euiI18nBasic.basicexample"
+        <WuiI18n
+          token="wuiI18nBasic.basicexample"
           default="This is the English copy that would be replaced by a translation defined by the i18n.basicexample token."
         />
       </p>

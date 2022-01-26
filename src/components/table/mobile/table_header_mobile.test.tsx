@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiTableHeaderMobile } from './table_header_mobile';
+import { WuiTableHeaderMobile } from './table_header_mobile';
 
-describe('EuiTableHeaderMobile', () => {
+describe('WuiTableHeaderMobile', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableHeaderMobile {...requiredProps} />);
+    const component = render(<WuiTableHeaderMobile {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

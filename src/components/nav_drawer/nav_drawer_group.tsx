@@ -20,13 +20,13 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
-import { EuiListGroup, EuiListGroupProps } from '../list_group/list_group';
-import { EuiListGroupItemProps } from '../list_group/list_group_item';
+import { WuiListGroup, WuiListGroupProps } from '../list_group/list_group';
+import { WuiListGroupItemProps } from '../list_group/list_group_item';
 import { toInitials } from '../../services';
 
 export const ATTR_SELECTOR = 'data-name';
 
-export type FlyoutMenuItem = EuiListGroupItemProps & {
+export type FlyoutMenuItem = WuiListGroupItemProps & {
   'data-name'?: ReactNode | ReactNode[];
   flyoutMenu?: {
     title: string;
@@ -35,7 +35,7 @@ export type FlyoutMenuItem = EuiListGroupItemProps & {
   label: string;
 };
 
-export interface EuiNavDrawerGroupProps extends EuiListGroupProps {
+export interface WuiNavDrawerGroupProps extends WuiListGroupProps {
   listItems?: FlyoutMenuItem[];
   navIsLocked?: any;
 
@@ -51,12 +51,12 @@ export interface EuiNavDrawerGroupProps extends EuiListGroupProps {
 
   /**
    * Passthrough function to be called when the flyout is closing
-   * @see `EuiNavDrawer`
+   * @see `WuiNavDrawer`
    */
   onClose?: () => void;
 }
 
-export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
+export const WuiNavDrawerGroup: FunctionComponent<WuiNavDrawerGroupProps> = ({
   className,
   listItems,
   navIsLocked,
@@ -88,7 +88,7 @@ export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
 
         // Make some declarations of props for the side nav implementation
         itemProps.className = classNames(
-          'euiNavDrawerGroup__item',
+          'wuiNavDrawerGroup__item',
           item.className
         );
         itemProps.size = item.size || 's';
@@ -99,7 +99,7 @@ export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
         const itemProvidesIcon = !!item.iconType || !!item.icon;
         if (!itemProvidesIcon) {
           itemProps.icon = (
-            <span className="euiNavDrawerGroup__itemDefaultIcon">
+            <span className="wuiNavDrawerGroup__itemDefaultIcon">
               {toInitials(item.label)}
             </span>
           );
@@ -110,8 +110,8 @@ export const EuiNavDrawerGroup: FunctionComponent<EuiNavDrawerGroupProps> = ({
       });
 
   return (
-    <EuiListGroup
-      className={classNames('euiNavDrawerGroup', className)}
+    <WuiListGroup
+      className={classNames('wuiNavDrawerGroup', className)}
       listItems={newListItems}
       flush
       size={'l'}

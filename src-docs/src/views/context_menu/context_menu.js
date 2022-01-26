@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenu,
-  EuiFormRow,
-  EuiIcon,
-  EuiPopover,
-  EuiSwitch,
-  EuiSpacer,
+  WuiButton,
+  WuiContextMenu,
+  WuiFormRow,
+  WuiIcon,
+  WuiPopover,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -28,7 +28,7 @@ export default () => {
       items: [
         {
           name: 'Handle an onClick',
-          icon: <EuiIcon type="search" size="m" />,
+          icon: <WuiIcon type="search" size="m" />,
           onClick: () => {
             closePopover();
             window.alert('Show fullscreen');
@@ -37,7 +37,7 @@ export default () => {
         {
           name: 'Go to a link',
           icon: 'user',
-          href: 'http://elastic.co',
+          href: 'http://wazuh.com',
           target: '_blank',
         },
         {
@@ -101,41 +101,41 @@ export default () => {
       title: 'Embed code',
       content: (
         <div style={{ padding: 16 }}>
-          <EuiFormRow label="Generate a public snapshot?" hasChildLabel={false}>
-            <EuiSwitch
+          <WuiFormRow label="Generate a public snapshot?" hasChildLabel={false}>
+            <WuiSwitch
               name="switch"
               id="asdf"
               label="Snapshot data"
               checked={true}
               onChange={() => {}}
             />
-          </EuiFormRow>
-          <EuiFormRow
+          </WuiFormRow>
+          <WuiFormRow
             label="Include the following in the embed"
             hasChildLabel={false}>
-            <EuiSwitch
+            <WuiSwitch
               name="switch"
               id="asdf2"
               label="Current time range"
               checked={true}
               onChange={() => {}}
             />
-          </EuiFormRow>
-          <EuiSpacer />
-          <EuiButton fill>Copy iFrame code</EuiButton>
+          </WuiFormRow>
+          <WuiSpacer />
+          <WuiButton fill>Copy iFrame code</WuiButton>
         </div>
       ),
     },
   ];
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Click me to load a context menu
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       id="contextMenuExample"
       button={button}
       isOpen={isPopoverOpen}
@@ -143,7 +143,7 @@ export default () => {
       panelPaddingSize="none"
       withTitle
       anchorPosition="downLeft">
-      <EuiContextMenu initialPanelId={0} panels={panels} />
-    </EuiPopover>
+      <WuiContextMenu initialPanelId={0} panels={panels} />
+    </WuiPopover>
   );
 };

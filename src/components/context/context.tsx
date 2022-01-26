@@ -36,9 +36,9 @@ export interface I18nShape {
 }
 
 const I18nContext: React.Context<I18nShape> = createContext({});
-const { Provider: EuiI18nProvider, Consumer: EuiI18nConsumer } = I18nContext;
+const { Provider: WuiI18nProvider, Consumer: WuiI18nConsumer } = I18nContext;
 
-interface EuiContextProps {
+interface WuiContextProps {
   i18n: I18nShape;
   /**
    * ReactNode to render as this component's content
@@ -46,9 +46,9 @@ interface EuiContextProps {
   children: ReactNode;
 }
 
-const EuiContext: React.FunctionComponent<EuiContextProps> = ({
+const WuiContext: React.FunctionComponent<WuiContextProps> = ({
   i18n = {},
   children,
-}) => <EuiI18nProvider value={i18n}>{children}</EuiI18nProvider>;
+}) => <WuiI18nProvider value={i18n}>{children}</WuiI18nProvider>;
 
-export { EuiContext, EuiI18nConsumer, I18nContext };
+export { WuiContext, WuiI18nConsumer, I18nContext };

@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <button
     onClick={() => {
       window.alert('click');
     }}>
-    <EuiFlexGroup component="span">
-      <EuiFlexItem component="span">
+    <WuiFlexGroup component="span">
+      <WuiFlexItem component="span">
         These items are within a button
-      </EuiFlexItem>
+      </WuiFlexItem>
 
-      <EuiFlexItem component="span">
+      <WuiFlexItem component="span">
         So they all specify component=&ldquo;span&rdquo;
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </button>
 );

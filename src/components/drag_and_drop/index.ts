@@ -17,17 +17,17 @@
  * under the License.
  */
 
-export { EuiDragDropContext } from './drag_drop_context';
-export { EuiDraggable } from './draggable';
-export { EuiDroppable } from './droppable';
+export { WuiDragDropContext } from './drag_drop_context';
+export { WuiDraggable } from './draggable';
+export { WuiDroppable } from './droppable';
 export {
-  euiDragDropCopy,
-  euiDragDropMove,
-  euiDragDropReorder,
+  wuiDragDropCopy,
+  wuiDragDropMove,
+  wuiDragDropReorder,
 } from './services';
 
-// Interfaces in react-beautiful-dnd that EUI abstracts over
-// allows consumers to pull these from EUI instead of react-beautiful-dnd
+// Interfaces in react-beautiful-dnd that WUI abstracts over
+// allows consumers to pull these from WUI instead of react-beautiful-dnd
 export {
   DraggableLocation,
   DraggableProps,

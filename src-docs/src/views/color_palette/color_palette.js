@@ -1,47 +1,47 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiTitle,
-  EuiSpacer,
-  EuiBadge,
-  EuiFlexGrid,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiTitle,
+  WuiSpacer,
+  WuiBadge,
+  WuiFlexGrid,
 } from '../../../../src/components';
 
 import {
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
+  wuiPaletteColorBlind,
+  wuiPaletteColorBlindBehindText,
 } from '../../../../src/services';
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 const customPalettes = [
   {
     title: 'Max 10 colors',
-    palette: euiPaletteColorBlind(),
-    code: 'euiPaletteColorBlind()',
+    palette: wuiPaletteColorBlind(),
+    code: 'wuiPaletteColorBlind()',
   },
   {
     title: 'More than 10 colors are needed',
-    palette: euiPaletteColorBlind({ rotations: 2 }),
-    code: 'euiPaletteColorBlind({rotations: 2})',
+    palette: wuiPaletteColorBlind({ rotations: 2 }),
+    code: 'wuiPaletteColorBlind({rotations: 2})',
   },
   {
     title:
       'Series may have multiple metrics and so the colors must coordinate but be distinguishable',
-    palette: euiPaletteColorBlind({
+    palette: wuiPaletteColorBlind({
       rotations: 3,
       order: 'group',
       direction: 'both',
     }),
     code:
-      "euiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
+      "wuiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
   },
   {
     title:
       "The default sort order is close but not exactly aligned with the color wheel. To sort this better add the 'natural' sort param.",
-    palette: euiPaletteColorBlind({ sortBy: 'natural' }),
-    code: "euiPaletteColorBlind({sortBy: 'natural'})",
+    palette: wuiPaletteColorBlind({ sortBy: 'natural' }),
+    code: "wuiPaletteColorBlind({sortBy: 'natural'})",
   },
 ];
 
@@ -49,13 +49,13 @@ export default () => (
   <Fragment>
     {customPalettes.map(palette => (
       <Fragment key={palette.title}>
-        <EuiTitle size="xxs">
+        <WuiTitle size="xxs">
           <h3>{palette.title}</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup alignItems="center">
-          <EuiFlexItem grow={false} style={{ maxWidth: 240 }}>
-            <EuiFlexGroup
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiFlexGroup alignItems="center">
+          <WuiFlexItem grow={false} style={{ maxWidth: 240 }}>
+            <WuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               alignItems="flexStart"
@@ -68,39 +68,39 @@ export default () => (
                   key={hexCode}
                 />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </WuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem>
             <ColorPaletteCopyCode code={palette.code} />
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="xl" />
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiSpacer size="xl" />
       </Fragment>
     ))}
-    <EuiTitle size="xxs">
+    <WuiTitle size="xxs">
       <h3>Behind text variant</h3>
-    </EuiTitle>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ maxWidth: 240 }}>
-        <EuiFlexGrid columns={4} gutterSize="s">
-          {euiPaletteColorBlindBehindText({ sortBy: 'natural' }).map(
+    </WuiTitle>
+    <WuiSpacer size="s" />
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false} style={{ maxWidth: 240 }}>
+        <WuiFlexGrid columns={4} gutterSize="s">
+          {wuiPaletteColorBlindBehindText({ sortBy: 'natural' }).map(
             (color, i) => (
-              <EuiFlexItem key={i} grow={false}>
+              <WuiFlexItem key={i} grow={false}>
                 <span>
-                  <EuiBadge color={color}>Text</EuiBadge>
+                  <WuiBadge color={color}>Text</WuiBadge>
                 </span>
-              </EuiFlexItem>
+              </WuiFlexItem>
             )
           )}
-        </EuiFlexGrid>
-      </EuiFlexItem>
-      <EuiFlexItem>
+        </WuiFlexGrid>
+      </WuiFlexItem>
+      <WuiFlexItem>
         <ColorPaletteCopyCode
-          textToCopy={"euiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
-          code={"euiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
+          textToCopy={"wuiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
+          code={"wuiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </Fragment>
 );

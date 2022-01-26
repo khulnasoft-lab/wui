@@ -21,17 +21,17 @@ import React, { FunctionComponent, HTMLAttributes, MouseEvent } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiPaginationButton } from './pagination_button';
-import { EuiButtonIcon } from '../button';
-import { EuiI18n } from '../i18n';
-import { EuiText } from '../text';
+import { WuiPaginationButton } from './pagination_button';
+import { WuiButtonIcon } from '../button';
+import { WuiI18n } from '../i18n';
+import { WuiText } from '../text';
 
 const MAX_VISIBLE_PAGES = 5;
 const NUMBER_SURROUNDING_PAGES = Math.floor(MAX_VISIBLE_PAGES * 0.5);
 
 export type PageClickHandler = (pageIndex: number) => void;
 
-export interface EuiPaginationProps {
+export interface WuiPaginationProps {
   /**
    * The total number of pages.
    */
@@ -56,9 +56,9 @@ export interface EuiPaginationProps {
   'aria-controls'?: string;
 }
 
-type Props = CommonProps & HTMLAttributes<HTMLDivElement> & EuiPaginationProps;
+type Props = CommonProps & HTMLAttributes<HTMLDivElement> & WuiPaginationProps;
 
-export const EuiPagination: FunctionComponent<Props> = ({
+export const WuiPagination: FunctionComponent<Props> = ({
   className,
   pageCount = 1,
   activePage = 1,
@@ -88,7 +88,7 @@ export const EuiPagination: FunctionComponent<Props> = ({
     inList?: boolean;
   }) => {
     const button = (
-      <EuiPaginationButton
+      <WuiPaginationButton
         isActive={pageIndex === activePage}
         totalPages={pageCount}
         onClick={(e: MouseEvent) => safeClick(e, pageIndex)}
@@ -99,12 +99,12 @@ export const EuiPagination: FunctionComponent<Props> = ({
     );
 
     if (inList) {
-      return <li className="euiPagination__item">{button}</li>;
+      return <li className="wuiPagination__item">{button}</li>;
     }
 
     return button;
   };
-  const classes = classNames('euiPagination', className);
+  const classes = classNames('wuiPagination', className);
   const hasControl = ariaControls !== undefined;
   const pages = [];
   const firstPageInRange = Math.max(
@@ -134,16 +134,16 @@ export const EuiPagination: FunctionComponent<Props> = ({
   }
 
   const previousButton = (
-    <EuiI18n
-      token="euiPagination.previousPage"
+    <WuiI18n
+      token="wuiPagination.previousPage"
       default="Previous page, {page}"
       values={{ page: activePage }}>
       {(previousPage: string) => (
-        <EuiI18n
-          token="euiPagination.disabledPreviousPage"
+        <WuiI18n
+          token="wuiPagination.disabledPreviousPage"
           default="Previous page">
           {(disabledPreviousPage: string) => (
-            <EuiButtonIcon
+            <WuiButtonIcon
               onClick={(e: MouseEvent) => safeClick(e, activePage - 1)}
               iconType="arrowLeft"
               color="text"
@@ -154,9 +154,9 @@ export const EuiPagination: FunctionComponent<Props> = ({
               {...prevPageButtonProps}
             />
           )}
-        </EuiI18n>
+        </WuiI18n>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 
   const firstPageButtons = [];
@@ -166,19 +166,19 @@ export const EuiPagination: FunctionComponent<Props> = ({
 
     if (firstPageInRange > 1 && firstPageInRange !== 2) {
       firstPageButtons.push(
-        <EuiI18n
+        <WuiI18n
           key="startingEllipses"
-          token="euiPagination.firstRangeAriaLabel"
+          token="wuiPagination.firstRangeAriaLabel"
           default="Skipping pages 2 to {lastPage}"
           values={{ lastPage: firstPageInRange }}>
           {(firstRangeAriaLabel: string) => (
             <li
               aria-label={firstRangeAriaLabel}
-              className="euiPaginationButton-isPlaceholder euiPagination__item">
+              className="wuiPaginationButton-isPlaceholder wuiPagination__item">
               &hellip;
             </li>
           )}
-        </EuiI18n>
+        </WuiI18n>
       );
     } else if (firstPageInRange === 2) {
       firstPageButtons.push(<PaginationButton pageIndex={1} key={1} />);
@@ -194,19 +194,19 @@ export const EuiPagination: FunctionComponent<Props> = ({
       );
     } else if (lastPageInRange < pageCount - 1) {
       lastPageButtons.push(
-        <EuiI18n
+        <WuiI18n
           key="endingEllipses"
-          token="euiPagination.lastRangeAriaLabel"
+          token="wuiPagination.lastRangeAriaLabel"
           default="Skipping pages {firstPage} to {lastPage}"
           values={{ firstPage: lastPageInRange + 1, lastPage: pageCount - 1 }}>
           {(lastRangeAriaLabel: string) => (
             <li
               aria-label={lastRangeAriaLabel}
-              className="euiPaginationButton-isPlaceholder euiPagination__item">
+              className="wuiPaginationButton-isPlaceholder wuiPagination__item">
               &hellip;
             </li>
           )}
-        </EuiI18n>
+        </WuiI18n>
       );
     }
 
@@ -226,14 +226,14 @@ export const EuiPagination: FunctionComponent<Props> = ({
   }
 
   const nextButton = (
-    <EuiI18n
-      token="euiPagination.nextPage"
+    <WuiI18n
+      token="wuiPagination.nextPage"
       default="Next page, {page}"
       values={{ page: activePage + 2 }}>
       {(nextPage: string) => (
-        <EuiI18n token="euiPagination.disabledNextPage" default="Next page">
+        <WuiI18n token="wuiPagination.disabledNextPage" default="Next page">
           {(disabledNextPage: string) => (
-            <EuiButtonIcon
+            <WuiButtonIcon
               onClick={(e: MouseEvent) => safeClick(e, activePage + 1)}
               iconType="arrowRight"
               aria-label={
@@ -244,9 +244,9 @@ export const EuiPagination: FunctionComponent<Props> = ({
               {...nextPageButtonProps}
             />
           )}
-        </EuiI18n>
+        </WuiI18n>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 
   const selectablePages = pages;
@@ -260,16 +260,16 @@ export const EuiPagination: FunctionComponent<Props> = ({
     return (
       <nav className={classes} {...rest}>
         {previousButton}
-        <EuiText size="s" className="euiPagination__compressedText">
-          <EuiI18n
-            token="euiPagination.pageOfTotalCompressed"
+        <WuiText size="s" className="wuiPagination__compressedText">
+          <WuiI18n
+            token="wuiPagination.pageOfTotalCompressed"
             default="{page} of {total}"
             values={{
               page: firstPageButtonCompressed,
               total: lastPageButtonCompressed,
             }}
           />
-        </EuiText>
+        </WuiText>
         {nextButton}
       </nav>
     );
@@ -285,7 +285,7 @@ export const EuiPagination: FunctionComponent<Props> = ({
   return (
     <nav className={classes} {...rest}>
       {previousButton}
-      <ul {...accessibleName} className="euiPagination__list">
+      <ul {...accessibleName} className="wuiPagination__list">
         {firstPageButtons}
         {selectablePages}
         {lastPageButtons}

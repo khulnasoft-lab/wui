@@ -29,13 +29,13 @@ import tabbable from 'tabbable';
 
 import { keys } from '../../services';
 
-import { EuiTitle } from '../title';
-import { EuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
-import { EuiListGroupProps } from '../list_group/list_group';
-import { EuiFocusTrap } from '../focus_trap';
+import { WuiTitle } from '../title';
+import { WuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
+import { WuiListGroupProps } from '../list_group/list_group';
+import { WuiFocusTrap } from '../focus_trap';
 import { CommonProps } from '../common';
 
-export interface EuiNavDrawerFlyoutProps
+export interface WuiNavDrawerFlyoutProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
@@ -47,7 +47,7 @@ export interface EuiNavDrawerFlyoutProps
 
   /**
    * Passthrough function to be called when the flyout is closing
-   * @see `EuiNavDrawer`
+   * @see `WuiNavDrawer`
    */
   onClose?: (shouldReturnFocus?: boolean) => void;
 
@@ -56,10 +56,10 @@ export interface EuiNavDrawerFlyoutProps
    */
   title?: string;
 
-  wrapText?: EuiListGroupProps['wrapText'];
+  wrapText?: WuiListGroupProps['wrapText'];
 }
 
-export const EuiNavDrawerFlyout: FunctionComponent<EuiNavDrawerFlyoutProps> = ({
+export const WuiNavDrawerFlyout: FunctionComponent<WuiNavDrawerFlyoutProps> = ({
   className,
   isCollapsed = true,
   listItems,
@@ -75,10 +75,10 @@ export const EuiNavDrawerFlyout: FunctionComponent<EuiNavDrawerFlyoutProps> = ({
   ] = useState<Array<HTMLElement | null> | null>();
   const LABEL = 'navDrawerFlyoutTitle';
   const classes = classNames(
-    'euiNavDrawerFlyout',
+    'wuiNavDrawerFlyout',
     {
-      'euiNavDrawerFlyout-isCollapsed': isCollapsed,
-      'euiNavDrawerFlyout-isExpanded': !isCollapsed,
+      'wuiNavDrawerFlyout-isCollapsed': isCollapsed,
+      'wuiNavDrawerFlyout-isExpanded': !isCollapsed,
     },
     className
   );
@@ -120,21 +120,21 @@ export const EuiNavDrawerFlyout: FunctionComponent<EuiNavDrawerFlyoutProps> = ({
       onKeyDown={handleKeyDown}
       ref={menuElementRef}
       {...rest}>
-      <EuiTitle className="euiNavDrawerFlyout__title" size="xxs">
+      <WuiTitle className="wuiNavDrawerFlyout__title" size="xxs">
         <div id={LABEL} tabIndex={-1}>
           {title}
         </div>
-      </EuiTitle>
+      </WuiTitle>
       {listItems ? (
-        <EuiFocusTrap returnFocus={false}>
-          <EuiNavDrawerGroup
-            className="euiNavDrawerFlyout__listGroup"
+        <WuiFocusTrap returnFocus={false}>
+          <WuiNavDrawerGroup
+            className="wuiNavDrawerFlyout__listGroup"
             aria-labelledby={LABEL}
             listItems={listItems}
             wrapText={wrapText}
             onClose={() => handleClose(false)}
           />
-        </EuiFocusTrap>
+        </WuiFocusTrap>
       ) : null}
     </div>
   );

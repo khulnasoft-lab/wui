@@ -22,10 +22,10 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../flex';
 import { htmlIdGenerator } from '../../../services';
 
-export type EuiHeaderAlertProps = CommonProps &
+export type WuiHeaderAlertProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     /**
      * Adds a link to the alert.
@@ -35,12 +35,12 @@ export type EuiHeaderAlertProps = CommonProps &
     text?: ReactNode;
     title: ReactNode;
     /**
-     * Accepts an `EuiBadge` that displays on the alert
+     * Accepts an `WuiBadge` that displays on the alert
      */
     badge?: ReactNode;
   };
 
-export const EuiHeaderAlert: FunctionComponent<EuiHeaderAlertProps> = ({
+export const WuiHeaderAlert: FunctionComponent<WuiHeaderAlertProps> = ({
   action,
   className,
   date,
@@ -49,24 +49,24 @@ export const EuiHeaderAlert: FunctionComponent<EuiHeaderAlertProps> = ({
   badge,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderAlert', className);
+  const classes = classNames('wuiHeaderAlert', className);
 
   const ariaId = htmlIdGenerator()();
 
   return (
     <article aria-labelledby={`${ariaId}-title`} className={classes} {...rest}>
-      <EuiFlexGroup justifyContent="spaceBetween">
-        <EuiFlexItem>
-          <div className="euiHeaderAlert__date">{date}</div>
-        </EuiFlexItem>
-        {badge && <EuiFlexItem grow={false}>{badge}</EuiFlexItem>}
-      </EuiFlexGroup>
+      <WuiFlexGroup justifyContent="spaceBetween">
+        <WuiFlexItem>
+          <div className="wuiHeaderAlert__date">{date}</div>
+        </WuiFlexItem>
+        {badge && <WuiFlexItem grow={false}>{badge}</WuiFlexItem>}
+      </WuiFlexGroup>
 
-      <h3 id={`${ariaId}-title`} className="euiHeaderAlert__title">
+      <h3 id={`${ariaId}-title`} className="wuiHeaderAlert__title">
         {title}
       </h3>
-      <div className="euiHeaderAlert__text">{text}</div>
-      {action && <div className="euiHeaderAlert__action euiLink">{action}</div>}
+      <div className="wuiHeaderAlert__text">{text}</div>
+      {action && <div className="wuiHeaderAlert__action wuiLink">{action}</div>}
     </article>
   );
 };

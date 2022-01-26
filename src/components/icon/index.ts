@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiIcon,
-  EuiIconProps,
+  WuiIcon,
+  WuiIconProps,
   IconColor,
   IconSize,
   IconType,

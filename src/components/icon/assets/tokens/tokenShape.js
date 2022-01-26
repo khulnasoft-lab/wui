@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconTokenShape = ({ title, titleId, ...props }) => (
+const WuiIconTokenShape = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconTokenShape = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenShape;
+export const icon = WuiIconTokenShape;

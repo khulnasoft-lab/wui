@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiCode,
-  EuiFormRow,
+  WuiFieldText,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
+  WuiCode,
+  WuiFormRow,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -30,31 +30,31 @@ export const PrefixSufix = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup
+      <WuiFlexGroup
         justifyContent="flexStart"
         gutterSize="m"
         alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiFormRow label="Prefix">
-            <EuiFieldText
+        <WuiFlexItem grow={false}>
+          <WuiFormRow label="Prefix">
+            <WuiFieldText
               value={prefix}
               onChange={onPrefixChange}
               placeholder="Enter prefix"
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiFormRow label="Suffix">
-            <EuiFieldText
+          </WuiFormRow>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiFormRow label="Suffix">
+            <WuiFieldText
               value={suffix}
               onChange={onSuffixChange}
               placeholder="Enter suffix"
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="xl" />
-      <EuiCode>{customId} </EuiCode>
+          </WuiFormRow>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiSpacer size="xl" />
+      <WuiCode>{customId} </WuiCode>
     </Fragment>
   );
 };

@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiTitle } from './title';
+import { WuiTitle } from './title';
 
-describe('EuiTitle', () => {
+describe('WuiTitle', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTitle {...requiredProps}>
+      <WuiTitle {...requiredProps}>
         <h1>Title</h1>
-      </EuiTitle>
+      </WuiTitle>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +36,9 @@ describe('EuiTitle', () => {
 
   test('renders children element className', () => {
     const component = render(
-      <EuiTitle {...requiredProps}>
+      <WuiTitle {...requiredProps}>
         <h1 className="test">Title</h1>
-      </EuiTitle>
+      </WuiTitle>
     );
 
     expect(component).toMatchSnapshot();

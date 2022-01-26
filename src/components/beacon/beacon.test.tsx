@@ -21,17 +21,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiBeacon } from './beacon';
+import { WuiBeacon } from './beacon';
 
-describe('EuiBeacon', () => {
+describe('WuiBeacon', () => {
   test('is rendered', () => {
-    const component = render(<EuiBeacon {...requiredProps} />);
+    const component = render(<WuiBeacon {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('accepts size', () => {
-    const component = render(<EuiBeacon size={14} {...requiredProps} />);
+    const component = render(<WuiBeacon size={14} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

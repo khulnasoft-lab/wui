@@ -22,11 +22,11 @@ import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  WuiPinnableListGroup,
+  WuiPinnableListGroupItemProps,
 } from './pinnable_list_group';
 
-const someListItems: EuiPinnableListGroupItemProps[] = [
+const someListItems: WuiPinnableListGroupItemProps[] = [
   {
     label: 'Label with iconType',
     iconType: 'stop',
@@ -62,10 +62,10 @@ const someListItems: EuiPinnableListGroupItemProps[] = [
   },
 ];
 
-describe('EuiPinnableListGroup', () => {
+describe('WuiPinnableListGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <WuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
@@ -77,14 +77,14 @@ describe('EuiPinnableListGroup', () => {
 
   test('can have custom pin icon titles', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <WuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
-        pinTitle={(item: EuiPinnableListGroupItemProps) =>
+        pinTitle={(item: WuiPinnableListGroupItemProps) =>
           `Pin ${item.label} to the top`
         }
-        unpinTitle={(item: EuiPinnableListGroupItemProps) =>
+        unpinTitle={(item: WuiPinnableListGroupItemProps) =>
           `Unpin ${item.label} to the top`
         }
       />

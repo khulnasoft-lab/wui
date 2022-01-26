@@ -1,26 +1,26 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCodeBlock,
-  EuiComboBox,
-  EuiExpression,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutFooter,
-  EuiFlyoutHeader,
-  EuiForm,
-  EuiFormRow,
-  EuiPopover,
-  EuiSpacer,
-  EuiTab,
-  EuiTabs,
-  EuiText,
-  EuiTitle,
-  EuiSuperSelect,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiCodeBlock,
+  WuiComboBox,
+  WuiExpression,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutFooter,
+  WuiFlyoutHeader,
+  WuiForm,
+  WuiFormRow,
+  WuiPopover,
+  WuiSpacer,
+  WuiTab,
+  WuiTabs,
+  WuiText,
+  WuiTitle,
+  WuiSuperSelect,
 } from '../../../../src/components';
 
 export default () => {
@@ -52,12 +52,12 @@ export default () => {
   const onSelectedTabChanged = id => setSelectedTabId(id);
 
   const renderTabs = tabs.map((tab, index) => (
-    <EuiTab
+    <WuiTab
       onClick={() => onSelectedTabChanged(tab.id)}
       isSelected={tab.id === selectedTabId}
       key={index}>
       {tab.name}
-    </EuiTab>
+    </WuiTab>
   ));
 
   const superSelectOptions = [
@@ -67,11 +67,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option one</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
@@ -81,11 +81,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option two</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
@@ -95,11 +95,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option three</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
@@ -110,7 +110,7 @@ export default () => {
   };
 
   const flyoutContent = (
-    <EuiText>
+    <WuiText>
       <p>
         Far out in the uncharted backwaters of the unfashionable end of the
         western spiral arm of the Galaxy lies a small unregarded yellow sun.
@@ -164,7 +164,7 @@ export default () => {
         So it thought the dog was making a poor life choice by focusing so much
         on mindfulness. What if its car broke down?
       </p>
-    </EuiText>
+    </WuiText>
   );
 
   const htmlCode = `<!--I'm an example of HTML-->
@@ -177,63 +177,63 @@ export default () => {
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         ownFocus
         onClose={closeFlyout}
         hideCloseButton
         aria-labelledby="flyoutComplicatedTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="m">
             <h2 id="flyoutComplicatedTitle">Flyout header</h2>
-          </EuiTitle>
-          <EuiSpacer size="s" />
-          <EuiText color="subdued">
+          </WuiTitle>
+          <WuiSpacer size="s" />
+          <WuiText color="subdued">
             <p>
               Put navigation items in the header, and cross tab actions in a
               footer.
             </p>
-          </EuiText>
-          <EuiTabs style={{ marginBottom: '-25px' }}>{renderTabs}</EuiTabs>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiPopover
+          </WuiText>
+          <WuiTabs style={{ marginBottom: '-25px' }}>{renderTabs}</WuiTabs>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody>
+          <WuiPopover
             closePopover={closePopover}
             button={
-              <EuiButton onClick={togglePopover}>
+              <WuiButton onClick={togglePopover}>
                 Even popovers can be included
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen}>
             <p>
               This is the popover content, notice how it can overflow the
               flyout!
             </p>
-          </EuiPopover>
-          <EuiSpacer size="m" />
-          <EuiForm>
-            <EuiFormRow label="A SuperSelect field">
-              <EuiSuperSelect
+          </WuiPopover>
+          <WuiSpacer size="m" />
+          <WuiForm>
+            <WuiFormRow label="A SuperSelect field">
+              <WuiSuperSelect
                 options={superSelectOptions}
                 valueOfSelected={superSelectvalue}
                 onChange={value => onSuperSelectChange(value)}
                 itemLayoutAlign="top"
                 hasDividers
               />
-            </EuiFormRow>
-          </EuiForm>
-          <EuiSpacer />
-          <EuiPopover
+            </WuiFormRow>
+          </WuiForm>
+          <WuiSpacer />
+          <WuiPopover
             isOpen={isExpressionOpen}
             closePopover={() => setIsExpressionOpen(false)}
             ownFocus={true}
             button={
-              <EuiExpression
+              <WuiExpression
                 description="expression"
                 value="configurations"
                 onClick={() => setIsExpressionOpen(!isExpressionOpen)}
               />
             }>
-            <EuiComboBox
+            <WuiComboBox
               selectedOptions={[{ label: 'Option one' }]}
               options={[
                 { label: 'Option one' },
@@ -241,35 +241,35 @@ export default () => {
                 { label: 'Option three' },
               ]}
             />
-          </EuiPopover>
-          <EuiSpacer />
+          </WuiPopover>
+          <WuiSpacer />
           {flyoutContent}
-          <EuiCodeBlock language="html">{htmlCode}</EuiCodeBlock>
-        </EuiFlyoutBody>
-        <EuiFlyoutFooter>
-          <EuiFlexGroup justifyContent="spaceBetween">
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
+          <WuiCodeBlock language="html">{htmlCode}</WuiCodeBlock>
+        </WuiFlyoutBody>
+        <WuiFlyoutFooter>
+          <WuiFlexGroup justifyContent="spaceBetween">
+            <WuiFlexItem grow={false}>
+              <WuiButtonEmpty
                 iconType="cross"
                 onClick={closeFlyout}
                 flush="left">
                 Close
-              </EuiButtonEmpty>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton onClick={closeFlyout} fill>
+              </WuiButtonEmpty>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButton onClick={closeFlyout} fill>
                 Save
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiFlyoutFooter>
-      </EuiFlyout>
+              </WuiButton>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+        </WuiFlyoutFooter>
+      </WuiFlyout>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show flyout</EuiButton>
+      <WuiButton onClick={showFlyout}>Show flyout</WuiButton>
 
       {flyout}
     </div>

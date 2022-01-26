@@ -17,19 +17,19 @@
  * under the License.
  */
 
-export { EuiMarkdownEditor, EuiMarkdownEditorProps } from './markdown_editor';
+export { WuiMarkdownEditor, WuiMarkdownEditorProps } from './markdown_editor';
 export {
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
+  getDefaultWuiMarkdownParsingPlugins,
+  getDefaultWuiMarkdownProcessingPlugins,
 } from './plugins/markdown_default_plugins';
-export { EuiMarkdownContext } from './markdown_context';
-export { EuiMarkdownFormat } from './markdown_format';
+export { WuiMarkdownContext } from './markdown_context';
+export { WuiMarkdownFormat } from './markdown_format';
 export {
-  EuiMarkdownParseError,
-  EuiMarkdownAstNode,
-  EuiMarkdownAstNodePosition,
-  EuiMarkdownFormatting,
-  EuiMarkdownEditorUiPlugin,
+  WuiMarkdownParseError,
+  WuiMarkdownAstNode,
+  WuiMarkdownAstNodePosition,
+  WuiMarkdownFormatting,
+  WuiMarkdownEditorUiPlugin,
   RemarkRehypeHandler,
   RemarkTokenizer,
 } from './markdown_types';

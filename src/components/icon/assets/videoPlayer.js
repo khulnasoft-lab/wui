@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconVideoPlayer = ({ title, titleId, ...props }) => (
+const WuiIconVideoPlayer = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconVideoPlayer = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconVideoPlayer;
+export const icon = WuiIconVideoPlayer;

@@ -22,12 +22,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
 export type FilterChecked = 'on' | 'off';
-export interface EuiFilterSelectItemProps
+export interface WuiFilterSelectItemProps
   extends CommonProps,
     ButtonHTMLAttributes<HTMLButtonElement> {
   checked?: FilterChecked;
@@ -50,7 +50,7 @@ const resolveIconAndColor = (checked?: FilterChecked) => {
       };
 };
 
-export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
+export class WuiFilterSelectItem extends Component<WuiFilterSelectItemProps> {
   static defaultProps = {
     showIcons: true,
   };
@@ -82,9 +82,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
       ...rest
     } = this.props;
     const classes = classNames(
-      'euiFilterSelectItem',
+      'wuiFilterSelectItem',
       {
-        'euiFilterSelectItem-isFocused': isFocused,
+        'wuiFilterSelectItem-isFocused': isFocused,
       },
       className
     );
@@ -93,9 +93,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
     if (showIcons) {
       const { icon, color } = resolveIconAndColor(checked);
       iconNode = (
-        <EuiFlexItem grow={false}>
-          <EuiIcon color={color} type={icon} />
-        </EuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiIcon color={color} type={icon} />
+        </WuiFlexItem>
       );
     }
 
@@ -109,18 +109,18 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
         disabled={disabled}
         aria-disabled={disabled}
         {...rest}>
-        <EuiFlexGroup
+        <WuiFlexGroup
           alignItems="center"
           gutterSize="s"
           component="span"
           responsive={false}>
           {iconNode}
-          <EuiFlexItem
-            className="euiFilterSelectItem__content"
+          <WuiFlexItem
+            className="wuiFilterSelectItem__content"
             component="span">
             {children}
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
       </button>
     );
   }

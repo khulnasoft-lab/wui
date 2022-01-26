@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiModalHeaderTitle } from './modal_header_title';
+import { WuiModalHeaderTitle } from './modal_header_title';
 
-test('renders EuiModalHeaderTitle', () => {
+test('renders WuiModalHeaderTitle', () => {
   const component = (
-    <EuiModalHeaderTitle {...requiredProps}>children</EuiModalHeaderTitle>
+    <WuiModalHeaderTitle {...requiredProps}>children</WuiModalHeaderTitle>
   );
   expect(render(component)).toMatchSnapshot();
 });

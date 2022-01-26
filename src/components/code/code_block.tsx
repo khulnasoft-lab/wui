@@ -20,13 +20,13 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
-import { EuiCodeBlockImpl } from './_code_block';
-import { EuiCodeSharedProps } from './code';
+import { WuiCodeBlockImpl } from './_code_block';
+import { WuiCodeSharedProps } from './code';
 
 export type PaddingSize = 'none' | 's' | 'm' | 'l';
 export type FontSize = 's' | 'm' | 'l';
 
-interface OwnProps extends EuiCodeSharedProps {
+interface OwnProps extends WuiCodeSharedProps {
   inline?: false;
   paddingSize?: PaddingSize;
   fontSize?: FontSize;
@@ -34,13 +34,13 @@ interface OwnProps extends EuiCodeSharedProps {
   isCopyable?: boolean;
 }
 
-export type EuiCodeBlockProps = CommonProps &
+export type WuiCodeBlockProps = CommonProps &
   OwnProps &
   HTMLAttributes<HTMLElement>;
 
-export const EuiCodeBlock: FunctionComponent<EuiCodeBlockProps> = ({
+export const WuiCodeBlock: FunctionComponent<WuiCodeBlockProps> = ({
   inline,
   ...rest
 }) => {
-  return <EuiCodeBlockImpl inline={false} {...rest} />;
+  return <WuiCodeBlockImpl inline={false} {...rest} />;
 };

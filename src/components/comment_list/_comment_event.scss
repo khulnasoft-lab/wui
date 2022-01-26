@@ -1,16 +1,16 @@
-@include euiPanel($selector: '.euiCommentEvent--regular');
+@include wuiPanel($selector: '.wuiCommentEvent--regular');
 
-.euiCommentEvent {
+.wuiCommentEvent {
   overflow: hidden;
 }
 
-.euiCommentEvent__header {
-  line-height: $euiLineHeight;
+.wuiCommentEvent__header {
+  line-height: $wuiLineHeight;
   display: flex;
   align-items: center;
 }
 
-.euiCommentEvent__headerData {
+.wuiCommentEvent__headerData {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -20,17 +20,17 @@
   }
 }
 
-.euiCommentEvent__headerUsername {
-  font-weight: $euiFontWeightSemiBold;
+.wuiCommentEvent__headerUsername {
+  font-weight: $wuiFontWeightSemiBold;
 }
 
-.euiCommentEvent--regular {
-  border: $euiBorderThin;
+.wuiCommentEvent--regular {
+  border: $wuiBorderThin;
 
-  .euiCommentEvent__header {
+  .wuiCommentEvent__header {
     min-height: $euiSizeXXL;
-    background-color: $euiColorLightestShade;
-    border-bottom: $euiBorderThin;
+    background-color: $wuiColorLightestShade;
+    border-bottom: $wuiBorderThin;
     padding: $euiSizeXS $euiSizeS;
 
     /**
@@ -49,27 +49,27 @@
     }
   }
 
-  .euiCommentEvent__headerData {
+  .wuiCommentEvent__headerData {
     // Push the actions far right
     flex-grow: 1;
   }
 
-  .euiCommentEvent__body {
+  .wuiCommentEvent__body {
     padding: $euiSizeS;
   }
 }
 
-.euiCommentEvent--update {
-  .euiCommentEvent__header {
+.wuiCommentEvent--update {
+  .wuiCommentEvent__header {
     justify-content: flex-start;
     padding: $euiSizeXS 0;
   }
 
-  .euiCommentEvent__headerData {
+  .wuiCommentEvent__headerData {
     padding-right: $euiSizeS;
   }
 
-  .euiCommentEvent__body {
+  .wuiCommentEvent__body {
     padding-top: $euiSizeXS;
   }
 }

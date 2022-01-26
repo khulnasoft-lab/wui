@@ -25,14 +25,14 @@ import {
   stopThrowingReactWarnings,
 } from '../../test';
 
-import { EuiFlexItem, GROW_SIZES } from './flex_item';
+import { WuiFlexItem, GROW_SIZES } from './flex_item';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
 
-describe('EuiFlexItem', () => {
+describe('WuiFlexItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiFlexItem {...requiredProps} />);
+    const component = render(<WuiFlexItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -40,7 +40,7 @@ describe('EuiFlexItem', () => {
   describe('grow', () => {
     GROW_SIZES.concat([true, false]).forEach(value => {
       test(`${value} is rendered`, () => {
-        const component = render(<EuiFlexItem grow={value} />);
+        const component = render(<WuiFlexItem grow={value} />);
 
         expect(component).toMatchSnapshot();
       });

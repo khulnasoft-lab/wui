@@ -3,22 +3,22 @@ import React, { Fragment } from 'react';
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiDataGrid, EuiCodeBlock, EuiCode } from '../../../../src/components';
+import { WuiDataGrid, WuiCodeBlock, WuiCode } from '../../../../src/components';
 
 import DataGridControlColumns from './control_columns';
 const dataGridControlColumnsSource = require('!!raw-loader!./control_columns');
 const dataGridControlColumnsHtml = renderToHtml(DataGridControlColumns);
 
-import { EuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
+import { WuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-const gridSnippet = `<EuiDataGrid
+const gridSnippet = `<WuiDataGrid
   {...usualProps}
   leadingControlColumns={[
     {
       id: 'selection',
       width: 31,
       headerCellRender: () => <span>Select a Row</span>,
-      rowCellRender: () => <div><EuiSelectBox ... /></div>,
+      rowCellRender: () => <div><WuiSelectBox ... /></div>,
     },
   ]}
   trailingControlColumns={[
@@ -56,26 +56,26 @@ export const DataGridControlColumnsExample = {
           </p>
           <p>
             These custom columns are defined by passing an array of
-            EuiDataGridControlColumn objects (see <em>Props</em> tab below) to{' '}
-            <EuiCode>leadingControlColumns</EuiCode> and/or{' '}
-            <EuiCode>trailingControlColumns</EuiCode>.
+            WuiDataGridControlColumn objects (see <em>Props</em> tab below) to{' '}
+            <WuiCode>leadingControlColumns</WuiCode> and/or{' '}
+            <WuiCode>trailingControlColumns</WuiCode>.
           </p>
           <p>
-            As with the data grid&apos;s <EuiCode>renderCellValue</EuiCode>, the
-            control columns&apos; <EuiCode>headerCellRender</EuiCode> and{' '}
-            <EuiCode>rowCellRender</EuiCode> props are treated as React
+            As with the data grid&apos;s <WuiCode>renderCellValue</WuiCode>, the
+            control columns&apos; <WuiCode>headerCellRender</WuiCode> and{' '}
+            <WuiCode>rowCellRender</WuiCode> props are treated as React
             components.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <WuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridControlColumns },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridControlColumn,
+        WuiDataGrid,
+        WuiDataGridControlColumn,
       },
       demo: <DataGridControlColumns />,
     },

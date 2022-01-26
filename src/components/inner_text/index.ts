@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { useInnerText, EuiInnerText } from './inner_text';
+export { useInnerText, WuiInnerText } from './inner_text';
 export { useRenderToText } from './render_to_text';

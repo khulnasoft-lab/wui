@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiNotificationBadge, COLORS, SIZES } from './badge_notification';
+import { WuiNotificationBadge, COLORS, SIZES } from './badge_notification';
 
-describe('EuiNotificationBadge', () => {
+describe('WuiNotificationBadge', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationBadge {...requiredProps}>5</EuiNotificationBadge>
+      <WuiNotificationBadge {...requiredProps}>5</WuiNotificationBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiNotificationBadge', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiNotificationBadge color={color}>5</EuiNotificationBadge>
+            <WuiNotificationBadge color={color}>5</WuiNotificationBadge>
           );
 
           expect(component).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('EuiNotificationBadge', () => {
       SIZES.forEach(size => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiNotificationBadge size={size}>5</EuiNotificationBadge>
+            <WuiNotificationBadge size={size}>5</WuiNotificationBadge>
           );
 
           expect(component).toMatchSnapshot();

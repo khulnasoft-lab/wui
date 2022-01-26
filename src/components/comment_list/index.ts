@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiComment, EuiCommentProps } from './comment';
+export { WuiComment, WuiCommentProps } from './comment';
 
-export { EuiCommentEvent, EuiCommentType } from './comment_event';
+export { WuiCommentEvent, WuiCommentType } from './comment_event';
 
-export { EuiCommentTimeline } from './comment_timeline';
+export { WuiCommentTimeline } from './comment_timeline';
 
-export { EuiCommentList, EuiCommentListProps } from './comment_list';
+export { WuiCommentList, WuiCommentListProps } from './comment_list';

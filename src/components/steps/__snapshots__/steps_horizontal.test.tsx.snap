@@ -1,36 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiStepsHorizontal is rendered 1`] = `
+exports[`WuiStepsHorizontal is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiStepsHorizontal testClass1 testClass2"
+  class="wuiStepsHorizontal testClass1 testClass2"
   data-test-subj="test subject string"
   role="tablist"
 >
   <div
     aria-disabled="false"
     aria-selected="false"
-    class="euiStepHorizontal euiStepHorizontal-isComplete"
+    class="wuiStepHorizontal wuiStepHorizontal-isComplete"
     role="tab"
     tabindex="0"
     title="Step 1: Completed Step 1 is complete"
   >
     <div
-      class="euiScreenReaderOnly"
+      class="wuiScreenReaderOnly"
     >
       Step
     </div>
     <div
-      class="euiStepNumber euiStepNumber--complete euiStepHorizontal__number"
+      class="wuiStepNumber wuiStepNumber--complete wuiStepHorizontal__number"
     >
       <div
         aria-label="complete"
-        class="euiStepNumber__icon"
-        data-euiicon-type="check"
+        class="wuiStepNumber__icon"
+        data-wuiicon-type="check"
       />
     </div>
     <div
-      class="euiStepHorizontal__title"
+      class="wuiStepHorizontal__title"
     >
       Completed Step 1
     </div>
@@ -38,23 +38,23 @@ exports[`EuiStepsHorizontal is rendered 1`] = `
   <div
     aria-disabled="false"
     aria-selected="true"
-    class="euiStepHorizontal euiStepHorizontal-isSelected"
+    class="wuiStepHorizontal wuiStepHorizontal-isSelected"
     role="tab"
     tabindex="0"
     title="Step 2: Selected Step 2"
   >
     <div
-      class="euiScreenReaderOnly"
+      class="wuiScreenReaderOnly"
     >
       Step
     </div>
     <div
-      class="euiStepNumber euiStepHorizontal__number"
+      class="wuiStepNumber wuiStepHorizontal__number"
     >
       2
     </div>
     <div
-      class="euiStepHorizontal__title"
+      class="wuiStepHorizontal__title"
     >
       Selected Step 2
     </div>
@@ -62,23 +62,23 @@ exports[`EuiStepsHorizontal is rendered 1`] = `
   <div
     aria-disabled="false"
     aria-selected="false"
-    class="euiStepHorizontal euiStepHorizontal-isIncomplete"
+    class="wuiStepHorizontal wuiStepHorizontal-isIncomplete"
     role="tab"
     tabindex="0"
     title="Step 3: Incomplete Step 3"
   >
     <div
-      class="euiScreenReaderOnly"
+      class="wuiScreenReaderOnly"
     >
       Step
     </div>
     <div
-      class="euiStepNumber euiStepNumber--incomplete euiStepHorizontal__number"
+      class="wuiStepNumber wuiStepNumber--incomplete wuiStepHorizontal__number"
     >
       3
     </div>
     <div
-      class="euiStepHorizontal__title"
+      class="wuiStepHorizontal__title"
     >
       Incomplete Step 3
     </div>
@@ -86,23 +86,23 @@ exports[`EuiStepsHorizontal is rendered 1`] = `
   <div
     aria-disabled="true"
     aria-selected="false"
-    class="euiStepHorizontal euiStepHorizontal-isIncomplete euiStepHorizontal-isDisabled"
+    class="wuiStepHorizontal wuiStepHorizontal-isIncomplete wuiStepHorizontal-isDisabled"
     role="tab"
     tabindex="-1"
     title="Step 4: Disabled Step 4 is disabled"
   >
     <div
-      class="euiScreenReaderOnly"
+      class="wuiScreenReaderOnly"
     >
       Step
     </div>
     <div
-      class="euiStepNumber euiStepNumber--disabled euiStepHorizontal__number"
+      class="wuiStepNumber wuiStepNumber--disabled wuiStepHorizontal__number"
     >
       4
     </div>
     <div
-      class="euiStepHorizontal__title"
+      class="wuiStepHorizontal__title"
     >
       Disabled Step 4
     </div>

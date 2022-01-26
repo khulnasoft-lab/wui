@@ -21,7 +21,7 @@ import React, { FunctionComponent, TableHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export interface EuiTableProps
+export interface WuiTableProps
   extends CommonProps,
     TableHTMLAttributes<HTMLTableElement> {
   compressed?: boolean;
@@ -34,10 +34,10 @@ export interface EuiTableProps
 
 const tableLayoutToClassMap: { [tableLayout: string]: string | null } = {
   fixed: null,
-  auto: 'euiTable--auto',
+  auto: 'wuiTable--auto',
 };
 
-export const EuiTable: FunctionComponent<EuiTableProps> = ({
+export const WuiTable: FunctionComponent<WuiTableProps> = ({
   children,
   className,
   compressed,
@@ -46,11 +46,11 @@ export const EuiTable: FunctionComponent<EuiTableProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTable',
+    'wuiTable',
     className,
     {
-      'euiTable--compressed': compressed,
-      'euiTable--responsive': responsive,
+      'wuiTable--compressed': compressed,
+      'wuiTable--responsive': responsive,
     },
     tableLayoutToClassMap[tableLayout]
   );

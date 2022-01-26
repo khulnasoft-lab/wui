@@ -27,18 +27,18 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  EuiDataGridCellValueElementProps,
-  EuiDataGridCellProps,
+  WuiDataGridCellValueElementProps,
+  WuiDataGridCellProps,
 } from './data_grid_cell';
-import { EuiDataGridColumn, EuiDataGridInMemory } from './data_grid_types';
+import { WuiDataGridColumn, WuiDataGridInMemory } from './data_grid_types';
 import { enqueueStateChange } from '../../services/react';
-import { EuiMutationObserver } from '../observer/mutation_observer';
+import { WuiMutationObserver } from '../observer/mutation_observer';
 
-export interface EuiDataGridInMemoryRendererProps {
-  inMemory: EuiDataGridInMemory;
-  columns: EuiDataGridColumn[];
+export interface WuiDataGridInMemoryRendererProps {
+  inMemory: WuiDataGridInMemory;
+  columns: WuiDataGridColumn[];
   rowCount: number;
-  renderCellValue: EuiDataGridCellProps['renderCellValue'];
+  renderCellValue: WuiDataGridCellProps['renderCellValue'];
   onCellRender: (rowIndex: number, columnId: string, value: string) => void;
 }
 
@@ -52,7 +52,7 @@ function getElementText(element: HTMLElement) {
       element.textContent || undefined;
 }
 
-export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryRendererProps> = ({
+export const WuiDataGridInMemoryRenderer: FunctionComponent<WuiDataGridInMemoryRendererProps> = ({
   inMemory,
   columns,
   rowCount,
@@ -63,7 +63,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
 
   const cells = useMemo(() => {
     const CellElement = renderCellValue as JSXElementConstructor<
-      EuiDataGridCellValueElementProps
+      WuiDataGridCellValueElementProps
     >;
 
     const cells = [];
@@ -148,7 +148,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
   }, [onCellRender, cells]);
 
   return createPortal(
-    <EuiMutationObserver
+    <WuiMutationObserver
       onMutation={onMutation}
       observerOptions={{
         characterData: true,
@@ -157,7 +157,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
         childList: true,
       }}>
       {ref => <div ref={ref}>{cells}</div>}
-    </EuiMutationObserver>,
+    </WuiMutationObserver>,
     (documentFragment as unknown) as Element
   );
 };

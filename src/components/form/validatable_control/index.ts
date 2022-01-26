@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiValidatableControl,
-  EuiValidatableControlProps,
+  WuiValidatableControl,
+  WuiValidatableControlProps,
 } from './validatable_control';

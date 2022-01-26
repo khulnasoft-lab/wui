@@ -17,11 +17,11 @@
  * under the License.
  */
 
-export { EuiTour, EuiTourProps } from './tour';
-export { EuiTourStep, EuiTourStepProps } from './tour_step';
+export { WuiTour, WuiTourProps } from './tour';
+export { WuiTourStep, WuiTourStepProps } from './tour_step';
 export {
-  EuiTourStepIndicator,
-  EuiTourStepIndicatorProps,
+  WuiTourStepIndicator,
+  WuiTourStepIndicatorProps,
 } from './tour_step_indicator';
-export { useEuiTour, EuiStatelessTourStep } from './useEuiTour';
+export { useWuiTour, WuiStatelessTourStep } from './useWuiTour';
 export * from './types';

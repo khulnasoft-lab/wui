@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFieldText, EuiFieldTextProps } from './field_text';
+export { WuiFieldText, WuiFieldTextProps } from './field_text';

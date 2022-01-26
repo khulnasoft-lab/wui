@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  WuiPinnableListGroup,
+  WuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
 
-const someListItems: EuiPinnableListGroupItemProps[] = [
+const someListItems: WuiPinnableListGroupItemProps[] = [
   {
     label: 'Label with iconType',
     iconType: 'stop',
@@ -42,14 +42,14 @@ const someListItems: EuiPinnableListGroupItemProps[] = [
 
 export default () => (
   <>
-    <EuiPinnableListGroup
+    <WuiPinnableListGroup
       listItems={someListItems}
       onPinClick={item => {
         console.warn('Clicked: ', item);
       }}
       maxWidth="none"
-      pinTitle={(item: EuiPinnableListGroupItemProps) => `Pin ${item.label}`}
-      unpinTitle={(item: EuiPinnableListGroupItemProps) =>
+      pinTitle={(item: WuiPinnableListGroupItemProps) => `Pin ${item.label}`}
+      unpinTitle={(item: WuiPinnableListGroupItemProps) =>
         `Unpin ${item.label}`
       }
     />

@@ -19,18 +19,18 @@
 
 import React, { Component, Fragment } from 'react';
 
-import { EuiButtonEmpty } from '../../../button';
-import { EuiIcon } from '../../../icon';
-import { EuiPopover } from '../../../popover';
-import { EuiTitle } from '../../../title';
-import { EuiSpacer } from '../../../spacer';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
-import { EuiText } from '../../../text';
+import { WuiButtonEmpty } from '../../../button';
+import { WuiIcon } from '../../../icon';
+import { WuiPopover } from '../../../popover';
+import { WuiTitle } from '../../../title';
+import { WuiSpacer } from '../../../spacer';
+import { WuiHorizontalRule } from '../../../horizontal_rule';
+import { WuiText } from '../../../text';
 
-import { EuiQuickSelect } from './quick_select';
-import { EuiCommonlyUsedTimeRanges } from './commonly_used_time_ranges';
-import { EuiRecentlyUsed } from './recently_used';
-import { EuiRefreshInterval } from './refresh_interval';
+import { WuiQuickSelect } from './quick_select';
+import { WuiCommonlyUsedTimeRanges } from './commonly_used_time_ranges';
+import { WuiRecentlyUsed } from './recently_used';
+import { WuiRefreshInterval } from './refresh_interval';
 import {
   DurationRange,
   ApplyRefreshInterval,
@@ -39,7 +39,7 @@ import {
   QuickSelectPanel,
 } from '../../types';
 
-export interface EuiQuickSelectPopoverProps {
+export interface WuiQuickSelectPopoverProps {
   applyRefreshInterval?: ApplyRefreshInterval;
   applyTime: ApplyTime;
   commonlyUsedRanges: DurationRange[];
@@ -54,16 +54,16 @@ export interface EuiQuickSelectPopoverProps {
   start: string;
 }
 
-interface EuiQuickSelectPopoverState {
+interface WuiQuickSelectPopoverState {
   isOpen: boolean;
   prevQuickSelect?: QuickSelect;
 }
 
-export class EuiQuickSelectPopover extends Component<
-  EuiQuickSelectPopoverProps,
-  EuiQuickSelectPopoverState
+export class WuiQuickSelectPopover extends Component<
+  WuiQuickSelectPopoverProps,
+  WuiQuickSelectPopoverState
 > {
-  state: EuiQuickSelectPopoverState = {
+  state: WuiQuickSelectPopoverState = {
     isOpen: false,
   };
 
@@ -112,17 +112,17 @@ export class EuiQuickSelectPopover extends Component<
 
     return (
       <Fragment>
-        <EuiQuickSelect
+        <WuiQuickSelect
           applyTime={this.applyTime}
           start={start}
           end={end}
           prevQuickSelect={prevQuickSelect}
         />
-        <EuiCommonlyUsedTimeRanges
+        <WuiCommonlyUsedTimeRanges
           applyTime={this.applyTime}
           commonlyUsedRanges={commonlyUsedRanges}
         />
-        <EuiRecentlyUsed
+        <WuiRecentlyUsed
           applyTime={this.applyTime}
           commonlyUsedRanges={commonlyUsedRanges}
           dateFormat={dateFormat}
@@ -142,14 +142,14 @@ export class EuiQuickSelectPopover extends Component<
     return customQuickSelectPanels.map(({ title, content }) => {
       return (
         <Fragment key={title}>
-          <EuiTitle size="xxxs">
+          <WuiTitle size="xxxs">
             <span>{title}</span>
-          </EuiTitle>
-          <EuiSpacer size="s" />
-          <EuiText size="s" className="euiQuickSelectPopover__section">
+          </WuiTitle>
+          <WuiSpacer size="s" />
+          <WuiText size="s" className="wuiQuickSelectPopover__section">
             {React.cloneElement(content, { applyTime: this.applyTime })}
-          </EuiText>
-          <EuiHorizontalRule margin="s" />
+          </WuiText>
+          <WuiHorizontalRule margin="s" />
         </Fragment>
       );
     });
@@ -166,9 +166,9 @@ export class EuiQuickSelectPopover extends Component<
     const { isOpen } = this.state;
 
     const quickSelectButton = (
-      <EuiButtonEmpty
-        className="euiFormControlLayout__prepend"
-        textProps={{ className: 'euiQuickSelectPopover__buttonText' }}
+      <WuiButtonEmpty
+        className="wuiFormControlLayout__prepend"
+        textProps={{ className: 'wuiQuickSelectPopover__buttonText' }}
         onClick={this.togglePopover}
         aria-label="Date quick select"
         size="xs"
@@ -176,30 +176,30 @@ export class EuiQuickSelectPopover extends Component<
         iconSide="right"
         isDisabled={isDisabled}
         data-test-subj="superDatePickerToggleQuickMenuButton">
-        <EuiIcon type={!isAutoRefreshOnly && isPaused ? 'calendar' : 'clock'} />
-      </EuiButtonEmpty>
+        <WuiIcon type={!isAutoRefreshOnly && isPaused ? 'calendar' : 'clock'} />
+      </WuiButtonEmpty>
     );
 
     return (
-      <EuiPopover
+      <WuiPopover
         id="QuickSelectPopover"
         button={quickSelectButton}
         isOpen={isOpen}
         closePopover={this.closePopover}
         anchorPosition="downLeft"
-        anchorClassName="euiQuickSelectPopover__anchor"
+        anchorClassName="wuiQuickSelectPopover__anchor"
         ownFocus>
         <div
-          className="euiQuickSelectPopover__content"
+          className="wuiQuickSelectPopover__content"
           data-test-subj="superDatePickerQuickMenu">
           {this.renderDateTimeSections()}
-          <EuiRefreshInterval
+          <WuiRefreshInterval
             applyRefreshInterval={applyRefreshInterval}
             isPaused={isPaused}
             refreshInterval={refreshInterval}
           />
         </div>
-      </EuiPopover>
+      </WuiPopover>
     );
   }
 }

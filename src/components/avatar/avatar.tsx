@@ -22,28 +22,28 @@ import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
 import { isColorDark, hexToRgb, isValidHex } from '../../services/color';
-import { euiPaletteColorBlindBehindText, toInitials } from '../../services';
+import { wuiPaletteColorBlindBehindText, toInitials } from '../../services';
 
 const sizeToClassNameMap = {
   none: null,
-  s: 'euiAvatar--s',
-  m: 'euiAvatar--m',
-  l: 'euiAvatar--l',
-  xl: 'euiAvatar--xl',
+  s: 'wuiAvatar--s',
+  m: 'wuiAvatar--m',
+  l: 'wuiAvatar--l',
+  xl: 'wuiAvatar--xl',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
-export type EuiAvatarSize = keyof typeof sizeToClassNameMap;
+export type WuiAvatarSize = keyof typeof sizeToClassNameMap;
 
 const typeToClassNameMap = {
-  space: 'euiAvatar--space',
-  user: 'euiAvatar--user',
+  space: 'wuiAvatar--space',
+  user: 'wuiAvatar--user',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiAvatarType = keyof typeof typeToClassNameMap;
+export type WuiAvatarType = keyof typeof typeToClassNameMap;
 
-export type EuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
+export type WuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
   CommonProps & {
     /**
      * Full name of avatar for title attribute and calculating initial if not provided
@@ -70,12 +70,12 @@ export type EuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
     /**
      * The type of avatar this is displaying
      */
-    type?: EuiAvatarType;
+    type?: WuiAvatarType;
     imageUrl?: string;
-    size?: EuiAvatarSize;
+    size?: WuiAvatarSize;
   };
 
-export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
+export const WuiAvatar: FunctionComponent<WuiAvatarProps> = ({
   className,
   color,
   imageUrl,
@@ -86,10 +86,10 @@ export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
   type = 'user',
   ...rest
 }) => {
-  const visColors = euiPaletteColorBlindBehindText();
+  const visColors = wuiPaletteColorBlindBehindText();
 
   const classes = classNames(
-    'euiAvatar',
+    'wuiAvatar',
     sizeToClassNameMap[size],
     typeToClassNameMap[type],
     className
@@ -130,21 +130,21 @@ export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
 };
 
 // TODO: Migrate to a service
-export const checkValidColor = (color: EuiAvatarProps['color']) => {
+export const checkValidColor = (color: WuiAvatarProps['color']) => {
   const validHex = color && isValidHex(color);
   if (color && !validHex) {
     throw new Error(
-      'EuiAvatar needs to pass a valid color. This can either be a three ' +
+      'WuiAvatar needs to pass a valid color. This can either be a three ' +
         'or six character hex value'
     );
   }
 };
 
-function checkValidInitials(initials: EuiAvatarProps['initials']) {
+function checkValidInitials(initials: WuiAvatarProps['initials']) {
   // Must be a string of 1 or 2 characters
   if (initials && initials.length > 2) {
     console.warn(
-      'EuiAvatar only accepts a max of 2 characters for the initials as a string. It is displaying only the first 2 characters.'
+      'WuiAvatar only accepts a max of 2 characters for the initials as a string. It is displaying only the first 2 characters.'
     );
   }
 }

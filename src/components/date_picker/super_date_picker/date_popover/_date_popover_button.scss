@@ -1,49 +1,49 @@
-.euiDatePopoverButton {
-  @include euiSuperDatePickerText;
+.wuiDatePopoverButton {
+  @include wuiSuperDatePickerText;
   background-size: 100%; // For the bottom "border" via background-image
 
   &:focus,
   &-isSelected {
-    background-image: euiFormControlGradient();
+    background-image: wuiFormControlGradient();
   }
 
   &-needsUpdating {
-    $backgroundColor: tintOrShade($euiColorSuccess, 90%, 70%);
-    $textColor: makeHighContrastColor($euiColorSuccess, $backgroundColor);
+    $backgroundColor: tintOrShade($wuiColorSuccess, 90%, 70%);
+    $textColor: makeHighContrastColor($wuiColorSuccess, $backgroundColor);
 
     background-color: $backgroundColor;
     color: $textColor;
 
     &:focus,
-    &.euiDatePopoverButton-isSelected {
-      background-image: euiFormControlGradient($euiColorSuccess);
+    &.wuiDatePopoverButton-isSelected {
+      background-image: wuiFormControlGradient($wuiColorSuccess);
     }
   }
 
   &-isInvalid {
-    $backgroundColor: tintOrShade($euiColorDanger, 90%, 70%);
-    $textColor: makeHighContrastColor($euiColorDanger, $backgroundColor);
+    $backgroundColor: tintOrShade($wuiColorDanger, 90%, 70%);
+    $textColor: makeHighContrastColor($wuiColorDanger, $backgroundColor);
 
     background-color: $backgroundColor;
     color: $textColor;
 
     &:focus,
-    &.euiDatePopoverButton-isSelected {
-      background-image: euiFormControlGradient($euiColorDanger);
+    &.wuiDatePopoverButton-isSelected {
+      background-image: wuiFormControlGradient($wuiColorDanger);
     }
   }
 
   &:disabled {
-    background-color: $euiFormBackgroundDisabledColor;
+    background-color: $wuiFormBackgroundDisabledColor;
     color: $euiColorDarkShade;
     cursor: default;
   }
 }
 
-.euiDatePopoverButton--start {
+.wuiDatePopoverButton--start {
   text-align: right;
 }
 
-.euiDatePopoverButton--end {
+.wuiDatePopoverButton--end {
   text-align: left;
 }

@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableHeader } from './table_header';
+import { WuiTableHeader } from './table_header';
 
-describe('EuiTableHeader', () => {
+describe('WuiTableHeader', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTableHeader {...requiredProps}>children</EuiTableHeader>
+      <WuiTableHeader {...requiredProps}>children</WuiTableHeader>
     );
 
     expect(component).toMatchSnapshot();

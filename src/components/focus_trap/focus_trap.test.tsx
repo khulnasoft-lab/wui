@@ -22,16 +22,16 @@ import { render, mount } from 'enzyme';
 
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
-import { EuiEvent } from '../outside_click_detector/outside_click_detector';
-import { EuiFocusTrap } from './focus_trap';
-import { EuiPortal } from '../portal';
+import { WuiEvent } from '../outside_click_detector/outside_click_detector';
+import { WuiFocusTrap } from './focus_trap';
+import { WuiPortal } from '../portal';
 
-describe('EuiFocusTrap', () => {
+describe('WuiFocusTrap', () => {
   test('is rendered', () => {
     const component = mount(
-      <EuiFocusTrap>
+      <WuiFocusTrap>
         <div />
-      </EuiFocusTrap>
+      </WuiFocusTrap>
     );
 
     expect(
@@ -41,9 +41,9 @@ describe('EuiFocusTrap', () => {
 
   test('can be disabled', () => {
     const component = render(
-      <EuiFocusTrap disabled>
+      <WuiFocusTrap disabled>
         <div />
-      </EuiFocusTrap>
+      </WuiFocusTrap>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,9 +51,9 @@ describe('EuiFocusTrap', () => {
 
   test('accepts className and style', () => {
     const component = render(
-      <EuiFocusTrap className="testing" style={{ height: '100%' }}>
+      <WuiFocusTrap className="testing" style={{ height: '100%' }}>
         <div />
-      </EuiFocusTrap>
+      </WuiFocusTrap>
     );
 
     expect(component).toMatchSnapshot();
@@ -65,12 +65,12 @@ describe('EuiFocusTrap', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap>
+            <WuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
           </div>
         );
 
@@ -83,12 +83,12 @@ describe('EuiFocusTrap', () => {
         mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap autoFocus={false}>
+            <WuiFocusTrap autoFocus={false}>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
           </div>
         );
 
@@ -99,12 +99,12 @@ describe('EuiFocusTrap', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap>
+            <WuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-autofocus data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
           </div>
         );
 
@@ -119,18 +119,18 @@ describe('EuiFocusTrap', () => {
       // but that's where the click detector listener is,
       // pass the top-level mounted component's click event on to document
       const triggerDocumentMouseDown: EventHandler<any> = (
-        e: React.MouseEvent<any, EuiEvent>
+        e: React.MouseEvent<any, WuiEvent>
       ) => {
-        const event = new Event('mousedown') as EuiEvent;
-        event.euiGeneratedBy = e.nativeEvent.euiGeneratedBy;
+        const event = new Event('mousedown') as WuiEvent;
+        event.wuiGeneratedBy = e.nativeEvent.wuiGeneratedBy;
         document.dispatchEvent(event);
       };
 
       const triggerDocumentMouseUp: EventHandler<any> = (
-        e: React.MouseEvent<any, EuiEvent>
+        e: React.MouseEvent<any, WuiEvent>
       ) => {
-        const event = new Event('mouseup') as EuiEvent;
-        event.euiGeneratedBy = e.nativeEvent.euiGeneratedBy;
+        const event = new Event('mouseup') as WuiEvent;
+        event.wuiGeneratedBy = e.nativeEvent.wuiGeneratedBy;
         document.dispatchEvent(event);
       };
 
@@ -139,12 +139,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap>
+            <WuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -169,12 +169,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <WuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -195,15 +195,15 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <WuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
-                <EuiPortal>
+                <WuiPortal>
                   <input data-test-subj="input3" />
-                </EuiPortal>
+                </WuiPortal>
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -224,12 +224,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <WuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </WuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );

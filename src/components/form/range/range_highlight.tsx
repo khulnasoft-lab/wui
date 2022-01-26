@@ -20,7 +20,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeHighlightProps {
+export interface WuiRangeHighlightProps {
   className?: string;
   background?: string;
   compressed?: boolean;
@@ -33,7 +33,7 @@ export interface EuiRangeHighlightProps {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export const EuiRangeHighlight: FunctionComponent<EuiRangeHighlightProps> = ({
+export const WuiRangeHighlight: FunctionComponent<WuiRangeHighlightProps> = ({
   className,
   hasFocus,
   showTicks,
@@ -56,16 +56,16 @@ export const EuiRangeHighlight: FunctionComponent<EuiRangeHighlightProps> = ({
   };
 
   const classes = classNames(
-    'euiRangeHighlight',
+    'wuiRangeHighlight',
     {
-      'euiRangeHighlight--hasTicks': showTicks,
-      'euiRangeHighlight--compressed': compressed,
+      'wuiRangeHighlight--hasTicks': showTicks,
+      'wuiRangeHighlight--compressed': compressed,
     },
     className
   );
 
-  const progressClasses = classNames('euiRangeHighlight__progress', {
-    'euiRangeHighlight__progress--hasFocus': hasFocus,
+  const progressClasses = classNames('wuiRangeHighlight__progress', {
+    'wuiRangeHighlight__progress--hasFocus': hasFocus,
   });
 
   return (

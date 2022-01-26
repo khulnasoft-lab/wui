@@ -36,24 +36,24 @@ export const insertPositions: InsertPositionsMap = {
   before: 'beforebegin',
 };
 
-export const INSERT_POSITIONS: EuiPortalInsertPosition[] = keysOf(
+export const INSERT_POSITIONS: WuiPortalInsertPosition[] = keysOf(
   insertPositions
 );
 
-type EuiPortalInsertPosition = keyof typeof insertPositions;
+type WuiPortalInsertPosition = keyof typeof insertPositions;
 
-interface EuiPortalProps {
+interface WuiPortalProps {
   /**
    * ReactNode to render as this component's content
    */
   children: React.ReactNode;
-  insert?: { sibling: HTMLElement; position: EuiPortalInsertPosition };
+  insert?: { sibling: HTMLElement; position: WuiPortalInsertPosition };
   portalRef?: (ref: HTMLDivElement | null) => void;
 }
 
-export class EuiPortal extends React.Component<EuiPortalProps> {
+export class WuiPortal extends React.Component<WuiPortalProps> {
   portalNode: HTMLDivElement;
-  constructor(props: EuiPortalProps) {
+  constructor(props: WuiPortalProps) {
     super(props);
 
     const { insert } = this.props;

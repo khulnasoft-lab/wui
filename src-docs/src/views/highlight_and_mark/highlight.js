@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiHighlight,
-  EuiFieldSearch,
-  EuiFormRow,
-  EuiSpacer,
-  EuiSwitch,
+  WuiHighlight,
+  WuiFieldSearch,
+  WuiFormRow,
+  WuiSpacer,
+  WuiSwitch,
 } from '../../../../src/components';
 
 export function Highlight() {
@@ -21,25 +21,25 @@ export function Highlight() {
 
   return (
     <Fragment>
-      <EuiFormRow label="Enter text to highlight substrings within a string">
-        <EuiFieldSearch
+      <WuiFormRow label="Enter text to highlight substrings within a string">
+        <WuiFieldSearch
           value={searchValue}
           onChange={e => {
             onSearchChange(e);
           }}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
-      <EuiSwitch
+      <WuiSpacer size="m" />
+      <WuiSwitch
         label="Highlight all"
         checked={isHighlightAll}
         onChange={e => changeHighlightAll(e)}
       />
-      <EuiSpacer size="m" />
-      <EuiHighlight search={searchValue} highlightAll={isHighlightAll}>
+      <WuiSpacer size="m" />
+      <WuiHighlight search={searchValue} highlightAll={isHighlightAll}>
         The quick brown fox jumped over the lazy dog
-      </EuiHighlight>
+      </WuiHighlight>
     </Fragment>
   );
 }

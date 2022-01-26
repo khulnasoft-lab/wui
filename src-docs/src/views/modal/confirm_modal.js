@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiConfirmModal,
-  EuiOverlayMask,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButton,
+  WuiConfirmModal,
+  WuiOverlayMask,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -33,8 +33,8 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiOverlayMask>
-        <EuiConfirmModal
+      <WuiOverlayMask>
+        <WuiConfirmModal
           title="Do this thing"
           onCancel={closeModal}
           onConfirm={closeModal}
@@ -43,8 +43,8 @@ export default () => {
           defaultFocusedButton="confirm">
           <p>You&rsquo;re about to do something.</p>
           <p>Are you sure you want to do this?</p>
-        </EuiConfirmModal>
-      </EuiOverlayMask>
+        </WuiConfirmModal>
+      </WuiOverlayMask>
     );
   }
 
@@ -52,8 +52,8 @@ export default () => {
 
   if (isDestroyModalVisible) {
     destroyModal = (
-      <EuiOverlayMask>
-        <EuiConfirmModal
+      <WuiOverlayMask>
+        <WuiConfirmModal
           title="Do this destructive thing"
           onCancel={closeDestroyModal}
           onConfirm={closeDestroyModal}
@@ -63,8 +63,8 @@ export default () => {
           defaultFocusedButton="confirm">
           <p>You&rsquo;re about to destroy something.</p>
           <p>Are you sure you want to do this?</p>
-        </EuiConfirmModal>
-      </EuiOverlayMask>
+        </WuiConfirmModal>
+      </WuiOverlayMask>
     );
   }
 
@@ -72,8 +72,8 @@ export default () => {
 
   if (isEmptyModalVisible) {
     emptyModal = (
-      <EuiOverlayMask>
-        <EuiConfirmModal
+      <WuiOverlayMask>
+        <WuiConfirmModal
           title="Do this thing"
           onCancel={closeEmptyModal}
           onConfirm={closeEmptyModal}
@@ -81,7 +81,7 @@ export default () => {
           confirmButtonText="Yes, do it"
           defaultFocusedButton="confirm"
         />
-      </EuiOverlayMask>
+      </WuiOverlayMask>
     );
   }
 
@@ -89,8 +89,8 @@ export default () => {
 
   if (isButtonDisabledModalVisible) {
     buttonDisabledModal = (
-      <EuiOverlayMask>
-        <EuiConfirmModal
+      <WuiOverlayMask>
+        <WuiConfirmModal
           title="My button is disabled"
           onCancel={closeButtonDisabledModal}
           onConfirm={closeButtonDisabledModal}
@@ -99,32 +99,32 @@ export default () => {
           defaultFocusedButton="cancel"
           confirmButtonDisabled={true}
         />
-      </EuiOverlayMask>
+      </WuiOverlayMask>
     );
   }
 
   return (
     <div>
-      <EuiFlexGroup wrap gutterSize="xs">
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showModal}>Show confirm modal</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showDestroyModal}>
+      <WuiFlexGroup wrap gutterSize="xs">
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={showModal}>Show confirm modal</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={showDestroyModal}>
             Show dangerous confirm modal
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showEmptyModal}>
+          </WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={showEmptyModal}>
             Show title-only confirm modal
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showButtonDisabledModal}>
+          </WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={showButtonDisabledModal}>
             Show confirm disabled confirm modal
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiButton>
+        </WuiFlexItem>
+      </WuiFlexGroup>
       {modal}
       {destroyModal}
       {emptyModal}

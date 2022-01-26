@@ -21,14 +21,14 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { findTestSubject, requiredProps } from '../../test';
 
-import { COLORS, EuiToast } from './toast';
+import { COLORS, WuiToast } from './toast';
 
-describe('EuiToast', () => {
+describe('WuiToast', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToast {...requiredProps} title="test title">
+      <WuiToast {...requiredProps} title="test title">
         <p>Hi</p>
-      </EuiToast>
+      </WuiToast>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiToast', () => {
   describe('Props', () => {
     describe('title', () => {
       test('is rendered', () => {
-        const component = <EuiToast title="toast title" />;
+        const component = <WuiToast title="toast title" />;
         expect(mount(component)).toMatchSnapshot();
       });
     });
@@ -45,7 +45,7 @@ describe('EuiToast', () => {
     describe('color', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
-          const component = <EuiToast color={color} title="test title" />;
+          const component = <WuiToast color={color} title="test title" />;
           expect(mount(component)).toMatchSnapshot();
         });
       });
@@ -53,7 +53,7 @@ describe('EuiToast', () => {
 
     describe('iconType', () => {
       test('is rendered', () => {
-        const component = <EuiToast iconType="user" title="test title" />;
+        const component = <WuiToast iconType="user" title="test title" />;
         expect(mount(component)).toMatchSnapshot();
       });
     });
@@ -63,7 +63,7 @@ describe('EuiToast', () => {
         const onCloseHandler = jest.fn();
 
         const component = mount(
-          <EuiToast onClose={onCloseHandler} title="test title" />
+          <WuiToast onClose={onCloseHandler} title="test title" />
         );
         const closeButton = findTestSubject(component, 'toastCloseButton');
         closeButton.simulate('click');

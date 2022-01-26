@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconSearch = ({ title, titleId, ...props }) => (
+const WuiIconSearch = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconSearch = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconSearch;
+export const icon = WuiIconSearch;

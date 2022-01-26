@@ -17,11 +17,11 @@
  * under the License.
  */
 
-export { EuiToast } from './toast';
+export { WuiToast } from './toast';
 
 export {
-  EuiGlobalToastList,
-  Toast as EuiGlobalToastListToast,
+  WuiGlobalToastList,
+  Toast as WuiGlobalToastListToast,
 } from './global_toast_list';
 
-export { EuiGlobalToastListItem } from './global_toast_list_item';
+export { WuiGlobalToastListItem } from './global_toast_list_item';

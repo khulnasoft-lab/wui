@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconSnowflake = ({ title, titleId, ...props }) => (
+const WuiIconSnowflake = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconSnowflake = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconSnowflake;
+export const icon = WuiIconSnowflake;

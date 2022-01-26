@@ -1,9 +1,9 @@
-.euiMarkdownEditorToolbar {
+.wuiMarkdownEditorToolbar {
   display: flex;
   flex-wrap: wrap;
-  background: $euiColorLightestShade;
-  border: $euiBorderThin;
-  border-color: $euiColorLightShade;
+  background: $wuiColorLightestShade;
+  border: $wuiBorderThin;
+  border-color: $wuiColorLightShade;
   border-bottom: none;
   padding: $euiSizeXS;
 
@@ -24,6 +24,6 @@
     display: block;
     margin-left: $euiSizeXS;
     padding-right: $euiSizeXS;
-    border-left: 1px solid $euiColorLightShade;
+    border-left: 1px solid $wuiColorLightShade;
   }
 }

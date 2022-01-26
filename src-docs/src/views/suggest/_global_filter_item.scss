@@ -4,14 +4,14 @@
   color: $euiTextColor;
 
   &:not(.globalFilterItem-isDisabled) {
-    @include euiFormControlDefaultShadow;
+    @include wuiFormControlDefaultShadow;
   }
 }
 
 .globalFilterItem-isDisabled {
-  background-color: transparentize($euiColorLightShade, .4);
+  background-color: transparentize($wuiColorLightShade, .4);
   text-decoration: line-through;
-  font-weight: $euiFontWeightRegular;
+  font-weight: $wuiFontWeightRegular;
   font-style: italic;
 }
 
@@ -25,8 +25,8 @@
     bottom: 0;
     left: 0;
     width: $euiSizeXS;
-    background-color: $euiColorSuccess;
-    border-top-left-radius: $euiBorderRadius / 2;
-    border-bottom-left-radius: $euiBorderRadius / 2;
+    background-color: $wuiColorSuccess;
+    border-top-left-radius: $wuiBorderRadius / 2;
+    border-bottom-left-radius: $wuiBorderRadius / 2;
   }
 }

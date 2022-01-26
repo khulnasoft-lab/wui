@@ -17,26 +17,26 @@
  * under the License.
  */
 
-export { EuiPage, EuiPageProps } from './page';
+export { WuiPage, WuiPageProps } from './page';
 
-export { EuiPageBody, EuiPageBodyProps } from './page_body';
+export { WuiPageBody, WuiPageBodyProps } from './page_body';
 
 export {
-  EuiPageContent,
-  EuiPageContentProps,
-  EuiPageContentBody,
-  EuiPageContentBodyProps,
-  EuiPageContentHeader,
-  EuiPageContentHeaderProps,
-  EuiPageContentHeaderSection,
-  EuiPageContentHeaderSectionProps,
+  WuiPageContent,
+  WuiPageContentProps,
+  WuiPageContentBody,
+  WuiPageContentBodyProps,
+  WuiPageContentHeader,
+  WuiPageContentHeaderProps,
+  WuiPageContentHeaderSection,
+  WuiPageContentHeaderSectionProps,
 } from './page_content';
 
 export {
-  EuiPageHeader,
-  EuiPageHeaderProps,
-  EuiPageHeaderSection,
-  EuiPageHeaderSectionProps,
+  WuiPageHeader,
+  WuiPageHeaderProps,
+  WuiPageHeaderSection,
+  WuiPageHeaderSectionProps,
 } from './page_header';
 
-export { EuiPageSideBar, EuiPageSideBarProps } from './page_side_bar';
+export { WuiPageSideBar, WuiPageSideBarProps } from './page_side_bar';

@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiKeyPadMenu } from './key_pad_menu';
+export { WuiKeyPadMenu } from './key_pad_menu';
 
-export { EuiKeyPadMenuItem } from './key_pad_menu_item';
+export { WuiKeyPadMenuItem } from './key_pad_menu_item';

@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiText, EuiTextColor } from '../../../../src/components/';
+import { WuiText, EuiTextColor } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const textConfig = () => {
-  const docgenInfo = Array.isArray(EuiText.__docgenInfo)
-    ? EuiText.__docgenInfo[0]
-    : EuiText.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiText.__docgenInfo)
+    ? WuiText.__docgenInfo[0]
+    : WuiText.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -25,14 +25,14 @@ export const textConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiText',
+      componentName: 'WuiText',
       props: propsToUse,
       scope: {
-        EuiText,
+        WuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiText'],
+        '@wazuh/wui': {
+          named: ['WuiText'],
         },
       },
     },
@@ -64,7 +64,7 @@ export const textColorConfig = () => {
         EuiTextColor,
       },
       imports: {
-        '@elastic/eui': {
+        '@wazuh/wui': {
           named: ['EuiTextColor'],
         },
       },

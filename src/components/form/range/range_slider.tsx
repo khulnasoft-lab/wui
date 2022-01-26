@@ -26,7 +26,7 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-export type EuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
+export type WuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
   CommonProps & {
     id?: string;
     name?: string;
@@ -42,7 +42,7 @@ export type EuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
     onChange?: ChangeEventHandler<HTMLInputElement>;
   };
 
-export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
+export const WuiRangeSlider = forwardRef<HTMLInputElement, WuiRangeSliderProps>(
   (
     {
       className,
@@ -65,12 +65,12 @@ export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
     ref
   ) => {
     const classes = classNames(
-      'euiRangeSlider',
+      'wuiRangeSlider',
       {
-        'euiRangeSlider--hasTicks': showTicks,
-        'euiRangeSlider--hasFocus': hasFocus,
-        'euiRangeSlider--hasRange': showRange,
-        'euiRangeSlider--compressed': compressed,
+        'wuiRangeSlider--hasTicks': showTicks,
+        'wuiRangeSlider--hasFocus': hasFocus,
+        'wuiRangeSlider--hasRange': showRange,
+        'wuiRangeSlider--compressed': compressed,
       },
       className
     );
@@ -95,4 +95,4 @@ export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
   }
 );
 
-EuiRangeSlider.displayName = 'EuiRangeSlider';
+WuiRangeSlider.displayName = 'WuiRangeSlider';

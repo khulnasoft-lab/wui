@@ -1,6 +1,6 @@
 // Temporary style override for inserting search template into dark header
-// These selectors aren't targetable via EuiFieldSearch
-.euiHeader--dark .euiSelectableTemplateSitewide .euiFormControlLayout {
+// These selectors aren't targetable via WuiFieldSearch
+.wuiHeader--dark .wuiSelectableTemplateSitewide .wuiFormControlLayout {
   background-color: transparent;
 
   &--group,
@@ -13,7 +13,7 @@
 
     input {
       // Increase contrast of placeholder text
-      @include euiPlaceholderPerBrowser {
+      @include wuiPlaceholderPerBrowser {
         color: transparentize($euiColorGhost, .6);
       }
 
@@ -22,7 +22,7 @@
       background-color: transparent;
     }
 
-    .euiFormControlLayout__append {
+    .wuiFormControlLayout__append {
       background-color: transparent;
       color: inherit;
     }

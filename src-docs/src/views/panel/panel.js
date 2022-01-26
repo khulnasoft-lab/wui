@@ -1,35 +1,35 @@
 import React from 'react';
 
-import { EuiPanel, EuiCode, EuiSpacer } from '../../../../src/components';
+import { WuiPanel, WuiCode, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiPanel paddingSize="none">
-      <EuiCode>paddingSize=&quot;none&quot;</EuiCode>
-    </EuiPanel>
+    <WuiPanel paddingSize="none">
+      <WuiCode>paddingSize=&quot;none&quot;</WuiCode>
+    </WuiPanel>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiPanel paddingSize="s">
-      <EuiCode>paddingSize=&quot;s&quot;</EuiCode>
-    </EuiPanel>
+    <WuiPanel paddingSize="s">
+      <WuiCode>paddingSize=&quot;s&quot;</WuiCode>
+    </WuiPanel>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiPanel paddingSize="m">
-      <EuiCode>paddingSize=&quot;m&quot;</EuiCode>
-    </EuiPanel>
+    <WuiPanel paddingSize="m">
+      <WuiCode>paddingSize=&quot;m&quot;</WuiCode>
+    </WuiPanel>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiPanel paddingSize="l">
-      <EuiCode>paddingSize=&quot;l&quot;</EuiCode>
-    </EuiPanel>
+    <WuiPanel paddingSize="l">
+      <WuiCode>paddingSize=&quot;l&quot;</WuiCode>
+    </WuiPanel>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiPanel paddingSize="l" hasShadow>
-      <EuiCode>paddingSize=&quot;l&quot;</EuiCode>, <EuiCode>hasShadow</EuiCode>
-    </EuiPanel>
+    <WuiPanel paddingSize="l" hasShadow>
+      <WuiCode>paddingSize=&quot;l&quot;</WuiCode>, <WuiCode>hasShadow</WuiCode>
+    </WuiPanel>
   </div>
 );

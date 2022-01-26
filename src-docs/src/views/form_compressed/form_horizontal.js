@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import {
-  EuiComboBox,
-  EuiFieldText,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSwitch,
-  EuiPanel,
+  WuiComboBox,
+  WuiFieldText,
+  WuiFormRow,
+  WuiFilePicker,
+  WuiRange,
+  WuiSelect,
+  WuiSwitch,
+  WuiPanel,
 } from '../../../../src/components';
 
 export default () => {
@@ -25,16 +25,16 @@ export default () => {
   };
 
   return (
-    <EuiPanel style={{ maxWidth: 300 }}>
-      <EuiFormRow
+    <WuiPanel style={{ maxWidth: 300 }}>
+      <WuiFormRow
         label="Text field"
         helpText="I am some friendly help text."
         display="columnCompressed">
-        <EuiFieldText name="first" isLoading compressed />
-      </EuiFormRow>
+        <WuiFieldText name="first" isLoading compressed />
+      </WuiFormRow>
 
-      <EuiFormRow label="Select" display="columnCompressed">
-        <EuiSelect
+      <WuiFormRow label="Select" display="columnCompressed">
+        <WuiSelect
           options={[
             { value: 'option_one', text: 'Option one' },
             { value: 'option_two', text: 'Option two' },
@@ -42,14 +42,14 @@ export default () => {
           ]}
           compressed
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="File picker" display="columnCompressed">
-        <EuiFilePicker compressed display="default" />
-      </EuiFormRow>
+      <WuiFormRow label="File picker" display="columnCompressed">
+        <WuiFilePicker compressed display="default" />
+      </WuiFormRow>
 
-      <EuiFormRow label="Comboboxwithalonglabelname" display="columnCompressed">
-        <EuiComboBox
+      <WuiFormRow label="Comboboxwithalonglabelname" display="columnCompressed">
+        <WuiComboBox
           options={[
             { label: 'Option one' },
             { label: 'Option two' },
@@ -61,10 +61,10 @@ export default () => {
             setComboBoxSelectionOptions(comboBoxSelectionOptions)
           }
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Range" display="columnCompressed">
-        <EuiRange
+      <WuiFormRow label="Range" display="columnCompressed">
+        <WuiRange
           min={0}
           max={100}
           name="range"
@@ -74,10 +74,10 @@ export default () => {
           value={value}
           onChange={onRangeChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow display="columnCompressedSwitch" label="Switch">
-        <EuiSwitch
+      <WuiFormRow display="columnCompressedSwitch" label="Switch">
+        <WuiSwitch
           showLabel={false}
           label="Switch"
           name="switch"
@@ -85,7 +85,7 @@ export default () => {
           onChange={onSwitchChange}
           compressed
         />
-      </EuiFormRow>
-    </EuiPanel>
+      </WuiFormRow>
+    </WuiPanel>
   );
 };

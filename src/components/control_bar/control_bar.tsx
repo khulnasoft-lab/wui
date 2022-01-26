@@ -26,13 +26,13 @@ import React, {
   Ref,
   ReactNode,
 } from 'react';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiBreadcrumbs, EuiBreadcrumbsProps } from '../breadcrumbs';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiBreadcrumbs, WuiBreadcrumbsProps } from '../breadcrumbs';
 import {
-  EuiButton,
-  EuiButtonIcon,
-  EuiButtonIconProps,
-  EuiButtonProps,
+  WuiButton,
+  WuiButtonIcon,
+  WuiButtonIconProps,
+  WuiButtonProps,
 } from '../button';
 import {
   CommonProps,
@@ -40,15 +40,15 @@ import {
   PropsForAnchor,
   PropsForButton,
 } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
-import { EuiIconProps } from '../icon/icon';
-import { EuiPortal } from '../portal';
+import { WuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
+import { WuiIconProps } from '../icon/icon';
+import { WuiPortal } from '../portal';
 
 /**
- * Extends EuiButton excluding `size`. Requires `label` as the `children`.
+ * Extends WuiButton excluding `size`. Requires `label` as the `children`.
  */
-export interface ButtonControl extends Omit<EuiButtonProps, 'size'> {
+export interface ButtonControl extends Omit<WuiButtonProps, 'size'> {
   id: string;
   label: ReactNode;
 }
@@ -88,9 +88,9 @@ export interface TabControl
 }
 
 /**
- * Extends EuiBreadcrumbs
+ * Extends WuiBreadcrumbs
  */
-export interface BreadcrumbControl extends EuiBreadcrumbsProps {
+export interface BreadcrumbControl extends WuiBreadcrumbsProps {
   controlType: 'breadcrumbs';
   id: string;
 }
@@ -126,20 +126,20 @@ export interface IconControlProps {
 }
 
 /**
- * Icon can extend EuiIcon
+ * Icon can extend WuiIcon
  * Had to omit `onClick` as it's a valid prop of SVGElement
  * Also omits `type` and `id` as these are also specific to icon control
  */
 export interface IconControlType
-  extends Omit<EuiIconProps, 'type' | 'id' | 'onClick'>,
+  extends Omit<WuiIconProps, 'type' | 'id' | 'onClick'>,
     IconControlProps {}
 
 /**
- * Icon can extend EuiButtonIcon
+ * Icon can extend WuiButtonIcon
  * Also omits `iconType` and `id` as these are also specific to icon control
  */
 export interface IconButtonControlType
-  extends Omit<EuiButtonIconProps, 'iconType' | 'id'>,
+  extends Omit<WuiButtonIconProps, 'iconType' | 'id'>,
     IconControlProps {}
 
 export type IconControl = ExclusiveUnion<
@@ -164,7 +164,7 @@ export type Control = ExclusiveUnion<
   SpacerControl
 >;
 
-export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
+export type WuiControlBarProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
      * Show or hide the content area containing the `children`
@@ -205,7 +205,7 @@ export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
     showOnMobile?: boolean;
 
     /**
-     * By default EuiControlBar will live in a portal, fixed position to the browser window.
+     * By default WuiControlBar will live in a portal, fixed position to the browser window.
      * Change the position of the bar to live inside a container and be positioned against its parent.
      */
     position?: 'fixed' | 'relative' | 'absolute';
@@ -221,13 +221,13 @@ export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
     landmarkHeading?: string;
   };
 
-interface EuiControlBarState {
+interface WuiControlBarState {
   selectedTab: string;
 }
 
-export class EuiControlBar extends Component<
-  EuiControlBarProps,
-  EuiControlBarState
+export class WuiControlBar extends Component<
+  WuiControlBarProps,
+  WuiControlBarState
 > {
   static defaultProps = {
     leftOffset: 0,
@@ -285,15 +285,15 @@ export class EuiControlBar extends Component<
       maxHeight: maxHeight,
     };
 
-    const classes = classNames('euiControlBar', className, {
-      'euiControlBar-isOpen': showContent,
-      'euiControlBar--large': size === 'l',
-      'euiControlBar--medium': size === 'm',
-      'euiControlBar--small': size === 's',
-      'euiControlBar--fixed': position === 'fixed',
-      'euiControlBar--absolute': position === 'absolute',
-      'euiControlBar--relative': position === 'relative',
-      'euiControlBar--showOnMobile': showOnMobile,
+    const classes = classNames('wuiControlBar', className, {
+      'wuiControlBar-isOpen': showContent,
+      'wuiControlBar--large': size === 'l',
+      'wuiControlBar--medium': size === 'm',
+      'wuiControlBar--small': size === 's',
+      'wuiControlBar--fixed': position === 'fixed',
+      'wuiControlBar--absolute': position === 'absolute',
+      'wuiControlBar--relative': position === 'relative',
+      'wuiControlBar--showOnMobile': showOnMobile,
     });
 
     const handleTabClick = (
@@ -322,14 +322,14 @@ export class EuiControlBar extends Component<
             ...rest
           } = control;
           return (
-            <EuiButton
+            <WuiButton
               key={id + index}
-              className={classNames('euiControlBar__button', className)}
+              className={classNames('wuiControlBar__button', className)}
               color={color}
               {...rest}
               size="s">
               {label}
-            </EuiButton>
+            </WuiButton>
           );
         }
         case 'icon': {
@@ -344,20 +344,20 @@ export class EuiControlBar extends Component<
             ...rest
           } = control;
           return onClick || href ? (
-            <EuiButtonIcon
+            <WuiButtonIcon
               key={id + index}
-              className={classNames('euiControlBar__buttonIcon', className)}
+              className={classNames('wuiControlBar__buttonIcon', className)}
               iconType={iconType}
               onClick={onClick}
               href={href}
-              color={color as EuiButtonIconProps['color']}
+              color={color as WuiButtonIconProps['color']}
               {...(rest as IconButtonControlType)}
               size="s"
             />
           ) : (
-            <EuiIcon
+            <WuiIcon
               key={id + index}
-              className={classNames('euiControlBar__icon', className)}
+              className={classNames('wuiControlBar__icon', className)}
               type={iconType}
               color={color}
               {...rest}
@@ -368,14 +368,14 @@ export class EuiControlBar extends Component<
           return (
             <div
               key={control.controlType + index}
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
             />
           );
         case 'spacer':
           return (
             <div
               key={control.controlType + index}
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
             />
           );
         case 'text': {
@@ -383,7 +383,7 @@ export class EuiControlBar extends Component<
           return (
             <div
               key={id}
-              className={classNames('euiControlBar__text', className)}
+              className={classNames('wuiControlBar__text', className)}
               {...rest}>
               {text}
             </div>
@@ -400,9 +400,9 @@ export class EuiControlBar extends Component<
           } = control;
 
           const tabClasses = classNames(
-            'euiControlBar__tab',
+            'wuiControlBar__tab',
             {
-              'euiControlBar__tab--active':
+              'wuiControlBar__tab--active':
                 showContent && id === this.state.selectedTab,
             },
             className
@@ -421,8 +421,8 @@ export class EuiControlBar extends Component<
         case 'breadcrumbs': {
           const { controlType, id, ...rest } = control;
           return (
-            <EuiBreadcrumbs
-              className="euiControlBar__breadcrumbs"
+            <WuiBreadcrumbs
+              className="wuiControlBar__breadcrumbs"
               key={control.id}
               {...rest}
             />
@@ -432,8 +432,8 @@ export class EuiControlBar extends Component<
     };
 
     const controlBar = (
-      <EuiI18n
-        token="euiControlBar.screenReaderHeading"
+      <WuiI18n
+        token="wuiControlBar.screenReaderHeading"
         default="Page level controls">
         {(screenReaderHeading: string) => (
           // Though it would be better to use aria-labelledby than aria-label and not repeat the same string twice
@@ -443,44 +443,44 @@ export class EuiControlBar extends Component<
             aria-label={landmarkHeading ? landmarkHeading : screenReaderHeading}
             {...rest}
             style={styles}>
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <h2>{landmarkHeading ? landmarkHeading : screenReaderHeading}</h2>
-            </EuiScreenReaderOnly>
+            </WuiScreenReaderOnly>
             <div
-              className="euiControlBar__controls"
+              className="wuiControlBar__controls"
               ref={node => {
                 this.bar = node;
               }}>
               {controls.map((control, index) => controlItem(control, index))}
             </div>
             {this.props.showContent ? (
-              <div className="euiControlBar__content">{children}</div>
+              <div className="wuiControlBar__content">{children}</div>
             ) : null}
           </section>
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
 
     return position === 'fixed' ? (
-      <EuiPortal>
+      <WuiPortal>
         {controlBar}
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <p aria-live="assertive">
             {landmarkHeading ? (
-              <EuiI18n
-                token="euiControlBar.customScreenReaderAnnouncement"
+              <WuiI18n
+                token="wuiControlBar.customScreenReaderAnnouncement"
                 default="There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
                 values={{ landmarkHeading }}
               />
             ) : (
-              <EuiI18n
-                token="euiControlBar.screenReaderAnnouncement"
+              <WuiI18n
+                token="wuiControlBar.screenReaderAnnouncement"
                 default="There is a new region landmark with page level controls at the end of the document."
               />
             )}
           </p>
-        </EuiScreenReaderOnly>
-      </EuiPortal>
+        </WuiScreenReaderOnly>
+      </WuiPortal>
     ) : (
       controlBar
     );

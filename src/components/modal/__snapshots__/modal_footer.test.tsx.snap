@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders EuiModalFooter 1`] = `
+exports[`renders WuiModalFooter 1`] = `
 <div
   aria-label="aria-label"
-  class="euiModalFooter testClass1 testClass2"
+  class="wuiModalFooter testClass1 testClass2"
   data-test-subj="test subject string"
 >
   children

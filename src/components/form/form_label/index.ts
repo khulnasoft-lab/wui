@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFormLabel, EuiFormLabelProps } from './form_label';
+export { WuiFormLabel, WuiFormLabelProps } from './form_label';

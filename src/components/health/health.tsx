@@ -21,11 +21,11 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-import { EuiIcon, IconColor } from '../icon';
+import { WuiIcon, IconColor } from '../icon';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-type EuiHealthProps = CommonProps &
+type WuiHealthProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     /**
      * Sets the color of the dot icon.
@@ -35,22 +35,22 @@ type EuiHealthProps = CommonProps &
     color?: IconColor;
   };
 
-export const EuiHealth: FunctionComponent<EuiHealthProps> = ({
+export const WuiHealth: FunctionComponent<WuiHealthProps> = ({
   children,
   className,
   color,
   ...rest
 }) => {
-  const classes = classNames('euiHealth', className);
+  const classes = classNames('wuiHealth', className);
 
   return (
     <div className={classes} {...rest}>
-      <EuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
-        <EuiFlexItem grow={false}>
-          <EuiIcon type="dot" color={color} />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>{children}</EuiFlexItem>
-      </EuiFlexGroup>
+      <WuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
+        <WuiFlexItem grow={false}>
+          <WuiIcon type="dot" color={color} />
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>{children}</WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

@@ -22,8 +22,8 @@ import { act } from 'react-dom/test-utils';
 import { render, mount } from 'enzyme';
 import { findTestSubject, requiredProps, sleep } from '../../test';
 
-import { useInnerText, EuiInnerText } from './inner_text';
-import { EuiBadge } from '../badge';
+import { useInnerText, WuiInnerText } from './inner_text';
+import { WuiBadge } from '../badge';
 
 describe('useInnerText', () => {
   test('provides a callback `ref`', () => {
@@ -133,16 +133,16 @@ describe('useInnerText', () => {
   });
 });
 
-describe('EuiInnerText', () => {
+describe('WuiInnerText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiInnerText {...requiredProps}>
+      <WuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText}>
             Test
           </span>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
     );
 
     expect(component).toMatchSnapshot();
@@ -151,13 +151,13 @@ describe('EuiInnerText', () => {
   test('uses innerText', () => {
     const text = 'Test';
     const component = mount(
-      <EuiInnerText {...requiredProps}>
+      <WuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
             {text}
           </span>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');
@@ -168,13 +168,13 @@ describe('EuiInnerText', () => {
     const text = 'Test';
     const fallback = 'Fallback';
     const component = mount(
-      <EuiInnerText {...requiredProps} fallback={fallback}>
+      <WuiInnerText {...requiredProps} fallback={fallback}>
         {(_, innerText) => (
           <span title={innerText} data-test-subj="span">
             {text}
           </span>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');
@@ -183,7 +183,7 @@ describe('EuiInnerText', () => {
 
   test('works with wrapper and interspersed DOM elements', () => {
     const component = mount(
-      <EuiInnerText {...requiredProps}>
+      <WuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
             <div>
@@ -192,13 +192,13 @@ describe('EuiInnerText', () => {
                 can{' '}
                 <em>
                   still <strong>read </strong>
-                  <EuiBadge>this</EuiBadge>
+                  <WuiBadge>this</WuiBadge>
                 </em>
               </span>
             </div>
           </span>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');

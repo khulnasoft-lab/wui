@@ -20,40 +20,40 @@
 import React, { FunctionComponent, HTMLAttributes, memo } from 'react';
 import classnames from 'classnames';
 import {
-  EuiDataGridControlColumn,
-  EuiDataGridColumn,
-  EuiDataGridColumnWidths,
-  EuiDataGridPopoverContent,
-  EuiDataGridPopoverContents,
+  WuiDataGridControlColumn,
+  WuiDataGridColumn,
+  WuiDataGridColumnWidths,
+  WuiDataGridPopoverContent,
+  WuiDataGridPopoverContents,
 } from './data_grid_types';
 import { CommonProps } from '../common';
 
-import { EuiDataGridCell, EuiDataGridCellProps } from './data_grid_cell';
-import { EuiDataGridSchema } from './data_grid_schema';
-import { EuiText } from '../text';
+import { WuiDataGridCell, WuiDataGridCellProps } from './data_grid_cell';
+import { WuiDataGridSchema } from './data_grid_schema';
+import { WuiText } from '../text';
 
-export type EuiDataGridFooterRowProps = CommonProps &
+export type WuiDataGridFooterRowProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     rowIndex: number;
-    leadingControlColumns: EuiDataGridControlColumn[];
-    trailingControlColumns: EuiDataGridControlColumn[];
-    columns: EuiDataGridColumn[];
-    schema: EuiDataGridSchema;
-    popoverContents: EuiDataGridPopoverContents;
-    columnWidths: EuiDataGridColumnWidths;
+    leadingControlColumns: WuiDataGridControlColumn[];
+    trailingControlColumns: WuiDataGridControlColumn[];
+    columns: WuiDataGridColumn[];
+    schema: WuiDataGridSchema;
+    popoverContents: WuiDataGridPopoverContents;
+    columnWidths: WuiDataGridColumnWidths;
     defaultColumnWidth?: number | null;
     focusedCellPositionInTheRow?: number | null;
-    renderCellValue: EuiDataGridCellProps['renderCellValue'];
+    renderCellValue: WuiDataGridCellProps['renderCellValue'];
     onCellFocus: Function;
-    interactiveCellId: EuiDataGridCellProps['interactiveCellId'];
+    interactiveCellId: WuiDataGridCellProps['interactiveCellId'];
     visibleRowIndex?: number;
   };
 
-const DefaultColumnFormatter: EuiDataGridPopoverContent = ({ children }) => {
-  return <EuiText>{children}</EuiText>;
+const DefaultColumnFormatter: WuiDataGridPopoverContent = ({ children }) => {
+  return <WuiText>{children}</WuiText>;
 };
 
-const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
+const WuiDataGridFooterRow: FunctionComponent<WuiDataGridFooterRowProps> = memo(
   ({
     leadingControlColumns,
     trailingControlColumns,
@@ -73,8 +73,8 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
     ...rest
   }) => {
     const classes = classnames(
-      'euiDataGridRow',
-      'euiDataGridFooter',
+      'wuiDataGridRow',
+      'wuiDataGridFooter',
       className
     );
     const dataTestSubj = classnames('dataGridRow', _dataTestSubj);
@@ -86,7 +86,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
         data-test-subj={dataTestSubj}
         {...rest}>
         {leadingControlColumns.map(({ id, width }, i) => (
-          <EuiDataGridCell
+          <WuiDataGridCell
             key={`${id}-${rowIndex}`}
             rowIndex={rowIndex}
             visibleRowIndex={visibleRowIndex}
@@ -99,7 +99,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
             isFocused={focusedCellPositionInTheRow === i}
             interactiveCellId={interactiveCellId}
             isExpandable={true}
-            className="euiDataGridFooterCell euiDataGridRowCell--controlColumn"
+            className="wuiDataGridFooterCell wuiDataGridRowCell--controlColumn"
           />
         ))}
         {columns.map(({ id }, i) => {
@@ -112,7 +112,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
           const columnPosition = i + leadingControlColumns.length;
 
           return (
-            <EuiDataGridCell
+            <WuiDataGridCell
               key={`${id}-${rowIndex}`}
               rowIndex={rowIndex}
               visibleRowIndex={visibleRowIndex}
@@ -126,7 +126,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
               isFocused={focusedCellPositionInTheRow === columnPosition}
               interactiveCellId={interactiveCellId}
               isExpandable={true}
-              className="euiDataGridFooterCell"
+              className="wuiDataGridFooterCell"
             />
           );
         })}
@@ -134,7 +134,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
           const colIndex = i + columns.length + leadingControlColumns.length;
 
           return (
-            <EuiDataGridCell
+            <WuiDataGridCell
               key={`${id}-${rowIndex}`}
               rowIndex={rowIndex}
               visibleRowIndex={visibleRowIndex}
@@ -147,7 +147,7 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
               isFocused={focusedCellPositionInTheRow === colIndex}
               interactiveCellId={interactiveCellId}
               isExpandable={true}
-              className="euiDataGridFooterCell euiDataGridRowCell--controlColumn"
+              className="wuiDataGridFooterCell wuiDataGridRowCell--controlColumn"
             />
           );
         })}
@@ -156,4 +156,4 @@ const EuiDataGridFooterRow: FunctionComponent<EuiDataGridFooterRowProps> = memo(
   }
 );
 
-export { EuiDataGridFooterRow };
+export { WuiDataGridFooterRow };

@@ -23,19 +23,19 @@ import { CommonProps, keysOf } from '../common';
 
 import { TextColor, EuiTextColor } from './text_color';
 
-import { EuiTextAlign, TextAlignment } from './text_align';
+import { WuiTextAlign, TextAlignment } from './text_align';
 
 const textSizeToClassNameMap = {
-  xs: 'euiText--extraSmall',
-  s: 'euiText--small',
-  m: 'euiText--medium',
+  xs: 'wuiText--extraSmall',
+  s: 'wuiText--small',
+  m: 'wuiText--medium',
 };
 
 export type TextSize = keyof typeof textSizeToClassNameMap;
 
 export const TEXT_SIZES = keysOf(textSizeToClassNameMap);
 
-export type EuiTextProps = CommonProps &
+export type WuiTextProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     textAlign?: TextAlignment;
     size?: TextSize;
@@ -43,7 +43,7 @@ export type EuiTextProps = CommonProps &
     grow?: boolean;
   };
 
-export const EuiText: FunctionComponent<EuiTextProps> = ({
+export const WuiText: FunctionComponent<WuiTextProps> = ({
   size = 'm',
   color,
   grow = true,
@@ -53,11 +53,11 @@ export const EuiText: FunctionComponent<EuiTextProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiText',
+    'wuiText',
     textSizeToClassNameMap[size],
     className,
     {
-      'euiText--constrainedWidth': !grow,
+      'wuiText--constrainedWidth': !grow,
     }
   );
 
@@ -72,9 +72,9 @@ export const EuiText: FunctionComponent<EuiTextProps> = ({
 
   if (textAlign) {
     optionallyAlteredText = (
-      <EuiTextAlign textAlign={textAlign}>
+      <WuiTextAlign textAlign={textAlign}>
         {optionallyAlteredText || children}
-      </EuiTextAlign>
+      </WuiTextAlign>
     );
   }
 

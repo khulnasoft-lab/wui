@@ -1,142 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSideNav is rendered 1`] = `
+exports[`WuiSideNav is rendered 1`] = `
 <nav
   aria-label="aria-label"
-  class="euiSideNav testClass1 testClass2"
+  class="wuiSideNav testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   />
 </nav>
 `;
 
-exports[`EuiSideNav props isOpenOnMobile defaults to false 1`] = `
+exports[`WuiSideNav props isOpenOnMobile defaults to false 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   />
 </nav>
 `;
 
-exports[`EuiSideNav props isOpenOnMobile is rendered when specified as true 1`] = `
+exports[`WuiSideNav props isOpenOnMobile is rendered when specified as true 1`] = `
 <nav
-  class="euiSideNav euiSideNav-isOpenMobile"
+  class="wuiSideNav wuiSideNav-isOpenMobile"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   />
 </nav>
 `;
 
-exports[`EuiSideNav props items is rendered 1`] = `
+exports[`WuiSideNav props items is rendered 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   >
     <div
-      class="euiSideNavItem euiSideNavItem--root euiSideNavItem--hasChildItems"
+      class="wuiSideNavItem wuiSideNavItem--root wuiSideNavItem--hasChildItems"
     >
       <div
-        class="euiSideNavItemButton"
+        class="wuiSideNavItemButton"
       >
         <span
-          class="euiSideNavItemButton__content"
+          class="wuiSideNavItemButton__content"
         >
           <span
-            class="euiSideNavItemButton__label"
+            class="wuiSideNavItemButton__label"
           >
             A
           </span>
         </span>
       </div>
       <div
-        class="euiSideNavItem__items"
+        class="wuiSideNavItem__items"
       >
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 B
               </span>
@@ -144,22 +144,22 @@ exports[`EuiSideNav props items is rendered 1`] = `
           </div>
         </div>
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 C
               </span>
               <div
                 color="subdued"
-                data-euiicon-type="arrowDown"
+                data-wuiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -170,60 +170,60 @@ exports[`EuiSideNav props items is rendered 1`] = `
 </nav>
 `;
 
-exports[`EuiSideNav props items renders items having { forceOpen: true } in open state, and automatically opens parent items 1`] = `
+exports[`WuiSideNav props items renders items having { forceOpen: true } in open state, and automatically opens parent items 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   >
     <div
-      class="euiSideNavItem euiSideNavItem--root euiSideNavItem--hasChildItems"
+      class="wuiSideNavItem wuiSideNavItem--root wuiSideNavItem--hasChildItems"
     >
       <div
-        class="euiSideNavItemButton"
+        class="wuiSideNavItemButton"
       >
         <span
-          class="euiSideNavItemButton__content"
+          class="wuiSideNavItemButton__content"
         >
           <span
-            class="euiSideNavItemButton__label"
+            class="wuiSideNavItemButton__label"
           >
             A
           </span>
         </span>
       </div>
       <div
-        class="euiSideNavItem__items"
+        class="wuiSideNavItem__items"
       >
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 B
               </span>
@@ -231,54 +231,54 @@ exports[`EuiSideNav props items renders items having { forceOpen: true } in open
           </div>
         </div>
         <div
-          class="euiSideNavItem euiSideNavItem--trunk euiSideNavItem--hasChildItems"
+          class="wuiSideNavItem wuiSideNavItem--trunk wuiSideNavItem--hasChildItems"
         >
           <div
-            class="euiSideNavItemButton euiSideNavItemButton-isOpen"
+            class="wuiSideNavItemButton wuiSideNavItemButton-isOpen"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 C
               </span>
             </span>
           </div>
           <div
-            class="euiSideNavItem__items"
+            class="wuiSideNavItem__items"
           >
             <div
-              class="euiSideNavItem euiSideNavItem--branch euiSideNavItem--hasChildItems"
+              class="wuiSideNavItem wuiSideNavItem--branch wuiSideNavItem--hasChildItems"
             >
               <div
-                class="euiSideNavItemButton euiSideNavItemButton-isOpen"
+                class="wuiSideNavItemButton wuiSideNavItemButton-isOpen"
               >
                 <span
-                  class="euiSideNavItemButton__content"
+                  class="wuiSideNavItemButton__content"
                 >
                   <span
-                    class="euiSideNavItemButton__label"
+                    class="wuiSideNavItemButton__label"
                   >
                     D
                   </span>
                 </span>
               </div>
               <div
-                class="euiSideNavItem__items"
+                class="wuiSideNavItem__items"
               >
                 <div
-                  class="euiSideNavItem euiSideNavItem--branch"
+                  class="wuiSideNavItem wuiSideNavItem--branch"
                 >
                   <div
-                    class="euiSideNavItemButton"
+                    class="wuiSideNavItemButton"
                   >
                     <span
-                      class="euiSideNavItemButton__content"
+                      class="wuiSideNavItemButton__content"
                     >
                       <span
-                        class="euiSideNavItemButton__label"
+                        class="wuiSideNavItemButton__label"
                       >
                         E
                       </span>
@@ -295,63 +295,63 @@ exports[`EuiSideNav props items renders items having { forceOpen: true } in open
 </nav>
 `;
 
-exports[`EuiSideNav props items renders items using a specified callback 1`] = `
+exports[`WuiSideNav props items renders items using a specified callback 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   >
     <div
-      class="euiSideNavItem euiSideNavItem--root euiSideNavItem--hasChildItems"
+      class="wuiSideNavItem wuiSideNavItem--root wuiSideNavItem--hasChildItems"
     >
       <a
-        class="euiSideNavItemButton euiSideNavItemButton--isClickable"
+        class="wuiSideNavItemButton wuiSideNavItemButton--isClickable"
         data-test-id="my-custom-element"
-        href="http://www.elastic.co"
+        href="http://www.wazuh.com"
       >
         <span
-          class="euiSideNavItemButton__content"
+          class="wuiSideNavItemButton__content"
         >
           <span
-            class="euiSideNavItemButton__label"
+            class="wuiSideNavItemButton__label"
           >
             A
           </span>
         </span>
       </a>
       <div
-        class="euiSideNavItem__items"
+        class="wuiSideNavItem__items"
       >
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <a
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
             data-test-id="my-custom-element"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 B
               </span>
@@ -364,62 +364,62 @@ exports[`EuiSideNav props items renders items using a specified callback 1`] = `
 </nav>
 `;
 
-exports[`EuiSideNav props items renders items which are links 1`] = `
+exports[`WuiSideNav props items renders items which are links 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   >
     <div
-      class="euiSideNavItem euiSideNavItem--root euiSideNavItem--hasChildItems"
+      class="wuiSideNavItem wuiSideNavItem--root wuiSideNavItem--hasChildItems"
     >
       <a
-        class="euiSideNavItemButton euiSideNavItemButton--isClickable"
-        href="http://www.elastic.co"
-        rel=""
+        class="wuiSideNavItemButton wuiSideNavItemButton--isClickable"
+        href="http://www.wazuh.com"
+        rel="noreferrer"
       >
         <span
-          class="euiSideNavItemButton__content"
+          class="wuiSideNavItemButton__content"
         >
           <span
-            class="euiSideNavItemButton__label"
+            class="wuiSideNavItemButton__label"
           >
             A
           </span>
         </span>
       </a>
       <div
-        class="euiSideNavItem__items"
+        class="wuiSideNavItem__items"
       >
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 B
               </span>
@@ -427,22 +427,22 @@ exports[`EuiSideNav props items renders items which are links 1`] = `
           </div>
         </div>
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 C
               </span>
               <div
                 color="subdued"
-                data-euiicon-type="arrowDown"
+                data-wuiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -453,60 +453,60 @@ exports[`EuiSideNav props items renders items which are links 1`] = `
 </nav>
 `;
 
-exports[`EuiSideNav props items renders selected item and automatically opens parent items 1`] = `
+exports[`WuiSideNav props items renders selected item and automatically opens parent items 1`] = `
 <nav
-  class="euiSideNav"
+  class="wuiSideNav"
 >
   <button
-    class="euiSideNav__mobileToggle euiLink"
+    class="wuiSideNav__mobileToggle wuiLink"
     type="button"
   >
     <span
-      class="euiSideNav__mobileWrap"
+      class="wuiSideNav__mobileWrap"
     >
       <span
-        class="euiSideNav__mobileTitle"
+        class="wuiSideNav__mobileTitle"
       />
       <div
         aria-hidden="true"
-        class="euiSideNav__mobileIcon"
-        data-euiicon-type="apps"
+        class="wuiSideNav__mobileIcon"
+        data-wuiicon-type="apps"
       />
     </span>
   </button>
   <div
-    class="euiSideNav__content"
+    class="wuiSideNav__content"
   >
     <div
-      class="euiSideNavItem euiSideNavItem--root euiSideNavItem--hasChildItems"
+      class="wuiSideNavItem wuiSideNavItem--root wuiSideNavItem--hasChildItems"
     >
       <div
-        class="euiSideNavItemButton"
+        class="wuiSideNavItemButton"
       >
         <span
-          class="euiSideNavItemButton__content"
+          class="wuiSideNavItemButton__content"
         >
           <span
-            class="euiSideNavItemButton__label"
+            class="wuiSideNavItemButton__label"
           >
             A
           </span>
         </span>
       </div>
       <div
-        class="euiSideNavItem__items"
+        class="wuiSideNavItem__items"
       >
         <div
-          class="euiSideNavItem euiSideNavItem--trunk"
+          class="wuiSideNavItem wuiSideNavItem--trunk"
         >
           <div
-            class="euiSideNavItemButton"
+            class="wuiSideNavItemButton"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 B
               </span>
@@ -514,35 +514,35 @@ exports[`EuiSideNav props items renders selected item and automatically opens pa
           </div>
         </div>
         <div
-          class="euiSideNavItem euiSideNavItem--trunk euiSideNavItem--hasChildItems"
+          class="wuiSideNavItem wuiSideNavItem--trunk wuiSideNavItem--hasChildItems"
         >
           <div
-            class="euiSideNavItemButton euiSideNavItemButton-isOpen"
+            class="wuiSideNavItemButton wuiSideNavItemButton-isOpen"
           >
             <span
-              class="euiSideNavItemButton__content"
+              class="wuiSideNavItemButton__content"
             >
               <span
-                class="euiSideNavItemButton__label"
+                class="wuiSideNavItemButton__label"
               >
                 C
               </span>
             </span>
           </div>
           <div
-            class="euiSideNavItem__items"
+            class="wuiSideNavItem__items"
           >
             <div
-              class="euiSideNavItem euiSideNavItem--branch"
+              class="wuiSideNavItem wuiSideNavItem--branch"
             >
               <div
-                class="euiSideNavItemButton euiSideNavItemButton-isSelected"
+                class="wuiSideNavItemButton wuiSideNavItemButton-isSelected"
               >
                 <span
-                  class="euiSideNavItemButton__content"
+                  class="wuiSideNavItemButton__content"
                 >
                   <span
-                    class="euiSideNavItemButton__label"
+                    class="wuiSideNavItemButton__label"
                   >
                     D
                   </span>
@@ -550,16 +550,16 @@ exports[`EuiSideNav props items renders selected item and automatically opens pa
               </div>
             </div>
             <div
-              class="euiSideNavItem euiSideNavItem--branch"
+              class="wuiSideNavItem wuiSideNavItem--branch"
             >
               <div
-                class="euiSideNavItemButton"
+                class="wuiSideNavItemButton"
               >
                 <span
-                  class="euiSideNavItemButton__content"
+                  class="wuiSideNavItemButton__content"
                 >
                   <span
-                    class="euiSideNavItemButton__label"
+                    class="wuiSideNavItemButton__label"
                   >
                     E
                   </span>

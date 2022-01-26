@@ -27,16 +27,16 @@ import { CommonProps } from '../../common';
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
-import { EuiButtonIcon, EuiButtonIconProps } from '../../button';
-import { useEuiI18n } from '../../i18n';
+import { WuiValidatableControl } from '../validatable_control';
+import { WuiButtonIcon, WuiButtonIconProps } from '../../button';
+import { useWuiI18n } from '../../i18n';
 import { useCombinedRefs } from '../../../services';
 
-export type EuiFieldPasswordProps = Omit<
+export type WuiFieldPasswordProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'type' | 'value'
 > &
@@ -51,13 +51,13 @@ export type EuiFieldPasswordProps = Omit<
      * Creates an input group with element(s) coming before input.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: WuiFormControlLayoutProps['prepend'];
 
     /**
      * Creates an input group with element(s) coming after input.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: WuiFormControlLayoutProps['append'];
     value?: string | number;
 
     /**
@@ -68,12 +68,12 @@ export type EuiFieldPasswordProps = Omit<
     type?: 'password' | 'text' | 'dual';
 
     /**
-     * Additional props to apply to the dual toggle. Extends EuiButtonIcon
+     * Additional props to apply to the dual toggle. Extends WuiButtonIcon
      */
-    dualToggleProps?: EuiButtonIconProps;
+    dualToggleProps?: WuiButtonIconProps;
   };
 
-export const EuiFieldPassword: FunctionComponent<EuiFieldPasswordProps> = ({
+export const WuiFieldPassword: FunctionComponent<WuiFieldPasswordProps> = ({
   className,
   id,
   name,
@@ -96,8 +96,8 @@ export const EuiFieldPassword: FunctionComponent<EuiFieldPasswordProps> = ({
   );
 
   // Setup toggle aria-label
-  const [showPasswordLabel, maskPasswordLabel] = useEuiI18n(
-    ['euiFieldPassword.showPassword', 'euiFieldPassword.maskPassword'],
+  const [showPasswordLabel, maskPasswordLabel] = useWuiI18n(
+    ['wuiFieldPassword.showPassword', 'wuiFieldPassword.maskPassword'],
     [
       'Show password as plain text. Note: this will visually expose your password on the screen.',
       'Mask password',
@@ -125,7 +125,7 @@ export const EuiFieldPassword: FunctionComponent<EuiFieldPasswordProps> = ({
     const isVisible = inputType === 'text';
 
     const visibilityToggle = (
-      <EuiButtonIcon
+      <WuiButtonIcon
         {...dualToggleProps}
         iconType={isVisible ? 'eyeClosed' : 'eye'}
         onClick={() => handleToggle(isVisible)}
@@ -140,26 +140,26 @@ export const EuiFieldPassword: FunctionComponent<EuiFieldPasswordProps> = ({
   const finalAppend = appends.length ? appends : undefined;
 
   const classes = classNames(
-    'euiFieldPassword',
+    'wuiFieldPassword',
     {
-      'euiFieldPassword--fullWidth': fullWidth,
-      'euiFieldPassword--compressed': compressed,
-      'euiFieldPassword-isLoading': isLoading,
-      'euiFieldPassword--inGroup': prepend || finalAppend,
-      'euiFieldPassword--withToggle': type === 'dual',
+      'wuiFieldPassword--fullWidth': fullWidth,
+      'wuiFieldPassword--compressed': compressed,
+      'wuiFieldPassword-isLoading': isLoading,
+      'wuiFieldPassword--inGroup': prepend || finalAppend,
+      'wuiFieldPassword--withToggle': type === 'dual',
     },
     className
   );
 
   return (
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       icon="lock"
       fullWidth={fullWidth}
       isLoading={isLoading}
       compressed={compressed}
       prepend={prepend}
       append={finalAppend}>
-      <EuiValidatableControl isInvalid={isInvalid}>
+      <WuiValidatableControl isInvalid={isInvalid}>
         <input
           type={inputType}
           id={id}
@@ -170,12 +170,12 @@ export const EuiFieldPassword: FunctionComponent<EuiFieldPasswordProps> = ({
           ref={setInputRef}
           {...rest}
         />
-      </EuiValidatableControl>
-    </EuiFormControlLayout>
+      </WuiValidatableControl>
+    </WuiFormControlLayout>
   );
 };
 
-EuiFieldPassword.defaultProps = {
+WuiFieldPassword.defaultProps = {
   value: undefined,
   fullWidth: false,
   isLoading: false,

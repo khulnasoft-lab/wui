@@ -21,7 +21,7 @@ import { cloneElement, FunctionComponent, ReactElement } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export interface EuiGlobalToastListItemProps {
+export interface WuiGlobalToastListItemProps {
   isDismissed?: boolean;
   /**
    * ReactElement to render as this component's content
@@ -29,16 +29,16 @@ export interface EuiGlobalToastListItemProps {
   children?: ReactElement;
 }
 
-export const EuiGlobalToastListItem: FunctionComponent<CommonProps &
-  EuiGlobalToastListItemProps> = ({ children, isDismissed }) => {
+export const WuiGlobalToastListItem: FunctionComponent<CommonProps &
+  WuiGlobalToastListItemProps> = ({ children, isDismissed }) => {
   if (!children) {
     return null;
   }
   const classes = classNames(
-    'euiGlobalToastListItem',
+    'wuiGlobalToastListItem',
     children.props.className,
     {
-      'euiGlobalToastListItem-isDismissed': isDismissed,
+      'wuiGlobalToastListItem-isDismissed': isDismissed,
     }
   );
 

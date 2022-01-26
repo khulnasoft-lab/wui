@@ -1,9 +1,9 @@
 // Colors
-$euiFocusRingColor: rgba($euiColorPrimary, .3) !default;
-$euiFocusRingAnimStartColor: rgba($euiColorPrimary, 0) !default;
-$euiFocusRingAnimStartSize: 6px !default;
-$euiFocusRingAnimStartSizeLarge: 10px !default;
+$wuiFocusRingColor: rgba($wuiColorPrimary, .3) !default;
+$wuiFocusRingAnimStartColor: rgba($wuiColorPrimary, 0) !default;
+$wuiFocusRingAnimStartSize: 6px !default;
+$wuiFocusRingAnimStartSizeLarge: 10px !default;
 
 // Sizing
-$euiFocusRingSizeLarge: $euiSizeXS !default;
-$euiFocusRingSize: $euiFocusRingSizeLarge * .75 !default;
+$wuiFocusRingSizeLarge: $euiSizeXS !default;
+$wuiFocusRingSize: $wuiFocusRingSizeLarge * .75 !default;

@@ -21,12 +21,12 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 
-import { EuiBasicTable, EuiBasicTableProps } from './basic_table';
+import { WuiBasicTable, WuiBasicTableProps } from './basic_table';
 
-describe('EuiBasicTable', () => {
+describe('WuiBasicTable', () => {
   describe('behavior', () => {
     describe('selected items', () => {
-      let props: EuiBasicTableProps<{ id: string; name: string }>;
+      let props: WuiBasicTableProps<{ id: string; name: string }>;
       let component: ReactWrapper;
 
       beforeEach(() => {
@@ -49,7 +49,7 @@ describe('EuiBasicTable', () => {
           onChange: () => {},
         };
 
-        component = mount(<EuiBasicTable {...props} />);
+        component = mount(<WuiBasicTable {...props} />);
       });
 
       test('check the select all checkbox when all are selected', () => {

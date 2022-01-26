@@ -23,7 +23,7 @@ export const searchExternalSection = {
   text: (
     <div>
       <p>
-        The example shows how to configure <strong>EuiInMemoryTable</strong>{' '}
+        The example shows how to configure <strong>WuiInMemoryTable</strong>{' '}
         when both external and internal search/filter states are in use.
       </p>
     </div>

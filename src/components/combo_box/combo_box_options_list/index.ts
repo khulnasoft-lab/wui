@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiComboBoxOptionsList,
-  EuiComboBoxOptionsListProps,
+  WuiComboBoxOptionsList,
+  WuiComboBoxOptionsListProps,
 } from './combo_box_options_list';
-export { EuiComboBoxOption, EuiComboBoxOptionProps } from './combo_box_option';
-export { EuiComboBoxTitle } from './combo_box_title';
+export { WuiComboBoxOption, WuiComboBoxOptionProps } from './combo_box_option';
+export { WuiComboBoxTitle } from './combo_box_title';

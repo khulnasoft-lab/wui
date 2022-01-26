@@ -21,20 +21,20 @@ import React, { Component } from 'react';
 
 const MINIMUM_COLUMN_WIDTH = 40;
 
-export interface EuiDataGridColumnResizerProps {
+export interface WuiDataGridColumnResizerProps {
   columnId: string;
   columnWidth: number;
   setColumnWidth: (columnId: string, width: number) => void;
 }
 
-interface EuiDataGridColumnResizerState {
+interface WuiDataGridColumnResizerState {
   initialX: number;
   offset: number;
 }
 
-export class EuiDataGridColumnResizer extends Component<
-  EuiDataGridColumnResizerProps,
-  EuiDataGridColumnResizerState
+export class WuiDataGridColumnResizer extends Component<
+  WuiDataGridColumnResizerProps,
+  WuiDataGridColumnResizerState
 > {
   state = {
     initialX: 0,
@@ -84,7 +84,7 @@ export class EuiDataGridColumnResizer extends Component<
 
     return (
       <div
-        className="euiDataGridColumnResizer"
+        className="wuiDataGridColumnResizer"
         data-test-subj="dataGridColumnResizer"
         style={{ marginRight: `${-offset}px` }}
         onMouseDown={this.onMouseDown}

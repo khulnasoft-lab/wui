@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCode,
-  EuiIcon,
-  EuiPanel,
-  EuiSpacer,
-  EuiText,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiCode,
+  WuiIcon,
+  WuiPanel,
+  WuiSpacer,
+  WuiText,
   useResizeObserver,
 } from '../../../../src/components';
 
@@ -29,41 +29,41 @@ export const ResizeObserverHookExample = () => {
 
   return (
     <div>
-      <EuiText>
+      <WuiText>
         {hasResizeObserver ? (
           <p>
-            <EuiIcon type="checkInCircleFilled" color="secondary" /> Browser
+            <WuiIcon type="checkInCircleFilled" color="secondary" /> Browser
             supports ResizeObserver API.
           </p>
         ) : (
           <p>
-            <EuiIcon type="crossInACircleFilled" color="danger" /> Browser does
+            <WuiIcon type="crossInACircleFilled" color="danger" /> Browser does
             not support ResizeObserver API. Using MutationObserver.
           </p>
         )}
         <p>
-          <EuiCode>{`height: ${dimensions.height}; width: ${dimensions.width}`}</EuiCode>
+          <WuiCode>{`height: ${dimensions.height}; width: ${dimensions.width}`}</WuiCode>
         </p>
-      </EuiText>
+      </WuiText>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiButton fill={true} onClick={togglePaddingSize}>
+      <WuiButton fill={true} onClick={togglePaddingSize}>
         Toggle container padding
-      </EuiButton>
+      </WuiButton>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <div className="eui-displayInlineBlock" ref={resizeRef}>
-        <EuiPanel className="eui-displayInlineBlock" paddingSize={paddingSize}>
+      <div className="wui-displayInlineBlock" ref={resizeRef}>
+        <WuiPanel className="wui-displayInlineBlock" paddingSize={paddingSize}>
           <ul>
             {items.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <EuiSpacer size="s" />
-          <EuiButtonEmpty onClick={addItem}>add item</EuiButtonEmpty>
-        </EuiPanel>
+          <WuiSpacer size="s" />
+          <WuiButtonEmpty onClick={addItem}>add item</WuiButtonEmpty>
+        </WuiPanel>
       </div>
     </div>
   );

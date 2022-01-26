@@ -29,12 +29,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiNotificationBadge } from '../badge';
+import { WuiNotificationBadge } from '../badge';
 
-import { EuiLoadingSpinner } from '../loading';
-import { EuiInnerText } from '../inner_text';
+import { WuiLoadingSpinner } from '../loading';
+import { WuiInnerText } from '../inner_text';
 
-export interface EuiFacetButtonProps
+export interface WuiFacetButtonProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLButtonElement>, 'onClick'> {
   buttonRef?: RefCallback<HTMLButtonElement>;
@@ -43,7 +43,7 @@ export interface EuiFacetButtonProps
    */
   children: ReactNode;
   /**
-   * Any node, but preferably a `EuiIcon` or `EuiAvatar`
+   * Any node, but preferably a `WuiIcon` or `WuiAvatar`
    */
   icon?: ReactNode;
   isDisabled?: boolean;
@@ -62,7 +62,7 @@ export interface EuiFacetButtonProps
   quantity?: number;
 }
 
-export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
+export const WuiFacetButton: FunctionComponent<WuiFacetButtonProps> = ({
   children,
   className,
   icon,
@@ -77,10 +77,10 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
   isDisabled = isLoading ? true : isDisabled;
 
   const classes = classNames(
-    'euiFacetButton',
+    'wuiFacetButton',
     {
-      'euiFacetButton--isSelected': isSelected,
-      'euiFacetButton--unSelected': !isSelected,
+      'wuiFacetButton--isSelected': isSelected,
+      'wuiFacetButton--unSelected': !isSelected,
     },
     className
   );
@@ -90,16 +90,16 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
 
   if (isLoading) {
     buttonQuantity = (
-      <EuiLoadingSpinner className="euiFacetButton__spinner" size="m" />
+      <WuiLoadingSpinner className="wuiFacetButton__spinner" size="m" />
     );
   } else if (typeof quantity === 'number') {
     buttonQuantity = (
-      <EuiNotificationBadge
-        className="euiFacetButton__quantity"
+      <WuiNotificationBadge
+        className="wuiFacetButton__quantity"
         size="m"
         color={!isSelected || isDisabled ? 'subdued' : 'accent'}>
         {quantity}
-      </EuiNotificationBadge>
+      </WuiNotificationBadge>
     );
   }
 
@@ -108,12 +108,12 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
 
   if (React.isValidElement<{ className?: string }>(icon)) {
     buttonIcon = React.cloneElement(icon, {
-      className: classNames(icon.props.className, 'euiFacetButton__icon'),
+      className: classNames(icon.props.className, 'wuiFacetButton__icon'),
     });
   }
 
   return (
-    <EuiInnerText>
+    <WuiInnerText>
       {(ref, innerText) => (
         <button
           className={classes}
@@ -122,10 +122,10 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
           ref={buttonRef}
           title={rest['aria-label'] || innerText}
           {...rest}>
-          <span className="euiFacetButton__content">
+          <span className="wuiFacetButton__content">
             {buttonIcon}
             <span
-              className="euiFacetButton__text"
+              className="wuiFacetButton__text"
               data-text={innerText}
               ref={ref}>
               {children}
@@ -134,6 +134,6 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
           </span>
         </button>
       )}
-    </EuiInnerText>
+    </WuiInnerText>
   );
 };

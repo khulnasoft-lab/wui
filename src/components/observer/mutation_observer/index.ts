@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiMutationObserver } from './mutation_observer';
+export { WuiMutationObserver } from './mutation_observer';

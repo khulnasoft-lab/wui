@@ -5,15 +5,15 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiLink,
-  EuiResizableContainer,
-  EuiSpacer,
-  EuiText,
+  WuiCallOut,
+  WuiCode,
+  WuiLink,
+  WuiResizableContainer,
+  WuiSpacer,
+  WuiText,
 } from '../../../../src/components';
-import { EuiResizablePanel } from '../../../../src/components/resizable_container/resizable_panel';
-import { EuiResizableButton } from '../../../../src/components/resizable_container/resizable_button';
+import { WuiResizablePanel } from '../../../../src/components/resizable_container/resizable_panel';
+import { WuiResizableButton } from '../../../../src/components/resizable_container/resizable_button';
 
 import ResizableContainerBasic from './resizable_container_basic';
 import ResizableContainerVertical from './resizable_container_vertical';
@@ -37,51 +37,51 @@ const ResizableContainerResetValuesHtml = renderToHtml(
 );
 const ResizableResizerSizeHtml = renderToHtml(ResizableResizerSize);
 
-const snippet = `<EuiResizableContainer style={{ height: '400px' }}>
-  {(EuiResizablePanel, EuiResizableButton) => (
+const snippet = `<WuiResizableContainer style={{ height: '400px' }}>
+  {(WuiResizablePanel, WuiResizableButton) => (
     <>
-      <EuiResizablePanel initialSize={50} minSize="200px">
-        <EuiText>
+      <WuiResizablePanel initialSize={50} minSize="200px">
+        <WuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </WuiText>
+      </WuiResizablePanel>
 
-      <EuiResizableButton />
+      <WuiResizableButton />
 
-      <EuiResizablePanel initialSize={50} minSize="200px">
-        <EuiText>
+      <WuiResizablePanel initialSize={50} minSize="200px">
+        <WuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </WuiText>
+      </WuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</WuiResizableContainer>`;
 
 export const ResizableContainerExample = {
   title: 'Resizable container',
   isNew: true,
   intro: (
     <Fragment>
-      <EuiCallOut title="Consuming" color="warning">
-        <EuiText size="s">
+      <WuiCallOut title="Consuming" color="warning">
+        <WuiText size="s">
           <p>
             This component is handy for various resizable containers.{' '}
-            <strong>EuiResizableContainer</strong> uses the{' '}
-            <EuiLink
+            <strong>WuiResizableContainer</strong> uses the{' '}
+            <WuiLink
               href="https://reactjs.org/docs/render-props.html#using-props-other-than-render"
               external>
               React Render Props
-            </EuiLink>{' '}
-            technique to provide <strong>EuiResizablePanel</strong> and{' '}
-            <strong>EuiResizableButton</strong> components for you layout. Wrap
-            parts of your content with the <strong>EuiResizablePanel</strong>{' '}
-            component and put the <strong>EuiResizableButton</strong> component
+            </WuiLink>{' '}
+            technique to provide <strong>WuiResizablePanel</strong> and{' '}
+            <strong>WuiResizableButton</strong> components for you layout. Wrap
+            parts of your content with the <strong>WuiResizablePanel</strong>{' '}
+            component and put the <strong>WuiResizableButton</strong> component
             between.
           </p>
-        </EuiText>
-      </EuiCallOut>
+        </WuiText>
+      </WuiCallOut>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
     </Fragment>
   ),
   sections: [
@@ -109,18 +109,18 @@ export const ResizableContainerExample = {
           </p>
           <ul>
             <li>
-              add <EuiCode>initialSize</EuiCode> in percents to each panel to
+              add <WuiCode>initialSize</WuiCode> in percents to each panel to
               specify the initial size of it. Other calculations will be
               incapsulated, you don&#39;t worry about it.
             </li>
             <li>
-              add <EuiCode>scrollable=false</EuiCode> prop to a panel to
+              add <WuiCode>scrollable=false</WuiCode> prop to a panel to
               eliminate overflow scrolling
             </li>
           </ul>
         </div>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { WuiResizableContainer, WuiResizablePanel, WuiResizableButton },
       snippet,
       demo: <ResizableContainerBasic />,
     },
@@ -141,25 +141,25 @@ export const ResizableContainerExample = {
           <p>
             Sometimes it&#39;s necessary to control panel sizes from the
             outside. For example to store sizes in{' '}
-            <EuiCode>localStorage</EuiCode> or change the layout with predefined
-            sizes. Here is the <EuiCode>onPanelWidthChange</EuiCode> and{' '}
-            <EuiCode>size</EuiCode> props for help. If you use such an approach,
-            you have to specify an <EuiCode>id</EuiCode> prop for each panel to
+            <WuiCode>localStorage</WuiCode> or change the layout with predefined
+            sizes. Here is the <WuiCode>onPanelWidthChange</WuiCode> and{' '}
+            <WuiCode>size</WuiCode> props for help. If you use such an approach,
+            you have to specify an <WuiCode>id</WuiCode> prop for each panel to
             track their sizes.
           </p>
 
-          <EuiCallOut title="Required properties" color="warning">
-            <EuiText size="s">
+          <WuiCallOut title="Required properties" color="warning">
+            <WuiText size="s">
               <p>
-                Either <EuiCode>initialSize</EuiCode> or <EuiCode>size</EuiCode>{' '}
-                must be specified. The <EuiCode>size</EuiCode> prop is for cases
+                Either <WuiCode>initialSize</WuiCode> or <WuiCode>size</WuiCode>{' '}
+                must be specified. The <WuiCode>size</WuiCode> prop is for cases
                 where a parent component will control sizing updates.
               </p>
-            </EuiText>
-          </EuiCallOut>
+            </WuiText>
+          </WuiCallOut>
         </div>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { WuiResizableContainer, WuiResizablePanel, WuiResizableButton },
       demo: <ResizableContainerResetValues />,
     },
     {
@@ -176,12 +176,12 @@ export const ResizableContainerExample = {
       title: 'Horizontal resizing with three panels',
       text: (
         <p>
-          The <strong>EuiResizablePanel</strong> and{' '}
-          <strong>EuiResizableButton</strong> components can each be used
+          The <strong>WuiResizablePanel</strong> and{' '}
+          <strong>WuiResizableButton</strong> components can each be used
           multiple times to create a more complex layout.
         </p>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { WuiResizableContainer, WuiResizablePanel, WuiResizableButton },
       demo: <ResizableContainerThreePanels />,
     },
     {
@@ -198,12 +198,12 @@ export const ResizableContainerExample = {
       title: 'Vertical resizing',
       text: (
         <p>
-          Set <EuiCode>direction=vertical</EuiCode> on{' '}
-          <strong>EuiResizableContainer</strong> to set a vertical orientation
+          Set <WuiCode>direction=vertical</WuiCode> on{' '}
+          <strong>WuiResizableContainer</strong> to set a vertical orientation
           of the resizable panels.
         </p>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { WuiResizableContainer, WuiResizablePanel, WuiResizableButton },
       demo: (
         <div className="guideDemo__highlightSpacer">
           <ResizableContainerVertical />
@@ -226,16 +226,16 @@ export const ResizableContainerExample = {
         <div>
           <p>
             You can control the space between panels by modifying the{' '}
-            <EuiCode>size</EuiCode> prop of the{' '}
-            <strong>EuiResizableButton</strong> component. The available sizes
-            are <EuiCode>xl</EuiCode>, <EuiCode>l</EuiCode>,{' '}
-            <EuiCode>m</EuiCode>, and <EuiCode>s</EuiCode>. You should avoid
+            <WuiCode>size</WuiCode> prop of the{' '}
+            <strong>WuiResizableButton</strong> component. The available sizes
+            are <WuiCode>xl</WuiCode>, <WuiCode>l</WuiCode>,{' '}
+            <WuiCode>m</WuiCode>, and <WuiCode>s</WuiCode>. You should avoid
             using different sizes within the same{' '}
-            <strong>EuiResizableContainer</strong>, as shown in the demo below.
+            <strong>WuiResizableContainer</strong>, as shown in the demo below.
           </p>
         </div>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { WuiResizableContainer, WuiResizablePanel, WuiResizableButton },
       demo: <ResizableResizerSize />,
     },
   ],

@@ -23,9 +23,9 @@ module.exports = {
   },
   configs: {
     recommended: {
-      plugins: ['@elastic/eslint-plugin-eui'],
+      plugins: ['@wazuh/eslint-plugin-wui'],
       rules: {
-        '@elastic/eui/href-or-on-click': 'error',
+        '@wazuh/wui/href-or-on-click': 'error',
       },
     },
   },

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export type EuiPopoverPosition = 'top' | 'right' | 'bottom' | 'left';
+export type WuiPopoverPosition = 'top' | 'right' | 'bottom' | 'left';

@@ -5,9 +5,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiMarkdownFormat,
-  EuiText,
-  EuiSpacer,
+  WuiMarkdownFormat,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -26,18 +26,18 @@ export const MarkdownFormatExample = {
   isNew: true,
   intro: (
     <Fragment>
-      <EuiText>
+      <WuiText>
         <p>
-          <strong>EuiMarkdownFormat</strong> is a read-only way to render
+          <strong>WuiMarkdownFormat</strong> is a read-only way to render
           markdown-style content in a page. It is a peer component to{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-editor/">EuiMarkdownEditor</Link>
+            <Link to="/editors-syntax/markdown-editor/">WuiMarkdownEditor</Link>
           </strong>{' '}
           and has the ability to be modified by additional{' '}
           <Link to="/editors-syntax/markdown-plugins">markdown plugins</Link>.
         </p>
-      </EuiText>
-      <EuiSpacer size="xxl" />
+      </WuiText>
+      <WuiSpacer size="xxl" />
     </Fragment>
   ),
   sections: [
@@ -55,17 +55,17 @@ export const MarkdownFormatExample = {
       title: 'Built in plugins',
       text: (
         <p>
-          <strong>EuiMarkdownFormat</strong> is a wrapper that will render
-          Markdown provided. EuiMarkdownFormat uses{' '}
+          <strong>WuiMarkdownFormat</strong> is a wrapper that will render
+          Markdown provided. WuiMarkdownFormat uses{' '}
           <Link to="https://github.com/remarkjs/remark)">Remark</Link> by
           default. The translation layer automatically substitutes raw HTML
-          output with their EUI equivilant. This means anchor and code blocks
-          will become <strong>EuiLink</strong> and <strong>EuiCodeBlock</strong>{' '}
+          output with their WUI equivilant. This means anchor and code blocks
+          will become <strong>WuiLink</strong> and <strong>WuiCodeBlock</strong>{' '}
           components respectively.
         </p>
       ),
       props: {
-        EuiMarkdownFormat,
+        WuiMarkdownFormat,
       },
       demo: <MarkdownFormat />,
     },
@@ -88,7 +88,7 @@ export const MarkdownFormatExample = {
         </p>
       ),
       props: {
-        EuiMarkdownFormat,
+        WuiMarkdownFormat,
       },
       demo: <MarkdownFormatSink />,
     },

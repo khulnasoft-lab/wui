@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiStat } from '../../../../src/components/';
+import { WuiStat } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiStat.__docgenInfo)
-    ? EuiStat.__docgenInfo[0]
-    : EuiStat.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiStat.__docgenInfo)
+    ? WuiStat.__docgenInfo[0]
+    : WuiStat.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.description = {
@@ -35,14 +35,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiStat',
+      componentName: 'WuiStat',
       props: propsToUse,
       scope: {
-        EuiStat,
+        WuiStat,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiStat'],
+        '@wazuh/wui': {
+          named: ['WuiStat'],
         },
       },
     },

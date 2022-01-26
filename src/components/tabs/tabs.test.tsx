@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTabs } from './tabs';
+import { WuiTabs } from './tabs';
 
-describe('EuiTabs', () => {
+describe('WuiTabs', () => {
   test('renders', () => {
-    const component = <EuiTabs {...requiredProps} />;
+    const component = <WuiTabs {...requiredProps} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -33,21 +33,21 @@ describe('EuiTabs', () => {
   describe('props', () => {
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<EuiTabs size="s" />);
+        const component = render(<WuiTabs size="s" />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('display', () => {
       test('can be condensed', () => {
-        const component = render(<EuiTabs display="condensed" />);
+        const component = render(<WuiTabs display="condensed" />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('expand', () => {
       test('is rendered', () => {
-        const component = render(<EuiTabs expand />);
+        const component = render(<WuiTabs expand />);
         expect(component).toMatchSnapshot();
       });
     });

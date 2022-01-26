@@ -21,16 +21,16 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiPopoverTitleProps = FunctionComponent<
+export type WuiPopoverTitleProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiPopoverTitle: EuiPopoverTitleProps = ({
+export const WuiPopoverTitle: WuiPopoverTitleProps = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiPopoverTitle', className);
+  const classes = classNames('wuiPopoverTitle', className);
 
   return (
     <div className={classes} {...rest}>

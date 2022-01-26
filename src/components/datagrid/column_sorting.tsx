@@ -25,31 +25,31 @@ import React, {
   useEffect,
 } from 'react';
 import classNames from 'classnames';
-import { EuiDataGridColumn, EuiDataGridSorting } from './data_grid_types';
-import { EuiPopover, EuiPopoverFooter } from '../popover';
-import { EuiI18n } from '../i18n';
-import { EuiText } from '../text';
-import { EuiButtonEmpty } from '../button';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiDataGridColumn, WuiDataGridSorting } from './data_grid_types';
+import { WuiPopover, WuiPopoverFooter } from '../popover';
+import { WuiI18n } from '../i18n';
+import { WuiText } from '../text';
+import { WuiButtonEmpty } from '../button';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 import {
-  EuiDragDropContext,
-  EuiDroppable,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDroppable,
+  wuiDragDropReorder,
 } from '../drag_and_drop';
 import { DropResult } from 'react-beautiful-dnd';
-import { EuiDataGridColumnSortingDraggable } from './column_sorting_draggable';
+import { WuiDataGridColumnSortingDraggable } from './column_sorting_draggable';
 import {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  WuiDataGridSchema,
+  WuiDataGridSchemaDetector,
   getDetailsForSchema,
 } from './data_grid_schema';
-import { EuiToken } from '../token';
+import { WuiToken } from '../token';
 
 export const useColumnSorting = (
-  columns: EuiDataGridColumn[],
-  sorting: EuiDataGridSorting | undefined,
-  schema: EuiDataGridSchema,
-  schemaDetectors: EuiDataGridSchemaDetector[],
+  columns: WuiDataGridColumn[],
+  sorting: WuiDataGridSorting | undefined,
+  schema: WuiDataGridSchema,
+  schemaDetectors: WuiDataGridSchemaDetector[],
   displayValues: { [key: string]: string }
 ): ReactNode => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ export const useColumnSorting = (
   // prune any non-existent/hidden columns from sorting
   useEffect(() => {
     if (sorting) {
-      const nextSortingColumns: EuiDataGridSorting['columns'] = [];
+      const nextSortingColumns: WuiDataGridSorting['columns'] = [];
 
       const availableColumnIds = new Set(columns.map(({ id }) => id));
       for (let i = 0; i < sorting.columns.length; i++) {
@@ -78,8 +78,8 @@ export const useColumnSorting = (
 
   const activeColumnIds = new Set(sorting.columns.map(({ id }) => id));
   const { inactiveColumns } = columns.reduce<{
-    activeColumns: EuiDataGridColumn[];
-    inactiveColumns: EuiDataGridColumn[];
+    activeColumns: WuiDataGridColumn[];
+    inactiveColumns: WuiDataGridColumn[];
   }>(
     (acc, column) => {
       if (activeColumnIds.has(column.id)) {
@@ -100,7 +100,7 @@ export const useColumnSorting = (
     destination,
   }: DropResult) {
     const destinationIndex = destination!.index;
-    const nextColumns = euiDragDropReorder(
+    const nextColumns = wuiDragDropReorder(
       sorting!.columns,
       sourceIndex,
       destinationIndex
@@ -109,8 +109,8 @@ export const useColumnSorting = (
     sorting!.onSort(nextColumns);
   }
 
-  const controlBtnClasses = classNames('euiDataGrid__controlBtn', {
-    'euiDataGrid__controlBtn--active': sorting.columns.length > 0,
+  const controlBtnClasses = classNames('wuiDataGrid__controlBtn', {
+    'wuiDataGrid__controlBtn--active': sorting.columns.length > 0,
   });
 
   const numberOfSortedFields = sorting.columns.length;
@@ -136,20 +136,20 @@ export const useColumnSorting = (
   );
 
   const columnSorting = (
-    <EuiPopover
+    <WuiPopover
       data-test-subj="dataGridColumnSortingPopover"
       isOpen={isOpen}
       closePopover={() => setIsOpen(false)}
       anchorPosition="downLeft"
       ownFocus
       panelPaddingSize="s"
-      panelClassName="euiDataGridColumnSortingPopover"
+      panelClassName="wuiDataGridColumnSortingPopover"
       button={
-        <EuiI18n
-          tokens={['euiColumnSorting.button', 'euiColumnSorting.buttonActive']}
+        <WuiI18n
+          tokens={['wuiColumnSorting.button', 'wuiColumnSorting.buttonActive']}
           defaults={['Sort fields', 'fields sorted']}>
           {([button, buttonActive]: ReactChild[]) => (
-            <EuiButtonEmpty
+            <WuiButtonEmpty
               size="xs"
               iconType="sortable"
               color="text"
@@ -159,21 +159,21 @@ export const useColumnSorting = (
               {numberOfSortedFields > 0
                 ? `${numberOfSortedFields} ${buttonActive}`
                 : button}
-            </EuiButtonEmpty>
+            </WuiButtonEmpty>
           )}
-        </EuiI18n>
+        </WuiI18n>
       }>
       {sorting.columns.length > 0 ? (
         <div
           role="region"
           aria-live="assertive"
-          className="euiDataGrid__controlScroll">
-          <EuiDragDropContext onDragEnd={onDragEnd}>
-            <EuiDroppable droppableId="columnSorting">
+          className="wuiDataGrid__controlScroll">
+          <WuiDragDropContext onDragEnd={onDragEnd}>
+            <WuiDroppable droppableId="columnSorting">
               <Fragment>
                 {sorting.columns.map(({ id, direction }, index) => {
                   return (
-                    <EuiDataGridColumnSortingDraggable
+                    <WuiDataGridColumnSortingDraggable
                       key={id}
                       id={id}
                       display={displayValues[id]}
@@ -186,28 +186,28 @@ export const useColumnSorting = (
                   );
                 })}
               </Fragment>
-            </EuiDroppable>
-          </EuiDragDropContext>
+            </WuiDroppable>
+          </WuiDragDropContext>
         </div>
       ) : (
-        <EuiText size="s" color="subdued">
+        <WuiText size="s" color="subdued">
           <p role="alert">
-            <EuiI18n
-              token="euiColumnSorting.emptySorting"
+            <WuiI18n
+              token="wuiColumnSorting.emptySorting"
               default="Currently no fields are sorted"
             />
           </p>
-        </EuiText>
+        </WuiText>
       )}
       {(inactiveSortableColumns.length > 0 || sorting.columns.length > 0) && (
-        <EuiPopoverFooter>
-          <EuiFlexGroup
+        <WuiPopoverFooter>
+          <WuiFlexGroup
             gutterSize="m"
             justifyContent="spaceBetween"
             responsive={false}>
-            <EuiFlexItem grow={false}>
+            <WuiFlexItem grow={false}>
               {inactiveSortableColumns.length > 0 && (
-                <EuiPopover
+                <WuiPopover
                   data-test-subj="dataGridColumnSortingPopoverColumnSelection"
                   isOpen={avilableColumnsisOpen}
                   closePopover={() => setAvailableColumnsIsOpen(false)}
@@ -215,7 +215,7 @@ export const useColumnSorting = (
                   ownFocus
                   panelPaddingSize="s"
                   button={
-                    <EuiButtonEmpty
+                    <WuiButtonEmpty
                       size="xs"
                       flush="left"
                       iconType="arrowDown"
@@ -223,25 +223,25 @@ export const useColumnSorting = (
                       onClick={() =>
                         setAvailableColumnsIsOpen(!avilableColumnsisOpen)
                       }>
-                      <EuiI18n
-                        token="euiColumnSorting.pickFields"
+                      <WuiI18n
+                        token="wuiColumnSorting.pickFields"
                         default="Pick fields to sort by"
                       />
-                    </EuiButtonEmpty>
+                    </WuiButtonEmpty>
                   }>
-                  <EuiI18n
-                    token="euiColumnSorting.sortFieldAriaLabel"
+                  <WuiI18n
+                    token="wuiColumnSorting.sortFieldAriaLabel"
                     default="Sort by: ">
                     {(sortFieldAriaLabel: string) => (
                       <div
-                        className="euiDataGridColumnSorting__fieldList"
+                        className="wuiDataGridColumnSorting__fieldList"
                         role="listbox">
                         {inactiveSortableColumns.map(
                           ({ id, defaultSortDirection }) => {
                             return (
                               <button
                                 key={id}
-                                className="euiDataGridColumnSorting__field"
+                                className="wuiDataGridColumnSorting__field"
                                 aria-label={`${sortFieldAriaLabel} ${id}`}
                                 role="option"
                                 aria-selected="false"
@@ -259,13 +259,13 @@ export const useColumnSorting = (
                                   });
                                   sorting.onSort(nextColumns);
                                 }}>
-                                <EuiFlexGroup
+                                <WuiFlexGroup
                                   alignItems="center"
                                   gutterSize="s"
                                   component="span"
                                   responsive={false}>
-                                  <EuiFlexItem grow={false}>
-                                    <EuiToken
+                                  <WuiFlexItem grow={false}>
+                                    <WuiToken
                                       iconType={
                                         schemaDetails(id) != null
                                           ? getDetailsForSchema(
@@ -283,40 +283,40 @@ export const useColumnSorting = (
                                           : undefined
                                       }
                                     />
-                                  </EuiFlexItem>
-                                  <EuiFlexItem grow={false}>
-                                    <EuiText size="xs">
+                                  </WuiFlexItem>
+                                  <WuiFlexItem grow={false}>
+                                    <WuiText size="xs">
                                       {displayValues[id]}
-                                    </EuiText>
-                                  </EuiFlexItem>
-                                </EuiFlexGroup>
+                                    </WuiText>
+                                  </WuiFlexItem>
+                                </WuiFlexGroup>
                               </button>
                             );
                           }
                         )}
                       </div>
                     )}
-                  </EuiI18n>
-                </EuiPopover>
+                  </WuiI18n>
+                </WuiPopover>
               )}
-            </EuiFlexItem>
+            </WuiFlexItem>
             {sorting.columns.length > 0 ? (
-              <EuiFlexItem grow={false}>
-                <EuiButtonEmpty
+              <WuiFlexItem grow={false}>
+                <WuiButtonEmpty
                   size="xs"
                   flush="right"
                   onClick={() => sorting.onSort([])}>
-                  <EuiI18n
-                    token="euiColumnSorting.clearAll"
+                  <WuiI18n
+                    token="wuiColumnSorting.clearAll"
                     default="Clear sorting"
                   />
-                </EuiButtonEmpty>
-              </EuiFlexItem>
+                </WuiButtonEmpty>
+              </WuiFlexItem>
             ) : null}
-          </EuiFlexGroup>
-        </EuiPopoverFooter>
+          </WuiFlexGroup>
+        </WuiPopoverFooter>
       )}
-    </EuiPopover>
+    </WuiPopover>
   );
 
   return columnSorting;

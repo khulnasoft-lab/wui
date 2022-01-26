@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiColorStops, EuiFormRow } from '../../../../src/components';
+import { WuiColorStops, WuiFormRow } from '../../../../src/components';
 
 import { useColorStopsState } from '../../../../src/services';
 
@@ -34,26 +34,26 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Empty start">
-        <EuiColorStops
+      <WuiFormRow label="Empty start">
+        <WuiColorStops
           label="Empty start"
           onChange={handleEmptyChange}
           colorStops={emptyColorStops}
           min={0}
           max={100}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Standard">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Standard">
+        <WuiColorStops
           label="Standard"
           onChange={setColorStops}
           colorStops={colorStops}
           min={0}
           max={100}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Random new color">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Random new color">
+        <WuiColorStops
           label="Random new color"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -61,18 +61,18 @@ export default () => {
           max={100}
           addColor={addColor}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Extended range">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Extended range">
+        <WuiColorStops
           label="Extended range"
           onChange={handleExtendedChange}
           colorStops={extendedColorStops}
           min={100}
           max={400}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Fixed color segments">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Fixed color segments">
+        <WuiColorStops
           label="Fixed color segments"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -80,7 +80,7 @@ export default () => {
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </React.Fragment>
   );
 };

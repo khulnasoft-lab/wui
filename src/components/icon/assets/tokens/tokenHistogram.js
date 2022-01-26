@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconTokenHistogram = ({ title, titleId, ...props }) => (
+const WuiIconTokenHistogram = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTokenHistogram = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenHistogram;
+export const icon = WuiIconTokenHistogram;

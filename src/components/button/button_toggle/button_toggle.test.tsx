@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiButtonToggle } from './button_toggle';
+import { WuiButtonToggle } from './button_toggle';
 
-describe('EuiButtonToggle', () => {
+describe('WuiButtonToggle', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiButtonToggle {...requiredProps} label="Label me" />
+      <WuiButtonToggle {...requiredProps} label="Label me" />
     );
 
     expect(component).toMatchSnapshot();

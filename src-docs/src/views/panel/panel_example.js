@@ -6,7 +6,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiPanel } from '../../../../src/components';
+import { WuiCode, WuiPanel } from '../../../../src/components';
 
 import { panelConfig } from './playground';
 
@@ -22,17 +22,17 @@ import PanelBadge from './panel_badge';
 const panelBadgeSource = require('!!raw-loader!./panel_badge');
 const panelBadgeHtml = renderToHtml(PanelBadge);
 
-const panelSnippet = `<EuiPanel paddingSize="none">
+const panelSnippet = `<WuiPanel paddingSize="none">
   <!-- Panel with no padding -->
-</EuiPanel>`;
+</WuiPanel>`;
 
-const panelHoverSnippet = `<EuiPanel onClick={handleClick}>
+const panelHoverSnippet = `<WuiPanel onClick={handleClick}>
   <!-- Panel with onClick handler -->
-</EuiPanel>`;
+</WuiPanel>`;
 
-const panelBadgeSnippet = `<EuiPanel betaBadgeLabel={badgeLabel}>
+const panelBadgeSnippet = `<WuiPanel betaBadgeLabel={badgeLabel}>
   <!-- Panel with BetaBadge -->
-</EuiPanel>`;
+</WuiPanel>`;
 
 export const PanelExample = {
   title: 'Panel',
@@ -50,20 +50,20 @@ export const PanelExample = {
       ],
       text: (
         <p>
-          <strong>EuiPanel</strong> is a simple wrapper component to add depth
+          <strong>WuiPanel</strong> is a simple wrapper component to add depth
           to a contained layout. It is commonly used as a base for other larger
           components like{' '}
           <Link to="/layout/page">
-            <strong>EuiPage</strong>
+            <strong>WuiPage</strong>
           </Link>{' '}
           and{' '}
           <Link to="/layout/popover">
-            <strong>EuiPopover</strong>
+            <strong>WuiPopover</strong>
           </Link>
           .
         </p>
       ),
-      props: { EuiPanel },
+      props: { WuiPanel },
       snippet: panelSnippet,
       demo: <Panel />,
     },
@@ -81,8 +81,8 @@ export const PanelExample = {
       ],
       text: (
         <p>
-          Adding an <EuiCode>onClick</EuiCode> handler to the{' '}
-          <strong>EuiPanel</strong> will turn the wrapping element into a button
+          Adding an <WuiCode>onClick</WuiCode> handler to the{' '}
+          <strong>WuiPanel</strong> will turn the wrapping element into a button
           to allow for interaction.
         </p>
       ),
@@ -105,11 +105,11 @@ export const PanelExample = {
         <p>
           Similar to{' '}
           <Link to="/display/card">
-            <strong>EuiCard</strong>
+            <strong>WuiCard</strong>
           </Link>
           , panels can also accept an{' '}
           <Link to="/display/badge">
-            <strong>EuiBetaBadge</strong>
+            <strong>WuiBetaBadge</strong>
           </Link>
           .
         </p>

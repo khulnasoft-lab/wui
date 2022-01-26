@@ -26,18 +26,18 @@ import React, {
 import { Droppable, DroppableProps } from 'react-beautiful-dnd';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiDragDropContextContext } from './drag_drop_context';
+import { WuiDragDropContextContext } from './drag_drop_context';
 
 const spacingToClassNameMap = {
   none: null,
-  s: 'euiDroppable--s',
-  m: 'euiDroppable--m',
-  l: 'euiDroppable--l',
+  s: 'wuiDroppable--s',
+  m: 'wuiDroppable--m',
+  l: 'wuiDroppable--l',
 };
 
-export type EuiDroppableSpacing = keyof typeof spacingToClassNameMap;
+export type WuiDroppableSpacing = keyof typeof spacingToClassNameMap;
 
-export interface EuiDroppableProps
+export interface WuiDroppableProps
   extends CommonProps,
     Omit<DroppableProps, 'children'> {
   /**
@@ -53,9 +53,9 @@ export interface EuiDroppableProps
   /**
    * Adds padding to the droppable area
    */
-  spacing?: EuiDroppableSpacing;
+  spacing?: WuiDroppableSpacing;
   /**
-   * Adds an EuiPanel style to the droppable area
+   * Adds an WuiPanel style to the droppable area
    */
   withPanel?: boolean;
   /**
@@ -64,11 +64,11 @@ export interface EuiDroppableProps
   grow?: boolean;
 }
 
-export const EuiDroppableContext = React.createContext({
+export const WuiDroppableContext = React.createContext({
   cloneItems: false,
 });
 
-export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
+export const WuiDroppable: FunctionComponent<WuiDroppableProps> = ({
   droppableId,
   direction,
   isDropDisabled = false,
@@ -77,13 +77,13 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
   cloneDraggables = false,
   spacing = 'none',
   style,
-  type = 'EUI_DEFAULT',
+  type = 'WUI_DEFAULT',
   withPanel = false,
   grow = false,
   'data-test-subj': dataTestSubj = 'droppable',
   ...rest
 }) => {
-  const { isDraggingType } = useContext(EuiDragDropContextContext);
+  const { isDraggingType } = useContext(WuiDragDropContextContext);
   const dropIsDisabled: boolean = cloneDraggables ? true : isDropDisabled;
   return (
     <Droppable
@@ -94,20 +94,20 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
       {...rest}>
       {(provided, snapshot) => {
         const classes = classNames(
-          'euiDroppable',
+          'wuiDroppable',
           {
-            'euiDroppable--isDisabled': dropIsDisabled,
-            'euiDroppable--isDraggingOver': snapshot.isDraggingOver,
-            'euiDroppable--isDraggingType': isDraggingType === type,
-            'euiDroppable--withPanel': withPanel,
-            'euiDroppable--grow': grow,
-            'euiDroppable--noGrow': !grow,
+            'wuiDroppable--isDisabled': dropIsDisabled,
+            'wuiDroppable--isDraggingOver': snapshot.isDraggingOver,
+            'wuiDroppable--isDraggingType': isDraggingType === type,
+            'wuiDroppable--withPanel': withPanel,
+            'wuiDroppable--grow': grow,
+            'wuiDroppable--noGrow': !grow,
           },
           spacingToClassNameMap[spacing],
           className
         );
-        const placeholderClasses = classNames('euiDroppable__placeholder', {
-          'euiDroppable__placeholder--isHidden': cloneDraggables,
+        const placeholderClasses = classNames('wuiDroppable__placeholder', {
+          'wuiDroppable__placeholder--isHidden': cloneDraggables,
         });
         const DroppableElement =
           typeof children === 'function'
@@ -120,12 +120,12 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
             style={style}
             data-test-subj={dataTestSubj}
             className={classes}>
-            <EuiDroppableContext.Provider
+            <WuiDroppableContext.Provider
               value={{
                 cloneItems: cloneDraggables,
               }}>
               {DroppableElement}
-            </EuiDroppableContext.Provider>
+            </WuiDroppableContext.Provider>
             <div className={placeholderClasses}>{provided.placeholder}</div>
           </div>
         );

@@ -19,16 +19,16 @@
 
 import React, { FunctionComponent } from 'react';
 
-import { EuiSuperSelect } from '../../form';
+import { WuiSuperSelect } from '../../form';
 
 import { CommonProps } from '../../common';
 
 import { getLinearGradient, getFixedLinearGradient } from '../utils';
 import { ColorStop } from '../color_stops';
 
-import { EuiSuperSelectProps } from '../../form/super_select';
+import { WuiSuperSelectProps } from '../../form/super_select';
 
-export interface EuiColorPalettePickerPaletteTextProps extends CommonProps {
+export interface WuiColorPalettePickerPaletteTextProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -48,7 +48,7 @@ export interface EuiColorPalettePickerPaletteTextProps extends CommonProps {
   palette?: string[] | ColorStop[];
 }
 
-export interface EuiColorPalettePickerPaletteFixedProps extends CommonProps {
+export interface WuiColorPalettePickerPaletteFixedProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -67,7 +67,7 @@ export interface EuiColorPalettePickerPaletteFixedProps extends CommonProps {
   palette: string[];
 }
 
-export interface EuiColorPalettePickerPaletteGradientProps extends CommonProps {
+export interface WuiColorPalettePickerPaletteGradientProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -87,14 +87,14 @@ export interface EuiColorPalettePickerPaletteGradientProps extends CommonProps {
   palette: string[] | ColorStop[];
 }
 
-export type EuiColorPalettePickerPaletteProps =
-  | EuiColorPalettePickerPaletteTextProps
-  | EuiColorPalettePickerPaletteFixedProps
-  | EuiColorPalettePickerPaletteGradientProps;
+export type WuiColorPalettePickerPaletteProps =
+  | WuiColorPalettePickerPaletteTextProps
+  | WuiColorPalettePickerPaletteFixedProps
+  | WuiColorPalettePickerPaletteGradientProps;
 
-export type EuiColorPalettePickerProps<T extends string> = CommonProps &
+export type WuiColorPalettePickerProps<T extends string> = CommonProps &
   Omit<
-    EuiSuperSelectProps<T>,
+    WuiSuperSelectProps<T>,
     'options' | 'itemLayoutAlign' | 'hasDividers'
   > & {
     /**
@@ -103,12 +103,12 @@ export type EuiColorPalettePickerProps<T extends string> = CommonProps &
     selectionDisplay?: 'palette' | 'title';
 
     /**
-     * An array of one of the following objects: #EuiColorPalettePickerPaletteText, #EuiColorPalettePickerPaletteFixed, #EuiColorPalettePickerPaletteGradient
+     * An array of one of the following objects: #WuiColorPalettePickerPaletteText, #WuiColorPalettePickerPaletteFixed, #WuiColorPalettePickerPaletteGradient
      */
-    palettes: EuiColorPalettePickerPaletteProps[];
+    palettes: WuiColorPalettePickerPaletteProps[];
   };
 
-export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps<
+export const WuiColorPalettePicker: FunctionComponent<WuiColorPalettePickerProps<
   string
 >> = ({
   className,
@@ -127,8 +127,8 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
 }) => {
   const getPalette = (
     item:
-      | EuiColorPalettePickerPaletteFixedProps
-      | EuiColorPalettePickerPaletteGradientProps
+      | WuiColorPalettePickerPaletteFixedProps
+      | WuiColorPalettePickerPaletteGradientProps
   ) => {
     const background =
       item.type === 'fixed'
@@ -137,14 +137,14 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
 
     return (
       <div
-        className="euiColorPalettePicker__itemGradient"
+        className="wuiColorPalettePicker__itemGradient"
         style={{ background }}
       />
     );
   };
 
   const paletteOptions = palettes.map(
-    (item: EuiColorPalettePickerPaletteProps) => {
+    (item: WuiColorPalettePickerPaletteProps) => {
       const { type, value, title, palette, ...rest } = item;
       const paletteForDisplay = item.type !== 'text' ? getPalette(item) : null;
       return {
@@ -154,9 +154,9 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
             ? title
             : paletteForDisplay,
         dropdownDisplay: (
-          <div className="euiColorPalettePicker__item">
+          <div className="wuiColorPalettePicker__item">
             {title && type !== 'text' && (
-              <div className="euiColorPalettePicker__itemTitle">{title}</div>
+              <div className="wuiColorPalettePicker__itemTitle">{title}</div>
             )}
             {type === 'text' ? title : paletteForDisplay}
           </div>
@@ -167,7 +167,7 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
   );
 
   return (
-    <EuiSuperSelect
+    <WuiSuperSelect
       className={className}
       options={paletteOptions}
       valueOfSelected={valueOfSelected}

@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiEmptyPrompt is rendered 1`] = `
+exports[`WuiEmptyPrompt is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiEmptyPrompt testClass1 testClass2"
+  class="wuiEmptyPrompt testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
     color="subdued"
-    data-euiicon-type="arrowUp"
+    data-wuiicon-type="arrowUp"
   />
   <div
-    class="euiSpacer euiSpacer--s"
+    class="wuiSpacer wuiSpacer--s"
   />
   <span
     class="euiTextColor euiTextColor--subdued"
   >
     <h2
-      class="euiTitle euiTitle--medium"
+      class="wuiTitle wuiTitle--medium"
     >
       Title
     </h2>
     <div
-      class="euiSpacer euiSpacer--m"
+      class="wuiSpacer wuiSpacer--m"
     />
     <div
-      class="euiText euiText--medium"
+      class="wuiText wuiText--medium"
     >
       <p>
         Body
@@ -33,10 +33,10 @@ exports[`EuiEmptyPrompt is rendered 1`] = `
     </div>
   </span>
   <div
-    class="euiSpacer euiSpacer--l"
+    class="wuiSpacer wuiSpacer--l"
   />
   <div
-    class="euiSpacer euiSpacer--s"
+    class="wuiSpacer wuiSpacer--s"
   />
   <div>
     Actions
@@ -44,34 +44,34 @@ exports[`EuiEmptyPrompt is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props actions renders alone 1`] = `
+exports[`WuiEmptyPrompt props actions renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="wuiEmptyPrompt"
 >
   <div
-    class="euiSpacer euiSpacer--s"
+    class="wuiSpacer wuiSpacer--s"
   />
   actions
 </div>
 `;
 
-exports[`EuiEmptyPrompt props actions renders an array 1`] = `
+exports[`WuiEmptyPrompt props actions renders an array 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="wuiEmptyPrompt"
 >
   <div
-    class="euiSpacer euiSpacer--s"
+    class="wuiSpacer wuiSpacer--s"
   />
   <div
-    class="euiFlexGroup euiFlexGroup--gutterMedium euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentCenter euiFlexGroup--directionColumn euiFlexGroup--responsive"
+    class="wuiFlexGroup wuiFlexGroup--gutterMedium wuiFlexGroup--alignItemsCenter wuiFlexGroup--justifyContentCenter wuiFlexGroup--directionColumn wuiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       action1
     </div>
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="wuiFlexItem wuiFlexItem--flexGrowZero"
     >
       action2
     </div>
@@ -79,15 +79,15 @@ exports[`EuiEmptyPrompt props actions renders an array 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props body renders alone 1`] = `
+exports[`WuiEmptyPrompt props body renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="wuiEmptyPrompt"
 >
   <span
     class="euiTextColor euiTextColor--subdued"
   >
     <div
-      class="euiText euiText--medium"
+      class="wuiText wuiText--medium"
     >
       body
     </div>
@@ -95,34 +95,34 @@ exports[`EuiEmptyPrompt props body renders alone 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props iconType renders alone 1`] = `
+exports[`WuiEmptyPrompt props iconType renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="wuiEmptyPrompt"
 >
   <div
     color="subdued"
-    data-euiicon-type="arrowUp"
+    data-wuiicon-type="arrowUp"
   />
   <div
-    class="euiSpacer euiSpacer--s"
+    class="wuiSpacer wuiSpacer--s"
   />
 </div>
 `;
 
-exports[`EuiEmptyPrompt props title renders alone 1`] = `
+exports[`WuiEmptyPrompt props title renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="wuiEmptyPrompt"
 >
   <span
     class="euiTextColor euiTextColor--subdued"
   >
     <div
-      class="euiTitle euiTitle--medium"
+      class="wuiTitle wuiTitle--medium"
     >
       title
     </div>
     <div
-      class="euiSpacer euiSpacer--m"
+      class="wuiSpacer wuiSpacer--m"
     />
   </span>
 </div>

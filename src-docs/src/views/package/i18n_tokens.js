@@ -3,13 +3,13 @@ import tokens from '../../i18ntokens';
 import tokenChangelog from '../../i18ntokens_changelog';
 
 import {
-  EuiAccordion,
-  EuiCodeBlock,
-  EuiInMemoryTable,
-  EuiLink,
-  EuiSpacer,
-  EuiText,
-  EuiTitle,
+  WuiAccordion,
+  WuiCodeBlock,
+  WuiInMemoryTable,
+  WuiLink,
+  WuiSpacer,
+  WuiText,
+  WuiTitle,
 } from '../../../../src';
 import { GuidePage } from '../../components/guide_page';
 
@@ -22,12 +22,12 @@ const columns = [
           <p>
             <strong>{token}</strong>
           </p>
-          <EuiLink
+          <WuiLink
             target="_blank"
             color="subdued"
-            href={`https://github.com/elastic/eui/blob/master/${filepath}#L${loc.start.line}`}>
+            href={`https://github.com/wazuh/wui/blob/master/${filepath}#L${loc.start.line}`}>
             {filepath}:{loc.start.line}:{loc.start.column}
-          </EuiLink>
+          </WuiLink>
         </div>
       );
     },
@@ -36,13 +36,13 @@ const columns = [
     name: 'Default',
     render({ defString, highlighting }) {
       return (
-        <EuiCodeBlock
+        <WuiCodeBlock
           language={highlighting === 'code' ? 'javascript' : 'text'}
           paddingSize="none"
           transparentBackground
           fontSize="s">
           {defString}
-        </EuiCodeBlock>
+        </WuiCodeBlock>
       );
     },
   },
@@ -59,25 +59,25 @@ export const I18nTokens = {
   name: 'I18n tokens',
   component: () => (
     <GuidePage title="I18n tokens">
-      <EuiInMemoryTable
+      <WuiInMemoryTable
         items={tokens}
         columns={columns}
         search={search}
         pagination={{ initialPageSize: 50 }}
       />
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiTitle size="m">
+      <WuiTitle size="m">
         <span>Token changelog</span>
-      </EuiTitle>
+      </WuiTitle>
 
       {tokenChangelog.map(({ version, changes }) => (
-        <EuiAccordion
+        <WuiAccordion
           key={version}
           id={version}
           buttonContent={<span>{version}</span>}>
-          <EuiInMemoryTable
+          <WuiInMemoryTable
             items={changes}
             columns={[
               {
@@ -85,17 +85,17 @@ export const I18nTokens = {
                 name: 'Change',
                 width: '100px',
                 render: changeType => (
-                  <EuiText color="subdued" size="xs">
+                  <WuiText color="subdued" size="xs">
                     {changeType}
-                  </EuiText>
+                  </WuiText>
                 ),
               },
               { field: 'token', name: 'Token' },
               { field: 'value', name: 'New Value' },
             ]}
           />
-          <EuiSpacer size="s" />
-        </EuiAccordion>
+          <WuiSpacer size="s" />
+        </WuiAccordion>
       ))}
     </GuidePage>
   ),

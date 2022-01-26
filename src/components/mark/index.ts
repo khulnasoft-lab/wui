@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiMark } from './mark';
+export { WuiMark } from './mark';

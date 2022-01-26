@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
-  <EuiFlexGroup direction="column">
-    <EuiFlexItem grow={false}>Content grid item</EuiFlexItem>
-    <EuiFlexItem grow={false}>Another content grid item</EuiFlexItem>
-    <EuiFlexItem grow={false}>Using the column direction</EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup direction="column">
+    <WuiFlexItem grow={false}>Content grid item</WuiFlexItem>
+    <WuiFlexItem grow={false}>Another content grid item</WuiFlexItem>
+    <WuiFlexItem grow={false}>Using the column direction</WuiFlexItem>
+  </WuiFlexGroup>
 );

@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiPagination } from './pagination';
+export { WuiPagination } from './pagination';
 
-export { EuiPaginationButton } from './pagination_button';
+export { WuiPaginationButton } from './pagination_button';

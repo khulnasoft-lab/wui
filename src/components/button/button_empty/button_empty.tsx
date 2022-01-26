@@ -29,57 +29,57 @@ import {
 } from '../../common';
 import { getSecureRelForTarget } from '../../../services';
 import {
-  EuiButtonContent,
-  EuiButtonContentProps,
-  EuiButtonContentType,
+  WuiButtonContent,
+  WuiButtonContentProps,
+  WuiButtonContentType,
 } from '../button_content';
 import { validateHref } from '../../../services/security/href_validator';
 
-export type EuiButtonEmptyColor =
+export type WuiButtonEmptyColor =
   | 'primary'
   | 'danger'
   | 'disabled'
   | 'text'
   | 'ghost';
 
-const colorToClassNameMap: { [color in EuiButtonEmptyColor]: string } = {
-  primary: 'euiButtonEmpty--primary',
-  danger: 'euiButtonEmpty--danger',
-  disabled: 'euiButtonEmpty--disabled',
-  text: 'euiButtonEmpty--text',
-  ghost: 'euiButtonEmpty--ghost',
+const colorToClassNameMap: { [color in WuiButtonEmptyColor]: string } = {
+  primary: 'wuiButtonEmpty--primary',
+  danger: 'wuiButtonEmpty--danger',
+  disabled: 'wuiButtonEmpty--disabled',
+  text: 'wuiButtonEmpty--text',
+  ghost: 'wuiButtonEmpty--ghost',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const sizeToClassNameMap = {
-  xs: 'euiButtonEmpty--xSmall',
-  s: 'euiButtonEmpty--small',
-  l: 'euiButtonEmpty--large',
+  xs: 'wuiButtonEmpty--xSmall',
+  s: 'wuiButtonEmpty--small',
+  l: 'wuiButtonEmpty--large',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiButtonEmptySizes = keyof typeof sizeToClassNameMap;
+export type WuiButtonEmptySizes = keyof typeof sizeToClassNameMap;
 
 const flushTypeToClassNameMap = {
-  left: 'euiButtonEmpty--flushLeft',
-  right: 'euiButtonEmpty--flushRight',
-  both: 'euiButtonEmpty--flushBoth',
+  left: 'wuiButtonEmpty--flushLeft',
+  right: 'wuiButtonEmpty--flushRight',
+  both: 'wuiButtonEmpty--flushBoth',
 };
 
 export const FLUSH_TYPES = keysOf(flushTypeToClassNameMap);
 
 /**
- * Extends EuiButtonContentProps which provides
+ * Extends WuiButtonContentProps which provides
  * `iconType`, `iconSide`, and `textProps`
  */
-interface CommonEuiButtonEmptyProps extends EuiButtonContentProps, CommonProps {
+interface CommonWuiButtonEmptyProps extends WuiButtonContentProps, CommonProps {
   /**
    * Any of our named colors
    */
-  color?: EuiButtonEmptyColor;
-  size?: EuiButtonEmptySizes;
+  color?: WuiButtonEmptyColor;
+  size?: WuiButtonEmptySizes;
   /**
    * Ensure the text of the button sits flush to the left, right, or both sides of its container
    */
@@ -100,19 +100,19 @@ interface CommonEuiButtonEmptyProps extends EuiButtonContentProps, CommonProps {
   /**
    * Object of props passed to the <span/> wrapping the button's content
    */
-  contentProps?: EuiButtonContentType;
+  contentProps?: WuiButtonContentType;
 }
 
-type EuiButtonEmptyPropsForAnchor = PropsForAnchor<CommonEuiButtonEmptyProps>;
+type WuiButtonEmptyPropsForAnchor = PropsForAnchor<CommonWuiButtonEmptyProps>;
 
-type EuiButtonEmptyPropsForButton = PropsForButton<CommonEuiButtonEmptyProps>;
+type WuiButtonEmptyPropsForButton = PropsForButton<CommonWuiButtonEmptyProps>;
 
-export type EuiButtonEmptyProps = ExclusiveUnion<
-  EuiButtonEmptyPropsForAnchor,
-  EuiButtonEmptyPropsForButton
+export type WuiButtonEmptyProps = ExclusiveUnion<
+  WuiButtonEmptyPropsForAnchor,
+  WuiButtonEmptyPropsForButton
 >;
 
-export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
+export const WuiButtonEmpty: FunctionComponent<WuiButtonEmptyProps> = ({
   children,
   className,
   iconType,
@@ -140,28 +140,28 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
   const buttonIsDisabled = isLoading || isDisabled || disabled;
 
   const classes = classNames(
-    'euiButtonEmpty',
+    'wuiButtonEmpty',
     colorToClassNameMap[color],
     size ? sizeToClassNameMap[size] : null,
     flush ? flushTypeToClassNameMap[flush] : null,
     {
-      'euiButtonEmpty-isDisabled': buttonIsDisabled,
+      'wuiButtonEmpty-isDisabled': buttonIsDisabled,
     },
     className
   );
 
   const contentClassNames = classNames(
-    'euiButtonEmpty__content',
+    'wuiButtonEmpty__content',
     contentProps && contentProps.className
   );
 
   const textClassNames = classNames(
-    'euiButtonEmpty__text',
+    'wuiButtonEmpty__text',
     textProps && textProps.className
   );
 
   const innerNode = (
-    <EuiButtonContent
+    <WuiButtonContent
       isLoading={isLoading}
       iconType={iconType}
       iconSide={iconSide}
@@ -170,7 +170,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
       // className has to come last to override contentProps.className
       className={contentClassNames}>
       {children}
-    </EuiButtonContent>
+    </WuiButtonContent>
   );
 
   // <a> elements don't respect the `disabled` attribute. So if we're disabled, we'll just pretend
@@ -185,7 +185,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
         target={target}
         rel={secureRel}
         ref={buttonRef}
-        {...(rest as EuiButtonEmptyPropsForAnchor)}>
+        {...(rest as WuiButtonEmptyPropsForAnchor)}>
         {innerNode}
       </a>
     );
@@ -197,7 +197,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
       className={classes}
       type={type}
       ref={buttonRef}
-      {...(rest as EuiButtonEmptyPropsForButton)}>
+      {...(rest as WuiButtonEmptyPropsForButton)}>
       {innerNode}
     </button>
   );

@@ -21,31 +21,31 @@ import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-import { EuiPanel, PanelPaddingSize, EuiPanelProps } from '../../panel/panel';
+import { WuiPanel, PanelPaddingSize, WuiPanelProps } from '../../panel/panel';
 
-export type EuiPageContentVerticalPositions = 'center';
-export type EuiPageContentHorizontalPositions = 'center';
+export type WuiPageContentVerticalPositions = 'center';
+export type WuiPageContentHorizontalPositions = 'center';
 
 const verticalPositionToClassNameMap: {
-  [position in EuiPageContentVerticalPositions]: string | null;
+  [position in WuiPageContentVerticalPositions]: string | null;
 } = {
-  center: 'euiPageContent--verticalCenter',
+  center: 'wuiPageContent--verticalCenter',
 };
 
 const horizontalPositionToClassNameMap: {
-  [position in EuiPageContentHorizontalPositions]: string | null;
+  [position in WuiPageContentHorizontalPositions]: string | null;
 } = {
-  center: 'euiPageContent--horizontalCenter',
+  center: 'wuiPageContent--horizontalCenter',
 };
 
-export type EuiPageContentProps = CommonProps &
-  EuiPanelProps & {
+export type WuiPageContentProps = CommonProps &
+  WuiPanelProps & {
     panelPaddingSize?: PanelPaddingSize;
-    verticalPosition?: EuiPageContentVerticalPositions;
-    horizontalPosition?: EuiPageContentHorizontalPositions;
+    verticalPosition?: WuiPageContentVerticalPositions;
+    horizontalPosition?: WuiPageContentHorizontalPositions;
   };
 
-export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
+export const WuiPageContent: FunctionComponent<WuiPageContentProps> = ({
   verticalPosition,
   horizontalPosition,
   panelPaddingSize = 'l',
@@ -54,7 +54,7 @@ export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiPageContent',
+    'wuiPageContent',
     verticalPosition ? verticalPositionToClassNameMap[verticalPosition] : null,
     horizontalPosition
       ? horizontalPositionToClassNameMap[horizontalPosition]
@@ -63,8 +63,8 @@ export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
   );
 
   return (
-    <EuiPanel className={classes} paddingSize={panelPaddingSize} {...rest}>
+    <WuiPanel className={classes} paddingSize={panelPaddingSize} {...rest}>
       {children}
-    </EuiPanel>
+    </WuiPanel>
   );
 };

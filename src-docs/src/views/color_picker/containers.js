@@ -1,17 +1,17 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiButton,
-  EuiPopover,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiSpacer,
+  WuiColorPicker,
+  WuiColorStops,
+  WuiButton,
+  WuiPopover,
+  WuiFormRow,
+  WuiModal,
+  WuiModalBody,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiOverlayMask,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -41,10 +41,10 @@ export default () => {
     setIsPopoverOpen(false);
   };
 
-  const colorPicker = <EuiColorPicker color={color} onChange={setColor} />;
+  const colorPicker = <WuiColorPicker color={color} onChange={setColor} />;
 
   const stops = (
-    <EuiColorStops
+    <WuiColorStops
       label="Color stops"
       onChange={setColorStops}
       colorStops={colorStops}
@@ -54,65 +54,65 @@ export default () => {
   );
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
       Open popover
-    </EuiButton>
+    </WuiButton>
   );
 
   let modal;
 
   if (isModalVisible) {
     modal = (
-      <EuiOverlayMask>
-        <EuiModal onClose={closeModal} style={{ width: '800px' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Color picker in a modal</EuiModalHeaderTitle>
-          </EuiModalHeader>
+      <WuiOverlayMask>
+        <WuiModal onClose={closeModal} style={{ width: '800px' }}>
+          <WuiModalHeader>
+            <WuiModalHeaderTitle>Color picker in a modal</WuiModalHeaderTitle>
+          </WuiModalHeader>
 
-          <EuiModalBody>
-            <EuiFormRow label="Color picker">{colorPicker}</EuiFormRow>
-            <EuiSpacer />
-            <EuiFormRow label="Color stops">{stops}</EuiFormRow>
-          </EuiModalBody>
-        </EuiModal>
-      </EuiOverlayMask>
+          <WuiModalBody>
+            <WuiFormRow label="Color picker">{colorPicker}</WuiFormRow>
+            <WuiSpacer />
+            <WuiFormRow label="Color stops">{stops}</WuiFormRow>
+          </WuiModalBody>
+        </WuiModal>
+      </WuiOverlayMask>
     );
   }
 
   return (
     <Fragment>
-      <EuiFormRow
+      <WuiFormRow
         label="Color picker"
         helpText="This color picker is inside of a form row">
         {colorPicker}
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFormRow
+      <WuiFormRow
         label="Color stops"
         helpText="This color stops component is inside of a form row">
         {stops}
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Unruly focus management">
-        <EuiPopover
+      <WuiFormRow label="Unruly focus management">
+        <WuiPopover
           id="popover"
           ownFocus={true}
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}>
           <div style={{ width: '300px' }}>
-            <EuiFormRow label="Color picker">{colorPicker}</EuiFormRow>
-            <EuiSpacer />
-            <EuiFormRow label="Color stops">{stops}</EuiFormRow>
+            <WuiFormRow label="Color picker">{colorPicker}</WuiFormRow>
+            <WuiSpacer />
+            <WuiFormRow label="Color stops">{stops}</WuiFormRow>
           </div>
-        </EuiPopover>
-      </EuiFormRow>
+        </WuiPopover>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <WuiButton onClick={showModal}>Show modal</WuiButton>
 
       {modal}
     </Fragment>

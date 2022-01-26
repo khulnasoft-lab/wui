@@ -1,32 +1,32 @@
 import React from 'react';
 
 import {
-  EuiListGroupItem,
-  EuiListGroup,
+  WuiListGroupItem,
+  WuiListGroup,
 } from '../../../../src/components/list_group';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <>
-    <EuiListGroup>
-      <EuiListGroupItem href="#" label="Inherit by default (xs)" size="xs" />
+    <WuiListGroup>
+      <WuiListGroupItem href="#" label="Inherit by default (xs)" size="xs" />
 
-      <EuiListGroupItem
+      <WuiListGroupItem
         onClick={() => {}}
         label="Primary (s)"
         color="primary"
         size="s"
       />
 
-      <EuiListGroupItem href="#" label="Text (m)" color="text" />
+      <WuiListGroupItem href="#" label="Text (m)" color="text" />
 
-      <EuiListGroupItem href="#" label="Subdued (l)" color="subdued" size="l" />
-    </EuiListGroup>
+      <WuiListGroupItem href="#" label="Subdued (l)" color="subdued" size="l" />
+    </WuiListGroup>
 
-    <EuiSpacer size="s" />
+    <WuiSpacer size="s" />
 
-    <EuiListGroup style={{ background: 'black' }}>
-      <EuiListGroupItem href="#" label="Ghost" color="ghost" />
-    </EuiListGroup>
+    <WuiListGroup style={{ background: 'black' }}>
+      <WuiListGroupItem href="#" label="Ghost" color="ghost" />
+    </WuiListGroup>
   </>
 );

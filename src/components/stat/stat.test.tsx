@@ -21,15 +21,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiStat, COLORS, ALIGNMENTS } from './stat';
+import { WuiStat, COLORS, ALIGNMENTS } from './stat';
 import { TITLE_SIZES } from '../title/title';
 
 jest.mock('./../form/form_row/make_id', () => () => 'generated-id');
 
-describe('EuiStat', () => {
+describe('WuiStat', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStat title="title" description="description" {...requiredProps} />
+      <WuiStat title="title" description="description" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('EuiStat', () => {
   describe('props', () => {
     test('loading is rendered', () => {
       const component = render(
-        <EuiStat
+        <WuiStat
           title="title"
           description="description"
           isLoading
@@ -51,7 +51,7 @@ describe('EuiStat', () => {
 
     test('title and description are reversed', () => {
       const component = render(
-        <EuiStat title="title" description="description" reverse />
+        <WuiStat title="title" description="description" reverse />
       );
 
       expect(component).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('EuiStat', () => {
     ALIGNMENTS.forEach(alignment => {
       test(`${alignment} is rendered`, () => {
         const component = render(
-          <EuiStat
+          <WuiStat
             title="title"
             description="description"
             textAlign={alignment}
@@ -74,7 +74,7 @@ describe('EuiStat', () => {
     COLORS.forEach(color => {
       test(`${color} is rendered`, () => {
         const component = render(
-          <EuiStat title="title" description="description" titleColor={color} />
+          <WuiStat title="title" description="description" titleColor={color} />
         );
 
         expect(component).toMatchSnapshot();
@@ -83,7 +83,7 @@ describe('EuiStat', () => {
 
     test('hexcode colors are rendered', () => {
       const component = render(
-        <EuiStat title="title" description="description" titleColor="#EB1919" />
+        <WuiStat title="title" description="description" titleColor="#EB1919" />
       );
 
       expect(component).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe('EuiStat', () => {
 
     test('render with custom description element', () => {
       const component = render(
-        <EuiStat
+        <WuiStat
           title="title"
           description={<div>description</div>}
           descriptionElement="div"
@@ -104,7 +104,7 @@ describe('EuiStat', () => {
 
     test('render with custom title element', () => {
       const component = render(
-        <EuiStat
+        <WuiStat
           title={<div>title</div>}
           titleElement="div"
           description="description"
@@ -117,7 +117,7 @@ describe('EuiStat', () => {
     TITLE_SIZES.forEach(size => {
       test(`${size} is rendered`, () => {
         const component = render(
-          <EuiStat title="title" description="description" titleSize={size} />
+          <WuiStat title="title" description="description" titleSize={size} />
         );
 
         expect(component).toMatchSnapshot();

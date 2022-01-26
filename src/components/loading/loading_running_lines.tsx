@@ -22,9 +22,9 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 import { contentGrey, contentColor } from './animations';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-export const EuiLoadingRunningLines: FunctionComponent<CommonProps &
+export const WuiLoadingRunningLines: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
@@ -38,18 +38,18 @@ export const EuiLoadingRunningLines: FunctionComponent<CommonProps &
     autoPlay: true,
   };
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       direction="row"
       alignItems="center"
       justifyContent="flexStart"
       responsive={false}
       style={{ marginLeft: '0' }}
       className={classes}>
-      <EuiFlexItem grow={false} style={{ margin: '0' }}>
-        <div className="euiLoadingRunningLines__wrapper">
+      <WuiFlexItem grow={false} style={{ margin: '0' }}>
+        <div className="wuiLoadingRunningLines__wrapper">
           <Lottie options={options} />
         </div>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

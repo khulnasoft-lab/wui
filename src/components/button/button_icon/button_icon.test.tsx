@@ -21,11 +21,11 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiButtonIcon, COLORS } from './button_icon';
+import { WuiButtonIcon, COLORS } from './button_icon';
 
-describe('EuiButtonIcon', () => {
+describe('WuiButtonIcon', () => {
   test('is rendered', () => {
-    const component = render(<EuiButtonIcon {...requiredProps} />);
+    const component = render(<WuiButtonIcon {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiButtonIcon', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiButtonIcon aria-label="button" isDisabled />
+          <WuiButtonIcon aria-label="button" isDisabled />
         );
 
         expect(component).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('EuiButtonIcon', () => {
 
       it('renders a button even when href is defined', () => {
         const component = render(
-          <EuiButtonIcon aria-label="button" href="#" isDisabled />
+          <WuiButtonIcon aria-label="button" href="#" isDisabled />
         );
 
         expect(component).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe('EuiButtonIcon', () => {
     describe('iconType', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiButtonIcon aria-label="button" iconType="user" />
+          <WuiButtonIcon aria-label="button" iconType="user" />
         );
 
         expect(component).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('EuiButtonIcon', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiButtonIcon aria-label="button" color={color} />
+            <WuiButtonIcon aria-label="button" color={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('EuiButtonIcon', () => {
     describe('href', () => {
       it('secures the rel attribute when the target is _blank', () => {
         const component = render(
-          <EuiButtonIcon aria-label="button" href="#" target="_blank" />
+          <WuiButtonIcon aria-label="button" href="#" target="_blank" />
         );
 
         expect(component).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('EuiButtonIcon', () => {
       it('supports onClick and href', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiButtonIcon aria-label="hoi" href="#" onClick={handler} />
+          <WuiButtonIcon aria-label="hoi" href="#" onClick={handler} />
         );
         component.find('a').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
@@ -94,7 +94,7 @@ describe('EuiButtonIcon', () => {
       it('supports onClick as a button', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiButtonIcon aria-label="hoi" onClick={handler} />
+          <WuiButtonIcon aria-label="hoi" onClick={handler} />
         );
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);

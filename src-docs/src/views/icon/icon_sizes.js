@@ -12,29 +12,29 @@
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiText,
+  WuiFlexGrid,
+  WuiFlexItem,
+  WuiIcon,
+  WuiPanel,
+  WuiText,
 } from '../../../../src/components';
 
 const iconSizes = ['s', 'm', 'l', 'xl', 'xxl', 'original'];
 
 export default () => (
-  <EuiFlexGrid columns={4}>
+  <WuiFlexGrid columns={4}>
     {iconSizes.map(iconSize => (
-      <EuiFlexItem
+      <WuiFlexItem
         className="guideDemo__icon"
         key={iconSize}
         style={{ width: '340px' }}>
-        <EuiPanel>
-          <EuiIcon type="logoElasticStack" size={iconSize} />
-          <EuiText size="s">
+        <WuiPanel>
+          <WuiIcon type="logoElasticStack" size={iconSize} />
+          <WuiText size="s">
             <p>{iconSize}</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
     ))}
-  </EuiFlexGrid>
+  </WuiFlexGrid>
 );

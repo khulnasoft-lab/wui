@@ -22,15 +22,15 @@ export * from './quick_select_popover';
 export { AsyncInterval } from './async_interval';
 
 export {
-  EuiSuperDatePicker,
-  EuiSuperDatePickerProps,
+  WuiSuperDatePicker,
+  WuiSuperDatePickerProps,
   OnTimeChangeProps,
   OnRefreshProps,
 } from './super_date_picker';
 
 export {
-  EuiSuperUpdateButton,
-  EuiSuperUpdateButtonProps,
+  WuiSuperUpdateButton,
+  WuiSuperUpdateButtonProps,
 } from './super_update_button';
 
 export { prettyDuration, commonDurationRanges } from './pretty_duration';

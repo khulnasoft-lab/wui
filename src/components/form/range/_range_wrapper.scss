@@ -5,15 +5,15 @@
  * 2. Prevent the prepend/append label from extending outside the parent element
  */
 
-.euiRangeWrapper {
-  @include euiFormControlSize($includeAlternates: true);
+.wuiRangeWrapper {
+  @include wuiFormControlSize($includeAlternates: true);
   display: flex;
   align-items: center;
 
-  > .euiFormControlLayout { /* 1 */
+  > .wuiFormControlLayout { /* 1 */
     width: auto;
 
-    &.euiFormControlLayout--group {
+    &.wuiFormControlLayout--group {
       flex-shrink: 0;  /* 2 */
     }
   }

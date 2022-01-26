@@ -9,25 +9,25 @@ import {
 } from '../../components';
 
 import {
-  EuiText,
-  EuiTitle,
-  EuiButton,
-  EuiSpacer,
-  EuiFlexGrid,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPanel,
-  EuiFieldSearch,
-  EuiFieldText,
-  EuiButtonEmpty,
-  EuiFieldPassword,
-  EuiCheckbox,
-  EuiFormRow,
-  EuiIcon,
-  EuiFieldNumber,
-  EuiLink,
-  EuiTabs,
-  EuiTab,
+  WuiText,
+  WuiTitle,
+  WuiButton,
+  WuiSpacer,
+  WuiFlexGrid,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiPanel,
+  WuiFieldSearch,
+  WuiFieldText,
+  WuiButtonEmpty,
+  WuiFieldPassword,
+  WuiCheckbox,
+  WuiFormRow,
+  WuiIcon,
+  WuiFieldNumber,
+  WuiLink,
+  WuiTabs,
+  WuiTab,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -36,64 +36,64 @@ const GuideRuleWriting = ({ children, className, ...rest }) => {
   const classes = classNames(className);
 
   return (
-    <EuiText className={classes} {...rest}>
+    <WuiText className={classes} {...rest}>
       <p>{children}</p>
-    </EuiText>
+    </WuiText>
   );
 };
 
 export default () => (
   <GuidePage title="Writing guidelines">
-    <EuiText grow={false} className="guideSection__text">
+    <WuiText grow={false} className="guideSection__text">
       <p>
         You can have the most beautiful UI, but without{' '}
         <b>consistent, easy-to-understand text</b>, you haven’t built the best
         user experience.
       </p>
-    </EuiText>
+    </WuiText>
 
     <GuideRuleTitle>Principles</GuideRuleTitle>
 
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
 
-    <EuiFlexGrid columns={3}>
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+    <WuiFlexGrid columns={3}>
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Clear and concise</h3>
             <p>
               Get straight to the point&mdash;in a way that your users
               understand. Make every word contribute to meaning.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Consistent</h3>
             <p>
               Use the same terminology to mean the same thing. Make sure
               spelling, capitalization, punctuation, labels, and use of
               abbreviations are all consistent.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Conversational</h3>
             <p>
               Write as a professional in the field would talk&mdash;not as a
               professor lecturing students. Use words that the user would use.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+    </WuiFlexGrid>
 
     <GuideRuleTitle>Capitalization</GuideRuleTitle>
     <GuideRule
@@ -103,17 +103,17 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Sentence case makes titles easier to read.">
-        <EuiTitle>
+        <WuiTitle>
           <span>Create index patterns</span>
-        </EuiTitle>
+        </WuiTitle>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Title case can feel more cluttered.">
-        <EuiTitle>
+        <WuiTitle>
           <span>Create Index Patterns</span>
-        </EuiTitle>
+        </WuiTitle>
       </GuideRuleExample>
     </GuideRule>
 
@@ -121,10 +121,10 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Sentence case is friendlier in button labels.">
-        <EuiButton>Set up index pattern</EuiButton>
+        <WuiButton>Set up index pattern</WuiButton>
       </GuideRuleExample>
       <GuideRuleExample type="dont" text="Don't. Title case looks too formal.">
-        <EuiButton>Set Up Index Pattern</EuiButton>
+        <WuiButton>Set Up Index Pattern</WuiButton>
       </GuideRuleExample>
     </GuideRule>
 
@@ -134,18 +134,18 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Title case in tabs and titles for names of features.">
-        <EuiTabs>
-          <EuiTab>Inventory</EuiTab>
-          <EuiTab isSelected>Metrics Explorer</EuiTab>
-        </EuiTabs>
+        <WuiTabs>
+          <WuiTab>Inventory</WuiTab>
+          <WuiTab isSelected>Metrics Explorer</WuiTab>
+        </WuiTabs>
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
         text="Don't. Features are proper names, not sentences.">
-        <EuiTabs>
-          <EuiTab>Inventory</EuiTab>
-          <EuiTab isSelected>Metrics explorer</EuiTab>
-        </EuiTabs>
+        <WuiTabs>
+          <WuiTab>Inventory</WuiTab>
+          <WuiTab isSelected>Metrics explorer</WuiTab>
+        </WuiTabs>
       </GuideRuleExample>
     </GuideRule>
 
@@ -177,21 +177,21 @@ export default () => (
       Don't repeat what's already been said or state the obvious.
       Omit common introductory phrases.">
       <GuideRuleExample type="do" text="Do. Keep it short.">
-        <EuiText>
+        <WuiText>
           <h4>Edit saved objects</h4>
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Repeat what's already been said or state the obvious.">
-        <EuiText>
+        <WuiText>
           <h4>Edit saved objects</h4>
           <p>
             From here, you can edit saved objects. To get started, follow these
             steps.
           </p>
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
     </GuideRule>
 
@@ -297,21 +297,21 @@ export default () => (
       at the end of an action, an (s) at the end of a noun, or add parentheses
       (()).">
       <GuideRuleExample type="do" text='Do. Use an "s" or "es" to show plural.'>
-        <EuiFormRow
+        <WuiFormRow
           label="Airports"
           helpText="Separate multiple names with a comma">
-          <EuiFieldText />
-        </EuiFormRow>
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Use (s), a colon after labels, or parenthetical statements.">
-        <EuiFormRow
+        <WuiFormRow
           label="Airport(s):"
           helpText="Separate multiple names with a comma (other characters are unsupported).">
-          <EuiFieldText />
-        </EuiFormRow>
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
     </GuideRule>
 
@@ -319,13 +319,13 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Remove the ellipsis from Search fields.">
-        <EuiFieldSearch defaultValue="Search" aria-label="Search example" />
+        <WuiFieldSearch defaultValue="Search" aria-label="Search example" />
       </GuideRuleExample>
 
       <GuideRuleExample
         type="do"
         text="Do. Use an ellipsis for truncated text or situations that require waiting.">
-        <EuiFieldSearch
+        <WuiFieldSearch
           defaultValue="Loading..."
           aria-label="Search loading example"
         />
@@ -340,26 +340,26 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Use periods at the end of help text.">
-        <EuiFormRow
+        <WuiFormRow
           label="Number"
           helpText={
             <span>
-              Accepts 1–5. <EuiLink>Learn more.</EuiLink>
+              Accepts 1–5. <WuiLink>Learn more.</WuiLink>
             </span>
           }>
-          <EuiFieldNumber min={1} max={5} step={1} />
-        </EuiFormRow>
+          <WuiFieldNumber min={1} max={5} step={1} />
+        </WuiFormRow>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Use a lead-in sentence without an ending period. It looks wrong.">
-        <EuiTitle>
+        <WuiTitle>
           <span>Index management</span>
-        </EuiTitle>
-        <EuiText>
+        </WuiTitle>
+        <WuiText>
           Update your Elasticsearch indices individually or in bulk
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
     </GuideRule>
 
@@ -413,32 +413,32 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Provide a title that is meaningful to the user.">
-        <EuiTitle size="xs">
+        <WuiTitle size="xs">
           <span>This dashboard is empty</span>
-        </EuiTitle>
-        <EuiSpacer />
-        <EuiText>
+        </WuiTitle>
+        <WuiSpacer />
+        <WuiText>
           <p>
             To add a visualization, click Add in the menu bar. No visualizations
             yet? Go to Visualize to create one.
           </p>
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Use uh-oh, oops, or other meaningless text in the title.">
-        <EuiTitle size="xs">
+        <WuiTitle size="xs">
           <span>Uh-oh!</span>
-        </EuiTitle>
-        <EuiSpacer />
-        <EuiText>
+        </WuiTitle>
+        <WuiSpacer />
+        <WuiText>
           <p>
             This dashboard is empty. To add a visualization, click Add in the
             menu bar. No visualizations yet? Go to the Visualize app to create
             one.
           </p>
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
     </GuideRule>
 
@@ -485,40 +485,40 @@ export default () => (
         type="do"
         text="Do. Keep titles as concise as possible."
         panel={false}>
-        <EuiPanel>
-          <EuiTitle size="m">
+        <WuiPanel>
+          <WuiTitle size="m">
             <span>Delete this report?</span>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-            <EuiButtonEmpty color="text" size="s">
+          </WuiTitle>
+          <WuiSpacer />
+          <WuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+            <WuiButtonEmpty color="text" size="s">
               Cancel
-            </EuiButtonEmpty>
-            <EuiButton color="danger" size="s">
+            </WuiButtonEmpty>
+            <WuiButton color="danger" size="s">
               Delete
-            </EuiButton>
-          </EuiFlexGroup>
-        </EuiPanel>
+            </WuiButton>
+          </WuiFlexGroup>
+        </WuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Pad the title with empty words&mdash;it increases reading time."
         panel={false}>
-        <EuiPanel>
-          <EuiTitle size="m">
+        <WuiPanel>
+          <WuiTitle size="m">
             <span>Are you sure you want to delete this report?</span>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-            <EuiButtonEmpty color="text" size="s">
+          </WuiTitle>
+          <WuiSpacer />
+          <WuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+            <WuiButtonEmpty color="text" size="s">
               Cancel
-            </EuiButtonEmpty>
-            <EuiButton color="danger" size="s">
+            </WuiButtonEmpty>
+            <WuiButton color="danger" size="s">
               Delete report
-            </EuiButton>
-          </EuiFlexGroup>
-        </EuiPanel>
+            </WuiButton>
+          </WuiFlexGroup>
+        </WuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
@@ -562,22 +562,22 @@ export default () => (
       heading="Use 1 to 2 simple, short sentences"
       description="Don&rsquo;t force the user to read long blocks of text. Write for scanning. Link to documentation.">
       <GuideRuleExample type="do" text="Do. Write for scanning.">
-        <EuiFormRow
+        <WuiFormRow
           label="Password"
           helpText="Must be least 8 characters and include upper and lower case letters, numbers, and symbols such as !@#$%.">
-          <EuiFieldPassword />
-        </EuiFormRow>
+          <WuiFieldPassword />
+        </WuiFormRow>
       </GuideRuleExample>
 
       <GuideRuleExample type="dont" text="Don't. Write long blocks of text.">
-        <EuiFormRow
+        <WuiFormRow
           label="Password"
           helpText="Passwords must be at least 8 characters long. Good passwords
           contain either a combination of upper and lowercase letters or a
           combination of letters with one digit. Strong passwords contain either
           a combination of letters and more than one digit or special characters.">
-          <EuiFieldPassword />
-        </EuiFormRow>
+          <WuiFieldPassword />
+        </WuiFormRow>
       </GuideRuleExample>
     </GuideRule>
 
@@ -587,19 +587,19 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do.  Explain new or difficult concepts.">
-        <EuiFormRow
+        <WuiFormRow
           label="Index template"
           helpText="A template defines the settings, mappings, and aliases to apply when you create an index.">
-          <EuiFieldText />
-        </EuiFormRow>
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't. Provide explanations for common actions.">
-        <EuiFormRow label="Email" helpText="Please enter your email address.">
-          <EuiFieldText />
-        </EuiFormRow>
+        <WuiFormRow label="Email" helpText="Please enter your email address.">
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
     </GuideRule>
 
@@ -612,28 +612,28 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Use labels that say what the component does.">
-        <EuiFormRow>
-          <EuiCheckbox
+        <WuiFormRow>
+          <WuiCheckbox
             onChange={() => {}}
             id={htmlIdGenerator()()}
             label="Combine values in other bucket"
           />
-        </EuiFormRow>
-        <EuiFormRow label="Bucket label">
-          <EuiFieldText />
-        </EuiFormRow>
+        </WuiFormRow>
+        <WuiFormRow label="Bucket label">
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
       <GuideRuleExample type="dont" text="Don't. Use generic labels.">
-        <EuiFormRow>
-          <EuiCheckbox
+        <WuiFormRow>
+          <WuiCheckbox
             onChange={() => {}}
             id={htmlIdGenerator()()}
             label="Combine other"
           />
-        </EuiFormRow>
-        <EuiFormRow label="Bucket label">
-          <EuiFieldText />
-        </EuiFormRow>
+        </WuiFormRow>
+        <WuiFormRow label="Bucket label">
+          <WuiFieldText />
+        </WuiFormRow>
       </GuideRuleExample>
     </GuideRule>
 
@@ -644,44 +644,44 @@ export default () => (
         type="do"
         text="Do. Use a verb + noun for a button label."
         panel={false}>
-        <EuiPanel>
-          <EuiTitle size="m">
+        <WuiPanel>
+          <WuiTitle size="m">
             <span>Remove this index pattern?</span>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-            <EuiButtonEmpty color="text" size="s">
+          </WuiTitle>
+          <WuiSpacer />
+          <WuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+            <WuiButtonEmpty color="text" size="s">
               Cancel
-            </EuiButtonEmpty>
-            <EuiButton color="danger" size="s">
+            </WuiButtonEmpty>
+            <WuiButton color="danger" size="s">
               Remove pattern
-            </EuiButton>
-          </EuiFlexGroup>
-        </EuiPanel>
+            </WuiButton>
+          </WuiFlexGroup>
+        </WuiPanel>
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
         text="Don't. Use vague labels, such as Yes and OK."
         panel={false}>
-        <EuiPanel>
-          <EuiTitle size="m">
+        <WuiPanel>
+          <WuiTitle size="m">
             <span>Remove this index pattern?</span>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-            <EuiButtonEmpty color="text" size="s">
+          </WuiTitle>
+          <WuiSpacer />
+          <WuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+            <WuiButtonEmpty color="text" size="s">
               Cancel
-            </EuiButtonEmpty>
-            <EuiButton color="danger" size="s">
+            </WuiButtonEmpty>
+            <WuiButton color="danger" size="s">
               Ok
-            </EuiButton>
-          </EuiFlexGroup>
-        </EuiPanel>
+            </WuiButton>
+          </WuiFlexGroup>
+        </WuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
     <GuideRuleTitle>Be careful with humor</GuideRuleTitle>
-    <EuiText grow={false} className="guideSection__text">
+    <WuiText grow={false} className="guideSection__text">
       <p>
         Your text can be fun as long as it fits the experience&mdash;and
         doesn&apos;t get in the user&apos;s way. Clever text can become annoying
@@ -689,7 +689,7 @@ export default () => (
         might lose data or otherwise be frustrated are also not appropriate for
         humor.
       </p>
-    </EuiText>
+    </WuiText>
     <GuideRule heading="" description="">
       <GuideRuleExample
         type="do"
@@ -702,60 +702,60 @@ export default () => (
       <GuideRuleExample
         type="dont"
         text="Don't. Be clever with a serious message.">
-        <EuiTitle size="xs">
+        <WuiTitle size="xs">
           <span>
-            <EuiIcon type="faceSad" /> No results found
+            <WuiIcon type="faceSad" /> No results found
           </span>
-        </EuiTitle>
-        <EuiSpacer />
-        <EuiText>
+        </WuiTitle>
+        <WuiSpacer />
+        <WuiText>
           <p>
             Unfortunately, I could not find any results matching your search. I
             tried really hard. I looked all over the place and frankly, I just
             couldn&apos;t find anything good. Help me, help you.
           </p>
-        </EuiText>
+        </WuiText>
       </GuideRuleExample>
     </GuideRule>
 
     <GuideRuleTitle>Verifying your text</GuideRuleTitle>
 
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
 
-    <EuiFlexGrid columns={3}>
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+    <WuiFlexGrid columns={3}>
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Work with a writer</h3>
             <p>
               A writer can help determine where you need text and what it should
               say.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Read your text out loud</h3>
             <p>
               Word flow has a natural feel to it. Read your text out loud, make
               changes, and then repeat until the flow of your text feels
               natural.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel paddingSize="l">
-          <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiPanel paddingSize="l">
+          <WuiText className="guideSection__text">
             <h3>Use spell check</h3>
             <p>Run your text through a spelling and grammar checker.</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+    </WuiFlexGrid>
   </GuidePage>
 );

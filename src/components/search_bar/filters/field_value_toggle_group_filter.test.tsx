@@ -43,7 +43,7 @@ describe('TermToggleGroupFilter', () => {
           },
           {
             value: 'es',
-            name: 'Elasticsearch',
+            name: 'Wazuhsearch',
           },
         ],
       },
@@ -69,7 +69,7 @@ describe('TermToggleGroupFilter', () => {
           },
           {
             value: 'es',
-            name: 'Elasticsearch',
+            name: 'Wazuhsearch',
           },
         ],
       },
@@ -95,7 +95,7 @@ describe('TermToggleGroupFilter', () => {
           },
           {
             value: 'es',
-            name: 'Elasticsearch',
+            name: 'Wazuhsearch',
           },
         ],
       },
@@ -122,7 +122,7 @@ describe('TermToggleGroupFilter', () => {
           },
           {
             value: 'es',
-            name: 'Elasticsearch',
+            name: 'Wazuhsearch',
           },
         ],
       },

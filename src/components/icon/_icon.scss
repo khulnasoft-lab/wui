@@ -1,4 +1,4 @@
-.euiIcon {
+.wuiIcon {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   vertical-align: middle;
@@ -12,40 +12,40 @@
 }
 
 // App icons are two-toned so get an extra class. This provides the base color.
-.euiIcon--app {
+.wuiIcon--app {
   fill: $euiTextColor;
 
   // This provides the default secondary color
-  .euiIcon__fillSecondary {
-    fill: makeGraphicContrastColor($euiColorPrimary);
+  .wuiIcon__fillSecondary {
+    fill: makeGraphicContrastColor($wuiColorPrimary);
   }
 }
 
-.euiIcon-isLoading {
-  opacity: $euiIconLoadingOpacity;
+.wuiIcon-isLoading {
+  opacity: $wuiIconLoadingOpacity;
   background-color: currentColor;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
 }
 
-.euiIcon-isLoaded {
-  animation: euiIconLoading $euiAnimSpeedNormal ease-in 0s 1 forwards;
+.wuiIcon-isLoaded {
+  animation: wuiIconLoading $euiAnimSpeedNormal ease-in 0s 1 forwards;
 }
 
 // COLORS
 
-@each $name, $color in $euiIconColors {
-  .euiIcon--#{$name} {
+@each $name, $color in $wuiIconColors {
+  .wuiIcon--#{$name} {
     // Use color attribute so currentColor can be used in more properties
     color: $color;
   }
 }
 
 // App icon special cases for fully mono
-.euiIcon--text,
-.euiIcon--subdued,
-.euiIcon--primary {
+.wuiIcon--text,
+.wuiIcon--subdued,
+.wuiIcon--primary {
   &,
-  .euiIcon__fillSecondary {
+  .wuiIcon__fillSecondary {
     fill: currentColor;
   }
 }
@@ -53,21 +53,21 @@
 // Use the negative fill on SVG elements that need to flip portions
 // of the icon to light and dark compatible modes. You can see this
 // in use on the Elastic logo icons.
-.euiIcon__fillNegative {
-  fill: $euiColorDarkestShade;
+.wuiIcon__fillNegative {
+  fill: $wuiColorDarkestShade;
 }
 
 // SIZES
 
-@each $name, $size in $euiIconSizes {
-  .euiIcon--#{$name} {
+@each $name, $size in $wuiIconSizes {
+  .wuiIcon--#{$name} {
     @include size($size);
   }
 }
 
-@keyframes euiIconLoading {
+@keyframes wuiIconLoading {
   0% {
-    opacity: $euiIconLoadingOpacity;
+    opacity: $wuiIconLoadingOpacity;
   }
 
   100% {

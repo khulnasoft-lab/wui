@@ -36,7 +36,7 @@ import {
 
 import { resolveWidthAsStyle } from './utils';
 
-interface EuiTableRowCellSharedPropsShape {
+interface WuiTableRowCellSharedPropsShape {
   /**
    * Horizontal alignment of the text in the cell
    */
@@ -48,7 +48,7 @@ interface EuiTableRowCellSharedPropsShape {
   /**
    * Setting `textOnly` to `false` will break words unnecessarily on FF and
    * IE.  To combat this problem on FF, wrap contents with the css utility
-   * `.eui-textBreakWord`.
+   * `.wui-textBreakWord`.
    */
   textOnly?: boolean;
   /**
@@ -58,7 +58,7 @@ interface EuiTableRowCellSharedPropsShape {
   width?: string | number;
 }
 
-interface EuiTableRowCellMobileOptionsShape {
+interface WuiTableRowCellMobileOptionsShape {
   /**
    * If false, will not render the cell at all for mobile
    */
@@ -73,7 +73,7 @@ interface EuiTableRowCellMobileOptionsShape {
   render?: ReactNode;
   /**
    * The column's header for use in mobile view (automatically passed down
-   * when using `EuiBasicTable`).
+   * when using `WuiBasicTable`).
    * Or pass `false` to not show a header at all.
    */
   header?: ReactNode | boolean;
@@ -88,7 +88,7 @@ interface EuiTableRowCellMobileOptionsShape {
   fullWidth?: boolean;
 }
 
-interface EuiTableRowCellProps {
+interface WuiTableRowCellProps {
   /**
    * Indicates if the column is dedicated to icon-only actions (currently
    * affects mobile only)
@@ -126,8 +126,8 @@ interface EuiTableRowCellProps {
   /**
    * Mobile options for displaying differently at small screens
    */
-  mobileOptions?: EuiTableRowCellMobileOptionsShape &
-    EuiTableRowCellSharedPropsShape;
+  mobileOptions?: WuiTableRowCellMobileOptionsShape &
+    WuiTableRowCellSharedPropsShape;
   /**
    * Indicates whether the cell should be marked as the heading for its row
    */
@@ -136,10 +136,10 @@ interface EuiTableRowCellProps {
 
 type Props = CommonProps &
   TdHTMLAttributes<HTMLTableCellElement> &
-  EuiTableRowCellSharedPropsShape &
-  EuiTableRowCellProps;
+  WuiTableRowCellSharedPropsShape &
+  WuiTableRowCellProps;
 
-export const EuiTableRowCell: FunctionComponent<Props> = ({
+export const WuiTableRowCell: FunctionComponent<Props> = ({
   align = LEFT_ALIGNMENT,
   children,
   className,
@@ -161,44 +161,44 @@ export const EuiTableRowCell: FunctionComponent<Props> = ({
   width,
   ...rest
 }) => {
-  const cellClasses = classNames('euiTableRowCell', {
-    'euiTableRowCell--hasActions': hasActions,
-    'euiTableRowCell--isExpander': isExpander,
-    'euiTableRowCell--hideForDesktop': mobileOptions.only || isMobileHeader,
-    'euiTableRowCell--enlargeForMobile':
+  const cellClasses = classNames('wuiTableRowCell', {
+    'wuiTableRowCell--hasActions': hasActions,
+    'wuiTableRowCell--isExpander': isExpander,
+    'wuiTableRowCell--hideForDesktop': mobileOptions.only || isMobileHeader,
+    'wuiTableRowCell--enlargeForMobile':
       mobileOptions.enlarge || isMobileHeader,
-    'euiTableRowCell--isMobileFullWidth':
+    'wuiTableRowCell--isMobileFullWidth':
       mobileOptions.fullWidth || isMobileFullWidth || isMobileHeader,
   });
 
-  const contentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
-    'euiTableCellContent--showOnHover': showOnHover,
-    'euiTableCellContent--truncateText': truncateText,
-    // We're doing this rigamarole instead of creating `euiTableCellContent--textOnly` for BWC
+  const contentClasses = classNames('wuiTableCellContent', className, {
+    'wuiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
+    'wuiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
+    'wuiTableCellContent--showOnHover': showOnHover,
+    'wuiTableCellContent--truncateText': truncateText,
+    // We're doing this rigamarole instead of creating `wuiTableCellContent--textOnly` for BWC
     // purposes for the time-being.
-    'euiTableCellContent--overflowingContent': textOnly !== true,
+    'wuiTableCellContent--overflowingContent': textOnly !== true,
   });
 
-  const mobileContentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight':
+  const mobileContentClasses = classNames('wuiTableCellContent', className, {
+    'wuiTableCellContent--alignRight':
       mobileOptions.align === RIGHT_ALIGNMENT || align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter':
+    'wuiTableCellContent--alignCenter':
       mobileOptions.align === CENTER_ALIGNMENT || align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--showOnHover':
+    'wuiTableCellContent--showOnHover':
       mobileOptions.showOnHover || showOnHover,
-    'euiTableCellContent--truncateText':
+    'wuiTableCellContent--truncateText':
       mobileOptions.truncateText || truncateText,
-    // We're doing this rigamarole instead of creating `euiTableCellContent--textOnly` for BWC
+    // We're doing this rigamarole instead of creating `wuiTableCellContent--textOnly` for BWC
     // purposes for the time-being.
-    'euiTableCellContent--overflowingContent':
+    'wuiTableCellContent--overflowingContent':
       mobileOptions.textOnly !== true || textOnly !== true,
   });
 
   const childClasses = classNames({
-    euiTableCellContent__text: textOnly === true,
-    euiTableCellContent__hoverItem: showOnHover,
+    wuiTableCellContent__text: textOnly === true,
+    wuiTableCellContent__hoverItem: showOnHover,
   });
 
   const styleObj = resolveWidthAsStyle(style, width);
@@ -223,8 +223,8 @@ export const EuiTableRowCell: FunctionComponent<Props> = ({
 
   const childrenNode = modifyChildren(children);
 
-  const hideForMobileClasses = 'euiTableRowCell--hideForMobile';
-  const showForMobileClasses = 'euiTableRowCell--hideForDesktop';
+  const hideForMobileClasses = 'wuiTableRowCell--hideForMobile';
+  const showForMobileClasses = 'wuiTableRowCell--hideForDesktop';
 
   const Element = setScopeRow ? 'th' : 'td';
   const sharedProps = {
@@ -246,7 +246,7 @@ export const EuiTableRowCell: FunctionComponent<Props> = ({
         {/* Mobile-only header */}
         {(mobileOptions.header || header) && !isMobileHeader && (
           <div
-            className={`euiTableRowCell__mobileHeader ${showForMobileClasses}`}>
+            className={`wuiTableRowCell__mobileHeader ${showForMobileClasses}`}>
             {mobileOptions.header || header}
           </div>
         )}

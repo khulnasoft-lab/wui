@@ -19,12 +19,12 @@
 
 import React, { Component } from 'react';
 
-import { EuiButtonEmpty } from '../../button';
-import { EuiContextMenuItem, EuiContextMenuPanel } from '../../context_menu';
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiPagination } from '../../pagination';
-import { EuiPopover } from '../../popover';
-import { EuiI18n } from '../../i18n';
+import { WuiButtonEmpty } from '../../button';
+import { WuiContextMenuItem, WuiContextMenuPanel } from '../../context_menu';
+import { WuiFlexGroup, WuiFlexItem } from '../../flex';
+import { WuiPagination } from '../../pagination';
+import { WuiPopover } from '../../popover';
+import { WuiI18n } from '../../i18n';
 
 export type PageChangeHandler = (pageIndex: number) => void;
 export type ItemsPerPageChangeHandler = (pageSize: number) => void;
@@ -47,7 +47,7 @@ interface State {
   isPopoverOpen: boolean;
 }
 
-export class EuiTablePagination extends Component<Props, State> {
+export class WuiTablePagination extends Component<Props, State> {
   state = {
     isPopoverOpen: false,
   };
@@ -78,23 +78,23 @@ export class EuiTablePagination extends Component<Props, State> {
     } = this.props;
 
     const button = (
-      <EuiButtonEmpty
+      <WuiButtonEmpty
         size="xs"
         color="text"
         iconType="arrowDown"
         iconSide="right"
         data-test-subj="tablePaginationPopoverButton"
         onClick={this.onButtonClick}>
-        <EuiI18n
-          token="euiTablePagination.rowsPerPage"
+        <WuiI18n
+          token="wuiTablePagination.rowsPerPage"
           default="Rows per page"
         />
         : {itemsPerPage}
-      </EuiButtonEmpty>
+      </WuiButtonEmpty>
     );
 
     const items = itemsPerPageOptions.map(itemsPerPageOption => (
-      <EuiContextMenuItem
+      <WuiContextMenuItem
         key={itemsPerPageOption}
         icon={itemsPerPageOption === itemsPerPage ? 'check' : 'empty'}
         onClick={() => {
@@ -102,45 +102,45 @@ export class EuiTablePagination extends Component<Props, State> {
           onChangeItemsPerPage(itemsPerPageOption);
         }}
         data-test-subj={`tablePagination-${itemsPerPageOption}-rows`}>
-        <EuiI18n
-          token="euiTablePagination.rowsPerPageOption"
+        <WuiI18n
+          token="wuiTablePagination.rowsPerPageOption"
           values={{ rowsPerPage: itemsPerPageOption }}
           default="{rowsPerPage} rows"
         />
-      </EuiContextMenuItem>
+      </WuiContextMenuItem>
     ));
 
     const itemsPerPagePopover = (
-      <EuiPopover
+      <WuiPopover
         button={button}
         isOpen={this.state.isPopoverOpen}
         closePopover={this.closePopover}
         panelPaddingSize="none"
         withTitle
         anchorPosition="upRight">
-        <EuiContextMenuPanel items={items} />
-      </EuiPopover>
+        <WuiContextMenuPanel items={items} />
+      </WuiPopover>
     );
 
     return (
-      <EuiFlexGroup
+      <WuiFlexGroup
         justifyContent="spaceBetween"
         alignItems="center"
         responsive={false}>
-        <EuiFlexItem grow={false}>
+        <WuiFlexItem grow={false}>
           {hidePerPageOptions ? null : itemsPerPagePopover}
-        </EuiFlexItem>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPagination
+        <WuiFlexItem grow={false}>
+          <WuiPagination
             aria-controls={ariaControls}
             pageCount={pageCount}
             activePage={activePage}
             onPageClick={onChangePage}
             {...rest}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     );
   }
 }

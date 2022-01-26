@@ -17,9 +17,9 @@
  * under the License.
  */
 
-export { EuiSuperSelect, EuiSuperSelectProps } from './super_select';
+export { WuiSuperSelect, WuiSuperSelectProps } from './super_select';
 export {
-  EuiSuperSelectControl,
-  EuiSuperSelectControlProps,
-  EuiSuperSelectOption,
+  WuiSuperSelectControl,
+  WuiSuperSelectControlProps,
+  WuiSuperSelectOption,
 } from './super_select_control';

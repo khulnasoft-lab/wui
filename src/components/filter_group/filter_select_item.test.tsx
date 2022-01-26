@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFilterSelectItem } from './filter_select_item';
+import { WuiFilterSelectItem } from './filter_select_item';
 
-describe('EuiFilterSelectItem', () => {
+describe('WuiFilterSelectItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiFilterSelectItem {...requiredProps} />);
+    const component = render(<WuiFilterSelectItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

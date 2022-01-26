@@ -19,8 +19,8 @@
 
 // Array of color-blind safe colors to use in visualizations or other
 // spots that need a large range of varied, qualitative colors.
-import { euiPaletteColorBlind } from '../../services/color/eui_palettes';
+import { wuiPaletteColorBlind } from '../../services/color/wui_palettes';
 
-export const VISUALIZATION_COLORS = euiPaletteColorBlind();
+export const VISUALIZATION_COLORS = wuiPaletteColorBlind();
 
 export const DEFAULT_VISUALIZATION_COLOR = VISUALIZATION_COLORS[1];

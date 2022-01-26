@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiFlyout, EuiFlyoutProps, EuiFlyoutSize } from './flyout';
+export { WuiFlyout, WuiFlyoutProps, WuiFlyoutSize } from './flyout';
 
-export { EuiFlyoutBody, EuiFlyoutBodyProps } from './flyout_body';
+export { WuiFlyoutBody, WuiFlyoutBodyProps } from './flyout_body';
 
-export { EuiFlyoutFooter, EuiFlyoutFooterProps } from './flyout_footer';
+export { WuiFlyoutFooter, WuiFlyoutFooterProps } from './flyout_footer';
 
-export { EuiFlyoutHeader, EuiFlyoutHeaderProps } from './flyout_header';
+export { WuiFlyoutHeader, WuiFlyoutHeaderProps } from './flyout_header';

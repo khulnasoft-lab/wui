@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiPageContentHeaderProps
+export interface WuiPageContentHeaderProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
@@ -31,16 +31,16 @@ export interface EuiPageContentHeaderProps
   responsive?: boolean;
 }
 
-export const EuiPageContentHeader: FunctionComponent<EuiPageContentHeaderProps> = ({
+export const WuiPageContentHeader: FunctionComponent<WuiPageContentHeaderProps> = ({
   children,
   className,
   responsive = true,
   ...rest
 }) => {
   const classes = classNames(
-    'euiPageContentHeader',
+    'wuiPageContentHeader',
     {
-      'euiPageContentHeader--responsive': responsive,
+      'wuiPageContentHeader--responsive': responsive,
     },
     className
   );

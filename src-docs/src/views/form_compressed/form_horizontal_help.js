@@ -1,33 +1,33 @@
 import React from 'react';
 
 import {
-  EuiFieldText,
-  EuiFormRow,
-  EuiSelect,
-  EuiPanel,
-  EuiIcon,
+  WuiFieldText,
+  WuiFormRow,
+  WuiSelect,
+  WuiPanel,
+  WuiIcon,
 } from '../../../../src/components';
-import { EuiToolTip } from '../../../../src/components/tool_tip';
+import { WuiToolTip } from '../../../../src/components/tool_tip';
 
 export default () => (
-  <EuiPanel style={{ maxWidth: 300 }}>
-    <EuiFormRow
+  <WuiPanel style={{ maxWidth: 300 }}>
+    <WuiFormRow
       label="Text field"
       helpText="Show validation help text only."
       display="columnCompressed">
-      <EuiFieldText name="first" compressed />
-    </EuiFormRow>
+      <WuiFieldText name="first" compressed />
+    </WuiFormRow>
 
-    <EuiFormRow
+    <WuiFormRow
       label={
-        <EuiToolTip content="Otherwise use an EuiToolTip around the label of the form row.">
+        <WuiToolTip content="Otherwise use an WuiToolTip around the label of the form row.">
           <span>
-            Label <EuiIcon type="questionInCircle" color="subdued" />
+            Label <WuiIcon type="questionInCircle" color="subdued" />
           </span>
-        </EuiToolTip>
+        </WuiToolTip>
       }
       display="columnCompressed">
-      <EuiSelect
+      <WuiSelect
         options={[
           { value: 'option_one', text: 'Option one' },
           { value: 'option_two', text: 'Option two' },
@@ -35,6 +35,6 @@ export default () => (
         ]}
         compressed
       />
-    </EuiFormRow>
-  </EuiPanel>
+    </WuiFormRow>
+  </WuiPanel>
 );

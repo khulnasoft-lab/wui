@@ -1,14 +1,14 @@
-.euiHeaderSection {
+.wuiHeaderSection {
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.euiHeaderSection--grow,
-.euiHeaderSection--left {
+.wuiHeaderSection--grow,
+.wuiHeaderSection--left {
   flex-grow: 1;
 }
 
-.euiHeaderSection--dontGrow {
+.wuiHeaderSection--dontGrow {
   flex-grow: 0;
 }

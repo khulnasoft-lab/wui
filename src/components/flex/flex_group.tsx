@@ -27,7 +27,7 @@ export type FlexGroupDirection = keyof typeof directionToClassNameMap;
 export type FlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
 export type FlexGroupJustifyContent = keyof typeof justifyContentToClassNameMap;
 
-export interface EuiFlexGroupProps {
+export interface WuiFlexGroupProps {
   alignItems?: FlexGroupAlignItems;
   component?: FlexGroupComponentType;
   direction?: FlexGroupDirection;
@@ -39,42 +39,42 @@ export interface EuiFlexGroupProps {
 
 const gutterSizeToClassNameMap = {
   none: null,
-  xs: 'euiFlexGroup--gutterExtraSmall',
-  s: 'euiFlexGroup--gutterSmall',
-  m: 'euiFlexGroup--gutterMedium',
-  l: 'euiFlexGroup--gutterLarge',
-  xl: 'euiFlexGroup--gutterExtraLarge',
+  xs: 'wuiFlexGroup--gutterExtraSmall',
+  s: 'wuiFlexGroup--gutterSmall',
+  m: 'wuiFlexGroup--gutterMedium',
+  l: 'wuiFlexGroup--gutterLarge',
+  xl: 'wuiFlexGroup--gutterExtraLarge',
 };
 
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
-export type EuiFlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
+export type WuiFlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
 
 const alignItemsToClassNameMap = {
   stretch: null,
-  flexStart: 'euiFlexGroup--alignItemsFlexStart',
-  flexEnd: 'euiFlexGroup--alignItemsFlexEnd',
-  center: 'euiFlexGroup--alignItemsCenter',
-  baseline: 'euiFlexGroup--alignItemsBaseline',
+  flexStart: 'wuiFlexGroup--alignItemsFlexStart',
+  flexEnd: 'wuiFlexGroup--alignItemsFlexEnd',
+  center: 'wuiFlexGroup--alignItemsCenter',
+  baseline: 'wuiFlexGroup--alignItemsBaseline',
 };
 
 export const ALIGN_ITEMS = keysOf(alignItemsToClassNameMap);
 
 const justifyContentToClassNameMap = {
   flexStart: null,
-  flexEnd: 'euiFlexGroup--justifyContentFlexEnd',
-  center: 'euiFlexGroup--justifyContentCenter',
-  spaceBetween: 'euiFlexGroup--justifyContentSpaceBetween',
-  spaceAround: 'euiFlexGroup--justifyContentSpaceAround',
-  spaceEvenly: 'euiFlexGroup--justifyContentSpaceEvenly',
+  flexEnd: 'wuiFlexGroup--justifyContentFlexEnd',
+  center: 'wuiFlexGroup--justifyContentCenter',
+  spaceBetween: 'wuiFlexGroup--justifyContentSpaceBetween',
+  spaceAround: 'wuiFlexGroup--justifyContentSpaceAround',
+  spaceEvenly: 'wuiFlexGroup--justifyContentSpaceEvenly',
 };
 
 export const JUSTIFY_CONTENTS = keysOf(justifyContentToClassNameMap);
 
 const directionToClassNameMap = {
-  row: 'euiFlexGroup--directionRow',
-  rowReverse: 'euiFlexGroup--directionRowReverse',
-  column: 'euiFlexGroup--directionColumn',
-  columnReverse: 'euiFlexGroup--directionColumnReverse',
+  row: 'wuiFlexGroup--directionRow',
+  rowReverse: 'wuiFlexGroup--directionRowReverse',
+  column: 'wuiFlexGroup--directionColumn',
+  columnReverse: 'wuiFlexGroup--directionColumnReverse',
 };
 
 export const DIRECTIONS = keysOf(directionToClassNameMap);
@@ -85,11 +85,11 @@ const isValidElement = (
   return ['div', 'span'].includes(component);
 };
 
-export const EuiFlexGroup = forwardRef<
+export const WuiFlexGroup = forwardRef<
   HTMLDivElement | HTMLSpanElement,
   CommonProps &
     HTMLAttributes<HTMLDivElement | HTMLSpanElement> &
-    EuiFlexGroupProps
+    WuiFlexGroupProps
 >(
   (
     {
@@ -107,14 +107,14 @@ export const EuiFlexGroup = forwardRef<
     ref: Ref<HTMLDivElement> | Ref<HTMLSpanElement>
   ) => {
     const classes = classNames(
-      'euiFlexGroup',
+      'wuiFlexGroup',
       gutterSizeToClassNameMap[gutterSize as FlexGroupGutterSize],
       alignItemsToClassNameMap[alignItems as FlexGroupAlignItems],
       justifyContentToClassNameMap[justifyContent as FlexGroupJustifyContent],
       directionToClassNameMap[direction as FlexGroupDirection],
       {
-        'euiFlexGroup--responsive': responsive,
-        'euiFlexGroup--wrap': wrap,
+        'wuiFlexGroup--responsive': responsive,
+        'wuiFlexGroup--wrap': wrap,
       },
       className
     );
@@ -142,4 +142,4 @@ export const EuiFlexGroup = forwardRef<
     );
   }
 );
-EuiFlexGroup.displayName = 'EuiFlexGroup';
+WuiFlexGroup.displayName = 'WuiFlexGroup';

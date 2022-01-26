@@ -23,12 +23,12 @@ import { requiredProps, findTestSubject } from '../../test';
 import { act } from 'react-dom/test-utils';
 import { keys } from '../../services';
 
-import { EuiImage } from './image';
+import { WuiImage } from './image';
 
-describe('EuiImage', () => {
+describe('WuiImage', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiImage alt="alt" size="l" url="/cat.jpg" {...requiredProps} />
+      <WuiImage alt="alt" size="l" url="/cat.jpg" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('EuiImage', () => {
 
   test('is rendered and allows full screen', () => {
     const component = render(
-      <EuiImage
+      <WuiImage
         alt="alt"
         size="l"
         url="/cat.jpg"
@@ -49,14 +49,14 @@ describe('EuiImage', () => {
   });
 
   test('is rendered with custom size', () => {
-    const component = render(<EuiImage alt="alt" size={50} url="/cat.jpg" />);
+    const component = render(<WuiImage alt="alt" size={50} url="/cat.jpg" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('is rendered with a node as the caption', () => {
     const component = render(
-      <EuiImage alt="alt" caption={<span>caption</span>} url="/cat.jpg" />
+      <WuiImage alt="alt" caption={<span>caption</span>} url="/cat.jpg" />
     );
 
     expect(component).toMatchSnapshot();
@@ -68,11 +68,11 @@ describe('EuiImage', () => {
     beforeEach(() => {
       const testProps = {
         ...requiredProps,
-        'data-test-subj': 'euiImage',
+        'data-test-subj': 'wuiImage',
       };
 
       component = mount(
-        <EuiImage
+        <WuiImage
           alt="alt"
           size="l"
           url="/cat.jpg"
@@ -91,7 +91,7 @@ describe('EuiImage', () => {
       expect(overlayMask.length).toBe(1);
 
       const fullScreenImage = overlayMask[0].querySelectorAll(
-        '[data-test-subj=euiImage]'
+        '[data-test-subj=wuiImage]'
       );
       expect(fullScreenImage.length).toBe(1);
     });

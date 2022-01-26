@@ -24,12 +24,12 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiIcon, IconType } from '../icon';
+import { WuiIcon, IconType } from '../icon';
 import { CommonProps } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiHeaderLogoProps = CommonProps &
+export type WuiHeaderLogoProps = CommonProps &
   AnchorHTMLAttributes<HTMLAnchorElement> & {
     href?: string;
     rel?: string;
@@ -42,9 +42,9 @@ export type EuiHeaderLogoProps = CommonProps &
     children?: ReactNode;
   };
 
-export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
-  iconType = 'logoElastic',
-  iconTitle = 'Elastic',
+export const WuiHeaderLogo: FunctionComponent<WuiHeaderLogoProps> = ({
+  iconType = 'logoWazuh',
+  iconTitle = 'Wazuh',
   href,
   rel,
   target,
@@ -52,7 +52,7 @@ export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
   className,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderLogo', className);
+  const classes = classNames('wuiHeaderLogo', className);
   const secureRel = getSecureRelForTarget({ href, rel, target });
   const isHrefValid = !href || validateHref(href);
   return (
@@ -62,14 +62,14 @@ export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
       target={target}
       className={classes}
       {...rest}>
-      <EuiIcon
+      <WuiIcon
         aria-label={iconTitle}
-        className="euiHeaderLogo__icon"
+        className="wuiHeaderLogo__icon"
         size="l"
         type={iconType}
       />
 
-      {children && <span className="euiHeaderLogo__text">{children}</span>}
+      {children && <span className="wuiHeaderLogo__text">{children}</span>}
     </a>
   );
 };

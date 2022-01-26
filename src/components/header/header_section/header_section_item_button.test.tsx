@@ -21,20 +21,20 @@ import React from 'react';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderSectionItemButton } from './header_section_item_button';
+import { WuiHeaderSectionItemButton } from './header_section_item_button';
 
-describe('EuiHeaderSectionItemButton', () => {
+describe('WuiHeaderSectionItemButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSectionItemButton {...requiredProps} />);
+    const component = render(<WuiHeaderSectionItemButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeaderSectionItemButton>
+      <WuiHeaderSectionItemButton>
         <span>Ahoy!</span>
-      </EuiHeaderSectionItemButton>
+      </WuiHeaderSectionItemButton>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,14 +42,14 @@ describe('EuiHeaderSectionItemButton', () => {
 
   describe('renders notification', () => {
     test('as a badge', () => {
-      const component = render(<EuiHeaderSectionItemButton notification="1" />);
+      const component = render(<WuiHeaderSectionItemButton notification="1" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('as a dot', () => {
       const component = render(
-        <EuiHeaderSectionItemButton notification={true} />
+        <WuiHeaderSectionItemButton notification={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('EuiHeaderSectionItemButton', () => {
 
     test('color', () => {
       const component = render(
-        <EuiHeaderSectionItemButton
+        <WuiHeaderSectionItemButton
           notification="1"
           notificationColor="subdued"
         />
@@ -71,7 +71,7 @@ describe('EuiHeaderSectionItemButton', () => {
     test("isn't called upon instantiation", () => {
       const onClickHandler = jest.fn();
 
-      shallow(<EuiHeaderSectionItemButton onClick={onClickHandler} />);
+      shallow(<WuiHeaderSectionItemButton onClick={onClickHandler} />);
 
       expect(onClickHandler).not.toHaveBeenCalled();
     });
@@ -80,7 +80,7 @@ describe('EuiHeaderSectionItemButton', () => {
       const onClickHandler = jest.fn();
 
       const $button = shallow(
-        <EuiHeaderSectionItemButton onClick={onClickHandler} />
+        <WuiHeaderSectionItemButton onClick={onClickHandler} />
       );
 
       $button.simulate('click');

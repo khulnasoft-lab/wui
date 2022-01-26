@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFacetButton is rendered 1`] = `
+exports[`WuiFacetButton is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiFacetButton euiFacetButton--unSelected testClass1 testClass2"
+  class="wuiFacetButton wuiFacetButton--unSelected testClass1 testClass2"
   data-test-subj="test subject string"
   title="aria-label"
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
@@ -20,20 +20,20 @@ exports[`EuiFacetButton is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiFacetButton props icon is rendered 1`] = `
+exports[`WuiFacetButton props icon is rendered 1`] = `
 <button
-  class="euiFacetButton euiFacetButton--unSelected"
+  class="wuiFacetButton wuiFacetButton--unSelected"
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <div
-      class="euiFacetButton__icon"
-      data-euiicon-type="dot"
+      class="wuiFacetButton__icon"
+      data-wuiicon-type="dot"
     />
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
@@ -41,17 +41,17 @@ exports[`EuiFacetButton props icon is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiFacetButton props isDisabled is rendered 1`] = `
+exports[`WuiFacetButton props isDisabled is rendered 1`] = `
 <button
-  class="euiFacetButton euiFacetButton--unSelected"
+  class="wuiFacetButton wuiFacetButton--unSelected"
   disabled=""
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
@@ -59,37 +59,37 @@ exports[`EuiFacetButton props isDisabled is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiFacetButton props isLoading is rendered 1`] = `
+exports[`WuiFacetButton props isLoading is rendered 1`] = `
 <button
-  class="euiFacetButton euiFacetButton--unSelected"
+  class="wuiFacetButton wuiFacetButton--unSelected"
   disabled=""
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
     <span
-      class="euiLoadingSpinner euiLoadingSpinner--medium euiFacetButton__spinner"
+      class="wuiLoadingSpinner wuiLoadingSpinner--medium wuiFacetButton__spinner"
     />
   </span>
 </button>
 `;
 
-exports[`EuiFacetButton props isSelected is rendered 1`] = `
+exports[`WuiFacetButton props isSelected is rendered 1`] = `
 <button
-  class="euiFacetButton euiFacetButton--isSelected"
+  class="wuiFacetButton wuiFacetButton--isSelected"
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
@@ -97,21 +97,21 @@ exports[`EuiFacetButton props isSelected is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiFacetButton props quantity is rendered 1`] = `
+exports[`WuiFacetButton props quantity is rendered 1`] = `
 <button
-  class="euiFacetButton euiFacetButton--unSelected"
+  class="wuiFacetButton wuiFacetButton--unSelected"
   type="button"
 >
   <span
-    class="euiFacetButton__content"
+    class="wuiFacetButton__content"
   >
     <span
-      class="euiFacetButton__text"
+      class="wuiFacetButton__text"
     >
       Content
     </span>
     <span
-      class="euiNotificationBadge euiNotificationBadge--medium euiNotificationBadge--subdued euiFacetButton__quantity"
+      class="wuiNotificationBadge wuiNotificationBadge--medium wuiNotificationBadge--subdued wuiFacetButton__quantity"
     >
       60
     </span>

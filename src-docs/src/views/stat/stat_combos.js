@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiStat,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiPanel,
-  EuiIcon,
-  EuiSwitch,
-  EuiSpacer,
+  WuiStat,
+  WuiFlexItem,
+  WuiFlexGroup,
+  WuiPanel,
+  WuiIcon,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,57 +19,57 @@ export default () => {
 
   return (
     <div>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+      <WuiFlexGroup>
+        <WuiFlexItem>
+          <WuiPanel>
+            <WuiStat
               title="8,888"
               description="Total widgets"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="empty" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <WuiIcon type="empty" />
+            </WuiStat>
+          </WuiPanel>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiPanel>
+            <WuiStat
               title="2,000"
               description="Pending widgets"
               titleColor="accent"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="clock" color="accent" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <WuiIcon type="clock" color="accent" />
+            </WuiStat>
+          </WuiPanel>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiPanel>
+            <WuiStat
               title="6,800"
               description="Success widgets"
               titleColor="secondary"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="check" color="secondary" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <WuiIcon type="check" color="secondary" />
+            </WuiStat>
+          </WuiPanel>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiPanel>
+            <WuiStat
               title="88"
               description="Error widgets"
               titleColor="danger"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="alert" color="danger" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer />
-      <EuiSwitch
+              <WuiIcon type="alert" color="danger" />
+            </WuiStat>
+          </WuiPanel>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiSpacer />
+      <WuiSwitch
         label="Show as loading"
         checked={isLoading}
         onChange={onToggleChange}

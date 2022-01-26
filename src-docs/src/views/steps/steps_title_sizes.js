@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { EuiCode, EuiSteps } from '../../../../src/components';
+import { WuiCode, WuiSteps } from '../../../../src/components';
 
 const firstSetOfSteps = [
   {
     title: 'Step 1',
     children: (
       <p>
-        Steps with <EuiCode>titleSize</EuiCode> set to <EuiCode>xs</EuiCode>{' '}
+        Steps with <WuiCode>titleSize</WuiCode> set to <WuiCode>xs</WuiCode>{' '}
         like this one, get a smaller step circle
       </p>
     ),
@@ -16,7 +16,7 @@ const firstSetOfSteps = [
     title: 'Step 2',
     children: (
       <p>
-        Steps with <EuiCode>titleSize</EuiCode> set to <EuiCode>xs</EuiCode>{' '}
+        Steps with <WuiCode>titleSize</WuiCode> set to <WuiCode>xs</WuiCode>{' '}
         like this one, get a smaller step circle
       </p>
     ),
@@ -25,6 +25,6 @@ const firstSetOfSteps = [
 
 export default () => (
   <div>
-    <EuiSteps titleSize="xs" steps={firstSetOfSteps} />
+    <WuiSteps titleSize="xs" steps={firstSetOfSteps} />
   </div>
 );

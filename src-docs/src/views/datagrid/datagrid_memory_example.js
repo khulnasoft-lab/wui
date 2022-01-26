@@ -4,11 +4,11 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiDataGrid,
-  EuiCallOut,
-  EuiCode,
-  EuiText,
-  EuiSpacer,
+  WuiDataGrid,
+  WuiCallOut,
+  WuiCode,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import InMemoryDataGrid from './in_memory';
@@ -30,37 +30,37 @@ const inMemorySortingDataGridSource = require('!!raw-loader!./in_memory_sorting'
 const inMemorySortingDataGridHtml = renderToHtml(InMemorySortingDataGrid);
 
 import {
-  EuiDataGridColumn,
-  EuiDataGridPaginationProps,
-  EuiDataGridSorting,
-  EuiDataGridInMemory,
-  EuiDataGridStyle,
-  EuiDataGridToolBarVisibilityOptions,
-  EuiDataGridColumnVisibility,
+  WuiDataGridColumn,
+  WuiDataGridPaginationProps,
+  WuiDataGridSorting,
+  WuiDataGridInMemory,
+  WuiDataGridStyle,
+  WuiDataGridToolBarVisibilityOptions,
+  WuiDataGridColumnVisibility,
 } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-import { EuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
-import { EuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
+import { WuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
+import { WuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
 
 export const DataGridMemoryExample = {
   title: 'Data grid in-memory settings',
   intro: (
     <Fragment>
-      <EuiCallOut title="What is the difference in the examples?">
+      <WuiCallOut title="What is the difference in the examples?">
         <p>
           These examples show the same grid built with the four available{' '}
-          <EuiCode>inMemory</EuiCode> settings. While they may look the same,
+          <WuiCode>inMemory</WuiCode> settings. While they may look the same,
           look at the source to see how they require different levels of data
           management in regards to sorting and pagination.
         </p>
-      </EuiCallOut>
-      <EuiSpacer />
-      <EuiText>
+      </WuiCallOut>
+      <WuiSpacer />
+      <WuiText>
         <p>
           The grid has levels of <strong>in-memory</strong> settings that can be
           set. It is in the consuming application&apos;s best interest to put as
           much of the data grid in memory as performance allows. Try to use the
-          highest level <EuiCode language="js">{'inMemory="sorting"'}</EuiCode>{' '}
+          highest level <WuiCode language="js">{'inMemory="sorting"'}</WuiCode>{' '}
           whenever possible. The following values are available.
         </p>
         <ul>
@@ -93,10 +93,10 @@ export const DataGridMemoryExample = {
           and uses those values to detect schemas and perform sorting. This
           detaches the user experience from the raw data; the data grid never
           has access to the backing data, only what is returned by{' '}
-          <EuiCode>renderCellValue</EuiCode>.
+          <WuiCode>renderCellValue</WuiCode>.
         </p>
-      </EuiText>
-      <EuiSpacer />
+      </WuiText>
+      <WuiSpacer />
     </Fragment>
   ),
   sections: [
@@ -114,9 +114,9 @@ export const DataGridMemoryExample = {
       title: 'When in-memory is not used',
       text: (
         <p>
-          When <EuiCode>inMemory</EuiCode> is not in use the grid will not
+          When <WuiCode>inMemory</WuiCode> is not in use the grid will not
           autodetect schemas. In the below example only the{' '}
-          <EuiCode>amount</EuiCode> column has a schema because it is manually
+          <WuiCode>amount</WuiCode> column has a schema because it is manually
           set. Sorting and pagination data management is the responsibility of
           the consuming application. Column sorting in particular is going to be
           imprecise because there is no backend service to call, and data grid
@@ -128,16 +128,16 @@ export const DataGridMemoryExample = {
         </p>
       ),
       props: {
-        EuiDataGrid,
-        EuiDataGridInMemory,
-        EuiDataGridColumn,
-        EuiDataGridColumnVisibility,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        WuiDataGrid,
+        WuiDataGridInMemory,
+        WuiDataGridColumn,
+        WuiDataGridColumnVisibility,
+        WuiDataGridPaginationProps,
+        WuiDataGridSorting,
+        WuiDataGridCellValueElementProps,
+        WuiDataGridSchemaDetector,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
       },
       components: { InMemoryDataGrid },
       demo: <InMemoryDataGrid />,
@@ -157,25 +157,25 @@ export const DataGridMemoryExample = {
       text: (
         <p>
           With{' '}
-          <EuiCode language="js">
+          <WuiCode language="js">
             {"inMemory={{ level: 'enhancements' }}"}
-          </EuiCode>{' '}
+          </WuiCode>{' '}
           the grid will now autodetect schemas based on the content it has
           available on the currently viewed page. Notice that the field list
           under Sort fields has detected the type of data each column contains.
         </p>
       ),
       props: {
-        EuiDataGrid,
-        EuiDataGridInMemory,
-        EuiDataGridColumn,
-        EuiDataGridColumnVisibility,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        WuiDataGrid,
+        WuiDataGridInMemory,
+        WuiDataGridColumn,
+        WuiDataGridColumnVisibility,
+        WuiDataGridPaginationProps,
+        WuiDataGridSorting,
+        WuiDataGridCellValueElementProps,
+        WuiDataGridSchemaDetector,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
       },
       components: { InMemoryEnhancementsDataGrid },
       demo: <InMemoryEnhancementsDataGrid />,
@@ -195,24 +195,24 @@ export const DataGridMemoryExample = {
       text: (
         <p>
           With{' '}
-          <EuiCode language="js">
+          <WuiCode language="js">
             {"inMemory={{ level: 'pagination' }}"}
-          </EuiCode>{' '}
+          </WuiCode>{' '}
           the grid will now take care of managing the data cleanup for
           pagination. Like before it will autodetect schemas when possible.
         </p>
       ),
       props: {
-        EuiDataGrid,
-        EuiDataGridInMemory,
-        EuiDataGridColumn,
-        EuiDataGridColumnVisibility,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        WuiDataGrid,
+        WuiDataGridInMemory,
+        WuiDataGridColumn,
+        WuiDataGridColumnVisibility,
+        WuiDataGridPaginationProps,
+        WuiDataGridSorting,
+        WuiDataGridCellValueElementProps,
+        WuiDataGridSchemaDetector,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
       },
       components: { InMemoryPaginationDataGrid },
       demo: <InMemoryPaginationDataGrid />,
@@ -232,23 +232,23 @@ export const DataGridMemoryExample = {
       text: (
         <p>
           With{' '}
-          <EuiCode language="js">{"inMemory={{ level: 'sorting' }}"}</EuiCode>{' '}
+          <WuiCode language="js">{"inMemory={{ level: 'sorting' }}"}</WuiCode>{' '}
           the grid will now take care of managing the data cleanup for sorting
           as well as pagination. Like before it will autodetect schemas when
           possible.
         </p>
       ),
       props: {
-        EuiDataGrid,
-        EuiDataGridInMemory,
-        EuiDataGridColumn,
-        EuiDataGridColumnVisibility,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        WuiDataGrid,
+        WuiDataGridInMemory,
+        WuiDataGridColumn,
+        WuiDataGridColumnVisibility,
+        WuiDataGridPaginationProps,
+        WuiDataGridSorting,
+        WuiDataGridCellValueElementProps,
+        WuiDataGridSchemaDetector,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
       },
       components: { InMemorySortingDataGrid },
       demo: <InMemorySortingDataGrid />,

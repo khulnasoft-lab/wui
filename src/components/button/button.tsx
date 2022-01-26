@@ -31,9 +31,9 @@ import {
 import { getSecureRelForTarget } from '../../services';
 
 import {
-  EuiButtonContentProps,
-  EuiButtonContentType,
-  EuiButtonContent,
+  WuiButtonContentProps,
+  WuiButtonContentType,
+  WuiButtonContent,
 } from './button_content';
 import { validateHref } from '../../services/security/href_validator';
 
@@ -52,28 +52,28 @@ export type ButtonColor =
 export type ButtonSize = 's' | 'm';
 
 const colorToClassNameMap: { [color in ButtonColor]: string } = {
-  primary: 'euiButton--primary',
-  secondary: 'euiButton--secondary',
-  warning: 'euiButton--warning',
-  danger: 'euiButton--danger',
-  ghost: 'euiButton--ghost',
-  text: 'euiButton--text',
+  primary: 'wuiButton--primary',
+  secondary: 'wuiButton--secondary',
+  warning: 'wuiButton--warning',
+  danger: 'wuiButton--danger',
+  ghost: 'wuiButton--ghost',
+  text: 'wuiButton--text',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const sizeToClassNameMap: { [size in ButtonSize]: string | null } = {
-  s: 'euiButton--small',
+  s: 'wuiButton--small',
   m: null,
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
 /**
- * Extends EuiButtonContentProps which provides
+ * Extends WuiButtonContentProps which provides
  * `iconType`, `iconSide`, and `textProps`
  */
-export interface EuiButtonProps extends EuiButtonContentProps, CommonProps {
+export interface WuiButtonProps extends WuiButtonContentProps, CommonProps {
   /**
    * Make button a solid color for prominence
    */
@@ -101,20 +101,20 @@ export interface EuiButtonProps extends EuiButtonContentProps, CommonProps {
   /**
    * Object of props passed to the <span/> wrapping the button's content
    */
-  contentProps?: EuiButtonContentType;
+  contentProps?: WuiButtonContentType;
 }
 
-export interface EuiButtonDisplayProps extends EuiButtonProps {
+export interface WuiButtonDisplayProps extends WuiButtonProps {
   element: 'a' | 'button' | 'span' | 'label';
 }
 
 /**
  * *INTERNAL ONLY*
  * Component for displaying any element as a button
- * EuiButton is largely responsible for providing relevant props
+ * WuiButton is largely responsible for providing relevant props
  * and the logic for element-specific attributes
  */
-const EuiButtonDisplay = React.forwardRef<HTMLElement, EuiButtonDisplayProps>(
+const WuiButtonDisplay = React.forwardRef<HTMLElement, WuiButtonDisplayProps>(
   (
     {
       children,
@@ -135,29 +135,29 @@ const EuiButtonDisplay = React.forwardRef<HTMLElement, EuiButtonDisplayProps>(
     ref
   ) => {
     const classes = classNames(
-      'euiButton',
+      'wuiButton',
       color ? colorToClassNameMap[color] : null,
       size ? sizeToClassNameMap[size] : null,
       className,
       {
-        'euiButton--fill': fill,
-        'euiButton--fullWidth': fullWidth,
-        'euiButton-isDisabled': isDisabled,
+        'wuiButton--fill': fill,
+        'wuiButton--fullWidth': fullWidth,
+        'wuiButton-isDisabled': isDisabled,
       }
     );
 
     const contentClassNames = classNames(
-      'euiButton__content',
+      'wuiButton__content',
       contentProps && contentProps.className
     );
 
     const textClassNames = classNames(
-      'euiButton__text',
+      'wuiButton__text',
       textProps && textProps.className
     );
 
     const innerNode = (
-      <EuiButtonContent
+      <WuiButtonContent
         isLoading={isLoading}
         iconType={iconType}
         iconSide={iconSide}
@@ -166,7 +166,7 @@ const EuiButtonDisplay = React.forwardRef<HTMLElement, EuiButtonDisplayProps>(
         // className has to come last to override contentProps.className
         className={contentClassNames}>
         {children}
-      </EuiButtonContent>
+      </WuiButtonContent>
     );
 
     return React.createElement(
@@ -181,29 +181,29 @@ const EuiButtonDisplay = React.forwardRef<HTMLElement, EuiButtonDisplayProps>(
   }
 );
 
-EuiButtonDisplay.displayName = 'EuiButtonDisplay';
-export { EuiButtonDisplay };
+WuiButtonDisplay.displayName = 'WuiButtonDisplay';
+export { WuiButtonDisplay };
 
-type EuiButtonPropsForAnchor = PropsForAnchor<
-  EuiButtonProps,
+type WuiButtonPropsForAnchor = PropsForAnchor<
+  WuiButtonProps,
   {
     buttonRef?: Ref<HTMLAnchorElement>;
   }
 >;
 
-type EuiButtonPropsForButton = PropsForButton<
-  EuiButtonProps,
+type WuiButtonPropsForButton = PropsForButton<
+  WuiButtonProps,
   {
     buttonRef?: Ref<HTMLButtonElement>;
   }
 >;
 
 export type Props = ExclusiveUnion<
-  EuiButtonPropsForAnchor,
-  EuiButtonPropsForButton
+  WuiButtonPropsForAnchor,
+  WuiButtonPropsForButton
 >;
 
-export const EuiButton: FunctionComponent<Props> = ({
+export const WuiButton: FunctionComponent<Props> = ({
   isDisabled: _isDisabled,
   disabled: _disabled,
   href,
@@ -244,7 +244,7 @@ export const EuiButton: FunctionComponent<Props> = ({
   }
 
   return (
-    <EuiButtonDisplay
+    <WuiButtonDisplay
       element={element}
       ref={buttonRef}
       {...elementProps}

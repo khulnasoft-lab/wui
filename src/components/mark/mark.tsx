@@ -20,7 +20,7 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-export type EuiMarkProps = HTMLAttributes<HTMLElement> &
+export type WuiMarkProps = HTMLAttributes<HTMLElement> &
   CommonProps & {
     /**
      * ReactNode to render as this component's content
@@ -28,12 +28,12 @@ export type EuiMarkProps = HTMLAttributes<HTMLElement> &
     children: string;
   };
 
-export const EuiMark: FunctionComponent<EuiMarkProps> = ({
+export const WuiMark: FunctionComponent<WuiMarkProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiMark', className);
+  const classes = classNames('wuiMark', className);
 
   return (
     <mark className={classes} {...rest}>

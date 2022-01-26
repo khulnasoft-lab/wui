@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableMessage bordered is rendered 1`] = `
+exports[`WuiSelectableMessage bordered is rendered 1`] = `
 <div
-  class="euiText euiText--extraSmall euiSelectableMessage euiSelectableMessage--bordered"
+  class="wuiText wuiText--extraSmall wuiSelectableMessage wuiSelectableMessage--bordered"
 >
   <div
     class="euiTextColor euiTextColor--subdued"
@@ -10,10 +10,10 @@ exports[`EuiSelectableMessage bordered is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableMessage is rendered 1`] = `
+exports[`WuiSelectableMessage is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiText euiText--extraSmall euiSelectableMessage testClass1 testClass2"
+  class="wuiText wuiText--extraSmall wuiSelectableMessage testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div

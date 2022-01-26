@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageContentHeaderSection } from './page_content_header_section';
+import { WuiPageContentHeaderSection } from './page_content_header_section';
 
-describe('EuiPageContentHeaderSection', () => {
+describe('WuiPageContentHeaderSection', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPageContentHeaderSection {...requiredProps} />
+      <WuiPageContentHeaderSection {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

@@ -5,12 +5,12 @@ import {
   createOptionalEnum,
   simulateFunction,
 } from '../../services/playground';
-import { EuiIcon } from '../../../../src/components/';
+import { WuiIcon } from '../../../../src/components/';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiIcon.__docgenInfo)
-    ? EuiIcon.__docgenInfo[0]
-    : EuiIcon.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiIcon.__docgenInfo)
+    ? WuiIcon.__docgenInfo[0]
+    : WuiIcon.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.type = iconValidator(propsToUse.type);
@@ -21,14 +21,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiIcon',
+      componentName: 'WuiIcon',
       props: propsToUse,
       scope: {
-        EuiIcon,
+        WuiIcon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiIcon'],
+        '@wazuh/wui': {
+          named: ['WuiIcon'],
         },
       },
 

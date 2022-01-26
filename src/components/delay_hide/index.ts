@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiDelayHide } from './delay_hide';
+export { WuiDelayHide } from './delay_hide';

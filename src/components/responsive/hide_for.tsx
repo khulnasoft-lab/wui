@@ -23,24 +23,24 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { EuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { WuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
 import { throttle } from '../color_picker/utils';
 
-export type EuiHideForBreakpoints = EuiBreakpointSize;
+export type WuiHideForBreakpoints = WuiBreakpointSize;
 
-export interface EuiHideForProps {
+export interface WuiHideForProps {
   /**
    * Required otherwise nothing ever gets returned
    */
   children: ReactNode;
   /**
    * List of all the responsive sizes to hide the children for.
-   * Array of #EuiBreakpointSize
+   * Array of #WuiBreakpointSize
    */
-  sizes: EuiHideForBreakpoints[] | 'all' | 'none';
+  sizes: WuiHideForBreakpoints[] | 'all' | 'none';
 }
 
-export const EuiHideFor: FunctionComponent<EuiHideForProps> = ({
+export const WuiHideFor: FunctionComponent<WuiHideForProps> = ({
   children,
   sizes,
 }) => {
@@ -67,7 +67,7 @@ export const EuiHideFor: FunctionComponent<EuiHideForProps> = ({
 
   if (
     sizes === 'all' ||
-    sizes.includes(currentBreakpoint as EuiBreakpointSize)
+    sizes.includes(currentBreakpoint as WuiBreakpointSize)
   ) {
     return null;
   }

@@ -55,10 +55,10 @@ export interface RemarkRehypeHandler {
   (h: RemarkRehypeHandlerCallback, node: UnistNode): RehypeNode;
 }
 
-export interface EuiMarkdownEditorUiPluginEditorProps<NodeShape> {
+export interface WuiMarkdownEditorUiPluginEditorProps<NodeShape> {
   node: NodeShape | null;
   onCancel: () => void;
-  onSave: (markdown: string, config: EuiMarkdownStringTagConfig) => void;
+  onSave: (markdown: string, config: WuiMarkdownStringTagConfig) => void;
 }
 
 export const isPluginWithImmediateFormatting = (
@@ -68,16 +68,16 @@ export const isPluginWithImmediateFormatting = (
 };
 
 export interface PluginWithImmediateFormatting {
-  formatting: EuiMarkdownFormatting;
+  formatting: WuiMarkdownFormatting;
   editor?: never;
 }
 
 export interface PluginWithDelayedFormatting<NodeShape> {
   formatting?: never;
-  editor: ComponentType<EuiMarkdownEditorUiPluginEditorProps<NodeShape>>;
+  editor: ComponentType<WuiMarkdownEditorUiPluginEditorProps<NodeShape>>;
 }
 
-export type EuiMarkdownEditorUiPlugin<NodeShape = any> = {
+export type WuiMarkdownEditorUiPlugin<NodeShape = any> = {
   name: string;
   button: {
     label: string;
@@ -86,7 +86,7 @@ export type EuiMarkdownEditorUiPlugin<NodeShape = any> = {
   helpText?: ReactNode;
 } & (PluginWithImmediateFormatting | PluginWithDelayedFormatting<NodeShape>);
 
-export interface EuiMarkdownFormatting {
+export interface WuiMarkdownFormatting {
   prefix?: string;
   suffix?: string;
   blockPrefix?: string;
@@ -100,31 +100,31 @@ export interface EuiMarkdownFormatting {
   trimFirst?: boolean;
 }
 
-export interface EuiMarkdownAstNode {
+export interface WuiMarkdownAstNode {
   type: string;
-  children?: EuiMarkdownAstNode[];
-  position: EuiMarkdownAstNodePosition;
+  children?: WuiMarkdownAstNode[];
+  position: WuiMarkdownAstNodePosition;
 }
-export interface EuiMarkdownAstNodePosition {
+export interface WuiMarkdownAstNodePosition {
   start: { line: number; column: number; offset: number };
   end: { line: number; column: number; offset: number };
 }
 
-export type EuiMarkdownParseError = string | VFileMessage | Error;
+export type WuiMarkdownParseError = string | VFileMessage | Error;
 
-export interface EuiMarkdownDropHandler {
+export interface WuiMarkdownDropHandler {
   supportedFiles: string[];
   accepts: (itemType: string) => boolean;
   getFormattingForItem: (
     file: File
-  ) => EuiMarkdownDragAndDropResult | Promise<EuiMarkdownDragAndDropResult>;
+  ) => WuiMarkdownDragAndDropResult | Promise<WuiMarkdownDragAndDropResult>;
 }
 
-export interface EuiMarkdownStringTagConfig {
+export interface WuiMarkdownStringTagConfig {
   block: boolean;
 }
 
-export interface EuiMarkdownDragAndDropResult {
+export interface WuiMarkdownDragAndDropResult {
   text: string;
-  config: EuiMarkdownStringTagConfig;
+  config: WuiMarkdownStringTagConfig;
 }

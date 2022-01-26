@@ -32,12 +32,12 @@ export const getSecureRelForTarget = ({
   target?: '_blank' | '_self' | '_parent' | '_top' | string;
   rel?: string;
 }) => {
-  const isElasticHref = !!href && isDomainSecure(href);
+  const isWazuhHref = !!href && isDomainSecure(href);
   const relParts = !!rel
     ? rel.split(' ').filter(part => !!part.length && part !== 'noreferrer')
     : [];
 
-  if (!isElasticHref) {
+  if (!isWazuhHref) {
     relParts.push('noreferrer');
   }
 

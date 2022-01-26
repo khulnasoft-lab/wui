@@ -2,13 +2,13 @@ import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
-import { EuiTab } from '../../../../src/components/';
+import { WuiTab } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 export const tabConfig = () => {
-  const docgenInfo = Array.isArray(EuiTab.__docgenInfo)
-    ? EuiTab.__docgenInfo[0]
-    : EuiTab.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiTab.__docgenInfo)
+    ? WuiTab.__docgenInfo[0]
+    : WuiTab.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -30,14 +30,14 @@ export const tabConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTab',
+      componentName: 'WuiTab',
       props: propsToUse,
       scope: {
-        EuiTab,
+        WuiTab,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTab'],
+        '@wazuh/wui': {
+          named: ['WuiTab'],
         },
       },
       customProps: {

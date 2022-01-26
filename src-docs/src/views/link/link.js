@@ -1,80 +1,80 @@
 import React from 'react';
 
-import { EuiCode, EuiLink, EuiText } from '../../../../src/components';
+import { WuiCode, WuiLink, WuiText } from '../../../../src/components';
 
 export default () => (
-  <EuiText>
+  <WuiText>
     <p>
       Open the{' '}
-      <EuiLink href="http://www.elastic.co" target="_blank">
-        Elastic website
-      </EuiLink>{' '}
+      <WuiLink href="http://www.wazuh.com" target="_blank">
+        Wazuh website
+      </WuiLink>{' '}
       in a new tab.
     </p>
     <p>
       This{' '}
-      <EuiLink href="http://www.elastic.co" external target="_blank">
+      <WuiLink href="http://www.wazuh.com" external target="_blank">
         link
-      </EuiLink>{' '}
-      has the <EuiCode>external</EuiCode> prop set to true.
+      </WuiLink>{' '}
+      has the <WuiCode>external</WuiCode> prop set to true.
     </p>
     <p>
       This link is actually a{' '}
-      <EuiLink onClick={() => window.alert('Button clicked')}>button</EuiLink>{' '}
+      <WuiLink onClick={() => window.alert('Button clicked')}>button</WuiLink>{' '}
       with an onClick handler.
     </p>
     <p>
       Here is an example of a{' '}
-      <EuiLink
-        href="https://github.com/elastic/eui"
+      <WuiLink
+        href="https://github.com/wazuh/wui"
         onClick={e => {
-          if (!window.confirm('Are you sure you want to see the eui repo?')) {
+          if (!window.confirm('Are you sure you want to see the wui repo?')) {
             e.preventDefault();
           }
         }}>
         link
-      </EuiLink>{' '}
+      </WuiLink>{' '}
       with both an href and an onClick handler.
     </p>
     <p>Links can be colored as well.</p>
     <ul>
       <li>
-        <EuiLink color="subdued" href="#">
+        <WuiLink color="subdued" href="#">
           subdued
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
-        <EuiLink color="secondary" href="#">
+        <WuiLink color="secondary" href="#">
           secondary
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
-        <EuiLink color="accent" href="#">
+        <WuiLink color="accent" href="#">
           accent
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
-        <EuiLink color="danger" href="#">
+        <WuiLink color="danger" href="#">
           danger
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
-        <EuiLink color="warning" href="#">
+        <WuiLink color="warning" href="#">
           warning
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
-        <EuiLink color="text" href="#">
+        <WuiLink color="text" href="#">
           text
-        </EuiLink>
+        </WuiLink>
       </li>
       <li>
         <span style={{ background: 'black' }}>
-          <EuiLink color="ghost" href="#">
+          <WuiLink color="ghost" href="#">
             ghost
-          </EuiLink>
+          </WuiLink>
         </span>
       </li>
     </ul>
-  </EuiText>
+  </WuiText>
 );

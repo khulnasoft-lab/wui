@@ -25,7 +25,7 @@ export type FlexGridGutterSize = keyof typeof gutterSizeToClassNameMap;
 export type FlexGridColumns = 0 | 1 | 2 | 3 | 4;
 export type FlexGridDirection = keyof typeof directionToClassNameMap;
 
-export interface EuiFlexGridProps {
+export interface WuiFlexGridProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -57,17 +57,17 @@ export interface EuiFlexGridProps {
 
 const directionToClassNameMap = {
   row: null,
-  column: 'euiFlexGrid--directionColumn',
+  column: 'wuiFlexGrid--directionColumn',
 };
 
 export const DIRECTIONS = keysOf(directionToClassNameMap);
 
 const gutterSizeToClassNameMap = {
-  none: 'euiFlexGrid--gutterNone',
-  s: 'euiFlexGrid--gutterSmall',
-  m: 'euiFlexGrid--gutterMedium',
-  l: 'euiFlexGrid--gutterLarge',
-  xl: 'euiFlexGrid--gutterXLarge',
+  none: 'wuiFlexGrid--gutterNone',
+  s: 'wuiFlexGrid--gutterSmall',
+  m: 'wuiFlexGrid--gutterMedium',
+  l: 'wuiFlexGrid--gutterLarge',
+  xl: 'wuiFlexGrid--gutterXLarge',
 };
 
 export const GUTTER_SIZES: FlexGridGutterSize[] = keysOf(
@@ -75,20 +75,20 @@ export const GUTTER_SIZES: FlexGridGutterSize[] = keysOf(
 );
 
 const columnsToClassNameMap = {
-  0: 'euiFlexGrid--wrap',
-  1: 'euiFlexGrid--single',
-  2: 'euiFlexGrid--halves',
-  3: 'euiFlexGrid--thirds',
-  4: 'euiFlexGrid--fourths',
+  0: 'wuiFlexGrid--wrap',
+  1: 'wuiFlexGrid--single',
+  2: 'wuiFlexGrid--halves',
+  3: 'wuiFlexGrid--thirds',
+  4: 'wuiFlexGrid--fourths',
 };
 
 export const COLUMNS = Object.keys(
   columnsToClassNameMap
 ).map((columns: string) => parseInt(columns, 10)) as FlexGridColumns[];
 
-export const EuiFlexGrid: FunctionComponent<CommonProps &
+export const WuiFlexGrid: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiFlexGridProps> = ({
+  WuiFlexGridProps> = ({
   children,
   className,
   gutterSize = 'l',
@@ -99,12 +99,12 @@ export const EuiFlexGrid: FunctionComponent<CommonProps &
   ...rest
 }) => {
   const classes = classNames(
-    'euiFlexGrid',
+    'wuiFlexGrid',
     gutterSize ? gutterSizeToClassNameMap[gutterSize] : undefined,
     columns != null ? columnsToClassNameMap[columns] : undefined,
     direction ? directionToClassNameMap[direction] : undefined,
     {
-      'euiFlexGrid--responsive': responsive,
+      'wuiFlexGrid--responsive': responsive,
     },
     className
   );

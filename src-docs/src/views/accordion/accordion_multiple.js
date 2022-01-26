@@ -1,61 +1,61 @@
 import React from 'react';
 
-import { EuiAccordion, EuiText, EuiSpacer } from '../../../../src/components';
+import { WuiAccordion, WuiText, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiAccordion
+    <WuiAccordion
       id="accordion3"
       buttonContent="An accordion with padding applied through props"
       paddingSize="l">
-      <EuiText>
+      <WuiText>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
-      </EuiText>
-    </EuiAccordion>
+      </WuiText>
+    </WuiAccordion>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiAccordion
+    <WuiAccordion
       id="accordion4"
-      buttonContent="A second accordion with padding and a very long title that should truncate because of eui-textTruncate"
-      buttonContentClassName="eui-textTruncate"
+      buttonContent="A second accordion with padding and a very long title that should truncate because of wui-textTruncate"
+      buttonContentClassName="wui-textTruncate"
       paddingSize="l">
-      <EuiText>
+      <WuiText>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
         <p>The content inside can be of any height.</p>
-      </EuiText>
-    </EuiAccordion>
+      </WuiText>
+    </WuiAccordion>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiAccordion
+    <WuiAccordion
       id="accordion5"
       buttonContent="A third accordion with a nested accordion"
       paddingSize="m">
-      <EuiText>
+      <WuiText>
         <p>
           This content area will grow to accomodate when the accordion below
           opens
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiAccordion id="accordion6" buttonContent="A fourth nested accordion">
-        <EuiText>
+      </WuiText>
+      <WuiSpacer />
+      <WuiAccordion id="accordion6" buttonContent="A fourth nested accordion">
+        <WuiText>
           <p>The content inside can be of any height.</p>
           <p>The content inside can be of any height.</p>
           <p>The content inside can be of any height.</p>
           <p>The content inside can be of any height.</p>
           <p>The content inside can be of any height.</p>
           <p>The content inside can be of any height.</p>
-        </EuiText>
-      </EuiAccordion>
-      <EuiSpacer />
-    </EuiAccordion>
+        </WuiText>
+      </WuiAccordion>
+      <WuiSpacer />
+    </WuiAccordion>
   </div>
 );

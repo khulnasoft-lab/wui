@@ -1,16 +1,16 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiComboBox,
-  EuiButton,
-  EuiPopover,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiSpacer,
+  WuiComboBox,
+  WuiButton,
+  WuiPopover,
+  WuiFormRow,
+  WuiModal,
+  WuiModalBody,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiOverlayMask,
+  WuiSpacer,
 } from '../../../../src/components';
 
 const optionsStatic = [
@@ -103,7 +103,7 @@ export default () => {
   };
 
   const comboBox = (
-    <EuiComboBox
+    <WuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}
@@ -113,49 +113,49 @@ export default () => {
   );
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
       Open popover
-    </EuiButton>
+    </WuiButton>
   );
 
   let modal;
 
   if (isModalVisible) {
     modal = (
-      <EuiOverlayMask>
-        <EuiModal onClose={closeModal} style={{ width: '800px' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Combo box in a modal</EuiModalHeaderTitle>
-          </EuiModalHeader>
+      <WuiOverlayMask>
+        <WuiModal onClose={closeModal} style={{ width: '800px' }}>
+          <WuiModalHeader>
+            <WuiModalHeaderTitle>Combo box in a modal</WuiModalHeaderTitle>
+          </WuiModalHeader>
 
-          <EuiModalBody>{comboBox}</EuiModalBody>
-        </EuiModal>
-      </EuiOverlayMask>
+          <WuiModalBody>{comboBox}</WuiModalBody>
+        </WuiModal>
+      </WuiOverlayMask>
     );
   }
 
   return (
     <Fragment>
-      <EuiFormRow
+      <WuiFormRow
         label="Combo box"
         helpText="This combo box is inside of a form row">
         {comboBox}
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiPopover
+      <WuiPopover
         id="popover"
         ownFocus
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
         <div style={{ width: '300px' }}>{comboBox}</div>
-      </EuiPopover>
+      </WuiPopover>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <WuiButton onClick={showModal}>Show modal</WuiButton>
 
       {modal}
     </Fragment>

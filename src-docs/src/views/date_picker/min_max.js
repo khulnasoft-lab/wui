@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  WuiDatePicker,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default class extends Component {
@@ -65,20 +65,20 @@ export default class extends Component {
   render() {
     return (
       <div>
-        <EuiFormRow label="Only allow a certain range of dates">
-          <EuiDatePicker
+        <WuiFormRow label="Only allow a certain range of dates">
+          <WuiDatePicker
             showTimeSelect
             selected={this.state.startDate}
             onChange={this.handleChange}
             minDate={moment().subtract(2, 'days')}
             maxDate={moment().add(5, 'days')}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiFormRow label="Only allow a certain range of times">
-          <EuiDatePicker
+        <WuiFormRow label="Only allow a certain range of times">
+          <WuiDatePicker
             showTimeSelect
             selected={this.state.startDate2}
             onChange={this.handleChange2}
@@ -89,23 +89,23 @@ export default class extends Component {
               .hours(20)
               .minutes(30)}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiFormRow label="Exclude yesterday and today">
-          <EuiDatePicker
+        <WuiFormRow label="Exclude yesterday and today">
+          <WuiDatePicker
             showTimeSelect
             selected={this.state.startDate3}
             onChange={this.handleChange3}
             excludeDates={[moment(), moment().subtract(1, 'days')]}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiFormRow label="Exclude 12AM and 5PM from selection">
-          <EuiDatePicker
+        <WuiFormRow label="Exclude 12AM and 5PM from selection">
+          <WuiDatePicker
             showTimeSelect
             selected={this.state.startDate4}
             onChange={this.handleChange4}
@@ -118,18 +118,18 @@ export default class extends Component {
                 .minutes(0),
             ]}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiFormRow label="Filter so only weekdays are selectable">
-          <EuiDatePicker
+        <WuiFormRow label="Filter so only weekdays are selectable">
+          <WuiDatePicker
             showTimeSelect
             selected={this.state.startDate5}
             onChange={this.handleChange5}
             filterDate={this.isWeekday}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       </div>
     );
   }

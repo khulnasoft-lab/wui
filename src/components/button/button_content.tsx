@@ -20,8 +20,8 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiIcon, IconType } from '../icon';
+import { WuiLoadingSpinner } from '../loading';
+import { WuiIcon, IconType } from '../icon';
 
 export type ButtonContentIconSide = 'left' | 'right';
 
@@ -29,18 +29,18 @@ const iconSideToClassNameMap: {
   [side in ButtonContentIconSide]: string | null;
 } = {
   left: null,
-  right: 'euiButtonContent--iconRight',
+  right: 'wuiButtonContent--iconRight',
 };
 
 export const ICON_SIDES = keysOf(iconSideToClassNameMap);
 
-export type EuiButtonContentType = HTMLAttributes<HTMLSpanElement>;
+export type WuiButtonContentType = HTMLAttributes<HTMLSpanElement>;
 
 /**
  * *INTERNAL ONLY*
  * This component is simply a helper component for reuse within other button components
  */
-export interface EuiButtonContentProps extends CommonProps {
+export interface WuiButtonContentProps extends CommonProps {
   iconType?: IconType;
   iconSide?: ButtonContentIconSide;
   isLoading?: boolean;
@@ -50,8 +50,8 @@ export interface EuiButtonContentProps extends CommonProps {
   textProps?: HTMLAttributes<HTMLSpanElement> & CommonProps;
 }
 
-export const EuiButtonContent: FunctionComponent<EuiButtonContentType &
-  EuiButtonContentProps> = ({
+export const WuiButtonContent: FunctionComponent<WuiButtonContentType &
+  WuiButtonContentProps> = ({
   children,
   textProps,
   isLoading = false,
@@ -64,16 +64,16 @@ export const EuiButtonContent: FunctionComponent<EuiButtonContentType &
 
   if (isLoading) {
     buttonIcon = (
-      <EuiLoadingSpinner className="euiButtonContent__spinner" size="m" />
+      <WuiLoadingSpinner className="wuiButtonContent__spinner" size="m" />
     );
   } else if (iconType) {
     buttonIcon = (
-      <EuiIcon className="euiButtonContent__icon" type={iconType} size="m" />
+      <WuiIcon className="wuiButtonContent__icon" type={iconType} size="m" />
     );
   }
 
   const contentClassNames = classNames(
-    'euiButtonContent',
+    'wuiButtonContent',
     iconSide ? iconSideToClassNameMap[iconSide] : null,
     contentProps && contentProps.className
   );

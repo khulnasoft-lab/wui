@@ -34,12 +34,12 @@ import {
   keysOf,
 } from '../../common';
 
-import { IconType, IconSize, EuiIcon } from '../../icon';
+import { IconType, IconSize, WuiIcon } from '../../icon';
 
 import { ButtonSize } from '../button';
 import { validateHref } from '../../../services/security/href_validator';
 
-export type EuiButtonIconColor =
+export type WuiButtonIconColor =
   | 'accent'
   | 'danger'
   | 'disabled'
@@ -50,9 +50,9 @@ export type EuiButtonIconColor =
   | 'text'
   | 'warning';
 
-export interface EuiButtonIconProps extends CommonProps {
+export interface WuiButtonIconProps extends CommonProps {
   iconType?: IconType;
-  color?: EuiButtonIconColor;
+  color?: WuiButtonIconColor;
   'aria-label'?: string;
   'aria-labelledby'?: string;
   isDisabled?: boolean;
@@ -60,44 +60,44 @@ export interface EuiButtonIconProps extends CommonProps {
   iconSize?: IconSize;
 }
 
-type EuiButtonIconPropsForAnchor = {
+type WuiButtonIconPropsForAnchor = {
   type?: string;
 } & PropsForAnchor<
-  EuiButtonIconProps,
+  WuiButtonIconProps,
   {
     buttonRef?: Ref<HTMLAnchorElement>;
   }
 >;
 
-export type EuiButtonIconPropsForButton = {
+export type WuiButtonIconPropsForButton = {
   type?: 'submit' | 'reset' | 'button';
 } & PropsForButton<
-  EuiButtonIconProps,
+  WuiButtonIconProps,
   {
     buttonRef?: Ref<HTMLButtonElement>;
   }
 >;
 
 type Props = ExclusiveUnion<
-  EuiButtonIconPropsForAnchor,
-  EuiButtonIconPropsForButton
+  WuiButtonIconPropsForAnchor,
+  WuiButtonIconPropsForButton
 >;
 
-const colorToClassNameMap: { [color in EuiButtonIconColor]: string } = {
-  accent: 'euiButtonIcon--accent',
-  danger: 'euiButtonIcon--danger',
-  disabled: 'euiButtonIcon--disabled',
-  ghost: 'euiButtonIcon--ghost',
-  primary: 'euiButtonIcon--primary',
-  subdued: 'euiButtonIcon--subdued',
-  success: 'euiButtonIcon--success',
-  text: 'euiButtonIcon--text',
-  warning: 'euiButtonIcon--warning',
+const colorToClassNameMap: { [color in WuiButtonIconColor]: string } = {
+  accent: 'wuiButtonIcon--accent',
+  danger: 'wuiButtonIcon--danger',
+  disabled: 'wuiButtonIcon--disabled',
+  ghost: 'wuiButtonIcon--ghost',
+  primary: 'wuiButtonIcon--primary',
+  subdued: 'wuiButtonIcon--subdued',
+  success: 'wuiButtonIcon--success',
+  text: 'wuiButtonIcon--text',
+  warning: 'wuiButtonIcon--warning',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
-export const EuiButtonIcon: FunctionComponent<Props> = ({
+export const WuiButtonIcon: FunctionComponent<Props> = ({
   className,
   iconType,
   iconSize = 'm',
@@ -118,12 +118,12 @@ export const EuiButtonIcon: FunctionComponent<Props> = ({
 
   if (!rest['aria-label'] && !rest['aria-labelledby'] && !isAriaHidden) {
     console.warn(
-      `EuiButtonIcon requires aria-label or aria-labelledby to be specified because icon-only
+      `WuiButtonIcon requires aria-label or aria-labelledby to be specified because icon-only
       buttons are screen-reader-inaccessible without them.`
     );
   }
   const classes = classNames(
-    'euiButtonIcon',
+    'wuiButtonIcon',
     colorToClassNameMap[color],
     className
   );
@@ -133,8 +133,8 @@ export const EuiButtonIcon: FunctionComponent<Props> = ({
 
   if (iconType) {
     buttonIcon = (
-      <EuiIcon
-        className="euiButtonIcon__icon"
+      <WuiIcon
+        className="wuiButtonIcon__icon"
         type={iconType}
         size={iconSize}
         aria-hidden="true"

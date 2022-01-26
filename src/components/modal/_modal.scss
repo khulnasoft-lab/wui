@@ -5,20 +5,20 @@
  *    from our forms since that's usually the smallest we want them.
  */
 
-.euiModal {
-  border: $euiBorderThin;
+.wuiModal {
+  border: $wuiBorderThin;
   // This mixin overwrites some of the border above
-  @include euiBottomShadowLarge($adjustBorders: true); // sass-lint:disable-line mixins-before-declarations
+  @include wuiBottomShadowLarge($adjustBorders: true); // sass-lint:disable-line mixins-before-declarations
   display: flex; /* 1 */
 
   position: relative;
   background-color: $euiColorEmptyShade;
-  border-radius: $euiBorderRadius;
-  z-index: $euiZModal;
-  min-width: $euiFormMaxWidth;
-  animation: euiModal $euiAnimSpeedSlow $euiAnimSlightBounce;
+  border-radius: $wuiBorderRadius;
+  z-index: $wuiZModal;
+  min-width: $wuiFormMaxWidth;
+  animation: wuiModal $wuiAnimSpeedSlow $wuiAnimSlightBounce;
 
-  .euiModal__flex { /* 1 */
+  .wuiModal__flex { /* 1 */
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -27,15 +27,15 @@
   }
 }
 
-.euiModal--maxWidth-default {
-  max-width: map-get($euiBreakpoints, 'm');
+.wuiModal--maxWidth-default {
+  max-width: map-get($wuiBreakpoints, 'm');
 }
 
-.euiModal--confirmation {
-  min-width: $euiFormMaxWidth;
+.wuiModal--confirmation {
+  min-width: $wuiFormMaxWidth;
 }
 
-.euiModalHeader {
+.wuiModalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,24 +44,24 @@
   flex-shrink: 0;
 }
 
-.euiModalHeader__title {
-  @include euiTitle('m');
+.wuiModalHeader__title {
+  @include wuiTitle('m');
 }
 
-.euiModalBody {
+.wuiModalBody {
   flex-grow: 1;
   overflow: hidden;
   // The below fixes scroll on Chrome and Safari
   display: flex;
   flex-direction: column;
 
-  .euiModalBody__overflow {
+  .wuiModalBody__overflow {
     @include euiYScrollWithShadows;
     padding: $euiSizeS $euiSizeL;
   }
 }
 
-.euiModalFooter {
+.wuiModalFooter {
   display: flex;
   justify-content: flex-end;
   padding: $euiSize $euiSizeL $euiSizeL;
@@ -74,19 +74,19 @@
 }
 
 // If a body doesn't exist, remove some extra padding from footer
-.euiModalHeader + .euiModalFooter {
+.wuiModalHeader + .wuiModalFooter {
   padding-top: $euiSizeS;
 }
 
 // If a footer doesn't exist (body is the last element) add padding to the bottom
-.euiModalBody:last-of-type .euiModalBody__overflow {
+.wuiModalBody:last-of-type .wuiModalBody__overflow {
   padding-bottom: $euiSizeL;
 }
 
 
 // The actual size of the X button in pixels is a bit fuzzy because of all the
 // button padding so there is some pixel pushing here.
-.euiModal__closeIcon {
+.wuiModal__closeIcon {
   background-color: transparentize($euiColorEmptyShade, .1);
   position: absolute;
   right: $euiSizeXS;
@@ -94,7 +94,7 @@
   z-index: 3;
 }
 
-@keyframes euiModal {
+@keyframes wuiModal {
   0% {
     opacity: 0;
     transform: translateY($euiSizeXL);
@@ -107,8 +107,8 @@
 }
 
 // On mobile we fix modals as a takeover.
-@include euiBreakpoint('xs', 's') {
-  .euiModal {
+@include wuiBreakpoint('xs', 's') {
+  .wuiModal {
     // sass-lint:disable-block no-important
     position: fixed;
     width: 100vw !important;
@@ -121,22 +121,22 @@
     border-radius: 0;
     border: none;
 
-    &.euiModal--confirmation {
-      @include euiBottomShadowLarge($euiShadowColorLarge, $reverse: true);
+    &.wuiModal--confirmation {
+      @include wuiBottomShadowLarge($wuiShadowColorLarge, $reverse: true);
       top: auto;
     }
 
-    .euiModal__flex { /* 1 */
+    .wuiModal__flex { /* 1 */
       max-height: 100vh;
     }
   }
 
-  .euiModalHeader {
+  .wuiModalHeader {
     width: 100vw;
   }
 
-  .euiModalFooter {
-    background: $euiColorLightestShade;
+  .wuiModalFooter {
+    background: $wuiColorLightestShade;
     padding: $euiSizeM $euiSizeL !important; // sass-lint:disable-line no-important
     width: 100vw;
     justify-content: stretch;
@@ -150,10 +150,10 @@
     }
   }
 
-  .euiModalBody {
+  .wuiModalBody {
     width: 100vw;
 
-    .euiModalBody__overflow {
+    .wuiModalBody__overflow {
       padding-bottom: $euiSizeL;
     }
   }

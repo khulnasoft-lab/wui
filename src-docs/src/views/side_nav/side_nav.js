@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSideNav } from '../../../../src/components';
+import { WuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setisSideNavOpenOnMobile] = useState(false);
@@ -24,7 +24,7 @@ export default () => {
         {
           name: 'Index Patterns (link)',
           id: 2,
-          href: 'http://www.elastic.co',
+          href: 'http://www.wazuh.com',
         },
         {
           name: 'Saved Objects',
@@ -46,7 +46,7 @@ export default () => {
   ];
 
   return (
-    <EuiSideNav
+    <WuiSideNav
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={() => toggleOpenOnMobile()}
       isOpenOnMobile={isSideNavOpenOnMobile}

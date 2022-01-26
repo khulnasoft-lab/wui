@@ -34,7 +34,7 @@ import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-export interface EuiOverlayMaskInterface {
+export interface WuiOverlayMaskInterface {
   /**
    * Function that applies to clicking the mask itself and not the children
    */
@@ -44,19 +44,19 @@ export interface EuiOverlayMaskInterface {
    */
   children?: ReactNode;
   /**
-   * Should the mask visually sit above or below the EuiHeader (controlled by z-index)
+   * Should the mask visually sit above or below the WuiHeader (controlled by z-index)
    */
   headerZindexLocation?: 'above' | 'below';
 }
 
-export type EuiOverlayMaskProps = CommonProps &
+export type WuiOverlayMaskProps = CommonProps &
   Omit<
     Partial<Record<keyof HTMLAttributes<HTMLDivElement>, string>>,
-    keyof EuiOverlayMaskInterface
+    keyof WuiOverlayMaskInterface
   > &
-  EuiOverlayMaskInterface;
+  WuiOverlayMaskInterface;
 
-export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
+export const WuiOverlayMask: FunctionComponent<WuiOverlayMaskProps> = ({
   className,
   children,
   onClick,
@@ -67,10 +67,10 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
   const [isPortalTargetReady, setIsPortalTargetReady] = useState(false);
 
   useEffect(() => {
-    document.body.classList.add('euiBody-hasOverlayMask');
+    document.body.classList.add('wuiBody-hasOverlayMask');
 
     return () => {
-      document.body.classList.remove('euiBody-hasOverlayMask');
+      document.body.classList.remove('wuiBody-hasOverlayMask');
     };
   }, []);
 
@@ -91,7 +91,7 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
     keysOf(rest).forEach(key => {
       if (typeof rest[key] !== 'string') {
         throw new Error(
-          `Unhandled property type. EuiOverlayMask property ${key} is not a string.`
+          `Unhandled property type. WuiOverlayMask property ${key} is not a string.`
         );
       }
       overlayMaskNode.current.setAttribute(key, rest[key]!);
@@ -101,8 +101,8 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
   useEffect(() => {
     if (!overlayMaskNode.current) return;
     overlayMaskNode.current.className = classNames(
-      'euiOverlayMask',
-      `euiOverlayMask--${headerZindexLocation}Header`,
+      'wuiOverlayMask',
+      `wuiOverlayMask--${headerZindexLocation}Header`,
       className
     );
   }, [className, headerZindexLocation]);

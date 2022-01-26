@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFormErrorText, EuiFormErrorTextProps } from './form_error_text';
+export { WuiFormErrorText, WuiFormErrorTextProps } from './form_error_text';

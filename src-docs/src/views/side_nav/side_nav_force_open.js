@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiIcon, EuiSideNav } from '../../../../src/components';
+import { WuiIcon, WuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
@@ -27,7 +27,7 @@ export default () => {
 
   const sideNav = [
     createItem('Kibana', {
-      icon: <EuiIcon type="logoKibana" />,
+      icon: <WuiIcon type="logoKibana" />,
       items: [
         createItem('Has normal children', {
           items: [
@@ -57,7 +57,7 @@ export default () => {
   ];
 
   return (
-    <EuiSideNav
+    <WuiSideNav
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={toggleOpenOnMobile}
       isOpenOnMobile={isSideNavOpenOnMobile}

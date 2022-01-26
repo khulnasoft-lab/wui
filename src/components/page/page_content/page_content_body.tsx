@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiPageContentBodyProps
+export interface WuiPageContentBodyProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {}
 
-export const EuiPageContentBody: FunctionComponent<EuiPageContentBodyProps> = ({
+export const WuiPageContentBody: FunctionComponent<WuiPageContentBodyProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiPageContentBody', className);
+  const classes = classNames('wuiPageContentBody', className);
 
   return (
     <div className={classes} {...rest}>

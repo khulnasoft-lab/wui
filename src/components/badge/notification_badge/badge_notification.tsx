@@ -23,7 +23,7 @@ import { CommonProps, keysOf } from '../../common';
 
 const colorToClassMap = {
   accent: null,
-  subdued: 'euiNotificationBadge--subdued',
+  subdued: 'wuiNotificationBadge--subdued',
 };
 
 export const COLORS: BadgeNotificationColor[] = keysOf(colorToClassMap);
@@ -31,13 +31,13 @@ export type BadgeNotificationColor = keyof typeof colorToClassMap;
 
 const sizeToClassNameMap = {
   s: null,
-  m: 'euiNotificationBadge--medium',
+  m: 'wuiNotificationBadge--medium',
 };
 
 export const SIZES: BadgeNotificationSize[] = keysOf(sizeToClassNameMap);
 export type BadgeNotificationSize = keyof typeof sizeToClassNameMap;
 
-export interface EuiNotificationBadgeProps
+export interface WuiNotificationBadgeProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLSpanElement>, 'color'> {
   /**
@@ -48,7 +48,7 @@ export interface EuiNotificationBadgeProps
   color?: BadgeNotificationColor;
 }
 
-export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> = ({
+export const WuiNotificationBadge: FunctionComponent<WuiNotificationBadgeProps> = ({
   children,
   className,
   size = 's',
@@ -56,7 +56,7 @@ export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> 
   ...rest
 }) => {
   const classes = classNames(
-    'euiNotificationBadge',
+    'wuiNotificationBadge',
     sizeToClassNameMap[size],
     colorToClassMap[color],
     className

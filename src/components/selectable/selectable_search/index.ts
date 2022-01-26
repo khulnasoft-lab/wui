@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiSelectableSearch } from './selectable_search';
+export { WuiSelectableSearch } from './selectable_search';

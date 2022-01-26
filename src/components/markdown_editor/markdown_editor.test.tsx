@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiMarkdownEditor } from './markdown_editor';
+import { WuiMarkdownEditor } from './markdown_editor';
 
-describe('EuiMarkdownEditor', () => {
+describe('WuiMarkdownEditor', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiMarkdownEditor
+      <WuiMarkdownEditor
         editorId="editorId"
         value=""
         onChange={() => null}

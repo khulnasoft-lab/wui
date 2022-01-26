@@ -17,8 +17,8 @@
  * under the License.
  */
 
-export { EuiDescriptionList } from './description_list';
+export { WuiDescriptionList } from './description_list';
 
-export { EuiDescriptionListTitle } from './description_list_title';
+export { WuiDescriptionListTitle } from './description_list_title';
 
-export { EuiDescriptionListDescription } from './description_list_description';
+export { WuiDescriptionListDescription } from './description_list_description';

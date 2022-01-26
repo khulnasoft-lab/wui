@@ -21,11 +21,11 @@ import React, { Component, HTMLAttributes, ReactNode, memo } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 import {
-  EuiSelectableListItem,
-  EuiSelectableListItemProps,
+  WuiSelectableListItem,
+  WuiSelectableListItemProps,
 } from './selectable_list_item';
-import { EuiHighlight } from '../../highlight';
-import { EuiSelectableOption } from '../selectable_option';
+import { WuiHighlight } from '../../highlight';
+import { WuiSelectableOption } from '../selectable_option';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import {
   FixedSizeList,
@@ -36,11 +36,11 @@ import {
 
 interface ListChildComponentProps<T>
   extends ReactWindowListChildComponentProps {
-  data: Array<EuiSelectableOption<T>>;
+  data: Array<WuiSelectableOption<T>>;
 }
 
-// Consumer Configurable Props via `EuiSelectable.listProps`
-export type EuiSelectableOptionsListProps = CommonProps &
+// Consumer Configurable Props via `WuiSelectable.listProps`
+export type WuiSelectableOptionsListProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * The index of the option to be highlighted as pseudo-focused;
@@ -71,18 +71,18 @@ export type EuiSelectableOptionsListProps = CommonProps &
      * shows a hollow badge as an append (far right) when the item is focused.
      * The default content when `true` is `↩ to select/deselect/include/exclude`
      */
-    onFocusBadge?: EuiSelectableListItemProps['onFocusBadge'];
+    onFocusBadge?: WuiSelectableListItemProps['onFocusBadge'];
   };
 
-export type EuiSelectableListProps<T> = EuiSelectableOptionsListProps & {
+export type WuiSelectableListProps<T> = WuiSelectableOptionsListProps & {
   /**
    * All possible options
    */
-  options: Array<EuiSelectableOption<T>>;
+  options: Array<WuiSelectableOption<T>>;
   /**
    * Filtered options list (if applicable)
    */
-  visibleOptions?: Array<EuiSelectableOption<T>>;
+  visibleOptions?: Array<WuiSelectableOption<T>>;
   /**
    * Search value to highlight on the option render
    */
@@ -90,13 +90,13 @@ export type EuiSelectableListProps<T> = EuiSelectableOptionsListProps & {
   /**
    * Returns the array of options with altered checked state
    */
-  onOptionClick: (options: Array<EuiSelectableOption<T>>) => void;
+  onOptionClick: (options: Array<WuiSelectableOption<T>>) => void;
   /**
    * Custom render for the label portion of the option;
    * Takes (option, searchValue), returns ReactNode
    */
   renderOption?: (
-    option: EuiSelectableOption<T>,
+    option: WuiSelectableOption<T>,
     searchValue: string
   ) => ReactNode;
   /**
@@ -116,7 +116,7 @@ export type EuiSelectableListProps<T> = EuiSelectableOptionsListProps & {
   setActiveOptionIndex: (index: number, cb?: () => void) => void;
 };
 
-export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
+export class WuiSelectableList<T> extends Component<WuiSelectableListProps<T>> {
   static defaultProps = {
     rowHeight: 32,
     searchValue: '',
@@ -191,7 +191,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     }
   }
 
-  constructor(props: EuiSelectableListProps<T>) {
+  constructor(props: WuiSelectableListProps<T>) {
     super(props);
   }
 
@@ -214,7 +214,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
       return (
         <li
           role="presentation"
-          className="euiSelectableList__groupLabel"
+          className="wuiSelectableList__groupLabel"
           style={style}
           // @ts-ignore complex
           {...(optionRest as HTMLAttributes<HTMLLIElement>)}>
@@ -228,7 +228,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     const labelCount = data.filter(option => option.isGroupLabel).length;
 
     return (
-      <EuiSelectableListItem
+      <WuiSelectableListItem
         id={this.props.makeOptionId(index)}
         style={style}
         key={key || label.toLowerCase()}
@@ -249,13 +249,13 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
         onFocusBadge={this.props.onFocusBadge}
         allowExclusions={this.props.allowExclusions}
         // @ts-ignore complex
-        {...(optionRest as EuiSelectableListItemProps)}>
+        {...(optionRest as WuiSelectableListItemProps)}>
         {this.props.renderOption ? (
           this.props.renderOption(option, this.props.searchValue)
         ) : (
-          <EuiHighlight search={this.props.searchValue}>{label}</EuiHighlight>
+          <WuiHighlight search={this.props.searchValue}>{label}</WuiHighlight>
         )}
-      </EuiSelectableListItem>
+      </WuiSelectableListItem>
     );
   }, areEqual);
 
@@ -310,10 +310,10 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     }
 
     const classes = classNames(
-      'euiSelectableList',
+      'wuiSelectableList',
       {
-        'euiSelectableList-fullHeight': heightIsFull,
-        'euiSelectableList-bordered': bordered,
+        'wuiSelectableList-fullHeight': heightIsFull,
+        'wuiSelectableList-bordered': bordered,
       },
       className
     );
@@ -325,7 +325,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
             <FixedSizeList
               ref={this.setListRef}
               outerRef={this.removeScrollableTabStop}
-              className="euiSelectableList__list"
+              className="wuiSelectableList__list"
               data-skip-axe="scrollable-region-focusable"
               width={width}
               height={calculatedHeight || height}
@@ -343,7 +343,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     );
   }
 
-  onAddOrRemoveOption = (option: EuiSelectableOption<T>) => {
+  onAddOrRemoveOption = (option: WuiSelectableOption<T>) => {
     if (option.disabled) {
       return;
     }
@@ -364,7 +364,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     );
   };
 
-  private onAddOption = (addedOption: EuiSelectableOption<T>) => {
+  private onAddOption = (addedOption: WuiSelectableOption<T>) => {
     const { onOptionClick, options, singleSelection } = this.props;
 
     const updatedOptions = options.map(option => {
@@ -385,7 +385,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     onOptionClick(updatedOptions);
   };
 
-  private onRemoveOption = (removedOption: EuiSelectableOption<T>) => {
+  private onRemoveOption = (removedOption: WuiSelectableOption<T>) => {
     const { onOptionClick, singleSelection, options } = this.props;
 
     const updatedOptions = options.map(option => {
@@ -401,7 +401,7 @@ export class EuiSelectableList<T> extends Component<EuiSelectableListProps<T>> {
     onOptionClick(updatedOptions);
   };
 
-  private onExcludeOption = (excludedOption: EuiSelectableOption<T>) => {
+  private onExcludeOption = (excludedOption: WuiSelectableOption<T>) => {
     const { onOptionClick, options } = this.props;
     excludedOption.checked = 'off';
 

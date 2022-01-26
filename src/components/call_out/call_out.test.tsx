@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCallOut, COLORS, HEADINGS } from './call_out';
+import { WuiCallOut, COLORS, HEADINGS } from './call_out';
 
-describe('EuiCallOut', () => {
+describe('WuiCallOut', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCallOut {...requiredProps}>Content</EuiCallOut>
+      <WuiCallOut {...requiredProps}>Content</WuiCallOut>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('EuiCallOut', () => {
     describe('title', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCallOut title="Title">Content</EuiCallOut>
+          <WuiCallOut title="Title">Content</WuiCallOut>
         );
 
         expect(component).toMatchSnapshot();
@@ -45,7 +45,7 @@ describe('EuiCallOut', () => {
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<EuiCallOut iconType="user" />);
+        const component = render(<WuiCallOut iconType="user" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -54,7 +54,7 @@ describe('EuiCallOut', () => {
     describe('color', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiCallOut color={color} />);
+          const component = render(<WuiCallOut color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -64,7 +64,7 @@ describe('EuiCallOut', () => {
     describe('heading', () => {
       HEADINGS.forEach(heading => {
         test(`${heading} is rendered`, () => {
-          const component = render(<EuiCallOut heading={heading} />);
+          const component = render(<WuiCallOut heading={heading} />);
 
           expect(component).toMatchSnapshot();
         });

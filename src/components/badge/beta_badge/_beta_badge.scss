@@ -1,8 +1,8 @@
-.euiBetaBadge {
+.wuiBetaBadge {
   display: inline-block;
   padding: 0 $euiSize;
   border-radius: $euiSizeL;
-  box-shadow: inset 0 0 0 1px $euiBorderColor;
+  box-shadow: inset 0 0 0 1px $wuiBorderColor;
   vertical-align: super; // if displayed inline with text
 
   font-size: $euiFontSizeXS;
@@ -15,16 +15,16 @@
   cursor: default;
 
   &:focus {
-    @include euiFocusRing;
+    @include wuiFocusRing;
   }
 }
 
 // When it's just an icon, make it a circle
-.euiBetaBadge--iconOnly {
+.wuiBetaBadge--iconOnly {
   padding: 0;
   width: $euiSizeL;
 
-  .euiBetaBadge__icon {
+  .wuiBetaBadge__icon {
     position: relative;
     margin-top: -1px;
   }

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiCopy } from './copy';
+export { WuiCopy } from './copy';

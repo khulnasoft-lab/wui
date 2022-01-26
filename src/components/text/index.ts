@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiText, EuiTextProps } from './text';
+export { WuiText, WuiTextProps } from './text';
 export { EuiTextColor } from './text_color';
-export { EuiTextAlign } from './text_align';
+export { WuiTextAlign } from './text_align';

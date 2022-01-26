@@ -65,7 +65,7 @@ describe('CollapsedItemActions', () => {
         {
           name: 'default2',
           description: 'default 2',
-          href: 'https://www.elastic.co/',
+          href: 'https://www.wazuh.com/',
           target: '_blank',
         },
       ],

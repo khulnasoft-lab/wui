@@ -2,16 +2,16 @@ import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiTitle,
-  EuiSwitch,
-  EuiBasicTable,
-  EuiSearchBar,
+  WuiHealth,
+  WuiCallOut,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiCodeBlock,
+  WuiTitle,
+  WuiSwitch,
+  WuiBasicTable,
+  WuiSearchBar,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -51,14 +51,14 @@ const loadTags = () => {
       resolve(
         tags.map(tag => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <WuiHealth color={tag.color}>{tag.name}</WuiHealth>,
         }))
       );
     }, 2000);
   });
 };
 
-const initialQuery = EuiSearchBar.Query.MATCH_ALL;
+const initialQuery = WuiSearchBar.Query.MATCH_ALL;
 
 export const SearchBar = () => {
   const [query, setQuery] = useState(initialQuery);
@@ -167,7 +167,7 @@ export const SearchBar = () => {
     };
 
     return (
-      <EuiSearchBar
+      <WuiSearchBar
         defaultQuery={initialQuery}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -186,12 +186,12 @@ export const SearchBar = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <WuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -235,75 +235,75 @@ export const SearchBar = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = WuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <WuiBasicTable items={queriedItems} columns={columns} />;
   };
 
   let esQueryDsl;
   let esQueryString;
 
   try {
-    esQueryDsl = EuiSearchBar.Query.toESQuery(query);
+    esQueryDsl = WuiSearchBar.Query.toESQuery(query);
   } catch (e) {
     esQueryDsl = e.toString();
   }
   try {
-    esQueryString = EuiSearchBar.Query.toESQueryString(query);
+    esQueryString = WuiSearchBar.Query.toESQueryString(query);
   } catch (e) {
     esQueryString = e.toString();
   }
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={4}>
-        <EuiTitle size="s">
+    <WuiFlexGroup>
+      <WuiFlexItem grow={4}>
+        <WuiTitle size="s">
           <h3>Elasticsearch Query String</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiCodeBlock language="js">
           {esQueryString ? esQueryString : ''}
-        </EuiCodeBlock>
+        </WuiCodeBlock>
 
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
 
-        <EuiTitle size="s">
+        <WuiTitle size="s">
           <h3>Elasticsearch Query DSL</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiCodeBlock language="js">
           {esQueryDsl ? JSON.stringify(esQueryDsl, null, 2) : ''}
-        </EuiCodeBlock>
-      </EuiFlexItem>
+        </WuiCodeBlock>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={6}>
-        <EuiTitle size="s">
+      <WuiFlexItem grow={6}>
+        <WuiTitle size="s">
           <h3>JS execution</h3>
-        </EuiTitle>
+        </WuiTitle>
 
-        <EuiSpacer size="s" />
+        <WuiSpacer size="s" />
 
         {renderTable()}
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem>{renderSearch()}</EuiFlexItem>
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem>{renderSearch()}</WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={toggleIncremental}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiSpacer size="l" />
       {content}
     </Fragment>
   );

@@ -3,12 +3,12 @@ import { ThemeContext } from '../../../components';
 import { getSassVars } from '../_get_sass_vars';
 
 import {
-  EuiIcon,
-  EuiTitle,
-  EuiCode,
-  EuiSpacer,
-  EuiText,
-  EuiFlexGrid,
+  WuiIcon,
+  WuiTitle,
+  WuiCode,
+  WuiSpacer,
+  WuiText,
+  WuiFlexGrid,
 } from '../../../../../src/components';
 import {
   getHexValueFromColorName,
@@ -42,9 +42,9 @@ export const ColorSection = ({
 
   return (
     <>
-      <EuiTitle size="xs">
+      <WuiTitle size="xs">
         <h3 id={color}>
-          <EuiIcon
+          <WuiIcon
             className={iconClass}
             aria-hidden="true"
             type="stopFilled"
@@ -52,18 +52,18 @@ export const ColorSection = ({
             color={hex}
           />{' '}
           &ensp;
-          {color}: <EuiCode>{hex}</EuiCode>
+          {color}: <WuiCode>{hex}</WuiCode>
         </h3>
-      </EuiTitle>
+      </WuiTitle>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiText grow={false}>{children}</EuiText>
+      <WuiText grow={false}>{children}</WuiText>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiText size="xs">
-        <EuiFlexGrid
+      <WuiText size="xs">
+        <WuiFlexGrid
           columns={2}
           className="guideSection__shadedBox"
           direction="column"
@@ -71,7 +71,7 @@ export const ColorSection = ({
           {showTextVariants && colorIsCore(color) && (
             <ColorsContrastItem
               foreground={`${color}Text`}
-              background={'euiPageBackgroundColor'}
+              background={'wuiPageBackgroundColor'}
               minimumContrast={minimumContrast}
             />
           )}
@@ -90,8 +90,8 @@ export const ColorSection = ({
               />
             );
           })}
-        </EuiFlexGrid>
-      </EuiText>
+        </WuiFlexGrid>
+      </WuiText>
     </>
   );
 };

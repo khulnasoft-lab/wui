@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiColorPicker,
-  EuiFormRow,
-  EuiColorPickerSwatch,
-  EuiBadge,
-  EuiSpacer,
+  WuiColorPicker,
+  WuiFormRow,
+  WuiColorPickerSwatch,
+  WuiBadge,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import { useColorPickerState } from '../../../../src/services';
@@ -19,32 +19,32 @@ export default () => {
   };
   return (
     <Fragment>
-      <EuiFormRow label="Pick a color" error={errors}>
-        <EuiColorPicker
+      <WuiFormRow label="Pick a color" error={errors}>
+        <WuiColorPicker
           onChange={handleColorChange}
           color={color}
           secondaryInputDisplay="top"
           button={
-            <EuiColorPickerSwatch
+            <WuiColorPickerSwatch
               color={selectedColor}
               aria-label="Select a new color"
             />
           }
           isClearable={true}
         />
-      </EuiFormRow>
-      <EuiSpacer />
-      <EuiColorPicker
+      </WuiFormRow>
+      <WuiSpacer />
+      <WuiColorPicker
         onChange={handleColorChange}
         color={color}
         isInvalid={!!errors}
         secondaryInputDisplay="bottom"
         button={
-          <EuiBadge
+          <WuiBadge
             color={selectedColor ? selectedColor : 'hollow'}
             onClickAriaLabel="Select a new color">
             Color this badge
-          </EuiBadge>
+          </WuiBadge>
         }
       />
     </Fragment>

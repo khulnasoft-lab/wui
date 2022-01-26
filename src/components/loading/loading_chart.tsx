@@ -24,25 +24,25 @@ import { CommonProps, keysOf } from '../common';
 import { chartGrey, chartColor } from './animations';
 
 const sizeToClassNameMap = {
-  m: 'euiLoadingChart--medium',
-  l: 'euiLoadingChart--large',
-  xl: 'euiLoadingChart--xLarge',
+  m: 'wuiLoadingChart--medium',
+  l: 'wuiLoadingChart--large',
+  xl: 'wuiLoadingChart--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingChartSize = keyof typeof sizeToClassNameMap;
+export type WuiLoadingChartSize = keyof typeof sizeToClassNameMap;
 
-export const EuiLoadingChart: FunctionComponent<CommonProps &
+export const WuiLoadingChart: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
      */
     mono?: boolean;
-    size?: EuiLoadingChartSize;
+    size?: WuiLoadingChartSize;
   }> = ({ size = 'm', mono = false, className, ...rest }) => {
   const classes = classNames(
-    'euiLoadingChart',
+    'wuiLoadingChart',
     className,
     sizeToClassNameMap[size]
   );

@@ -21,13 +21,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiComment } from './comment';
-import { EuiAvatar } from '../avatar';
+import { WuiComment } from './comment';
+import { WuiAvatar } from '../avatar';
 
-describe('EuiComment', () => {
+describe('WuiComment', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiComment username="someuser" {...requiredProps} />
+      <WuiComment username="someuser" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiComment', () => {
     describe('type', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment username="someuser" type="update" />
+          <WuiComment username="someuser" type="update" />
         );
 
         expect(component).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('EuiComment', () => {
     describe('timelineIcon', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment
+          <WuiComment
             username="someuser"
-            timelineIcon={<EuiAvatar size="l" name="Mario" />}
+            timelineIcon={<WuiAvatar size="l" name="Mario" />}
           />
         );
 
@@ -60,7 +60,7 @@ describe('EuiComment', () => {
     describe('timestamp', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment timestamp="21 days ago" username="someuser" />
+          <WuiComment timestamp="21 days ago" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -70,7 +70,7 @@ describe('EuiComment', () => {
     describe('event', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment event="commented" username="someuser" />
+          <WuiComment event="commented" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -80,9 +80,9 @@ describe('EuiComment', () => {
 
   test('renders a body', () => {
     const component = render(
-      <EuiComment username="someuser">
+      <WuiComment username="someuser">
         <p>This is the body.</p>
-      </EuiComment>
+      </WuiComment>
     );
 
     expect(component).toMatchSnapshot();

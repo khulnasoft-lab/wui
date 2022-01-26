@@ -1,59 +1,59 @@
-.euiCollapsibleNavGroup {
+.wuiCollapsibleNavGroup {
   &:not(:first-child) {
-    border-top: $euiBorderThin;
+    border-top: $wuiBorderThin;
   }
 
   // This class does not accept a custom classname
-  .euiAccordion__triggerWrapper {
+  .wuiAccordion__triggerWrapper {
     // Add padding to the trigger wrapper in case an `extraAction` is passed
     // that doesn't get wrapped in the `__heading`
     padding: $euiSize;
   }
 }
 
-.euiCollapsibleNavGroup--light {
-  background-color: $euiCollapsibleNavGroupLightBackgroundColor;
+.wuiCollapsibleNavGroup--light {
+  background-color: $wuiCollapsibleNavGroupLightBackgroundColor;
 }
 
-.euiCollapsibleNavGroup--dark {
-  background-color: $euiCollapsibleNavGroupDarkBackgroundColor;
+.wuiCollapsibleNavGroup--dark {
+  background-color: $wuiCollapsibleNavGroupDarkBackgroundColor;
   color: $euiColorGhost;
 
-  // Forcing better contrast of focus state on EuiAccordion toggle icon
-  .euiCollapsibleNavGroup__heading:focus .euiAccordion__iconWrapper {
-    color: $euiCollapsibleNavGroupDarkHighContrastColor;
-    animation-name: euiCollapsibleNavGroupDarkFocusRingAnimate !important; // sass-lint:disable-line no-important
+  // Forcing better contrast of focus state on WuiAccordion toggle icon
+  .wuiCollapsibleNavGroup__heading:focus .wuiAccordion__iconWrapper {
+    color: $wuiCollapsibleNavGroupDarkHighContrastColor;
+    animation-name: wuiCollapsibleNavGroupDarkFocusRingAnimate !important; // sass-lint:disable-line no-important
   }
 
-  .euiCollapsibleNavGroup__title {
+  .wuiCollapsibleNavGroup__title {
     color: inherit;
     line-height: inherit;
   }
 }
 
-.euiCollapsibleNavGroup__heading {
-  font-weight: $euiFontWeightSemiBold;
+.wuiCollapsibleNavGroup__heading {
+  font-weight: $wuiFontWeightSemiBold;
 
   // If the heading is not in an accordion, it needs the padding
-  &:not(.euiAccordion__button) {
+  &:not(.wuiAccordion__button) {
     padding: $euiSize;
   }
 }
 
-.euiCollapsibleNavGroup__children {
+.wuiCollapsibleNavGroup__children {
   padding: $euiSizeS;
 }
 
-.euiCollapsibleNavGroup--withHeading .euiCollapsibleNavGroup__children {
+.wuiCollapsibleNavGroup--withHeading .wuiCollapsibleNavGroup__children {
   padding-top: 0;
 }
 
-@keyframes euiCollapsibleNavGroupDarkFocusRingAnimate {
+@keyframes wuiCollapsibleNavGroupDarkFocusRingAnimate {
   0% {
-    box-shadow: 0 0 0 $euiFocusRingAnimStartSize $euiFocusRingAnimStartColor;
+    box-shadow: 0 0 0 $wuiFocusRingAnimStartSize $wuiFocusRingAnimStartColor;
   }
 
   100% {
-    box-shadow: 0 0 0 $euiFocusRingSize $euiCollapsibleNavGroupDarkHighContrastColor;
+    box-shadow: 0 0 0 $wuiFocusRingSize $wuiCollapsibleNavGroupDarkHighContrastColor;
   }
 }

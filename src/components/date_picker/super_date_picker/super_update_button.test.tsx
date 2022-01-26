@@ -20,20 +20,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { EuiSuperUpdateButton } from './super_update_button';
+import { WuiSuperUpdateButton } from './super_update_button';
 
 const noop = () => {};
 
-describe('EuiSuperUpdateButton', () => {
+describe('WuiSuperUpdateButton', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiSuperUpdateButton onClick={noop} />);
+    const component = shallow(<WuiSuperUpdateButton onClick={noop} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('needsUpdate', () => {
     const component = shallow(
-      <EuiSuperUpdateButton needsUpdate onClick={noop} />
+      <WuiSuperUpdateButton needsUpdate onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('EuiSuperUpdateButton', () => {
 
   test('isDisabled', () => {
     const component = shallow(
-      <EuiSuperUpdateButton isDisabled onClick={noop} />
+      <WuiSuperUpdateButton isDisabled onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('EuiSuperUpdateButton', () => {
 
   test('isLoading', () => {
     const component = shallow(
-      <EuiSuperUpdateButton isLoading onClick={noop} />
+      <WuiSuperUpdateButton isLoading onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('EuiSuperUpdateButton', () => {
 
   test('showTooltip', () => {
     const component = shallow(
-      <EuiSuperUpdateButton showTooltip onClick={noop} />
+      <WuiSuperUpdateButton showTooltip onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();

@@ -1,9 +1,9 @@
-.euiAccordion__triggerWrapper {
+.wuiAccordion__triggerWrapper {
   display: flex;
   align-items: center;
 }
 
-.euiAccordion__button {
+.wuiAccordion__button {
   @include euiFontSize;
   text-align: left;
   width: 100%;
@@ -18,52 +18,52 @@
   }
 
   &:focus {
-    .euiAccordion__iconWrapper {
-      @include euiAccordionIconFocus;
+    .wuiAccordion__iconWrapper {
+      @include wuiAccordionIconFocus;
     }
   }
 }
 
-.euiAccordion__buttonReverse {
+.wuiAccordion__buttonReverse {
   // Puts the arrow on the right
   flex-direction: row-reverse;
   justify-content: space-between;
 
-  .euiAccordion__iconWrapper {
-    @include euiAccordionIconMargin(right);
+  .wuiAccordion__iconWrapper {
+    @include wuiAccordionIconMargin(right);
   }
 }
 
-.euiAccordion__iconWrapper {
+.wuiAccordion__iconWrapper {
   @include size($euiSize);
-  @include euiAccordionIconMargin;
-  border-radius: $euiBorderRadius;
+  @include wuiAccordionIconMargin;
+  border-radius: $wuiBorderRadius;
   flex-shrink: 0;
 
-  // Nested to override EuiIcon
-  .euiAccordion__icon {
+  // Nested to override WuiIcon
+  .wuiAccordion__icon {
     vertical-align: top;
-    transition: transform $euiAnimSpeedNormal $euiAnimSlightResistance;
+    transition: transform $euiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
-  .euiAccordion__icon-isOpen {
+  .wuiAccordion__icon-isOpen {
     transform: rotate(90deg);
   }
 }
 
-.euiAccordion__iconButton {
-  @include euiAccordionIconMargin(right);
+.wuiAccordion__iconButton {
+  @include wuiAccordionIconMargin(right);
 
   &:focus {
-    @include euiAccordionIconFocus;
+    @include wuiAccordionIconFocus;
   }
 }
 
-.euiAccordion__optionalAction {
+.wuiAccordion__optionalAction {
   flex-shrink: 0;
 }
 
-.euiAccordion__childWrapper {
+.wuiAccordion__childWrapper {
   visibility: hidden;
   height: 0;
   opacity: 0;
@@ -71,8 +71,8 @@
   transform: translatez(0);
   // sass-lint:disable-block indentation
   transition:
-    height $euiAnimSpeedNormal $euiAnimSlightResistance,
-    opacity $euiAnimSpeedNormal $euiAnimSlightResistance;
+    height $euiAnimSpeedNormal $wuiAnimSlightResistance,
+    opacity $euiAnimSpeedNormal $wuiAnimSlightResistance;
 }
 
 $paddingSizes: (
@@ -85,25 +85,25 @@ $paddingSizes: (
 
 // Create button modifiers based upon the map.
 @each $name, $size in $paddingSizes {
-  .euiAccordion__padding--#{$name} {
+  .wuiAccordion__padding--#{$name} {
     padding: $size;
   }
 }
 
-.euiAccordion.euiAccordion-isOpen {
-  .euiAccordion__childWrapper {
+.wuiAccordion.wuiAccordion-isOpen {
+  .wuiAccordion__childWrapper {
     visibility: visible;
     opacity: 1;
     height: auto;
   }
 }
 
-.euiAccordion__children-isLoading {
-  line-height: $euiLineHeight;
+.wuiAccordion__children-isLoading {
+  line-height: $wuiLineHeight;
   display: flex;
   align-items: center;
 
-  .euiAccordion__spinner {
+  .wuiAccordion__spinner {
     margin-right: $euiSizeXS;
   }
 }

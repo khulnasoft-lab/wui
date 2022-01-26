@@ -20,7 +20,7 @@
 import { cloneElement, ReactElement, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiScreenReaderOnlyProps {
+export interface WuiScreenReaderOnlyProps {
   /**
    * ReactElement to render as this component's content
    */
@@ -32,14 +32,14 @@ export interface EuiScreenReaderOnlyProps {
   showOnFocus?: boolean;
 }
 
-export const EuiScreenReaderOnly: FunctionComponent<EuiScreenReaderOnlyProps> = ({
+export const WuiScreenReaderOnly: FunctionComponent<WuiScreenReaderOnlyProps> = ({
   children,
   showOnFocus,
 }) => {
   const classes = classNames(
     {
-      euiScreenReaderOnly: !showOnFocus,
-      'euiScreenReaderOnly--showOnFocus': showOnFocus,
+      wuiScreenReaderOnly: !showOnFocus,
+      'wuiScreenReaderOnly--showOnFocus': showOnFocus,
     },
     children.props.className
   );

@@ -29,22 +29,22 @@ import classNames from 'classnames';
 import { throttle } from '../color_picker/utils';
 
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiInnerText } from '../inner_text';
-import { EuiLink } from '../link';
-import { EuiPopover } from '../popover';
-import { EuiIcon } from '../icon';
-import { EuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { WuiI18n } from '../i18n';
+import { WuiInnerText } from '../inner_text';
+import { WuiLink } from '../link';
+import { WuiPopover } from '../popover';
+import { WuiIcon } from '../icon';
+import { WuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
 
-export type EuiBreadcrumbResponsiveMaxCount = {
+export type WuiBreadcrumbResponsiveMaxCount = {
   /**
    * Any of the following keys are allowed: `'xs' | 's' | 'm' | 'l' | 'xl'`
    * Omitting a key will display all breadcrumbs at that breakpoint
    */
-  [key in EuiBreakpointSize]?: number;
+  [key in WuiBreakpointSize]?: number;
 };
 
-export type EuiBreadcrumb = CommonProps & {
+export type WuiBreadcrumb = CommonProps & {
   /**
    * Visible label of the breadcrumb
    */
@@ -57,17 +57,17 @@ export type EuiBreadcrumb = CommonProps & {
   truncate?: boolean;
 };
 
-export type EuiBreadcrumbsProps = CommonProps & {
+export type WuiBreadcrumbsProps = CommonProps & {
   /**
    * Hides extra (above the max) breadcrumbs under a collapsed item as the window gets smaller.
-   * Pass a custom #EuiBreadcrumbResponsiveMaxCount object to change the number of breadcrumbs to show at the particular breakpoints.
+   * Pass a custom #WuiBreadcrumbResponsiveMaxCount object to change the number of breadcrumbs to show at the particular breakpoints.
    * Omitting or passing a `0` value will show all breadcrumbs.
    *
    * Pass `false` to turn this behavior off.
    *
    * Default: `{ xs: 1, s: 2, m: 4 }`
    */
-  responsive?: boolean | EuiBreadcrumbResponsiveMaxCount;
+  responsive?: boolean | WuiBreadcrumbResponsiveMaxCount;
 
   /**
    * Forces all breadcrumbs to single line and
@@ -83,12 +83,12 @@ export type EuiBreadcrumbsProps = CommonProps & {
   max?: number | null;
 
   /**
-   * The array of individual #EuiBreadcrumb items
+   * The array of individual #WuiBreadcrumb items
    */
-  breadcrumbs: EuiBreadcrumb[];
+  breadcrumbs: WuiBreadcrumb[];
 };
 
-const responsiveDefault: EuiBreadcrumbResponsiveMaxCount = {
+const responsiveDefault: WuiBreadcrumbResponsiveMaxCount = {
   xs: 1,
   s: 2,
   m: 4,
@@ -97,7 +97,7 @@ const responsiveDefault: EuiBreadcrumbResponsiveMaxCount = {
 const limitBreadcrumbs = (
   breadcrumbs: ReactNode[],
   max: number,
-  allBreadcrumbs: EuiBreadcrumb[]
+  allBreadcrumbs: WuiBreadcrumb[]
 ) => {
   const breadcrumbsAtStart = [];
   const breadcrumbsAtEnd = [];
@@ -129,56 +129,56 @@ const limitBreadcrumbs = (
     }
   }
 
-  const EuiBreadcrumbCollapsed = () => {
+  const WuiBreadcrumbCollapsed = () => {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
     const ellipsisButton = (
-      <EuiI18n
-        token="euiBreadcrumbs.collapsedBadge.ariaLabel"
+      <WuiI18n
+        token="wuiBreadcrumbs.collapsedBadge.ariaLabel"
         default="Show collapsed breadcrumbs">
         {(ariaLabel: string) => (
-          <EuiLink
-            className="euiBreadcrumb__collapsedLink"
+          <WuiLink
+            className="wuiBreadcrumb__collapsedLink"
             color="subdued"
             aria-label={ariaLabel}
             title={ariaLabel}
             onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-            &hellip; <EuiIcon type="arrowDown" size="s" />
-          </EuiLink>
+            &hellip; <WuiIcon type="arrowDown" size="s" />
+          </WuiLink>
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
 
     return (
       <Fragment>
-        <EuiPopover
-          className="euiBreadcrumb euiBreadcrumb--collapsed"
+        <WuiPopover
+          className="wuiBreadcrumb wuiBreadcrumb--collapsed"
           button={ellipsisButton}
           isOpen={isPopoverOpen}
           closePopover={() => setIsPopoverOpen(false)}>
-          <EuiBreadcrumbs
-            className="euiBreadcrumbs__inPopover"
+          <WuiBreadcrumbs
+            className="wuiBreadcrumbs__inPopover"
             breadcrumbs={overflowBreadcrumbs}
             responsive={false}
             truncate={false}
             max={0}
           />
-        </EuiPopover>
-        <EuiBreadcrumbSeparator />
+        </WuiPopover>
+        <WuiBreadcrumbSeparator />
       </Fragment>
     );
   };
 
   if (max < breadcrumbs.length) {
-    breadcrumbsAtStart.push(<EuiBreadcrumbCollapsed key="collapsed" />);
+    breadcrumbsAtStart.push(<WuiBreadcrumbCollapsed key="collapsed" />);
   }
 
   return [...breadcrumbsAtStart, ...breadcrumbsAtEnd];
 };
 
-const EuiBreadcrumbSeparator = () => <div className="euiBreadcrumbSeparator" />;
+const WuiBreadcrumbSeparator = () => <div className="wuiBreadcrumbSeparator" />;
 
-export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
+export const WuiBreadcrumbs: FunctionComponent<WuiBreadcrumbsProps> = ({
   breadcrumbs,
   className,
   responsive = responsiveDefault,
@@ -219,16 +219,16 @@ export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
 
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
 
-    const breadcrumbClasses = classNames('euiBreadcrumb', breadcrumbClassName, {
-      'euiBreadcrumb--last': isLastBreadcrumb,
-      'euiBreadcrumb--truncate': truncate,
+    const breadcrumbClasses = classNames('wuiBreadcrumb', breadcrumbClassName, {
+      'wuiBreadcrumb--last': isLastBreadcrumb,
+      'wuiBreadcrumb--truncate': truncate,
     });
 
     let link;
 
     if (!href && !onClick) {
       link = (
-        <EuiInnerText>
+        <WuiInnerText>
           {(ref, innerText) => (
             <span
               ref={ref}
@@ -239,13 +239,13 @@ export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
               {text}
             </span>
           )}
-        </EuiInnerText>
+        </WuiInnerText>
       );
     } else {
       link = (
-        <EuiInnerText>
+        <WuiInnerText>
           {(ref, innerText) => (
-            <EuiLink
+            <WuiLink
               ref={ref}
               color={isLastBreadcrumb ? 'text' : 'subdued'}
               onClick={onClick}
@@ -254,16 +254,16 @@ export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
               title={innerText}
               {...breadcrumbRest}>
               {text}
-            </EuiLink>
+            </WuiLink>
           )}
-        </EuiInnerText>
+        </WuiInnerText>
       );
     }
 
     let separator;
 
     if (!isLastBreadcrumb) {
-      separator = <EuiBreadcrumbSeparator />;
+      separator = <WuiBreadcrumbSeparator />;
     }
 
     return (
@@ -281,10 +281,10 @@ export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
-  let calculatedMax: EuiBreadcrumbsProps['max'] = max;
+  let calculatedMax: WuiBreadcrumbsProps['max'] = max;
   // Set the calculated max to the number associated with the currentBreakpoint key if it exists
-  if (responsive && responsiveObject[currentBreakpoint as EuiBreakpointSize]) {
-    calculatedMax = responsiveObject[currentBreakpoint as EuiBreakpointSize];
+  if (responsive && responsiveObject[currentBreakpoint as WuiBreakpointSize]) {
+    calculatedMax = responsiveObject[currentBreakpoint as WuiBreakpointSize];
   }
   // Final check is to make sure max is used over a larger breakpoint value
   if (max && calculatedMax) {
@@ -295,8 +295,8 @@ export const EuiBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
     ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)
     : breadcrumbElements;
 
-  const classes = classNames('euiBreadcrumbs', className, {
-    'euiBreadcrumbs--truncate': truncate,
+  const classes = classNames('wuiBreadcrumbs', className, {
+    'wuiBreadcrumbs--truncate': truncate,
   });
 
   return (

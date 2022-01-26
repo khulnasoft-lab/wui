@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps } from '../../../../src/components/common';
 
-interface EuiOverlayMaskInterface extends CommonProps {
+interface WuiOverlayMaskInterface extends CommonProps {
   /**
    * Function that applies to clicking the mask itself and not the children
    */
@@ -11,11 +11,11 @@ interface EuiOverlayMaskInterface extends CommonProps {
    */
   children?: ReactNode;
   /**
-   * Should the mask visually sit above or below the EuiHeader (controlled by z-index)
+   * Should the mask visually sit above or below the WuiHeader (controlled by z-index)
    */
   headerZindexLocation?: 'above' | 'below';
 }
 
-export const EuiOverlayMaskProps: FunctionComponent<EuiOverlayMaskInterface> = () => (
+export const WuiOverlayMaskProps: FunctionComponent<WuiOverlayMaskInterface> = () => (
   <div />
 );

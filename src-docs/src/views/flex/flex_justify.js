@@ -1,44 +1,44 @@
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFlexGroup justifyContent="spaceEvenly">
-      <EuiFlexItem grow={false}>One here on the left</EuiFlexItem>
-      <EuiFlexItem grow={false}>The other over here on the right.</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup justifyContent="spaceEvenly">
+      <WuiFlexItem grow={false}>One here on the left</WuiFlexItem>
+      <WuiFlexItem grow={false}>The other over here on the right.</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup justifyContent="spaceBetween">
-      <EuiFlexItem grow={false}>One here on the left</EuiFlexItem>
-      <EuiFlexItem grow={false}>The other over here on the right.</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup justifyContent="spaceBetween">
+      <WuiFlexItem grow={false}>One here on the left</WuiFlexItem>
+      <WuiFlexItem grow={false}>The other over here on the right.</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup justifyContent="spaceAround">
-      <EuiFlexItem grow={false}>I&rsquo;m a single centered item!</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup justifyContent="spaceAround">
+      <WuiFlexItem grow={false}>I&rsquo;m a single centered item!</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiText>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiText>
           <p>I</p>
           <p>am</p>
           <p>really</p>
           <p>tall</p>
-        </EuiText>
-      </EuiFlexItem>
-      <EuiFlexItem>I am vertically centered!</EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+      <WuiFlexItem>I am vertically centered!</WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

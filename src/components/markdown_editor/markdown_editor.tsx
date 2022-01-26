@@ -35,23 +35,23 @@ import classNames from 'classnames';
 
 import { CommonProps, OneOf } from '../common';
 import MarkdownActions, { insertText } from './markdown_actions';
-import { EuiMarkdownEditorToolbar } from './markdown_editor_toolbar';
-import { EuiMarkdownEditorTextArea } from './markdown_editor_text_area';
-import { EuiMarkdownFormat } from './markdown_format';
-import { EuiMarkdownEditorDropZone } from './markdown_editor_drop_zone';
+import { WuiMarkdownEditorToolbar } from './markdown_editor_toolbar';
+import { WuiMarkdownEditorTextArea } from './markdown_editor_text_area';
+import { WuiMarkdownFormat } from './markdown_format';
+import { WuiMarkdownEditorDropZone } from './markdown_editor_drop_zone';
 import { htmlIdGenerator } from '../../services/accessibility';
 
 import { MARKDOWN_MODE, MODE_EDITING, MODE_VIEWING } from './markdown_modes';
 import {
-  EuiMarkdownAstNode,
-  EuiMarkdownDropHandler,
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
-  EuiMarkdownStringTagConfig,
+  WuiMarkdownAstNode,
+  WuiMarkdownDropHandler,
+  WuiMarkdownEditorUiPlugin,
+  WuiMarkdownParseError,
+  WuiMarkdownStringTagConfig,
 } from './markdown_types';
-import { EuiOverlayMask } from '../overlay_mask';
-import { EuiModal } from '../modal';
-import { ContextShape, EuiMarkdownContext } from './markdown_context';
+import { WuiOverlayMask } from '../overlay_mask';
+import { WuiModal } from '../modal';
+import { ContextShape, WuiMarkdownContext } from './markdown_context';
 import * as MarkdownTooltip from './plugins/markdown_tooltip';
 import {
   defaultParsingPlugins,
@@ -92,17 +92,17 @@ type CommonMarkdownEditorProps = Omit<
     processingPluginList?: PluggableList;
 
     /** defines UI for plugins' buttons in the toolbar as well as any modals or extra UI that provides content to the editor */
-    uiPlugins?: EuiMarkdownEditorUiPlugin[];
+    uiPlugins?: WuiMarkdownEditorUiPlugin[];
 
     /** errors to bubble up */
-    errors?: EuiMarkdownParseError[];
+    errors?: WuiMarkdownParseError[];
 
     /** callback triggered when parsing results are available */
     onParse?: (
-      error: EuiMarkdownParseError | null,
+      error: WuiMarkdownParseError | null,
       data: {
         messages: VFileMessage[];
-        ast: EuiMarkdownAstNode;
+        ast: WuiMarkdownAstNode;
       }
     ) => void;
 
@@ -110,14 +110,14 @@ type CommonMarkdownEditorProps = Omit<
     initialViewMode?: MARKDOWN_MODE;
 
     /** array defining any drag&drop handlers */
-    dropHandlers?: EuiMarkdownDropHandler[];
+    dropHandlers?: WuiMarkdownDropHandler[];
   };
-export type EuiMarkdownEditorProps = OneOf<
+export type WuiMarkdownEditorProps = OneOf<
   CommonMarkdownEditorProps,
   'aria-label' | 'aria-labelledby'
 >;
 
-interface EuiMarkdownEditorRef {
+interface WuiMarkdownEditorRef {
   textarea: HTMLTextAreaElement | null;
   replaceNode: ContextShape['replaceNode'];
 }
@@ -142,9 +142,9 @@ function padWithNewlinesIfNeeded(textarea: HTMLTextAreaElement, text: string) {
   return text;
 }
 
-export const EuiMarkdownEditor = forwardRef<
-  EuiMarkdownEditorRef,
-  EuiMarkdownEditorProps
+export const WuiMarkdownEditor = forwardRef<
+  WuiMarkdownEditorRef,
+  WuiMarkdownEditorProps
 >(
   (
     {
@@ -173,7 +173,7 @@ export const EuiMarkdownEditor = forwardRef<
     ]);
 
     const [pluginEditorPlugin, setPluginEditorPlugin] = useState<
-      EuiMarkdownEditorUiPlugin | undefined
+      WuiMarkdownEditorUiPlugin | undefined
     >(undefined);
 
     const toolbarPlugins = [MarkdownTooltip.plugin, ...uiPlugins];
@@ -185,7 +185,7 @@ export const EuiMarkdownEditor = forwardRef<
       [editorId, toolbarPlugins.map(({ name }) => name).join(',')]
     );
 
-    const classes = classNames('euiMarkdownEditor', className);
+    const classes = classNames('wuiMarkdownEditor', className);
 
     const parser = useMemo(() => {
       const Compiler = (tree: any) => {
@@ -201,7 +201,7 @@ export const EuiMarkdownEditor = forwardRef<
     }, [parsingPluginList]);
 
     const [parsed, parseError] = useMemo<
-      [any | null, EuiMarkdownParseError | null]
+      [any | null, WuiMarkdownParseError | null]
     >(() => {
       try {
         const parsed = parser.processSync(value);
@@ -224,7 +224,7 @@ export const EuiMarkdownEditor = forwardRef<
 
     const contextValue = useMemo<ContextShape>(
       () => ({
-        openPluginEditor: (plugin: EuiMarkdownEditorUiPlugin) =>
+        openPluginEditor: (plugin: WuiMarkdownEditorUiPlugin) =>
           setPluginEditorPlugin(() => plugin),
         replaceNode,
       }),
@@ -242,7 +242,7 @@ export const EuiMarkdownEditor = forwardRef<
       const getCursorNode = () => {
         const { selectionStart } = textareaRef.current!;
 
-        let node: EuiMarkdownAstNode = parsed.contents;
+        let node: WuiMarkdownAstNode = parsed.contents;
 
         outer: while (true) {
           if (node.children) {
@@ -292,9 +292,9 @@ export const EuiMarkdownEditor = forwardRef<
     const [hasUnacceptedItems, setHasUnacceptedItems] = React.useState(false);
 
     return (
-      <EuiMarkdownContext.Provider value={contextValue}>
+      <WuiMarkdownContext.Provider value={contextValue}>
         <div className={classes} {...rest}>
-          <EuiMarkdownEditorToolbar
+          <WuiMarkdownEditorToolbar
             selectedNode={selectedNode}
             markdownActions={markdownActions}
             onClickPreview={() =>
@@ -306,22 +306,22 @@ export const EuiMarkdownEditor = forwardRef<
 
           {isPreviewing && (
             <div
-              className="euiMarkdownEditorPreview"
+              className="wuiMarkdownEditorPreview"
               style={{ height: `${height}px` }}>
-              <EuiMarkdownFormat
+              <WuiMarkdownFormat
                 parsingPluginList={parsingPluginList}
                 processingPluginList={processingPluginList}>
                 {value}
-              </EuiMarkdownFormat>
+              </WuiMarkdownFormat>
             </div>
           )}
           {/* Toggle the editor's display instead of unmounting to retain its undo/redo history */}
           <div style={{ display: isPreviewing ? 'none' : 'block' }}>
-            <EuiMarkdownEditorDropZone
+            <WuiMarkdownEditorDropZone
               dropHandlers={dropHandlers}
               insertText={(
                 text: string,
-                config: EuiMarkdownStringTagConfig
+                config: WuiMarkdownStringTagConfig
               ) => {
                 if (config.block) {
                   text = padWithNewlinesIfNeeded(textareaRef.current!, text);
@@ -341,7 +341,7 @@ export const EuiMarkdownEditor = forwardRef<
               errors={errors}
               hasUnacceptedItems={hasUnacceptedItems}
               setHasUnacceptedItems={setHasUnacceptedItems}>
-              <EuiMarkdownEditorTextArea
+              <WuiMarkdownEditorTextArea
                 ref={textareaRef}
                 height={height}
                 id={editorId}
@@ -354,11 +354,11 @@ export const EuiMarkdownEditor = forwardRef<
                   'aria-describedby': ariaDescribedBy,
                 }}
               />
-            </EuiMarkdownEditorDropZone>
+            </WuiMarkdownEditorDropZone>
 
             {pluginEditorPlugin && (
-              <EuiOverlayMask>
-                <EuiModal onClose={() => setPluginEditorPlugin(undefined)}>
+              <WuiOverlayMask>
+                <WuiModal onClose={() => setPluginEditorPlugin(undefined)}>
                   {createElement(pluginEditorPlugin.editor!, {
                     node:
                       selectedNode &&
@@ -394,13 +394,13 @@ export const EuiMarkdownEditor = forwardRef<
                       setPluginEditorPlugin(undefined);
                     },
                   })}
-                </EuiModal>
-              </EuiOverlayMask>
+                </WuiModal>
+              </WuiOverlayMask>
             )}
           </div>
         </div>
-      </EuiMarkdownContext.Provider>
+      </WuiMarkdownContext.Provider>
     );
   }
 );
-EuiMarkdownEditor.displayName = 'EuiMarkdownEditor';
+WuiMarkdownEditor.displayName = 'WuiMarkdownEditor';

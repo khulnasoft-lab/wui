@@ -18,9 +18,9 @@
  */
 
 export {
-  EuiToolTip,
+  WuiToolTip,
   ToolTipPositions,
-  Props as EuiToolTipProps,
+  Props as WuiToolTipProps,
 } from './tool_tip';
 
-export { EuiIconTip } from './icon_tip';
+export { WuiIconTip } from './icon_tip';

@@ -1,29 +1,29 @@
 import React from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderSectionItem,
-  EuiHeaderLogo,
-  EuiHeaderLinks,
-  EuiHeaderLink,
+  WuiHeader,
+  WuiHeaderSectionItem,
+  WuiHeaderLogo,
+  WuiHeaderLinks,
+  WuiHeaderLink,
 } from '../../../../src/components';
 
 export default () => {
   return (
-    <EuiHeader>
-      <EuiHeaderSectionItem border="right">
-        <EuiHeaderLogo>Elastic</EuiHeaderLogo>
-      </EuiHeaderSectionItem>
+    <WuiHeader>
+      <WuiHeaderSectionItem border="right">
+        <WuiHeaderLogo>Elastic</WuiHeaderLogo>
+      </WuiHeaderSectionItem>
 
-      <EuiHeaderSectionItem>
-        <EuiHeaderLinks aria-label="App navigation links example">
-          <EuiHeaderLink isActive>Docs</EuiHeaderLink>
+      <WuiHeaderSectionItem>
+        <WuiHeaderLinks aria-label="App navigation links example">
+          <WuiHeaderLink isActive>Docs</WuiHeaderLink>
 
-          <EuiHeaderLink>Code</EuiHeaderLink>
+          <WuiHeaderLink>Code</WuiHeaderLink>
 
-          <EuiHeaderLink iconType="help">Help</EuiHeaderLink>
-        </EuiHeaderLinks>
-      </EuiHeaderSectionItem>
-    </EuiHeader>
+          <WuiHeaderLink iconType="help">Help</WuiHeaderLink>
+        </WuiHeaderLinks>
+      </WuiHeaderSectionItem>
+    </WuiHeader>
   );
 };

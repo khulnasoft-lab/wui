@@ -1,29 +1,29 @@
 $textColors: (
-  subdued: $euiTextSubduedColor,
-  primary: $euiColorPrimaryText,
-  secondary: $euiColorSecondaryText,
-  accent: $euiColorAccentText,
-  warning: $euiColorWarningText,
-  danger: $euiColorDangerText,
+  subdued: $wuiTextSubduedColor,
+  primary: $wuiColorPrimaryText,
+  secondary: $wuiColorSecondaryText,
+  accent: $wuiColorAccentText,
+  warning: $wuiColorWarningText,
+  danger: $wuiColorDangerText,
   text: $euiTextColor,
   ghost: $euiColorGhost,
 );
 
-.euiLink {
-  @include euiLink;
+.wuiLink {
+  @include wuiLink;
 
-  .euiLink__externalIcon {
+  .wuiLink__externalIcon {
     margin-left: $euiSizeXS;
   }
 
-  &.euiLink-disabled {
+  &.wuiLink-disabled {
     text-decoration: none;
     cursor: default;
   }
 
   // Create color modifiers based on the map
   @each $name, $color in $textColors {
-    &.euiLink--#{$name} {
+    &.wuiLink--#{$name} {
       color: $color;
 
       &:hover {
@@ -38,7 +38,7 @@ $textColors: (
   }
 }
 
-// Make button EuiLink's text selectable
-button.euiLink { // sass-lint:disable-line no-qualifying-elements
+// Make button WuiLink's text selectable
+button.wuiLink { // sass-lint:disable-line no-qualifying-elements
   user-select: text;
 }

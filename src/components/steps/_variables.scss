@@ -1,11 +1,11 @@
-$euiStepNumberSize: $euiSizeXL !default;
-$euiStepNumberSmallSize: $euiSizeL !default;
-$euiStepNumberMargin: $euiSize !default;
+$wuiStepNumberSize: $euiSizeXL !default;
+$wuiStepNumberSmallSize: $euiSizeL !default;
+$wuiStepNumberMargin: $euiSize !default;
 
 // Modifier naming and colors.
-$euiStepStatusColorsToFade: (
-  warning: $euiColorWarning,
-  danger: $euiColorDanger,
+$wuiStepStatusColorsToFade: (
+  warning: $wuiColorWarning,
+  danger: $wuiColorDanger,
   disabled: $euiColorDarkShade,
   incomplete: $euiColorDarkShade,
 ) !default;

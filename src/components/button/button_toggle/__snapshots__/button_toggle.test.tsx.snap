@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiButtonToggle is rendered 1`] = `
+exports[`WuiButtonToggle is rendered 1`] = `
 <div
-  class="euiToggle euiButtonToggle__wrapper"
+  class="wuiToggle wuiButtonToggle__wrapper"
 >
   <input
     aria-label="Label me"
-    class="euiToggle__input euiButtonToggle__input"
+    class="wuiToggle__input wuiButtonToggle__input"
     data-test-subj="test subject string"
     title="Label me"
     type="checkbox"
   />
   <button
     aria-label="aria-label"
-    class="euiButton euiButton--primary euiButtonToggle testClass1 testClass2"
+    class="wuiButton wuiButton--primary wuiButtonToggle testClass1 testClass2"
     tabindex="-1"
     type="button"
   >
     <span
-      class="euiButtonContent euiButton__content"
+      class="wuiButtonContent wuiButton__content"
     >
       <span
-        class="euiButton__text"
+        class="wuiButton__text"
       >
         Label me
       </span>

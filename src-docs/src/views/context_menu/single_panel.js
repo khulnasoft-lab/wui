@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
-  EuiPopover,
+  WuiButtonEmpty,
+  WuiContextMenuPanel,
+  WuiContextMenuItem,
+  WuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,17 +19,17 @@ export default () => {
   };
 
   const button = (
-    <EuiButtonEmpty
+    <WuiButtonEmpty
       size="s"
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}>
       Rows per page: 50
-    </EuiButtonEmpty>
+    </WuiButtonEmpty>
   );
 
   const items = [
-    <EuiContextMenuItem
+    <WuiContextMenuItem
       key="10 rows"
       icon="empty"
       onClick={() => {
@@ -37,8 +37,8 @@ export default () => {
         window.alert('10 rows');
       }}>
       10 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="20 rows"
       icon="empty"
       onClick={() => {
@@ -46,8 +46,8 @@ export default () => {
         window.alert('20 rows');
       }}>
       20 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="50 rows"
       icon="check"
       onClick={() => {
@@ -55,8 +55,8 @@ export default () => {
         window.alert('50 rows');
       }}>
       50 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="100 rows"
       icon="empty"
       onClick={() => {
@@ -64,18 +64,18 @@ export default () => {
         window.alert('100 rows');
       }}>
       100 rows
-    </EuiContextMenuItem>,
+    </WuiContextMenuItem>,
   ];
 
   return (
-    <EuiPopover
+    <WuiPopover
       id="singlePanel"
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelPaddingSize="none"
       anchorPosition="downLeft">
-      <EuiContextMenuPanel items={items} />
-    </EuiPopover>
+      <WuiContextMenuPanel items={items} />
+    </WuiPopover>
   );
 };

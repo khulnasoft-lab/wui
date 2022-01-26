@@ -19,12 +19,12 @@
 
 import {
   getBreakpoint,
-  EuiBreakpoints,
+  WuiBreakpoints,
   isWithinMaxBreakpoint,
   isWithinBreakpoints,
 } from './breakpoint';
 
-const CUSTOM_BREAKPOINTS: EuiBreakpoints = {
+const CUSTOM_BREAKPOINTS: WuiBreakpoints = {
   xl: 1400,
   l: 1078,
   m: 812,

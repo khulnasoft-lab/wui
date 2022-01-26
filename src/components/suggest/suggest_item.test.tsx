@@ -21,17 +21,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSuggestItem } from './suggest_item';
+import { WuiSuggestItem } from './suggest_item';
 
 const TYPE = {
   iconType: 'search',
   color: 'tint1',
 };
 
-describe('EuiSuggestItem', () => {
+describe('WuiSuggestItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuggestItem {...requiredProps} label="Test label" type={TYPE} />
+      <WuiSuggestItem {...requiredProps} label="Test label" type={TYPE} />
     );
 
     expect(component).toMatchSnapshot();
@@ -48,7 +48,7 @@ describe('props', () => {
   describe('labelDisplay as expand', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSuggestItem
+        <WuiSuggestItem
           type={sampleItem.type}
           description={sampleItem.description}
           label={sampleItem.description}
@@ -62,7 +62,7 @@ describe('props', () => {
   describe('item with no description has expanded label', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSuggestItem label={sampleItem.description} type={sampleItem.type} />
+        <WuiSuggestItem label={sampleItem.description} type={sampleItem.type} />
       );
       expect(component).toMatchSnapshot();
     });

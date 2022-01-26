@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiMutationObserver,
-  EuiPanel,
-  EuiSpacer,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiFlexItem,
+  WuiFlexGroup,
+  WuiMutationObserver,
+  WuiPanel,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export const MutationObserver = () => {
@@ -33,38 +33,38 @@ export const MutationObserver = () => {
     <div>
       <p>{lastMutation}</p>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiMutationObserver
+      <WuiMutationObserver
         observerOptions={{ subtree: true, attributes: true, childList: true }}
         onMutation={onMutation}>
         {mutationRef => (
           <div ref={mutationRef}>
-            <EuiButton
+            <WuiButton
               color={buttonColor}
               fill={true}
               onClick={toggleButtonColor}>
               Toggle button color
-            </EuiButton>
+            </WuiButton>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            <EuiFlexGroup>
-              <EuiFlexItem grow={false}>
-                <EuiPanel grow={false}>
+            <WuiFlexGroup>
+              <WuiFlexItem grow={false}>
+                <WuiPanel grow={false}>
                   <ul>
                     {items.map(item => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <EuiSpacer size="s" />
-                  <EuiButtonEmpty onClick={addItem}>add item</EuiButtonEmpty>
-                </EuiPanel>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+                  <WuiSpacer size="s" />
+                  <WuiButtonEmpty onClick={addItem}>add item</WuiButtonEmpty>
+                </WuiPanel>
+              </WuiFlexItem>
+            </WuiFlexGroup>
           </div>
         )}
-      </EuiMutationObserver>
+      </WuiMutationObserver>
     </div>
   );
 };

@@ -1,16 +1,16 @@
 // Themeable colors
-$euiNavDrawerBackgroundColor: $euiHeaderBackgroundColor;
+$wuiNavDrawerBackgroundColor: $wuiHeaderBackgroundColor;
 
 // Drawer variables
-$euiNavDrawerWidthExpanded: 240px;
-$euiNavDrawerWidthCollapsed: $euiHeaderHeight;
-$euiNavDrawerSideShadow: 2px 0 2px -1px rgba($euiShadowColor, .3);
+$wuiNavDrawerWidthExpanded: 240px;
+$wuiNavDrawerWidthCollapsed: $wuiHeaderHeight;
+$wuiNavDrawerSideShadow: 2px 0 2px -1px rgba($wuiShadowColor, .3);
 
 // Layout variables
-$euiNavDrawerTopPosition: $euiHeaderHeight;
+$wuiNavDrawerTopPosition: $wuiHeaderHeight;
 
 // Animation variables
-$euiNavDrawerExpandingDelay: $euiAnimSpeedNormal;
-$euiNavDrawerContractingDelay: $euiAnimSpeedFast;
-$euiNavDrawerExtendedDelay: $euiAnimSpeedExtraSlow * 2;
-$euiNavDrawerMenuAddedDelay: $euiAnimSpeedExtraFast;
+$wuiNavDrawerExpandingDelay: $euiAnimSpeedNormal;
+$wuiNavDrawerContractingDelay: $wuiAnimSpeedFast;
+$wuiNavDrawerExtendedDelay: $wuiAnimSpeedExtraSlow * 2;
+$wuiNavDrawerMenuAddedDelay: $wuiAnimSpeedExtraFast;

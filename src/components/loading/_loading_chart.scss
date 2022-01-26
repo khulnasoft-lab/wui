@@ -1,29 +1,29 @@
-.euiLoadingChart {
+.wuiLoadingChart {
   height: $euiSizeXL;
   z-index: 500;
   overflow: hidden;
   display: inline-block;
 }
 
-.euiLoadingChart__bar {
+.wuiLoadingChart__bar {
   height: 100%;
   width: $euiSizeS;
   display: inline-block;
 }
 
-.euiLoadingChart--mono {
+.wuiLoadingChart--mono {
   filter: grayscale(1);
 }
 
-.euiLoadingChart--medium {
+.wuiLoadingChart--medium {
   height: $euiSize;
 
 }
 
-.euiLoadingChart--large {
+.wuiLoadingChart--large {
   height: $euiSizeL;
 }
 
-.euiLoadingChart--xLarge {
+.wuiLoadingChart--xLarge {
   height: $euiSizeXL;
 }

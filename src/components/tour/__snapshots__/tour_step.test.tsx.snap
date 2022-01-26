@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTourStep can be closed 1`] = `
+exports[`WuiTourStep can be closed 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopover euiPopover--anchorLeftUp euiPopover--withTitle"
+  class="wuiPopover wuiPopover--anchorLeftUp wuiPopover--withTitle"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span>
       Test
@@ -17,15 +17,15 @@ exports[`EuiTourStep can be closed 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can override the footer action 1`] = `
+exports[`WuiTourStep can override the footer action 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopover euiPopover--anchorLeftUp euiPopover--withTitle"
+  class="wuiPopover wuiPopover--anchorLeftUp wuiPopover--withTitle"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span>
       Test
@@ -34,15 +34,15 @@ exports[`EuiTourStep can override the footer action 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can set a minWidth 1`] = `
+exports[`WuiTourStep can set a minWidth 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopover euiPopover--anchorLeftUp euiPopover--withTitle"
+  class="wuiPopover wuiPopover--anchorLeftUp wuiPopover--withTitle"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span>
       Test
@@ -51,15 +51,15 @@ exports[`EuiTourStep can set a minWidth 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can turn off the beacon 1`] = `
+exports[`WuiTourStep can turn off the beacon 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopover euiPopover--anchorLeftUp euiPopover--withTitle"
+  class="wuiPopover wuiPopover--anchorLeftUp wuiPopover--withTitle"
   data-test-subj="test subject string"
   offset="0"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span>
       Test
@@ -68,15 +68,15 @@ exports[`EuiTourStep can turn off the beacon 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep is rendered 1`] = `
+exports[`WuiTourStep is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopover euiPopover--anchorLeftUp euiPopover--withTitle"
+  class="wuiPopover wuiPopover--anchorLeftUp wuiPopover--withTitle"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span>
       Test

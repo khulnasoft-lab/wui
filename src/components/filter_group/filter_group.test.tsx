@@ -21,18 +21,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFilterGroup } from './filter_group';
+import { WuiFilterGroup } from './filter_group';
 
-describe('EuiFilterGroup', () => {
+describe('WuiFilterGroup', () => {
   test('is rendered', () => {
-    const component = render(<EuiFilterGroup {...requiredProps} />);
+    const component = render(<WuiFilterGroup {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFilterGroup fullWidth />);
+      const component = render(<WuiFilterGroup fullWidth />);
 
       expect(component).toMatchSnapshot();
     });

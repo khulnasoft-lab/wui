@@ -20,9 +20,9 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../../button';
+import { WuiButtonEmpty, WuiButtonEmptyProps } from '../../button';
 
-export type EuiHeaderLinkProps = EuiButtonEmptyProps & {
+export type WuiHeaderLinkProps = WuiButtonEmptyProps & {
   /**
    * Simple prop to update color based on active state.
    * Can be overridden with `color`
@@ -30,15 +30,15 @@ export type EuiHeaderLinkProps = EuiButtonEmptyProps & {
   isActive?: boolean;
 };
 
-export const EuiHeaderLink: FunctionComponent<EuiHeaderLinkProps> = ({
+export const WuiHeaderLink: FunctionComponent<WuiHeaderLinkProps> = ({
   isActive,
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderLink',
+    'wuiHeaderLink',
     {
-      'euiHeaderLink-isActive': isActive,
+      'wuiHeaderLink-isActive': isActive,
     },
     className
   );
@@ -49,5 +49,5 @@ export const EuiHeaderLink: FunctionComponent<EuiHeaderLinkProps> = ({
     className: classes,
   };
 
-  return <EuiButtonEmpty {...(props as EuiButtonEmptyProps)} />;
+  return <WuiButtonEmpty {...(props as WuiButtonEmptyProps)} />;
 };

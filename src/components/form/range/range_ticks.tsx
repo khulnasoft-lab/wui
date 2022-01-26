@@ -27,16 +27,16 @@ import classNames from 'classnames';
 
 import { useInnerText } from '../../inner_text';
 
-export interface EuiRangeTick {
+export interface WuiRangeTick {
   value: number;
   label: ReactNode;
 }
 
-export type EuiRangeTicksProps = Omit<
+export type WuiRangeTicksProps = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,
   'value'
 > & {
-  ticks?: EuiRangeTick[];
+  ticks?: WuiRangeTick[];
   tickSequence: number[];
   value?: number | string | Array<string | number>;
   min: number;
@@ -47,7 +47,7 @@ export type EuiRangeTicksProps = Omit<
   onChange?: MouseEventHandler<HTMLButtonElement>;
 };
 
-const EuiTickValue: FunctionComponent<EuiRangeTicksProps & {
+const WuiTickValue: FunctionComponent<WuiRangeTicksProps & {
   tickValue: any;
   percentageWidth: number;
 }> = ({
@@ -72,9 +72,9 @@ const EuiTickValue: FunctionComponent<EuiRangeTicksProps & {
     tickStyle.width = `${percentageWidth}%`;
   }
 
-  const tickClasses = classNames('euiRangeTick', {
-    'euiRangeTick--selected': value === tickValue,
-    'euiRangeTick--isCustom': customTick,
+  const tickClasses = classNames('wuiRangeTick', {
+    'wuiRangeTick--selected': value === tickValue,
+    'wuiRangeTick--isCustom': customTick,
   });
 
   const label = customTick ? customTick.label : tickValue;
@@ -97,7 +97,7 @@ const EuiTickValue: FunctionComponent<EuiRangeTicksProps & {
   );
 };
 
-export const EuiRangeTicks: FunctionComponent<EuiRangeTicksProps> = props => {
+export const WuiRangeTicks: FunctionComponent<WuiRangeTicksProps> = props => {
   const { ticks, tickSequence, max, min, interval = 1, compressed } = props;
   // Calculate the width of each tick mark
   const percentageWidth = (interval / (max - min + interval)) * 100;
@@ -108,14 +108,14 @@ export const EuiRangeTicks: FunctionComponent<EuiRangeTicksProps> = props => {
     ? undefined
     : { margin: `0 ${percentageWidth / -2}%`, left: 0, right: 0 };
 
-  const classes = classNames('euiRangeTicks', {
-    'euiRangeTicks--compressed': compressed,
+  const classes = classNames('wuiRangeTicks', {
+    'wuiRangeTicks--compressed': compressed,
   });
 
   return (
     <div className={classes} style={ticksStyle}>
       {tickSequence.map(tickValue => (
-        <EuiTickValue
+        <WuiTickValue
           key={tickValue}
           {...props}
           percentageWidth={percentageWidth}

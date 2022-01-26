@@ -1,12 +1,12 @@
-.euiRangeTicks {
+.wuiRangeTicks {
   position: absolute;
-  left: ($euiRangeThumbWidth / 2);
-  right: ($euiRangeThumbWidth / 2);
+  left: ($wuiRangeThumbWidth / 2);
+  right: ($wuiRangeThumbWidth / 2);
   top: $euiSizeS;
   display: flex;
 }
 
-.euiRangeTick {
+.wuiRangeTick {
   overflow-x: hidden;
   text-overflow: ellipsis;
   font-size: $euiFontSizeXS;
@@ -32,11 +32,11 @@
   &:enabled:hover,
   &:focus,
   &--selected {
-    color: $euiColorPrimary;
+    color: $wuiColorPrimary;
   }
 
   &--selected {
-    font-weight: $euiFontWeightMedium;
+    font-weight: $wuiFontWeightMedium;
   }
 
   &:disabled {
@@ -44,10 +44,10 @@
   }
 }
 
-.euiRangeTicks--compressed {
+.wuiRangeTicks--compressed {
   top: $euiSizeS - 2px;
 
-  .euiRangeTick {
+  .wuiRangeTick {
     padding-top: $euiSize - 2px;
   }
 }

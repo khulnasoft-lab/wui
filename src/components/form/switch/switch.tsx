@@ -28,9 +28,9 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 import { htmlIdGenerator } from '../../../services/accessibility';
-import { EuiIcon } from '../../icon';
+import { WuiIcon } from '../../icon';
 
-export type EuiSwitchEvent = React.BaseSyntheticEvent<
+export type WuiSwitchEvent = React.BaseSyntheticEvent<
   React.MouseEvent<HTMLButtonElement>,
   HTMLButtonElement,
   EventTarget & {
@@ -38,7 +38,7 @@ export type EuiSwitchEvent = React.BaseSyntheticEvent<
   }
 >;
 
-export type EuiSwitchProps = CommonProps &
+export type WuiSwitchProps = CommonProps &
   Omit<
     ButtonHTMLAttributes<HTMLButtonElement>,
     'onChange' | 'type' | 'disabled'
@@ -52,13 +52,13 @@ export type EuiSwitchProps = CommonProps &
      */
     label: ReactNode | string;
     checked: boolean;
-    onChange: (event: EuiSwitchEvent) => void;
+    onChange: (event: WuiSwitchEvent) => void;
     disabled?: boolean;
     compressed?: boolean;
     type?: 'submit' | 'reset' | 'button';
   };
 
-export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
+export const WuiSwitch: FunctionComponent<WuiSwitchProps> = ({
   label,
   id,
   checked,
@@ -79,7 +79,7 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
         return;
       }
 
-      const event = (e as unknown) as EuiSwitchEvent;
+      const event = (e as unknown) as WuiSwitchEvent;
       event.target.checked = !checked;
       onChange(event);
     },
@@ -87,16 +87,16 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
   );
 
   const classes = classNames(
-    'euiSwitch',
+    'wuiSwitch',
     {
-      'euiSwitch--compressed': compressed,
+      'wuiSwitch--compressed': compressed,
     },
     className
   );
 
   if (showLabel === false && typeof label !== 'string') {
     console.warn(
-      'EuiSwitch `label` must be a string when `showLabel` is false.'
+      'WuiSwitch `label` must be a string when `showLabel` is false.'
     );
   }
 
@@ -105,7 +105,7 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
       <button
         id={switchId}
         aria-checked={checked || false}
-        className="euiSwitch__button"
+        className="wuiSwitch__button"
         role="switch"
         type={type}
         disabled={disabled}
@@ -113,17 +113,17 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
         aria-label={showLabel ? undefined : (label as string)}
         aria-labelledby={showLabel ? labelId : undefined}
         {...rest}>
-        <span className="euiSwitch__body">
-          <span className="euiSwitch__thumb" />
-          <span className="euiSwitch__track">
+        <span className="wuiSwitch__body">
+          <span className="wuiSwitch__thumb" />
+          <span className="wuiSwitch__track">
             {!compressed && (
               <React.Fragment>
-                <EuiIcon type="cross" size="m" className="euiSwitch__icon" />
+                <WuiIcon type="cross" size="m" className="wuiSwitch__icon" />
 
-                <EuiIcon
+                <WuiIcon
                   type="check"
                   size="m"
-                  className="euiSwitch__icon euiSwitch__icon--checked"
+                  className="wuiSwitch__icon wuiSwitch__icon--checked"
                 />
               </React.Fragment>
             )}
@@ -135,7 +135,7 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
         // <button> + <label> has poor screen reader support.
         // Click handler added to simulate natural, secondary <label> interactivity.
         // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-        <span className="euiSwitch__label" id={labelId} onClick={onClick}>
+        <span className="wuiSwitch__label" id={labelId} onClick={onClick}>
           {label}
         </span>
       )}

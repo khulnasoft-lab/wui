@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiCallOut, EuiCallOutProps } from './call_out';
+export { WuiCallOut, WuiCallOutProps } from './call_out';

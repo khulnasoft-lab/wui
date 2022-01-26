@@ -17,8 +17,8 @@
  * under the License.
  */
 
-export { EuiTableHeaderMobile } from './table_header_mobile';
+export { WuiTableHeaderMobile } from './table_header_mobile';
 
-export { EuiTableSortMobile } from './table_sort_mobile';
+export { WuiTableSortMobile } from './table_sort_mobile';
 
-export { EuiTableSortMobileItem } from './table_sort_mobile_item';
+export { WuiTableSortMobileItem } from './table_sort_mobile_item';

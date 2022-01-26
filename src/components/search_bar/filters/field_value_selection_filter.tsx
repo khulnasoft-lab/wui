@@ -20,12 +20,12 @@
 import React, { Component, ReactElement, ReactNode } from 'react';
 import { isArray, isNil } from '../../../services/predicate';
 import { keys } from '../../../services';
-import { EuiPopover, EuiPopoverTitle } from '../../popover';
-import { EuiFieldSearch } from '../../form/field_search';
-import { EuiFilterButton, EuiFilterSelectItem } from '../../filter_group';
-import { EuiLoadingChart } from '../../loading';
-import { EuiSpacer } from '../../spacer';
-import { EuiIcon } from '../../icon';
+import { WuiPopover, WuiPopoverTitle } from '../../popover';
+import { WuiFieldSearch } from '../../form/field_search';
+import { WuiFilterButton, WuiFilterSelectItem } from '../../filter_group';
+import { WuiLoadingChart } from '../../loading';
+import { WuiSpacer } from '../../spacer';
+import { WuiIcon } from '../../icon';
 import { Query } from '../query';
 import { Clause, Operator, OperatorType, Value } from '../query/ast';
 
@@ -93,7 +93,7 @@ export class FieldValueSelectionFilter extends Component<
   FieldValueSelectionFilterProps,
   State
 > {
-  private readonly selectItems: EuiFilterSelectItem[];
+  private readonly selectItems: WuiFilterSelectItem[];
   private searchInput: HTMLInputElement | null = null;
 
   constructor(props: FieldValueSelectionFilterProps) {
@@ -342,14 +342,14 @@ export class FieldValueSelectionFilter extends Component<
     const active = activeTop || activeItem;
 
     const button = (
-      <EuiFilterButton
+      <WuiFilterButton
         iconType="arrowDown"
         iconSide="right"
         onClick={this.onButtonClick.bind(this)}
         hasActiveFilters={active}
         grow>
         {config.name}
-      </EuiFilterButton>
+      </WuiFilterButton>
     );
 
     const searchBox = this.renderSearchBox();
@@ -365,7 +365,7 @@ export class FieldValueSelectionFilter extends Component<
       this.state.options != null && this.state.options.all.length >= threshold;
 
     return (
-      <EuiPopover
+      <WuiPopover
         id={`${config.type}_${index}`}
         ownFocus
         button={button}
@@ -374,10 +374,10 @@ export class FieldValueSelectionFilter extends Component<
         panelPaddingSize="none"
         withTitle={withTitle}
         anchorPosition="downCenter"
-        panelClassName="euiFilterGroup__popoverPanel">
+        panelClassName="wuiFilterGroup__popoverPanel">
         {searchBox}
         {content}
-      </EuiPopover>
+      </WuiPopover>
     );
   }
 
@@ -387,15 +387,15 @@ export class FieldValueSelectionFilter extends Component<
     if (this.state.options && this.state.options.all.length >= threshold) {
       const disabled = this.state.error != null;
       return (
-        <EuiPopoverTitle>
-          <EuiFieldSearch
+        <WuiPopoverTitle>
+          <WuiFieldSearch
             inputRef={ref => (this.searchInput = ref)}
             disabled={disabled}
             incremental={true}
             onSearch={query => this.filterOptions(query)}
             onKeyDown={this.onKeyDown.bind(this, -1)}
           />
-        </EuiPopoverTitle>
+        </WuiPopoverTitle>
       );
     }
   }
@@ -443,20 +443,20 @@ export class FieldValueSelectionFilter extends Component<
       };
 
       const item = (
-        <EuiFilterSelectItem
+        <WuiFilterSelectItem
           key={index}
           checked={checked}
           onClick={onClick}
           ref={ref => (this.selectItems[index] = ref!)}
           onKeyDown={this.onKeyDown.bind(this, index)}>
           {option.view ? option.view : this.resolveOptionName(option)}
-        </EuiFilterSelectItem>
+        </WuiFilterSelectItem>
       );
 
       items.push(item);
     });
 
-    return <div className="euiFilterSelect__items">{items}</div>;
+    return <div className="wuiFilterSelect__items">{items}</div>;
   }
 
   resolveChecked(clause: Clause | undefined): 'on' | 'off' | undefined {
@@ -469,10 +469,10 @@ export class FieldValueSelectionFilter extends Component<
     const message =
       this.props.config.loadingMessage || defaults.config.loadingMessage;
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiLoadingChart size="m" />
-          <EuiSpacer size="xs" />
+      <div className="wuiFilterSelect__note">
+        <div className="wuiFilterSelect__noteContent">
+          <WuiLoadingChart size="m" />
+          <WuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>
@@ -481,10 +481,10 @@ export class FieldValueSelectionFilter extends Component<
 
   renderError(message: string) {
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiIcon size="m" type="faceSad" color="danger" />
-          <EuiSpacer size="xs" />
+      <div className="wuiFilterSelect__note">
+        <div className="wuiFilterSelect__noteContent">
+          <WuiIcon size="m" type="faceSad" color="danger" />
+          <WuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>
@@ -495,10 +495,10 @@ export class FieldValueSelectionFilter extends Component<
     const message =
       this.props.config.noOptionsMessage || defaults.config.noOptionsMessage;
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiIcon type="minusInCircle" />
-          <EuiSpacer size="xs" />
+      <div className="wuiFilterSelect__note">
+        <div className="wuiFilterSelect__noteContent">
+          <WuiIcon type="minusInCircle" />
+          <WuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>

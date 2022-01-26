@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonGroup,
-  EuiButtonIcon,
-  EuiColorPicker,
-  EuiColorPickerSwatch,
-  EuiDualRange,
-  EuiFieldNumber,
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormLabel,
-  EuiFormRow,
-  EuiHorizontalRule,
-  EuiIcon,
-  EuiPanel,
-  EuiRange,
-  EuiScreenReaderOnly,
-  EuiSelect,
-  EuiSpacer,
-  EuiSuperSelect,
-  EuiToolTip,
+  WuiButtonGroup,
+  WuiButtonIcon,
+  WuiColorPicker,
+  WuiColorPickerSwatch,
+  WuiDualRange,
+  WuiFieldNumber,
+  WuiFieldText,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFormLabel,
+  WuiFormRow,
+  WuiHorizontalRule,
+  WuiIcon,
+  WuiPanel,
+  WuiRange,
+  WuiScreenReaderOnly,
+  WuiSelect,
+  WuiSpacer,
+  WuiSuperSelect,
+  WuiToolTip,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -71,7 +71,7 @@ export default () => {
   ];
 
   const selectTooltipContent =
-    'Otherwise use an EuiToolTip around the label of the form row.';
+    'Otherwise use an WuiToolTip around the label of the form row.';
 
   const [opacityValue, setOpacityValue] = useState('20');
   const [color, setColor] = useState('#D36086');
@@ -120,13 +120,13 @@ export default () => {
   };
 
   return (
-    <EuiPanel style={{ maxWidth: 432 }}>
-      <EuiFormRow label="Name" display="columnCompressed">
-        <EuiFieldText prepend="Label" placeholder="Input" compressed />
-      </EuiFormRow>
+    <WuiPanel style={{ maxWidth: 432 }}>
+      <WuiFormRow label="Name" display="columnCompressed">
+        <WuiFieldText prepend="Label" placeholder="Input" compressed />
+      </WuiFormRow>
 
-      <EuiFormRow label="Visibility" display="columnCompressed">
-        <EuiDualRange
+      <WuiFormRow label="Visibility" display="columnCompressed">
+        <WuiDualRange
           value={dualValue}
           onChange={onDualChange}
           min={0}
@@ -136,10 +136,10 @@ export default () => {
           showLabels
           prepend="Zoom levels"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Opacity" display="columnCompressed">
-        <EuiRange
+      <WuiFormRow label="Opacity" display="columnCompressed">
+        <WuiRange
           min={0}
           max={100}
           name="range"
@@ -150,23 +150,23 @@ export default () => {
           onChange={onRangeChange}
           append="%"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
 
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <span id="docsExampleSelectTooltipContent">{selectTooltipContent}</span>
-      </EuiScreenReaderOnly>
-      <EuiFormRow
+      </WuiScreenReaderOnly>
+      <WuiFormRow
         label={
-          <EuiToolTip content={selectTooltipContent}>
+          <WuiToolTip content={selectTooltipContent}>
             <span>
-              Label <EuiIcon type="questionInCircle" color="subdued" />
+              Label <WuiIcon type="questionInCircle" color="subdued" />
             </span>
-          </EuiToolTip>
+          </WuiToolTip>
         }
         display="columnCompressed">
-        <EuiSelect
+        <WuiSelect
           options={[
             { value: 'option_one', text: 'Option one' },
             { value: 'option_two', text: 'Option two' },
@@ -175,10 +175,10 @@ export default () => {
           compressed
           aria-describedby="docsExampleSelectTooltipContent"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Granularity" display="columnCompressed">
-        <EuiButtonGroup
+      <WuiFormRow label="Granularity" display="columnCompressed">
+        <WuiButtonGroup
           legend="Granulariy of zoom levels"
           options={granularityToggleButtons}
           idSelected={granularityToggleButtonsIdSelected}
@@ -186,14 +186,14 @@ export default () => {
           buttonSize="compressed"
           isFullWidth
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Fill" display="columnCompressed">
-        <EuiColorPicker onChange={onColorChange} color={color} compressed />
-      </EuiFormRow>
+      <WuiFormRow label="Fill" display="columnCompressed">
+        <WuiColorPicker onChange={onColorChange} color={color} compressed />
+      </WuiFormRow>
 
-      <EuiFormRow label="Select one" display="columnCompressed">
-        <EuiSuperSelect
+      <WuiFormRow label="Select one" display="columnCompressed">
+        <WuiSuperSelect
           options={[
             { value: 'option_one', inputDisplay: 'Option one' },
             { value: 'option_two', inputDisplay: 'Option two' },
@@ -201,16 +201,16 @@ export default () => {
           ]}
           compressed
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="With button" display="columnCompressed">
-        <EuiFieldNumber
+      <WuiFormRow label="With button" display="columnCompressed">
+        <WuiFieldNumber
           min={1}
           max={100}
           defaultValue={10}
           compressed
           prepend={[
-            <EuiButtonIcon
+            <WuiButtonIcon
               iconType="magnet"
               aria-label="Dynamic toggle"
               title="Make dynamic"
@@ -219,18 +219,18 @@ export default () => {
           ]}
           append="px"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiHorizontalRule />
+      <WuiHorizontalRule />
 
-      <EuiFormRow label="Container" display="columnCompressed">
-        <EuiFlexGroup gutterSize="s" responsive={false} wrap>
-          <EuiFlexItem grow={false}>
-            <EuiColorPicker
+      <WuiFormRow label="Container" display="columnCompressed">
+        <WuiFlexGroup gutterSize="s" responsive={false} wrap>
+          <WuiFlexItem grow={false}>
+            <WuiColorPicker
               onChange={onColorChange}
               color={color}
               button={
-                <EuiColorPickerSwatch
+                <WuiColorPickerSwatch
                   color={color}
                   aria-label="Container color"
                   title="Container color"
@@ -238,9 +238,9 @@ export default () => {
                 />
               }
             />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiRange
+          </WuiFlexItem>
+          <WuiFlexItem>
+            <WuiRange
               showInput="inputWithPopover"
               min={0}
               max={240}
@@ -251,15 +251,15 @@ export default () => {
               prepend="Padding"
               aria-label="Container padding in pixels"
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFormRow>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+      </WuiFormRow>
 
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
 
-      <EuiFormRow label="Label" display="columnCompressed">
+      <WuiFormRow label="Label" display="columnCompressed">
         <div>
-          <EuiSelect
+          <WuiSelect
             id="docsExampleLabelFont"
             options={[
               { value: 'inter', text: 'Inter UI' },
@@ -270,14 +270,14 @@ export default () => {
             prepend="Font"
             aria-label="Label font family"
           />
-          <EuiSpacer size="xs" />
-          <EuiFlexGroup
+          <WuiSpacer size="xs" />
+          <WuiFlexGroup
             gutterSize="s"
             responsive={false}
             wrap
             justifyContent="flexEnd">
-            <EuiFlexItem>
-              <EuiRange
+            <WuiFlexItem>
+              <WuiRange
                 showInput="inputWithPopover"
                 min={7}
                 max={140}
@@ -287,11 +287,11 @@ export default () => {
                 append="px"
                 aria-label="Label font size in pixels"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButtonGroup
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButtonGroup
                 legend="Label text style"
-                className="eui-displayInlineBlock"
+                className="wui-displayInlineBlock"
                 options={typeStyleToggleButtons}
                 idToSelectedMap={typeStyleToggleButtonsIdToSelectedMap}
                 onChange={onTypeStyleChange}
@@ -299,18 +299,18 @@ export default () => {
                 isIconOnly
                 buttonSize="compressed"
               />
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         </div>
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
 
-      <EuiFormLabel htmlFor="docsExampleBorderSize">Border</EuiFormLabel>
-      <EuiSpacer size="xs" />
-      <EuiFlexGroup gutterSize="s" responsive={false} wrap>
-        <EuiFlexItem style={{ flexBasis: 72 }}>
-          <EuiRange
+      <WuiFormLabel htmlFor="docsExampleBorderSize">Border</WuiFormLabel>
+      <WuiSpacer size="xs" />
+      <WuiFlexGroup gutterSize="s" responsive={false} wrap>
+        <WuiFlexItem style={{ flexBasis: 72 }}>
+          <WuiRange
             id="docsExampleBorderSize"
             showInput="inputWithPopover"
             min={0}
@@ -320,9 +320,9 @@ export default () => {
             compressed
             append="px"
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={4} style={{ minWidth: 160 }}>
-          <EuiSelect
+        </WuiFlexItem>
+        <WuiFlexItem grow={4} style={{ minWidth: 160 }}>
+          <WuiSelect
             id="docsExampleBorderStyle"
             options={[
               { value: 'dashed', text: 'Dashed' },
@@ -333,13 +333,13 @@ export default () => {
             prepend="Style"
             aria-label="Border style"
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiColorPicker
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiColorPicker
             onChange={onColorChange}
             color={color}
             button={
-              <EuiColorPickerSwatch
+              <WuiColorPickerSwatch
                 color={color}
                 aria-label="Border color"
                 title="Border color"
@@ -347,8 +347,8 @@ export default () => {
               />
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiPanel>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiPanel>
   );
 };

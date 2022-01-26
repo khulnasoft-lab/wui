@@ -1,27 +1,27 @@
 import React, { Fragment } from 'react';
 
-import { EuiExpression, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { WuiExpression, WuiSpacer, WuiTitle } from '../../../../src/components';
 
 const value = 'and a very long string as value';
 const description = 'some very very long description';
 const nodes = (
   <Fragment>
-    <p className="eui-textTruncate">.kibana_task_manager</p>
-    <p className="eui-textTruncate">kibana_sample_data_ecommerce</p>
+    <p className="wui-textTruncate">.kibana_task_manager</p>
+    <p className="wui-textTruncate">kibana_sample_data_ecommerce</p>
   </Fragment>
 );
 
 export default () => (
   <div>
     <div style={{ maxWidth: 240 }}>
-      <EuiExpression
+      <WuiExpression
         onClick={() => {}}
         description={description}
         value={value}
         textWrap="truncate"
       />
-      <EuiSpacer />
-      <EuiExpression
+      <WuiSpacer />
+      <WuiExpression
         description={description}
         display="columns"
         text
@@ -29,13 +29,13 @@ export default () => (
         value={value}
         onClick={() => {}}
       />
-      <EuiSpacer />
+      <WuiSpacer />
     </div>
-    <EuiTitle size="xxs">
-      <h3>eui-textTruncate applied to sub-children</h3>
-    </EuiTitle>
+    <WuiTitle size="xxs">
+      <h3>wui-textTruncate applied to sub-children</h3>
+    </WuiTitle>
     <div style={{ maxWidth: 310 }}>
-      <EuiExpression
+      <WuiExpression
         value={nodes}
         display="columns"
         text

@@ -1,18 +1,18 @@
-.euiCodeEditorWrapper {
+.wuiCodeEditorWrapper {
   position: relative;
 
   .ace_hidden-cursors {
     opacity: 0;
   }
 
-  &.euiCodeEditorWrapper-isEditing {
+  &.wuiCodeEditorWrapper-isEditing {
     .ace_hidden-cursors {
       opacity: 1;
     }
   }
 }
 
-.euiCodeEditorKeyboardHint {
+.wuiCodeEditorKeyboardHint {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -29,11 +29,11 @@
 
   &:focus {
     opacity: 1;
-    border: 2px solid $euiColorPrimary;
+    border: 2px solid $wuiColorPrimary;
     z-index: $euiZLevel1;
   }
 
-  &.euiCodeEditorKeyboardHint-isInactive {
+  &.wuiCodeEditorKeyboardHint-isInactive {
     display: none;
   }
 }

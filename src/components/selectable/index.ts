@@ -17,18 +17,18 @@
  * under the License.
  */
 
-export { EuiSelectable, EuiSelectableProps } from './selectable';
+export { WuiSelectable, WuiSelectableProps } from './selectable';
 export {
-  EuiSelectableList,
-  EuiSelectableListItem,
-  EuiSelectableOptionsListProps,
+  WuiSelectableList,
+  WuiSelectableListItem,
+  WuiSelectableOptionsListProps,
 } from './selectable_list';
-export { EuiSelectableMessage } from './selectable_message';
-export { EuiSelectableOption } from './selectable_option';
-export { EuiSelectableSearch } from './selectable_search';
+export { WuiSelectableMessage } from './selectable_message';
+export { WuiSelectableOption } from './selectable_option';
+export { WuiSelectableSearch } from './selectable_search';
 export {
-  EuiSelectableTemplateSitewide,
-  EuiSelectableTemplateSitewideProps,
-  EuiSelectableTemplateSitewideOption,
-  EuiSelectableTemplateSitewideMetaData,
+  WuiSelectableTemplateSitewide,
+  WuiSelectableTemplateSitewideProps,
+  WuiSelectableTemplateSitewideOption,
+  WuiSelectableTemplateSitewideMetaData,
 } from './selectable_templates';

@@ -1,4 +1,4 @@
-.euiBasicTable {
+.wuiBasicTable {
 
   &-loading {
     position: relative;
@@ -11,9 +11,9 @@
       position: absolute;
       content: '';
       width: 100%;
-      height: $euiBorderWidthThick;
-      background-color: $euiColorPrimary;
-      animation: euiBasicTableLoading 1000ms linear;
+      height: $wuiBorderWidthThick;
+      background-color: $wuiColorPrimary;
+      animation: wuiBasicTableLoading 1000ms linear;
       animation-iteration-count: infinite;
     }
 
@@ -21,7 +21,7 @@
 }
 
 
-@keyframes euiBasicTableLoading {
+@keyframes wuiBasicTableLoading {
   from {
     left: 0;
     width: 0;

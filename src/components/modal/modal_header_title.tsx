@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiModalHeaderTitleProps = FunctionComponent<
+export type WuiModalHeaderTitleProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiModalHeaderTitle: EuiModalHeaderTitleProps = ({
+export const WuiModalHeaderTitle: WuiModalHeaderTitleProps = ({
   className,
   children,
   ...rest
 }) => {
-  const classes = classnames('euiModalHeader__title', className);
+  const classes = classnames('wuiModalHeader__title', className);
   return (
     <div className={classes} {...rest}>
       {children}

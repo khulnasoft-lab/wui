@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiStat } from './stat';
+export { WuiStat } from './stat';

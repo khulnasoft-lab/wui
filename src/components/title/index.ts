@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiTitle, EuiTitleProps, EuiTitleSize } from './title';
+export { WuiTitle, WuiTitleProps, WuiTitleSize } from './title';

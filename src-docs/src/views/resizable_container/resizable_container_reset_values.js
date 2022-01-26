@@ -1,12 +1,12 @@
 import React, { useCallback, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiResizableContainer,
-  EuiButton,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiText,
+  WuiResizableContainer,
+  WuiButton,
+  WuiSpacer,
 } from '../../../../src/components';
 import { fake } from 'faker';
 
@@ -60,55 +60,55 @@ export default () => {
 
   return (
     <>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiButton onClick={onClickDefault}>{'Reset to defaults'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={onClick30x70}>{'30x70'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={onClick80x20}>{'80x20'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton
+      <WuiFlexGroup>
+        <WuiFlexItem>
+          <WuiButton onClick={onClickDefault}>{'Reset to defaults'}</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiButton onClick={onClick30x70}>{'30x70'}</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiButton onClick={onClick80x20}>{'80x20'}</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiButton
             fill={savedSizes === sizes}
             iconType={savedSizes === sizes ? 'check' : undefined}
             onClick={onSaveToLocalStorage}>
             {'Store in localStorage'}
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiButton>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiResizableContainer
+      <WuiResizableContainer
         style={{ height: '400px' }}
         onPanelWidthChange={onPanelWidthChange}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+        {(WuiResizablePanel, WuiResizableButton) => (
           <>
-            <EuiResizablePanel
+            <WuiResizablePanel
               id={firstPanelId}
               size={sizes[firstPanelId]}
               minSize="30%">
-              <EuiText>
+              <WuiText>
                 <p>{text}</p>
-              </EuiText>
-            </EuiResizablePanel>
+              </WuiText>
+            </WuiResizablePanel>
 
-            <EuiResizableButton size="l" />
+            <WuiResizableButton size="l" />
 
-            <EuiResizablePanel
+            <WuiResizablePanel
               id={secondPanelId}
               size={sizes[secondPanelId]}
               minSize="200px">
-              <EuiText>
+              <WuiText>
                 <p>{text}</p>
-              </EuiText>
-            </EuiResizablePanel>
+              </WuiText>
+            </WuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </WuiResizableContainer>
     </>
   );
 };

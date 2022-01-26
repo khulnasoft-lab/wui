@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFlexGrid, GUTTER_SIZES, COLUMNS, DIRECTIONS } from './flex_grid';
+import { WuiFlexGrid, GUTTER_SIZES, COLUMNS, DIRECTIONS } from './flex_grid';
 
-describe('EuiFlexGrid', () => {
+describe('WuiFlexGrid', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFlexGrid columns={3} {...requiredProps}>
+      <WuiFlexGrid columns={3} {...requiredProps}>
         <h2>My Child</h2>
-      </EuiFlexGrid>
+      </WuiFlexGrid>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('EuiFlexGrid', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid gutterSize={value} />);
+          const component = render(<WuiFlexGrid gutterSize={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -48,7 +48,7 @@ describe('EuiFlexGrid', () => {
     describe('columns', () => {
       COLUMNS.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid columns={value} />);
+          const component = render(<WuiFlexGrid columns={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -58,7 +58,7 @@ describe('EuiFlexGrid', () => {
     describe('direction', () => {
       DIRECTIONS.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid direction={value} />);
+          const component = render(<WuiFlexGrid direction={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -67,7 +67,7 @@ describe('EuiFlexGrid', () => {
 
     describe('responsive', () => {
       test('is rendered', () => {
-        const component = render(<EuiFlexGrid responsive={false} />);
+        const component = render(<WuiFlexGrid responsive={false} />);
 
         expect(component).toMatchSnapshot();
       });

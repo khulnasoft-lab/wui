@@ -23,8 +23,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDragDropContext } from './';
-import { EuiDragDropContextContext } from './drag_drop_context';
+import { WuiDragDropContext } from './';
+import { WuiDragDropContextContext } from './drag_drop_context';
 
 function snapshotDragDropContext(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -34,13 +34,13 @@ function snapshotDragDropContext(component: ReactWrapper) {
   return container.firstChild;
 }
 
-describe('EuiDragDropContext', () => {
+describe('WuiDragDropContext', () => {
   test('is rendered', () => {
     const handler = jest.fn();
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <div />
-      </EuiDragDropContext>
+      </WuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -58,15 +58,15 @@ describe('EuiDragDropContext', () => {
         });
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDragDropContextContext.Consumer>
+          <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <WuiDragDropContextContext.Consumer>
               {value => (
                 <div data-test-subj="child">
                   {value.hasOwnProperty('isDraggingType') ? 'true' : 'false'}
                 </div>
               )}
-            </EuiDragDropContextContext.Consumer>
-          </EuiDragDropContext>
+            </WuiDragDropContextContext.Consumer>
+          </WuiDragDropContext>
         );
 
         expect(findTestSubject(component, 'child').text()).toBe('true');

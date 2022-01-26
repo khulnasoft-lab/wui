@@ -27,28 +27,28 @@ import classNames from 'classnames';
 
 import { CommonProps, NoArgCallback } from '../common';
 
-import { EuiBeacon } from '../beacon';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiI18n } from '../i18n';
+import { WuiBeacon } from '../beacon';
+import { WuiButtonEmpty, WuiButtonEmptyProps } from '../button';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
+import { WuiI18n } from '../i18n';
 import {
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverProps,
-  EuiPopoverTitle,
+  WuiPopover,
+  WuiPopoverFooter,
+  WuiPopoverProps,
+  WuiPopoverTitle,
 } from '../popover';
-import { EuiTitle } from '../title';
+import { WuiTitle } from '../title';
 
-import { EuiTourStepIndicator, EuiTourStepStatus } from './tour_step_indicator';
+import { WuiTourStepIndicator, WuiTourStepStatus } from './tour_step_indicator';
 
 type PopoverOverrides = 'button' | 'closePopover';
 
-type EuiPopoverPartials = Partial<Pick<EuiPopoverProps, PopoverOverrides>>;
+type WuiPopoverPartials = Partial<Pick<WuiPopoverProps, PopoverOverrides>>;
 
-export interface EuiTourStepProps
+export interface WuiTourStepProps
   extends CommonProps,
-    Omit<EuiPopoverProps, PopoverOverrides>,
-    EuiPopoverPartials {
+    Omit<WuiPopoverProps, PopoverOverrides>,
+    WuiPopoverPartials {
   /**
    * Element to which the tour step popover attaches when open
    */
@@ -89,7 +89,7 @@ export interface EuiTourStepProps
   stepsTotal: number;
 
   /**
-   * Optional, standard DOM `style` attribute. Passed to the EuiPopover panel.
+   * Optional, standard DOM `style` attribute. Passed to the WuiPopover panel.
    */
   style?: CSSProperties;
 
@@ -114,7 +114,7 @@ export interface EuiTourStepProps
   footerAction?: ReactElement;
 }
 
-export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
+export const WuiTourStep: FunctionComponent<WuiTourStepProps> = ({
   anchorPosition = 'leftUp',
   children,
   className,
@@ -134,58 +134,58 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
 }) => {
   if (step === 0) {
     console.warn(
-      'EuiTourStep `step` should 1-based indexing. Please update to eliminate 0 indexes.'
+      'WuiTourStep `step` should 1-based indexing. Please update to eliminate 0 indexes.'
     );
   }
   let newStyle;
 
   let widthClassName;
   if (minWidth === true) {
-    widthClassName = 'euiTour--minWidth-default';
+    widthClassName = 'wuiTour--minWidth-default';
   } else if (minWidth !== false) {
     const value = typeof minWidth === 'number' ? `${minWidth}px` : minWidth;
     newStyle = { ...style, minWidth: value };
   }
 
-  const classes = classNames('euiTour', widthClassName, className);
+  const classes = classNames('wuiTour', widthClassName, className);
 
-  const finishButtonProps: EuiButtonEmptyProps = {
+  const finishButtonProps: WuiButtonEmptyProps = {
     color: 'text',
     flush: 'right',
     size: 'xs',
   };
 
   const footer = (
-    <EuiFlexGroup
+    <WuiFlexGroup
       responsive={false}
       justifyContent={stepsTotal > 1 ? 'spaceBetween' : 'flexEnd'}>
       {stepsTotal > 1 && (
-        <EuiFlexItem grow={false}>
-          <ul className="euiTourFooter__stepList">
+        <WuiFlexItem grow={false}>
+          <ul className="wuiTourFooter__stepList">
             {[...Array(stepsTotal).keys()].map((_, i) => {
-              let status: EuiTourStepStatus = 'complete';
+              let status: WuiTourStepStatus = 'complete';
               if (step === i + 1) {
                 status = 'active';
               } else if (step <= i) {
                 status = 'incomplete';
               }
               return (
-                <EuiTourStepIndicator key={i} number={i + 1} status={status} />
+                <WuiTourStepIndicator key={i} number={i + 1} status={status} />
               );
             })}
           </ul>
-        </EuiFlexItem>
+        </WuiFlexItem>
       )}
 
       {footerAction ? (
-        <EuiFlexItem grow={false}>{footerAction}</EuiFlexItem>
+        <WuiFlexItem grow={false}>{footerAction}</WuiFlexItem>
       ) : (
-        <EuiFlexItem grow={false}>
-          <EuiI18n
+        <WuiFlexItem grow={false}>
+          <WuiI18n
             tokens={[
-              'euiTourStep.endTour',
-              'euiTourStep.skipTour',
-              'euiTourStep.closeTour',
+              'wuiTourStep.endTour',
+              'wuiTourStep.skipTour',
+              'wuiTourStep.closeTour',
             ]}
             defaults={['End tour', 'Skip tour', 'Close']}>
             {([endTour, skipTour, closeTour]: string[]) => {
@@ -194,21 +194,21 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
                 content = stepsTotal === step ? endTour : skipTour;
               }
               return (
-                <EuiButtonEmpty onClick={onFinish} {...finishButtonProps}>
+                <WuiButtonEmpty onClick={onFinish} {...finishButtonProps}>
                   {content}
-                </EuiButtonEmpty>
+                </WuiButtonEmpty>
               );
             }}
-          </EuiI18n>
-        </EuiFlexItem>
+          </WuiI18n>
+        </WuiFlexItem>
       )}
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   );
 
   const hasBeacon = decoration === 'beacon';
 
   return (
-    <EuiPopover
+    <WuiPopover
       anchorPosition={anchorPosition}
       button={children}
       closePopover={closePopover}
@@ -216,19 +216,19 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
       panelClassName={classes}
       panelStyle={newStyle || style}
       offset={hasBeacon ? 10 : 0}
-      arrowChildren={hasBeacon && <EuiBeacon className="euiTour__beacon" />}
+      arrowChildren={hasBeacon && <WuiBeacon className="wuiTour__beacon" />}
       withTitle
       {...rest}>
-      <EuiPopoverTitle className="euiTourHeader">
-        <EuiTitle size="xxxs" className="euiTourHeader__subtitle">
+      <WuiPopoverTitle className="wuiTourHeader">
+        <WuiTitle size="xxxs" className="wuiTourHeader__subtitle">
           <h1>{subtitle}</h1>
-        </EuiTitle>
-        <EuiTitle size="xxs" className="euiTourHeader__title">
+        </WuiTitle>
+        <WuiTitle size="xxs" className="wuiTourHeader__title">
           <h2>{title}</h2>
-        </EuiTitle>
-      </EuiPopoverTitle>
-      <div className="euiTour__content">{content}</div>
-      <EuiPopoverFooter className="euiTourFooter">{footer}</EuiPopoverFooter>
-    </EuiPopover>
+        </WuiTitle>
+      </WuiPopoverTitle>
+      <div className="wuiTour__content">{content}</div>
+      <WuiPopoverFooter className="wuiTourFooter">{footer}</WuiPopoverFooter>
+    </WuiPopover>
   );
 };

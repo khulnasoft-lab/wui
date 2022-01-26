@@ -21,7 +21,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiAccordion } from './accordion';
+import { WuiAccordion } from './accordion';
 
 jest.mock('./../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
@@ -30,9 +30,9 @@ jest.mock('./../../services/accessibility', () => ({
 let id = 0;
 const getId = () => `${id++}`;
 
-describe('EuiAccordion', () => {
+describe('WuiAccordion', () => {
   test('is rendered', () => {
-    const component = render(<EuiAccordion id={getId()} {...requiredProps} />);
+    const component = render(<WuiAccordion id={getId()} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -41,7 +41,7 @@ describe('EuiAccordion', () => {
     describe('buttonContentClassName', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <WuiAccordion
             id={getId()}
             buttonContentClassName="button content class name"
           />
@@ -54,7 +54,7 @@ describe('EuiAccordion', () => {
     describe('buttonContent', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <WuiAccordion
             id={getId()}
             buttonContent={<div>Button content</div>}
           />
@@ -67,7 +67,7 @@ describe('EuiAccordion', () => {
     describe('extraAction', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <WuiAccordion
             id={getId()}
             extraAction={<button>Extra action</button>}
           />
@@ -80,9 +80,9 @@ describe('EuiAccordion', () => {
     describe('initialIsOpen', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} initialIsOpen={true}>
+          <WuiAccordion id={getId()} initialIsOpen={true}>
             <p>You can see me.</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -92,9 +92,9 @@ describe('EuiAccordion', () => {
     describe('arrowDisplay', () => {
       it('right is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} arrowDisplay="right">
+          <WuiAccordion id={getId()} arrowDisplay="right">
             <p>You can see me.</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -102,9 +102,9 @@ describe('EuiAccordion', () => {
 
       it('none is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} arrowDisplay="none">
+          <WuiAccordion id={getId()} arrowDisplay="none">
             <p>You can see me.</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -114,9 +114,9 @@ describe('EuiAccordion', () => {
     describe('forceState', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} forceState="closed">
+          <WuiAccordion id={getId()} forceState="closed">
             <p>You can not see me</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -125,7 +125,7 @@ describe('EuiAccordion', () => {
       it('accepts and calls an optional callback on click', () => {
         const onToggleHandler = jest.fn();
         const component = mount(
-          <EuiAccordion
+          <WuiAccordion
             id={getId()}
             onToggle={onToggleHandler}
             forceState="closed"
@@ -141,9 +141,9 @@ describe('EuiAccordion', () => {
     describe('isLoading', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} isLoading>
+          <WuiAccordion id={getId()} isLoading>
             <p>You can see me.</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -153,9 +153,9 @@ describe('EuiAccordion', () => {
     describe('isLoadingMessage', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} isLoadingMessage="Please wait" isLoading>
+          <WuiAccordion id={getId()} isLoadingMessage="Please wait" isLoading>
             <p>You can&apos;t see me.</p>
-          </EuiAccordion>
+          </WuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -165,7 +165,7 @@ describe('EuiAccordion', () => {
 
   describe('behavior', () => {
     it('opens when clicked once', () => {
-      const component = mount(<EuiAccordion id={getId()} />);
+      const component = mount(<WuiAccordion id={getId()} />);
 
       component.find('button').simulate('click');
 
@@ -173,7 +173,7 @@ describe('EuiAccordion', () => {
     });
 
     it('closes when clicked twice', () => {
-      const component = mount(<EuiAccordion id={getId()} />);
+      const component = mount(<WuiAccordion id={getId()} />);
 
       component.find('button').simulate('click');
       component.find('button').simulate('click');
@@ -184,7 +184,7 @@ describe('EuiAccordion', () => {
     it('accepts and calls an optional callback on open and close', () => {
       const onToggleHandler = jest.fn();
       const component = mount(
-        <EuiAccordion id={getId()} onToggle={onToggleHandler} />
+        <WuiAccordion id={getId()} onToggle={onToggleHandler} />
       );
 
       component.find('button').simulate('click');

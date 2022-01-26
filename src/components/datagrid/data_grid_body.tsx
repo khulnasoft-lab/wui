@@ -18,51 +18,51 @@
  */
 
 import React, { Fragment, FunctionComponent, useMemo } from 'react';
-import { EuiCodeBlock } from '../code';
+import { WuiCodeBlock } from '../code';
 import {
-  EuiDataGridControlColumn,
-  EuiDataGridColumn,
-  EuiDataGridColumnWidths,
-  EuiDataGridPopoverContents,
-  EuiDataGridInMemory,
-  EuiDataGridInMemoryValues,
-  EuiDataGridPaginationProps,
-  EuiDataGridSorting,
-  EuiDataGridFocusedCell,
+  WuiDataGridControlColumn,
+  WuiDataGridColumn,
+  WuiDataGridColumnWidths,
+  WuiDataGridPopoverContents,
+  WuiDataGridInMemory,
+  WuiDataGridInMemoryValues,
+  WuiDataGridPaginationProps,
+  WuiDataGridSorting,
+  WuiDataGridFocusedCell,
 } from './data_grid_types';
-import { EuiDataGridCellProps } from './data_grid_cell';
+import { WuiDataGridCellProps } from './data_grid_cell';
 import {
-  EuiDataGridDataRow,
-  EuiDataGridDataRowProps,
+  WuiDataGridDataRow,
+  WuiDataGridDataRowProps,
 } from './data_grid_data_row';
 import {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  WuiDataGridSchema,
+  WuiDataGridSchemaDetector,
 } from './data_grid_schema';
-import { EuiDataGridFooterRow } from './data_grid_footer_row';
+import { WuiDataGridFooterRow } from './data_grid_footer_row';
 
-export interface EuiDataGridBodyProps {
-  columnWidths: EuiDataGridColumnWidths;
+export interface WuiDataGridBodyProps {
+  columnWidths: WuiDataGridColumnWidths;
   defaultColumnWidth?: number | null;
-  leadingControlColumns?: EuiDataGridControlColumn[];
-  trailingControlColumns?: EuiDataGridControlColumn[];
-  columns: EuiDataGridColumn[];
-  schema: EuiDataGridSchema;
-  schemaDetectors: EuiDataGridSchemaDetector[];
-  popoverContents?: EuiDataGridPopoverContents;
-  focusedCell?: EuiDataGridFocusedCell;
-  onCellFocus: EuiDataGridDataRowProps['onCellFocus'];
+  leadingControlColumns?: WuiDataGridControlColumn[];
+  trailingControlColumns?: WuiDataGridControlColumn[];
+  columns: WuiDataGridColumn[];
+  schema: WuiDataGridSchema;
+  schemaDetectors: WuiDataGridSchemaDetector[];
+  popoverContents?: WuiDataGridPopoverContents;
+  focusedCell?: WuiDataGridFocusedCell;
+  onCellFocus: WuiDataGridDataRowProps['onCellFocus'];
   rowCount: number;
-  renderCellValue: EuiDataGridCellProps['renderCellValue'];
-  renderFooterCellValue?: EuiDataGridCellProps['renderCellValue'];
-  inMemory?: EuiDataGridInMemory;
-  inMemoryValues: EuiDataGridInMemoryValues;
-  interactiveCellId: EuiDataGridCellProps['interactiveCellId'];
-  pagination?: EuiDataGridPaginationProps;
-  sorting?: EuiDataGridSorting;
+  renderCellValue: WuiDataGridCellProps['renderCellValue'];
+  renderFooterCellValue?: WuiDataGridCellProps['renderCellValue'];
+  inMemory?: WuiDataGridInMemory;
+  inMemoryValues: WuiDataGridInMemoryValues;
+  interactiveCellId: WuiDataGridCellProps['interactiveCellId'];
+  pagination?: WuiDataGridPaginationProps;
+  sorting?: WuiDataGridSorting;
 }
 
-const defaultComparator: NonNullable<EuiDataGridSchemaDetector['comparator']> = (
+const defaultComparator: NonNullable<WuiDataGridSchemaDetector['comparator']> = (
   a,
   b,
   direction
@@ -72,7 +72,7 @@ const defaultComparator: NonNullable<EuiDataGridSchemaDetector['comparator']> = 
   return 0;
 };
 
-const providedPopoverContents: EuiDataGridPopoverContents = {
+const providedPopoverContents: WuiDataGridPopoverContents = {
   json: ({ cellContentsElement }) => {
     let formattedText = cellContentsElement.innerText;
 
@@ -82,18 +82,18 @@ const providedPopoverContents: EuiDataGridPopoverContents = {
     } catch (e) {} // eslint-disable-line no-empty
 
     return (
-      <EuiCodeBlock
+      <WuiCodeBlock
         isCopyable
         transparentBackground
         paddingSize="none"
         language="json">
         {formattedText}
-      </EuiCodeBlock>
+      </WuiCodeBlock>
     );
   },
 };
 
-export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = props => {
+export const WuiDataGridBody: FunctionComponent<WuiDataGridBodyProps> = props => {
   const {
     columnWidths,
     defaultColumnWidth,
@@ -140,7 +140,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = props =>
       const inMemoryRowIndices = Object.keys(inMemoryValues);
       const wrappedValues: Array<{
         index: number;
-        values: EuiDataGridInMemoryValues[number];
+        values: WuiDataGridInMemoryValues[number];
       }> = [];
       for (let i = 0; i < inMemoryRowIndices.length; i++) {
         const inMemoryRow = inMemoryValues[inMemoryRowIndices[i]];
@@ -196,7 +196,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = props =>
     const rowsToRender = visibleRowIndices.map((rowIndex, i) => {
       rowIndex = rowMap.hasOwnProperty(rowIndex) ? rowMap[rowIndex] : rowIndex;
       return (
-        <EuiDataGridDataRow
+        <WuiDataGridDataRow
           key={rowIndex}
           leadingControlColumns={leadingControlColumns}
           trailingControlColumns={trailingControlColumns}
@@ -219,7 +219,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = props =>
 
     if (renderFooterCellValue) {
       rowsToRender.push(
-        <EuiDataGridFooterRow
+        <WuiDataGridFooterRow
           key="footerRow"
           leadingControlColumns={leadingControlColumns}
           trailingControlColumns={trailingControlColumns}

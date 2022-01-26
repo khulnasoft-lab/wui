@@ -19,17 +19,17 @@
 
 import { Component } from 'react';
 
-interface EuiDelayRenderProps {
+interface WuiDelayRenderProps {
   delay: number;
 }
 
-interface EuiDelayRenderState {
+interface WuiDelayRenderState {
   toggle: boolean;
 }
 
-export class EuiDelayRender extends Component<
-  EuiDelayRenderProps,
-  EuiDelayRenderState
+export class WuiDelayRender extends Component<
+  WuiDelayRenderProps,
+  WuiDelayRenderState
 > {
   static defaultProps = {
     delay: 500,
@@ -38,7 +38,7 @@ export class EuiDelayRender extends Component<
   private delayID: number | undefined;
   private toBeDelayed: boolean = true;
 
-  constructor(props: EuiDelayRenderProps) {
+  constructor(props: WuiDelayRenderProps) {
     super(props);
     this.state = {
       toggle: false,

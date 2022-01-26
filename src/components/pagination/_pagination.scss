@@ -1,4 +1,4 @@
-.euiPagination {
+.wuiPagination {
   display: flex;
   align-items: center;
 
@@ -16,12 +16,12 @@
   }
 }
 
-.euiPagination__list {
+.wuiPagination__list {
   display: flex;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPagination__list {
+@include wuiBreakpoint('xs', 's') {
+  .wuiPagination__list {
     display: none;
   }
 }

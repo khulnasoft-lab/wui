@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { EuiCollapsibleNav } from '../../../../src/components/collapsible_nav';
-import { EuiButton, EuiButtonToggle } from '../../../../src/components/button';
-import { EuiTitle } from '../../../../src/components/title';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { WuiCollapsibleNav } from '../../../../src/components/collapsible_nav';
+import { WuiButton, WuiButtonToggle } from '../../../../src/components/button';
+import { WuiTitle } from '../../../../src/components/title';
+import { WuiSpacer } from '../../../../src/components/spacer';
+import { WuiText } from '../../../../src/components/text';
+import { WuiCode } from '../../../../src/components/code';
 
 export default () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -13,21 +13,21 @@ export default () => {
 
   return (
     <>
-      <EuiCollapsibleNav
+      <WuiCollapsibleNav
         isOpen={navIsOpen}
         isDocked={navIsDocked}
         button={
-          <EuiButton onClick={() => setNavIsOpen(!navIsOpen)}>
+          <WuiButton onClick={() => setNavIsOpen(!navIsOpen)}>
             Toggle nav
-          </EuiButton>
+          </WuiButton>
         }
         onClose={() => setNavIsOpen(false)}>
         <div style={{ padding: 16 }}>
-          <EuiTitle>
+          <WuiTitle>
             <h2>I am some nav</h2>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiButtonToggle
+          </WuiTitle>
+          <WuiSpacer />
+          <WuiButtonToggle
             label={`Docked: ${navIsDocked ? 'on' : 'off'}`}
             fill={navIsDocked}
             onChange={() => {
@@ -35,15 +35,15 @@ export default () => {
             }}
           />
         </div>
-      </EuiCollapsibleNav>
+      </WuiCollapsibleNav>
 
       {navIsDocked && (
-        <EuiText size="s" color="subdued">
+        <WuiText size="s" color="subdued">
           <p>
             The button gets hidden by default when the nav is docked unless you
-            set <EuiCode language="js">showButtonIfDocked = true</EuiCode>.
+            set <WuiCode language="js">showButtonIfDocked = true</WuiCode>.
           </p>
-        </EuiText>
+        </WuiText>
       )}
     </>
   );

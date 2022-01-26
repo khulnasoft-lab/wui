@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-interface EuiTableRowProps {
+interface WuiTableRowProps {
   /**
    * Indicates if the table has a single column of checkboxes for selecting
    * rows (affects mobile only)
@@ -48,9 +48,9 @@ interface EuiTableRowProps {
 
 type Props = CommonProps &
   HTMLAttributes<HTMLTableRowElement> &
-  EuiTableRowProps;
+  WuiTableRowProps;
 
-export const EuiTableRow: FunctionComponent<Props> = ({
+export const WuiTableRow: FunctionComponent<Props> = ({
   children,
   className,
   isSelected,
@@ -61,13 +61,13 @@ export const EuiTableRow: FunctionComponent<Props> = ({
   onClick,
   ...rest
 }) => {
-  const classes = classNames('euiTableRow', className, {
-    'euiTableRow-isSelectable': isSelectable,
-    'euiTableRow-isSelected': isSelected,
-    'euiTableRow-hasActions': hasActions,
-    'euiTableRow-isExpandedRow': isExpandedRow,
-    'euiTableRow-isExpandable': isExpandable,
-    'euiTableRow-isClickable': onClick,
+  const classes = classNames('wuiTableRow', className, {
+    'wuiTableRow-isSelectable': isSelectable,
+    'wuiTableRow-isSelected': isSelected,
+    'wuiTableRow-hasActions': hasActions,
+    'wuiTableRow-isExpandedRow': isExpandedRow,
+    'wuiTableRow-isExpandable': isExpandable,
+    'wuiTableRow-isClickable': onClick,
   });
 
   return (

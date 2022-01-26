@@ -17,9 +17,9 @@
  * under the License.
  */
 
-export { EuiRadio, EuiRadioProps } from './radio';
+export { WuiRadio, WuiRadioProps } from './radio';
 export {
-  EuiRadioGroup,
-  EuiRadioGroupProps,
-  EuiRadioGroupOption,
+  WuiRadioGroup,
+  WuiRadioGroupProps,
+  WuiRadioGroupOption,
 } from './radio_group';

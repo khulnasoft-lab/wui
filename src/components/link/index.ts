@@ -18,10 +18,10 @@
  */
 
 export {
-  EuiLink,
-  EuiLinkColor,
-  EuiLinkProps,
-  EuiLinkType,
-  EuiLinkAnchorProps,
-  EuiLinkButtonProps,
+  WuiLink,
+  WuiLinkColor,
+  WuiLinkProps,
+  WuiLinkType,
+  WuiLinkAnchorProps,
+  WuiLinkButtonProps,
 } from './link';

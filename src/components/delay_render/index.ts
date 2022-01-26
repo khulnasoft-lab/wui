@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiDelayRender } from './delay_render';
+export { WuiDelayRender } from './delay_render';

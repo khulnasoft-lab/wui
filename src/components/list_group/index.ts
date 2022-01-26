@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiListGroup, EuiListGroupProps } from './list_group';
-export { EuiListGroupItem, EuiListGroupItemProps } from './list_group_item';
+export { WuiListGroup, WuiListGroupProps } from './list_group';
+export { WuiListGroupItem, WuiListGroupItemProps } from './list_group_item';
 export {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupProps,
-  EuiPinnableListGroupItemProps,
+  WuiPinnableListGroup,
+  WuiPinnableListGroupProps,
+  WuiPinnableListGroupItemProps,
 } from './pinnable_list_group';

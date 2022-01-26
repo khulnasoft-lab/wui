@@ -5,9 +5,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiFacetButton,
-  EuiFacetGroup,
-  EuiCode,
+  WuiFacetButton,
+  WuiFacetGroup,
+  WuiCode,
 } from '../../../../src/components';
 
 import { facetButtonConfig, facetLayoutConfig } from './playground';
@@ -15,12 +15,12 @@ import { facetButtonConfig, facetLayoutConfig } from './playground';
 import Facet from './facet';
 const facetSource = require('!!raw-loader!./facet');
 const facetHtml = renderToHtml(Facet);
-const facetSnippet = `<EuiFacetButton
+const facetSnippet = `<WuiFacetButton
   quantity={6}
-  icon={<EuiIcon type="dot" color="secondary" />}
+  icon={<WuiIcon type="dot" color="secondary" />}
   isSelected>
-  <!-- Facet with EuiIcon content -->
-</EuiFacetButton>
+  <!-- Facet with WuiIcon content -->
+</WuiFacetButton>
 `;
 
 import FacetLayout from './facet_layout';
@@ -44,18 +44,18 @@ export const FacetExample = {
       text: (
         <>
           <p>
-            <strong>EuiFacetButtons</strong> are to be used when allowing lists
+            <strong>WuiFacetButtons</strong> are to be used when allowing lists
             with multiple search params to be filtered down by these particular
-            params. They allow for an <EuiCode>icon</EuiCode> node and/or{' '}
-            <EuiCode>quantity</EuiCode> to be passed. You can also indicate the
-            current selection with <EuiCode>isSelected</EuiCode>. Other props
-            include <EuiCode>isDisabled</EuiCode> and{' '}
-            <EuiCode>isLoading</EuiCode> (which will swap the quantity indicator
+            params. They allow for an <WuiCode>icon</WuiCode> node and/or{' '}
+            <WuiCode>quantity</WuiCode> to be passed. You can also indicate the
+            current selection with <WuiCode>isSelected</WuiCode>. Other props
+            include <WuiCode>isDisabled</WuiCode> and{' '}
+            <WuiCode>isLoading</WuiCode> (which will swap the quantity indicator
             with a loading icon).
           </p>
         </>
       ),
-      props: { EuiFacetButton },
+      props: { WuiFacetButton },
       snippet: facetSnippet,
       demo: <Facet />,
     },
@@ -74,13 +74,13 @@ export const FacetExample = {
       text: (
         <>
           <p>
-            Utilize the <strong>EuiFacetGroup</strong> wrapper to correctly
-            layout multiple facets. You can supply a <EuiCode>layout</EuiCode>{' '}
-            of either <EuiCode>horizontal</EuiCode> or{' '}
-            <EuiCode>vertical</EuiCode> with the default being{' '}
-            <EuiCode>vertical</EuiCode>. Be sure to contain vertical layouts in
+            Utilize the <strong>WuiFacetGroup</strong> wrapper to correctly
+            layout multiple facets. You can supply a <WuiCode>layout</WuiCode>{' '}
+            of either <WuiCode>horizontal</WuiCode> or{' '}
+            <WuiCode>vertical</WuiCode> with the default being{' '}
+            <WuiCode>vertical</WuiCode>. Be sure to contain vertical layouts in
             a skinny component or give it a max-width. You can also adjust the
-            spacing between items with the <EuiCode>gutterSize</EuiCode> prop.
+            spacing between items with the <WuiCode>gutterSize</WuiCode> prop.
           </p>
           <p>
             Typically, each facet grouping should display similarly. For
@@ -90,13 +90,13 @@ export const FacetExample = {
           </p>
         </>
       ),
-      props: { EuiFacetGroup },
+      props: { WuiFacetGroup },
       demo: <FacetLayout />,
       snippet: [
         `// Restrict the width of default (vertical) if not restricted by parent
-<EuiFacetGroup style={{ maxWidth: 200 }}>{facets}</EuiFacetGroup>`,
+<WuiFacetGroup style={{ maxWidth: 200 }}>{facets}</WuiFacetGroup>`,
         `// Horizontal
-<EuiFacetGroup layout="horizontal" gutterSize="l">{facets}</EuiFacetGroup>`,
+<WuiFacetGroup layout="horizontal" gutterSize="l">{facets}</WuiFacetGroup>`,
       ],
     },
   ],

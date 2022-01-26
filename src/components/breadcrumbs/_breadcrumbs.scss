@@ -3,7 +3,7 @@
  *    but make sure the whole breadcrumb set doesn't add space below itself
  */
 
-.euiBreadcrumbs {
+.wuiBreadcrumbs {
   @include euiFontSizeS;
   margin-bottom: -$euiSizeXS; /* 1 */
   display: flex;
@@ -11,58 +11,58 @@
   flex-wrap: wrap;
 }
 
-.euiBreadcrumb {
+.wuiBreadcrumb {
   display: inline-block;
   margin-bottom: $euiSizeXS; /* 1 */
 
-  &:not(.euiBreadcrumb--last) {
-    margin-right: $euiBreadcrumbSpacing;
-    color: $euiTextSubduedColor;
+  &:not(.wuiBreadcrumb--last) {
+    margin-right: $wuiBreadcrumbSpacing;
+    color: $wuiTextSubduedColor;
   }
 }
 
-.euiBreadcrumb--last {
-  font-weight: $euiFontWeightMedium;
+.wuiBreadcrumb--last {
+  font-weight: $wuiFontWeightMedium;
 }
 
-.euiBreadcrumb--collapsed {
+.wuiBreadcrumb--collapsed {
   flex-shrink: 0;
 }
 
-.euiBreadcrumbSeparator {
+.wuiBreadcrumbSeparator {
   flex-shrink: 0;
   display: inline-block;
-  margin-right: $euiBreadcrumbSpacing;
+  margin-right: $wuiBreadcrumbSpacing;
   width: 1px;
   height: $euiSize;
   transform: translateY(-1px) rotate(15deg);
-  background: $euiColorLightShade;
+  background: $wuiColorLightShade;
 }
 
-.euiBreadcrumbs__inPopover .euiBreadcrumb--last {
-  font-weight: $euiFontWeightRegular;
+.wuiBreadcrumbs__inPopover .wuiBreadcrumb--last {
+  font-weight: $wuiFontWeightRegular;
   color: $euiColorDarkShade !important; // sass-lint:disable-line no-important
 }
 
-.euiBreadcrumbs--truncate {
+.wuiBreadcrumbs--truncate {
   white-space: nowrap;
   flex-wrap: nowrap;
   overflow: hidden;
 
-  .euiBreadcrumb:not(.euiBreadcrumb--collapsed) {
-    max-width: $euiBreadcrumbTruncateWidth;
+  .wuiBreadcrumb:not(.wuiBreadcrumb--collapsed) {
+    max-width: $wuiBreadcrumbTruncateWidth;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &.euiBreadcrumb--last {
+    &.wuiBreadcrumb--last {
       max-width: none;
     }
   }
 }
 
-.euiBreadcrumb--truncate {
+.wuiBreadcrumb--truncate {
   @include euiTextTruncate;
-  max-width: $euiBreadcrumbTruncateWidth;
+  max-width: $wuiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
 }

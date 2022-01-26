@@ -1,5 +1,5 @@
-.euiButtonIcon {
-  @include euiButton;
+.wuiButtonIcon {
+  @include wuiButton;
 
   border: none;
   background-color: transparent;
@@ -9,7 +9,7 @@
   min-width: $euiSizeL;
   line-height: 0; // ensures the icon creates the line-height and so it's always vertically centered
   padding: $euiSizeXS;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
 
   & > svg {
     // prevents the element and its children from receiving any pointer events to fix not bubbling click event in Safari
@@ -18,10 +18,10 @@
   }
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $wuiButtonColorDisabledText;
     pointer-events: none;
 
-    .euiButtonIcon__icon {
+    .wuiButtonIcon__icon {
       pointer-events: auto;
       cursor: not-allowed;
     }
@@ -35,8 +35,8 @@
 }
 
 // Create button modifiers based upon the map.
-@each $name, $color in $euiButtonIconTypes {
-  .euiButtonIcon--#{$name} {
+@each $name, $color in $wuiButtonIconTypes {
+  .wuiButtonIcon--#{$name} {
     color: $color;
 
     &:focus {

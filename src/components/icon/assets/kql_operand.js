@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconKqlOperand = ({ title, titleId, ...props }) => (
+const WuiIconKqlOperand = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconKqlOperand = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconKqlOperand;
+export const icon = WuiIconKqlOperand;

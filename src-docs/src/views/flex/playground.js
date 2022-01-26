@@ -1,45 +1,45 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlexGrid,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFlexGrid,
 } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const flexGroupConfig = () => {
-  const docgenInfo = Array.isArray(EuiFlexGroup.__docgenInfo)
-    ? EuiFlexGroup.__docgenInfo[0]
-    : EuiFlexGroup.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFlexGroup.__docgenInfo)
+    ? WuiFlexGroup.__docgenInfo[0]
+    : WuiFlexGroup.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: `<EuiFlexItem>Content grid item</EuiFlexItem>
-    <EuiFlexItem style={{ minWidth: 100 }}>Min-width 300px</EuiFlexItem>
-    <EuiFlexItem component="span">
+    value: `<WuiFlexItem>Content grid item</WuiFlexItem>
+    <WuiFlexItem style={{ minWidth: 100 }}>Min-width 300px</WuiFlexItem>
+    <WuiFlexItem component="span">
     This is a span component
-  </EuiFlexItem>
-    <EuiFlexItem>
+  </WuiFlexItem>
+    <WuiFlexItem>
       <p>Another content grid item</p>
       <p>
         Note how both of these are the same width and height despite having
         different content?
       </p>
-    </EuiFlexItem>`,
+    </WuiFlexItem>`,
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiFlexGroup',
+      componentName: 'WuiFlexGroup',
       props: propsToUse,
       scope: {
-        EuiFlexGroup,
-        EuiFlexItem,
+        WuiFlexGroup,
+        WuiFlexItem,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFlexGroup', 'EuiFlexItem'],
+        '@wazuh/wui': {
+          named: ['WuiFlexGroup', 'WuiFlexItem'],
         },
       },
     },
@@ -48,39 +48,39 @@ export const flexGroupConfig = () => {
 };
 
 export const flexGridConfig = () => {
-  const docgenInfo = Array.isArray(EuiFlexGrid.__docgenInfo)
-    ? EuiFlexGrid.__docgenInfo[0]
-    : EuiFlexGrid.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFlexGrid.__docgenInfo)
+    ? WuiFlexGrid.__docgenInfo[0]
+    : WuiFlexGrid.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: `<EuiFlexItem>Content grid item</EuiFlexItem>
-      <EuiFlexItem style={{ minWidth: 100 }}>Min-width 300px</EuiFlexItem>
-      <EuiFlexItem component="span">
+    value: `<WuiFlexItem>Content grid item</WuiFlexItem>
+      <WuiFlexItem style={{ minWidth: 100 }}>Min-width 300px</WuiFlexItem>
+      <WuiFlexItem component="span">
       This is a span component
-    </EuiFlexItem>
-      <EuiFlexItem>
+    </WuiFlexItem>
+      <WuiFlexItem>
         <p>Another content grid item</p>
         <p>
           Note how both of these are the same width and height despite having
           different content?
         </p>
-      </EuiFlexItem>`,
+      </WuiFlexItem>`,
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiFlexGrid',
+      componentName: 'WuiFlexGrid',
       props: propsToUse,
       scope: {
-        EuiFlexGrid,
-        EuiFlexItem,
+        WuiFlexGrid,
+        WuiFlexItem,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFlexGrid', 'EuiFlexItem'],
+        '@wazuh/wui': {
+          named: ['WuiFlexGrid', 'WuiFlexItem'],
         },
       },
     },

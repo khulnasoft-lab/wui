@@ -21,28 +21,28 @@ export {
   COLORS,
   ButtonColor,
   ButtonSize,
-  EuiButton,
-  EuiButtonProps,
+  WuiButton,
+  WuiButtonProps,
 } from './button';
 
 export {
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
-  EuiButtonEmptySizes,
+  WuiButtonEmpty,
+  WuiButtonEmptyColor,
+  WuiButtonEmptyProps,
+  WuiButtonEmptySizes,
 } from './button_empty';
 
 export {
-  EuiButtonIcon,
-  EuiButtonIconColor,
-  EuiButtonIconProps,
-  EuiButtonIconPropsForButton,
+  WuiButtonIcon,
+  WuiButtonIconColor,
+  WuiButtonIconProps,
+  WuiButtonIconPropsForButton,
 } from './button_icon';
 
-export { EuiButtonToggle, EuiButtonToggleProps } from './button_toggle';
+export { WuiButtonToggle, WuiButtonToggleProps } from './button_toggle';
 
 export {
-  EuiButtonGroup,
-  EuiButtonGroupOption,
-  EuiButtonGroupProps,
+  WuiButtonGroup,
+  WuiButtonGroupOption,
+  WuiButtonGroupProps,
 } from './button_group';

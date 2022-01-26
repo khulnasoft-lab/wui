@@ -18,19 +18,19 @@
  */
 
 import React, { Component } from 'react';
-import { EuiPopover, Props as EuiPopoverProps } from './popover';
-import { EuiPortal } from '../portal';
+import { WuiPopover, Props as WuiPopoverProps } from './popover';
+import { WuiPortal } from '../portal';
 
-interface Props extends EuiPopoverProps {
+interface Props extends WuiPopoverProps {
   button: HTMLElement;
 }
 
 /**
- * Injects the EuiPopover next to the button via EuiPortal
+ * Injects the WuiPopover next to the button via WuiPortal
  * then the button element is moved into the popover dom.
  * On unmount, the button is moved back to its original location.
  */
-export class EuiWrappingPopover extends Component<Props> {
+export class WuiWrappingPopover extends Component<Props> {
   private portal: HTMLElement | null = null;
   private anchor: HTMLElement | null = null;
 
@@ -60,19 +60,19 @@ export class EuiWrappingPopover extends Component<Props> {
     const { button, ...rest } = this.props;
 
     return (
-      <EuiPortal
+      <WuiPortal
         portalRef={this.setPortalRef}
         insert={{ sibling: this.props.button, position: 'after' }}>
-        <EuiPopover
+        <WuiPopover
           {...rest}
           button={
             <div
               ref={this.setAnchorRef}
-              className="euiWrappingPopover__anchor"
+              className="wuiWrappingPopover__anchor"
             />
           }
         />
-      </EuiPortal>
+      </WuiPortal>
     );
   }
 }

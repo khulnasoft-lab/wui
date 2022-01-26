@@ -23,7 +23,7 @@ export const searchSection = {
   text: (
     <div>
       <p>
-        The example shows how to configure <strong>EuiInMemoryTable</strong> to
+        The example shows how to configure <strong>WuiInMemoryTable</strong> to
         display a search bar.
       </p>
     </div>

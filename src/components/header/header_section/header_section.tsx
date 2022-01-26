@@ -25,8 +25,8 @@ import { CommonProps } from '../../common';
 type HeaderSectionSide = 'left' | 'right';
 
 const sideToClassNameMap: { [side in HeaderSectionSide]: string } = {
-  left: 'euiHeaderSection--left',
-  right: 'euiHeaderSection--right',
+  left: 'wuiHeaderSection--left',
+  right: 'wuiHeaderSection--right',
 };
 
 type Props = CommonProps &
@@ -35,7 +35,7 @@ type Props = CommonProps &
     grow?: boolean;
   };
 
-export const EuiHeaderSection: FunctionComponent<Props> = ({
+export const WuiHeaderSection: FunctionComponent<Props> = ({
   side = 'left',
   children,
   className,
@@ -43,10 +43,10 @@ export const EuiHeaderSection: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSection',
+    'wuiHeaderSection',
     {
-      'euiHeaderSection--grow': grow,
-      'euiHeaderSection--dontGrow': !grow,
+      'wuiHeaderSection--grow': grow,
+      'wuiHeaderSection--dontGrow': !grow,
     },
     sideToClassNameMap[side],
     className

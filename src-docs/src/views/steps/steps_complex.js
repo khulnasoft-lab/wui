@@ -1,93 +1,93 @@
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiSteps,
-  EuiText,
-  EuiCodeBlock,
-  EuiSubSteps,
+  WuiCode,
+  WuiSteps,
+  WuiText,
+  WuiCodeBlock,
+  WuiSubSteps,
 } from '../../../../src/components';
 
 const steps = [
   {
     title: 'Step 1 has intro plus code snippet',
     children: (
-      <EuiText>
+      <WuiText>
         <p>Run this code snippet to install things.</p>
-        <EuiCodeBlock language="bash">npm install</EuiCodeBlock>
-      </EuiText>
+        <WuiCodeBlock language="bash">npm install</WuiCodeBlock>
+      </WuiText>
     ),
   },
   {
     title: 'Step 2 has sub steps',
     children: (
-      <EuiText>
+      <WuiText>
         <p>
           In order to complete this step, do the following things{' '}
           <strong>in order</strong>.
         </p>
-        <EuiSubSteps>
+        <WuiSubSteps>
           <ol>
             <li>Do thing 1</li>
             <li>Do thing 2</li>
             <li>Do thing 3</li>
           </ol>
-        </EuiSubSteps>
+        </WuiSubSteps>
         <p>Here are some bullet point reminders.</p>
         <ul>
           <li>Reminder 1</li>
           <li>Reminder 2</li>
           <li>Reminder 3</li>
         </ul>
-      </EuiText>
+      </WuiText>
     ),
   },
   {
     title: 'Step 3 has an intro and one line instruction',
     children: (
-      <EuiText>
+      <WuiText>
         <p>
           Now that you&apos;ve completed step 2, go find the{' '}
-          <EuiCode>thing</EuiCode>.
+          <WuiCode>thing</WuiCode>.
         </p>
-        <p className="euiStep__subSteps">
+        <p className="wuiStep__subSteps">
           Go to <strong>Overview &gt;&gt; Endpoints</strong> note{' '}
-          <strong>Elasticsearch</strong> as <EuiCode>&lt;thing&gt;</EuiCode>.
+          <strong>Elasticsearch</strong> as <WuiCode>&lt;thing&gt;</WuiCode>.
         </p>
-      </EuiText>
+      </WuiText>
     ),
   },
   {
     title: 'The last step has two options',
     children: (
-      <EuiText size="s">
+      <WuiText size="s">
         <h3>
           <strong>Option 1:</strong> If you have this type of instance
         </h3>
-        <EuiSubSteps>
+        <WuiSubSteps>
           <ol>
             <li>Do thing 1</li>
             <li>Do thing 2</li>
             <li>Do thing 3</li>
           </ol>
-        </EuiSubSteps>
+        </WuiSubSteps>
         <h3>
           <strong>Option 2:</strong> If you have the other type of instance
         </h3>
-        <EuiSubSteps>
+        <WuiSubSteps>
           <ol>
             <li>Do thing 1</li>
             <li>Do thing 2</li>
             <li>Do thing 3</li>
           </ol>
-        </EuiSubSteps>
-      </EuiText>
+        </WuiSubSteps>
+      </WuiText>
     ),
   },
 ];
 
 export default () => (
   <div>
-    <EuiSteps headingElement="h2" steps={steps} />
+    <WuiSteps headingElement="h2" steps={steps} />
   </div>
 );

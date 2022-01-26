@@ -1,12 +1,12 @@
-.euiPopoverTitle {
-  @include euiPopoverTitle;
+.wuiPopoverTitle {
+  @include wuiPopoverTitle;
 
   // If the popover's containing panel has padding applied,
   // ensure the title expands to cover that padding and
   // take on the same amount of padding horizontally
 
-  @each $modifier, $amount in $euiPanelPaddingModifiers {
-    .euiPopover__panel.euiPanel--#{$modifier} & {
+  @each $modifier, $amount in $wuiPanelPaddingModifiers {
+    .wuiPopover__panel.wuiPanel--#{$modifier} & {
       padding: $euiSizeM $amount;
       margin: ($amount * -1) ($amount * -1) $amount;
     }

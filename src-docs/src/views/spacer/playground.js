@@ -1,22 +1,22 @@
-import { EuiSpacer } from '../../../../src/components/';
+import { WuiSpacer } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const spacerConfig = () => {
-  const docgenInfo = Array.isArray(EuiSpacer.__docgenInfo)
-    ? EuiSpacer.__docgenInfo[0]
-    : EuiSpacer.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiSpacer.__docgenInfo)
+    ? WuiSpacer.__docgenInfo[0]
+    : WuiSpacer.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiSpacer',
+      componentName: 'WuiSpacer',
       props: propsToUse,
       scope: {
-        EuiSpacer,
+        WuiSpacer,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiSpacer'],
+        '@wazuh/wui': {
+          named: ['WuiSpacer'],
         },
       },
     },

@@ -20,7 +20,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeLabelProps {
+export interface WuiRangeLabelProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -29,13 +29,13 @@ export interface EuiRangeLabelProps {
   side?: 'min' | 'max';
 }
 
-export const EuiRangeLabel: FunctionComponent<EuiRangeLabelProps> = ({
+export const WuiRangeLabel: FunctionComponent<WuiRangeLabelProps> = ({
   children,
   disabled,
   side = 'max',
 }) => {
-  const classes = classNames('euiRangeLabel', `euiRangeLabel--${side}`, {
-    'euiRangeLabel--isDisabled': disabled,
+  const classes = classNames('wuiRangeLabel', `wuiRangeLabel--${side}`, {
+    'wuiRangeLabel--isDisabled': disabled,
   });
   return <label className={classes}>{children}</label>;
 };

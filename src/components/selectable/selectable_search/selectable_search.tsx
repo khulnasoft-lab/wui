@@ -20,12 +20,12 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiFieldSearch, EuiFieldSearchProps } from '../../form';
+import { WuiFieldSearch, WuiFieldSearchProps } from '../../form';
 import { getMatchingOptions } from '../matching_options';
-import { EuiSelectableOption } from '../selectable_option';
+import { WuiSelectableOption } from '../selectable_option';
 
-export type EuiSelectableSearchProps<T> = Omit<
-  EuiFieldSearchProps,
+export type WuiSelectableSearchProps<T> = Omit<
+  WuiFieldSearchProps,
   'onChange'
 > &
   CommonProps & {
@@ -33,10 +33,10 @@ export type EuiSelectableSearchProps<T> = Omit<
      * Passes back (matchingOptions, searchValue)
      */
     onChange: (
-      matchingOptions: Array<EuiSelectableOption<T>>,
+      matchingOptions: Array<WuiSelectableOption<T>>,
       searchValue: string
     ) => void;
-    options: Array<EuiSelectableOption<T>>;
+    options: Array<WuiSelectableOption<T>>;
     defaultValue: string;
     /**
      * The id of the visible list to create the appropriate aria controls
@@ -44,19 +44,19 @@ export type EuiSelectableSearchProps<T> = Omit<
     listId?: string;
   };
 
-export interface EuiSelectableSearchState {
+export interface WuiSelectableSearchState {
   searchValue: string;
 }
 
-export class EuiSelectableSearch<T> extends Component<
-  EuiSelectableSearchProps<T>,
-  EuiSelectableSearchState
+export class WuiSelectableSearch<T> extends Component<
+  WuiSelectableSearchProps<T>,
+  WuiSelectableSearchState
 > {
   static defaultProps = {
     defaultValue: '',
   };
 
-  constructor(props: EuiSelectableSearchProps<T>) {
+  constructor(props: WuiSelectableSearchProps<T>) {
     super(props);
 
     this.state = {
@@ -96,10 +96,10 @@ export class EuiSelectableSearch<T> extends Component<
       ...rest
     } = this.props;
 
-    const classes = classNames('euiSelectableSearch', className);
+    const classes = classNames('wuiSelectableSearch', className);
 
     const ariaPropsIfListIsPresent:
-      | Partial<EuiFieldSearchProps>
+      | Partial<WuiFieldSearchProps>
       | undefined = listId
       ? {
           role: 'combobox',
@@ -111,7 +111,7 @@ export class EuiSelectableSearch<T> extends Component<
       : undefined;
 
     return (
-      <EuiFieldSearch
+      <WuiFieldSearch
         className={classes}
         placeholder={placeholder}
         onSearch={this.onSearchChange}

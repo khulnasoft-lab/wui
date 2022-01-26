@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiButtonToggle, EuiButtonToggleProps } from './button_toggle';
+export { WuiButtonToggle, WuiButtonToggleProps } from './button_toggle';

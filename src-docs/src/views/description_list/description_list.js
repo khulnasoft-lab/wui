@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {
-  EuiDescriptionList,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  WuiDescriptionList,
+  WuiFlexItem,
+  WuiFlexGroup,
+  WuiDescriptionListTitle,
+  WuiDescriptionListDescription,
 } from '../../../../src/components';
 
 const favoriteVideoGames = [
@@ -24,21 +24,21 @@ const favoriteVideoGames = [
   },
 ];
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
-      <EuiDescriptionList listItems={favoriteVideoGames} />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiDescriptionList>
-        <EuiDescriptionListTitle>Dota 2</EuiDescriptionListTitle>
-        <EuiDescriptionListDescription>
+  <WuiFlexGroup>
+    <WuiFlexItem>
+      <WuiDescriptionList listItems={favoriteVideoGames} />
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiDescriptionList>
+        <WuiDescriptionListTitle>Dota 2</WuiDescriptionListTitle>
+        <WuiDescriptionListDescription>
           A videogame that I have spent way too much time on over the years.
-        </EuiDescriptionListDescription>
-        <EuiDescriptionListTitle>Kings Quest VI</EuiDescriptionListTitle>
-        <EuiDescriptionListDescription>
+        </WuiDescriptionListDescription>
+        <WuiDescriptionListTitle>Kings Quest VI</WuiDescriptionListTitle>
+        <WuiDescriptionListDescription>
           The game that forced me to learn DOS.
-        </EuiDescriptionListDescription>
-      </EuiDescriptionList>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+        </WuiDescriptionListDescription>
+      </WuiDescriptionList>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

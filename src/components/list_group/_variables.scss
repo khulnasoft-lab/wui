@@ -1,19 +1,19 @@
-$euiListGroupItemHoverBackground: transparentize($euiColorLightShade, .75);
-$euiListGroupItemHoverBackgroundGhost: transparentize($euiColorGhost, .9);
+$wuiListGroupItemHoverBackground: transparentize($wuiColorLightShade, .75);
+$wuiListGroupItemHoverBackgroundGhost: transparentize($euiColorGhost, .9);
 
-$euiListGroupGutterTypes: (
+$wuiListGroupGutterTypes: (
   gutterSmall: $euiSizeS,
   gutterMedium: $euiSize,
 );
 
-$euiListGroupItemColorTypes: (
-  primary: $euiColorPrimaryText,
+$wuiListGroupItemColorTypes: (
+  primary: $wuiColorPrimaryText,
   text: $euiTextColor,
-  subdued: $euiTextSubduedColor,
+  subdued: $wuiTextSubduedColor,
   ghost: $euiColorGhost,
 );
 
-$euiListGroupItemSizeTypes: (
+$wuiListGroupItemSizeTypes: (
   xSmall: $euiFontSizeXS,
   small: $euiFontSizeS,
   medium: $euiFontSize,

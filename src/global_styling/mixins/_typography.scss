@@ -3,30 +3,30 @@
 
 // Our base fonts
 
-@mixin euiFont {
-  font-family: $euiFontFamily;
-  font-weight: $euiFontWeightRegular;
+@mixin wuiFont {
+  font-family: $wuiFontFamily;
+  font-weight: $wuiFontWeightRegular;
   letter-spacing: -.005em;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-kerning: normal;
 }
 
-@mixin euiCodeFont {
-  font-family: $euiCodeFontFamily;
+@mixin wuiCodeFont {
+  font-family: $wuiCodeFontFamily;
   letter-spacing: normal;
 }
 
-@mixin euiText {
+@mixin wuiText {
   color: $euiTextColor;
-  font-weight: $euiFontWeightRegular;
+  font-weight: $wuiFontWeightRegular;
 }
 
-@mixin euiTitle($size: 'm') {
-  color: $euiTitleColor;
+@mixin wuiTitle($size: 'm') {
+  color: $wuiTitleColor;
 
-  @if (map-has-key($euiTitles, $size)) {
-    @each $property, $value in map-get($euiTitles, $size) {
+  @if (map-has-key($wuiTitles, $size)) {
+    @each $property, $value in map-get($wuiTitles, $size) {
       @if ($property == 'font-size') {
         @include fontSize($value);
       } @else {
@@ -43,31 +43,31 @@
 
 @mixin euiFontSizeXS {
   @include fontSize($euiFontSizeXS);
-  line-height: $euiLineHeight;
+  line-height: $wuiLineHeight;
 }
 
 @mixin euiFontSizeS {
   @include fontSize($euiFontSizeS);
-  line-height: $euiLineHeight;
+  line-height: $wuiLineHeight;
 }
 
 @mixin euiFontSize {
   @include fontSize($euiFontSize);
-  line-height: $euiLineHeight;
+  line-height: $wuiLineHeight;
 }
 
 @mixin euiFontSizeM {
   @include fontSize($euiFontSizeM);
-  line-height: $euiLineHeight;
+  line-height: $wuiLineHeight;
 }
 
 @mixin euiFontSizeL {
   @include fontSize($euiFontSizeL);
-  line-height: $euiLineHeight;
+  line-height: $wuiLineHeight;
 }
 
 @mixin euiFontSizeXL {
-  @each $property, $value in map-get($euiTitles, 'm') {
+  @each $property, $value in map-get($wuiTitles, 'm') {
     @if ($property == 'font-size') {
       @include fontSize($value);
     } @else {
@@ -78,7 +78,7 @@
 }
 
 @mixin euiFontSizeXXL {
-  @each $property, $value in map-get($euiTitles, 'l') {
+  @each $property, $value in map-get($wuiTitles, 'l') {
     @if ($property == 'font-size') {
       @include fontSize($value);
     } @else {
@@ -88,7 +88,7 @@
   line-height: 1.25;
 }
 
-@mixin euiTextBreakWord {
+@mixin wuiTextBreakWord {
   // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
   overflow-wrap: break-word !important; // makes sure the long string will wrap and not bust out of the container
   word-wrap: break-word !important; // spec says, they are literally just alternate names for each other but some browsers support one and not the other
@@ -114,8 +114,8 @@
   word-wrap: normal !important; // 2
 }
 
-@mixin euiNumberFormat {
-  font-feature-settings: $euiFontFeatureSettings, 'tnum' 1; // Fixed-width numbers for tabular data
+@mixin wuiNumberFormat {
+  font-feature-settings: $wuiFontFeatureSettings, 'tnum' 1; // Fixed-width numbers for tabular data
 }
 
 
@@ -125,7 +125,7 @@
 // this mixin will ensure that the sizing is dependent on the boldest
 // weight so it doesn't shifter sibling content.
 
-@mixin euiTextShift($fontWeight: $euiFontWeightBold, $attr: 'data-text') {
+@mixin wuiTextShift($fontWeight: $euiFontWeightBold, $attr: 'data-text') {
   &::after {
     display: block;
     content: attr(#{$attr});

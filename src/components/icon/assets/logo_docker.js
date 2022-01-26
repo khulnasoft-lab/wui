@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconLogoDocker = ({ title, titleId, ...props }) => (
+const WuiIconLogoDocker = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -17,4 +17,4 @@ const EuiIconLogoDocker = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoDocker;
+export const icon = WuiIconLogoDocker;

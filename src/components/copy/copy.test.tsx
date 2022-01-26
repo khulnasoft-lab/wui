@@ -19,15 +19,15 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { EuiCopy } from './copy';
+import { WuiCopy } from './copy';
 import { requiredProps } from '../../test';
 
-describe('EuiCopy', () => {
+describe('WuiCopy', () => {
   test('is rendered', () => {
     const component = shallow(
-      <EuiCopy textToCopy="some text" {...requiredProps}>
+      <WuiCopy textToCopy="some text" {...requiredProps}>
         {copy => <button onClick={copy}>Click to copy input text</button>}
-      </EuiCopy>
+      </WuiCopy>
     );
     expect(component).toMatchSnapshot();
   });
@@ -35,18 +35,18 @@ describe('EuiCopy', () => {
   describe('props', () => {
     test('beforeMessage', () => {
       const component = shallow(
-        <EuiCopy textToCopy="some text" beforeMessage="copy this">
+        <WuiCopy textToCopy="some text" beforeMessage="copy this">
           {copy => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </WuiCopy>
       );
       expect(component.state('tooltipText')).toBe('copy this');
     });
 
     test('afterMessage', () => {
-      const component = shallow<EuiCopy>(
-        <EuiCopy textToCopy="some text" afterMessage="successfuly copied">
+      const component = shallow<WuiCopy>(
+        <WuiCopy textToCopy="some text" afterMessage="successfuly copied">
           {copy => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </WuiCopy>
       );
       const instance = component.instance();
       expect(instance.props.afterMessage).toBe('successfuly copied');

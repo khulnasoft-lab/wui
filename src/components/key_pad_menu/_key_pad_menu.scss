@@ -1,40 +1,40 @@
 /**
  * 1. Default to grid of 3
  */
-.euiKeyPadMenu {
+.wuiKeyPadMenu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: $euiKeyPadMenuSize * 3;
+  width: $wuiKeyPadMenuSize * 3;
 }
 
 /**
  * 1. If this class is applied to a button, we need to override the Chrome default font.
  * 2. If it has a BetaBadge, make sure only the first letter shows
  */
-.euiKeyPadMenuItem {
-  @include euiFont; /* 1 */
+.wuiKeyPadMenuItem {
+  @include wuiFont; /* 1 */
   // Disable indentation for transition legibility
   // sass-lint:disable-block indentation
   display: block;
   padding: $euiSizeXS;
-  height: $euiKeyPadMenuSize;
-  width: $euiKeyPadMenuSize;
+  height: $wuiKeyPadMenuSize;
+  width: $wuiKeyPadMenuSize;
   color: $euiColorDarkShade;
-  border: $euiBorderThin;
+  border: $wuiBorderThin;
   border-color: transparent;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
   transition:
-    border-color $euiAnimSpeedFast ease-in,
-    box-shadow $euiAnimSpeedFast ease-in;
+    border-color $wuiAnimSpeedFast ease-in,
+    box-shadow $wuiAnimSpeedFast ease-in;
 
   &:not(:disabled) {
     &:hover,
     &:focus {
-      @include euiSlightShadow;
-      border-color: $euiBorderColor;
+      @include wuiSlightShadow;
+      border-color: $wuiBorderColor;
 
-      .euiKeyPadMenuItem__icon { // sass-lint:disable-line nesting-depth
+      .wuiKeyPadMenuItem__icon { // sass-lint:disable-line nesting-depth
         transform: translateY(0);
       }
     }
@@ -42,21 +42,21 @@
   }
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $wuiButtonColorDisabledText;
     cursor: not-allowed;
 
-    .euiKeyPadMenuItem__icon  {
+    .wuiKeyPadMenuItem__icon  {
       filter: grayscale(100%);
 
       svg * { // sass-lint:disable-line nesting-depth
-        fill: $euiButtonColorDisabledText;
+        fill: $wuiButtonColorDisabledText;
       }
     }
 
   }
 }
 
-.euiKeyPadMenuItem__inner {
+.wuiKeyPadMenuItem__inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -64,17 +64,17 @@
   align-items: center;
   justify-content: center;
 
-  .euiKeyPadMenuItem--hasBetaBadge & {
+  .wuiKeyPadMenuItem--hasBetaBadge & {
     position: relative;
 
-    .euiKeyPadMenuItem__betaBadgeWrapper {
+    .wuiKeyPadMenuItem__betaBadgeWrapper {
       position: absolute;
       top: $euiSizeXS;
       right: $euiSizeS;
       z-index: 3;
 
       // sass-lint:disable-block nesting-depth
-      .euiKeyPadMenuItem__betaBadge:not(.euiBetaBadge--iconOnly) {
+      .wuiKeyPadMenuItem__betaBadge:not(.wuiBetaBadge--iconOnly) {
         padding: 0 ($euiSizeM / 2);  /* 2 */
         overflow: hidden;  /* 2 */
         letter-spacing: 3rem;  /* 2 */
@@ -83,27 +83,27 @@
   }
 }
 
-.euiKeyPadMenuItem__betaBadge {
-  @include size($euiKeyPadMenuItemBetaBadgeSize);
-  line-height: $euiKeyPadMenuItemBetaBadgeSize;
-  color: $euiColorFullShade;
-  background-color: tintOrShade($euiColorLightShade, 50%, 0%);
+.wuiKeyPadMenuItem__betaBadge {
+  @include size($wuiKeyPadMenuItemBetaBadgeSize);
+  line-height: $wuiKeyPadMenuItemBetaBadgeSize;
+  color: $wuiColorFullShade;
+  background-color: tintOrShade($wuiColorLightShade, 50%, 0%);
   box-shadow: none;
 
-  .euiBetaBadge__icon {
+  .wuiBetaBadge__icon {
     @include size($euiSizeM);
   }
 }
 
-.euiKeyPadMenuItem__icon {
-  transition: transform $euiAnimSpeedNormal $euiAnimSlightBounce;
+.wuiKeyPadMenuItem__icon {
+  transition: transform $euiAnimSpeedNormal $wuiAnimSlightBounce;
   transform: translateY(2px);
   margin-bottom: $euiSizeM;
 }
 
-.euiKeyPadMenuItem__label {
+.wuiKeyPadMenuItem__label {
   font-size: $euiFontSizeXS;
-  font-weight: $euiFontWeightMedium;
+  font-weight: $wuiFontWeightMedium;
   line-height: $euiSize;
   text-align: center;
 }

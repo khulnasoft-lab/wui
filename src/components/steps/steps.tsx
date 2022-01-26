@@ -21,17 +21,17 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-import { EuiStepProps, EuiStep } from './step';
+import { WuiStepProps, WuiStep } from './step';
 
-export type EuiContainedStepProps = Omit<EuiStepProps, 'step'>;
+export type WuiContainedStepProps = Omit<WuiStepProps, 'step'>;
 
-export interface EuiStepsProps
+export interface WuiStepsProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
-   * An array of `EuiStep` objects excluding the `step` prop
+   * An array of `WuiStep` objects excluding the `step` prop
    */
-  steps: EuiContainedStepProps[];
+  steps: WuiContainedStepProps[];
   /**
    * The number the steps should begin from
    */
@@ -41,22 +41,22 @@ export interface EuiStepsProps
    */
   headingElement?: string;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to WuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: EuiStepProps['titleSize'];
+  titleSize?: WuiStepProps['titleSize'];
 }
 
 function renderSteps(
-  steps: EuiContainedStepProps[],
+  steps: WuiContainedStepProps[],
   firstStepNumber: number,
   headingElement: string,
-  titleSize?: EuiStepProps['titleSize']
+  titleSize?: WuiStepProps['titleSize']
 ) {
   return steps.map((step, index) => {
     const { className, children, title, status, ...rest } = step;
 
     return (
-      <EuiStep
+      <WuiStep
         className={className}
         key={index}
         headingElement={headingElement}
@@ -66,12 +66,12 @@ function renderSteps(
         status={status}
         {...rest}>
         {children}
-      </EuiStep>
+      </WuiStep>
     );
   });
 }
 
-export const EuiSteps: FunctionComponent<EuiStepsProps> = ({
+export const WuiSteps: FunctionComponent<WuiStepsProps> = ({
   className,
   firstStepNumber = 1,
   headingElement = 'p',
@@ -79,7 +79,7 @@ export const EuiSteps: FunctionComponent<EuiStepsProps> = ({
   steps,
   ...rest
 }) => {
-  const classes = classNames('euiSteps', className);
+  const classes = classNames('wuiSteps', className);
 
   return (
     <div className={classes} {...rest}>

@@ -1,16 +1,16 @@
-.euiFieldText {
-  @include euiFormControlStyle;
-  @include euiFormControlWithIcon($isIconOptional: true);
-  @include euiFormControlIsLoading;
+.wuiFieldText {
+  @include wuiFormControlStyle;
+  @include wuiFormControlWithIcon($isIconOptional: true);
+  @include wuiFormControlIsLoading;
 
   /* Invalid state normally comes from :invalid, but several components
-  /* like EuiDatePicker need it toggled through an extra class.
+  /* like WuiDatePicker need it toggled through an extra class.
   */
-  &.euiFieldText-isInvalid {
-    @include euiFormControlInvalidStyle;
+  &.wuiFieldText-isInvalid {
+    @include wuiFormControlInvalidStyle;
   }
 }
 
-.euiFieldText--withIcon.euiFieldText--compressed {
-  @include euiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
+.wuiFieldText--withIcon.wuiFieldText--compressed {
+  @include wuiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
 }

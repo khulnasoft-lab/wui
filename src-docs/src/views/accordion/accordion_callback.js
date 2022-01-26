@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { EuiAccordion, EuiText } from '../../../../src/components';
+import { WuiAccordion, WuiText } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiAccordion
+    <WuiAccordion
       id="accordion8"
       buttonContent="I have an `onToggle` callback"
       onToggle={isOpen =>
-        console.log(`EuiAccordion is now ${isOpen ? 'open' : 'closed'}`)
+        console.log(`WuiAccordion is now ${isOpen ? 'open' : 'closed'}`)
       }
       paddingSize="l">
-      <EuiText>
+      <WuiText>
         <p>
-          Any content inside of <strong>EuiAccordion</strong> will appear here.
+          Any content inside of <strong>WuiAccordion</strong> will appear here.
         </p>
-      </EuiText>
-    </EuiAccordion>
+      </WuiText>
+    </WuiAccordion>
   </div>
 );

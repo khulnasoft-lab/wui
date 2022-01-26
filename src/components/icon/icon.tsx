@@ -213,9 +213,7 @@ const typeToPathMap = {
   logoCouchbase: 'logo_couchbase',
   logoDocker: 'logo_docker',
   logoDropwizard: 'logo_dropwizard',
-  logoElastic: 'logo_elastic',
-  logoElasticsearch: 'logo_elasticsearch',
-  logoElasticStack: 'logo_elastic_stack',
+  logoWazuh: 'logo_wazuh',
   logoEnterpriseSearch: 'logo_enterprise_search',
   logoEtcd: 'logo_etcd',
   logoGCP: 'logo_gcp',
@@ -228,7 +226,6 @@ const typeToPathMap = {
   logoIBM: 'logo_ibm',
   logoIBMMono: 'logo_ibm_mono',
   logoKafka: 'logo_kafka',
-  logoKibana: 'logo_kibana',
   logoKubernetes: 'logo_kubernetes',
   logoLogging: 'logo_logging',
   logoLogstash: 'logo_logstash',
@@ -250,7 +247,6 @@ const typeToPathMap = {
   logoSketch: 'logo_sketch',
   logoSlack: 'logo_slack',
   logoUptime: 'logo_uptime',
-  logoWazuh: 'logo_wazuh',
   logoWebhook: 'logo_webhook',
   logoWindows: 'logo_windows',
   logoWorkplaceSearch: 'logo_workplace_search',
@@ -343,7 +339,7 @@ const typeToPathMap = {
   storage: 'storage',
   string: 'string',
   submodule: 'submodule',
-  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for EuiColorPicker
+  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for WuiColorPicker
   symlink: 'symlink',
   tableOfContents: 'tableOfContents',
   tableDensityExpanded: 'table_density_expanded',
@@ -443,21 +439,21 @@ const typeToPathMap = {
 
 export const TYPES = keysOf(typeToPathMap);
 
-export type EuiIconType = keyof typeof typeToPathMap;
+export type WuiIconType = keyof typeof typeToPathMap;
 
-export type IconType = EuiIconType | string | ComponentType;
+export type IconType = WuiIconType | string | ComponentType;
 
 const colorToClassMap = {
   default: null,
-  primary: 'euiIcon--primary',
-  secondary: 'euiIcon--secondary',
-  success: 'euiIcon--success',
-  accent: 'euiIcon--accent',
-  warning: 'euiIcon--warning',
-  danger: 'euiIcon--danger',
-  text: 'euiIcon--text',
-  subdued: 'euiIcon--subdued',
-  ghost: 'euiIcon--ghost',
+  primary: 'wuiIcon--primary',
+  secondary: 'wuiIcon--secondary',
+  success: 'wuiIcon--success',
+  accent: 'wuiIcon--accent',
+  warning: 'wuiIcon--warning',
+  danger: 'wuiIcon--danger',
+  text: 'wuiIcon--text',
+  subdued: 'wuiIcon--subdued',
+  ghost: 'wuiIcon--ghost',
 };
 
 export const COLORS: NamedColor[] = keysOf(colorToClassMap);
@@ -473,25 +469,25 @@ export type IconColor = string | NamedColor;
 
 const sizeToClassNameMap = {
   original: null,
-  s: 'euiIcon--small',
-  m: 'euiIcon--medium',
-  l: 'euiIcon--large',
-  xl: 'euiIcon--xLarge',
-  xxl: 'euiIcon--xxLarge',
+  s: 'wuiIcon--small',
+  m: 'wuiIcon--medium',
+  l: 'wuiIcon--large',
+  xl: 'wuiIcon--xLarge',
+  xxl: 'wuiIcon--xxLarge',
 };
 
 export const SIZES: IconSize[] = keysOf(sizeToClassNameMap);
 
 export type IconSize = keyof typeof sizeToClassNameMap;
 
-export type EuiIconProps = CommonProps &
+export type WuiIconProps = CommonProps &
   Omit<SVGAttributes<SVGElement>, 'type' | 'color' | 'size'> & {
     /**
      * `Enum` is any of the named icons listed in the docs, `string` is usually a URL to an SVG file, and `elementType` is any React SVG component
      */
     type: IconType;
     /**
-     * One of EUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
+     * One of WUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
      * Note that coloring only works if your SVG is removed of fill attributes.
      */
     color?: IconColor;
@@ -524,15 +520,15 @@ interface State {
   neededLoading: boolean; // controls the fade-in animation, cached icons are immediately rendered
 }
 
-function isEuiIconType(x: EuiIconProps['type']): x is EuiIconType {
+function isWuiIconType(x: WuiIconProps['type']): x is WuiIconType {
   return typeof x === 'string' && typeToPathMap.hasOwnProperty(x);
 }
 
-function getInitialIcon(icon: EuiIconProps['type']) {
+function getInitialIcon(icon: WuiIconProps['type']) {
   if (icon == null) {
     return undefined;
   }
-  if (isEuiIconType(icon)) {
+  if (isWuiIconType(icon)) {
     if (iconComponentCache.hasOwnProperty(icon)) {
       return iconComponentCache[icon];
     }
@@ -546,7 +542,7 @@ const generateId = htmlIdGenerator();
 
 let iconComponentCache: { [iconType: string]: ComponentType } = {};
 
-export const clearIconComponentCache = (iconType?: EuiIconType) => {
+export const clearIconComponentCache = (iconType?: WuiIconType) => {
   if (iconType != null) {
     delete iconComponentCache[iconType];
   } else {
@@ -564,16 +560,16 @@ export const appendIconComponentCache = (iconTypeToIconComponentMap: {
   }
 };
 
-export class EuiIcon extends PureComponent<EuiIconProps, State> {
+export class WuiIcon extends PureComponent<WuiIconProps, State> {
   isMounted = true;
-  constructor(props: EuiIconProps) {
+  constructor(props: WuiIconProps) {
     super(props);
 
     const { type } = props;
     const initialIcon = getInitialIcon(type);
     let isLoading = false;
 
-    if (isEuiIconType(type) && initialIcon == null) {
+    if (isWuiIconType(type) && initialIcon == null) {
       isLoading = true;
       this.loadIconComponent(type);
     } else {
@@ -588,10 +584,10 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     };
   }
 
-  componentDidUpdate(prevProps: EuiIconProps) {
+  componentDidUpdate(prevProps: WuiIconProps) {
     const { type } = this.props;
     if (type !== prevProps.type) {
-      if (isEuiIconType(type)) {
+      if (isWuiIconType(type)) {
         // eslint-disable-next-line react/no-did-update-set-state
         this.setState({
           neededLoading: iconComponentCache.hasOwnProperty(type),
@@ -613,7 +609,7 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     this.isMounted = false;
   }
 
-  loadIconComponent = (iconType: EuiIconType) => {
+  loadIconComponent = (iconType: WuiIconType) => {
     if (iconComponentCache.hasOwnProperty(iconType)) {
       // exists in cache
       this.setState({
@@ -687,13 +683,13 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
       (/.+App$/.test(type) || /.+Job$/.test(type) || type === 'dataVisualizer');
 
     const classes = classNames(
-      'euiIcon',
+      'wuiIcon',
       sizeToClassNameMap[size],
       optionalColorClass,
       {
-        'euiIcon--app': isAppIcon,
-        'euiIcon-isLoading': isLoading,
-        'euiIcon-isLoaded': !isLoading && neededLoading,
+        'wuiIcon--app': isAppIcon,
+        'wuiIcon-isLoading': isLoading,
+        'wuiIcon-isLoaded': !isLoading && neededLoading,
       },
       className
     );

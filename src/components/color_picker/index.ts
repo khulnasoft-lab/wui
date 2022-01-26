@@ -17,13 +17,13 @@
  * under the License.
  */
 
-export { EuiColorPicker, EuiColorPickerProps } from './color_picker';
-export { EuiColorPickerSwatch } from './color_picker_swatch';
-export { EuiHue } from './hue';
-export { EuiSaturation } from './saturation';
-export { EuiColorStops } from './color_stops';
+export { WuiColorPicker, WuiColorPickerProps } from './color_picker';
+export { WuiColorPickerSwatch } from './color_picker_swatch';
+export { WuiHue } from './hue';
+export { WuiSaturation } from './saturation';
+export { WuiColorStops } from './color_stops';
 export {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerProps,
-  EuiColorPalettePickerPaletteProps,
+  WuiColorPalettePicker,
+  WuiColorPalettePickerProps,
+  WuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';

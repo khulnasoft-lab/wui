@@ -22,21 +22,21 @@ import classnames from 'classnames';
 import { keys } from '../../services';
 import tabbable from 'tabbable';
 import {
-  EuiDataGridControlColumn,
-  EuiDataGridFocusedCell,
+  WuiDataGridControlColumn,
+  WuiDataGridFocusedCell,
 } from './data_grid_types';
-import { EuiDataGridDataRowProps } from './data_grid_data_row';
+import { WuiDataGridDataRowProps } from './data_grid_data_row';
 
-export interface EuiDataGridControlHeaderRowProps {
+export interface WuiDataGridControlHeaderRowProps {
   index: number;
-  controlColumn: EuiDataGridControlColumn;
-  focusedCell?: EuiDataGridFocusedCell;
-  setFocusedCell: EuiDataGridDataRowProps['onCellFocus'];
+  controlColumn: WuiDataGridControlColumn;
+  focusedCell?: WuiDataGridFocusedCell;
+  setFocusedCell: WuiDataGridDataRowProps['onCellFocus'];
   headerIsInteractive: boolean;
   className?: string;
 }
 
-export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlHeaderRowProps> = props => {
+export const WuiDataGridControlHeaderCell: FunctionComponent<WuiDataGridControlHeaderRowProps> = props => {
   const {
     controlColumn,
     index,
@@ -48,7 +48,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
 
   const { headerCellRender: HeaderCellRender, width, id } = controlColumn;
 
-  const classes = classnames('euiDataGridHeaderCell', className);
+  const classes = classnames('wuiDataGridHeaderCell', className);
 
   const headerRef = useRef<HTMLDivElement>(null);
   const isFocused =
@@ -59,7 +59,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
     if (headerRef.current) {
       function enableInteractives() {
         const interactiveElements = headerRef.current!.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-wuigrid-tab-managed]'
         );
         for (let i = 0; i < interactiveElements.length; i++) {
           interactiveElements[i].setAttribute('tabIndex', '0');
@@ -70,12 +70,12 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
         const tababbles = tabbable(headerRef.current!);
         if (tababbles.length > 1) {
           console.warn(
-            `EuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
+            `WuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
           );
         }
         for (let i = 0; i < tababbles.length; i++) {
           const element = tababbles[i];
-          element.setAttribute('data-euigrid-tab-managed', 'true');
+          element.setAttribute('data-wuigrid-tab-managed', 'true');
           element.setAttribute('tabIndex', '-1');
         }
       }
@@ -96,7 +96,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
     if (headerRef.current) {
       if (isFocused) {
         const interactives = headerRef.current.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-wuigrid-tab-managed]'
         );
         if (interactives.length === 1) {
           setIsCellEntered(true);
@@ -183,7 +183,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
       className={classes}
       data-test-subj={`dataGridHeaderCell-${id}`}
       style={width != null ? { width: `${width}px` } : {}}>
-      <div className="euiDataGridHeaderCell__content">
+      <div className="wuiDataGridHeaderCell__content">
         <HeaderCellRender />
       </div>
     </div>

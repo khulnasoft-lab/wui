@@ -25,7 +25,7 @@ import React, {
 import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
-interface EuiFormLabelCommonProps {
+interface WuiFormLabelCommonProps {
   isFocused?: boolean;
   isInvalid?: boolean;
   /**
@@ -37,28 +37,28 @@ interface EuiFormLabelCommonProps {
 
 type LabelProps = {
   type?: 'label';
-} & EuiFormLabelCommonProps &
+} & WuiFormLabelCommonProps &
   LabelHTMLAttributes<HTMLLabelElement>;
 
 type LegendProps = {
   type: 'legend';
-} & EuiFormLabelCommonProps &
+} & WuiFormLabelCommonProps &
   HTMLAttributes<HTMLLegendElement>;
 
-export type EuiFormLabelProps = CommonProps &
+export type WuiFormLabelProps = CommonProps &
   ExclusiveUnion<LabelProps, LegendProps>;
 
-export const EuiFormLabel: FunctionComponent<EuiFormLabelProps> = ({
+export const WuiFormLabel: FunctionComponent<WuiFormLabelProps> = ({
   type = 'label',
   isFocused,
   isInvalid,
   children,
   className,
   ...rest
-}: EuiFormLabelProps) => {
-  const classes = classNames('euiFormLabel', className, {
-    'euiFormLabel-isFocused': isFocused,
-    'euiFormLabel-isInvalid': isInvalid,
+}: WuiFormLabelProps) => {
+  const classes = classNames('wuiFormLabel', className, {
+    'wuiFormLabel-isFocused': isFocused,
+    'wuiFormLabel-isInvalid': isInvalid,
   });
 
   if (type === 'legend') {

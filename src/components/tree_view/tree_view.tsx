@@ -20,14 +20,14 @@
 import React, { Component, HTMLAttributes, createContext } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiText } from '../text';
+import { WuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiText } from '../text';
 import { keys, htmlIdGenerator } from '../../services';
 
-const EuiTreeViewContext = createContext<string>('');
-const treeIdGenerator = htmlIdGenerator('euiTreeView');
+const WuiTreeViewContext = createContext<string>('');
+const treeIdGenerator = htmlIdGenerator('wuiTreeView');
 
 function hasAriaLabel(
   x: HTMLAttributes<HTMLUListElement>
@@ -36,7 +36,7 @@ function hasAriaLabel(
 }
 
 export interface Node {
-  /** An array of EuiTreeViewNodes to render as children
+  /** An array of WuiTreeViewNodes to render as children
    */
   children?: Node[];
   /** The readable label for the item
@@ -68,16 +68,16 @@ export interface Node {
   callback?(): string;
 }
 
-export type EuiTreeViewDisplayOptions = 'default' | 'compressed';
+export type WuiTreeViewDisplayOptions = 'default' | 'compressed';
 
 const displayToClassNameMap: {
-  [option in EuiTreeViewDisplayOptions]: string | null;
+  [option in WuiTreeViewDisplayOptions]: string | null;
 } = {
   default: null,
-  compressed: 'euiTreeView--compressed',
+  compressed: 'wuiTreeView--compressed',
 };
 
-interface EuiTreeViewState {
+interface WuiTreeViewState {
   openItems: string[];
   activeItem: string;
   treeID: string;
@@ -86,12 +86,12 @@ interface EuiTreeViewState {
 
 export type CommonTreeProps = CommonProps &
   HTMLAttributes<HTMLUListElement> & {
-    /** An array of EuiTreeViewNodes
+    /** An array of WuiTreeViewNodes
      */
     items: Node[];
     /** Optionally use a variation with smaller text and icon sizes
      */
-    display?: EuiTreeViewDisplayOptions;
+    display?: WuiTreeViewDisplayOptions;
     /** Set all items to open on initial load
      */
     expandByDefault?: boolean;
@@ -101,16 +101,16 @@ export type CommonTreeProps = CommonProps &
     showExpansionArrows?: boolean;
   };
 
-export type EuiTreeViewProps = Omit<
+export type WuiTreeViewProps = Omit<
   CommonTreeProps,
   'aria-label' | 'aria-labelledby'
 > &
   ({ 'aria-label': string } | { 'aria-labelledby': string });
 
-export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
-  static contextType = EuiTreeViewContext;
+export class WuiTreeView extends Component<WuiTreeViewProps, WuiTreeViewState> {
+  static contextType = WuiTreeViewContext;
   isNested: boolean = !!this.context;
-  state: EuiTreeViewState = {
+  state: WuiTreeViewState = {
     openItems: this.props.expandByDefault
       ? this.props.items
           .map<string>(({ id, children }) =>
@@ -174,7 +174,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
       case keys.ARROW_DOWN: {
         const nodeButtons = Array.from(
           document.querySelectorAll(
-            `[data-test-subj="euiTreeViewButton-${this.state.treeID}"]`
+            `[data-test-subj="wuiTreeViewButton-${this.state.treeID}"]`
           )
         );
         const currentIndex = nodeButtons.indexOf(event.currentTarget);
@@ -191,7 +191,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
       case keys.ARROW_UP: {
         const nodeButtons = Array.from(
           document.querySelectorAll(
-            `[data-test-subj="euiTreeViewButton-${this.state.treeID}"]`
+            `[data-test-subj="wuiTreeViewButton-${this.state.treeID}"]`
           )
         );
         const currentIndex = nodeButtons.indexOf(event.currentTarget);
@@ -246,29 +246,29 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
 
     // Computed classNames
     const classes = classNames(
-      'euiTreeView',
+      'wuiTreeView',
       display ? displayToClassNameMap[display] : null,
-      { 'euiTreeView--withArrows': showExpansionArrows },
+      { 'wuiTreeView--withArrows': showExpansionArrows },
       className
     );
 
     const instructionsId = `${this.state.treeID}--instruction`;
 
     return (
-      <EuiTreeViewContext.Provider value={this.state.treeID}>
-        <EuiText
+      <WuiTreeViewContext.Provider value={this.state.treeID}>
+        <WuiText
           size={display === 'compressed' ? 's' : 'm'}
-          className="euiTreeView__wrapper">
+          className="wuiTreeView__wrapper">
           {!this.isNested && (
-            <EuiI18n
-              token="euiTreeView.listNavigationInstructions"
+            <WuiI18n
+              token="wuiTreeView.listNavigationInstructions"
               default="You can quickly navigate this list using arrow keys.">
               {(listNavigationInstructions: string) => (
-                <EuiScreenReaderOnly>
+                <WuiScreenReaderOnly>
                   <p id={instructionsId}>{listNavigationInstructions}</p>
-                </EuiScreenReaderOnly>
+                </WuiScreenReaderOnly>
               )}
-            </EuiI18n>
+            </WuiI18n>
           )}
           <ul
             className={classes}
@@ -279,9 +279,9 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
               const buttonId = `${this.state.treeID}--${index}--node`;
 
               return (
-                <EuiI18n
+                <WuiI18n
                   key={node.label + index}
-                  token="euiTreeView.ariaLabel"
+                  token="wuiTreeView.ariaLabel"
                   default="{nodeLabel} child of {ariaLabel}"
                   values={{
                     nodeLabel: node.label,
@@ -299,18 +299,18 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                         };
 
                     const nodeClasses = classNames(
-                      'euiTreeView__node',
+                      'wuiTreeView__node',
                       display ? displayToClassNameMap[display] : null,
-                      { 'euiTreeView__node--expanded': this.isNodeOpen(node) }
+                      { 'wuiTreeView__node--expanded': this.isNodeOpen(node) }
                     );
 
                     const nodeButtonClasses = classNames(
-                      'euiTreeView__nodeInner',
+                      'wuiTreeView__nodeInner',
                       showExpansionArrows && node.children
-                        ? 'euiTreeView__nodeInner--withArrows'
+                        ? 'wuiTreeView__nodeInner--withArrows'
                         : null,
                       this.state.activeItem === node.id
-                        ? 'euiTreeView__node--active'
+                        ? 'wuiTreeView__node--active'
                         : null,
                       node.className ? node.className : null
                     );
@@ -320,18 +320,18 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                         <li className={nodeClasses}>
                           <button
                             id={buttonId}
-                            aria-controls={`euiNestedTreeView-${this.state.treeID}`}
+                            aria-controls={`wuiNestedTreeView-${this.state.treeID}`}
                             aria-expanded={this.isNodeOpen(node)}
                             ref={ref => this.setButtonRef(ref, index)}
-                            data-test-subj={`euiTreeViewButton-${this.state.treeID}`}
+                            data-test-subj={`wuiTreeViewButton-${this.state.treeID}`}
                             onKeyDown={(event: React.KeyboardEvent) =>
                               this.onKeyDown(event, node)
                             }
                             onClick={() => this.handleNodeClick(node)}
                             className={nodeButtonClasses}>
                             {showExpansionArrows && node.children ? (
-                              <EuiIcon
-                                className="euiTreeView__expansionArrow"
+                              <WuiIcon
+                                className="wuiTreeView__expansionArrow"
                                 size={display === 'compressed' ? 's' : 'm'}
                                 type={
                                   this.isNodeOpen(node)
@@ -341,26 +341,26 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                               />
                             ) : null}
                             {node.icon && !node.useEmptyIcon ? (
-                              <span className="euiTreeView__iconWrapper">
+                              <span className="wuiTreeView__iconWrapper">
                                 {this.isNodeOpen(node) && node.iconWhenExpanded
                                   ? node.iconWhenExpanded
                                   : node.icon}
                               </span>
                             ) : null}
                             {node.useEmptyIcon && !node.icon ? (
-                              <span className="euiTreeView__iconPlaceholder" />
+                              <span className="wuiTreeView__iconPlaceholder" />
                             ) : null}
-                            <span className="euiTreeView__nodeLabel">
+                            <span className="wuiTreeView__nodeLabel">
                               {node.label}
                             </span>
                           </button>
                           <div
-                            id={`euiNestedTreeView-${this.state.treeID}`}
+                            id={`wuiNestedTreeView-${this.state.treeID}`}
                             onKeyDown={(event: React.KeyboardEvent) =>
                               this.onChildrenKeydown(event, index)
                             }>
                             {node.children && this.isNodeOpen(node) ? (
-                              <EuiTreeView
+                              <WuiTreeView
                                 items={node.children}
                                 display={display}
                                 showExpansionArrows={showExpansionArrows}
@@ -373,12 +373,12 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                       </React.Fragment>
                     );
                   }}
-                </EuiI18n>
+                </WuiI18n>
               );
             })}
           </ul>
-        </EuiText>
-      </EuiTreeViewContext.Provider>
+        </WuiText>
+      </WuiTreeViewContext.Provider>
     );
   }
 }

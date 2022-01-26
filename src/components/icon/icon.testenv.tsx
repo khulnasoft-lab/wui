@@ -19,9 +19,9 @@
 
 import React, { ComponentType } from 'react';
 
-export const EuiIcon = ({ type, ...rest }: any) => (
+export const WuiIcon = ({ type, ...rest }: any) => (
   <div
-    data-euiicon-type={
+    data-wuiicon-type={
       typeof type === 'string' ? type : type.displayName || type.name
     }
     {...rest}
@@ -31,7 +31,7 @@ export const EuiIcon = ({ type, ...rest }: any) => (
 export const appendIconComponentCache = (_: {
   [iconType: string]: ComponentType;
 }) => {
-  // manually appending to the internal EuiIcon cache is out-of-scope of this test environment
+  // manually appending to the internal WuiIcon cache is out-of-scope of this test environment
 };
 
 export const TYPES = [];

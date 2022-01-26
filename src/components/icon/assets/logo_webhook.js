@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconLogoWebhook = ({ title, titleId, ...props }) => (
+const WuiIconLogoWebhook = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -26,4 +26,4 @@ const EuiIconLogoWebhook = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoWebhook;
+export const icon = WuiIconLogoWebhook;

@@ -21,14 +21,14 @@ import React, { Component, HTMLAttributes, ReactNode } from 'react';
 import { CommonProps } from '../common';
 import PropTypes from 'prop-types';
 
-import { EuiText } from '../text';
+import { WuiText } from '../text';
 
-interface EuiErrorBoundaryState {
+interface WuiErrorBoundaryState {
   hasError: boolean;
   error?: Error;
 }
 
-export type EuiErrorBoundaryProps = CommonProps &
+export type WuiErrorBoundaryProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * ReactNode to render as this component's content
@@ -36,18 +36,18 @@ export type EuiErrorBoundaryProps = CommonProps &
     children: ReactNode;
   };
 
-export class EuiErrorBoundary extends Component<
-  EuiErrorBoundaryProps,
-  EuiErrorBoundaryState
+export class WuiErrorBoundary extends Component<
+  WuiErrorBoundaryProps,
+  WuiErrorBoundaryState
 > {
   static propTypes = {
     children: PropTypes.node,
   };
 
-  constructor(props: EuiErrorBoundaryProps) {
+  constructor(props: WuiErrorBoundaryProps) {
     super(props);
 
-    const errorState: EuiErrorBoundaryState = {
+    const errorState: WuiErrorBoundaryState = {
       hasError: false,
       error: undefined,
     };
@@ -69,14 +69,14 @@ export class EuiErrorBoundary extends Component<
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        <div className="euiErrorBoundary" {...rest}>
-          <div className="euiErrorBoundary__text">
-            <EuiText size="xs">
+        <div className="wuiErrorBoundary" {...rest}>
+          <div className="wuiErrorBoundary__text">
+            <WuiText size="xs">
               <h1>Error</h1>
-              <pre className="euiErrorBoundary__stack">
+              <pre className="wuiErrorBoundary__stack">
                 <p>{this.state.error && this.state.error.stack}</p>
               </pre>
-            </EuiText>
+            </WuiText>
           </div>
         </div>
       );

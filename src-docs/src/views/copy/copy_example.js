@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCopy, EuiCode } from '../../../../src/components';
+import { WuiCopy, WuiCode } from '../../../../src/components';
 
 import Copy from './copy';
 const copySource = require('!!raw-loader!./copy');
@@ -26,19 +26,19 @@ export const CopyExample = {
       ],
       text: (
         <p>
-          The <strong>EuiCopy</strong> component is a utility for copying text
+          The <strong>WuiCopy</strong> component is a utility for copying text
           to clipboard. Wrap a function that returns a component. The first
-          argument will be a <EuiCode>copy</EuiCode> function.
+          argument will be a <WuiCode>copy</WuiCode> function.
         </p>
       ),
-      components: { EuiCopy },
+      components: { WuiCopy },
       demo: <Copy />,
-      props: { EuiCopy },
-      snippet: `<EuiCopy textToCopy={textToCopy}>
+      props: { WuiCopy },
+      snippet: `<WuiCopy textToCopy={textToCopy}>
   {copy => (
-    <EuiButton onClick={copy}>Click to copy</EuiButton>
+    <WuiButton onClick={copy}>Click to copy</WuiButton>
   )}
-</EuiCopy>`,
+</WuiCopy>`,
     },
   ],
 };

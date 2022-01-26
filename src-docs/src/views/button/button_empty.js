@@ -1,298 +1,298 @@
 import React from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components/';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty onClick={() => window.alert('Button clicked')}>
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty onClick={() => window.alert('Button clicked')}>
           Primary
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty size="s" onClick={() => window.alert('Button clicked')}>
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty size="s" onClick={() => window.alert('Button clicked')}>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           size="xs"
           onClick={() => window.alert('Button clicked')}>
           extra small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           Primary
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           Primary
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}>
           Danger
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="xs"
           onClick={() => window.alert('Button clicked')}>
           extra small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           Danger
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           Danger
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           onClick={() => window.alert('Button clicked')}>
           Text
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           size="s"
           onClick={() => window.alert('Button clicked')}>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           size="xs"
           onClick={() => window.alert('Button clicked')}>
           extra small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           Text
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           Text
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="text"
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right">
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}
           isDisabled>
           Disabled
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}
           isDisabled>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="xs"
           onClick={() => window.alert('Button clicked')}
           isDisabled>
           extra small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           onClick={() => window.alert('Button clicked')}
           isLoading>
           Loading
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           onClick={() => window.alert('Button clicked')}
           isLoading
           iconSide="right">
           Loading
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           isDisabled>
           Disabled
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           isDisabled>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           onClick={() => window.alert('Button clicked')}
           iconType="arrowDown"
           iconSide="right"
           isDisabled>
           Disabled
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}
@@ -300,8 +300,8 @@ export default () => (
           iconSide="right"
           isDisabled>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

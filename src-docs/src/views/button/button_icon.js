@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButtonIcon,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 const colors = [
@@ -18,17 +18,17 @@ const colors = [
 ];
 
 export default () => (
-  <EuiFlexGroup gutterSize="s" alignItems="center">
+  <WuiFlexGroup gutterSize="s" alignItems="center">
     {colors.map(color => (
-      <EuiFlexItem key={color} grow={false}>
-        <EuiButtonIcon
+      <WuiFlexItem key={color} grow={false}>
+        <WuiButtonIcon
           color={color}
           onClick={() => window.alert('Button clicked')}
           iconType="arrowRight"
           aria-label="Next"
           disabled={color === 'disabled' ? true : false}
         />
-      </EuiFlexItem>
+      </WuiFlexItem>
     ))}
-  </EuiFlexGroup>
+  </WuiFlexGroup>
 );

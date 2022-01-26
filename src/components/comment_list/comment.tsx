@@ -20,23 +20,23 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EuiCommentEvent, EuiCommentEventProps } from './comment_event';
+import { WuiCommentEvent, WuiCommentEventProps } from './comment_event';
 import {
-  EuiCommentTimeline,
-  EuiCommentTimelineProps,
+  WuiCommentTimeline,
+  WuiCommentTimelineProps,
 } from './comment_timeline';
 
-export interface EuiCommentProps
+export interface WuiCommentProps
   extends HTMLAttributes<HTMLDivElement>,
-    EuiCommentEventProps,
-    EuiCommentTimelineProps {}
+    WuiCommentEventProps,
+    WuiCommentTimelineProps {}
 
 const typeToClassNameMap = {
   regular: '',
-  update: 'euiComment--update',
+  update: 'wuiComment--update',
 };
 
-export const EuiComment: FunctionComponent<EuiCommentProps> = ({
+export const WuiComment: FunctionComponent<WuiCommentProps> = ({
   children,
   className,
   username,
@@ -48,23 +48,23 @@ export const EuiComment: FunctionComponent<EuiCommentProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiComment',
+    'wuiComment',
     typeToClassNameMap[type],
-    { 'euiComment--hasBody': children },
+    { 'wuiComment--hasBody': children },
     className
   );
 
   return (
     <div className={classes} {...rest}>
-      <EuiCommentTimeline type={type} timelineIcon={timelineIcon} />
-      <EuiCommentEvent
+      <WuiCommentTimeline type={type} timelineIcon={timelineIcon} />
+      <WuiCommentEvent
         username={username}
         actions={actions}
         event={event}
         timestamp={timestamp}
         type={type}>
         {children}
-      </EuiCommentEvent>
+      </WuiCommentEvent>
     </div>
   );
 };

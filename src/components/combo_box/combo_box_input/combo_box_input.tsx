@@ -26,23 +26,23 @@ import React, {
 import classNames from 'classnames';
 import AutosizeInput from 'react-input-autosize';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { WuiScreenReaderOnly } from '../../accessibility';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../../form/form_control_layout';
-import { EuiComboBoxPill } from './combo_box_pill';
+import { WuiComboBoxPill } from './combo_box_pill';
 import { htmlIdGenerator } from '../../../services';
-import { EuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
+import { WuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
 import {
-  EuiComboBoxOptionOption,
-  EuiComboBoxSingleSelectionShape,
+  WuiComboBoxOptionOption,
+  WuiComboBoxSingleSelectionShape,
   OptionHandler,
   UpdatePositionHandler,
 } from '../types';
 import { CommonProps } from '../../common';
 
-export interface EuiComboBoxInputProps<T> extends CommonProps {
+export interface WuiComboBoxInputProps<T> extends CommonProps {
   autoSizeInputRef?: RefCallback<AutosizeInput & HTMLInputElement>;
   compressed: boolean;
   focusedOptionId?: string;
@@ -64,25 +64,25 @@ export interface EuiComboBoxInputProps<T> extends CommonProps {
   placeholder?: string;
   rootId: ReturnType<typeof htmlIdGenerator>;
   searchValue: string;
-  selectedOptions?: Array<EuiComboBoxOptionOption<T>>;
-  singleSelection?: boolean | EuiComboBoxSingleSelectionShape;
+  selectedOptions?: Array<WuiComboBoxOptionOption<T>>;
+  singleSelection?: boolean | WuiComboBoxSingleSelectionShape;
   toggleButtonRef?: RefCallback<HTMLButtonElement | HTMLSpanElement>;
   updatePosition: UpdatePositionHandler;
   value?: string;
-  prepend?: EuiFormControlLayoutProps['prepend'];
-  append?: EuiFormControlLayoutProps['append'];
+  prepend?: WuiFormControlLayoutProps['prepend'];
+  append?: WuiFormControlLayoutProps['append'];
   isLoading?: boolean;
 }
 
-interface EuiComboBoxInputState {
+interface WuiComboBoxInputState {
   hasFocus: boolean;
 }
 
-export class EuiComboBoxInput<T> extends Component<
-  EuiComboBoxInputProps<T>,
-  EuiComboBoxInputState
+export class WuiComboBoxInput<T> extends Component<
+  WuiComboBoxInputProps<T>,
+  WuiComboBoxInputState
 > {
-  state: EuiComboBoxInputState = {
+  state: WuiComboBoxInputState = {
     hasFocus: false,
   };
 
@@ -109,7 +109,7 @@ export class EuiComboBoxInput<T> extends Component<
     });
   };
 
-  componentDidUpdate(prevProps: EuiComboBoxInputProps<T>) {
+  componentDidUpdate(prevProps: WuiComboBoxInputProps<T>) {
     const { searchValue } = prevProps;
 
     // We need to update the position of everything if the user enters enough input to change
@@ -176,7 +176,7 @@ export class EuiComboBoxInput<T> extends Component<
               ? undefined
               : onRemoveOption;
           return (
-            <EuiComboBoxPill
+            <WuiComboBoxPill
               option={option}
               onClose={pillOnClose}
               key={label.toLowerCase()}
@@ -186,7 +186,7 @@ export class EuiComboBoxInput<T> extends Component<
               asPlainText={asPlainText}
               {...rest}>
               {label}
-            </EuiComboBoxPill>
+            </WuiComboBoxPill>
           );
         })
       : null;
@@ -215,11 +215,11 @@ export class EuiComboBoxInput<T> extends Component<
       // We'll use aria-hidden to prevent default aria information from being read by the screen
       // reader.
       removeOptionMessage = (
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <span aria-live="assertive" id={removeOptionMessageId}>
             {removeOptionMessageContent}
           </span>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       );
     }
 
@@ -232,11 +232,11 @@ export class EuiComboBoxInput<T> extends Component<
       !searchValue
     ) {
       placeholderMessage = (
-        <p className="euiComboBoxPlaceholder">{placeholder}</p>
+        <p className="wuiComboBoxPlaceholder">{placeholder}</p>
       );
     }
 
-    const clickProps: EuiFormControlLayoutIconsProps = {};
+    const clickProps: WuiFormControlLayoutIconsProps = {};
     if (!isDisabled && onClear && hasSelectedOptions) {
       clickProps.clear = {
         'data-test-subj': 'comboBoxClearButton',
@@ -244,7 +244,7 @@ export class EuiComboBoxInput<T> extends Component<
       };
     }
 
-    let icon: EuiFormControlLayoutIconsProps['icon'];
+    let icon: WuiFormControlLayoutIconsProps['icon'];
     if (!noIcon) {
       icon = {
         'aria-label': isListOpen
@@ -259,17 +259,17 @@ export class EuiComboBoxInput<T> extends Component<
       };
     }
 
-    const wrapClasses = classNames('euiComboBox__inputWrap', {
-      'euiComboBox__inputWrap--compressed': compressed,
-      'euiComboBox__inputWrap--fullWidth': fullWidth,
-      'euiComboBox__inputWrap--noWrap': singleSelection,
-      'euiComboBox__inputWrap-isLoading': isLoading,
-      'euiComboBox__inputWrap-isClearable': onClear,
-      'euiComboBox__inputWrap--inGroup': prepend || append,
+    const wrapClasses = classNames('wuiComboBox__inputWrap', {
+      'wuiComboBox__inputWrap--compressed': compressed,
+      'wuiComboBox__inputWrap--fullWidth': fullWidth,
+      'wuiComboBox__inputWrap--noWrap': singleSelection,
+      'wuiComboBox__inputWrap-isLoading': isLoading,
+      'wuiComboBox__inputWrap-isClearable': onClear,
+      'wuiComboBox__inputWrap--inGroup': prepend || append,
     });
 
     return (
-      <EuiFormControlLayout
+      <WuiFormControlLayout
         icon={icon}
         {...clickProps}
         isLoading={isLoading}
@@ -288,7 +288,7 @@ export class EuiComboBoxInput<T> extends Component<
           <AutosizeInput
             aria-activedescendant={focusedOptionId}
             aria-controls={isListOpen ? rootId('listbox') : ''}
-            className="euiComboBox__input"
+            className="wuiComboBox__input"
             data-test-subj="comboBoxSearchInput"
             disabled={isDisabled}
             id={id}
@@ -303,7 +303,7 @@ export class EuiComboBoxInput<T> extends Component<
           />
           {removeOptionMessage}
         </div>
-      </EuiFormControlLayout>
+      </WuiFormControlLayout>
     );
   }
 }

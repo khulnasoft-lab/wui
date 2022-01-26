@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox, EuiFormRow } from '../../../../src/components';
+import { WuiComboBox, WuiFormRow } from '../../../../src/components';
 
 const options = [
   {
@@ -65,8 +65,8 @@ export default () => {
   };
 
   return (
-    <EuiFormRow error={error} isInvalid={error !== undefined}>
-      <EuiComboBox
+    <WuiFormRow error={error} isInvalid={error !== undefined}>
+      <WuiComboBox
         placeholder="Select one or more options"
         options={options}
         selectedOptions={selectedOptions}
@@ -75,6 +75,6 @@ export default () => {
         onSearchChange={onSearchChange}
         onBlur={onBlur}
       />
-    </EuiFormRow>
+    </WuiFormRow>
   );
 };

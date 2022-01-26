@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiButtonGroup is rendered 1`] = `
+exports[`WuiButtonGroup is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
     aria-label="aria-label"
-    class="euiButtonGroup euiButtonGroup--s testClass1 testClass2"
+    class="wuiButtonGroup wuiButtonGroup--s testClass1 testClass2"
   />
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props buttonSize compressed is rendered 1`] = `
+exports[`WuiButtonGroup props buttonSize compressed is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--compressed"
+    class="wuiButtonGroup wuiButtonGroup--compressed"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -45,25 +45,25 @@ exports[`EuiButtonGroup props buttonSize compressed is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -71,25 +71,25 @@ exports[`EuiButtonGroup props buttonSize compressed is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -100,33 +100,33 @@ exports[`EuiButtonGroup props buttonSize compressed is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props buttonSize m is rendered 1`] = `
+exports[`WuiButtonGroup props buttonSize m is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--m"
+    class="wuiButtonGroup wuiButtonGroup--m"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -134,25 +134,25 @@ exports[`EuiButtonGroup props buttonSize m is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -160,25 +160,25 @@ exports[`EuiButtonGroup props buttonSize m is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -189,33 +189,33 @@ exports[`EuiButtonGroup props buttonSize m is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props buttonSize s is rendered 1`] = `
+exports[`WuiButtonGroup props buttonSize s is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -223,25 +223,25 @@ exports[`EuiButtonGroup props buttonSize s is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -249,25 +249,25 @@ exports[`EuiButtonGroup props buttonSize s is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -278,33 +278,33 @@ exports[`EuiButtonGroup props buttonSize s is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color danger is rendered 1`] = `
+exports[`WuiButtonGroup props color danger is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--danger euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--danger wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -312,25 +312,25 @@ exports[`EuiButtonGroup props color danger is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--danger euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--danger wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -338,25 +338,25 @@ exports[`EuiButtonGroup props color danger is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--danger euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--danger wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -367,33 +367,33 @@ exports[`EuiButtonGroup props color danger is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color ghost is rendered 1`] = `
+exports[`WuiButtonGroup props color ghost is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--ghost euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--ghost wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -401,25 +401,25 @@ exports[`EuiButtonGroup props color ghost is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--ghost euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--ghost wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -427,25 +427,25 @@ exports[`EuiButtonGroup props color ghost is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--ghost euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--ghost wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -456,33 +456,33 @@ exports[`EuiButtonGroup props color ghost is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color primary is rendered 1`] = `
+exports[`WuiButtonGroup props color primary is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--primary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--primary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -490,25 +490,25 @@ exports[`EuiButtonGroup props color primary is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--primary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--primary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -516,25 +516,25 @@ exports[`EuiButtonGroup props color primary is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--primary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--primary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -545,33 +545,33 @@ exports[`EuiButtonGroup props color primary is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color secondary is rendered 1`] = `
+exports[`WuiButtonGroup props color secondary is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--secondary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--secondary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -579,25 +579,25 @@ exports[`EuiButtonGroup props color secondary is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--secondary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--secondary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -605,25 +605,25 @@ exports[`EuiButtonGroup props color secondary is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--secondary euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--secondary wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -634,33 +634,33 @@ exports[`EuiButtonGroup props color secondary is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color text is rendered 1`] = `
+exports[`WuiButtonGroup props color text is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -668,25 +668,25 @@ exports[`EuiButtonGroup props color text is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -694,25 +694,25 @@ exports[`EuiButtonGroup props color text is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -723,33 +723,33 @@ exports[`EuiButtonGroup props color text is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props color warning is rendered 1`] = `
+exports[`WuiButtonGroup props color warning is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--warning euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--warning wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -757,25 +757,25 @@ exports[`EuiButtonGroup props color warning is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--warning euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--warning wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -783,25 +783,25 @@ exports[`EuiButtonGroup props color warning is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--warning euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--warning wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -812,34 +812,34 @@ exports[`EuiButtonGroup props color warning is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props idSelected is rendered 1`] = `
+exports[`WuiButtonGroup props idSelected is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiToggle--checked euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiToggle--checked wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
         checked=""
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButtonGroup__button--selected euiButton--fill"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButtonGroup__button--selected wuiButton--fill"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -847,25 +847,25 @@ exports[`EuiButtonGroup props idSelected is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -873,25 +873,25 @@ exports[`EuiButtonGroup props idSelected is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -902,35 +902,35 @@ exports[`EuiButtonGroup props idSelected is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props isDisabled is rendered 1`] = `
+exports[`WuiButtonGroup props isDisabled is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonToggle--isDisabled euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonToggle--isDisabled wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         disabled=""
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButton-isDisabled"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButton-isDisabled"
         disabled=""
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -938,27 +938,27 @@ exports[`EuiButtonGroup props isDisabled is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonToggle--isDisabled euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonToggle--isDisabled wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         disabled=""
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButton-isDisabled"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButton-isDisabled"
         disabled=""
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -966,27 +966,27 @@ exports[`EuiButtonGroup props isDisabled is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonToggle--isDisabled euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonToggle--isDisabled wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         disabled=""
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButton-isDisabled"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButton-isDisabled"
         disabled=""
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -997,33 +997,33 @@ exports[`EuiButtonGroup props isDisabled is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props isFullWidth is rendered 1`] = `
+exports[`WuiButtonGroup props isFullWidth is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset euiButtonGroup__fieldset--fullWidth"
+  class="wuiButtonGroup__fieldset wuiButtonGroup__fieldset--fullWidth"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s euiButtonGroup--fullWidth"
+    class="wuiButtonGroup wuiButtonGroup--s wuiButtonGroup--fullWidth"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1031,25 +1031,25 @@ exports[`EuiButtonGroup props isFullWidth is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1057,25 +1057,25 @@ exports[`EuiButtonGroup props isFullWidth is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -1086,81 +1086,81 @@ exports[`EuiButtonGroup props isFullWidth is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props isIconOnly is rendered 1`] = `
+exports[`WuiButtonGroup props isIconOnly is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonToggle--isIconOnly euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonToggle--isIconOnly wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           />
         </span>
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonToggle--isIconOnly euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonToggle--isIconOnly wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           />
         </span>
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonToggle--isIconOnly euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonToggle--isIconOnly wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           />
         </span>
       </button>
@@ -1169,38 +1169,38 @@ exports[`EuiButtonGroup props isIconOnly is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props legend is rendered 1`] = `
+exports[`WuiButtonGroup props legend is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <legend
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     legend
   </legend>
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1208,25 +1208,25 @@ exports[`EuiButtonGroup props legend is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1234,25 +1234,25 @@ exports[`EuiButtonGroup props legend is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -1263,34 +1263,34 @@ exports[`EuiButtonGroup props legend is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props name is rendered 1`] = `
+exports[`WuiButtonGroup props name is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         name="name"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1298,26 +1298,26 @@ exports[`EuiButtonGroup props name is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         name="name"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1325,26 +1325,26 @@ exports[`EuiButtonGroup props name is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         name="name"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -1355,33 +1355,33 @@ exports[`EuiButtonGroup props name is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props options are rendered 1`] = `
+exports[`WuiButtonGroup props options are rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1389,25 +1389,25 @@ exports[`EuiButtonGroup props options are rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1415,25 +1415,25 @@ exports[`EuiButtonGroup props options are rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -1444,34 +1444,34 @@ exports[`EuiButtonGroup props options are rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props options can pass down data-test-subj 1`] = `
+exports[`WuiButtonGroup props options can pass down data-test-subj 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         data-test-subj="test"
         title="Option one"
         type="radio"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1482,34 +1482,34 @@ exports[`EuiButtonGroup props options can pass down data-test-subj 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props type of multi idToSelectedMap is rendered 1`] = `
+exports[`WuiButtonGroup props type of multi idToSelectedMap is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiToggle--checked euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiToggle--checked wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
         checked=""
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButtonGroup__button--selected euiButton--fill"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButtonGroup__button--selected wuiButton--fill"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1517,26 +1517,26 @@ exports[`EuiButtonGroup props type of multi idToSelectedMap is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiToggle--checked euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiToggle--checked wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
         checked=""
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button euiButtonGroup__button--selected euiButton--fill"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button wuiButtonGroup__button--selected wuiButton--fill"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1544,25 +1544,25 @@ exports[`EuiButtonGroup props type of multi idToSelectedMap is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>
@@ -1573,33 +1573,33 @@ exports[`EuiButtonGroup props type of multi idToSelectedMap is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiButtonGroup props type of multi is rendered 1`] = `
+exports[`WuiButtonGroup props type of multi is rendered 1`] = `
 <fieldset
-  class="euiButtonGroup__fieldset"
+  class="wuiButtonGroup__fieldset"
 >
   <div
-    class="euiButtonGroup euiButtonGroup--s"
+    class="wuiButtonGroup wuiButtonGroup--s"
   >
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option one"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option one"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button00"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option one
           </span>
@@ -1607,25 +1607,25 @@ exports[`EuiButtonGroup props type of multi is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option two"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option two"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button01"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option two
           </span>
@@ -1633,25 +1633,25 @@ exports[`EuiButtonGroup props type of multi is rendered 1`] = `
       </button>
     </div>
     <div
-      class="euiToggle euiButtonToggle__wrapper euiButtonGroup__toggle"
+      class="wuiToggle wuiButtonToggle__wrapper wuiButtonGroup__toggle"
     >
       <input
         aria-label="Option three"
-        class="euiToggle__input euiButtonToggle__input"
+        class="wuiToggle__input wuiButtonToggle__input"
         title="Option three"
         type="checkbox"
       />
       <button
-        class="euiButton euiButton--text euiButton--small euiButtonToggle euiButtonGroup__button"
+        class="wuiButton wuiButton--text wuiButton--small wuiButtonToggle wuiButtonGroup__button"
         id="button02"
         tabindex="-1"
         type="button"
       >
         <span
-          class="euiButtonContent euiButton__content"
+          class="wuiButtonContent wuiButton__content"
         >
           <span
-            class="euiButton__text"
+            class="wuiButton__text"
           >
             Option three
           </span>

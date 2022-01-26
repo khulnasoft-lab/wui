@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiAspectRatio } from '../../../../src/components/';
+import { WuiAspectRatio } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiAspectRatio.__docgenInfo)
-    ? EuiAspectRatio.__docgenInfo[0]
-    : EuiAspectRatio.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiAspectRatio.__docgenInfo)
+    ? WuiAspectRatio.__docgenInfo[0]
+    : WuiAspectRatio.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.height.value = 9;
@@ -13,7 +13,7 @@ export default () => {
 
   propsToUse.children = {
     value: `<iframe
-    title="Elastic is a search company"
+    title="Wazuh is a search company"
     width="560"
     height="315"
     src="https://www.youtube.com/embed/yJarWSLRM24"
@@ -28,14 +28,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiAspectRatio',
+      componentName: 'WuiAspectRatio',
       props: propsToUse,
       scope: {
-        EuiAspectRatio,
+        WuiAspectRatio,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAspectRatio'],
+        '@wazuh/wui': {
+          named: ['WuiAspectRatio'],
         },
       },
     },

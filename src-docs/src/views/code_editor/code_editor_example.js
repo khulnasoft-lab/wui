@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiCodeEditor } from '../../../../src/components';
+import { WuiCode, WuiCodeEditor } from '../../../../src/components';
 
 import { codeEditorConfig } from './playground';
 
@@ -37,18 +37,18 @@ export const CodeEditorExample = {
       text: (
         <div>
           <p>
-            The <strong>EuiCodeEditor</strong> component is a wrapper around{' '}
-            <EuiCode>react-ace</EuiCode> (which itself wraps the ACE code
+            The <strong>WuiCodeEditor</strong> component is a wrapper around{' '}
+            <WuiCode>react-ace</WuiCode> (which itself wraps the ACE code
             editor), that adds an accessible keyboard mode to it. You should
-            always use this component instead of <EuiCode>AceEditor</EuiCode>.
+            always use this component instead of <WuiCode>AceEditor</WuiCode>.
           </p>
           <p>
             All parameters, that you specify are passed down to the underlying{' '}
-            <EuiCode>AceEditor</EuiCode> component.
+            <WuiCode>AceEditor</WuiCode> component.
           </p>
         </div>
       ),
-      props: { EuiCodeEditor },
+      props: { WuiCodeEditor },
       demo: <CodeEditor />,
     },
     {

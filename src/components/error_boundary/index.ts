@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiErrorBoundary, EuiErrorBoundaryProps } from './error_boundary';
+export { WuiErrorBoundary, WuiErrorBoundaryProps } from './error_boundary';

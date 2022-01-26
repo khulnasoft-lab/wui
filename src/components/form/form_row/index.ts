@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFormRow, EuiFormRowProps } from './form_row';
+export { WuiFormRow, WuiFormRowProps } from './form_row';

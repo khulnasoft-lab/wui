@@ -21,17 +21,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableMessage } from './selectable_message';
+import { WuiSelectableMessage } from './selectable_message';
 
-describe('EuiSelectableMessage', () => {
+describe('WuiSelectableMessage', () => {
   test('is rendered', () => {
-    const component = render(<EuiSelectableMessage {...requiredProps} />);
+    const component = render(<WuiSelectableMessage {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('bordered is rendered', () => {
-    const component = render(<EuiSelectableMessage bordered={true} />);
+    const component = render(<WuiSelectableMessage bordered={true} />);
 
     expect(component).toMatchSnapshot();
   });

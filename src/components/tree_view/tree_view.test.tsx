@@ -18,12 +18,12 @@
  */
 
 import React from 'react';
-import { EuiIcon } from '../icon';
-import { EuiToken } from '../token';
+import { WuiIcon } from '../icon';
+import { WuiToken } from '../token';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTreeView } from './tree_view';
+import { WuiTreeView } from './tree_view';
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
 jest.mock('../../services/accessibility/html_id_generator', () => ({
@@ -34,30 +34,30 @@ const items = [
   {
     label: 'Item One',
     id: 'item_one',
-    icon: <EuiIcon type="folderClosed" />,
-    iconWhenExpanded: <EuiIcon type="folderOpen" />,
+    icon: <WuiIcon type="folderClosed" />,
+    iconWhenExpanded: <WuiIcon type="folderOpen" />,
     isExpanded: true,
     children: [
       {
         label: 'Item A',
         id: 'item_a',
-        icon: <EuiIcon type="document" />,
+        icon: <WuiIcon type="document" />,
       },
       {
         label: 'Item B',
         id: 'item_b',
-        icon: <EuiIcon type="arrowRight" />,
-        iconWhenExpanded: <EuiIcon type="arrowDown" />,
+        icon: <WuiIcon type="arrowRight" />,
+        iconWhenExpanded: <WuiIcon type="arrowDown" />,
         children: [
           {
             label: 'A Cloud',
             id: 'item_cloud',
-            icon: <EuiToken iconType="tokenConstant" />,
+            icon: <WuiToken iconType="tokenConstant" />,
           },
           {
             label: "I'm a Bug",
             id: 'item_bug',
-            icon: <EuiToken iconType="tokenEnum" />,
+            icon: <WuiToken iconType="tokenEnum" />,
             className: 'classForBug',
           },
         ],
@@ -65,18 +65,18 @@ const items = [
       {
         label: 'Item C',
         id: 'item_c',
-        icon: <EuiIcon type="arrowRight" />,
-        iconWhenExpanded: <EuiIcon type="arrowDown" />,
+        icon: <WuiIcon type="arrowRight" />,
+        iconWhenExpanded: <WuiIcon type="arrowDown" />,
         children: [
           {
             label: 'Another Cloud',
             id: 'item_cloud2',
-            icon: <EuiToken iconType="tokenConstant" />,
+            icon: <WuiToken iconType="tokenConstant" />,
           },
           {
             label: 'Another Bug',
             id: 'item_bug2',
-            icon: <EuiToken iconType="tokenEnum" />,
+            icon: <WuiToken iconType="tokenEnum" />,
           },
         ],
       },
@@ -88,16 +88,16 @@ const items = [
   },
 ];
 
-describe('EuiTreeView', () => {
+describe('WuiTreeView', () => {
   test('is rendered', () => {
-    const component = render(<EuiTreeView items={items} {...requiredProps} />);
+    const component = render(<WuiTreeView items={items} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('length of open items', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<WuiTreeView>(
+      <WuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 
@@ -108,8 +108,8 @@ describe('EuiTreeView', () => {
   });
 
   test('activeItem changes', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<WuiTreeView>(
+      <WuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 
@@ -120,8 +120,8 @@ describe('EuiTreeView', () => {
   });
 
   test('open node changes', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<WuiTreeView>(
+      <WuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 

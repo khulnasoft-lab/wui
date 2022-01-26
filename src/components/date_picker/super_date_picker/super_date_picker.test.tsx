@@ -20,21 +20,21 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 
-import { EuiSuperDatePicker } from './super_date_picker';
+import { WuiSuperDatePicker } from './super_date_picker';
 
 const noop = () => {};
 
-describe('EuiSuperDatePicker', () => {
+describe('WuiSuperDatePicker', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiSuperDatePicker onTimeChange={noop} />);
+    const component = shallow(<WuiSuperDatePicker onTimeChange={noop} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('refresh is disabled by default', () => {
     // By default we expect `asyncInterval` to be not set.
-    const componentPaused = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker onTimeChange={noop} />
+    const componentPaused = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker onTimeChange={noop} />
     );
     const instancePaused = componentPaused.instance();
     expect(instancePaused.asyncInterval).toBe(undefined);
@@ -45,8 +45,8 @@ describe('EuiSuperDatePicker', () => {
     // If refresh is enabled via `isPaused/onRefresh` we expect
     // `asyncInterval` to be present and `asyncInterval.isStopped` to be `false`.
     const onRefresh = jest.fn();
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -77,8 +77,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -104,8 +104,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}

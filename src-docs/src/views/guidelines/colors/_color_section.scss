@@ -1,4 +1,4 @@
-@include euiBreakpoint('m', 'l', 'xl') {
+@include wuiBreakpoint('m', 'l', 'xl') {
   .guideColorsPage__stickySlider {
     position: sticky;
     top: 0;
@@ -9,7 +9,7 @@
 .guideColorSection__button {
   padding: $euiSizeXS;
   margin-bottom: $euiSizeXS / 2;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
   width: 100%;
   max-width: 300px;
 }

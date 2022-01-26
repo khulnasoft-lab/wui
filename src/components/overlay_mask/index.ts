@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiOverlayMask, EuiOverlayMaskProps } from './overlay_mask';
+export { WuiOverlayMask, WuiOverlayMaskProps } from './overlay_mask';

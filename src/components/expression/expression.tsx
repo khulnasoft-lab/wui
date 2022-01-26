@@ -26,20 +26,20 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf, ExclusiveUnion } from '../common';
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
 const colorToClassNameMap = {
-  subdued: 'euiExpression--subdued',
-  primary: 'euiExpression--primary',
-  secondary: 'euiExpression--secondary',
-  accent: 'euiExpression--accent',
-  warning: 'euiExpression--warning',
-  danger: 'euiExpression--danger',
+  subdued: 'wuiExpression--subdued',
+  primary: 'wuiExpression--primary',
+  secondary: 'wuiExpression--secondary',
+  accent: 'wuiExpression--accent',
+  warning: 'wuiExpression--warning',
+  danger: 'wuiExpression--danger',
 };
 
 const textWrapToClassNameMap = {
   'break-word': null,
-  truncate: 'euiExpression--truncate',
+  truncate: 'wuiExpression--truncate',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
@@ -48,10 +48,10 @@ export type ExpressionColor = keyof typeof colorToClassNameMap;
 
 const displayToClassNameMap = {
   inline: null,
-  columns: 'euiExpression--columns',
+  columns: 'wuiExpression--columns',
 };
 
-export type EuiExpressionProps = CommonProps & {
+export type WuiExpressionProps = CommonProps & {
   /**
    * First part of the expression
    */
@@ -99,15 +99,15 @@ export type EuiExpressionProps = CommonProps & {
   textWrap?: keyof typeof textWrapToClassNameMap;
 };
 
-type Buttonlike = EuiExpressionProps &
+type Buttonlike = WuiExpressionProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> & {
     onClick: MouseEventHandler<HTMLButtonElement>;
   };
 
-type Spanlike = EuiExpressionProps &
+type Spanlike = WuiExpressionProps &
   Omit<HTMLAttributes<HTMLSpanElement>, 'value'>;
 
-export const EuiExpression: FunctionComponent<ExclusiveUnion<
+export const WuiExpression: FunctionComponent<ExclusiveUnion<
   Buttonlike,
   Spanlike
 >> = ({
@@ -129,12 +129,12 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
   const calculatedColor = isInvalid ? 'danger' : color;
 
   const classes = classNames(
-    'euiExpression',
+    'wuiExpression',
     className,
     {
-      'euiExpression-isActive': isActive,
-      'euiExpression-isClickable': onClick,
-      'euiExpression-isUppercase': uppercase,
+      'wuiExpression-isActive': isActive,
+      'wuiExpression-isClickable': onClick,
+      'wuiExpression-isUppercase': uppercase,
     },
     displayToClassNameMap[display],
     colorToClassNameMap[calculatedColor],
@@ -153,8 +153,8 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
       : undefined;
 
   const invalidIcon = isInvalid ? (
-    <EuiIcon
-      className="euiExpression__icon"
+    <WuiIcon
+      className="wuiExpression__icon"
       type="alert"
       color={calculatedColor}
     />
@@ -165,13 +165,13 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
   return (
     <Component className={classes} onClick={onClick} {...rest}>
       <span
-        className="euiExpression__description"
+        className="wuiExpression__description"
         style={customWidth}
         {...descriptionProps}>
         {description}
       </span>{' '}
       {value && (
-        <span className="euiExpression__value" {...valueProps}>
+        <span className="wuiExpression__value" {...valueProps}>
           {value}
         </span>
       )}

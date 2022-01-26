@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiSelectableMessage } from './selectable_message';
+export { WuiSelectableMessage } from './selectable_message';

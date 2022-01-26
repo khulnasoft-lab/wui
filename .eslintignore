@@ -4,7 +4,7 @@ es
 lib
 test-env
 types
-eui.d.ts
+wui.d.ts
 **/*.snap.js
 **/assets/**/*.js
 package.json

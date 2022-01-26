@@ -22,15 +22,15 @@ import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { IconType, EuiIcon } from '../icon';
+import { IconType, WuiIcon } from '../icon';
 
-import { EuiText } from '../text';
+import { WuiText } from '../text';
 
 type Color = 'primary' | 'success' | 'warning' | 'danger';
 type Size = 's' | 'm';
 type Heading = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
-export type EuiCallOutProps = CommonProps &
+export type WuiCallOutProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'color'> & {
     title?: ReactNode;
     iconType?: IconType;
@@ -40,21 +40,21 @@ export type EuiCallOutProps = CommonProps &
   };
 
 const colorToClassNameMap: { [color in Color]: string } = {
-  primary: 'euiCallOut--primary',
-  success: 'euiCallOut--success',
-  warning: 'euiCallOut--warning',
-  danger: 'euiCallOut--danger',
+  primary: 'wuiCallOut--primary',
+  success: 'wuiCallOut--success',
+  warning: 'wuiCallOut--warning',
+  danger: 'wuiCallOut--danger',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 export const HEADINGS: Heading[] = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'];
 
 const sizeToClassNameMap: { [size in Size]: string } = {
-  s: 'euiCallOut--small',
+  s: 'wuiCallOut--small',
   m: '',
 };
 
-export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
+export const WuiCallOut: FunctionComponent<WuiCallOutProps> = ({
   title,
   color = 'primary',
   size = 'm',
@@ -65,7 +65,7 @@ export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiCallOut',
+    'wuiCallOut',
     colorToClassNameMap[color],
     sizeToClassNameMap[size],
     className
@@ -75,8 +75,8 @@ export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
 
   if (iconType) {
     headerIcon = (
-      <EuiIcon
-        className="euiCallOutHeader__icon"
+      <WuiIcon
+        className="wuiCallOutHeader__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -86,9 +86,9 @@ export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
 
   let optionalChildren;
   if (children && size === 's') {
-    optionalChildren = <EuiText size="xs">{children}</EuiText>;
+    optionalChildren = <WuiText size="xs">{children}</WuiText>;
   } else if (children) {
-    optionalChildren = <EuiText size="s">{children}</EuiText>;
+    optionalChildren = <WuiText size="s">{children}</WuiText>;
   }
 
   const H: any = heading ? `${heading}` : 'span';
@@ -96,9 +96,9 @@ export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
 
   if (title) {
     header = (
-      <div className="euiCallOutHeader">
+      <div className="wuiCallOutHeader">
         {headerIcon}
-        <H className="euiCallOutHeader__title">{title}</H>
+        <H className="wuiCallOutHeader__title">{title}</H>
       </div>
     );
   }

@@ -21,13 +21,13 @@
 import React, { useState, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-import { EuiFieldText } from '../form';
-import { EuiToolTip } from '../tool_tip';
-import { EuiIcon } from '../icon';
-import { EuiInputPopover } from '../popover';
-import { EuiSuggestItemProps } from './suggest_item';
+import { WuiFieldText } from '../form';
+import { WuiToolTip } from '../tool_tip';
+import { WuiIcon } from '../icon';
+import { WuiInputPopover } from '../popover';
+import { WuiSuggestItemProps } from './suggest_item';
 
-export type EuiSuggestInputProps = CommonProps & {
+export type WuiSuggestInputProps = CommonProps & {
   tooltipContent?: string;
 
   /**
@@ -43,7 +43,7 @@ export type EuiSuggestInputProps = CommonProps & {
   /**
    * List of suggestions to display using 'suggestItem'.
    */
-  suggestions: JSX.Element[] | EuiSuggestItemProps[];
+  suggestions: JSX.Element[] | WuiSuggestItemProps[];
 
   sendValue?: Function;
 };
@@ -79,7 +79,7 @@ const statusMap: StatusMap = {
   loading: {},
 };
 
-export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = props => {
+export const WuiSuggestInput: FunctionComponent<WuiSuggestInputProps> = props => {
   const [value, setValue] = useState<string>('');
   const [isPopoverOpen, setIsPopoverOpen] = useState<boolean>(false);
 
@@ -110,21 +110,21 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = props =>
     icon = statusMap[status].icon || '';
     color = statusMap[status].color || '';
   }
-  const classes = classNames('euiSuggestInput', className);
+  const classes = classNames('wuiSuggestInput', className);
 
-  // EuiFieldText's append accepts an array of elements so start by creating an empty array
+  // WuiFieldText's append accepts an array of elements so start by creating an empty array
   const appendArray = [];
 
   const statusElement = (status === 'saved' || status === 'unsaved') && (
-    <EuiToolTip
+    <WuiToolTip
       position="left"
       content={tooltipContent || statusMap[status].tooltip}>
-      <EuiIcon
-        className="euiSuggestInput__statusIcon"
+      <WuiIcon
+        className="wuiSuggestInput__statusIcon"
         color={color}
         type={icon}
       />
-    </EuiToolTip>
+    </WuiToolTip>
   );
 
   // Push the status element to the array if it is not undefined
@@ -134,7 +134,7 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = props =>
   if (append) appendArray.push(append);
 
   const customInput = (
-    <EuiFieldText
+    <WuiFieldText
       value={value}
       fullWidth
       append={appendArray.length ? appendArray : undefined}
@@ -145,7 +145,7 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = props =>
   );
 
   return (
-    <EuiInputPopover
+    <WuiInputPopover
       className={classes}
       input={customInput}
       isOpen={isPopoverOpen}
@@ -153,6 +153,6 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = props =>
       fullWidth
       closePopover={closePopover}>
       {suggestions}
-    </EuiInputPopover>
+    </WuiInputPopover>
   );
 };

@@ -19,7 +19,7 @@
 
 import { TokenProps } from './token';
 
-export type EuiTokenMapType =
+export type WuiTokenMapType =
   | 'tokenAnnotation'
   | 'tokenArray'
   | 'tokenBoolean'
@@ -78,116 +78,116 @@ export type EuiTokenMapType =
  */
 
 export const TOKEN_MAP: {
-  [mapType in EuiTokenMapType]: Omit<TokenProps, 'iconType'>;
+  [mapType in WuiTokenMapType]: Omit<TokenProps, 'iconType'>;
 } = {
   tokenClass: {
     shape: 'circle',
-    color: 'euiColorVis1',
+    color: 'wuiColorVis1',
   },
   tokenProperty: {
     shape: 'circle',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenEnum: {
     shape: 'circle',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenVariable: {
     shape: 'circle',
-    color: 'euiColorVis7',
+    color: 'wuiColorVis7',
   },
   tokenMethod: {
     shape: 'square',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenAnnotation: {
     shape: 'square',
-    color: 'euiColorVis5',
+    color: 'wuiColorVis5',
   },
   tokenException: {
     shape: 'circle',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenInterface: {
     shape: 'circle',
-    color: 'euiColorVis9',
+    color: 'wuiColorVis9',
   },
   tokenParameter: {
     shape: 'square',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenField: {
     shape: 'circle',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenElement: {
     shape: 'square',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenFunction: {
     shape: 'circle',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenBoolean: {
     shape: 'square',
-    color: 'euiColorVis7',
+    color: 'wuiColorVis7',
   },
   tokenString: {
     shape: 'square',
-    color: 'euiColorVis1',
+    color: 'wuiColorVis1',
   },
   tokenArray: {
     shape: 'square',
-    color: 'euiColorVis7',
+    color: 'wuiColorVis7',
   },
   tokenNumber: {
     shape: 'square',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenConstant: {
     shape: 'circle',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenObject: {
     shape: 'circle',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenEvent: {
     shape: 'circle',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenKey: {
     shape: 'circle',
-    color: 'euiColorVis5',
+    color: 'wuiColorVis5',
   },
   tokenNull: {
     shape: 'square',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenStruct: {
     shape: 'square',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenPackage: {
     shape: 'square',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
   },
   tokenOperator: {
     shape: 'circle',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenEnumMember: {
     shape: 'square',
-    color: 'euiColorVis7',
+    color: 'wuiColorVis7',
   },
   tokenRepo: {
     shape: 'rectangle',
-    color: 'euiColorVis1',
+    color: 'wuiColorVis1',
     fill: 'dark',
   },
   tokenSymbol: {
     shape: 'rectangle',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
     fill: 'dark',
   },
   tokenFile: {
@@ -197,90 +197,90 @@ export const TOKEN_MAP: {
   },
   tokenNamespace: {
     shape: 'square',
-    color: 'euiColorVis1',
+    color: 'wuiColorVis1',
   },
   tokenModule: {
     shape: 'square',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenDate: {
     shape: 'square',
-    color: 'euiColorVis6',
+    color: 'wuiColorVis6',
   },
   tokenGeo: {
     shape: 'square',
-    color: 'euiColorVis5',
+    color: 'wuiColorVis5',
   },
   tokenIP: {
     shape: 'square',
-    color: 'euiColorVis9',
+    color: 'wuiColorVis9',
   },
   tokenShape: {
     shape: 'circle',
-    color: 'euiColorVis8',
+    color: 'wuiColorVis8',
   },
   tokenRange: {
     shape: 'circle',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenNested: {
     shape: 'circle',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenAlias: {
     shape: 'circle',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenBinary: {
     shape: 'square',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenJoin: {
     shape: 'square',
-    color: 'euiColorVis5',
+    color: 'wuiColorVis5',
   },
   tokenPercolator: {
     shape: 'square',
-    color: 'euiColorVis6',
+    color: 'wuiColorVis6',
   },
   tokenFlattened: {
     shape: 'square',
-    color: 'euiColorVis7',
+    color: 'wuiColorVis7',
   },
   tokenRankFeature: {
     shape: 'square',
-    color: 'euiColorVis8',
+    color: 'wuiColorVis8',
   },
   tokenRankFeatures: {
     shape: 'square',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenKeyword: {
     shape: 'square',
-    color: 'euiColorVis9',
+    color: 'wuiColorVis9',
   },
   tokenCompletionSuggester: {
     shape: 'square',
-    color: 'euiColorVis1',
+    color: 'wuiColorVis1',
   },
   tokenDenseVector: {
     shape: 'square',
-    color: 'euiColorVis2',
+    color: 'wuiColorVis2',
   },
   tokenText: {
     shape: 'square',
-    color: 'euiColorVis3',
+    color: 'wuiColorVis3',
   },
   tokenTokenCount: {
     shape: 'square',
-    color: 'euiColorVis4',
+    color: 'wuiColorVis4',
   },
   tokenSearchType: {
     shape: 'square',
-    color: 'euiColorVis5',
+    color: 'wuiColorVis5',
   },
   tokenHistogram: {
     shape: 'square',
-    color: 'euiColorVis6',
+    color: 'wuiColorVis6',
   },
 };

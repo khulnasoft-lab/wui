@@ -1,4 +1,4 @@
-.euiPageHeader {
+.wuiPageHeader {
   margin-bottom: $euiSize;
   display: flex;
   flex-direction: row;
@@ -6,13 +6,13 @@
   align-items: center;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPageHeader {
+@include wuiBreakpoint('xs', 's') {
+  .wuiPageHeader {
     padding: $euiSize 0;
     margin-bottom: 0;
   }
 
-  .euiPageHeader--responsive {
+  .wuiPageHeader--responsive {
     flex-direction: column;
   }
 }

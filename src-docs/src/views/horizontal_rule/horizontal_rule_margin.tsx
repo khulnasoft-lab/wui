@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { EuiHorizontalRule } from '../../../../src/components/horizontal_rule';
+import { WuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 
 export default () => (
   <div>
     <p>xs</p>
-    <EuiHorizontalRule margin="xs" />
+    <WuiHorizontalRule margin="xs" />
     <p>s</p>
-    <EuiHorizontalRule margin="s" />
+    <WuiHorizontalRule margin="s" />
     <p>m</p>
-    <EuiHorizontalRule margin="m" />
+    <WuiHorizontalRule margin="m" />
     <p>l (default)</p>
-    <EuiHorizontalRule margin="l" />
+    <WuiHorizontalRule margin="l" />
     <p>xl</p>
-    <EuiHorizontalRule margin="xl" />
+    <WuiHorizontalRule margin="xl" />
     <p>xxl</p>
-    <EuiHorizontalRule margin="xxl" />
+    <WuiHorizontalRule margin="xxl" />
   </div>
 );

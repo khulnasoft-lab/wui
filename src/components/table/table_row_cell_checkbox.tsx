@@ -21,17 +21,17 @@ import React, { FunctionComponent, TdHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export const EuiTableRowCellCheckbox: FunctionComponent<CommonProps &
+export const WuiTableRowCellCheckbox: FunctionComponent<CommonProps &
   TdHTMLAttributes<HTMLTableCellElement>> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiTableRowCellCheckbox', className);
+  const classes = classNames('wuiTableRowCellCheckbox', className);
 
   return (
     <td className={classes} {...rest}>
-      <div className="euiTableCellContent">{children}</div>
+      <div className="wuiTableCellContent">{children}</div>
     </td>
   );
 };

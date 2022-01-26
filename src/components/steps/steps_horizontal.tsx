@@ -21,31 +21,31 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-import { EuiStepHorizontalProps, EuiStepHorizontal } from './step_horizontal';
+import { WuiStepHorizontalProps, WuiStepHorizontal } from './step_horizontal';
 
-type ContainedEuiStepHorizontalProps = Omit<EuiStepHorizontalProps, 'step'>;
+type ContainedWuiStepHorizontalProps = Omit<WuiStepHorizontalProps, 'step'>;
 
-export interface EuiStepsHorizontalProps
+export interface WuiStepsHorizontalProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
-   * An array of `EuiStepHorizontal` objects excluding the `step` prop
+   * An array of `WuiStepHorizontal` objects excluding the `step` prop
    */
-  steps: ContainedEuiStepHorizontalProps[];
+  steps: ContainedWuiStepHorizontalProps[];
 }
 
-function renderHorizontalSteps(steps: ContainedEuiStepHorizontalProps[]) {
+function renderHorizontalSteps(steps: ContainedWuiStepHorizontalProps[]) {
   return steps.map((step, index) => {
-    return <EuiStepHorizontal key={index} step={index + 1} {...step} />;
+    return <WuiStepHorizontal key={index} step={index + 1} {...step} />;
   });
 }
 
-export const EuiStepsHorizontal: FunctionComponent<EuiStepsHorizontalProps> = ({
+export const WuiStepsHorizontal: FunctionComponent<WuiStepsHorizontalProps> = ({
   className,
   steps,
   ...rest
 }) => {
-  const classes = classNames('euiStepsHorizontal', className);
+  const classes = classNames('wuiStepsHorizontal', className);
 
   return (
     <div role="tablist" className={classes} {...rest}>

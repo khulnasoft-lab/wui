@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiFilterGroup,
-  EuiFilterButton,
-  EuiIcon,
-  EuiSpacer,
+  WuiPopover,
+  WuiFilterGroup,
+  WuiFilterButton,
+  WuiIcon,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -37,7 +37,7 @@ export default () => {
   };
 
   const button = (
-    <EuiFilterButton
+    <WuiFilterButton
       iconType="arrowDown"
       onClick={onButtonClick}
       isSelected={isPopoverOpen}
@@ -45,31 +45,31 @@ export default () => {
       hasActiveFilters={true}
       numActiveFilters={2}>
       Composers
-    </EuiFilterButton>
+    </WuiFilterButton>
   );
 
   return (
-    <EuiFilterGroup fullWidth={true}>
-      <EuiFilterButton
+    <WuiFilterGroup fullWidth={true}>
+      <WuiFilterButton
         grow={false}
         hasActiveFilters={isFilterOn}
         onClick={toggleFilter}>
         Filter
-      </EuiFilterButton>
-      <EuiFilterButton
+      </WuiFilterButton>
+      <WuiFilterButton
         withNext
         grow={false}
         hasActiveFilters={isOnFilterOn}
         onClick={toggleOnFilter}>
         On
-      </EuiFilterButton>
-      <EuiFilterButton
+      </WuiFilterButton>
+      <WuiFilterButton
         grow={false}
         hasActiveFilters={isOffFilterOn}
         onClick={toggleOffFilter}>
         Off
-      </EuiFilterButton>
-      <EuiPopover
+      </WuiFilterButton>
+      <WuiPopover
         id="popover"
         ownFocus
         button={button}
@@ -77,20 +77,20 @@ export default () => {
         closePopover={closePopover}
         panelPaddingSize="none"
         withTitle>
-        <div className="euiFilterSelect__note">
-          <div className="euiFilterSelect__noteContent">
-            <EuiIcon type="minusInCircle" />
-            <EuiSpacer size="xs" />
+        <div className="wuiFilterSelect__note">
+          <div className="wuiFilterSelect__noteContent">
+            <WuiIcon type="minusInCircle" />
+            <WuiSpacer size="xs" />
             <p>No filters found</p>
           </div>
         </div>
-      </EuiPopover>
-      <EuiFilterButton
+      </WuiPopover>
+      <WuiFilterButton
         numFilters={12}
         hasActiveFilters={isFilterOn}
         onClick={toggleFilter}>
         Filter with a very long name
-      </EuiFilterButton>
-    </EuiFilterGroup>
+      </WuiFilterButton>
+    </WuiFilterGroup>
   );
 };

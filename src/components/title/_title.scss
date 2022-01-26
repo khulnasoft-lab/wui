@@ -1,33 +1,33 @@
-.euiTitle {
-  + .euiTitle {
+.wuiTitle {
+  + .wuiTitle {
     margin-top: $euiSizeL;
   }
 }
 
-.euiTitle--uppercase {
+.wuiTitle--uppercase {
   text-transform: uppercase;
 }
 
-.euiTitle--xxxsmall {
-  @include euiTitle('xxxs');
+.wuiTitle--xxxsmall {
+  @include wuiTitle('xxxs');
 }
 
-.euiTitle--xxsmall {
-  @include euiTitle('xxs');
+.wuiTitle--xxsmall {
+  @include wuiTitle('xxs');
 }
 
-.euiTitle--xsmall {
-  @include euiTitle('xs');
+.wuiTitle--xsmall {
+  @include wuiTitle('xs');
 }
 
-.euiTitle--small {
-  @include euiTitle('s');
+.wuiTitle--small {
+  @include wuiTitle('s');
 }
 
-.euiTitle--medium {
-  @include euiTitle('m');
+.wuiTitle--medium {
+  @include wuiTitle('m');
 }
 
-.euiTitle--large {
-  @include euiTitle('l');
+.wuiTitle--large {
+  @include wuiTitle('l');
 }

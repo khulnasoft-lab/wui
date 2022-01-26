@@ -21,13 +21,13 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export interface EuiPageProps
+export interface WuiPageProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   restrictWidth?: boolean | number | string;
 }
 
-export const EuiPage: FunctionComponent<EuiPageProps> = ({
+export const WuiPage: FunctionComponent<WuiPageProps> = ({
   children,
   /**
    * Sets the max-width of the page,
@@ -45,13 +45,13 @@ export const EuiPage: FunctionComponent<EuiPageProps> = ({
   let newStyle;
 
   if (restrictWidth === true) {
-    widthClassname = 'euiPage--restrictWidth-default';
+    widthClassname = 'wuiPage--restrictWidth-default';
   } else if (restrictWidth !== false) {
-    widthClassname = 'euiPage--restrictWidth-custom';
+    widthClassname = 'wuiPage--restrictWidth-custom';
     newStyle = { ...style, maxWidth: restrictWidth };
   }
 
-  const classes = classNames('euiPage', widthClassname, className);
+  const classes = classNames('wuiPage', widthClassname, className);
 
   return (
     <div className={classes} style={newStyle || style} {...rest}>

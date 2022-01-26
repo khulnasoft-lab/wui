@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconIndexMapping = ({ title, titleId, ...props }) => (
+const WuiIconIndexMapping = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconIndexMapping = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconIndexMapping;
+export const icon = WuiIconIndexMapping;

@@ -1,13 +1,13 @@
-.euiSuperUpdateButton {
+.wuiSuperUpdateButton {
   // Just wide enough for all 3 states
-  min-width: $euiSuperDatePickerButtonWidth;
+  min-width: $wuiSuperDatePickerButtonWidth;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiSuperUpdateButton {
+@include wuiBreakpoint('xs', 's') {
+  .wuiSuperUpdateButton {
     min-width: 0;
 
-    .euiSuperUpdateButton__text {
+    .wuiSuperUpdateButton__text {
       display: none;
     }
   }

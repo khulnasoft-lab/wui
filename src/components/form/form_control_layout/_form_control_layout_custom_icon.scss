@@ -1,27 +1,27 @@
-.euiFormControlLayoutCustomIcon {
+.wuiFormControlLayoutCustomIcon {
   pointer-events: none;
 
-  .euiFormControlLayoutCustomIcon__icon {
+  .wuiFormControlLayoutCustomIcon__icon {
     transform: translateY(-1px);
   }
 }
 
-.euiFormControlLayoutCustomIcon--clickable {
+.wuiFormControlLayoutCustomIcon--clickable {
   @include size($euiSize);
 
   pointer-events: all;
 
-  .euiFormControlLayoutCustomIcon__icon {
+  .wuiFormControlLayoutCustomIcon__icon {
     vertical-align: baseline;
     transform: none;
   }
 
   &:focus {
-    @include euiFocusRing;
+    @include wuiFocusRing;
   }
 
   &:disabled {
     cursor: not-allowed;
-    color: $euiFormControlDisabledColor;
+    color: $wuiFormControlDisabledColor;
   }
 }

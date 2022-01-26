@@ -3,11 +3,11 @@ import React, { useCallback, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
-  EuiMarkdownEditor,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiButtonToggle,
-  EuiFormErrorText,
+  WuiMarkdownEditor,
+  WuiSpacer,
+  WuiCodeBlock,
+  WuiButtonToggle,
+  WuiFormErrorText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -31,8 +31,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor demo"
+      <WuiMarkdownEditor
+        aria-label="WUI markdown editor demo"
         aria-describedby={errorElementId.current}
         value={value}
         onChange={setValue}
@@ -40,20 +40,20 @@ export default () => {
         onParse={onParse}
         errors={messages}
       />
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
 
-      <EuiFormErrorText
+      <WuiFormErrorText
         id={errorElementId.current}
-        className="euiFormRow__text">
+        className="wuiFormRow__text">
         Utilize error text or{' '}
         <strong>
-          <Link to="/forms/form-validation">EuiFormRow</Link>
+          <Link to="/forms/form-validation">WuiFormRow</Link>
         </strong>{' '}
         for more permanent error feedback
-      </EuiFormErrorText>
+      </WuiFormErrorText>
 
-      <div className="eui-textRight">
-        <EuiButtonToggle
+      <div className="wui-textRight">
+        <WuiButtonToggle
           label={isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
           size="s"
           isEmpty
@@ -63,7 +63,7 @@ export default () => {
         />
       </div>
 
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <WuiCodeBlock language="json">{ast}</WuiCodeBlock>}
     </>
   );
 };

@@ -25,18 +25,18 @@ import {
   takeMountedSnapshot,
   sleep,
 } from '../../test';
-import { EuiToolTip } from './tool_tip';
+import { WuiToolTip } from './tool_tip';
 
 jest.mock('./../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'id',
 }));
 
-describe('EuiToolTip', () => {
+describe('WuiToolTip', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <WuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button>Trigger</button>
-      </EuiToolTip>
+      </WuiToolTip>
     );
 
     expect(component).toMatchSnapshot();
@@ -44,9 +44,9 @@ describe('EuiToolTip', () => {
 
   test('shows tooltip on focus', async () => {
     const component = mount(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <WuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </EuiToolTip>
+      </WuiToolTip>
     );
 
     const trigger = findTestSubject(component, 'trigger');

@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSuggest } from './suggest';
+import { WuiSuggest } from './suggest';
 
 const sampleItems = [
   {
@@ -36,10 +36,10 @@ const sampleItems = [
   },
 ];
 
-describe('EuiSuggest', () => {
+describe('WuiSuggest', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuggest {...requiredProps} suggestions={sampleItems} />
+      <WuiSuggest {...requiredProps} suggestions={sampleItems} />
     );
 
     expect(component).toMatchSnapshot();

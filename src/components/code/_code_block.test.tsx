@@ -21,7 +21,7 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCodeBlockImpl } from './_code_block';
+import { WuiCodeBlockImpl } from './_code_block';
 
 function snapshotCodeBlock(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -34,27 +34,27 @@ function snapshotCodeBlock(component: ReactWrapper) {
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCodeBlockImpl', () => {
+describe('WuiCodeBlockImpl', () => {
   describe('inline', () => {
     test('renders an inline code tag', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={true} {...requiredProps}>
+        <WuiCodeBlockImpl inline={true} {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </WuiCodeBlockImpl>
       );
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
     });
 
     test('highlights javascript code, adding "js" class', () => {
-      const component = mount(<EuiCodeBlockImpl inline={true} language="js" />);
+      const component = mount(<WuiCodeBlockImpl inline={true} language="js" />);
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
     });
 
     test('renders with transparent background', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={true} transparentBackground={true} />
+        <WuiCodeBlockImpl inline={true} transparentBackground={true} />
       );
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -64,9 +64,9 @@ describe('EuiCodeBlockImpl', () => {
   describe('block', () => {
     test('renders a pre block tag', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={false} {...requiredProps}>
+        <WuiCodeBlockImpl inline={false} {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </WuiCodeBlockImpl>
       );
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('highlights javascript code, adding "js" class', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={false} language="js" />
+        <WuiCodeBlockImpl inline={false} language="js" />
       );
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -82,7 +82,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('renders with transparent background', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={false} transparentBackground={true} />
+        <WuiCodeBlockImpl inline={false} transparentBackground={true} />
       );
 
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -90,9 +90,9 @@ describe('EuiCodeBlockImpl', () => {
 
     test('renders a pre block tag with a css class modifier', () => {
       const component = mount(
-        <EuiCodeBlockImpl inline={false} whiteSpace="pre" {...requiredProps}>
+        <WuiCodeBlockImpl inline={false} whiteSpace="pre" {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </WuiCodeBlockImpl>
       );
       expect(snapshotCodeBlock(component)).toMatchSnapshot();
     });

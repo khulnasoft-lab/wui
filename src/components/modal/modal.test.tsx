@@ -21,13 +21,13 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiModal } from './modal';
+import { WuiModal } from './modal';
 
-test('renders EuiModal', () => {
+test('renders WuiModal', () => {
   const component = (
-    <EuiModal onClose={() => {}} {...requiredProps}>
+    <WuiModal onClose={() => {}} {...requiredProps}>
       children
-    </EuiModal>
+    </WuiModal>
   );
 
   expect(

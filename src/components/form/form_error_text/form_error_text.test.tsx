@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiFormErrorText } from './form_error_text';
+import { WuiFormErrorText } from './form_error_text';
 
-describe('EuiFormErrorText', () => {
+describe('WuiFormErrorText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormErrorText {...requiredProps}>This is an error.</EuiFormErrorText>
+      <WuiFormErrorText {...requiredProps}>This is an error.</WuiFormErrorText>
     );
 
     expect(component).toMatchSnapshot();

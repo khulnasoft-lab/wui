@@ -21,14 +21,14 @@ import React from 'react';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiKeyPadMenuItem } from './key_pad_menu_item';
+import { WuiKeyPadMenuItem } from './key_pad_menu_item';
 
-describe('EuiKeyPadMenuItem', () => {
+describe('WuiKeyPadMenuItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" {...requiredProps} href="#">
+      <WuiKeyPadMenuItem label="Label" {...requiredProps} href="#">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +36,9 @@ describe('EuiKeyPadMenuItem', () => {
 
   test('renders href', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" href="#">
+      <WuiKeyPadMenuItem label="Label" href="#">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -46,9 +46,9 @@ describe('EuiKeyPadMenuItem', () => {
 
   test('renders href with rel', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" href="#" rel="noreferrer">
+      <WuiKeyPadMenuItem label="Label" href="#" rel="noreferrer">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     const component = render(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -70,9 +70,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     shallow(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(onClickHandler).not.toBeCalled();
@@ -82,9 +82,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     const $button = shallow(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     $button.simulate('click');

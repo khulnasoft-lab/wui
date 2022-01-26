@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconEditorAlignRight = ({ title, titleId, ...props }) => (
+const WuiIconEditorAlignRight = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconEditorAlignRight = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconEditorAlignRight;
+export const icon = WuiIconEditorAlignRight;

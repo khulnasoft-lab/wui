@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiStep } from '../../../../src/components/';
+import { WuiStep } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   createOptionalEnum,
 } from '../../services/playground';
 
 export const stepConfig = () => {
-  const docgenInfo = Array.isArray(EuiStep.__docgenInfo)
-    ? EuiStep.__docgenInfo[0]
-    : EuiStep.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiStep.__docgenInfo)
+    ? WuiStep.__docgenInfo[0]
+    : WuiStep.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title.value = 'Step';
@@ -23,14 +23,14 @@ export const stepConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiStep',
+      componentName: 'WuiStep',
       props: propsToUse,
       scope: {
-        EuiStep,
+        WuiStep,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiStep'],
+        '@wazuh/wui': {
+          named: ['WuiStep'],
         },
       },
     },

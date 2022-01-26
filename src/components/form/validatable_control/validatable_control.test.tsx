@@ -20,14 +20,14 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiValidatableControl } from './validatable_control';
+import { WuiValidatableControl } from './validatable_control';
 
-describe('EuiValidatableControl', () => {
+describe('WuiValidatableControl', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiValidatableControl>
+      <WuiValidatableControl>
         <input />
-      </EuiValidatableControl>
+      </WuiValidatableControl>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +38,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       mount(
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       expect(ref).toHaveBeenCalledTimes(1);
@@ -53,9 +53,9 @@ describe('EuiValidatableControl', () => {
       const ref = React.createRef<HTMLInputElement>();
 
       mount(
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       expect(ref.current).not.toBeNull();
@@ -66,9 +66,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = () => (
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       const wrapper = mount(<Component />);
@@ -87,9 +87,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = () => (
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           <input id="testInput" ref={el => ref(el)} />
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       const wrapper = mount(<Component />);
@@ -110,13 +110,13 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = ({ change }: { change: boolean }) => (
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           {!change ? (
             <input key="1" id="testInput" ref={ref} />
           ) : (
             <input key="2" id="testInput2" ref={ref} />
           )}
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       const wrapper = mount(<Component change={false} />);
@@ -139,13 +139,13 @@ describe('EuiValidatableControl', () => {
       const ref = React.createRef<HTMLInputElement>();
 
       const Component = ({ change }: { change: boolean }) => (
-        <EuiValidatableControl>
+        <WuiValidatableControl>
           {!change ? (
             <input key="1" id="testInput" ref={ref} />
           ) : (
             <input key="2" id="testInput2" ref={ref} />
           )}
-        </EuiValidatableControl>
+        </WuiValidatableControl>
       );
 
       const wrapper = mount(<Component change={false} />);

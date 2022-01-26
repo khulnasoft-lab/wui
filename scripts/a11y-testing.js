@@ -40,8 +40,8 @@ const docsPages = async (root, page) => {
     `${root}#/forms/date-picker`,
     `${root}#/forms/suggest`,
     `${root}#/forms/super-date-picker`,
-    `${root}#/elastic-charts/creating-charts`,
-    `${root}#/elastic-charts/part-to-whole-comparisons`,
+    `${root}#/wazuh-charts/creating-charts`,
+    `${root}#/wazuh-charts/part-to-whole-comparisons`,
     `${root}#/utilities/css-utility-classes`,
     `${root}#/utilities/focus-trap`,
   ];

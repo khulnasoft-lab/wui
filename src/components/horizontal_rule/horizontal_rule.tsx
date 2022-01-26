@@ -22,47 +22,47 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-export type EuiHorizontalRuleSize = keyof typeof sizeToClassNameMap;
-export type EuiHorizontalRuleMargin = keyof typeof marginToClassNameMap;
+export type WuiHorizontalRuleSize = keyof typeof sizeToClassNameMap;
+export type WuiHorizontalRuleMargin = keyof typeof marginToClassNameMap;
 
-export interface EuiHorizontalRuleProps
+export interface WuiHorizontalRuleProps
   extends CommonProps,
     HTMLAttributes<HTMLHRElement> {
   /**
    * Defines the width of the HR.
    */
-  size?: EuiHorizontalRuleSize;
-  margin?: EuiHorizontalRuleMargin;
+  size?: WuiHorizontalRuleSize;
+  margin?: WuiHorizontalRuleMargin;
 }
 
 const sizeToClassNameMap = {
-  full: 'euiHorizontalRule--full',
-  half: 'euiHorizontalRule--half',
-  quarter: 'euiHorizontalRule--quarter',
+  full: 'wuiHorizontalRule--full',
+  half: 'wuiHorizontalRule--half',
+  quarter: 'wuiHorizontalRule--quarter',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
 const marginToClassNameMap = {
   none: null,
-  xs: 'euiHorizontalRule--marginXSmall',
-  s: 'euiHorizontalRule--marginSmall',
-  m: 'euiHorizontalRule--marginMedium',
-  l: 'euiHorizontalRule--marginLarge',
-  xl: 'euiHorizontalRule--marginXLarge',
-  xxl: 'euiHorizontalRule--marginXXLarge',
+  xs: 'wuiHorizontalRule--marginXSmall',
+  s: 'wuiHorizontalRule--marginSmall',
+  m: 'wuiHorizontalRule--marginMedium',
+  l: 'wuiHorizontalRule--marginLarge',
+  xl: 'wuiHorizontalRule--marginXLarge',
+  xxl: 'wuiHorizontalRule--marginXXLarge',
 };
 
 export const MARGINS = Object.keys(marginToClassNameMap);
 
-export const EuiHorizontalRule: FunctionComponent<EuiHorizontalRuleProps> = ({
+export const WuiHorizontalRule: FunctionComponent<WuiHorizontalRuleProps> = ({
   className,
   size = 'full',
   margin = 'l',
   ...rest
 }) => {
   const classes = classNames(
-    'euiHorizontalRule',
+    'wuiHorizontalRule',
     sizeToClassNameMap[size],
     marginToClassNameMap[margin],
     className

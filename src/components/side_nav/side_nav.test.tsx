@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNav } from './side_nav';
+import { WuiSideNav } from './side_nav';
 import { RenderItem } from './side_nav_item';
 
-describe('EuiSideNav', () => {
+describe('WuiSideNav', () => {
   test('is rendered', () => {
-    const component = render(<EuiSideNav {...requiredProps} />);
+    const component = render(<WuiSideNav {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,13 +34,13 @@ describe('EuiSideNav', () => {
   describe('props', () => {
     describe('isOpenOnMobile', () => {
       test('defaults to false', () => {
-        const component = render(<EuiSideNav />);
+        const component = render(<WuiSideNav />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered when specified as true', () => {
-        const component = render(<EuiSideNav isOpenOnMobile />);
+        const component = render(<WuiSideNav isOpenOnMobile />);
 
         expect(component).toMatchSnapshot();
       });
@@ -75,7 +75,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -85,7 +85,7 @@ describe('EuiSideNav', () => {
           {
             name: 'A',
             id: 0,
-            href: 'http://www.elastic.co',
+            href: 'http://www.wazuh.com',
             items: [
               {
                 name: 'B',
@@ -109,7 +109,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -119,7 +119,7 @@ describe('EuiSideNav', () => {
           {
             name: 'A',
             id: 0,
-            href: 'http://www.elastic.co',
+            href: 'http://www.wazuh.com',
             items: [
               {
                 name: 'B',
@@ -137,7 +137,7 @@ describe('EuiSideNav', () => {
         );
 
         const component = render(
-          <EuiSideNav items={sideNav} renderItem={renderItem} />
+          <WuiSideNav items={sideNav} renderItem={renderItem} />
         );
 
         expect(component).toMatchSnapshot();
@@ -172,7 +172,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -208,7 +208,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });

@@ -27,59 +27,59 @@ import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion } from '../common';
 import {
-  EuiContextMenuPanel,
-  EuiContextMenuPanelTransitionDirection,
-  EuiContextMenuPanelTransitionType,
+  WuiContextMenuPanel,
+  WuiContextMenuPanelTransitionDirection,
+  WuiContextMenuPanelTransitionType,
 } from './context_menu_panel';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemProps,
+  WuiContextMenuItem,
+  WuiContextMenuItemProps,
 } from './context_menu_item';
-import { EuiHorizontalRule, EuiHorizontalRuleProps } from '../horizontal_rule';
+import { WuiHorizontalRule, WuiHorizontalRuleProps } from '../horizontal_rule';
 
-export type EuiContextMenuPanelId = string | number;
+export type WuiContextMenuPanelId = string | number;
 
-export type EuiContextMenuPanelItemDescriptorEntry = Omit<
-  EuiContextMenuItemProps,
+export type WuiContextMenuPanelItemDescriptorEntry = Omit<
+  WuiContextMenuItemProps,
   'hasPanel'
 > & {
   name: React.ReactNode;
   key?: string;
-  panel?: EuiContextMenuPanelId;
+  panel?: WuiContextMenuPanelId;
 };
 
-export interface EuiContextMenuPanelItemSeparator
-  extends EuiHorizontalRuleProps {
+export interface WuiContextMenuPanelItemSeparator
+  extends WuiHorizontalRuleProps {
   isSeparator: true;
   key?: string;
 }
 
-export type EuiContextMenuPanelItemDescriptor = ExclusiveUnion<
-  EuiContextMenuPanelItemDescriptorEntry,
-  EuiContextMenuPanelItemSeparator
+export type WuiContextMenuPanelItemDescriptor = ExclusiveUnion<
+  WuiContextMenuPanelItemDescriptorEntry,
+  WuiContextMenuPanelItemSeparator
 >;
 
-export interface EuiContextMenuPanelDescriptor {
-  id: EuiContextMenuPanelId;
+export interface WuiContextMenuPanelDescriptor {
+  id: WuiContextMenuPanelId;
   title?: string;
-  items?: EuiContextMenuPanelItemDescriptor[];
+  items?: WuiContextMenuPanelItemDescriptor[];
   content?: ReactNode;
   width?: number;
 }
 
-export type EuiContextMenuProps = CommonProps &
+export type WuiContextMenuProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'style'> & {
-    panels?: EuiContextMenuPanelDescriptor[];
-    initialPanelId?: EuiContextMenuPanelId;
+    panels?: WuiContextMenuPanelDescriptor[];
+    initialPanelId?: WuiContextMenuPanelId;
   };
 
 const isItemSeparator = (
-  item: EuiContextMenuPanelItemDescriptor
-): item is EuiContextMenuPanelItemSeparator =>
-  (item as EuiContextMenuPanelItemSeparator).isSeparator === true;
+  item: WuiContextMenuPanelItemDescriptor
+): item is WuiContextMenuPanelItemSeparator =>
+  (item as WuiContextMenuPanelItemSeparator).isSeparator === true;
 
-function mapIdsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
-  const map: { [id: string]: EuiContextMenuPanelDescriptor } = {};
+function mapIdsToPanels(panels: WuiContextMenuPanelDescriptor[]) {
+  const map: { [id: string]: WuiContextMenuPanelDescriptor } = {};
 
   panels.forEach(panel => {
     map[panel.id] = panel;
@@ -88,8 +88,8 @@ function mapIdsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
   return map;
 }
 
-function mapIdsToPreviousPanels(panels: EuiContextMenuPanelDescriptor[]) {
-  const idToPreviousPanelIdMap: { [panel: string]: EuiContextMenuPanelId } = {};
+function mapIdsToPreviousPanels(panels: WuiContextMenuPanelDescriptor[]) {
+  const idToPreviousPanelIdMap: { [panel: string]: WuiContextMenuPanelId } = {};
 
   panels.forEach(panel => {
     if (Array.isArray(panel.items)) {
@@ -106,9 +106,9 @@ function mapIdsToPreviousPanels(panels: EuiContextMenuPanelDescriptor[]) {
   return idToPreviousPanelIdMap;
 }
 
-function mapPanelItemsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
+function mapPanelItemsToPanels(panels: WuiContextMenuPanelDescriptor[]) {
   const idAndItemIndexToPanelIdMap: {
-    [id: string]: { [index: string]: EuiContextMenuPanelId };
+    [id: string]: { [index: string]: WuiContextMenuPanelId };
   } = {};
 
   panels.forEach(panel => {
@@ -129,31 +129,31 @@ function mapPanelItemsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
 
 interface State {
   prevProps: {
-    panels?: EuiContextMenuPanelDescriptor[];
+    panels?: WuiContextMenuPanelDescriptor[];
   };
-  idToPanelMap: { [id: string]: EuiContextMenuPanelDescriptor };
-  idToPreviousPanelIdMap: { [panel: string]: EuiContextMenuPanelId };
+  idToPanelMap: { [id: string]: WuiContextMenuPanelDescriptor };
+  idToPreviousPanelIdMap: { [panel: string]: WuiContextMenuPanelId };
   idAndItemIndexToPanelIdMap: {
-    [id: string]: { [index: string]: EuiContextMenuPanelId };
+    [id: string]: { [index: string]: WuiContextMenuPanelId };
   };
   idToRenderedItemsMap: { [id: string]: ReactElement[] };
 
   height?: number;
-  outgoingPanelId?: EuiContextMenuPanelId;
-  incomingPanelId?: EuiContextMenuPanelId;
-  transitionDirection?: EuiContextMenuPanelTransitionDirection;
+  outgoingPanelId?: WuiContextMenuPanelId;
+  incomingPanelId?: WuiContextMenuPanelId;
+  transitionDirection?: WuiContextMenuPanelTransitionDirection;
   isOutgoingPanelVisible: boolean;
   focusedItemIndex?: number;
   isUsingKeyboardToNavigate: boolean;
 }
 
-export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
-  static defaultProps: Partial<EuiContextMenuProps> = {
+export class WuiContextMenu extends Component<WuiContextMenuProps, State> {
+  static defaultProps: Partial<WuiContextMenuProps> = {
     panels: [],
   };
 
   static getDerivedStateFromProps(
-    nextProps: EuiContextMenuProps,
+    nextProps: WuiContextMenuProps,
     prevState: State
   ): Partial<State> | null {
     const { panels } = nextProps;
@@ -170,7 +170,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     return null;
   }
 
-  constructor(props: EuiContextMenuProps) {
+  constructor(props: WuiContextMenuProps) {
     super(props);
 
     this.state = {
@@ -190,7 +190,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     };
   }
 
-  componentDidUpdate(prevProps: EuiContextMenuProps) {
+  componentDidUpdate(prevProps: WuiContextMenuProps) {
     if (prevProps.panels !== this.props.panels) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
@@ -199,14 +199,14 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
   }
 
-  hasPreviousPanel = (panelId: EuiContextMenuPanelId) => {
+  hasPreviousPanel = (panelId: WuiContextMenuPanelId) => {
     const previousPanelId = this.state.idToPreviousPanelIdMap[panelId];
     return typeof previousPanelId !== 'undefined';
   };
 
   showPanel(
-    panelId: EuiContextMenuPanelId,
-    direction?: EuiContextMenuPanelTransitionDirection
+    panelId: WuiContextMenuPanelId,
+    direction?: WuiContextMenuPanelTransitionDirection
   ) {
     this.setState({
       outgoingPanelId: this.state.incomingPanelId,
@@ -284,10 +284,10 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
   };
 
-  mapIdsToRenderedItems = (panels: EuiContextMenuPanelDescriptor[] = []) => {
+  mapIdsToRenderedItems = (panels: WuiContextMenuPanelDescriptor[] = []) => {
     const idToRenderedItemsMap: { [id: string]: ReactElement[] } = {};
 
-    // Pre-rendering the items lets us check reference equality inside of EuiContextMenuPanel.
+    // Pre-rendering the items lets us check reference equality inside of WuiContextMenuPanel.
     panels.forEach(panel => {
       idToRenderedItemsMap[panel.id] = this.renderItems(panel.items);
     });
@@ -295,11 +295,11 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     return idToRenderedItemsMap;
   };
 
-  renderItems(items: EuiContextMenuPanelItemDescriptor[] = []) {
+  renderItems(items: WuiContextMenuPanelItemDescriptor[] = []) {
     return items.map((item, index) => {
       if (isItemSeparator(item)) {
         const { isSeparator: omit, key = index, ...rest } = item;
-        return <EuiHorizontalRule key={key} margin="none" {...rest} />;
+        return <WuiHorizontalRule key={key} margin="none" {...rest} />;
       }
 
       const {
@@ -318,7 +318,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
             if (onClick && event) {
               event.persist();
             }
-            // This component is commonly wrapped in a EuiOutsideClickDetector, which means we'll
+            // This component is commonly wrapped in a WuiOutsideClickDetector, which means we'll
             // need to wait for that logic to complete before re-rendering the DOM via showPanel.
             window.requestAnimationFrame(() => {
               if (onClick) {
@@ -330,7 +330,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         : onClick;
 
       return (
-        <EuiContextMenuItem
+        <WuiContextMenuItem
           key={key || (typeof name === 'string' ? name : undefined) || index}
           icon={icon}
           onClick={onClickHandler}
@@ -339,14 +339,14 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
           toolTipContent={toolTipContent}
           {...rest}>
           {name}
-        </EuiContextMenuItem>
+        </WuiContextMenuItem>
       );
     });
   }
 
   renderPanel(
-    panelId: EuiContextMenuPanelId,
-    transitionType: EuiContextMenuPanelTransitionType
+    panelId: WuiContextMenuPanelId,
+    transitionType: WuiContextMenuPanelTransitionType
   ) {
     const panel = this.state.idToPanelMap[panelId];
 
@@ -354,7 +354,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
       return;
     }
 
-    // As above, we need to wait for EuiOutsideClickDetector to complete its logic before
+    // As above, we need to wait for WuiOutsideClickDetector to complete its logic before
     // re-rendering via showPanel.
     let onClose;
     if (this.hasPreviousPanel(panelId)) {
@@ -362,9 +362,9 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
 
     return (
-      <EuiContextMenuPanel
+      <WuiContextMenuPanel
         key={panelId}
-        className="euiContextMenu__panel"
+        className="wuiContextMenu__panel"
         onHeightChange={
           transitionType === 'in' ? this.onIncomingPanelHeightChange : undefined
         }
@@ -394,7 +394,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         showNextPanel={this.showNextPanel}
         showPreviousPanel={this.showPreviousPanel}>
         {panel.content}
-      </EuiContextMenuPanel>
+      </WuiContextMenuPanel>
     );
   }
 
@@ -414,7 +414,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         ? this.state.idToPanelMap[this.state.incomingPanelId!].width
         : undefined;
 
-    const classes = classNames('euiContextMenu', className);
+    const classes = classNames('wuiContextMenu', className);
 
     return (
       <div

@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiDualRange, EuiDualRangeProps } from './dual_range';
-export { EuiRange, EuiRangeProps } from './range';
+export { WuiDualRange, WuiDualRangeProps } from './dual_range';
+export { WuiRange, WuiRangeProps } from './range';

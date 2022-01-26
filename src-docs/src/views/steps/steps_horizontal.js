@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiStepsHorizontal } from '../../../../src/components';
+import { WuiStepsHorizontal } from '../../../../src/components';
 
 const horizontalSteps = [
   {
@@ -26,6 +26,6 @@ const horizontalSteps = [
 
 export default () => (
   <div>
-    <EuiStepsHorizontal steps={horizontalSteps} />
+    <WuiStepsHorizontal steps={horizontalSteps} />
   </div>
 );

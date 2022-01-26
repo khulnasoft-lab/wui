@@ -26,7 +26,7 @@ export default () => (
         <p>
           This demo shows off{' '}
           <Link to="/display/text">
-            <strong>EuiText</strong>
+            <strong>WuiText</strong>
           </Link>{' '}
           scaling in both the default and small sizes. The goal is that the
           bottom of every text line should hit one of the 8px or 7px grid lines.

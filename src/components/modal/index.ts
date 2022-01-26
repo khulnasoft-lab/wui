@@ -18,16 +18,16 @@
  */
 
 export {
-  EuiConfirmModal,
-  EuiConfirmModalProps,
-  CONFIRM_BUTTON as EUI_MODAL_CONFIRM_BUTTON,
-  CANCEL_BUTTON as EUI_MODAL_CANCEL_BUTTON,
+  WuiConfirmModal,
+  WuiConfirmModalProps,
+  CONFIRM_BUTTON as WUI_MODAL_CONFIRM_BUTTON,
+  CANCEL_BUTTON as WUI_MODAL_CANCEL_BUTTON,
 } from './confirm_modal';
-export { EuiModal, EuiModalProps } from './modal';
-export { EuiModalFooter, EuiModalFooterProps } from './modal_footer';
-export { EuiModalHeader, EuiModalHeaderProps } from './modal_header';
-export { EuiModalBody, EuiModalBodyProps } from './modal_body';
+export { WuiModal, WuiModalProps } from './modal';
+export { WuiModalFooter, WuiModalFooterProps } from './modal_footer';
+export { WuiModalHeader, WuiModalHeaderProps } from './modal_header';
+export { WuiModalBody, WuiModalBodyProps } from './modal_body';
 export {
-  EuiModalHeaderTitle,
-  EuiModalHeaderTitleProps,
+  WuiModalHeaderTitle,
+  WuiModalHeaderTitleProps,
 } from './modal_header_title';

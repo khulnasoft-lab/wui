@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import { EuiPopoverPosition } from './types';
+import { WuiPopoverPosition } from './types';
 
 type Dimension = 'height' | 'width';
 
-export const POSITIONS: EuiPopoverPosition[] = [
+export const POSITIONS: WuiPopoverPosition[] = [
   'top',
   'right',
   'bottom',
@@ -36,12 +36,12 @@ interface BoundingBox {
   left: number;
 }
 
-export interface EuiClientRect extends BoundingBox {
+export interface WuiClientRect extends BoundingBox {
   height: number;
   width: number;
 }
 
-const relatedDimension: { [position in EuiPopoverPosition]: Dimension } = {
+const relatedDimension: { [position in WuiPopoverPosition]: Dimension } = {
   top: 'height',
   right: 'width',
   bottom: 'height',
@@ -56,7 +56,7 @@ const dimensionPositionAttribute: {
 };
 
 const positionComplements: {
-  [position in EuiPopoverPosition]: EuiPopoverPosition;
+  [position in WuiPopoverPosition]: WuiPopoverPosition;
 } = {
   top: 'bottom',
   right: 'left',
@@ -67,7 +67,7 @@ const positionComplements: {
 // always resolving to top/left is taken advantage of by knowing they are the
 // minimum edges of the bounding box
 const positionSubstitutes: {
-  [position in EuiPopoverPosition]: 'left' | 'top';
+  [position in WuiPopoverPosition]: 'left' | 'top';
 } = {
   top: 'left',
   right: 'top',
@@ -78,8 +78,8 @@ const positionSubstitutes: {
 interface FindPopoverPositionArgs {
   anchor: HTMLElement;
   popover: HTMLElement;
-  align?: EuiPopoverPosition;
-  position: EuiPopoverPosition;
+  align?: WuiPopoverPosition;
+  position: WuiPopoverPosition;
   forcePosition?: boolean;
   buffer?: number;
   offset?: number;
@@ -95,7 +95,7 @@ interface FindPopoverPositionResult {
   position: 'top' | 'right' | 'bottom' | 'left';
   fit: number;
   arrow?: { left: number; top: number };
-  anchorBoundingBox?: EuiClientRect;
+  anchorBoundingBox?: WuiClientRect;
 }
 
 /**
@@ -142,7 +142,7 @@ export function findPopoverPosition({
     document.documentElement.clientWidth || window.innerWidth;
   const documentHeight =
     document.documentElement.clientHeight || window.innerHeight;
-  const windowBoundingBox: EuiClientRect = {
+  const windowBoundingBox: WuiClientRect = {
     top: 0,
     right: documentWidth,
     bottom: documentHeight,
@@ -176,7 +176,7 @@ export function findPopoverPosition({
   // Try the user-desired position first.
   const iterationPositions = [position];
   // keep user-defined alignment in the original positions.
-  const iterationAlignments: Array<undefined | EuiPopoverPosition> = [align];
+  const iterationAlignments: Array<undefined | WuiPopoverPosition> = [align];
 
   if (forcePosition !== true) {
     iterationPositions.push(positionComplements[position]); // Try the complementary position.
@@ -251,12 +251,12 @@ export function findPopoverPosition({
 }
 
 interface GetPopoverScreenCoordinatesArgs {
-  position: EuiPopoverPosition;
-  align?: EuiPopoverPosition;
-  anchorBoundingBox: EuiClientRect;
-  popoverBoundingBox: EuiClientRect;
-  windowBoundingBox: EuiClientRect;
-  containerBoundingBox: EuiClientRect;
+  position: WuiPopoverPosition;
+  align?: WuiPopoverPosition;
+  anchorBoundingBox: WuiClientRect;
+  popoverBoundingBox: WuiClientRect;
+  windowBoundingBox: WuiClientRect;
+  containerBoundingBox: WuiClientRect;
   arrowConfig?: { arrowWidth: number; arrowBuffer: number };
   offset?: number;
   buffer?: number;
@@ -417,17 +417,17 @@ export function getPopoverScreenCoordinates({
 }
 
 interface GetCrossAxisPositionArgs {
-  crossAxisFirstSide: EuiPopoverPosition;
-  crossAxisSecondSide: EuiPopoverPosition;
+  crossAxisFirstSide: WuiPopoverPosition;
+  crossAxisSecondSide: WuiPopoverPosition;
   crossAxisDimension: Dimension;
-  position: EuiPopoverPosition;
-  align?: EuiPopoverPosition;
+  position: WuiPopoverPosition;
+  align?: WuiPopoverPosition;
   buffer: number;
   offset: number;
-  windowBoundingBox: EuiClientRect;
-  containerBoundingBox: EuiClientRect;
-  popoverBoundingBox: EuiClientRect;
-  anchorBoundingBox: EuiClientRect;
+  windowBoundingBox: WuiClientRect;
+  containerBoundingBox: WuiClientRect;
+  popoverBoundingBox: WuiClientRect;
+  anchorBoundingBox: WuiClientRect;
   arrowConfig?: { arrowWidth: number; arrowBuffer: number };
 }
 
@@ -556,7 +556,7 @@ function getCrossAxisPosition({
 }
 
 interface GetPrimaryAxisPositionArgs {
-  position: EuiPopoverPosition;
+  position: WuiPopoverPosition;
   offset: number;
   popoverBoundingBox: BoundingBox;
   anchorBoundingBox: BoundingBox;
@@ -612,7 +612,7 @@ function getPrimaryAxisPosition({
  * @param {HTMLElement} element
  * @returns {{top: number, right: number, bottom: number, left: number, height: number, width: number}}
  */
-export function getElementBoundingBox(element: HTMLElement): EuiClientRect {
+export function getElementBoundingBox(element: HTMLElement): WuiClientRect {
   const rect = element.getBoundingClientRect();
   return {
     top: rect.top,
@@ -640,7 +640,7 @@ export function getAvailableSpace(
   containerBoundingBox: BoundingBox,
   buffer: number,
   offset: number,
-  offsetSide: EuiPopoverPosition
+  offsetSide: WuiPopoverPosition
 ): BoundingBox {
   return {
     top:
@@ -704,12 +704,12 @@ export function getVisibleFit(
  *
  * @param firstBox
  * @param secondBox
- * @returns {EuiClientRect}
+ * @returns {WuiClientRect}
  */
 export function intersectBoundingBoxes(
   firstBox: BoundingBox,
   secondBox: BoundingBox
-): EuiClientRect {
+): WuiClientRect {
   const top = Math.max(firstBox.top, secondBox.top);
   const right = Math.min(firstBox.right, secondBox.right);
   const bottom = Math.min(firstBox.bottom, secondBox.bottom);

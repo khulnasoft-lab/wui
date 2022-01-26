@@ -5,7 +5,7 @@ import { renderToHtml } from '../../../services';
 import { Table } from './mobile';
 import { propsInfo } from './props_info';
 import { EuiTextColor } from '../../../../../src/components/text';
-import { EuiCode, EuiCodeBlock } from '../../../../../src/components/code';
+import { WuiCode, WuiCodeBlock } from '../../../../../src/components/code';
 const source = require('!!raw-loader!./mobile');
 const html = renderToHtml(Table);
 
@@ -42,37 +42,37 @@ export const section = {
         contents. There are few times when you may want to exclude this behavior
         from your table, for instance, when the table has very few columns or
         the table does not break down easily into this format. For these use
-        cases, you may set <EuiCode language="js">responsive=false</EuiCode>.
+        cases, you may set <WuiCode language="js">responsive=false</WuiCode>.
       </p>
       <h4>
         To make your table work responsively, please make sure you add the
         following <EuiTextColor color="danger">additional</EuiTextColor> props
-        to the top level table component (<strong>EuiBasicTable</strong> or{' '}
-        <strong>EuiInMemoryTable</strong>):
+        to the top level table component (<strong>WuiBasicTable</strong> or{' '}
+        <strong>WuiInMemoryTable</strong>):
       </h4>
       <ul>
         <li>
-          <EuiCode>isSelectable</EuiCode>: if the table has a single column of
+          <WuiCode>isSelectable</WuiCode>: if the table has a single column of
           checkboxes for selecting rows
         </li>
         <li>
-          <EuiCode>isExpandable</EuiCode>: if the table has rows that can expand
+          <WuiCode>isExpandable</WuiCode>: if the table has rows that can expand
         </li>
         <li>
-          <EuiCode>hasActions</EuiCode>: if the table has a column for actions
+          <WuiCode>hasActions</WuiCode>: if the table has a column for actions
           which may/may not be hidden in hover
         </li>
       </ul>
       <h4>
-        The <EuiCode>mobileOptions</EuiCode> object can be passed to the{' '}
-        <strong>EuiTableRowCell</strong> directly or with each column item
-        provided to <strong>EuiBasicTable</strong>.
+        The <WuiCode>mobileOptions</WuiCode> object can be passed to the{' '}
+        <strong>WuiTableRowCell</strong> directly or with each column item
+        provided to <strong>WuiBasicTable</strong>.
       </h4>
-      <EuiCodeBlock language="js">{exampleItem}</EuiCodeBlock>
+      <WuiCodeBlock language="js">{exampleItem}</WuiCodeBlock>
       <h4>Note:</h4>
       <p>
         You can also change basic table row cell props like{' '}
-        <EuiCode>truncateText</EuiCode> and <EuiCode>textOnly</EuiCode> for
+        <WuiCode>truncateText</WuiCode> and <WuiCode>textOnly</WuiCode> for
         mobile layouts, though you must also be passing a mobile specific render
         function.
       </p>

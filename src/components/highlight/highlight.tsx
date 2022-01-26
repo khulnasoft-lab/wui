@@ -19,9 +19,9 @@
 
 import React, { Fragment, HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
-import { EuiMark } from '../mark';
+import { WuiMark } from '../mark';
 
-interface EuiHighlightChunk {
+interface WuiHighlightChunk {
   /**
    * Start of the chunk
    */
@@ -36,7 +36,7 @@ interface EuiHighlightChunk {
   highlight?: boolean;
 }
 
-export type EuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
+export type WuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
   CommonProps & {
     /**
      * string to highlight as this component's content
@@ -81,7 +81,7 @@ const highlight = (
           const { end, highlight, start } = chunk;
           const value = searchSubject.substr(start, end - start);
           if (highlight) {
-            return <EuiMark key={start}>{value}</EuiMark>;
+            return <WuiMark key={start}>{value}</WuiMark>;
           }
           return value;
         })}
@@ -112,7 +112,7 @@ const highlight = (
   return (
     <Fragment>
       {preMatch}
-      <EuiMark>{match}</EuiMark>
+      <WuiMark>{match}</WuiMark>
       {postMatch}
     </Fragment>
   );
@@ -136,10 +136,10 @@ const getHightlightWords = (
 };
 
 const fillInChunks = (
-  chunksToHighlight: EuiHighlightChunk[],
+  chunksToHighlight: WuiHighlightChunk[],
   totalLength: number
 ) => {
-  const allChunks: EuiHighlightChunk[] = [];
+  const allChunks: WuiHighlightChunk[] = [];
   const append = (start: number, end: number, highlight: boolean) => {
     if (end - start > 0) {
       allChunks.push({
@@ -163,7 +163,7 @@ const fillInChunks = (
   return allChunks;
 };
 
-export const EuiHighlight: FunctionComponent<EuiHighlightProps> = ({
+export const WuiHighlight: FunctionComponent<WuiHighlightProps> = ({
   children,
   className,
   search,

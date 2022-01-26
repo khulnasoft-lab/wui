@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButtonEmpty,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 import GlobalFilterForm from './global_filter_form';
@@ -22,33 +22,33 @@ export default () => {
   };
 
   return (
-    <EuiPopover
+    <WuiPopover
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       button={
-        <EuiButtonEmpty onClick={togglePopover} size="xs">
+        <WuiButtonEmpty onClick={togglePopover} size="xs">
           + Add filter
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       }
       anchorPosition="downCenter"
       withTitle>
-      <EuiPopoverTitle>
-        <EuiFlexGroup alignItems="baseline">
-          <EuiFlexItem>Add a filter</EuiFlexItem>
-          <EuiFlexItem grow={false}>
+      <WuiPopoverTitle>
+        <WuiFlexGroup alignItems="baseline">
+          <WuiFlexItem>Add a filter</WuiFlexItem>
+          <WuiFlexItem grow={false}>
             {/* This button should open a modal */}
-            <EuiButtonEmpty flush="right" size="xs">
+            <WuiButtonEmpty flush="right" size="xs">
               Edit as Query DSL
-            </EuiButtonEmpty>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiPopoverTitle>
+            </WuiButtonEmpty>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+      </WuiPopoverTitle>
 
       <GlobalFilterForm
         style={{ width: 400 }}
         onAdd={togglePopover}
         onCancel={togglePopover}
       />
-    </EuiPopover>
+    </WuiPopover>
   );
 };

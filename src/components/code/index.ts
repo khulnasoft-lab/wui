@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiCode, EuiCodeProps } from './code';
-export { EuiCodeBlock, EuiCodeBlockProps } from './code_block';
-export { EuiCodeBlockImpl } from './_code_block';
+export { WuiCode, WuiCodeProps } from './code';
+export { WuiCodeBlock, WuiCodeBlockProps } from './code_block';
+export { WuiCodeBlockImpl } from './_code_block';

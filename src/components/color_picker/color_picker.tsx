@@ -32,24 +32,24 @@ import chroma, { ColorSpaces } from 'chroma-js';
 
 import { CommonProps } from '../common';
 
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiColorPickerSwatch } from './color_picker_swatch';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiColorPickerSwatch } from './color_picker_swatch';
+import { WuiFocusTrap } from '../focus_trap';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 import {
-  EuiFieldText,
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
-  EuiFormRow,
-  EuiRange,
+  WuiFieldText,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
+  WuiFormRow,
+  WuiRange,
 } from '../form';
-import { EuiI18n } from '../i18n';
-import { EuiPopover } from '../popover';
-import { EuiSpacer } from '../spacer';
+import { WuiI18n } from '../i18n';
+import { WuiPopover } from '../popover';
+import { WuiSpacer } from '../spacer';
 import { VISUALIZATION_COLORS, keys } from '../../services';
 
-import { EuiHue } from './hue';
-import { EuiSaturation } from './saturation';
+import { WuiHue } from './hue';
+import { WuiSaturation } from './saturation';
 import {
   getChromaColor,
   parseColor,
@@ -59,10 +59,10 @@ import {
   RGB_JOIN,
 } from './utils';
 
-type EuiColorPickerDisplay = 'default' | 'inline';
-type EuiColorPickerMode = 'default' | 'swatch' | 'picker' | 'secondaryInput';
+type WuiColorPickerDisplay = 'default' | 'inline';
+type WuiColorPickerMode = 'default' | 'swatch' | 'picker' | 'secondaryInput';
 
-export interface EuiColorPickerOutput {
+export interface WuiColorPickerOutput {
   rgba: ColorSpaces['rgba'];
   hex: string;
   isValid: boolean;
@@ -83,10 +83,10 @@ interface HTMLDivElementOverrides {
    * RGBa (as array; values of NaN if color is invalid)
    * isValid (boolean signifying if the input text is a valid color)
    */
-  onChange: (text: string, output: EuiColorPickerOutput) => void;
+  onChange: (text: string, output: WuiColorPickerOutput) => void;
   onFocus?: () => void;
 }
-export interface EuiColorPickerProps
+export interface WuiColorPickerProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLDivElement>, keyof HTMLDivElementOverrides>,
     HTMLDivElementOverrides {
@@ -95,10 +95,10 @@ export interface EuiColorPickerProps
    */
   button?: ReactElement;
   /**
-   *  Use the compressed style for EuiFieldText
+   *  Use the compressed style for WuiFieldText
    */
   compressed?: boolean;
-  display?: EuiColorPickerDisplay;
+  display?: WuiColorPickerDisplay;
   disabled?: boolean;
   fullWidth?: boolean;
   id?: string;
@@ -109,14 +109,14 @@ export interface EuiColorPickerProps
   /**
    * Choose between swatches with gradient picker (default), swatches only, gradient picker only, or secondary input only.
    */
-  mode?: EuiColorPickerMode;
+  mode?: WuiColorPickerMode;
   /**
    *  Custom z-index for the popover
    */
   popoverZIndex?: number;
   readOnly?: boolean;
   /**
-   *  Array of hex strings (3 or 6 character) to use as swatch options. Defaults to EUI visualization colors
+   *  Array of hex strings (3 or 6 character) to use as swatch options. Defaults to WUI visualization colors
    */
   swatches?: string[];
 
@@ -124,13 +124,13 @@ export interface EuiColorPickerProps
    * Creates an input group with element(s) coming before input. It only shows when the `display` is set to `default`.
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: WuiFormControlLayoutProps['prepend'];
 
   /**
    * Creates an input group with element(s) coming after input. It only shows when the `display` is set to `default`.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: WuiFormControlLayoutProps['append'];
   /**
    * Whether to render the alpha channel (opacity) value range slider.
    */
@@ -164,7 +164,7 @@ function isKeyboardEvent(
 const getOutput = (
   text: string | null,
   showAlpha: boolean = false
-): EuiColorPickerOutput => {
+): WuiColorPickerOutput => {
   const color = getChromaColor(text, true);
   let isValid = true;
   if (!showAlpha && color !== null) {
@@ -193,7 +193,7 @@ const getHsv = (hsv?: number[], fallback: number = 0) => {
   return [hue, hsv[1], hsv[2]] as ColorSpaces['hsv'];
 };
 
-export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
+export const WuiColorPicker: FunctionComponent<WuiColorPickerProps> = ({
   button,
   className,
   color,
@@ -238,7 +238,7 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
   }, [alphaChannel]);
 
   const [isColorSelectorShown, setIsColorSelectorShown] = useState(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null); // Ideally this is uses `useRef`, but `EuiFieldText` isn't ready for that
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null); // Ideally this is uses `useRef`, but `WuiFieldText` isn't ready for that
   const [popoverShouldOwnFocus, setPopoverShouldOwnFocus] = useState(false);
 
   const prevColor = useRef(chromaColor ? chromaColor.rgba().join() : null);
@@ -261,18 +261,18 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
     setColorAsHsv(getHsv([h, s, v], usableHsv[0]));
   };
 
-  const classes = classNames('euiColorPicker', className);
-  const popoverClass = 'euiColorPicker__popoverAnchor';
-  const panelClasses = classNames('euiColorPicker__popoverPanel', {
-    'euiColorPicker__popoverPanel--pickerOnly':
+  const classes = classNames('wuiColorPicker', className);
+  const popoverClass = 'wuiColorPicker__popoverAnchor';
+  const panelClasses = classNames('wuiColorPicker__popoverPanel', {
+    'wuiColorPicker__popoverPanel--pickerOnly':
       mode === 'picker' && secondaryInputDisplay !== 'bottom',
-    'euiColorPicker__popoverPanel--customButton': button,
+    'wuiColorPicker__popoverPanel--customButton': button,
   });
-  const swatchClass = 'euiColorPicker__swatchSelect';
+  const swatchClass = 'wuiColorPicker__swatchSelect';
   const testSubjAnchor = 'colorPickerAnchor';
   const testSubjPopover = 'colorPickerPopover';
-  const inputClasses = classNames('euiColorPicker__input', {
-    'euiColorPicker__input--inGroup': prepend || append,
+  const inputClasses = classNames('wuiColorPicker__input', {
+    'wuiColorPicker__input--inGroup': prepend || append,
   });
 
   const handleOnChange = (text: string) => {
@@ -441,19 +441,19 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
   };
 
   const inlineInput = secondaryInputDisplay !== 'none' && (
-    <EuiI18n
+    <WuiI18n
       tokens={[
-        'euiColorPicker.colorLabel',
-        'euiColorPicker.colorErrorMessage',
-        'euiColorPicker.transparent',
+        'wuiColorPicker.colorLabel',
+        'wuiColorPicker.colorErrorMessage',
+        'wuiColorPicker.transparent',
       ]}
       defaults={['Color value', 'Invalid color value', 'Transparent']}>
       {([colorLabel, colorErrorMessage, transparent]: string[]) => (
-        <EuiFormRow
+        <WuiFormRow
           display="rowCompressed"
           isInvalid={isInvalid}
           error={isInvalid ? colorErrorMessage : null}>
-          <EuiFormControlLayout
+          <WuiFormControlLayout
             clear={
               isClearable && color && !readOnly && !disabled
                 ? { onClick: handleClearInput }
@@ -461,7 +461,7 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
             }
             readOnly={readOnly}
             compressed={compressed}>
-            <EuiFieldText
+            <WuiFieldText
               compressed={true}
               value={color ? color.toUpperCase() : HEX_FALLBACK}
               placeholder={!color ? placeholder || transparent : undefined}
@@ -473,10 +473,10 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
               autoComplete="off"
               data-test-subj={`${secondaryInputDisplay}ColorPickerInput`}
             />
-          </EuiFormControlLayout>
-        </EuiFormRow>
+          </WuiFormControlLayout>
+        </WuiFormRow>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 
   const showSecondaryInputOnly = mode === 'secondaryInput';
@@ -488,19 +488,19 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
       {secondaryInputDisplay === 'top' && (
         <>
           {inlineInput}
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
         </>
       )}
       {showPicker && (
         <div onKeyDown={handleOnKeyDown}>
-          <EuiSaturation
+          <WuiSaturation
             id={id}
             color={usableHsv}
             hex={chromaColor ? chromaColor.hex() : undefined}
             onChange={handleColorSelection}
             ref={satruationRef}
           />
-          <EuiHue
+          <WuiHue
             id={id}
             hue={usableHsv[0]}
             hex={chromaColor ? chromaColor.hex() : undefined}
@@ -509,15 +509,15 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
         </div>
       )}
       {showSwatches && (
-        <EuiFlexGroup wrap responsive={false} gutterSize="s" role="listbox">
+        <WuiFlexGroup wrap responsive={false} gutterSize="s" role="listbox">
           {swatches.map((swatch, index) => (
-            <EuiFlexItem grow={false} key={swatch}>
-              <EuiI18n
-                token="euiColorPicker.swatchAriaLabel"
+            <WuiFlexItem grow={false} key={swatch}>
+              <WuiI18n
+                token="wuiColorPicker.swatchAriaLabel"
                 values={{ swatch }}
                 default="Select {swatch} as the color">
                 {(swatchAriaLabel: string) => (
-                  <EuiColorPickerSwatch
+                  <WuiColorPickerSwatch
                     className={swatchClass}
                     color={swatch}
                     onClick={() => handleSwatchSelection(swatch)}
@@ -526,26 +526,26 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
                     ref={index === 0 ? swatchRef : undefined}
                   />
                 )}
-              </EuiI18n>
-            </EuiFlexItem>
+              </WuiI18n>
+            </WuiFlexItem>
           ))}
-        </EuiFlexGroup>
+        </WuiFlexGroup>
       )}
       {secondaryInputDisplay === 'bottom' && (
         <>
-          {mode !== 'picker' && <EuiSpacer size="s" />}
+          {mode !== 'picker' && <WuiSpacer size="s" />}
           {inlineInput}
         </>
       )}
       {showAlpha && (
         <>
-          <EuiSpacer size="s" />
-          <EuiI18n
-            token="euiColorPicker.alphaLabel"
+          <WuiSpacer size="s" />
+          <WuiI18n
+            token="wuiColorPicker.alphaLabel"
             default="Alpha channel (opacity) value">
             {(alphaLabel: string) => (
-              <EuiRange
-                className="euiColorPicker__alphaRange"
+              <WuiRange
+                className="wuiColorPicker__alphaRange"
                 data-test-subj="colorPickerAlpha"
                 compressed={true}
                 showInput={true}
@@ -557,7 +557,7 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
                 aria-label={alphaLabel}
               />
             )}
-          </EuiI18n>
+          </WuiI18n>
         </>
       )}
     </>
@@ -574,7 +574,7 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
   } else {
     const colorStyle = chromaColor ? chromaColor.css() : undefined;
     buttonOrInput = (
-      <EuiFormControlLayout
+      <WuiFormControlLayout
         icon={
           !readOnly
             ? {
@@ -599,11 +599,11 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
           style={{
             color: colorStyle,
           }}>
-          <EuiI18n
+          <WuiI18n
             tokens={[
-              'euiColorPicker.openLabel',
-              'euiColorPicker.closeLabel',
-              'euiColorPicker.transparent',
+              'wuiColorPicker.openLabel',
+              'wuiColorPicker.closeLabel',
+              'wuiColorPicker.transparent',
             ]}
             defaults={[
               'Press the escape key to close the popover',
@@ -611,7 +611,7 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
               'Transparent',
             ]}>
             {([openLabel, closeLabel, transparent]: string[]) => (
-              <EuiFieldText
+              <WuiFieldText
                 className={inputClasses}
                 onClick={handleInputActivity}
                 onKeyDown={handleInputActivity}
@@ -631,16 +631,16 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
                 aria-label={isColorSelectorShown ? openLabel : closeLabel}
               />
             )}
-          </EuiI18n>
+          </WuiI18n>
         </div>
-      </EuiFormControlLayout>
+      </WuiFormControlLayout>
     );
   }
 
   return display === 'inline' ? (
     <div className={classes}>{composite}</div>
   ) : (
-    <EuiPopover
+    <WuiPopover
       ownFocus={popoverShouldOwnFocus}
       button={buttonOrInput}
       isOpen={isColorSelectorShown}
@@ -653,20 +653,20 @@ export const EuiColorPicker: FunctionComponent<EuiColorPickerProps> = ({
       anchorPosition="downLeft"
       panelPaddingSize="s">
       <div className={classes} data-test-subj={testSubjPopover}>
-        <EuiFocusTrap clickOutsideDisables={true}>
-          <EuiScreenReaderOnly>
+        <WuiFocusTrap clickOutsideDisables={true}>
+          <WuiScreenReaderOnly>
             <p aria-live="polite">
-              <EuiI18n
-                token="euiColorPicker.screenReaderAnnouncement"
+              <WuiI18n
+                token="wuiColorPicker.screenReaderAnnouncement"
                 default="A popup with a range of selectable colors opened.
                 Tab forward to cycle through colors choices or press
                 escape to close this popup."
               />
             </p>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           {composite}
-        </EuiFocusTrap>
+        </WuiFocusTrap>
       </div>
-    </EuiPopover>
+    </WuiPopover>
   );
 };

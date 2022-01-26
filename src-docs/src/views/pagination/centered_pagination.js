@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPagination,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiPagination,
 } from '../../../../src/components';
 
 export default function() {
@@ -15,15 +15,15 @@ export default function() {
   };
 
   return (
-    <EuiFlexGroup justifyContent="spaceAround">
-      <EuiFlexItem grow={false}>
-        <EuiPagination
+    <WuiFlexGroup justifyContent="spaceAround">
+      <WuiFlexItem grow={false}>
+        <WuiPagination
           aria-label="Centered pagination example"
           pageCount={PAGE_COUNT}
           activePage={activePage}
           onPageClick={activePage => goToPage(activePage)}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 }

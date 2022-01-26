@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiHeaderLinks, GUTTER_SIZES } from './header_links';
+import { WuiHeaderLinks, GUTTER_SIZES } from './header_links';
 
-describe('EuiHeaderLinks', () => {
+describe('WuiHeaderLinks', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLinks {...requiredProps} />);
+    const component = render(<WuiHeaderLinks {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiHeaderLinks', () => {
   describe('gutterSize', () => {
     GUTTER_SIZES.forEach(gutterSize => {
       test(`${gutterSize} is rendered`, () => {
-        const component = render(<EuiHeaderLinks gutterSize={gutterSize} />);
+        const component = render(<WuiHeaderLinks gutterSize={gutterSize} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -43,7 +43,7 @@ describe('EuiHeaderLinks', () => {
   describe('popover props', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiHeaderLinks
+        <WuiHeaderLinks
           popoverBreakpoints={['xs', 's', 'm', 'l', 'xl']}
           popoverButtonProps={{
             iconType: 'bolt',
@@ -57,7 +57,7 @@ describe('EuiHeaderLinks', () => {
     });
 
     test('is never rendered with "none"', () => {
-      const component = render(<EuiHeaderLinks popoverBreakpoints={'none'} />);
+      const component = render(<WuiHeaderLinks popoverBreakpoints={'none'} />);
 
       expect(component).toMatchSnapshot();
     });

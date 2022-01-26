@@ -9,24 +9,24 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiAvatar,
-  EuiCheckbox,
-  EuiButtonIcon,
-  EuiPopover,
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPopoverTitle,
-  EuiSpacer,
-  EuiPortal,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiTitle,
-  EuiDescriptionList,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  WuiDataGrid,
+  WuiAvatar,
+  WuiCheckbox,
+  WuiButtonIcon,
+  WuiPopover,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiPopoverTitle,
+  WuiSpacer,
+  WuiPortal,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutHeader,
+  WuiTitle,
+  WuiDescriptionList,
+  WuiDescriptionListTitle,
+  WuiDescriptionListDescription,
 } from '../../../../src/components/';
 
 const columns = [
@@ -59,7 +59,7 @@ const data = [];
 for (let i = 1; i < 500; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <WuiAvatar
         size="s"
         imageUrl={fake('{{internet.avatar}}')}
         name={fake('{{name.lastName}}, {{name.firstName}}')}
@@ -80,54 +80,54 @@ const SelectionButton = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   if (selectedRows.size > 0) {
     return (
-      <EuiPopover
+      <WuiPopover
         isOpen={isPopoverOpen}
         anchorPosition="upCenter"
         panelPaddingSize="s"
         button={
-          <EuiButtonEmpty
+          <WuiButtonEmpty
             size="xs"
             iconType="arrowDown"
             color="primary"
-            className="euiDataGrid__controlBtn"
+            className="wuiDataGrid__controlBtn"
             onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
             {selectedRows.size} {selectedRows.size > 1 ? 'items' : 'item'}{' '}
             selected
-          </EuiButtonEmpty>
+          </WuiButtonEmpty>
         }
         closePopover={() => setIsPopoverOpen(false)}
         ownFocus={true}>
-        <EuiPopoverTitle>
+        <WuiPopoverTitle>
           {selectedRows.size} {selectedRows.size > 1 ? 'items' : 'item'}
-        </EuiPopoverTitle>
+        </WuiPopoverTitle>
         <div style={{ width: 150 }}>
           <button onClick={() => alert('hello')} component="span">
-            <EuiFlexGroup alignItems="center" component="span" gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButtonIcon
+            <WuiFlexGroup alignItems="center" component="span" gutterSize="s">
+              <WuiFlexItem grow={false}>
+                <WuiButtonIcon
                   aria-label="Pin selected items"
                   iconType="pin"
                   color="text"
                 />
-              </EuiFlexItem>
-              <EuiFlexItem>Pin items</EuiFlexItem>
-            </EuiFlexGroup>
+              </WuiFlexItem>
+              <WuiFlexItem>Pin items</WuiFlexItem>
+            </WuiFlexGroup>
           </button>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <button onClick={() => alert('hello')}>
-            <EuiFlexGroup alignItems="center" component="span" gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButtonIcon
+            <WuiFlexGroup alignItems="center" component="span" gutterSize="s">
+              <WuiFlexItem grow={false}>
+                <WuiButtonIcon
                   aria-label="Delete selected items"
                   iconType="trash"
                   color="text"
                 />
-              </EuiFlexItem>
-              <EuiFlexItem>Delete items</EuiFlexItem>
-            </EuiFlexGroup>
+              </WuiFlexItem>
+              <WuiFlexItem>Delete items</WuiFlexItem>
+            </WuiFlexGroup>
           </button>
         </div>
-      </EuiPopover>
+      </WuiPopover>
     );
   } else {
     return null;
@@ -139,7 +139,7 @@ const SelectionHeaderCell = () => {
   const isIndeterminate =
     selectedRows.size > 0 && selectedRows.size < data.length;
   return (
-    <EuiCheckbox
+    <WuiCheckbox
       id="selection-toggle"
       aria-label="Select all rows"
       indeterminate={isIndeterminate}
@@ -168,7 +168,7 @@ const SelectionRowCell = ({ rowIndex }) => {
 
   return (
     <div>
-      <EuiCheckbox
+      <WuiCheckbox
         id={`${rowIndex}`}
         aria-label={`Select row ${rowIndex}, ${data[rowIndex].name}`}
         checked={isChecked}
@@ -194,31 +194,31 @@ const FlyoutRowCell = rowIndex => {
     const details = Object.entries(rowData).map(([key, value]) => {
       return (
         <Fragment>
-          <EuiDescriptionListTitle>{key}</EuiDescriptionListTitle>
-          <EuiDescriptionListDescription>{value}</EuiDescriptionListDescription>
+          <WuiDescriptionListTitle>{key}</WuiDescriptionListTitle>
+          <WuiDescriptionListDescription>{value}</WuiDescriptionListDescription>
         </Fragment>
       );
     });
 
     flyout = (
-      <EuiPortal>
-        <EuiFlyout ownFocus onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}>
-          <EuiFlyoutHeader hasBorder>
-            <EuiTitle size="m">
+      <WuiPortal>
+        <WuiFlyout ownFocus onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}>
+          <WuiFlyoutHeader hasBorder>
+            <WuiTitle size="m">
               <h2>{rowData.name}</h2>
-            </EuiTitle>
-          </EuiFlyoutHeader>
-          <EuiFlyoutBody>
-            <EuiDescriptionList>{details}</EuiDescriptionList>
-          </EuiFlyoutBody>
-        </EuiFlyout>
-      </EuiPortal>
+            </WuiTitle>
+          </WuiFlyoutHeader>
+          <WuiFlyoutBody>
+            <WuiDescriptionList>{details}</WuiDescriptionList>
+          </WuiFlyoutBody>
+        </WuiFlyout>
+      </WuiPortal>
     );
   }
 
   return (
     <Fragment>
-      <EuiButtonIcon
+      <WuiButtonIcon
         color="text"
         iconType="eye"
         iconSize="s"
@@ -254,12 +254,12 @@ const trailingControlColumns = [
       const [isPopoverOpen, setIsPopoverOpen] = useState(false);
       return (
         <div>
-          <EuiPopover
+          <WuiPopover
             isOpen={isPopoverOpen}
             anchorPosition="upCenter"
             panelPaddingSize="s"
             button={
-              <EuiButtonIcon
+              <WuiButtonIcon
                 aria-label="show actions"
                 iconType="boxesHorizontal"
                 color="text"
@@ -268,41 +268,41 @@ const trailingControlColumns = [
             }
             closePopover={() => setIsPopoverOpen(false)}
             ownFocus={true}>
-            <EuiPopoverTitle>Actions</EuiPopoverTitle>
+            <WuiPopoverTitle>Actions</WuiPopoverTitle>
             <div style={{ width: 150 }}>
               <button onClick={() => alert('hello')} component="span">
-                <EuiFlexGroup
+                <WuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <WuiFlexItem grow={false}>
+                    <WuiButtonIcon
                       aria-label="Pin selected items"
                       iconType="pin"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Pin</EuiFlexItem>
-                </EuiFlexGroup>
+                  </WuiFlexItem>
+                  <WuiFlexItem>Pin</WuiFlexItem>
+                </WuiFlexGroup>
               </button>
-              <EuiSpacer size="s" />
+              <WuiSpacer size="s" />
               <button onClick={() => alert('hello')}>
-                <EuiFlexGroup
+                <WuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <WuiFlexItem grow={false}>
+                    <WuiButtonIcon
                       aria-label="Delete selected items"
                       iconType="trash"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Delete</EuiFlexItem>
-                </EuiFlexGroup>
+                  </WuiFlexItem>
+                  <WuiFlexItem>Delete</WuiFlexItem>
+                </WuiFlexGroup>
               </button>
             </div>
-          </EuiPopover>
+          </WuiPopover>
         </div>
       );
     },
@@ -352,8 +352,8 @@ export default function DataGrid() {
   return (
     <SelectionContext.Provider value={rowSelection}>
       <div>
-        <EuiDataGrid
-          aria-label="Top EUI contributors"
+        <WuiDataGrid
+          aria-label="Top WUI contributors"
           leadingControlColumns={leadingControlColumns}
           trailingControlColumns={trailingControlColumns}
           columns={columns}

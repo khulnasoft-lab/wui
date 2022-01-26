@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPortal is rendered 1`] = `
+exports[`WuiPortal is rendered 1`] = `
 <div>
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
@@ -12,6 +12,6 @@ exports[`EuiPortal is rendered 1`] = `
     >
       Content
     </Portal>
-  </EuiPortal>
+  </WuiPortal>
 </div>
 `;

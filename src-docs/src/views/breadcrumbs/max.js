@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiBreadcrumbs } from '../../../../src/components';
+import { WuiBreadcrumbs } from '../../../../src/components';
 
 export default () => {
   const breadcrumbs = [
@@ -38,10 +38,10 @@ export default () => {
   ];
 
   return (
-    <EuiBreadcrumbs
+    <WuiBreadcrumbs
       max={4}
       breadcrumbs={breadcrumbs}
-      aria-label="An example of EuiBreadcrumbs with specifying max prop"
+      aria-label="An example of WuiBreadcrumbs with specifying max prop"
     />
   );
 };

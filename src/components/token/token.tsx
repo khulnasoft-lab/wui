@@ -23,69 +23,69 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { isColorDark, hexToRgb } from '../../services';
 
-import { IconType, EuiIcon, IconSize } from '../icon';
-import { EuiTokenMapType, TOKEN_MAP } from './token_map';
+import { IconType, WuiIcon, IconSize } from '../icon';
+import { WuiTokenMapType, TOKEN_MAP } from './token_map';
 
 type TokenSize = 'xs' | 's' | 'm' | 'l';
 type TokenShape = 'circle' | 'square' | 'rectangle';
 type TokenFill = 'dark' | 'light' | 'none';
 type TokenColor =
-  | 'euiColorVis0'
-  | 'euiColorVis1'
-  | 'euiColorVis2'
-  | 'euiColorVis3'
-  | 'euiColorVis4'
-  | 'euiColorVis5'
-  | 'euiColorVis6'
-  | 'euiColorVis7'
-  | 'euiColorVis8'
-  | 'euiColorVis9'
+  | 'wuiColorVis0'
+  | 'wuiColorVis1'
+  | 'wuiColorVis2'
+  | 'wuiColorVis3'
+  | 'wuiColorVis4'
+  | 'wuiColorVis5'
+  | 'wuiColorVis6'
+  | 'wuiColorVis7'
+  | 'wuiColorVis8'
+  | 'wuiColorVis9'
   | 'gray';
 
 const sizeToClassMap: { [size in TokenSize]: string } = {
-  xs: 'euiToken--xsmall',
-  s: 'euiToken--small',
-  m: 'euiToken--medium',
-  l: 'euiToken--large',
+  xs: 'wuiToken--xsmall',
+  s: 'wuiToken--small',
+  m: 'wuiToken--medium',
+  l: 'wuiToken--large',
 };
 
 export const SIZES = keysOf(sizeToClassMap);
 
 const shapeToClassMap: { [shape in TokenShape]: string } = {
-  circle: 'euiToken--circle',
-  square: 'euiToken--square',
-  rectangle: 'euiToken--rectangle',
+  circle: 'wuiToken--circle',
+  square: 'wuiToken--square',
+  rectangle: 'wuiToken--rectangle',
 };
 
 export const SHAPES = keysOf(shapeToClassMap);
 
 const fillToClassMap: { [fill in TokenFill]: string | null } = {
   none: null,
-  light: 'euiToken--light',
-  dark: 'euiToken--dark',
+  light: 'wuiToken--light',
+  dark: 'wuiToken--dark',
 };
 
 export const FILLS = keysOf(fillToClassMap);
 
 const colorToClassMap: { [color in TokenColor]: string } = {
-  euiColorVis0: 'euiToken--euiColorVis0',
-  euiColorVis1: 'euiToken--euiColorVis1',
-  euiColorVis2: 'euiToken--euiColorVis2',
-  euiColorVis3: 'euiToken--euiColorVis3',
-  euiColorVis4: 'euiToken--euiColorVis4',
-  euiColorVis5: 'euiToken--euiColorVis5',
-  euiColorVis6: 'euiToken--euiColorVis6',
-  euiColorVis7: 'euiToken--euiColorVis7',
-  euiColorVis8: 'euiToken--euiColorVis8',
-  euiColorVis9: 'euiToken--euiColorVis9',
-  gray: 'euiToken--gray',
+  wuiColorVis0: 'wuiToken--wuiColorVis0',
+  wuiColorVis1: 'wuiToken--wuiColorVis1',
+  wuiColorVis2: 'wuiToken--wuiColorVis2',
+  wuiColorVis3: 'wuiToken--wuiColorVis3',
+  wuiColorVis4: 'wuiToken--wuiColorVis4',
+  wuiColorVis5: 'wuiToken--wuiColorVis5',
+  wuiColorVis6: 'wuiToken--wuiColorVis6',
+  wuiColorVis7: 'wuiToken--wuiColorVis7',
+  wuiColorVis8: 'wuiToken--wuiColorVis8',
+  wuiColorVis9: 'wuiToken--wuiColorVis9',
+  gray: 'wuiToken--gray',
 };
 
 export const COLORS = keysOf(colorToClassMap);
 
 export interface TokenProps {
   /**
-   * An EUI icon type
+   * An WUI icon type
    */
   iconType: IconType;
   /**
@@ -117,11 +117,11 @@ export interface TokenProps {
   'aria-describedby'?: string;
 }
 
-export type EuiTokenProps = CommonProps &
+export type WuiTokenProps = CommonProps &
   TokenProps &
   Omit<HTMLAttributes<HTMLSpanElement>, 'title'>;
 
-export const EuiToken: FunctionComponent<EuiTokenProps> = ({
+export const WuiToken: FunctionComponent<WuiTokenProps> = ({
   iconType,
   color,
   fill,
@@ -159,7 +159,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   // If the iconType passed is one of the prefab token types,
   // grab its properties
   if (iconType in TOKEN_MAP) {
-    const tokenDisplay = TOKEN_MAP[iconType as EuiTokenMapType];
+    const tokenDisplay = TOKEN_MAP[iconType as WuiTokenMapType];
     finalDisplay = defaults(currentDisplay, tokenDisplay);
   } else {
     finalDisplay = currentDisplay;
@@ -169,7 +169,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   const finalShape = finalDisplay.shape || 'circle';
   let finalFill = finalDisplay.fill || 'light';
 
-  // Color can be a named space via euiColorVis
+  // Color can be a named space via wuiColorVis
   let colorClass;
   if (finalColor in colorToClassMap) {
     colorClass = colorToClassMap[finalColor as TokenColor];
@@ -191,7 +191,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   }
 
   const classes = classNames(
-    'euiToken',
+    'wuiToken',
     colorClass,
     shapeToClassMap[finalShape],
     fillToClassMap[finalFill],
@@ -201,7 +201,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
 
   return (
     <span className={classes} style={style} {...rest}>
-      <EuiIcon
+      <WuiIcon
         type={iconType}
         size={finalSize}
         title={title}

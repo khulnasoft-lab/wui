@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiHealth } from './health';
+import { WuiHealth } from './health';
 
-describe('EuiHealth', () => {
+describe('WuiHealth', () => {
   test('is rendered', () => {
-    const component = render(<EuiHealth {...requiredProps} />);
+    const component = render(<WuiHealth {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

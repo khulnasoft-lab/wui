@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiSpacer,
-  EuiCode,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlexGrid,
-  EuiLink,
+  WuiCallOut,
+  WuiSpacer,
+  WuiCode,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFlexGrid,
+  WuiLink,
 } from '../../../../src/components';
 
 import { flexGroupConfig, flexGridConfig } from './playground';
@@ -78,120 +78,120 @@ import FlexGroupResponsive from './flex_responsive';
 const flexGroupResponsiveSource = require('!!raw-loader!./flex_responsive');
 const flexGroupResponsiveHtml = renderToHtml(FlexGroupResponsive);
 
-const flexSnippet = `<EuiFlexGroup>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexSnippet = `<WuiFlexGroup>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGroupWrap = `<EuiFlexGroup wrap>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGroupWrap = `<WuiFlexGroup wrap>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const componentSpanSnippet = `<EuiFlexGroup component="span">
-  <EuiFlexItem component="span"><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem component="span"><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const componentSpanSnippet = `<WuiFlexGroup component="span">
+  <WuiFlexItem component="span"><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem component="span"><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexItemPanelSnippet = `<EuiFlexGroup>
-  <EuiFlexItem>
-    <EuiPanel><!-- Panel content --></EuiPanel>
-  </EuiFlexItem>
+const flexItemPanelSnippet = `<WuiFlexGroup>
+  <WuiFlexItem>
+    <WuiPanel><!-- Panel content --></WuiPanel>
+  </WuiFlexItem>
 
-  <EuiFlexItem>
-    <EuiPanel grow={false}><!-- Panel content --></EuiPanel>
-  </EuiFlexItem>
-</EuiFlexGroup>`;
+  <WuiFlexItem>
+    <WuiPanel grow={false}><!-- Panel content --></WuiPanel>
+  </WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGrowZeroSnippet = `<EuiFlexGroup>
-  <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGrowZeroSnippet = `<WuiFlexGroup>
+  <WuiFlexItem grow={false}><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGrowNumericSnippet = `<EuiFlexGroup>
-  <EuiFlexItem grow={1}><!-- FlexItem with flew-grow 1 --></EuiFlexItem>
-  <EuiFlexItem grow={2}><!-- FlexItem with flew-grow 2 --></EuiFlexItem>
+const flexGrowNumericSnippet = `<WuiFlexGroup>
+  <WuiFlexItem grow={1}><!-- FlexItem with flew-grow 1 --></WuiFlexItem>
+  <WuiFlexItem grow={2}><!-- FlexItem with flew-grow 2 --></WuiFlexItem>
   ...
-  <EuiFlexItem grow={10}><!-- FlexItem with flew-grow 10 --></EuiFlexItem>
-</EuiFlexGroup>`;
+  <WuiFlexItem grow={10}><!-- FlexItem with flew-grow 10 --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexJustifySnippet = `<EuiFlexGroup justifyContent="spaceBetween">
-  <EuiFlexItem><!-- FlexItem with space-between --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem with space-between --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexJustifySnippet = `<WuiFlexGroup justifyContent="spaceBetween">
+  <WuiFlexItem><!-- FlexItem with space-between --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem with space-between --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const directionSnippet = `<EuiFlexGroup direction="column">
-  <EuiFlexItem><!-- FlexItem in column FlexGroup --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem in column FlexGroup --></EuiFlexItem>
-</EuiFlexGroup>`;
+const directionSnippet = `<WuiFlexGroup direction="column">
+  <WuiFlexItem><!-- FlexItem in column FlexGroup --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem in column FlexGroup --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGridSnippet = `<EuiFlexGrid>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGrid>`;
+const flexGridSnippet = `<WuiFlexGrid>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGrid>`;
 
-const flexGridColumnsSnippet = `<EuiFlexGrid columns={3}>
-  <EuiFlexItem>
+const flexGridColumnsSnippet = `<WuiFlexGrid columns={3}>
+  <WuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </WuiFlexItem>
+  <WuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </WuiFlexItem>
+  <WuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-</EuiFlexGrid>`;
+  </WuiFlexItem>
+</WuiFlexGrid>`;
 
-const flexGridColumnFirstSnippet = `<EuiFlexGrid columns={2} direction="column">
-  <EuiFlexItem>
+const flexGridColumnFirstSnippet = `<WuiFlexGrid columns={2} direction="column">
+  <WuiFlexItem>
     <!-- Item in FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </WuiFlexItem>
+  <WuiFlexItem>
     <!-- Item in FlexGrid-->
-  </EuiFlexItem>
-</EuiFlexGrid>`;
+  </WuiFlexItem>
+</WuiFlexGrid>`;
 
-const flexNestSnippet = `<EuiFlexGroup>
-  <EuiFlexItem>
-    <EuiFlexGroup>
-      <EuiFlexItem><!-- FlexGroup inside FlexGroup --></EuiFlexItem>
-      <EuiFlexItem><!-- FlexGroup inside FlexGroup --></EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiFlexItem>
-  <EuiFlexItem>
-    <EuiFlexGrid>
-      <EuiFlexItem><!-- FlexGrid inside FlexGroup --></EuiFlexItem>
-      <EuiFlexItem><!-- FlexGrid inside FlexGroup --></EuiFlexItem>
-    </EuiFlexGrid>
-  </EuiFlexItem>
-</EuiFlexGroup>`;
+const flexNestSnippet = `<WuiFlexGroup>
+  <WuiFlexItem>
+    <WuiFlexGroup>
+      <WuiFlexItem><!-- FlexGroup inside FlexGroup --></WuiFlexItem>
+      <WuiFlexItem><!-- FlexGroup inside FlexGroup --></WuiFlexItem>
+    </WuiFlexGroup>
+  </WuiFlexItem>
+  <WuiFlexItem>
+    <WuiFlexGrid>
+      <WuiFlexItem><!-- FlexGrid inside FlexGroup --></WuiFlexItem>
+      <WuiFlexItem><!-- FlexGrid inside FlexGroup --></WuiFlexItem>
+    </WuiFlexGrid>
+  </WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGutterSnippet = `<EuiFlexGroup gutterSize="none">
-  <EuiFlexItem><!-- FlexItem without gutter --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem without gutter --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGutterSnippet = `<WuiFlexGroup gutterSize="none">
+  <WuiFlexItem><!-- FlexItem without gutter --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem without gutter --></WuiFlexItem>
+</WuiFlexGroup>`;
 
-const flexGroupResponsiveSnippet = `<EuiFlexGroup responsive={false}>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGroupResponsiveSnippet = `<WuiFlexGroup responsive={false}>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+  <WuiFlexItem><!-- FlexItem content --></WuiFlexItem>
+</WuiFlexGroup>`;
 
 export const FlexExample = {
   title: 'Flex',
   intro: (
     <Fragment>
-      <EuiCallOut
+      <WuiCallOut
         title="Coloring and padding exist for examples only"
         color="warning">
         <p>
           Padding and background-color are added to all the{' '}
-          <strong>EuiFlexItem</strong> components on this documentation page for
+          <strong>WuiFlexItem</strong> components on this documentation page for
           illustrative purposes only. You will need to add padding through
           additional components or classes if you need it.
         </p>
-      </EuiCallOut>
+      </WuiCallOut>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
     </Fragment>
   ),
   sections: [
@@ -210,14 +210,14 @@ export const FlexExample = {
       text: (
         <div>
           <p>
-            <strong>EuiFlexGroup</strong> is useful for setting up layouts for a{' '}
+            <strong>WuiFlexGroup</strong> is useful for setting up layouts for a{' '}
             <strong>single row</strong> of content. By default any{' '}
-            <strong>EuiFlexItem</strong> within <strong>EuiFlexGroup</strong>{' '}
+            <strong>WuiFlexItem</strong> within <strong>WuiFlexGroup</strong>{' '}
             will stretch and grow to match their siblings.
           </p>
         </div>
       ),
-      props: { EuiFlexGroup, EuiFlexItem, EuiFlexGrid },
+      props: { WuiFlexGroup, WuiFlexItem, WuiFlexGrid },
       snippet: flexSnippet,
       demo: (
         <div className="guideDemo__highlightGrid">
@@ -240,19 +240,19 @@ export const FlexExample = {
       text: (
         <Fragment>
           <p>
-            You can set <EuiCode>wrap</EuiCode> on <strong>EuiFlexGroup</strong>{' '}
-            if it contains <strong>EuiFlexItems</strong> with minimum widths,
+            You can set <WuiCode>wrap</WuiCode> on <strong>WuiFlexGroup</strong>{' '}
+            if it contains <strong>WuiFlexItems</strong> with minimum widths,
             which you want to wrap as the container becomes narrower.
           </p>
-          <EuiCallOut color="warning" title="IE Warning">
+          <WuiCallOut color="warning" title="IE Warning">
             <p>
               IE11 does not properly wrap flex items if the{' '}
               <strong>group</strong> is also within a flex item. To fix this
               rendering issue, you need to add a class of{' '}
-              <EuiCode>.euiIEFlexWrapFix</EuiCode> to the flex-item that{' '}
+              <WuiCode>.wuiIEFlexWrapFix</WuiCode> to the flex-item that{' '}
               <strong>contains</strong> the wrapping group.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </Fragment>
       ),
       snippet: flexGroupWrap,
@@ -276,9 +276,9 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Same code as above. Notice that <strong>EuiFlexItem</strong> creates
+          Same code as above. Notice that <strong>WuiFlexItem</strong> creates
           equal width items no matter the number of siblings.{' '}
-          <strong>EuiFlexGroup</strong> never wraps.
+          <strong>WuiFlexGroup</strong> never wraps.
         </p>
       ),
       demo: (
@@ -301,8 +301,8 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <EuiCode>component=&ldquo;span&rdquo;</EuiCode> can be set on{' '}
-          <strong>EuiFlexGroup</strong> and/or <strong>EuiFlexItem</strong>.
+          <WuiCode>component=&ldquo;span&rdquo;</WuiCode> can be set on{' '}
+          <strong>WuiFlexGroup</strong> and/or <strong>WuiFlexItem</strong>.
         </p>
       ),
       snippet: componentSpanSnippet,
@@ -328,9 +328,9 @@ export const FlexExample = {
         <p>
           The{' '}
           <Link to="/layout/panel">
-            <strong>EuiPanel</strong>
+            <strong>WuiPanel</strong>
           </Link>{' '}
-          component will naturally grow to fill the <strong>EuiFlexItem</strong>{' '}
+          component will naturally grow to fill the <strong>WuiFlexItem</strong>{' '}
           which contains it.
         </p>
       ),
@@ -351,7 +351,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Sometimes you do not want a <strong>EuiFlexItem</strong> to grow. It
+          Sometimes you do not want a <strong>WuiFlexItem</strong> to grow. It
           can be turned off on each item individually.
         </p>
       ),
@@ -377,7 +377,7 @@ export const FlexExample = {
       text: (
         <p>
           You can specify a number between 1 and 10 for a{' '}
-          <strong>EuiFlexItem</strong> to try to take up a proportional part of
+          <strong>WuiFlexItem</strong> to try to take up a proportional part of
           the flex box it is in.
         </p>
       ),
@@ -402,12 +402,12 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <strong>EuiFlexGroups</strong> can also use{' '}
-          <EuiCode>justifyContent</EuiCode> and <EuiCode>alignItems</EuiCode>{' '}
+          <strong>WuiFlexGroups</strong> can also use{' '}
+          <WuiCode>justifyContent</WuiCode> and <WuiCode>alignItems</WuiCode>{' '}
           props that accept normal flex-box parameters. Below are some common
           scenarios, where you need to separate two items, center justify a
           single one, or center an item vertically. Note the usage of{' '}
-          <strong>EuiFlexItems</strong> with <EuiCode>grow=false</EuiCode> so
+          <strong>WuiFlexItems</strong> with <WuiCode>grow=false</WuiCode> so
           that they do not stretch.
         </p>
       ),
@@ -433,10 +433,10 @@ export const FlexExample = {
       text: (
         <div>
           <p>
-            You can change direction using the <EuiCode>direction</EuiCode>{' '}
+            You can change direction using the <WuiCode>direction</WuiCode>{' '}
             prop.
           </p>
-          <EuiCallOut color="warning" title="IE11 Warning">
+          <WuiCallOut color="warning" title="IE11 Warning">
             <p>
               Depending on the nested structure of your flex groups, it is
               possible that flex items inside a column directed flex group will
@@ -445,7 +445,7 @@ export const FlexExample = {
               <code>grow</code> to <code>true</code> will not suffice. You may
               also need to adjust the <code>flex-basis</code> value.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </div>
       ),
       snippet: directionSnippet,
@@ -469,11 +469,11 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <strong>EuiFlexGrid</strong> is a more rigid component that sets
+          <strong>WuiFlexGrid</strong> is a more rigid component that sets
           multiple, wrapping rows of same width items.
         </p>
       ),
-      props: { EuiFlexGrid },
+      props: { WuiFlexGrid },
       snippet: flexGridSnippet,
       demo: (
         <div className="guideDemo__highlightGridWrap">
@@ -495,7 +495,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          You can set a <EuiCode>columns</EuiCode> prop to specify anywhere
+          You can set a <WuiCode>columns</WuiCode> prop to specify anywhere
           between 1-4 columns. Any more would likely break on laptop screens.
         </p>
       ),
@@ -520,7 +520,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Adding <EuiCode>direction=&quot;column&quot;</EuiCode> will re-orient
+          Adding <WuiCode>direction=&quot;column&quot;</WuiCode> will re-orient
           the flex items so they display top-down <strong>then</strong> left to
           right.
         </p>
@@ -547,22 +547,22 @@ export const FlexExample = {
       text: (
         <Fragment>
           <p>
-            <strong>EuiFlexGroup</strong> and <strong>EuiFlexGrid</strong> can
+            <strong>WuiFlexGroup</strong> and <strong>WuiFlexGrid</strong> can
             nest within themselves indefinitely. For example, here we turn off
-            the growth on a <strong>EuiFlexGroup</strong>, then nest a grid
+            the growth on a <strong>WuiFlexGroup</strong>, then nest a grid
             inside of it.
           </p>
-          <EuiCallOut color="warning" title="IE11 Warning">
+          <WuiCallOut color="warning" title="IE11 Warning">
             <p>
               Nesting can cause some nasty bugs in IE11. There is no generalized
               way to fix IE without knowing the exact intention of the layout.
               Please refer to{' '}
-              <EuiLink href="https://github.com/philipwalton/flexbugs">
+              <WuiLink href="https://github.com/philipwalton/flexbugs">
                 Flexbugs
-              </EuiLink>{' '}
+              </WuiLink>{' '}
               if you see rendering issues in IE.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </Fragment>
       ),
       snippet: flexNestSnippet,
@@ -586,9 +586,9 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          The <EuiCode>gutterSize</EuiCode> prop can be applied to either a{' '}
-          <strong>EuiFlexGroup</strong> or a <strong>EuiFlexGrid</strong> to
-          adjust the spacing between <strong>EuiFlexItems</strong>.
+          The <WuiCode>gutterSize</WuiCode> prop can be applied to either a{' '}
+          <strong>WuiFlexGroup</strong> or a <strong>WuiFlexGrid</strong> to
+          adjust the spacing between <strong>WuiFlexItems</strong>.
         </p>
       ),
       snippet: flexGutterSnippet,
@@ -612,9 +612,9 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          By default <strong>EuiFlexGroup</strong> is responsive. However, often
+          By default <strong>WuiFlexGroup</strong> is responsive. However, often
           you only want to use groups for alignment and margins, rather than
-          layouts. Simply apply the <EuiCode>responsive={'{false}'}</EuiCode>{' '}
+          layouts. Simply apply the <WuiCode>responsive={'{false}'}</WuiCode>{' '}
           prop to retain a single row layout for the group.
         </p>
       ),

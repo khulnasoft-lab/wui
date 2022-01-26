@@ -20,9 +20,9 @@
 import React, { TextareaHTMLAttributes, Ref, FunctionComponent } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiValidatableControl } from '../validatable_control';
+import { WuiValidatableControl } from '../validatable_control';
 
-export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
+export type WuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   CommonProps & {
     isInvalid?: boolean;
     fullWidth?: boolean;
@@ -37,15 +37,15 @@ export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   };
 
 const resizeToClassNameMap = {
-  vertical: 'euiTextArea--resizeVertical',
-  horizontal: 'euiTextArea--resizeHorizontal',
-  both: 'euiTextArea--resizeBoth',
-  none: 'euiTextArea--resizeNone',
+  vertical: 'wuiTextArea--resizeVertical',
+  horizontal: 'wuiTextArea--resizeHorizontal',
+  both: 'wuiTextArea--resizeBoth',
+  none: 'wuiTextArea--resizeNone',
 };
 
 export const RESIZE = Object.keys(resizeToClassNameMap);
 
-export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
+export const WuiTextArea: FunctionComponent<WuiTextAreaProps> = ({
   children,
   className,
   compressed,
@@ -60,11 +60,11 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextArea',
+    'wuiTextArea',
     resizeToClassNameMap[resize],
     {
-      'euiTextArea--fullWidth': fullWidth,
-      'euiTextArea--compressed': compressed,
+      'wuiTextArea--fullWidth': fullWidth,
+      'wuiTextArea--compressed': compressed,
     },
     className
   );
@@ -80,7 +80,7 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   }
 
   return (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <WuiValidatableControl isInvalid={isInvalid}>
       <textarea
         className={classes}
         {...rest}
@@ -91,6 +91,6 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
         placeholder={placeholder}>
         {children}
       </textarea>
-    </EuiValidatableControl>
+    </WuiValidatableControl>
   );
 };

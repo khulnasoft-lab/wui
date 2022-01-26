@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSwitch } from './switch';
+import { WuiSwitch } from './switch';
 
 const props = {
   checked: false,
@@ -33,17 +33,17 @@ jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
-describe('EuiSwitch', () => {
+describe('WuiSwitch', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSwitch id="test" {...props} {...requiredProps} />
+      <WuiSwitch id="test" {...props} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('assigns automatically generated ID to label', () => {
-    const component = render(<EuiSwitch {...props} />);
+    const component = render(<WuiSwitch {...props} />);
 
     expect(component).toMatchSnapshot();
   });

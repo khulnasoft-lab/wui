@@ -22,22 +22,22 @@ import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
 const sizeToClassNameMap = {
-  s: 'euiLoadingSpinner--small',
-  m: 'euiLoadingSpinner--medium',
-  l: 'euiLoadingSpinner--large',
-  xl: 'euiLoadingSpinner--xLarge',
+  s: 'wuiLoadingSpinner--small',
+  m: 'wuiLoadingSpinner--medium',
+  l: 'wuiLoadingSpinner--large',
+  xl: 'wuiLoadingSpinner--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
+export type WuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
 
-export const EuiLoadingSpinner: FunctionComponent<CommonProps &
+export const WuiLoadingSpinner: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
-    size?: EuiLoadingSpinnerSize;
+    size?: WuiLoadingSpinnerSize;
   }> = ({ size = 'm', className, ...rest }) => {
   const classes = classNames(
-    'euiLoadingSpinner',
+    'wuiLoadingSpinner',
     sizeToClassNameMap[size],
     className
   );

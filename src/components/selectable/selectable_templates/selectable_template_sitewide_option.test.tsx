@@ -20,12 +20,12 @@
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiSelectableTemplateSitewideOption,
-  euiSelectableTemplateSitewideFormatOptions,
-  euiSelectableTemplateSitewideRenderOptions,
+  WuiSelectableTemplateSitewideOption,
+  wuiSelectableTemplateSitewideFormatOptions,
+  wuiSelectableTemplateSitewideRenderOptions,
 } from './selectable_template_sitewide_option';
 
-const options: EuiSelectableTemplateSitewideOption[] = [
+const options: WuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Basic data application',
     'data-test-subj': 'test-this',
@@ -85,24 +85,24 @@ const options: EuiSelectableTemplateSitewideOption[] = [
   },
 ];
 
-describe('EuiSelectableTemplateSitewideOptions', () => {
-  const formattedOptions = euiSelectableTemplateSitewideFormatOptions(options);
+describe('WuiSelectableTemplateSitewideOptions', () => {
+  const formattedOptions = wuiSelectableTemplateSitewideFormatOptions(options);
 
-  test('different configurations are formatted with euiSelectableTemplateSitewideFormatOptions()', () => {
+  test('different configurations are formatted with wuiSelectableTemplateSitewideFormatOptions()', () => {
     expect(formattedOptions).toMatchSnapshot();
   });
 
-  test('different configurations are rendered with euiSelectableTemplateSitewideRenderOptions()', () => {
+  test('different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions()', () => {
     options.forEach(option => {
-      const component = euiSelectableTemplateSitewideRenderOptions(option, '');
+      const component = wuiSelectableTemplateSitewideRenderOptions(option, '');
 
       expect(component).toMatchSnapshot();
     });
   });
 
-  test('different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() and search text', () => {
+  test('different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() and search text', () => {
     options.forEach(option => {
-      const component = euiSelectableTemplateSitewideRenderOptions(
+      const component = wuiSelectableTemplateSitewideRenderOptions(
         option,
         'data'
       );

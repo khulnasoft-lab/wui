@@ -1,25 +1,25 @@
 import React from 'react';
 import {
-  EuiCommentList,
-  EuiCommentProps,
+  WuiCommentList,
+  WuiCommentProps,
 } from '../../../../src/components/comment_list';
-import { EuiAvatar } from '../../../../src/components/avatar';
-import { EuiButtonIcon } from '../../../../src/components/button';
-import { EuiText } from '../../../../src/components/text';
-import { EuiBadge } from '../../../../src/components/badge';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiAvatar } from '../../../../src/components/avatar';
+import { WuiButtonIcon } from '../../../../src/components/button';
+import { WuiText } from '../../../../src/components/text';
+import { WuiBadge } from '../../../../src/components/badge';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 const body = (
-  <EuiText size="s">
+  <WuiText size="s">
     <p>
       Far out in the uncharted backwaters of the unfashionable end of the
       western spiral arm of the Galaxy lies a small unregarded yellow sun.
     </p>
-  </EuiText>
+  </WuiText>
 );
 
 const copyAction = (
-  <EuiButtonIcon
+  <WuiButtonIcon
     title="Custom action"
     aria-label="Custom action"
     color="subdued"
@@ -28,28 +28,28 @@ const copyAction = (
 );
 
 const complexEvent = (
-  <EuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
-    <EuiFlexItem grow={false}>added tags</EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="primary">sample</EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="secondary">review</EuiBadge>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
+    <WuiFlexItem grow={false}>added tags</WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="primary">sample</WuiBadge>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="secondary">review</WuiBadge>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );
 
 const complexUsername = (
-  <EuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
-    <EuiFlexItem grow={false}>
-      <EuiAvatar size="s" type="space" name="Pedro" />
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>pedror</EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
+    <WuiFlexItem grow={false}>
+      <WuiAvatar size="s" type="space" name="Pedro" />
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>pedror</WuiFlexItem>
+  </WuiFlexGroup>
 );
 
 const longBody = (
-  <EuiText size="s">
+  <WuiText size="s">
     <p>
       This planet has - or rather had - a problem, which was this: most of the
       people living on it were unhappy for pretty much of the time. Many
@@ -58,18 +58,18 @@ const longBody = (
       because on the whole it was not the small green pieces of paper that were
       unhappy.
     </p>
-  </EuiText>
+  </WuiText>
 );
 
 const avatar = (
-  <EuiAvatar
+  <WuiAvatar
     imageUrl="https://source.unsplash.com/64x64/?woman"
     size="l"
     name="Juana"
   />
 );
 
-const comments: EuiCommentProps[] = [
+const comments: WuiCommentProps[] = [
   {
     username: 'janed',
     event: 'added a comment',
@@ -103,10 +103,10 @@ const comments: EuiCommentProps[] = [
     username: 'elohar',
     event: 'added a comment',
     timestamp: 'on Jan 14, 2020',
-    timelineIcon: <EuiAvatar size="l" name="Eloha" />,
+    timelineIcon: <WuiAvatar size="l" name="Eloha" />,
     children: longBody,
     actions: copyAction,
   },
 ];
 
-export default () => <EuiCommentList comments={comments} />;
+export default () => <WuiCommentList comments={comments} />;

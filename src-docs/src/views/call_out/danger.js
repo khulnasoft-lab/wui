@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { EuiCallOut, EuiLink } from '../../../../src/components';
+import { WuiCallOut, WuiLink } from '../../../../src/components';
 
 export default () => (
-  <EuiCallOut title="Sorry, there was an error" color="danger" iconType="alert">
+  <WuiCallOut title="Sorry, there was an error" color="danger" iconType="alert">
     <p>
       Now you have to fix it, but maybe{' '}
-      <EuiLink href="#">this link can help</EuiLink>.
+      <WuiLink href="#">this link can help</WuiLink>.
     </p>
-  </EuiCallOut>
+  </WuiCallOut>
 );

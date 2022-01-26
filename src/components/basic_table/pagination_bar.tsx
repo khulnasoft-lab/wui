@@ -18,8 +18,8 @@
  */
 
 import React, { useEffect } from 'react';
-import { EuiSpacer } from '../spacer';
-import { EuiTablePagination } from '../table';
+import { WuiSpacer } from '../spacer';
+import { WuiTablePagination } from '../table';
 import {
   ItemsPerPageChangeHandler,
   PageChangeHandler,
@@ -66,8 +66,8 @@ export const PaginationBar = ({
 
   return (
     <div>
-      <EuiSpacer size="m" />
-      <EuiTablePagination
+      <WuiSpacer size="m" />
+      <WuiTablePagination
         activePage={pagination.pageIndex}
         hidePerPageOptions={pagination.hidePerPageOptions}
         itemsPerPage={pagination.pageSize}

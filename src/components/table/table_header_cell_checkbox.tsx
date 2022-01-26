@@ -23,20 +23,20 @@ import { CommonProps } from '../common';
 
 import { resolveWidthAsStyle } from './utils';
 
-export type EuiTableHeaderCellCheckboxScope =
+export type WuiTableHeaderCellCheckboxScope =
   | 'col'
   | 'row'
   | 'colgroup'
   | 'rowgroup';
 
-export interface EuiTableHeaderCellCheckboxProps {
+export interface WuiTableHeaderCellCheckboxProps {
   width?: string | number;
-  scope?: EuiTableHeaderCellCheckboxScope;
+  scope?: WuiTableHeaderCellCheckboxScope;
 }
 
-export const EuiTableHeaderCellCheckbox: FunctionComponent<CommonProps &
+export const WuiTableHeaderCellCheckbox: FunctionComponent<CommonProps &
   ThHTMLAttributes<HTMLTableHeaderCellElement> &
-  EuiTableHeaderCellCheckboxProps> = ({
+  WuiTableHeaderCellCheckboxProps> = ({
   children,
   className,
   scope = 'col',
@@ -44,12 +44,12 @@ export const EuiTableHeaderCellCheckbox: FunctionComponent<CommonProps &
   width,
   ...rest
 }) => {
-  const classes = classNames('euiTableHeaderCellCheckbox', className);
+  const classes = classNames('wuiTableHeaderCellCheckbox', className);
   const styleObj = resolveWidthAsStyle(style, width);
 
   return (
     <th className={classes} scope={scope} style={styleObj} {...rest}>
-      <div className="euiTableCellContent">{children}</div>
+      <div className="wuiTableCellContent">{children}</div>
     </th>
   );
 };

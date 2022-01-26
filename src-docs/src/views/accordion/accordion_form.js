@@ -1,107 +1,107 @@
 import React from 'react';
 
 import {
-  EuiAccordion,
-  EuiText,
+  WuiAccordion,
+  WuiText,
   EuiTextColor,
-  EuiForm,
-  EuiFormRow,
-  EuiFieldText,
-  EuiFieldPassword,
-  EuiIcon,
-  EuiTextArea,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiTitle,
-  EuiButtonIcon,
+  WuiForm,
+  WuiFormRow,
+  WuiFieldText,
+  WuiFieldPassword,
+  WuiIcon,
+  WuiTextArea,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiTitle,
+  WuiButtonIcon,
 } from '../../../../src/components';
 
 const repeatableForm = (
-  <EuiForm>
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiFormRow label="Username">
-          <EuiFieldText icon="user" placeholder="John" />
-        </EuiFormRow>
-      </EuiFlexItem>
+  <WuiForm>
+    <WuiFlexGroup>
+      <WuiFlexItem>
+        <WuiFormRow label="Username">
+          <WuiFieldText icon="user" placeholder="John" />
+        </WuiFormRow>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiFormRow
+      <WuiFlexItem>
+        <WuiFormRow
           label="Password"
           helpText="Must include one number and one symbol">
-          <EuiFieldPassword icon="lock" />
-        </EuiFormRow>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+          <WuiFieldPassword icon="lock" />
+        </WuiFormRow>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormRow label="Body">
-      <EuiTextArea placeholder="I am a textarea, put some content in me!" />
-    </EuiFormRow>
-  </EuiForm>
+    <WuiFormRow label="Body">
+      <WuiTextArea placeholder="I am a textarea, put some content in me!" />
+    </WuiFormRow>
+  </WuiForm>
 );
 
 const buttonContent = (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false}>
-      <EuiFlexItem grow={false}>
-        <EuiIcon type="logoWebhook" size="m" />
-      </EuiFlexItem>
+    <WuiFlexGroup gutterSize="s" alignItems="center" responsive={false}>
+      <WuiFlexItem grow={false}>
+        <WuiIcon type="logoWebhook" size="m" />
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiTitle size="s" className="euiAccordionForm__title">
+      <WuiFlexItem>
+        <WuiTitle size="s" className="wuiAccordionForm__title">
           <h3>Webhook</h3>
-        </EuiTitle>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiTitle>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiText size="s">
+    <WuiText size="s">
       <p>
         <EuiTextColor color="subdued">
           Will send a POST request to www.example.com/some/path/
         </EuiTextColor>
       </p>
-    </EuiText>
+    </WuiText>
   </div>
 );
 
 const extraAction = (
-  <EuiButtonIcon
+  <WuiButtonIcon
     iconType="cross"
     color="danger"
-    className="euiAccordionForm__extraAction"
+    className="wuiAccordionForm__extraAction"
     aria-label="Delete"
   />
 );
 
 export default () => (
   <div>
-    <EuiTitle size="s">
+    <WuiTitle size="s">
       <h3>I am a complicated, highly styled, repeatable form!</h3>
-    </EuiTitle>
+    </WuiTitle>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiAccordion
+    <WuiAccordion
       id="accordionForm1"
-      className="euiAccordionForm"
-      buttonClassName="euiAccordionForm__button"
+      className="wuiAccordionForm"
+      buttonClassName="wuiAccordionForm__button"
       buttonContent={buttonContent}
       extraAction={extraAction}
       paddingSize="l">
       {repeatableForm}
-    </EuiAccordion>
+    </WuiAccordion>
 
-    <EuiAccordion
+    <WuiAccordion
       id="accordionForm2"
-      className="euiAccordionForm"
-      buttonClassName="euiAccordionForm__button"
+      className="wuiAccordionForm"
+      buttonClassName="wuiAccordionForm__button"
       buttonContent={buttonContent}
       extraAction={extraAction}
       paddingSize="l">
       {repeatableForm}
-    </EuiAccordion>
+    </WuiAccordion>
   </div>
 );

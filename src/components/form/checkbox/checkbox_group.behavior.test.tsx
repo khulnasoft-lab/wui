@@ -20,16 +20,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { EuiCheckboxGroup } from './checkbox_group';
+import { WuiCheckboxGroup } from './checkbox_group';
 
 // This exists because we need to run the following tests
 // without mocking the Checkbox component, such as testing
 // an interaction that is handled by the Checkbox component.
-describe('EuiCheckboxGroup behavior', () => {
+describe('WuiCheckboxGroup behavior', () => {
   test('id is bound to onChange', () => {
     const onChangeHandler = jest.fn();
     const component = mount(
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         options={[{ id: '1', label: 'kibana', disabled: false }]}
         idToSelectedMap={{
           '1': true,

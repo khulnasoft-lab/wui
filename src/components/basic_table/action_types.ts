@@ -18,14 +18,14 @@
  */
 
 import { ReactElement, ReactNode } from 'react';
-import { EuiIconType } from '../icon/icon';
-import { EuiButtonIconColor } from '../button/button_icon/button_icon';
-import { EuiButtonEmptyColor } from '../button/button_empty';
+import { WuiIconType } from '../icon/icon';
+import { WuiButtonIconColor } from '../button/button_icon/button_icon';
+import { WuiButtonEmptyColor } from '../button/button_empty';
 import { ExclusiveUnion } from '../common';
 
-type IconFunction<T> = (item: T) => EuiIconType;
-type ButtonColor = EuiButtonIconColor | EuiButtonEmptyColor;
-type EuiButtonIconColorFunction<T> = (item: T) => ButtonColor;
+type IconFunction<T> = (item: T) => WuiIconType;
+type ButtonColor = WuiButtonIconColor | WuiButtonEmptyColor;
+type WuiButtonIconColorFunction<T> = (item: T) => ButtonColor;
 
 interface DefaultItemActionBase<T> {
   name: ReactNode | ((item: T) => ReactNode);
@@ -42,14 +42,14 @@ interface DefaultItemActionBase<T> {
 export interface DefaultItemEmptyButtonAction<T>
   extends DefaultItemActionBase<T> {
   type?: 'button';
-  color?: EuiButtonEmptyColor | EuiButtonIconColorFunction<T>;
+  color?: WuiButtonEmptyColor | WuiButtonIconColorFunction<T>;
 }
 
 export interface DefaultItemIconButtonAction<T>
   extends DefaultItemActionBase<T> {
   type: 'icon';
-  icon: EuiIconType | IconFunction<T>;
-  color?: EuiButtonIconColor | EuiButtonIconColorFunction<T>;
+  icon: WuiIconType | IconFunction<T>;
+  color?: WuiButtonIconColor | WuiButtonIconColorFunction<T>;
 }
 
 export type DefaultItemAction<T> = ExclusiveUnion<

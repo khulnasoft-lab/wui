@@ -2,12 +2,12 @@
  * 1. Keep each expression's text together as much as possible,
  *    but then wrap long words
  */
-.euiExpression {
-  @include euiTextBreakWord; /* 1 */
+.wuiExpression {
+  @include wuiTextBreakWord; /* 1 */
   @include euiFontSizeS;
-  @include euiCodeFont;
+  @include wuiCodeFont;
 
-  border-bottom: $euiBorderWidthThick solid transparent;
+  border-bottom: $wuiBorderWidthThick solid transparent;
   display: inline-block; /* 1 */
   text-align: left;
   padding: ($euiSizeXS / 2) 0;
@@ -18,22 +18,22 @@
     border-bottom-style: solid;
   }
 
-  & + .euiExpression {
+  & + .wuiExpression {
     margin-left: $euiSizeS;
   }
 
-  &.euiExpression--columns {
+  &.wuiExpression--columns {
     border-color: transparent;
     // Ensures there's no flash of the dashed style before turning solid for the active state
     border-bottom-style: solid;
     margin-bottom: $euiSizeXS;
   }
 
-  &.euiExpression--truncate {
+  &.wuiExpression--truncate {
     max-width: 100%;
 
-    .euiExpression__description,
-    .euiExpression__value {
+    .wuiExpression__description,
+    .wuiExpression__value {
       @include euiTextTruncate;
       display: inline-block;
       vertical-align: bottom;
@@ -42,13 +42,13 @@
   }
 }
 
-.euiExpression-isUppercase .euiExpression__description {
+.wuiExpression-isUppercase .wuiExpression__description {
   text-transform: uppercase;
 }
 
-.euiExpression-isClickable {
+.wuiExpression-isClickable {
   cursor: pointer;
-  border-bottom: $euiBorderEditable;
+  border-bottom: $wuiBorderEditable;
 
   &:hover:not(:disabled) {
     border-bottom-style: solid;
@@ -56,61 +56,61 @@
   }
 }
 
-.euiExpression__icon {
+.wuiExpression__icon {
   margin-left: $euiSizeXS;
 }
 
-.euiExpression-isActive {
+.wuiExpression-isActive {
   border-bottom-style: solid;
 }
 
-.euiExpression--columns {
+.wuiExpression--columns {
   width: 100%;
   display: flex;
   padding: $euiSizeXS;
   border-radius: $euiSizeXS;
 
-  &.euiExpression-isClickable {
-    background-color: $euiColorLightestShade;
+  &.wuiExpression-isClickable {
+    background-color: $wuiColorLightestShade;
 
     // sass-lint:disable-block nesting-depth
     &:focus,
     &:hover:not(:disabled) {
-      .euiExpression__description,
-      .euiExpression__value {
+      .wuiExpression__description,
+      .wuiExpression__value {
         // inner child specificity so it inherits underline color from text color
         text-decoration: underline;
       }
     }
   }
 
-  .euiExpression__description {
+  .wuiExpression__description {
     text-align: right;
     margin-right: $euiSizeS;
     flex-shrink: 0; // Ensures it doesn't get smaller in case the value is really long
   }
 
-  .euiExpression__value {
+  .wuiExpression__value {
     flex-grow: 1;
   }
 
-  .euiExpression__icon {
+  .wuiExpression__icon {
     margin-top: $euiSizeXS;
   }
 }
 
-@each $name, $color in $euiExpressionColors {
-  .euiExpression--#{$name} {
+@each $name, $color in $wuiExpressionColors {
+  .wuiExpression--#{$name} {
     &:focus {
       background-color: transparentize($color, .9);
     }
 
-    &.euiExpression-isActive {
+    &.wuiExpression-isActive {
       border-bottom-color: $color;
       border-color: $color;
     }
 
-    .euiExpression__description {
+    .wuiExpression__description {
       color: $color;
     }
   }

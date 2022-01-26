@@ -1,19 +1,19 @@
-$euiIconLoadingOpacity: .05;
+$wuiIconLoadingOpacity: .05;
 
 // Modifier naming and colors.
-$euiIconColors: (
-  accent: makeGraphicContrastColor($euiColorAccent),
-  danger: makeGraphicContrastColor($euiColorDanger),
+$wuiIconColors: (
+  accent: makeGraphicContrastColor($wuiColorAccent),
+  danger: makeGraphicContrastColor($wuiColorDanger),
   ghost: $euiColorGhost,
-  primary: makeGraphicContrastColor($euiColorPrimary),
-  secondary: makeGraphicContrastColor($euiColorSecondary),
-  success: makeGraphicContrastColor($euiColorSuccess),
-  subdued: $euiTextSubduedColor,
+  primary: makeGraphicContrastColor($wuiColorPrimary),
+  secondary: makeGraphicContrastColor($wuiColorSecondary),
+  success: makeGraphicContrastColor($wuiColorSuccess),
+  subdued: $wuiTextSubduedColor,
   text: $euiTextColor,
-  warning: makeGraphicContrastColor($euiColorWarning),
+  warning: makeGraphicContrastColor($wuiColorWarning),
 );
 
-$euiIconSizes: (
+$wuiIconSizes: (
   small: $euiSizeM,
   medium: $euiSize,
   large: $euiSizeL,

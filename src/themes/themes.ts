@@ -17,12 +17,12 @@
  * under the License.
  */
 
-export interface EUI_THEME {
+export interface WUI_THEME {
   text: string;
   value: string;
 }
 
-export const EUI_THEMES: EUI_THEME[] = [
+export const WUI_THEMES: WUI_THEME[] = [
   {
     text: 'Light',
     value: 'light',

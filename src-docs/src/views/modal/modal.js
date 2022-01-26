@@ -1,23 +1,23 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiRange,
-  EuiSwitch,
-  EuiCodeBlock,
-  EuiSpacer,
-  EuiSuperSelect,
-  EuiText,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiFieldText,
+  WuiForm,
+  WuiFormRow,
+  WuiModal,
+  WuiModalBody,
+  WuiModalFooter,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiOverlayMask,
+  WuiRange,
+  WuiSwitch,
+  WuiCodeBlock,
+  WuiSpacer,
+  WuiSuperSelect,
+  WuiText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -41,11 +41,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option one</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
@@ -55,11 +55,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option two</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
@@ -69,52 +69,52 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option three</strong>
-          <EuiText size="s" color="subdued">
+          <WuiText size="s" color="subdued">
             <p className="euiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </WuiText>
         </Fragment>
       ),
     },
   ];
 
   const formSample = (
-    <EuiForm>
-      <EuiFormRow>
-        <EuiSwitch
+    <WuiForm>
+      <WuiFormRow>
+        <WuiSwitch
           id={htmlIdGenerator()()}
           name="popswitch"
           label="Isn't this modal form cool?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="A text field">
-        <EuiFieldText name="popfirst" />
-      </EuiFormRow>
+      <WuiFormRow label="A text field">
+        <WuiFieldText name="popfirst" />
+      </WuiFormRow>
 
-      <EuiFormRow label="Range" helpText="Some help text for the range">
-        <EuiRange min={0} max={100} name="poprange" />
-      </EuiFormRow>
+      <WuiFormRow label="Range" helpText="Some help text for the range">
+        <WuiRange min={0} max={100} name="poprange" />
+      </WuiFormRow>
 
-      <EuiFormRow label="A SuperSelect field">
-        <EuiSuperSelect
+      <WuiFormRow label="A SuperSelect field">
+        <WuiSuperSelect
           options={superSelectOptions}
           valueOfSelected={superSelectvalue}
           onChange={value => onSuperSelectChange(value)}
           itemLayoutAlign="top"
           hasDividers
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiCodeBlock language="html" paddingSize="s" isCopyable>
+      <WuiCodeBlock language="html" paddingSize="s" isCopyable>
         {'<h1>Title</h1>'}
-      </EuiCodeBlock>
-    </EuiForm>
+      </WuiCodeBlock>
+    </WuiForm>
   );
 
   const onSuperSelectChange = value => {
@@ -125,28 +125,28 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiOverlayMask>
-        <EuiModal onClose={closeModal} initialFocus="[name=popswitch]">
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Modal title</EuiModalHeaderTitle>
-          </EuiModalHeader>
+      <WuiOverlayMask>
+        <WuiModal onClose={closeModal} initialFocus="[name=popswitch]">
+          <WuiModalHeader>
+            <WuiModalHeaderTitle>Modal title</WuiModalHeaderTitle>
+          </WuiModalHeader>
 
-          <EuiModalBody>{formSample}</EuiModalBody>
+          <WuiModalBody>{formSample}</WuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty onClick={closeModal}>Cancel</EuiButtonEmpty>
+          <WuiModalFooter>
+            <WuiButtonEmpty onClick={closeModal}>Cancel</WuiButtonEmpty>
 
-            <EuiButton onClick={closeModal} fill>
+            <WuiButton onClick={closeModal} fill>
               Save
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiModal>
-      </EuiOverlayMask>
+            </WuiButton>
+          </WuiModalFooter>
+        </WuiModal>
+      </WuiOverlayMask>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <WuiButton onClick={showModal}>Show modal</WuiButton>
 
       {modal}
     </div>

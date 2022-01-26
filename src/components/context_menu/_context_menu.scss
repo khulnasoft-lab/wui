@@ -1,14 +1,14 @@
-$euiContextMenuWidth: $euiSize * 16;
+$wuiContextMenuWidth: $euiSize * 16;
 
-.euiContextMenu {
-  width: $euiContextMenuWidth;
+.wuiContextMenu {
+  width: $wuiContextMenuWidth;
   max-width: 100%;
   position: relative;
   overflow: hidden;
-  transition: height $euiAnimSpeedFast $euiAnimSlightResistance;
-  border-radius: $euiBorderRadius;
+  transition: height $wuiAnimSpeedFast $wuiAnimSlightResistance;
+  border-radius: $wuiBorderRadius;
 
-  .euiContextMenu__content {
+  .wuiContextMenu__content {
     padding: $euiSizeS;
   }
 }
@@ -18,10 +18,10 @@ $euiContextMenuWidth: $euiSize * 16;
   *    position them. ContextMenuPanel will break the layout of a Popover if it's
   *    absolutely positioned by default.
   */
-.euiContextMenu__panel {
+.wuiContextMenu__panel {
   position: absolute; /* 1 */
 }
 
-.euiContextMenu__icon {
+.wuiContextMenu__icon {
   margin-right: $euiSizeS;
 }

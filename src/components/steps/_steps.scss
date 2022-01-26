@@ -2,7 +2,7 @@
  * 1. Ensure that the step number vertically aligns with the title text
  */
 
-.euiStep {
+.wuiStep {
   // sass-lint:disable indentation
   // Create border on all but the last step
   &:not(:last-of-type) {
@@ -10,8 +10,8 @@
                         to right,
                         transparent 0,
                         transparent ($euiSize - 1),
-                        $euiBorderColor ($euiSize - 1),
-                        $euiBorderColor ($euiSize + 1),
+                        $wuiBorderColor ($euiSize - 1),
+                        $wuiBorderColor ($euiSize + 1),
                         transparent ($euiSize + 1),
                         transparent 100%
                       );
@@ -24,48 +24,48 @@
       background-position: left -#{$euiSizeXS} top $euiSizeXL;
     }
 
-    .euiStep__content {
+    .wuiStep__content {
       // Align the content's contents with the title
-      padding-left: ($euiStepNumberSmallSize / 2) + $euiStepNumberMargin;
+      padding-left: ($wuiStepNumberSmallSize / 2) + $wuiStepNumberMargin;
 
       // Align content border to horizontal center of step number
-      margin-left: ($euiStepNumberSmallSize / 2);
+      margin-left: ($wuiStepNumberSmallSize / 2);
     }
   }
 }
 
-.euiStep__titleWrapper {
+.wuiStep__titleWrapper {
   display: flex;
 }
 
-.euiStep__circle {
+.wuiStep__circle {
   flex-shrink: 0;
-  margin-right: $euiStepNumberMargin;
+  margin-right: $wuiStepNumberMargin;
   vertical-align: top; /* 1 */
 
   &[class*='complete'],
   &[class*='warning'],
   &[class*='danger'] {
-    animation: euiGrow $euiAnimSpeedFast $euiAnimSlightBounce;
+    animation: wuiGrow $wuiAnimSpeedFast $wuiAnimSlightBounce;
   }
 
   &[class*='incomplete'] {
-    border-color: $euiColorPrimary;
+    border-color: $wuiColorPrimary;
     animation: none;
   }
 }
 
-.euiStep__title {
-  font-weight: $euiFontWeightMedium;
+.wuiStep__title {
+  font-weight: $wuiFontWeightMedium;
 }
 
-.euiStep__content {
+.wuiStep__content {
   padding: $euiSize $euiSize $euiSizeXL;
   margin: $euiSizeS 0;
 
   // Align the content's contents with the title
-  padding-left: ($euiStepNumberSize / 2) + $euiStepNumberMargin;
+  padding-left: ($wuiStepNumberSize / 2) + $wuiStepNumberMargin;
 
   // Align content border to horizontal center of step number
-  margin-left: ($euiStepNumberSize / 2);
+  margin-left: ($wuiStepNumberSize / 2);
 }

@@ -2,143 +2,143 @@
 @import '../functions/index';
 
 // Core
-$euiColorPrimary: #006BB4 !default;
-$euiColorSecondary: #017D73 !default;
-$euiColorAccent: #DD0A73 !default;
-$euiColorHighlight: #FFFCDD !default;
+$wuiColorPrimary: #006BB4 !default;
+$wuiColorSecondary: #017D73 !default;
+$wuiColorAccent: #DD0A73 !default;
+$wuiColorHighlight: #FFFCDD !default;
 
 // These colors stay the same no matter the theme
 $euiColorGhost: #FFF !default;
-$euiColorInk: #000 !default;
+$wuiColorInk: #000 !default;
 
 // Status
-$euiColorSuccess: $euiColorSecondary !default;
-$euiColorDanger: #BD271E !default;
-$euiColorWarning: #F5A700 !default;
+$wuiColorSuccess: $wuiColorSecondary !default;
+$wuiColorDanger: #BD271E !default;
+$wuiColorWarning: #F5A700 !default;
 
 // Grays
 $euiColorEmptyShade: #FFF !default;
-$euiColorLightestShade: #F5F7FA !default;
-$euiColorLightShade: #D3DAE6 !default;
-$euiColorMediumShade: #98A2B3 !default;
+$wuiColorLightestShade: #F5F7FA !default;
+$wuiColorLightShade: #D3DAE6 !default;
+$wuiColorMediumShade: #98A2B3 !default;
 $euiColorDarkShade: #69707D !default;
-$euiColorDarkestShade: #343741 !default;
-$euiColorFullShade: #000 !default;
+$wuiColorDarkestShade: #343741 !default;
+$wuiColorFullShade: #000 !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
-$euiTextColor: $euiColorDarkestShade !default;
-$euiPageBackgroundColor: tintOrShade($euiColorLightestShade, 50%, 30%) !default;
-$euiTextSubduedColor: makeHighContrastColor($euiColorMediumShade) !default;
-$euiTitleColor: shadeOrTint($euiTextColor, 50%, 0%) !default;
-$euiLinkColor: $euiColorPrimary !default;
-$euiFocusBackgroundColor: tintOrShade($euiColorPrimary, 90%, 50%) !default;
+$euiTextColor: $wuiColorDarkestShade !default;
+$wuiPageBackgroundColor: tintOrShade($wuiColorLightestShade, 50%, 30%) !default;
+$wuiTextSubduedColor: makeHighContrastColor($wuiColorMediumShade) !default;
+$wuiTitleColor: shadeOrTint($euiTextColor, 50%, 0%) !default;
+$wuiLinkColor: $wuiColorPrimary !default;
+$euiFocusBackgroundColor: tintOrShade($wuiColorPrimary, 90%, 50%) !default;
 
 // Contrasty text variants
-$euiColorPrimaryText: makeHighContrastColor($euiColorPrimary) !default;
-$euiColorSecondaryText: makeHighContrastColor($euiColorSecondary) !default;
-$euiColorAccentText: makeHighContrastColor($euiColorAccent) !default;
-$euiColorWarningText: makeHighContrastColor($euiColorWarning) !default;
-$euiColorDangerText: makeHighContrastColor($euiColorDanger) !default;
-$euiColorSuccessText: $euiColorSecondaryText !default;
+$wuiColorPrimaryText: makeHighContrastColor($wuiColorPrimary) !default;
+$wuiColorSecondaryText: makeHighContrastColor($wuiColorSecondary) !default;
+$wuiColorAccentText: makeHighContrastColor($wuiColorAccent) !default;
+$wuiColorWarningText: makeHighContrastColor($wuiColorWarning) !default;
+$wuiColorDangerText: makeHighContrastColor($wuiColorDanger) !default;
+$wuiColorSuccessText: $wuiColorSecondaryText !default;
 
 // Visualization colors
 
 // Maps allow for easier JSON usage
-// Use map_merge($euiColorVisColors, $yourMap) to change individual colors after importing ths file
-// The `behindText` variant is a direct copy of the hex output by the JS euiPaletteColorBlindBehindText() function
-$euiPaletteColorBlind: (
-  euiColorVis0: (
+// Use map_merge($wuiColorVisColors, $yourMap) to change individual colors after importing ths file
+// The `behindText` variant is a direct copy of the hex output by the JS wuiPaletteColorBlindBehindText() function
+$wuiPaletteColorBlind: (
+  wuiColorVis0: (
     graphic: #54B399,
     behindText: #6DCCB1,
   ),
-  euiColorVis1: (
+  wuiColorVis1: (
     graphic: #6092C0,
     behindText: #79AAD9,
   ),
-  euiColorVis2: (
+  wuiColorVis2: (
     graphic: #D36086,
     behindText: #EE789D,
   ),
-  euiColorVis3: (
+  wuiColorVis3: (
     graphic: #9170B8,
     behindText: #A987D1,
   ),
-  euiColorVis4: (
+  wuiColorVis4: (
     graphic: #CA8EAE,
     behindText: #E4A6C7,
   ),
-  euiColorVis5: (
+  wuiColorVis5: (
     graphic: #D6BF57,
     behindText: #F1D86F,
   ),
-  euiColorVis6: (
+  wuiColorVis6: (
     graphic: #B9A888,
     behindText: #D2C0A0,
   ),
-  euiColorVis7: (
+  wuiColorVis7: (
     graphic: #DA8B45,
     behindText: #F5A35C,
   ),
-  euiColorVis8: (
+  wuiColorVis8: (
     graphic: #AA6556,
     behindText: #C47C6C,
   ),
-  euiColorVis9: (
+  wuiColorVis9: (
     graphic: #E7664C,
     behindText: #FF7E62,
   )
 ) !default;
 
-$euiPaletteColorBlindKeys: map-keys($euiPaletteColorBlind);
+$wuiPaletteColorBlindKeys: map-keys($wuiPaletteColorBlind);
 
-$euiColorVis0: map-get(map-get($euiPaletteColorBlind, 'euiColorVis0'), 'graphic') !default;
-$euiColorVis1: map-get(map-get($euiPaletteColorBlind, 'euiColorVis1'), 'graphic') !default;
-$euiColorVis2: map-get(map-get($euiPaletteColorBlind, 'euiColorVis2'), 'graphic') !default;
-$euiColorVis3: map-get(map-get($euiPaletteColorBlind, 'euiColorVis3'), 'graphic') !default;
-$euiColorVis4: map-get(map-get($euiPaletteColorBlind, 'euiColorVis4'), 'graphic') !default;
-$euiColorVis5: map-get(map-get($euiPaletteColorBlind, 'euiColorVis5'), 'graphic') !default;
-$euiColorVis6: map-get(map-get($euiPaletteColorBlind, 'euiColorVis6'), 'graphic') !default;
-$euiColorVis7: map-get(map-get($euiPaletteColorBlind, 'euiColorVis7'), 'graphic') !default;
-$euiColorVis8: map-get(map-get($euiPaletteColorBlind, 'euiColorVis8'), 'graphic') !default;
-$euiColorVis9: map-get(map-get($euiPaletteColorBlind, 'euiColorVis9'), 'graphic') !default;
+$wuiColorVis0: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis0'), 'graphic') !default;
+$wuiColorVis1: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis1'), 'graphic') !default;
+$wuiColorVis2: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis2'), 'graphic') !default;
+$wuiColorVis3: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis3'), 'graphic') !default;
+$wuiColorVis4: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis4'), 'graphic') !default;
+$wuiColorVis5: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis5'), 'graphic') !default;
+$wuiColorVis6: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis6'), 'graphic') !default;
+$wuiColorVis7: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis7'), 'graphic') !default;
+$wuiColorVis8: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis8'), 'graphic') !default;
+$wuiColorVis9: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis9'), 'graphic') !default;
 
 // sass-lint:disable-block variable-name-format
-$euiColorVis0_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis0'), 'behindText') !default;
-$euiColorVis1_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis1'), 'behindText') !default;
-$euiColorVis2_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis2'), 'behindText') !default;
-$euiColorVis3_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis3'), 'behindText') !default;
-$euiColorVis4_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis4'), 'behindText') !default;
-$euiColorVis5_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis5'), 'behindText') !default;
-$euiColorVis6_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis6'), 'behindText') !default;
-$euiColorVis7_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis7'), 'behindText') !default;
-$euiColorVis8_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis8'), 'behindText') !default;
-$euiColorVis9_behindText: map-get(map-get($euiPaletteColorBlind, 'euiColorVis9'), 'behindText') !default;
+$wuiColorVis0_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis0'), 'behindText') !default;
+$wuiColorVis1_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis1'), 'behindText') !default;
+$wuiColorVis2_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis2'), 'behindText') !default;
+$wuiColorVis3_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis3'), 'behindText') !default;
+$wuiColorVis4_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis4'), 'behindText') !default;
+$wuiColorVis5_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis5'), 'behindText') !default;
+$wuiColorVis6_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis6'), 'behindText') !default;
+$wuiColorVis7_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis7'), 'behindText') !default;
+$wuiColorVis8_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis8'), 'behindText') !default;
+$wuiColorVis9_behindText: map-get(map-get($wuiPaletteColorBlind, 'wuiColorVis9'), 'behindText') !default;
 
 // Charts
-$euiColorChartLines: shade($euiColorLightestShade, 3%) !default;
-$euiColorChartBand: $euiColorLightestShade !default;
+$wuiColorChartLines: shade($wuiColorLightestShade, 3%) !default;
+$wuiColorChartBand: $wuiColorLightestShade !default;
 
 
 // Code
-$euiCodeBlockBackgroundColor: $euiColorLightestShade !default;
-$euiCodeBlockColor: makeHighContrastColor($euiTextColor, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockSelectedBackgroundColor: inherit !default;
-$euiCodeBlockCommentColor: makeHighContrastColor($euiTextSubduedColor, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockSelectorTagColor: inherit !default;
-$euiCodeBlockStringColor: makeHighContrastColor($euiColorVis2, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockTagColor: makeHighContrastColor($euiColorVis1, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockNameColor: makeHighContrastColor($euiColorVis1, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockNumberColor: makeHighContrastColor($euiColorVis0, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockKeywordColor: makeHighContrastColor($euiColorVis3, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockFunctionTitleColor: inherit !default;
-$euiCodeBlockTypeColor: makeHighContrastColor($euiColorVis1, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockAttributeColor: inherit !default;
-$euiCodeBlockSymbolColor: makeHighContrastColor($euiColorVis9, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockParamsColor: inherit !default;
-$euiCodeBlockMetaColor:  makeHighContrastColor($euiTextSubduedColor, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockTitleColor: makeHighContrastColor($euiColorVis7, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockSectionColor: makeHighContrastColor($euiColorVis9, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockAdditionColor: makeHighContrastColor($euiColorVis0, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockDeletionColor: makeHighContrastColor($euiColorDanger, $euiCodeBlockBackgroundColor) !default;
-$euiCodeBlockSelectorClassColor: inherit !default;
-$euiCodeBlockSelectorIdColor: inherit !default;
+$wuiCodeBlockBackgroundColor: $wuiColorLightestShade !default;
+$wuiCodeBlockColor: makeHighContrastColor($euiTextColor, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockSelectedBackgroundColor: inherit !default;
+$wuiCodeBlockCommentColor: makeHighContrastColor($wuiTextSubduedColor, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockSelectorTagColor: inherit !default;
+$wuiCodeBlockStringColor: makeHighContrastColor($wuiColorVis2, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockTagColor: makeHighContrastColor($wuiColorVis1, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockNameColor: makeHighContrastColor($wuiColorVis1, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockNumberColor: makeHighContrastColor($wuiColorVis0, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockKeywordColor: makeHighContrastColor($wuiColorVis3, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockFunctionTitleColor: inherit !default;
+$wuiCodeBlockTypeColor: makeHighContrastColor($wuiColorVis1, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockAttributeColor: inherit !default;
+$wuiCodeBlockSymbolColor: makeHighContrastColor($wuiColorVis9, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockParamsColor: inherit !default;
+$wuiCodeBlockMetaColor:  makeHighContrastColor($wuiTextSubduedColor, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockTitleColor: makeHighContrastColor($wuiColorVis7, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockSectionColor: makeHighContrastColor($wuiColorVis9, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockAdditionColor: makeHighContrastColor($wuiColorVis0, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockDeletionColor: makeHighContrastColor($wuiColorDanger, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockSelectorClassColor: inherit !default;
+$wuiCodeBlockSelectorIdColor: inherit !default;

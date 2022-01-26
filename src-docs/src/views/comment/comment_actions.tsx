@@ -1,20 +1,20 @@
 import React, { Component, HTMLAttributes } from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiButtonIcon } from '../../../../src/components/button';
-import { EuiText } from '../../../../src/components/text';
-import { EuiPopover } from '../../../../src/components/popover';
+import { WuiComment } from '../../../../src/components/comment_list';
+import { WuiButtonIcon } from '../../../../src/components/button';
+import { WuiText } from '../../../../src/components/text';
+import { WuiPopover } from '../../../../src/components/popover';
 import {
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
+  WuiContextMenuPanel,
+  WuiContextMenuItem,
 } from '../../../../src/components/context_menu';
 import { CommonProps } from '../../../../src/components/common';
 
 const body = (
-  <EuiText size="s">
+  <WuiText size="s">
     <p>
       This comment has custom actions available. See the upper right corner.
     </p>
-  </EuiText>
+  </WuiText>
 );
 
 export type CustomActionsProps = HTMLAttributes<HTMLDivElement> &
@@ -44,9 +44,9 @@ export default class extends Component<CustomActionsProps, CustomActionsState> {
   render() {
     const { isPopoverOpen } = this.state;
     const customActions = (
-      <EuiPopover
+      <WuiPopover
         button={
-          <EuiButtonIcon
+          <WuiButtonIcon
             aria-label="Actions"
             iconType="gear"
             size="s"
@@ -58,45 +58,45 @@ export default class extends Component<CustomActionsProps, CustomActionsState> {
         closePopover={() => this.closePopover()}
         panelPaddingSize="none"
         anchorPosition="leftCenter">
-        <EuiContextMenuPanel
+        <WuiContextMenuPanel
           items={[
-            <EuiContextMenuItem
+            <WuiContextMenuItem
               key="A"
               icon="pencil"
               onClick={() => {
                 this.closePopover();
               }}>
               Edit
-            </EuiContextMenuItem>,
-            <EuiContextMenuItem
+            </WuiContextMenuItem>,
+            <WuiContextMenuItem
               key="B"
               icon="share"
               onClick={() => {
                 this.closePopover();
               }}>
               Share
-            </EuiContextMenuItem>,
-            <EuiContextMenuItem
+            </WuiContextMenuItem>,
+            <WuiContextMenuItem
               key="C"
               icon="copy"
               onClick={() => {
                 this.closePopover();
               }}>
               Copy
-            </EuiContextMenuItem>,
+            </WuiContextMenuItem>,
           ]}
         />
-      </EuiPopover>
+      </WuiPopover>
     );
     return (
       <div>
-        <EuiComment
+        <WuiComment
           username="janed"
           event="added a comment"
           actions={customActions}
           timestamp="Jan 1, 2020">
           {body}
-        </EuiComment>
+        </WuiComment>
       </div>
     );
   }

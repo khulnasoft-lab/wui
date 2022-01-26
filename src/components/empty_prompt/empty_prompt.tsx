@@ -27,23 +27,23 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiTitle, EuiTitleSize } from '../title/title';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiSpacer } from '../spacer';
-import { EuiIcon, IconColor, IconType } from '../icon/icon';
-import { EuiText, EuiTextColor } from '../text';
+import { WuiTitle, WuiTitleSize } from '../title/title';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
+import { WuiSpacer } from '../spacer';
+import { WuiIcon, IconColor, IconType } from '../icon/icon';
+import { WuiText, EuiTextColor } from '../text';
 
-export type EuiEmptyPromptProps = CommonProps &
+export type WuiEmptyPromptProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     iconType?: IconType;
     iconColor?: IconColor;
     title?: ReactElement<any>;
-    titleSize?: EuiTitleSize;
+    titleSize?: WuiTitleSize;
     body?: ReactNode;
     actions?: ReactNode;
   };
 
-export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
+export const WuiEmptyPrompt: FunctionComponent<WuiEmptyPromptProps> = ({
   iconType,
   iconColor = 'subdued',
   title,
@@ -53,15 +53,15 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
   className,
   ...rest
 }) => {
-  const classes = classNames('euiEmptyPrompt', className);
+  const classes = classNames('wuiEmptyPrompt', className);
 
   let icon;
 
   if (iconType) {
     icon = (
       <Fragment>
-        <EuiIcon type={iconType} size="xxl" color={iconColor} />
-        <EuiSpacer size="s" />
+        <WuiIcon type={iconType} size="xxl" color={iconColor} />
+        <WuiSpacer size="s" />
       </Fragment>
     );
   }
@@ -74,8 +74,8 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
     if (title) {
       titleEl = (
         <Fragment>
-          <EuiTitle size={titleSize}>{title}</EuiTitle>
-          <EuiSpacer size="m" />
+          <WuiTitle size={titleSize}>{title}</WuiTitle>
+          <WuiSpacer size="m" />
         </Fragment>
       );
     }
@@ -85,7 +85,7 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
     if (body) {
       bodyEl = (
         <Fragment>
-          <EuiText>{body}</EuiText>
+          <WuiText>{body}</WuiText>
         </Fragment>
       );
     }
@@ -105,17 +105,17 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
 
     if (Array.isArray(actions)) {
       actionsRow = (
-        <EuiFlexGroup
+        <WuiFlexGroup
           gutterSize="m"
           alignItems="center"
           justifyContent="center"
           direction="column">
           {actions.map((action, index) => (
-            <EuiFlexItem key={index} grow={false}>
+            <WuiFlexItem key={index} grow={false}>
               {action}
-            </EuiFlexItem>
+            </WuiFlexItem>
           ))}
-        </EuiFlexGroup>
+        </WuiFlexGroup>
       );
     } else {
       actionsRow = actions;
@@ -123,7 +123,7 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
 
     actionsEl = (
       <Fragment>
-        <EuiSpacer size="s" />
+        <WuiSpacer size="s" />
         {actionsRow}
       </Fragment>
     );
@@ -133,7 +133,7 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
     <div className={classes} {...rest}>
       {icon}
       {content}
-      {body && actions && <EuiSpacer size="l" />}
+      {body && actions && <WuiSpacer size="l" />}
       {actionsEl}
     </div>
   );

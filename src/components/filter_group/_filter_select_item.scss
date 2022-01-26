@@ -1,4 +1,4 @@
-.euiFilterSelectItem {
+.wuiFilterSelectItem {
   @include euiFontSizeS;
 
   padding: $euiSizeXS $euiSizeM;
@@ -6,8 +6,8 @@
   width: 100%;
   text-align: left;
   color: $euiTextColor;
-  border-bottom: $euiBorderThin;
-  border-color: darken($euiColorLightestShade, 2%);
+  border-bottom: $wuiBorderThin;
+  border-color: darken($wuiColorLightestShade, 2%);
 
   &:hover,
   &:focus {
@@ -17,12 +17,12 @@
   &:focus,
   &-isFocused {
     cursor: pointer;
-    color: $euiColorPrimary;
+    color: $wuiColorPrimary;
     background-color: $euiFocusBackgroundColor;
   }
 
   &[disabled] {
-    color: $euiColorMediumShade;
+    color: $wuiColorMediumShade;
     cursor: not-allowed;
 
     &:hover {
@@ -31,19 +31,19 @@
   }
 }
 
-.euiFilterSelectItem__content {
+.wuiFilterSelectItem__content {
   @include euiTextTruncate;
 }
 
 
-.euiFilterSelect__items {
-  @include euiScrollBar;
+.wuiFilterSelect__items {
+  @include wuiScrollBar;
 
   overflow-y: auto;
   max-height: $euiSize * 30;
 }
 
-.euiFilterSelect__note {
+.wuiFilterSelect__note {
   height: $euiSize * 4;
   text-align: center;
   display: flex;
@@ -51,7 +51,7 @@
   justify-content: space-around;
 }
 
-.euiFilterSelect__noteContent {
+.wuiFilterSelect__noteContent {
   color: $euiColorDarkShade;
   font-size: $euiFontSizeS;
 }

@@ -21,25 +21,25 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldNumber } from './field_number';
+import { WuiFieldNumber } from './field_number';
 
 jest.mock('../form_control_layout', () => {
   const formControlLayout = require.requireActual('../form_control_layout');
   return {
     ...formControlLayout,
-    EuiFormControlLayout: 'eui-form-control-layout',
+    WuiFormControlLayout: 'wui-form-control-layout',
   };
 });
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  WuiValidatableControl: 'wui-validatable-control',
 }));
 
-describe('EuiFieldNumber', () => {
+describe('WuiFieldNumber', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldNumber
+      <WuiFieldNumber
         id="1"
-        name="elastic"
+        name="wazuh"
         min={1}
         max={8}
         step={1}
@@ -55,31 +55,31 @@ describe('EuiFieldNumber', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldNumber isInvalid />);
+      const component = render(<WuiFieldNumber isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldNumber fullWidth />);
+      const component = render(<WuiFieldNumber fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldNumber isLoading />);
+      const component = render(<WuiFieldNumber isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('readOnly is rendered', () => {
-      const component = render(<EuiFieldNumber readOnly />);
+      const component = render(<WuiFieldNumber readOnly />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('controlOnly is rendered', () => {
-      const component = render(<EuiFieldNumber controlOnly />);
+      const component = render(<WuiFieldNumber controlOnly />);
 
       expect(component).toMatchSnapshot();
     });
@@ -87,14 +87,14 @@ describe('EuiFieldNumber', () => {
     describe('value', () => {
       test('value is number', () => {
         const component = render(
-          <EuiFieldNumber value={0} onChange={() => {}} />
+          <WuiFieldNumber value={0} onChange={() => {}} />
         );
         expect(component).toMatchSnapshot();
       });
 
       test('no initial value', () => {
         const component = render(
-          <EuiFieldNumber value={''} onChange={() => {}} />
+          <WuiFieldNumber value={''} onChange={() => {}} />
         );
         expect(component).toMatchSnapshot();
       });

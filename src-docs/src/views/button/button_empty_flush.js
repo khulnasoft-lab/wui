@@ -1,23 +1,23 @@
 import React from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup gutterSize="s" alignItems="center">
-    <EuiFlexItem grow={false}>
-      <EuiButtonEmpty flush="left">Flush left</EuiButtonEmpty>
-    </EuiFlexItem>
+  <WuiFlexGroup gutterSize="s" alignItems="center">
+    <WuiFlexItem grow={false}>
+      <WuiButtonEmpty flush="left">Flush left</WuiButtonEmpty>
+    </WuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButtonEmpty flush="right">Flush right</EuiButtonEmpty>
-    </EuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiButtonEmpty flush="right">Flush right</WuiButtonEmpty>
+    </WuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButtonEmpty flush="both">Flush both</EuiButtonEmpty>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    <WuiFlexItem grow={false}>
+      <WuiButtonEmpty flush="both">Flush both</WuiButtonEmpty>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

@@ -21,7 +21,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../../test';
 
-import { EuiTabbedContent, AUTOFOCUS } from './tabbed_content';
+import { WuiTabbedContent, AUTOFOCUS } from './tabbed_content';
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
 jest.mock('../../../services/accessibility/html_id_generator', () => ({
@@ -30,10 +30,10 @@ jest.mock('../../../services/accessibility/html_id_generator', () => ({
   },
 }));
 
-const elasticsearchTab = {
+const wazuhsearchTab = {
   id: 'es',
-  name: 'Elasticsearch',
-  content: <p>Elasticsearch content</p>,
+  name: 'Wazuhsearch',
+  content: <p>Wazuhsearch content</p>,
 };
 
 const kibanaTab = {
@@ -43,12 +43,12 @@ const kibanaTab = {
   content: <p>Kibana content</p>,
 };
 
-const tabs = [elasticsearchTab, kibanaTab];
+const tabs = [wazuhsearchTab, kibanaTab];
 
-describe('EuiTabbedContent', () => {
+describe('WuiTabbedContent', () => {
   test('is rendered with required props and tabs', () => {
     const component = render(
-      <EuiTabbedContent {...requiredProps} tabs={tabs} />
+      <WuiTabbedContent {...requiredProps} tabs={tabs} />
     );
     expect(component).toMatchSnapshot();
   });
@@ -58,7 +58,7 @@ describe('EuiTabbedContent', () => {
       test('is called when a tab is clicked', () => {
         const onTabClickHandler = jest.fn();
         const component = mount(
-          <EuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
+          <WuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
         );
         findTestSubject(component, 'kibanaTab').simulate('click');
         expect(onTabClickHandler).toBeCalledTimes(1);
@@ -69,7 +69,7 @@ describe('EuiTabbedContent', () => {
     describe('selectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -78,7 +78,7 @@ describe('EuiTabbedContent', () => {
     describe('initialSelectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -86,7 +86,7 @@ describe('EuiTabbedContent', () => {
 
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<EuiTabbedContent size="s" tabs={tabs} />);
+        const component = render(<WuiTabbedContent size="s" tabs={tabs} />);
         expect(component).toMatchSnapshot();
       });
     });
@@ -94,7 +94,7 @@ describe('EuiTabbedContent', () => {
     describe('display', () => {
       test('can be condensed', () => {
         const component = render(
-          <EuiTabbedContent display="condensed" tabs={tabs} />
+          <WuiTabbedContent display="condensed" tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -104,7 +104,7 @@ describe('EuiTabbedContent', () => {
       AUTOFOCUS.forEach(focusType => {
         test(`${focusType} is rendered`, () => {
           const component = render(
-            <EuiTabbedContent autoFocus={focusType} tabs={tabs} />
+            <WuiTabbedContent autoFocus={focusType} tabs={tabs} />
           );
 
           expect(component).toMatchSnapshot();
@@ -115,27 +115,27 @@ describe('EuiTabbedContent', () => {
 
   describe('behavior', () => {
     test("when selected tab state isn't controlled by the owner, select the first tab by default", () => {
-      const component = render(<EuiTabbedContent tabs={tabs} />);
+      const component = render(<WuiTabbedContent tabs={tabs} />);
       expect(component).toMatchSnapshot();
     });
 
     test('when uncontrolled, the selected tab should update if it receives new content', () => {
       const tabs = [
-        elasticsearchTab,
+        wazuhsearchTab,
         {
           ...kibanaTab,
         },
       ];
-      const component = mount(<EuiTabbedContent tabs={tabs} />);
+      const component = mount(<WuiTabbedContent tabs={tabs} />);
 
       component
-        .find('EuiTab[id="kibana"] button')
+        .find('WuiTab[id="kibana"] button')
         .first()
         .simulate('click');
 
       component.setProps({
         tabs: [
-          elasticsearchTab,
+          wazuhsearchTab,
           {
             ...kibanaTab,
             content: <p>updated Kibana content</p>,

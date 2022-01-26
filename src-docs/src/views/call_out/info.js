@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { EuiCallOut, EuiLink, EuiSpacer } from '../../../../src/components';
+import { WuiCallOut, WuiLink, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiCallOut
+    <WuiCallOut
       title="Check it out, here's a really long title that will wrap within a narrower browser"
       iconType="search">
       <p>
@@ -14,20 +14,20 @@ export default () => (
       </p>
       <p>
         And some other stuff on another line, just for kicks. And{' '}
-        <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+        <WuiLink href="#">here&rsquo;s a link</WuiLink>.
       </p>
-    </EuiCallOut>
+    </WuiCallOut>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiCallOut
+    <WuiCallOut
       title="Callouts can exist as just a title. Simply omit the child content."
       iconType="gear"
     />
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiCallOut
+    <WuiCallOut
       size="s"
       title="This is a small callout for more unintrusive but constant messages."
       iconType="pin"

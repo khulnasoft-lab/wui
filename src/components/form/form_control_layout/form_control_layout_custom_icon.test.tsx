@@ -19,9 +19,9 @@
 
 import React from 'react';
 import { render } from 'enzyme';
-import { EuiFormControlLayoutCustomIcon } from './form_control_layout_custom_icon';
+import { WuiFormControlLayoutCustomIcon } from './form_control_layout_custom_icon';
 
-describe('EuiFormControlLayoutCustomIcon', () => {
+describe('WuiFormControlLayoutCustomIcon', () => {
   test('is rendered as button', () => {
     const props = {
       onClick: () => null,
@@ -30,7 +30,7 @@ describe('EuiFormControlLayoutCustomIcon', () => {
       type: 'alert',
       iconRef: 'icon',
     };
-    const component = render(<EuiFormControlLayoutCustomIcon {...props} />);
+    const component = render(<WuiFormControlLayoutCustomIcon {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -42,7 +42,7 @@ describe('EuiFormControlLayoutCustomIcon', () => {
       type: 'alert',
       iconRef: 'icon',
     };
-    const component = render(<EuiFormControlLayoutCustomIcon {...props} />);
+    const component = render(<WuiFormControlLayoutCustomIcon {...props} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,12 +1,12 @@
-.euiRadio {
+.wuiRadio {
   position: relative;
 
-  .euiRadio__input {
-    @include euiScreenReaderOnly;
+  .wuiRadio__input {
+    @include wuiScreenReaderOnly;
 
-    ~ .euiRadio__label {
+    ~ .wuiRadio__label {
       display: inline-block;
-      padding-left: ($euiRadioSize * 1.5);
+      padding-left: ($wuiRadioSize * 1.5);
       line-height: $euiSizeL;
       font-size: $euiFontSizeS;
       position: relative;
@@ -14,18 +14,18 @@
       cursor: pointer;
     }
 
-    + .euiRadio__circle {
-      @include euiCustomControl($type: 'round', $size: $euiRadioSize);
+    + .wuiRadio__circle {
+      @include wuiCustomControl($type: 'round', $size: $wuiRadioSize);
 
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($euiSizeL - $euiRadioSize) / 2) - 1px;
+      top: (($euiSizeL - $wuiRadioSize) / 2) - 1px;
     }
 
     &:checked {
-      + .euiRadio__circle {
-        @include euiCustomControlSelected($type: 'dot');
+      + .wuiRadio__circle {
+        @include wuiCustomControlSelected($type: 'dot');
       }
     }
 
@@ -33,26 +33,26 @@
       //sass-lint:disable no-important
       cursor: not-allowed !important;
 
-      ~ .euiRadio__label {
-        color: $euiFormControlDisabledColor;
+      ~ .wuiRadio__label {
+        color: $wuiFormControlDisabledColor;
         cursor: not-allowed !important;
       }
 
-      + .euiRadio__circle {
-        @include euiCustomControlDisabled;
+      + .wuiRadio__circle {
+        @include wuiCustomControlDisabled;
       }
     }
 
     &:checked[disabled] {
-      + .euiRadio__circle {
-        @include euiCustomControlDisabled($type: 'dot');
+      + .wuiRadio__circle {
+        @include wuiCustomControlDisabled($type: 'dot');
       }
     }
 
     &:focus,
     &:active:not(:disabled) {
-      + .euiRadio__circle {
-        @include euiCustomControlFocused;
+      + .wuiRadio__circle {
+        @include wuiCustomControlFocused;
       }
     }
   }
@@ -62,17 +62,17 @@
    *    they actually click this input.
    */
 
-  &.euiRadio--inList,
-  &.euiRadio--noLabel {
-    min-height: $euiRadioSize;
-    min-width: $euiRadioSize;
+  &.wuiRadio--inList,
+  &.wuiRadio--noLabel {
+    min-height: $wuiRadioSize;
+    min-width: $wuiRadioSize;
 
-    .euiRadio__circle {
+    .wuiRadio__circle {
       top: 0;
     }
 
-    .euiRadio__input {
-      @include size($euiRadioSize); /* 1 */
+    .wuiRadio__input {
+      @include size($wuiRadioSize); /* 1 */
 
       position: absolute; /* 1 */
       opacity: 0; /* 1 */

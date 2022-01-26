@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageSideBar } from './page_side_bar';
+import { WuiPageSideBar } from './page_side_bar';
 
-describe('EuiPageSideBar', () => {
+describe('WuiPageSideBar', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageSideBar {...requiredProps} />);
+    const component = render(<WuiPageSideBar {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

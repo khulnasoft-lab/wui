@@ -19,7 +19,7 @@
 
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
-import { EuiCodeEditor } from './code_editor';
+import { WuiCodeEditor } from './code_editor';
 import { keys } from '../../services';
 import {
   findTestSubject,
@@ -32,23 +32,23 @@ jest.mock('../../services/accessibility/html_id_generator', () => ({
   htmlIdGenerator: () => () => 'htmlId',
 }));
 
-describe('EuiCodeEditor', () => {
+describe('WuiCodeEditor', () => {
   test('is rendered', () => {
-    const component = mount(<EuiCodeEditor {...requiredProps} />);
+    const component = mount(<WuiCodeEditor {...requiredProps} />);
     expect(takeMountedSnapshot(component)).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('isReadOnly', () => {
       test('renders alternate hint text', () => {
-        const component = mount(<EuiCodeEditor isReadOnly />);
+        const component = mount(<WuiCodeEditor isReadOnly />);
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
       });
     });
 
     describe('theme', () => {
       test('renders terminal theme', () => {
-        const component = mount(<EuiCodeEditor theme="terminal" />);
+        const component = mount(<WuiCodeEditor theme="terminal" />);
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
       });
     });
@@ -56,14 +56,14 @@ describe('EuiCodeEditor', () => {
     describe('aria attributes', () => {
       test('allows setting aria-labelledby on textbox', () => {
         const component = mount(
-          <EuiCodeEditor aria-labelledby="labelledbyid" />
+          <WuiCodeEditor aria-labelledby="labelledbyid" />
         );
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
       });
 
       test('allows setting aria-describedby on textbox', () => {
         const component = mount(
-          <EuiCodeEditor aria-describedby="describedbyid" />
+          <WuiCodeEditor aria-describedby="describedbyid" />
         );
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
       });
@@ -74,7 +74,7 @@ describe('EuiCodeEditor', () => {
     let component: ReactWrapper;
 
     beforeEach(() => {
-      component = mount(<EuiCodeEditor />);
+      component = mount(<WuiCodeEditor />);
     });
 
     describe('hint element', () => {
@@ -105,7 +105,7 @@ describe('EuiCodeEditor', () => {
     describe('interaction', () => {
       test('bluring the ace textbox should call a passed onBlur prop', () => {
         const blurSpy = jest.fn().mockName('blurSpy');
-        const el = mount(<EuiCodeEditor onBlur={blurSpy} />);
+        const el = mount(<WuiCodeEditor onBlur={blurSpy} />);
         // @ts-ignore onBlurAce is known to exist and its params are only passed through to the onBlur callback
         el.instance().onBlurAce();
         expect(blurSpy).toHaveBeenCalled();

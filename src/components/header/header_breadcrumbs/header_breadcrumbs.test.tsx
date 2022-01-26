@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
+import { WuiHeaderBreadcrumbs } from './header_breadcrumbs';
 
-describe('EuiHeaderBreadcrumbs', () => {
+describe('WuiHeaderBreadcrumbs', () => {
   test('is rendered', () => {
     const breadcrumbs = [
       {
@@ -53,7 +53,7 @@ describe('EuiHeaderBreadcrumbs', () => {
     ];
 
     const component = render(
-      <EuiHeaderBreadcrumbs breadcrumbs={breadcrumbs} {...requiredProps} />
+      <WuiHeaderBreadcrumbs breadcrumbs={breadcrumbs} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

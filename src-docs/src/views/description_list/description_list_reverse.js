@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiDescriptionList } from '../../../../src/components';
+import { WuiDescriptionList } from '../../../../src/components';
 
 const favoriteVideoGame = [
   {
@@ -18,5 +18,5 @@ const favoriteVideoGame = [
 ];
 
 export default () => (
-  <EuiDescriptionList textStyle="reverse" listItems={favoriteVideoGame} />
+  <WuiDescriptionList textStyle="reverse" listItems={favoriteVideoGame} />
 );

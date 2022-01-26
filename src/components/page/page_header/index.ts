@@ -17,8 +17,8 @@
  * under the License.
  */
 
-export { EuiPageHeader, EuiPageHeaderProps } from './page_header';
+export { WuiPageHeader, WuiPageHeaderProps } from './page_header';
 export {
-  EuiPageHeaderSection,
-  EuiPageHeaderSectionProps,
+  WuiPageHeaderSection,
+  WuiPageHeaderSectionProps,
 } from './page_header_section';

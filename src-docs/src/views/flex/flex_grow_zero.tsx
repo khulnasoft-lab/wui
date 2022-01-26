@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>This item won&rsquo;t grow</EuiFlexItem>
-      <EuiFlexItem>But this item will.</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup>
+      <WuiFlexItem grow={false}>This item won&rsquo;t grow</WuiFlexItem>
+      <WuiFlexItem>But this item will.</WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

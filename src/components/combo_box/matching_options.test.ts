@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import { EuiComboBoxOptionOption } from './types';
+import { WuiComboBoxOptionOption } from './types';
 import {
   flattenOptionGroups,
   getMatchingOptions,
@@ -102,11 +102,11 @@ describe('getSelectedOptionForSearchValue', () => {
 });
 
 interface GetMatchingOptionsTestCase {
-  expected: EuiComboBoxOptionOption[];
+  expected: WuiComboBoxOptionOption[];
   isPreFiltered: boolean;
-  options: EuiComboBoxOptionOption[];
+  options: WuiComboBoxOptionOption[];
   searchValue: string;
-  selectedOptions: EuiComboBoxOptionOption[];
+  selectedOptions: WuiComboBoxOptionOption[];
   showPrevSelected: boolean;
   sortMatchesBy: string;
 }

@@ -4,12 +4,12 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiDataGrid,
-  EuiCode,
-  EuiDescriptionList,
-  EuiCodeBlock,
-  EuiText,
-  EuiSpacer,
+  WuiDataGrid,
+  WuiCode,
+  WuiDescriptionList,
+  WuiCodeBlock,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -19,24 +19,24 @@ const dataGridSource = require('!!raw-loader!./datagrid');
 const dataGridHtml = renderToHtml(DataGrid);
 
 import {
-  EuiDataGridColumn,
-  EuiDataGridPaginationProps,
-  EuiDataGridSorting,
-  EuiDataGridInMemory,
-  EuiDataGridStyle,
-  EuiDataGridToolBarVisibilityOptions,
-  EuiDataGridColumnVisibility,
-  EuiDataGridColumnActions,
-  EuiDataGridPopoverContentProps,
-  EuiDataGridControlColumn,
-  EuiDataGridToolBarVisibilityColumnSelectorOptions,
+  WuiDataGridColumn,
+  WuiDataGridPaginationProps,
+  WuiDataGridSorting,
+  WuiDataGridInMemory,
+  WuiDataGridStyle,
+  WuiDataGridToolBarVisibilityOptions,
+  WuiDataGridColumnVisibility,
+  WuiDataGridColumnActions,
+  WuiDataGridPopoverContentProps,
+  WuiDataGridControlColumn,
+  WuiDataGridToolBarVisibilityColumnSelectorOptions,
 } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-import { EuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
-import { EuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
+import { WuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
+import { WuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
 
 const gridSnippet = `
-  <EuiDataGrid
+  <WuiDataGrid
     // Optional. Will try to autodectect schemas and do sorting and pagination in memory.
     inMemory={{ level: 'sorting' }}
     // Required. There are 200 total records.
@@ -59,7 +59,7 @@ const gridSnippet = `
         id: 'selection',
         width: 31,
         headerCellRender: () => <span>Select a Row</span>,
-        rowCellRender: () => <div><EuiCheckbox ... /></div>,
+        rowCellRender: () => <div><WuiCheckbox ... /></div>,
       },
     ]}
     trailingControlColumns={[
@@ -129,7 +129,7 @@ const gridSnippet = `
         sortTextAsc: 'Star Wars-Star Trek',
         // Text for what the DESC sort does.
         sortTextDesc: 'Star Trek-Star Wars',
-        // EuiIcon or Token to signify this schema.
+        // WuiIcon or Token to signify this schema.
         icon: 'star',
         // The color to use for the icon token.
         color: '#000000',
@@ -159,7 +159,7 @@ const gridConcepts = [
     title: 'columns',
     description: (
       <span>
-        An array of <strong>EuiDataGridColumn</strong> objects. Lists the
+        An array of <strong>WuiDataGridColumn</strong> objects. Lists the
         columns available and the schema and settings tied to it.
       </span>
     ),
@@ -168,7 +168,7 @@ const gridConcepts = [
     title: 'inMemory',
     description: (
       <span>
-        A <strong>EuiDataGridInMemory</strong> object to define the level of
+        A <strong>WuiDataGridInMemory</strong> object to define the level of
         high order schema-detection and sorting logic to use on your data.{' '}
         <strong>Try to set it when possible</strong>. If omitted, disables all
         enhancements and assumes content is flat strings.
@@ -179,7 +179,7 @@ const gridConcepts = [
     title: 'columnVisibility',
     description: (
       <span>
-        An array of <strong>EuiDataGridColumnVisibility</strong> objects.
+        An array of <strong>WuiDataGridColumnVisibility</strong> objects.
         Defines which columns are visible in the grid and the order they are
         displayed.
       </span>
@@ -189,7 +189,7 @@ const gridConcepts = [
     title: 'leading and trailing controlColumns',
     description: (
       <span>
-        An array of <strong>EuiDataGridControlColumn</strong> objects. Used to
+        An array of <strong>WuiDataGridControlColumn</strong> objects. Used to
         define ancillary columns on the left side of the data grid. Useful for
         adding items like checkboxes and buttons.
       </span>
@@ -199,7 +199,7 @@ const gridConcepts = [
     title: 'schemaDetectors',
     description: (
       <span>
-        An array of custom <strong>EuiDataGridSchemaDetector</strong> objects.
+        An array of custom <strong>WuiDataGridSchemaDetector</strong> objects.
         You can inject custom schemas to the grid to define the classnames
         applied.
       </span>
@@ -209,7 +209,7 @@ const gridConcepts = [
     title: 'popoverContents',
     description: (
       <span>
-        An object mapping <strong>EuiDataGridColumn</strong> schemas to a custom
+        An object mapping <strong>WuiDataGridColumn</strong> schemas to a custom
         popover render. This dictates the content of the popovers when you click
         into each cell.
       </span>
@@ -225,9 +225,9 @@ const gridConcepts = [
     description: (
       <span>
         Defines the look of the grid. Accepts a partial{' '}
-        <strong>EuiDataGridStyle</strong> object. Settings provided may be
+        <strong>WuiDataGridStyle</strong> object. Settings provided may be
         overwritten or merged with user defined preferences if{' '}
-        <EuiCode>toolbarVisibility.showStyleSelector</EuiCode> is set to true
+        <WuiCode>toolbarVisibility.showStyleSelector</WuiCode> is set to true
         (which is the default).
       </span>
     ),
@@ -237,7 +237,7 @@ const gridConcepts = [
     description: (
       <span>
         Accepts either a boolean or{' '}
-        <strong>EuiDataGridToolBarVisibilityOptions</strong> object. When used
+        <strong>WuiDataGridToolBarVisibilityOptions</strong> object. When used
         as a boolean, defines the visibility of entire toolbar. When passed an
         object allows you to turn off individual controls within the toolbar.
       </span>
@@ -250,7 +250,7 @@ const gridConcepts = [
         A function called to render a cell&apos;s value. Behind the scenes it is
         treated as a React component allowing hooks, context, and other React
         concepts to be used. The function receives a{' '}
-        <strong>EuiDataGridCellValueElement</strong> as its only argument.
+        <strong>WuiDataGridCellValueElement</strong> as its only argument.
       </span>
     ),
   },
@@ -258,7 +258,7 @@ const gridConcepts = [
     title: 'pagination',
     description: (
       <span>
-        A <strong>EuiDataGridPagination</strong> object. Omit to disable
+        A <strong>WuiDataGridPagination</strong> object. Omit to disable
         pagination completely.
       </span>
     ),
@@ -267,10 +267,10 @@ const gridConcepts = [
     title: 'sorting',
     description: (
       <span>
-        A <strong>EuiDataGridSorting</strong> object that provides the sorted
+        A <strong>WuiDataGridSorting</strong> object that provides the sorted
         columns along with their direction. Omit to disable, but you&apos;ll
         likely want to also turn off the user sorting controls through the{' '}
-        <EuiCode>toolbarVisibility</EuiCode> prop.
+        <WuiCode>toolbarVisibility</WuiCode> prop.
       </span>
     ),
   },
@@ -279,7 +279,7 @@ const gridConcepts = [
     description: (
       <span>
         A callback for when a column&apos;s size changes. Callback receives{' '}
-        <EuiCode>&#123; columnId: string, width: number &#125;</EuiCode>
+        <WuiCode>&#123; columnId: string, width: number &#125;</WuiCode>
       </span>
     ),
   },
@@ -302,12 +302,12 @@ export const DataGridExample = {
       text: (
         <Fragment>
           <p>
-            <strong>EuiDataGrid</strong> is for displaying large amounts of
+            <strong>WuiDataGrid</strong> is for displaying large amounts of
             tabular data. It is a better choice over{' '}
-            <Link to="/tabular-content/tables/">EUI tables</Link> when there are
+            <Link to="/tabular-content/tables/">WUI tables</Link> when there are
             many columns, the data in those columns is fairly uniform, and when
             schemas and sorting are important for comparison. Although it is
-            similar to traditional spreedsheet software, EuiDataGrid&apos;s
+            similar to traditional spreedsheet software, WuiDataGrid&apos;s
             current strengths are in rendering rather than creating content.{' '}
           </p>
           <h2>Core concepts</h2>
@@ -356,20 +356,20 @@ export const DataGridExample = {
       ),
       components: { DataGrid },
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
-        EuiDataGridColumnVisibility,
-        EuiDataGridColumnActions,
-        EuiDataGridControlColumn,
-        EuiDataGridInMemory,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
-        EuiDataGridToolBarVisibilityColumnSelectorOptions,
-        EuiDataGridPopoverContentProps,
+        WuiDataGrid,
+        WuiDataGridColumn,
+        WuiDataGridColumnVisibility,
+        WuiDataGridColumnActions,
+        WuiDataGridControlColumn,
+        WuiDataGridInMemory,
+        WuiDataGridPaginationProps,
+        WuiDataGridSorting,
+        WuiDataGridCellValueElementProps,
+        WuiDataGridSchemaDetector,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
+        WuiDataGridToolBarVisibilityColumnSelectorOptions,
+        WuiDataGridPopoverContentProps,
       },
       demo: (
         <Fragment>
@@ -378,36 +378,36 @@ export const DataGridExample = {
       ),
       extraContent: (
         <Fragment>
-          <EuiSpacer size="xxl" />
-          <EuiText>
+          <WuiSpacer size="xxl" />
+          <WuiText>
             <h2>Snippet with every feature in use</h2>
             <p>
               Here is a complicated data grid example meant to give you an idea
               of the data structure and callbacks you&apos;ll need to provide if
               you were utilizing all the features.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          </WuiText>
+          <WuiSpacer />
+          <WuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
-          <EuiSpacer size="xl" />
-          <EuiText>
+          </WuiCodeBlock>
+          <WuiSpacer size="xl" />
+          <WuiText>
             <h3>General props explanation</h3>
             <p>
               Please check the props tab in the example above for more
               explanation on the lower level object types. The majority of the
               types are defined in the{' '}
               <a
-                href="https://github.com/elastic/eui/tree/master/src/components/datagrid/data_grid_types.ts"
+                href="https://github.com/wazuh/wui/tree/master/src/components/datagrid/data_grid_types.ts"
                 target="_blank">
                 /datagrid/data_grid_types.ts
               </a>{' '}
               file.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiDescriptionList
+          </WuiText>
+          <WuiSpacer />
+          <WuiDescriptionList
             compressed
             listItems={gridConcepts}
             type="responsiveColumn"

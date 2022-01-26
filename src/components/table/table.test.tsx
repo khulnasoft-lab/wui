@@ -21,29 +21,29 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTable } from './table';
-import { EuiTableRow } from './table_row';
-import { EuiTableRowCell } from './table_row_cell';
-import { EuiTableBody } from './table_body';
-import { EuiTableHeader } from './table_header';
-import { EuiTableHeaderCell } from './table_header_cell';
+import { WuiTable } from './table';
+import { WuiTableRow } from './table_row';
+import { WuiTableRowCell } from './table_row_cell';
+import { WuiTableBody } from './table_body';
+import { WuiTableHeader } from './table_header';
+import { WuiTableHeaderCell } from './table_header_cell';
 
-test('renders EuiTable', () => {
+test('renders WuiTable', () => {
   const component = (
-    <EuiTable {...requiredProps}>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Hi Title</EuiTableHeaderCell>
-        <EuiTableHeaderCell>Bye Title</EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell>Hi</EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow>
-          <EuiTableRowCell>Bye</EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+    <WuiTable {...requiredProps}>
+      <WuiTableHeader>
+        <WuiTableHeaderCell>Hi Title</WuiTableHeaderCell>
+        <WuiTableHeaderCell>Bye Title</WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell>Hi</WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow>
+          <WuiTableRowCell>Bye</WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   );
   expect(render(component)).toMatchSnapshot();
 });

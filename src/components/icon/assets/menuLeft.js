@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconMenuLeft = ({ title, titleId, ...props }) => (
+const WuiIconMenuLeft = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconMenuLeft = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconMenuLeft;
+export const icon = WuiIconMenuLeft;

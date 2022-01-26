@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiCodeBlock, EuiSpacer } from '../../../../src/components';
+import { WuiCodeBlock, WuiSpacer } from '../../../../src/components';
 
 const htmlCode = require('!!raw-loader!./code_examples/example.html').default;
 
@@ -10,28 +10,28 @@ const sqlCode = require('!!raw-loader!./code_examples/example.sql').default;
 
 export default () => (
   <div>
-    <EuiCodeBlock language="html">{htmlCode}</EuiCodeBlock>
+    <WuiCodeBlock language="html">{htmlCode}</WuiCodeBlock>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiCodeBlock
+    <WuiCodeBlock
       language="js"
       fontSize="m"
       paddingSize="m"
       overflowHeight={300}
       isCopyable>
       {jsCode}
-    </EuiCodeBlock>
+    </WuiCodeBlock>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiCodeBlock
+    <WuiCodeBlock
       language="sql"
       fontSize="m"
       paddingSize="m"
       overflowHeight={300}
       isCopyable>
       {sqlCode}
-    </EuiCodeBlock>
+    </WuiCodeBlock>
   </div>
 );

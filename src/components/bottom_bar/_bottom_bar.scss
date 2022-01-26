@@ -1,28 +1,28 @@
-.euiBottomBar {
-  @include euiBottomShadowFlat($euiShadowColorLarge);
-  background: tintOrShade($euiColorFullShade, 25%, 100%);
+.wuiBottomBar {
+  @include wuiBottomShadowFlat($wuiShadowColorLarge);
+  background: tintOrShade($wuiColorFullShade, 25%, 100%);
   color: $euiColorEmptyShade;
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
-  animation: euiBottomBarAppear $euiAnimSpeedSlow $euiAnimSlightResistance;
-  z-index: $euiZHeader - 2;
+  animation: wuiBottomBarAppear $wuiAnimSpeedSlow $wuiAnimSlightResistance;
+  z-index: $wuiZHeader - 2;
 
-  &.euiBottomBar--paddingSmall {
+  &.wuiBottomBar--paddingSmall {
     padding: $euiSizeS;
   }
 
-  &.euiBottomBar--paddingMedium {
+  &.wuiBottomBar--paddingMedium {
     padding: $euiSize;
   }
 
-  &.euiBottomBar--paddingLarge {
+  &.wuiBottomBar--paddingLarge {
     padding: $euiSizeL;
   }
 }
 
-@keyframes euiBottomBarAppear {
+@keyframes wuiBottomBarAppear {
   0% {
     transform: translateY(100%);
     opacity: 0;

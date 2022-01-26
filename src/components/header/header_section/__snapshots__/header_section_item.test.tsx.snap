@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderSectionItem border defaults to left 1`] = `
+exports[`WuiHeaderSectionItem border defaults to left 1`] = `
 <div
-  class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+  class="wuiHeaderSectionItem wuiHeaderSectionItem--borderLeft"
 />
 `;
 
-exports[`EuiHeaderSectionItem border renders right 1`] = `
+exports[`WuiHeaderSectionItem border renders right 1`] = `
 <div
-  class="euiHeaderSectionItem euiHeaderSectionItem--borderRight"
+  class="wuiHeaderSectionItem wuiHeaderSectionItem--borderRight"
 />
 `;
 
-exports[`EuiHeaderSectionItem is rendered 1`] = `
+exports[`WuiHeaderSectionItem is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft testClass1 testClass2"
+  class="wuiHeaderSectionItem wuiHeaderSectionItem--borderLeft testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiHeaderSectionItem renders children 1`] = `
+exports[`WuiHeaderSectionItem renders children 1`] = `
 <div
-  class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+  class="wuiHeaderSectionItem wuiHeaderSectionItem--borderLeft"
 >
   <span>
     Call me Ishmael.

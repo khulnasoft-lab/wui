@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNavItem } from './side_nav_item';
+import { WuiSideNavItem } from './side_nav_item';
 
-describe('EuiSideNavItem', () => {
+describe('WuiSideNavItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSideNavItem>
+      <WuiSideNavItem>
         <button {...requiredProps} />
-      </EuiSideNavItem>
+      </WuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +36,9 @@ describe('EuiSideNavItem', () => {
 
   test("preserves child's classes", () => {
     const component = render(
-      <EuiSideNavItem>
+      <WuiSideNavItem>
         <button className="test" />
-      </EuiSideNavItem>
+      </WuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('EuiSideNavItem', () => {
   describe('isSelected', () => {
     test('defaults to false', () => {
       const component = render(
-        <EuiSideNavItem>
+        <WuiSideNavItem>
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -57,9 +57,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered when specified as true', () => {
       const component = render(
-        <EuiSideNavItem isSelected>
+        <WuiSideNavItem isSelected>
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -69,9 +69,9 @@ describe('EuiSideNavItem', () => {
   describe('href', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSideNavItem href="#">
+        <WuiSideNavItem href="#">
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -79,9 +79,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered with rel', () => {
       const component = render(
-        <EuiSideNavItem href="#" rel="noopener">
+        <WuiSideNavItem href="#" rel="noopener">
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();

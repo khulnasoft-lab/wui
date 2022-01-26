@@ -4,15 +4,15 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiBottomBar, EuiCode } from '../../../../src/components';
+import { WuiBottomBar, WuiCode } from '../../../../src/components';
 
 import BottomBar from './bottom_bar';
 const bottomBarSource = require('!!raw-loader!./bottom_bar');
 const bottomBarHtml = renderToHtml(BottomBar);
 
-const bottomBarSnippet = `<EuiBottomBar paddingSize="s">
+const bottomBarSnippet = `<WuiBottomBar paddingSize="s">
   <!-- Content goes here -->
-</EuiBottomBar>`;
+</WuiBottomBar>`;
 
 export const BottomBarExample = {
   title: 'Bottom bar',
@@ -31,7 +31,7 @@ export const BottomBarExample = {
       text: (
         <div>
           <p>
-            <strong>EuiBottomBar</strong> is a simple wrapper component that
+            <strong>WuiBottomBar</strong> is a simple wrapper component that
             does nothing but fix a bottom bar (usually filled with buttons) to
             the bottom of the page. Use it when you have really long pages or
             complicated, multi-page forms. In the case of forms, only invoke it
@@ -39,13 +39,13 @@ export const BottomBarExample = {
           </p>
           <p>
             Like many of our other wrapper components,{' '}
-            <strong>EuiBottomBar</strong> accepts a{' '}
-            <EuiCode>paddingSize</EuiCode> prop, which can be set to{' '}
-            <EuiCode>s / m / l / none</EuiCode>.
+            <strong>WuiBottomBar</strong> accepts a{' '}
+            <WuiCode>paddingSize</WuiCode> prop, which can be set to{' '}
+            <WuiCode>s / m / l / none</WuiCode>.
           </p>
         </div>
       ),
-      props: { EuiBottomBar },
+      props: { WuiBottomBar },
       snippet: bottomBarSnippet,
       demo: <BottomBar />,
     },

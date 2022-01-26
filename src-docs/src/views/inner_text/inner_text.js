@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiCode,
-  EuiHighlight,
-  EuiHorizontalRule,
-  EuiPanel,
-  EuiText,
-  EuiSpacer,
-  EuiInnerText,
+  WuiBadge,
+  WuiCode,
+  WuiHighlight,
+  WuiHorizontalRule,
+  WuiPanel,
+  WuiText,
+  WuiSpacer,
+  WuiInnerText,
 } from '../../../../src/components';
 
 export default () => {
@@ -26,83 +26,83 @@ export default () => {
   }, [thing, type]);
 
   return (
-    <EuiText size="s">
+    <WuiText size="s">
       <p>
         <strong>Example:</strong>
       </p>
-      <EuiInnerText>
+      <WuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <WuiPanel paddingSize="s" className="wui-displayInlineBlock">
               <span ref={ref} title={innerText}>
                 Simple string content
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </WuiPanel>
+            <WuiSpacer />
+            <p className="wui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <WuiCode>{innerText}</WuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <WuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with complex children:</strong>
       </p>
-      <EuiInnerText>
+      <WuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <WuiPanel paddingSize="s" className="wui-displayInlineBlock">
               <span ref={ref} title={innerText}>
-                <EuiHighlight search="content">
-                  EuiHighlight content
-                </EuiHighlight>{' '}
-                <EuiBadge>with EuiBadge</EuiBadge>
+                <WuiHighlight search="content">
+                  WuiHighlight content
+                </WuiHighlight>{' '}
+                <WuiBadge>with WuiBadge</WuiBadge>
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </WuiPanel>
+            <WuiSpacer />
+            <p className="wui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <WuiCode>{innerText}</WuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <WuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with updating content:</strong>
       </p>
-      <EuiInnerText>
+      <WuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <WuiPanel paddingSize="s" className="wui-displayInlineBlock">
               <span ref={ref} title={innerText}>
                 {thing}
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </WuiPanel>
+            <WuiSpacer />
+            <p className="wui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <WuiCode>{innerText}</WuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <WuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with updating element:</strong>
       </p>
-      <EuiInnerText>
+      <WuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <WuiPanel paddingSize="s" className="wui-displayInlineBlock">
               {React.createElement(
                 type,
                 {
@@ -111,15 +111,15 @@ export default () => {
                 },
                 thing2
               )}
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </WuiPanel>
+            <WuiSpacer />
+            <p className="wui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <WuiCode>{innerText}</WuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
-    </EuiText>
+      </WuiInnerText>
+    </WuiText>
   );
 };

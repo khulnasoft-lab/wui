@@ -1,13 +1,13 @@
-@mixin euiPanel($selector) {
+@mixin wuiPanel($selector) {
   @if variable-exists(selector) == false {
-    @error 'A $selector must be provided to @mixin euiPanel().';
+    @error 'A $selector must be provided to @mixin wuiPanel().';
   } @else {
     #{$selector} {
 
-      @include euiBottomShadowSmall;
+      @include wuiBottomShadowSmall;
       background-color: $euiColorEmptyShade;
-      border: $euiBorderThin;
-      border-radius: $euiBorderRadius;
+      border: $wuiBorderThin;
+      border-radius: $wuiBorderRadius;
       flex-grow: 1;
 
       &#{$selector}--flexGrowZero {
@@ -21,29 +21,29 @@
         text-align: left;
 
         // transition the shadow
-        transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+        transition: all $wuiAnimSpeedFast $wuiAnimSlightResistance;
 
         &:hover,
         &:focus {
-          @include euiSlightShadowHover;
+          @include wuiSlightShadowHover;
           transform: translateY(-2px);
           cursor: pointer;
         }
       }
 
       &#{$selector}--shadow {
-        @include euiBottomShadowMedium;
+        @include wuiBottomShadowMedium;
 
         @if (lightness($euiTextColor) < 50) {
-          border-bottom-color: transparentize($euiShadowColor, .5);
+          border-bottom-color: transparentize($wuiShadowColor, .5);
         } @else {
           // Applied again here in case dark theme overrides light
-          border-bottom-color: $euiBorderColor;
+          border-bottom-color: $wuiBorderColor;
         }
 
         &#{$selector}--isClickable:hover,
         &#{$selector}--isClickable:focus {
-          @include euiBottomShadow($color: $euiShadowColor, $opacity: .2);
+          @include wuiBottomShadow($color: $wuiShadowColor, $opacity: .2);
         }
       }
     }

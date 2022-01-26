@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiBetaBadge } from './beta_badge';
+import { WuiBetaBadge } from './beta_badge';
 
-describe('EuiBetaBadge', () => {
+describe('WuiBetaBadge', () => {
   test('is rendered', () => {
-    const component = render(<EuiBetaBadge label="Beta" {...requiredProps} />);
+    const component = render(<WuiBetaBadge label="Beta" {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,28 +1,28 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiTitle,
+  WuiPage,
+  WuiPageBody,
+  WuiPageContent,
+  WuiPageContentBody,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiPage>
-    <EuiPageBody component="div">
-      <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-            <EuiTitle>
+  <WuiPage>
+    <WuiPageBody component="div">
+      <WuiPageContent>
+        <WuiPageContentHeader>
+          <WuiPageContentHeaderSection>
+            <WuiTitle>
               <h2>Content title</h2>
-            </EuiTitle>
-          </EuiPageContentHeaderSection>
-        </EuiPageContentHeader>
-        <EuiPageContentBody>Content body</EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+            </WuiTitle>
+          </WuiPageContentHeaderSection>
+        </WuiPageContentHeader>
+        <WuiPageContentBody>Content body</WuiPageContentBody>
+      </WuiPageContent>
+    </WuiPageBody>
+  </WuiPage>
 );

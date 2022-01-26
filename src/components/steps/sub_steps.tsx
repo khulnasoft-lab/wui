@@ -21,16 +21,16 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiSubStepsProps = FunctionComponent<
+export type WuiSubStepsProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiSubSteps: EuiSubStepsProps = ({
+export const WuiSubSteps: WuiSubStepsProps = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiSubSteps', className);
+  const classes = classNames('wuiSubSteps', className);
 
   return (
     <div className={classes} {...rest}>

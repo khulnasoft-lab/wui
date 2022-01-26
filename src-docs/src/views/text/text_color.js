@@ -1,15 +1,15 @@
 import React from 'react';
 
 import {
-  EuiSpacer,
-  EuiText,
+  WuiSpacer,
+  WuiText,
   EuiTextColor,
-  EuiTitle,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiTitle>
+    <WuiTitle>
       <h2>
         <EuiTextColor color="default">You </EuiTextColor>
         <EuiTextColor color="secondary">use </EuiTextColor>
@@ -17,11 +17,11 @@ export default () => (
         <EuiTextColor color="warning">on </EuiTextColor>
         <EuiTextColor color="danger">anything!</EuiTextColor>
       </h2>
-    </EuiTitle>
+    </WuiTitle>
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiText>
+    <WuiText>
       <p>
         <EuiTextColor color="default">Default text color</EuiTextColor>
       </p>
@@ -47,18 +47,18 @@ export default () => (
           </EuiTextColor>
         </span>
       </p>
-    </EuiText>
+    </WuiText>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiText color="danger">
-      <h2>Works on EuiText as well.</h2>
+    <WuiText color="danger">
+      <h2>Works on WuiText as well.</h2>
       <p>
         Sometimes you need to color entire blocks of text, no matter what is in
         them. You can always apply color directly (versus using the separated
         component) to make it easy. Links should still{' '}
         <a href="#">properly color</a>.
       </p>
-    </EuiText>
+    </WuiText>
   </div>
 );

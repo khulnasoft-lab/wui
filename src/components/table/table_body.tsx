@@ -24,7 +24,7 @@ type Props = CommonProps & {
   bodyRef?: Ref<HTMLTableSectionElement>;
 };
 
-export const EuiTableBody: FunctionComponent<Props> = ({
+export const WuiTableBody: FunctionComponent<Props> = ({
   children,
   className,
   bodyRef,

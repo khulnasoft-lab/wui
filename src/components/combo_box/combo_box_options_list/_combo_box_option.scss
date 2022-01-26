@@ -1,9 +1,9 @@
-.euiComboBoxOption {
+.wuiComboBoxOption {
   font-size: $euiFontSizeS;
   padding: $euiSizeXS $euiSizeS $euiSizeXS #{$euiSizeM + $euiSizeXS};
   width: 100%;
   text-align: left;
-  border: $euiBorderThin;
+  border: $wuiBorderThin;
   border-color: transparent;
   display: flex;
   align-items: center;
@@ -12,14 +12,14 @@
     text-decoration: underline;
   }
 
-  &.euiComboBoxOption-isFocused {
+  &.wuiComboBoxOption-isFocused {
     cursor: pointer;
-    color: $euiColorPrimary;
+    color: $wuiColorPrimary;
     background-color: $euiFocusBackgroundColor;
   }
 
-  &.euiComboBoxOption-isDisabled {
-    color: $euiColorMediumShade;
+  &.wuiComboBoxOption-isDisabled {
+    color: $wuiColorMediumShade;
     cursor: not-allowed;
 
     &:hover {
@@ -28,22 +28,22 @@
   }
 }
 
-.euiComboBoxOption__contentWrapper {
+.wuiComboBoxOption__contentWrapper {
   display: flex;
 
-  .euiComboBoxOption__emptyStateText {
+  .wuiComboBoxOption__emptyStateText {
     flex: 1;
     text-align: left;
     margin-bottom: 0;
   }
 
-  .euiComboBoxOption__enterBadge {
+  .wuiComboBoxOption__enterBadge {
     align-self: flex-start;
     margin-left: $euiSizeXS;
   }
 }
 
-.euiComboBoxOption__content {
+.wuiComboBoxOption__content {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

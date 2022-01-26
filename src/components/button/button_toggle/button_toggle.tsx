@@ -28,13 +28,13 @@ import React, {
 import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
-import { EuiToggle, ToggleType } from '../../toggle';
-import { EuiButton, EuiButtonProps } from '../button';
+import { WuiToggle, ToggleType } from '../../toggle';
+import { WuiButton, WuiButtonProps } from '../button';
 import { useRenderToText } from '../../inner_text/render_to_text';
 
-export interface EuiButtonToggleProps extends EuiButtonProps, CommonProps {
+export interface WuiButtonToggleProps extends WuiButtonProps, CommonProps {
   /**
-   * Simulates a `EuiButtonEmpty`
+   * Simulates a `WuiButtonEmpty`
    */
   isEmpty?: boolean;
 
@@ -49,32 +49,32 @@ export interface EuiButtonToggleProps extends EuiButtonProps, CommonProps {
   isSelected?: boolean;
 
   /**
-   * Button label, which is also passed to `EuiToggle` as the input's label
+   * Button label, which is also passed to `WuiToggle` as the input's label
    */
   label: ReactNode;
 
   /**
-   * Classnames to add to `EuiToggle` instead of the `EuiButton`
+   * Classnames to add to `WuiToggle` instead of the `WuiButton`
    */
   toggleClassName?: string;
 
   /**
    * Is the button a single action or part of a group (multi)?
-   * Used primarily for `EuiButtonGroup`
+   * Used primarily for `WuiButtonGroup`
    */
   type?: ToggleType;
 
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-type EuiButtonTogglePropsForAnchor = EuiButtonToggleProps &
+type WuiButtonTogglePropsForAnchor = WuiButtonToggleProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'name' | 'href' | 'onClick'> & {
     href?: string;
     name?: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
   };
 
-type EuiButtonTogglePropsForButtonToggle = EuiButtonToggleProps &
+type WuiButtonTogglePropsForButtonToggle = WuiButtonToggleProps &
   Omit<
     ButtonHTMLAttributes<HTMLButtonElement>,
     'name' | 'onClick' | 'value'
@@ -85,11 +85,11 @@ type EuiButtonTogglePropsForButtonToggle = EuiButtonToggleProps &
   };
 
 type Props = ExclusiveUnion<
-  EuiButtonTogglePropsForAnchor,
-  EuiButtonTogglePropsForButtonToggle
+  WuiButtonTogglePropsForAnchor,
+  WuiButtonTogglePropsForButtonToggle
 >;
 
-export const EuiButtonToggle: FunctionComponent<Props> = ({
+export const WuiButtonToggle: FunctionComponent<Props> = ({
   className,
   color = 'primary',
   isDisabled,
@@ -106,18 +106,18 @@ export const EuiButtonToggle: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiButtonToggle',
+    'wuiButtonToggle',
     {
-      'euiButtonToggle--isIconOnly': isIconOnly,
-      'euiButtonToggle--isEmpty': isEmpty,
+      'wuiButtonToggle--isIconOnly': isIconOnly,
+      'wuiButtonToggle--isEmpty': isEmpty,
     },
     className
   );
 
   const wrapperClasses = classNames(
-    'euiButtonToggle__wrapper',
+    'wuiButtonToggle__wrapper',
     {
-      'euiButtonToggle--isDisabled': isDisabled,
+      'wuiButtonToggle--isDisabled': isDisabled,
     },
     toggleClassName
   );
@@ -129,9 +129,9 @@ export const EuiButtonToggle: FunctionComponent<Props> = ({
   );
 
   return (
-    <EuiToggle
+    <WuiToggle
       className={wrapperClasses}
-      inputClassName="euiButtonToggle__input"
+      inputClassName="wuiButtonToggle__input"
       checked={isSelected}
       isDisabled={isDisabled}
       label={labelText}
@@ -141,18 +141,18 @@ export const EuiButtonToggle: FunctionComponent<Props> = ({
       title={labelText}
       value={value}
       data-test-subj={dataTestSubj}>
-      <EuiButton
+      <WuiButton
         tabIndex={-1} // prevents double focus from input to button
         className={classes}
         color={color}
         disabled={isDisabled}
         size={isIconOnly ? 's' : undefined} // only force small if it's the icon only version
         {...(rest as Extract<
-          EuiButtonTogglePropsForAnchor,
-          EuiButtonTogglePropsForButtonToggle
+          WuiButtonTogglePropsForAnchor,
+          WuiButtonTogglePropsForButtonToggle
         >)}>
         {buttonContent}
-      </EuiButton>
-    </EuiToggle>
+      </WuiButton>
+    </WuiToggle>
   );
 };

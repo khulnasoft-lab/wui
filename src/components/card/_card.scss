@@ -1,5 +1,5 @@
-// Start with a base of EuiPanel styles
-@include euiPanel($selector: '.euiCard');
+// Start with a base of WuiPanel styles
+@include wuiPanel($selector: '.wuiCard');
 
 /**
  * 1. Footer is always at the bottom.
@@ -8,33 +8,33 @@
  * 3. Horizontal layouts should always top left align no matter the textAlign prop
  */
 
-// EuiCard specific
-.euiCard {
+// WuiCard specific
+.wuiCard {
   display: flex;
   flex-direction: column;
   min-height: 1px; /* 2 */// sass-lint:disable-line mixins-before-declarations
 
-  &.euiCard-isDisabled {
+  &.wuiCard-isDisabled {
     cursor: not-allowed; // duplicate property due to Chrome bug
     box-shadow: none;
 
-    &:not(.euiCard--plain) {
-      background-color: $euiColorLightestShade;
+    &:not(.wuiCard--plain) {
+      background-color: $wuiColorLightestShade;
     }
 
-    .euiCard__title,
-    .euiCard__description,
-    .euiCard__top {
+    .wuiCard__title,
+    .wuiCard__description,
+    .wuiCard__top {
       color: $euiColorDarkShade;
     }
 
-    .euiCard__top svg,
-    .euiCard__top img {
+    .wuiCard__top svg,
+    .wuiCard__top img {
       filter: grayscale(100%);
     }
 
-    .euiCard__titleAnchor,
-    .euiCard__titleButton {
+    .wuiCard__titleAnchor,
+    .wuiCard__titleButton {
       cursor: inherit;
     }
 
@@ -47,87 +47,87 @@
     }
   }
 
-  &.euiCard--isClickable {
+  &.wuiCard--isClickable {
     display: flex; // Override panel mixin
 
-    &:not(.euiCard-isDisabled) {
+    &:not(.wuiCard-isDisabled) {
       // Progressive Enhancement Only
       // The title will still underline to simulate focus in IE
       &:focus-within {
-        @include euiSlightShadowHover;
-        @include euiFocusRing('large');
+        @include wuiSlightShadowHover;
+        @include wuiFocusRing('large');
       }
 
       &:focus,
       &:hover {
-        .euiCard__title,
-        .euiCard__titleAnchor,
-        .euiCard__titleButton {
+        .wuiCard__title,
+        .wuiCard__titleAnchor,
+        .wuiCard__titleButton {
           text-decoration: underline;
         }
       }
     }
   }
 
-  .euiCard__top,
-  .euiCard__content,
-  .euiCard__footer {
+  .wuiCard__top,
+  .wuiCard__content,
+  .wuiCard__footer {
     width: 100%; // Fixes IE and ensures they always stretch no matter the flex layout
   }
 
-  &.euiCard--leftAligned {
+  &.wuiCard--leftAligned {
     text-align: left;
     align-items: flex-start;
 
-    .euiCard__titleButton {
+    .wuiCard__titleButton {
       text-align: left;
     }
   }
 
-  &.euiCard--centerAligned {
+  &.wuiCard--centerAligned {
     text-align: center;
     align-items: center;
   }
 
-  &.euiCard--rightAligned {
+  &.wuiCard--rightAligned {
     text-align: right;
     align-items: flex-end;
 
-    .euiCard__titleButton {
+    .wuiCard__titleButton {
       text-align: right;
     }
   }
 
-  &.euiCard-isSelected {
-    transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+  &.wuiCard-isSelected {
+    transition: all $wuiAnimSpeedFast $wuiAnimSlightResistance;
   }
 }
 
 // This creates a bunch of sub selectors for the beta badge
-@include euiHasBetaBadge($selector: '.euiCard', $spacing: $euiCardSpacing);
+@include wuiHasBetaBadge($selector: '.wuiCard', $spacing: $wuiCardSpacing);
 
-.euiCard--isSelectable {
+.wuiCard--isSelectable {
   position: relative;
 }
 
-@each $modifier, $paddingAmount in $euiCardPaddingModifiers {
-  .euiCard--#{$modifier} {
+@each $modifier, $paddingAmount in $wuiCardPaddingModifiers {
+  .wuiCard--#{$modifier} {
     padding: $paddingAmount;
 
-    &.euiCard--isSelectable {
-      padding-bottom: $paddingAmount + $euiCardBottomNodeHeight;
+    &.wuiCard--isSelectable {
+      padding-bottom: $paddingAmount + $wuiCardBottomNodeHeight;
     }
 
-    .euiCard__top {
+    .wuiCard__top {
 
-      .euiCard__image {
+      .wuiCard__image {
         width: calc(100% + (#{$paddingAmount} * 2));
         left: $paddingAmount * -1;
         top: $paddingAmount * -1;
         margin-bottom: $paddingAmount * -1; // ensure the parent is only as tall as the image
 
         // IF both exist, position the icon centered on top of image
-        + .euiCard__icon {
+        + .wuiCard__icon {
           transform: translate(-50%, -75%); // Fallback for IE as it doesn't accept calcs in translates
           transform: translate(-50%, calc(-50% + #{$paddingAmount * -1})); // sass-lint:disable-line no-duplicate-properties
         }
@@ -137,17 +137,17 @@
   }
 }
 
-.euiCard__top {
+.wuiCard__top {
   flex-grow: 0; /* 1 */
   position: relative;
   min-height: 1px; /* 2 */
 
-  .euiCard__image {
+  .wuiCard__image {
     position: relative;
 
     // match border radius, minus 1px because it's inside a border
-    border-top-left-radius: $euiBorderRadius - 1px;
-    border-top-right-radius: $euiBorderRadius - 1px;
+    border-top-left-radius: $wuiBorderRadius - 1px;
+    border-top-right-radius: $wuiBorderRadius - 1px;
     overflow: hidden;
 
     img {
@@ -155,58 +155,58 @@
     }
 
     // IF both exist, position the icon centered on top of image
-    + .euiCard__icon {
+    + .wuiCard__icon {
       position: absolute;
       top: 50%;
       left: 50%;
     }
   }
 
-  .euiCard__icon {
-    margin-top: $euiCardSpacing / 2;
+  .wuiCard__icon {
+    margin-top: $wuiCardSpacing / 2;
   }
 }
 
-.euiCard__footer:not(:empty) {
+.wuiCard__footer:not(:empty) {
   flex-grow: 0; /* 1 */
-  margin-top: $euiCardSpacing;
+  margin-top: $wuiCardSpacing;
 }
 
-.euiCard--hasChildren .euiCard__description {
-  margin-bottom: $euiCardSpacing;
+.wuiCard--hasChildren .wuiCard__description {
+  margin-bottom: $wuiCardSpacing;
 }
 
 // Selectable cards don't work well without a border
-.euiCard--plain:not(.euiCard--isSelectable) {
+.wuiCard--plain:not(.wuiCard--isSelectable) {
   border: none;
   box-shadow: none;
 
-  .euiCard__image {
+  .wuiCard__image {
     // Without a border, the image should stand on it's own so it needs to have all corners rounded
-    border-radius: $euiBorderRadius;
+    border-radius: $wuiBorderRadius;
   }
 }
 
-@each $name, $color in $euiCardSelectButtonBorders {
-  .euiCard--isSelectable--#{$name}.euiCard-isSelected {
+@each $name, $color in $wuiCardSelectButtonBorders {
+  .wuiCard--isSelectable--#{$name}.wuiCard-isSelected {
     border-color: $color;
   }
 }
 
 // If an icon or image exists, add some space
-.euiCard__top + .euiCard__content {
-  margin-top: $euiCardSpacing;
+.wuiCard__top + .wuiCard__content {
+  margin-top: $wuiCardSpacing;
 }
 
-.euiCard__content {
+.wuiCard__content {
   flex-grow: 1; /* 1 */
 
-  .euiCard__description {
-    margin-top: $euiCardSpacing / 2;
+  .wuiCard__description {
+    margin-top: $wuiCardSpacing / 2;
   }
 
-  .euiCard__titleAnchor,
-  .euiCard__titleButton {
+  .wuiCard__titleAnchor,
+  .wuiCard__titleButton {
     font: inherit;
     color: inherit;
     letter-spacing: inherit;
@@ -218,26 +218,26 @@
 
 }
 
-.euiCard.euiCard--horizontal {
-  .euiCard__content {
+.wuiCard.wuiCard--horizontal {
+  .wuiCard__content {
     text-align: left; /* 3 */
   }
 }
 
 // Only change the flex direction if the card has an icon
 // otherwise the button tag won't properly align contents to top
-.euiCard.euiCard--horizontal.euiCard--hasIcon {
+.wuiCard.wuiCard--horizontal.wuiCard--hasIcon {
   flex-direction: row;
   // sass-lint:disable-block no-important
   align-items: flex-start !important; /* 3 */
 
-  .euiCard__top,
-  .euiCard__content {
+  .wuiCard__top,
+  .wuiCard__content {
     width: auto; // Makes sure the top shrinks and the content grows
     margin-top: 0;
   }
 
-  .euiCard__top .euiCard__icon {
+  .wuiCard__top .wuiCard__icon {
     margin-top: 0;
     margin-right: $euiSize;
   }

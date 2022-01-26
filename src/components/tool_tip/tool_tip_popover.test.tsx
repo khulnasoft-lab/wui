@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiToolTipPopover } from './tool_tip_popover';
+import { WuiToolTipPopover } from './tool_tip_popover';
 
-describe('EuiToolTipPopover', () => {
+describe('WuiToolTipPopover', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToolTipPopover positionToolTip={() => {}} {...requiredProps} />
+      <WuiToolTipPopover positionToolTip={() => {}} {...requiredProps} />
     );
     expect(component).toMatchSnapshot();
   });

@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { assertUnreachable, PropTypes } from 'react-view';
 import {
-  EuiSpacer,
-  EuiSwitch,
-  EuiRadioGroup,
-  EuiFieldText,
-  EuiCode,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiToolTip,
-  EuiTable,
-  EuiTableBody,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableRow,
-  EuiTableRowCell,
+  WuiSpacer,
+  WuiSwitch,
+  WuiRadioGroup,
+  WuiFieldText,
+  WuiCode,
+  WuiSelect,
+  WuiFieldNumber,
+  WuiToolTip,
+  WuiTable,
+  WuiTableBody,
+  WuiTableHeader,
+  WuiTableHeaderCell,
+  WuiTableRow,
+  WuiTableRowCell,
   EuiTextColor,
-  EuiTextArea,
-  EuiFormRow,
+  WuiTextArea,
+  WuiFormRow,
 } from '../../../../src/components/';
 
 import {
@@ -36,12 +36,12 @@ const getTooltip = (description, type, name) => (
 
 const Label = ({ children, tooltip }) => {
   return (
-    <EuiToolTip position="top" content={tooltip}>
+    <WuiToolTip position="top" content={tooltip}>
       <>
         <span>{children}</span>
-        <EuiSpacer size="s" />
+        <WuiSpacer size="s" />
       </>
-    </EuiToolTip>
+    </WuiToolTip>
   );
 };
 
@@ -88,11 +88,11 @@ const Knob = ({
 
     case PropTypes.Number:
       return (
-        <EuiFormRow
+        <WuiFormRow
           isInvalid={error && error.length > 0}
           error={error}
           fullWidth>
-          <EuiFieldNumber
+          <WuiFieldNumber
             placeholder={placeholder}
             value={val ? val : undefined}
             onChange={e => set(e.target.value)}
@@ -101,7 +101,7 @@ const Knob = ({
             fullWidth
             isInvalid={error && error.length > 0}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       );
 
     case PropTypes.String:
@@ -130,12 +130,12 @@ const Knob = ({
       }
 
       return (
-        <EuiFormRow
+        <WuiFormRow
           isInvalid={error && error.length > 0}
           error={error}
           fullWidth
           helpText={custom && custom.helpText}>
-          <EuiFieldText
+          <WuiFieldText
             placeholder={placeholder}
             aria-label={description}
             isInvalid={error && error.length > 0}
@@ -143,13 +143,13 @@ const Knob = ({
             fullWidth
             {...knobProps}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       );
 
     case PropTypes.Boolean:
       return (
         <>
-          <EuiSwitch
+          <WuiSwitch
             id={name}
             label=""
             checked={val}
@@ -179,7 +179,7 @@ const Knob = ({
 
         return (
           <>
-            <EuiRadioGroup
+            <WuiRadioGroup
               options={flattenedOptions}
               idSelected={valueKey}
               onChange={id => {
@@ -199,11 +199,11 @@ const Knob = ({
         }));
 
         return (
-          <EuiFormRow
+          <WuiFormRow
             isInvalid={error && error.length > 0}
             error={error}
             fullWidth>
-            <EuiSelect
+            <WuiSelect
               id={name}
               options={flattenedOptions}
               value={valueKey || defaultValue}
@@ -215,14 +215,14 @@ const Knob = ({
               compressed
               fullWidth
             />
-          </EuiFormRow>
+          </WuiFormRow>
         );
       }
 
     case PropTypes.ReactNode:
       if (name === 'children' && !hidden) {
         return (
-          <EuiTextArea
+          <WuiTextArea
             placeholder={placeholder}
             value={val}
             onChange={e => {
@@ -238,7 +238,7 @@ const Knob = ({
           case 'switch':
             return (
               <>
-                <EuiSwitch
+                <WuiSwitch
                   id={name}
                   label={custom.label || ''}
                   checked={typeof val !== 'undefined' && val}
@@ -277,13 +277,13 @@ const KnobColumn = ({ state, knobNames, error, set }) => {
           humanizedType = humanizeType(state[name].custom.origin.type);
 
         const typeMarkup = humanizedType && (
-          <EuiCode>
-            <span className="eui-textBreakNormal">{markup(humanizedType)}</span>
-          </EuiCode>
+          <WuiCode>
+            <span className="wui-textBreakNormal">{markup(humanizedType)}</span>
+          </WuiCode>
         );
 
         let humanizedName = (
-          <strong className="eui-textBreakNormal">{name}</strong>
+          <strong className="wui-textBreakNormal">{name}</strong>
         );
 
         if (
@@ -307,17 +307,17 @@ const KnobColumn = ({ state, knobNames, error, set }) => {
           state[name].custom.origin.defaultValue
         ) {
           defaultValueMarkup = (
-            <EuiCode key={`defaultValue-${name}`}>
-              <span className="eui-textBreakNormal">
+            <WuiCode key={`defaultValue-${name}`}>
+              <span className="wui-textBreakNormal">
                 {state[name].custom.origin.defaultValue.value}
               </span>
-            </EuiCode>
+            </WuiCode>
           );
         }
 
         return (
-          <EuiTableRow key={name}>
-            <EuiTableRowCell
+          <WuiTableRow key={name}>
+            <WuiTableRowCell
               key={`prop__${name}-${idx}`}
               header="Prop"
               className="playgroundKnobs__rowCell">
@@ -328,20 +328,20 @@ const KnobColumn = ({ state, knobNames, error, set }) => {
                   <>{markup(state[name].description)}</>
                 </>
               )}
-            </EuiTableRowCell>
-            <EuiTableRowCell
+            </WuiTableRowCell>
+            <WuiTableRowCell
               key={`type__${name}-${idx}`}
               header="Type"
               className="playgroundKnobs__rowCell">
               {typeMarkup}
-            </EuiTableRowCell>
-            <EuiTableRowCell
+            </WuiTableRowCell>
+            <WuiTableRowCell
               key={`default__${name}-${idx}`}
               header="Default"
               className="playgroundKnobs__rowCell">
               {defaultValueMarkup}
-            </EuiTableRowCell>
-            <EuiTableRowCell
+            </WuiTableRowCell>
+            <WuiTableRowCell
               key={`modify__${name}-${idx}`}
               header="Modify"
               textOnly={false}
@@ -363,8 +363,8 @@ const KnobColumn = ({ state, knobNames, error, set }) => {
                 state={state}
                 orgSet={set}
               />
-            </EuiTableRowCell>
-          </EuiTableRow>
+            </WuiTableRowCell>
+          </WuiTableRow>
         );
       })}
     </>
@@ -396,22 +396,22 @@ const Knobs = ({ state, set, error }) => {
   const knobNames = Object.keys(state);
 
   return (
-    <EuiTable compressed id={'playground__ID'}>
-      <EuiTableHeader>
+    <WuiTable compressed id={'playground__ID'}>
+      <WuiTableHeader>
         {columns.map(({ name }, id) => {
-          return <EuiTableHeaderCell key={id}>{name}</EuiTableHeaderCell>;
+          return <WuiTableHeaderCell key={id}>{name}</WuiTableHeaderCell>;
         })}
-      </EuiTableHeader>
+      </WuiTableHeader>
 
-      <EuiTableBody>
+      <WuiTableBody>
         <KnobColumn
           state={state}
           knobNames={knobNames}
           set={set}
           error={error}
         />
-      </EuiTableBody>
-    </EuiTable>
+      </WuiTableBody>
+    </WuiTable>
   );
 };
 

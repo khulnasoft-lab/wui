@@ -19,19 +19,19 @@
 
 import React, { useMemo, ReactNode } from 'react';
 import {
-  EuiDataGridColumn,
-  EuiDataGridInMemory,
-  EuiDataGridInMemoryValues,
+  WuiDataGridColumn,
+  WuiDataGridInMemory,
+  WuiDataGridInMemoryValues,
 } from './data_grid_types';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
 import { IconType } from '../icon';
-import { EuiTokenProps } from '../token';
+import { WuiTokenProps } from '../token';
 
-export interface EuiDataGridSchemaDetector {
+export interface WuiDataGridSchemaDetector {
   /**
-   * The name of this data type, matches #EuiDataGridColumn / schema `schema`
+   * The name of this data type, matches #WuiDataGridColumn / schema `schema`
    */
   type: string;
   /**
@@ -43,13 +43,13 @@ export interface EuiDataGridSchemaDetector {
    */
   comparator?: (a: string, b: string, direction: 'asc' | 'desc') => -1 | 0 | 1;
   /**
-   * The icon used to visually represent this data type. Accepts any `EuiIcon IconType`.
+   * The icon used to visually represent this data type. Accepts any `WuiIcon IconType`.
    */
   icon: IconType;
   /**
    * The color associated with this data type; it's used to color the icon token
    */
-  color?: EuiTokenProps['color'] | string;
+  color?: WuiTokenProps['color'] | string;
   /**
    * Text for how to represent an ascending sort of this data type, e.g. 'A -> Z'
    */
@@ -82,7 +82,7 @@ const numericChars = new Set([
   '.',
   '-',
 ]);
-export const schemaDetectors: EuiDataGridSchemaDetector[] = [
+export const schemaDetectors: WuiDataGridSchemaDetector[] = [
   {
     type: 'boolean',
     detector(value) {
@@ -99,14 +99,14 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenBoolean',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.booleanSortTextAsc"
+      <WuiI18n
+        token="wuiDataGridSchema.booleanSortTextAsc"
         default="True-False"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.booleanSortTextDesc"
+      <WuiI18n
+        token="wuiDataGridSchema.booleanSortTextDesc"
         default="False-True"
       />
     ),
@@ -138,16 +138,16 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
       return 0;
     },
     icon: 'currency',
-    color: 'euiColorVis0',
+    color: 'wuiColorVis0',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.currencySortTextAsc"
+      <WuiI18n
+        token="wuiDataGridSchema.currencySortTextAsc"
         default="Low-High"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.currencySortTextDesc"
+      <WuiI18n
+        token="wuiDataGridSchema.currencySortTextDesc"
         default="High-Low"
       />
     ),
@@ -178,10 +178,10 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenDate',
     sortTextAsc: (
-      <EuiI18n token="euiDataGridSchema.dateSortTextAsc" default="New-Old" />
+      <WuiI18n token="wuiDataGridSchema.dateSortTextAsc" default="New-Old" />
     ),
     sortTextDesc: (
-      <EuiI18n token="euiDataGridSchema.dateSortTextDesc" default="Old-New" />
+      <WuiI18n token="wuiDataGridSchema.dateSortTextDesc" default="Old-New" />
     ),
   },
   {
@@ -215,11 +215,11 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenNumber',
     sortTextAsc: (
-      <EuiI18n token="euiDataGridSchema.numberSortTextAsc" default="Low-High" />
+      <WuiI18n token="wuiDataGridSchema.numberSortTextAsc" default="Low-High" />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.numberSortTextDesc"
+      <WuiI18n
+        token="wuiDataGridSchema.numberSortTextDesc"
         default="High-Low"
       />
     ),
@@ -246,21 +246,21 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenObject',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.jsonSortTextAsc"
+      <WuiI18n
+        token="wuiDataGridSchema.jsonSortTextAsc"
         default="Small-Large"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.jsonSortTextDesc"
+      <WuiI18n
+        token="wuiDataGridSchema.jsonSortTextDesc"
         default="Large-Small"
       />
     ),
   },
 ];
 
-export interface EuiDataGridSchema {
+export interface WuiDataGridSchema {
   [columnId: string]: { columnType: string | null };
 }
 
@@ -271,7 +271,7 @@ export interface SchemaTypeScore {
 
 function scoreValueBySchemaType(
   value: string,
-  schemaDetectors: EuiDataGridSchemaDetector[] = []
+  schemaDetectors: WuiDataGridSchemaDetector[] = []
 ) {
   const scores: SchemaTypeScore[] = [];
 
@@ -289,14 +289,14 @@ function scoreValueBySchemaType(
 const MINIMUM_SCORE_MATCH = 0.5;
 
 export function useDetectSchema(
-  inMemory: EuiDataGridInMemory | undefined,
-  inMemoryValues: EuiDataGridInMemoryValues,
-  schemaDetectors: EuiDataGridSchemaDetector[] | undefined,
+  inMemory: WuiDataGridInMemory | undefined,
+  inMemoryValues: WuiDataGridInMemoryValues,
+  schemaDetectors: WuiDataGridSchemaDetector[] | undefined,
   definedColumnSchemas: { [key: string]: string },
   autoDetectSchema: boolean
 ) {
   const schema = useMemo(() => {
-    const schema: EuiDataGridSchema = {};
+    const schema: WuiDataGridSchema = {};
     if (autoDetectSchema === false) {
       return schema;
     }
@@ -345,7 +345,7 @@ export function useDetectSchema(
     }
 
     // for each column, reduce each detector type's score to a single value and find the best fit
-    return Object.keys(columnSchemas).reduce<EuiDataGridSchema | any>(
+    return Object.keys(columnSchemas).reduce<WuiDataGridSchema | any>(
       (schema, columnId) => {
         const columnScores = columnSchemas[columnId];
         const typeIds = Object.keys(columnScores);
@@ -412,8 +412,8 @@ export function useDetectSchema(
 }
 
 export function useMergedSchema(
-  detectedSchema: EuiDataGridSchema,
-  columns: EuiDataGridColumn[]
+  detectedSchema: WuiDataGridSchema,
+  columns: WuiDataGridColumn[]
 ) {
   return useMemo(() => {
     const mergedSchema = { ...detectedSchema };
@@ -436,7 +436,7 @@ export function useMergedSchema(
 // Given a provided schema, return the details for the schema
 // Useful for grabbing the color or icon
 export function getDetailsForSchema(
-  detectors: EuiDataGridSchemaDetector[],
+  detectors: WuiDataGridSchemaDetector[],
   providedSchema: string | null
 ) {
   const results = detectors.filter(matches => {

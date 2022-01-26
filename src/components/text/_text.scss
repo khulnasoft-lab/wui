@@ -1,6 +1,6 @@
-// This should only be used for .euiText, therefore it's not included in a separate mixin file
+// This should only be used for .wuiText, therefore it's not included in a separate mixin file
 
-@mixin euiScaleText($baseFontSize) {
+@mixin wuiScaleText($baseFontSize) {
   $baseLineHeightMultiplier: $baseFontSize / 2;
   line-height: convertToRem($baseLineHeightMultiplier * 3);
 
@@ -21,7 +21,7 @@
 
   blockquote {
     padding:  convertToRem($baseFontSize * 1.5);
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 4));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 4));
   }
 
   h1,
@@ -46,44 +46,44 @@
   }
 
   h1 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 1));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 1));
     line-height: convertToRem($baseLineHeightMultiplier * 6);
   }
 
   h2 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 2));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 2));
     line-height: convertToRem($baseLineHeightMultiplier * 5);
   }
 
   h3 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 3));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 3));
     line-height: convertToRem($baseLineHeightMultiplier * 4);
   }
 
   h4,
   dt,
-  .eui-definitionListReverse dd {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 5)); // skip level 4 on purpose
+  .wui-definitionListReverse dd {
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 5)); // skip level 4 on purpose
     line-height: convertToRem($baseLineHeightMultiplier * 3);
   }
 
-  .eui-definitionListReverse dt {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 7));
+  .wui-definitionListReverse dt {
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 7));
     color: $euiTextColor;
   }
 
   h5 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 6));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 6));
     line-height: convertToRem($baseLineHeightMultiplier * 2);
   }
 
   h6 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 7));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 7));
     line-height: convertToRem($baseLineHeightMultiplier * 2);
   }
 
   small {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 6));
+    font-size: convertToRem($baseFontSize * nth($wuiTextScale, 6));
   }
 
   pre {
@@ -92,15 +92,15 @@
 
   code {
     // Setting the font size in rem's ensure it doesn't compound
-    // the 90% set by euiCodeBlock
+    // the 90% set by wuiCodeBlock
     font-size: convertToRem($baseFontSize * .9);
   }
 }
 
-.euiText {
-  @include euiText;
+.wuiText {
+  @include wuiText;
   @include euiFontSize;
-  // The euiText mixin forces a color. Since euiText is usually a child
+  // The wuiText mixin forces a color. Since wuiText is usually a child
   // of other styling concerns, we should inherit their coloring. The default
   // coloring will likely coming from the reset.scss anyway.
   color: inherit;
@@ -108,17 +108,17 @@
   // Style anchors that don't have a class. This prevents overwriting "buttons"
   // and other stylized elements passed in.
   a:not([class]) {
-    color: $euiLinkColor;
+    color: $wuiLinkColor;
 
     &:hover {
-      color: darken($euiLinkColor, 10%);
+      color: darken($wuiLinkColor, 10%);
       text-decoration: underline;
     }
 
     &:focus {
       text-decoration: underline;
-      outline: solid 3px transparentize($euiLinkColor, .9);
-      background-color: transparentize($euiLinkColor, .9);
+      outline: solid 3px transparentize($wuiLinkColor, .9);
+      background-color: transparentize($wuiLinkColor, .9);
     }
   }
 
@@ -169,35 +169,35 @@
   }
 
   h1 {
-    @include euiTitle('l');
+    @include wuiTitle('l');
   }
 
   h2 {
-    @include euiTitle('m');
+    @include wuiTitle('m');
   }
 
   h3 {
-    @include euiTitle('s');
+    @include wuiTitle('s');
   }
 
   h4,
   dt {
-    @include euiTitle('xs');
+    @include wuiTitle('xs');
   }
 
   h5 {
-    @include euiTitle('xxs');
+    @include wuiTitle('xxs');
   }
 
   h6 {
-    @include euiTitle('xxxs');
+    @include wuiTitle('xxxs');
     text-transform: uppercase;
   }
 
   pre {
     white-space: pre-wrap;
-    background: $euiCodeBlockBackgroundColor;
-    color: $euiCodeBlockColor;
+    background: $wuiCodeBlockBackgroundColor;
+    color: $wuiCodeBlockColor;
   }
 
   pre,
@@ -205,18 +205,18 @@
     display: block;
   }
 
-  // unset font-size from euiCodeBlock so it doesn't doubly add 90%
+  // unset font-size from wuiCodeBlock so it doesn't doubly add 90%
 
   code {
-    @include euiCodeFont;
+    @include wuiCodeFont;
     display: inline-block; // ensures background stretches the full line-height
-    font-weight: $euiFontWeightRegular;
+    font-weight: $wuiFontWeightRegular;
   }
 
-  @include euiScaleText($euiFontSize);
+  @include wuiScaleText($euiFontSize);
 
-  &.euiText--constrainedWidth {
-    max-width: $euiTextConstrainedMaxWidth;
+  &.wuiText--constrainedWidth {
+    max-width: $wuiTextConstrainedMaxWidth;
     // If the max-width is way too short of the width of the container,
     // at least make it 2/3 of its parent
     min-width: 75%;
@@ -228,12 +228,12 @@
   }
 }
 
-.euiText--small {
+.wuiText--small {
   @include fontSize($euiFontSizeS);
-  @include euiScaleText($euiFontSizeS);
+  @include wuiScaleText($euiFontSizeS);
 }
 
-.euiText--extraSmall {
+.wuiText--extraSmall {
   @include fontSize($euiFontSizeXS);
-  @include euiScaleText($euiFontSizeXS);
+  @include wuiScaleText($euiFontSizeXS);
 }

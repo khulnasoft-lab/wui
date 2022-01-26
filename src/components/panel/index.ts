@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiPanel, PanelPaddingSize, SIZES } from './panel';
+export { WuiPanel, PanelPaddingSize, SIZES } from './panel';

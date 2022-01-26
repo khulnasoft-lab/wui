@@ -8,51 +8,51 @@ import {
   DataGenerator,
 } from '@elastic/charts';
 
-import { EUI_CHARTS_THEME_LIGHT } from '../../../../src/themes/charts/themes';
+import { WUI_CHARTS_THEME_LIGHT } from '../../../../src/themes/charts/themes';
 
 import {
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
-  EuiMarkdownEditor,
-  EuiMarkdownFormat,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiButtonToggle,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiButton,
-  EuiButtonEmpty,
-  EuiForm,
-  EuiFormRow,
-  EuiColorPalettePicker,
-  EuiRange,
-  EuiText,
-  EuiFlexGroup,
-  EuiFlexItem,
+  getDefaultWuiMarkdownParsingPlugins,
+  getDefaultWuiMarkdownProcessingPlugins,
+  WuiMarkdownEditor,
+  WuiMarkdownFormat,
+  WuiSpacer,
+  WuiCodeBlock,
+  WuiButtonToggle,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiModalBody,
+  WuiModalFooter,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiForm,
+  WuiFormRow,
+  WuiColorPalettePicker,
+  WuiRange,
+  WuiText,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 import {
-  euiPaletteComplimentary,
-  euiPaletteCool,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteGray,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteWarm,
+  wuiPaletteComplimentary,
+  wuiPaletteCool,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteGray,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteWarm,
 } from '../../../../src/services/color';
 
 const paletteData = {
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteComplimentary,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteCool,
+  wuiPaletteWarm,
+  wuiPaletteGray,
 };
 
 const paletteNames = Object.keys(paletteData);
@@ -68,11 +68,11 @@ const chartDemoPlugin = {
   },
   helpText: (
     <div>
-      <EuiCodeBlock language="md" fontSize="l" paddingSize="s" isCopyable>
+      <WuiCodeBlock language="md" fontSize="l" paddingSize="s" isCopyable>
         {'!{chart{options}}'}
-      </EuiCodeBlock>
-      <EuiSpacer size="s" />
-      <EuiText size="xs" style={{ marginLeft: 16 }}>
+      </WuiCodeBlock>
+      <WuiSpacer size="s" />
+      <WuiText size="xs" style={{ marginLeft: 16 }}>
         <p>Where options can contain:</p>
         <ul>
           <li>
@@ -83,7 +83,7 @@ const chartDemoPlugin = {
             The number of categories per column
           </li>
         </ul>
-      </EuiText>
+      </WuiText>
     </div>
   ),
   editor: function ChartEditor({ node, onSave, onCancel }) {
@@ -105,27 +105,27 @@ const chartDemoPlugin = {
 
     return (
       <>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>Add chart</EuiModalHeaderTitle>
-        </EuiModalHeader>
+        <WuiModalHeader>
+          <WuiModalHeaderTitle>Add chart</WuiModalHeaderTitle>
+        </WuiModalHeader>
 
-        <EuiModalBody>
+        <WuiModalBody>
           <>
-            <EuiForm>
-              <EuiFlexGroup gutterSize="m" style={{ width: 600 }}>
-                <EuiFlexItem>
-                  <EuiFormRow label="Palette">
-                    <EuiColorPalettePicker
+            <WuiForm>
+              <WuiFlexGroup gutterSize="m" style={{ width: 600 }}>
+                <WuiFlexItem>
+                  <WuiFormRow label="Palette">
+                    <WuiColorPalettePicker
                       palettes={palettes}
                       onChange={setPalette}
                       value={palette}
                       compressed
                     />
-                  </EuiFormRow>
-                </EuiFlexItem>
-                <EuiFlexItem>
-                  <EuiFormRow label="Categories">
-                    <EuiRange
+                  </WuiFormRow>
+                </WuiFlexItem>
+                <WuiFlexItem>
+                  <WuiFormRow label="Categories">
+                    <WuiRange
                       value={categories}
                       onChange={onChange}
                       min={1}
@@ -133,19 +133,19 @@ const chartDemoPlugin = {
                       compressed
                       showValue
                     />
-                  </EuiFormRow>
-                </EuiFlexItem>
-              </EuiFlexGroup>
-            </EuiForm>
-            <EuiSpacer />
+                  </WuiFormRow>
+                </WuiFlexItem>
+              </WuiFlexGroup>
+            </WuiForm>
+            <WuiSpacer />
             <ChartMarkdownRenderer palette={palette} categories={categories} />
           </>
-        </EuiModalBody>
+        </WuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButtonEmpty onClick={onCancel}>Cancel</EuiButtonEmpty>
+        <WuiModalFooter>
+          <WuiButtonEmpty onClick={onCancel}>Cancel</WuiButtonEmpty>
 
-          <EuiButton
+          <WuiButton
             onClick={() =>
               onSave(`!{chart${JSON.stringify({ palette, categories })}}`, {
                 block: true,
@@ -153,8 +153,8 @@ const chartDemoPlugin = {
             }
             fill>
             Save
-          </EuiButton>
-        </EuiModalFooter>
+          </WuiButton>
+        </WuiModalFooter>
       </>
     );
   },
@@ -237,7 +237,7 @@ const ChartMarkdownRenderer = ({ palette, categories }) => {
   return (
     <Chart size={{ height: 320 }}>
       <Settings
-        theme={[customColors, EUI_CHARTS_THEME_LIGHT]}
+        theme={[customColors, WUI_CHARTS_THEME_LIGHT]}
         showLegend={false}
         showLegendDisplayValue={false}
       />
@@ -256,10 +256,10 @@ const ChartMarkdownRenderer = ({ palette, categories }) => {
   );
 };
 
-const exampleParsingList = getDefaultEuiMarkdownParsingPlugins();
+const exampleParsingList = getDefaultWuiMarkdownParsingPlugins();
 exampleParsingList.push(ChartMarkdownParser);
 
-const exampleProcessingList = getDefaultEuiMarkdownProcessingPlugins();
+const exampleProcessingList = getDefaultWuiMarkdownProcessingPlugins();
 exampleProcessingList[1][1].components.chartDemoPlugin = ChartMarkdownRenderer;
 
 const initialExample = `## Chart plugin
@@ -282,8 +282,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor with plugins demo"
+      <WuiMarkdownEditor
+        aria-label="WUI markdown editor with plugins demo"
         value={value}
         onChange={setValue}
         height={400}
@@ -293,9 +293,9 @@ export default () => {
         onParse={onParse}
         errors={messages}
       />
-      <EuiSpacer size="s" />
-      <div className="eui-textRight">
-        <EuiButtonToggle
+      <WuiSpacer size="s" />
+      <div className="wui-textRight">
+        <WuiButtonToggle
           label={isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
           size="s"
           isEmpty
@@ -304,13 +304,13 @@ export default () => {
           isSelected={isAstShowing}
         />
       </div>
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <WuiCodeBlock language="json">{ast}</WuiCodeBlock>}
 
-      <EuiMarkdownFormat
+      <WuiMarkdownFormat
         parsingPluginList={exampleParsingList}
         processingPluginList={exampleProcessingList}>
         {value}
-      </EuiMarkdownFormat>
+      </WuiMarkdownFormat>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconLogstashInput = ({ title, titleId, ...props }) => (
+const WuiIconLogstashInput = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconLogstashInput = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogstashInput;
+export const icon = WuiIconLogstashInput;

@@ -1,35 +1,35 @@
-.euiDroppable {
-  $euiDroppableColor: $euiColorSecondary;
-  transition: background-color $euiAnimSpeedExtraSlow ease;
+.wuiDroppable {
+  $wuiDroppableColor: $wuiColorSecondary;
+  transition: background-color $wuiAnimSpeedExtraSlow ease;
 
-  &.euiDroppable--isDraggingType:not(.euiDroppable--isDisabled) {
-    background-color: transparentize($euiDroppableColor, .9);
+  &.wuiDroppable--isDraggingType:not(.wuiDroppable--isDisabled) {
+    background-color: transparentize($wuiDroppableColor, .9);
 
-    &.euiDroppable--isDraggingOver {
-      background-color: transparentize($euiDroppableColor, .75);
+    &.wuiDroppable--isDraggingOver {
+      background-color: transparentize($wuiDroppableColor, .75);
     }
   }
 
-  .euiDroppable__placeholder {
-    &.euiDroppable__placeholder--isHidden {
+  .wuiDroppable__placeholder {
+    &.wuiDroppable__placeholder--isHidden {
       // Overriding inline styles on JS-inserted HTML elements
       display: none !important; // sass-lint:disable-line no-important
     }
   }
 }
 
-@include euiPanel($selector: '.euiDroppable--withPanel');
+@include wuiPanel($selector: '.wuiDroppable--withPanel');
 
-.euiDroppable--noGrow {
+.wuiDroppable--noGrow {
   flex-grow: 0;
 }
 
-.euiDroppable--grow {
+.wuiDroppable--grow {
   flex-grow: 1;
 }
 
-@each $size, $spacing in $euiDragAndDropSpacing {
-  .euiDroppable--#{$size} {
+@each $size, $spacing in $wuiDragAndDropSpacing {
+  .wuiDroppable--#{$size} {
     padding: $spacing;
   }
 }

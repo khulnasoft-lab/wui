@@ -22,13 +22,13 @@ import classnames from 'classnames';
 
 import { keys } from '../../services';
 
-import { EuiButtonIcon } from '../button';
+import { WuiButtonIcon } from '../button';
 
-import { EuiFocusTrap } from '../focus_trap';
+import { WuiFocusTrap } from '../focus_trap';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
-export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
+export interface WuiModalProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   /**
    * ReactNode to render as this component's content
@@ -41,7 +41,7 @@ export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
   ) => void;
   /**
    * Sets the max-width of the modal.
-   * Set to `true` to use the default (`euiBreakpoints 'm'`),
+   * Set to `true` to use the default (`wuiBreakpoints 'm'`),
    * set to `false` to not restrict the width,
    * set to a number for a custom width in px,
    * set to a string for a custom width in custom measurement.
@@ -51,7 +51,7 @@ export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
   initialFocus?: HTMLElement | (() => HTMLElement) | string;
 }
 
-export const EuiModal: FunctionComponent<EuiModalProps> = ({
+export const WuiModal: FunctionComponent<WuiModalProps> = ({
   className,
   children,
   initialFocus,
@@ -71,16 +71,16 @@ export const EuiModal: FunctionComponent<EuiModalProps> = ({
   let newStyle;
   let widthClassName;
   if (maxWidth === true) {
-    widthClassName = 'euiModal--maxWidth-default';
+    widthClassName = 'wuiModal--maxWidth-default';
   } else if (maxWidth !== false) {
     const value = typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth;
     newStyle = { ...style, maxWidth: value };
   }
 
-  const classes = classnames('euiModal', widthClassName, className);
+  const classes = classnames('wuiModal', widthClassName, className);
 
   return (
-    <EuiFocusTrap initialFocus={initialFocus}>
+    <WuiFocusTrap initialFocus={initialFocus}>
       {
         // Create a child div instead of applying these props directly to FocusTrap, or else
         // fallbackFocus won't work.
@@ -91,19 +91,19 @@ export const EuiModal: FunctionComponent<EuiModalProps> = ({
         tabIndex={0}
         style={newStyle || style}
         {...rest}>
-        <EuiI18n token="euiModal.closeModal" default="Closes this modal window">
+        <WuiI18n token="wuiModal.closeModal" default="Closes this modal window">
           {(closeModal: string) => (
-            <EuiButtonIcon
+            <WuiButtonIcon
               iconType="cross"
               onClick={onClose}
-              className="euiModal__closeIcon"
+              className="wuiModal__closeIcon"
               color="text"
               aria-label={closeModal}
             />
           )}
-        </EuiI18n>
-        <div className="euiModal__flex">{children}</div>
+        </WuiI18n>
+        <div className="wuiModal__flex">{children}</div>
       </div>
-    </EuiFocusTrap>
+    </WuiFocusTrap>
   );
 };

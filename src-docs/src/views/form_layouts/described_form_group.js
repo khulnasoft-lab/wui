@@ -1,16 +1,16 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiCode,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiDescribedFormGroup,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSwitch,
-  EuiLink,
+  WuiCode,
+  WuiFieldText,
+  WuiForm,
+  WuiFormRow,
+  WuiDescribedFormGroup,
+  WuiFilePicker,
+  WuiRange,
+  WuiSelect,
+  WuiSwitch,
+  WuiLink,
 } from '../../../../src/components';
 
 export default () => {
@@ -21,37 +21,37 @@ export default () => {
   };
 
   return (
-    <EuiForm>
-      <EuiDescribedFormGroup
+    <WuiForm>
+      <WuiDescribedFormGroup
         title={<h3>Single text field</h3>}
         description={
           <Fragment>
             A single text field that can be used to display additional text. It
             can have{' '}
-            <EuiLink href="http://www.elastic.co" target="_blank">
+            <WuiLink href="http://www.wazuh.com" target="_blank">
               links
-            </EuiLink>{' '}
+            </WuiLink>{' '}
             or any other type of content.
           </Fragment>
         }>
-        <EuiFormRow label="Text field">
-          <EuiFieldText name="first" aria-label="Example" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
+        <WuiFormRow label="Text field">
+          <WuiFieldText name="first" aria-label="Example" />
+        </WuiFormRow>
+      </WuiDescribedFormGroup>
 
-      <EuiDescribedFormGroup title={<h3>No description</h3>}>
-        <EuiFormRow label="Text field">
-          <EuiFieldText name="first" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
+      <WuiDescribedFormGroup title={<h3>No description</h3>}>
+        <WuiFormRow label="Text field">
+          <WuiFieldText name="first" />
+        </WuiFormRow>
+      </WuiDescribedFormGroup>
 
-      <EuiDescribedFormGroup
+      <WuiDescribedFormGroup
         title={<h3>Multiple fields</h3>}
         description="Here are three form rows. The first form row does not have a title.">
-        <EuiFormRow
+        <WuiFormRow
           hasEmptyLabelSpace
           helpText={<span>This is a help text</span>}>
-          <EuiSelect
+          <WuiSelect
             hasNoInitialSelection
             options={[
               { value: 'option_one', text: 'Option one' },
@@ -60,49 +60,49 @@ export default () => {
             ]}
             aria-label="An example of a form element without a visible label"
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiFormRow label="File picker">
-          <EuiFilePicker />
-        </EuiFormRow>
+        <WuiFormRow label="File picker">
+          <WuiFilePicker />
+        </WuiFormRow>
 
-        <EuiFormRow label="Range">
-          <EuiRange min={0} max={100} name="range" id="range" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
+        <WuiFormRow label="Range">
+          <WuiRange min={0} max={100} name="range" id="range" />
+        </WuiFormRow>
+      </WuiDescribedFormGroup>
 
-      <EuiDescribedFormGroup
+      <WuiDescribedFormGroup
         title={<h2>Full width</h2>}
         titleSize="xxxs"
         description={
           <Fragment>
-            By default, <strong>EuiDescribedFormGroup</strong> will be double
+            By default, <strong>WuiDescribedFormGroup</strong> will be double
             the default width of form elements. However, you can pass{' '}
-            <EuiCode>fullWidth</EuiCode> prop to this, the individual field and
+            <WuiCode>fullWidth</WuiCode> prop to this, the individual field and
             row components to expand to their container.
           </Fragment>
         }
         fullWidth>
-        <EuiFormRow
+        <WuiFormRow
           label="Use a switch instead of a single checkbox"
           hasChildLabel={false}
           fullWidth>
-          <EuiSwitch
+          <WuiSwitch
             name="switch"
             label="Should we do this?"
             checked={isSwitchChecked}
             onChange={onSwitchChange}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiFormRow fullWidth>
-          <EuiFieldText
+        <WuiFormRow fullWidth>
+          <WuiFieldText
             name="second"
             fullWidth
-            aria-label="An example of EuiTextField with fullWidth"
+            aria-label="An example of WuiTextField with fullWidth"
           />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
-    </EuiForm>
+        </WuiFormRow>
+      </WuiDescribedFormGroup>
+    </WuiForm>
   );
 };

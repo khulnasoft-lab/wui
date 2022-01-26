@@ -28,32 +28,32 @@ import classNames from 'classnames';
 import tabbable from 'tabbable';
 
 import { CommonProps, NoArgCallback } from '../common';
-import { EuiIcon } from '../icon';
-import { EuiPopoverTitle } from '../popover';
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { WuiIcon } from '../icon';
+import { WuiPopoverTitle } from '../popover';
+import { WuiResizeObserver } from '../observer/resize_observer';
 import { cascadingMenuKeys } from '../../services';
-import { EuiContextMenuItem } from './context_menu_item';
+import { WuiContextMenuItem } from './context_menu_item';
 
-export type EuiContextMenuPanelHeightChangeHandler = (height: number) => void;
-export type EuiContextMenuPanelTransitionType = 'in' | 'out';
-export type EuiContextMenuPanelTransitionDirection = 'next' | 'previous';
-export type EuiContextMenuPanelShowPanelCallback = (
+export type WuiContextMenuPanelHeightChangeHandler = (height: number) => void;
+export type WuiContextMenuPanelTransitionType = 'in' | 'out';
+export type WuiContextMenuPanelTransitionDirection = 'next' | 'previous';
+export type WuiContextMenuPanelShowPanelCallback = (
   currentPanelIndex?: number
 ) => void;
 
-export interface EuiContextMenuPanelProps {
+export interface WuiContextMenuPanelProps {
   hasFocus?: boolean;
   initialFocusedItemIndex?: number;
   items?: ReactElement[];
   onClose?: NoArgCallback<void>;
-  onHeightChange?: EuiContextMenuPanelHeightChangeHandler;
+  onHeightChange?: WuiContextMenuPanelHeightChangeHandler;
   onTransitionComplete?: NoArgCallback<void>;
   onUseKeyboardToNavigate?: NoArgCallback<void>;
-  showNextPanel?: EuiContextMenuPanelShowPanelCallback;
+  showNextPanel?: WuiContextMenuPanelShowPanelCallback;
   showPreviousPanel?: NoArgCallback<void>;
   title?: ReactNode;
-  transitionDirection?: EuiContextMenuPanelTransitionDirection;
-  transitionType?: EuiContextMenuPanelTransitionType;
+  transitionDirection?: WuiContextMenuPanelTransitionDirection;
+  transitionType?: WuiContextMenuPanelTransitionType;
   watchedItemProps?: string[];
 }
 
@@ -62,16 +62,16 @@ type Props = CommonProps &
     HTMLAttributes<HTMLDivElement>,
     'onKeyDown' | 'tabIndex' | 'onAnimationEnd' | 'title'
   > &
-  EuiContextMenuPanelProps;
+  WuiContextMenuPanelProps;
 
 const transitionDirectionAndTypeToClassNameMap = {
   next: {
-    in: 'euiContextMenuPanel-txInLeft',
-    out: 'euiContextMenuPanel-txOutLeft',
+    in: 'wuiContextMenuPanel-txInLeft',
+    out: 'wuiContextMenuPanel-txOutLeft',
   },
   previous: {
-    in: 'euiContextMenuPanel-txInRight',
-    out: 'euiContextMenuPanel-txOutRight',
+    in: 'wuiContextMenuPanel-txInRight',
+    out: 'wuiContextMenuPanel-txOutRight',
   },
 };
 
@@ -85,7 +85,7 @@ interface State {
   height?: number;
 }
 
-export class EuiContextMenuPanel extends Component<Props, State> {
+export class WuiContextMenuPanel extends Component<Props, State> {
   static defaultProps: Partial<Props> = {
     hasFocus: true,
     items: [],
@@ -430,35 +430,35 @@ export class EuiContextMenuPanel extends Component<Props, State> {
       if (Boolean(onClose)) {
         panelTitle = (
           <button
-            className="euiContextMenuPanelTitle"
+            className="wuiContextMenuPanelTitle"
             type="button"
             onClick={onClose}
             ref={node => {
               this.backButton = node;
             }}
             data-test-subj="contextMenuPanelTitleButton">
-            <span className="euiContextMenu__itemLayout">
-              <EuiIcon
+            <span className="wuiContextMenu__itemLayout">
+              <WuiIcon
                 type="arrowLeft"
                 size="m"
-                className="euiContextMenu__icon"
+                className="wuiContextMenu__icon"
               />
 
-              <span className="euiContextMenu__text">{title}</span>
+              <span className="wuiContextMenu__text">{title}</span>
             </span>
           </button>
         );
       } else {
         panelTitle = (
-          <EuiPopoverTitle>
-            <span className="euiContextMenu__itemLayout">{title}</span>
-          </EuiPopoverTitle>
+          <WuiPopoverTitle>
+            <span className="wuiContextMenu__itemLayout">{title}</span>
+          </WuiPopoverTitle>
         );
       }
     }
 
     const classes = classNames(
-      'euiContextMenuPanel',
+      'wuiContextMenuPanel',
       className,
       transitionDirection &&
         transitionType &&
@@ -472,7 +472,7 @@ export class EuiContextMenuPanel extends Component<Props, State> {
     const content =
       items && items.length
         ? items.map((MenuItem, index) =>
-            MenuItem.type === EuiContextMenuItem
+            MenuItem.type === WuiContextMenuItem
               ? cloneElement(MenuItem, {
                   buttonRef: this.menuItemRef.bind(this, index),
                 })
@@ -491,9 +491,9 @@ export class EuiContextMenuPanel extends Component<Props, State> {
         {panelTitle}
 
         <div ref={this.contentRef}>
-          <EuiResizeObserver onResize={() => this.updateHeight()}>
+          <WuiResizeObserver onResize={() => this.updateHeight()}>
             {resizeRef => <div ref={resizeRef}>{content}</div>}
-          </EuiResizeObserver>
+          </WuiResizeObserver>
         </div>
       </div>
     );

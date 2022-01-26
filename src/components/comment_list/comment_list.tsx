@@ -20,29 +20,29 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-import { EuiComment, EuiCommentProps } from './comment';
+import { WuiComment, WuiCommentProps } from './comment';
 
-export type EuiCommentListProps = HTMLAttributes<HTMLDivElement> &
+export type WuiCommentListProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
-     * List of comments to render. See #EuiComment
+     * List of comments to render. See #WuiComment
      */
-    comments?: EuiCommentProps[];
+    comments?: WuiCommentProps[];
   };
 
-export const EuiCommentList: FunctionComponent<EuiCommentListProps> = ({
+export const WuiCommentList: FunctionComponent<WuiCommentListProps> = ({
   children,
   className,
   comments,
   ...rest
 }) => {
-  const classes = classNames('euiCommentList', className);
+  const classes = classNames('wuiCommentList', className);
 
   let commentElements = null;
 
   if (comments) {
     commentElements = comments.map((item, index) => (
-      <EuiComment key={index} {...item} />
+      <WuiComment key={index} {...item} />
     ));
   }
 

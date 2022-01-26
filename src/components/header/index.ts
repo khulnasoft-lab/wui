@@ -17,18 +17,18 @@
  * under the License.
  */
 
-export { EuiHeader, EuiHeaderProps, EuiHeaderSections } from './header';
+export { WuiHeader, WuiHeaderProps, WuiHeaderSections } from './header';
 
-export { EuiHeaderAlert, EuiHeaderAlertProps } from './header_alert';
+export { WuiHeaderAlert, WuiHeaderAlertProps } from './header_alert';
 
-export { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
+export { WuiHeaderBreadcrumbs } from './header_breadcrumbs';
 
-export { EuiHeaderLink, EuiHeaderLinks } from './header_links';
+export { WuiHeaderLink, WuiHeaderLinks } from './header_links';
 
-export { EuiHeaderLogo, EuiHeaderLogoProps } from './header_logo';
+export { WuiHeaderLogo, WuiHeaderLogoProps } from './header_logo';
 
 export {
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemButton,
 } from './header_section';

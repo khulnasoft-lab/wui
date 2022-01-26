@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFormHelpText, EuiFormHelpTextProps } from './form_help_text';
+export { WuiFormHelpText, WuiFormHelpTextProps } from './form_help_text';

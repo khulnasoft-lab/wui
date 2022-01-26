@@ -1,5 +1,5 @@
 // Some mixins that help us deal with browser scaling of text more consistently.
-// Essentially, fonts across eui should scale against the root html element, not
+// Essentially, fonts across wui should scale against the root html element, not
 // against parent inheritance.
 
 // Typography mixins
@@ -26,37 +26,37 @@
 }
 
 // Families
-$euiFontFamily: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$euiCodeFontFamily: 'Roboto Mono', Consolas, Menlo, Courier, monospace !default;
+$wuiFontFamily: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$wuiCodeFontFamily: 'Roboto Mono', Consolas, Menlo, Courier, monospace !default;
 
 // Careful using ligatures. Code editors like ACE will often error because of width calculations
-$euiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
+$wuiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
 
 // Font sizes -- scale is loosely based on Major Third (1.250)
-$euiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
+$wuiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
 
 $euiFontSize:       $euiSize !default; // 5th position in scale
-$euiFontSizeXS:     $euiFontSize * nth($euiTextScale, 7) !default; // 12px
-$euiFontSizeS:      $euiFontSize * nth($euiTextScale, 6) !default; // 14px
-$euiFontSizeM:      $euiFontSize * nth($euiTextScale, 4) !default; // 18px
-$euiFontSizeL:      $euiFontSize * nth($euiTextScale, 3) !default; // 20px
-$euiFontSizeXL:     $euiFontSize * nth($euiTextScale, 2) !default; // 28px
-$euiFontSizeXXL:    $euiFontSize * nth($euiTextScale, 1) !default; // 36px
+$euiFontSizeXS:     $euiFontSize * nth($wuiTextScale, 7) !default; // 12px
+$euiFontSizeS:      $euiFontSize * nth($wuiTextScale, 6) !default; // 14px
+$euiFontSizeM:      $euiFontSize * nth($wuiTextScale, 4) !default; // 18px
+$euiFontSizeL:      $euiFontSize * nth($wuiTextScale, 3) !default; // 20px
+$euiFontSizeXL:     $euiFontSize * nth($wuiTextScale, 2) !default; // 28px
+$euiFontSizeXXL:    $euiFontSize * nth($wuiTextScale, 1) !default; // 36px
 
 // Line height
-$euiLineHeight:     1.5;
+$wuiLineHeight:     1.5;
 
 // Font weights
-$euiFontWeightLight:    300 !default;
-$euiFontWeightRegular:  400 !default;
-$euiFontWeightMedium:   500 !default;
-$euiFontWeightSemiBold: 600 !default;
+$wuiFontWeightLight:    300 !default;
+$wuiFontWeightRegular:  400 !default;
+$wuiFontWeightMedium:   500 !default;
+$wuiFontWeightSemiBold: 600 !default;
 $euiFontWeightBold:     700 !default;
 
 // Titles map
-// Lists all the properties per EuiTitle size that then gets looped through to create the selectors.
+// Lists all the properties per WuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
-$euiTitles: (
+$wuiTitles: (
   'xxxs': (
     'font-size': $euiFontSizeXS,
     'line-height': lineHeightFromBaseline(3),
@@ -70,25 +70,25 @@ $euiTitles: (
   'xs': (
     'font-size': $euiFontSize,
     'line-height': lineHeightFromBaseline(3),
-    'font-weight': $euiFontWeightSemiBold,
+    'font-weight': $wuiFontWeightSemiBold,
     'letter-spacing': -.02em,
   ),
   's': (
     'font-size': $euiFontSizeL,
     'line-height': lineHeightFromBaseline(4),
-    'font-weight': $euiFontWeightMedium,
+    'font-weight': $wuiFontWeightMedium,
     'letter-spacing': -.025em,
   ),
   'm': (
     'font-size': $euiFontSizeXL,
     'line-height': lineHeightFromBaseline(5),
-    'font-weight': $euiFontWeightLight,
+    'font-weight': $wuiFontWeightLight,
     'letter-spacing': -.04em,
   ),
   'l': (
     'font-size': $euiFontSizeXXL,
     'line-height': lineHeightFromBaseline(6),
-    'font-weight': $euiFontWeightLight,
+    'font-weight': $wuiFontWeightLight,
     'letter-spacing': -.03em,
   ),
 ) !default;

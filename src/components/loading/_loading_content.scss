@@ -1,14 +1,14 @@
-.euiLoadingContent__loader {
+.wuiLoadingContent__loader {
   display: block;
   width: 100%;
 }
 
-.euiLoadingContent__singleLine {
+.wuiLoadingContent__singleLine {
   display: block;
   width: 100%;
   height: $euiSize;
   margin-bottom: $euiSizeS;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
   overflow: hidden;
 
   &:last-child:not(:only-child) {
@@ -16,20 +16,20 @@
   }
 }
 
-.euiLoadingContent__singleLineBackground {
+.wuiLoadingContent__singleLineBackground {
   display: block;
   width: 220%;
   height: 100%;
   background: linear-gradient(
     to right,
-    $euiGradientStartStop 45%,
-    $euiGradientMiddle 50%,
-    $euiGradientStartStop 55%,
+    $wuiGradientStartStop 45%,
+    $wuiGradientMiddle 50%,
+    $wuiGradientStartStop 55%,
     );
-  animation: euiLoadingContentGradientLoad 1.5s $euiAnimSlightResistance infinite;
+  animation: wuiLoadingContentGradientLoad 1.5s $wuiAnimSlightResistance infinite;
 }
 
-@keyframes euiLoadingContentGradientLoad {
+@keyframes wuiLoadingContentGradientLoad {
   0% {
     transform: translateX(-53%);
   }

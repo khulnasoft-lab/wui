@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { WuiBasicTable, WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,15 +22,15 @@ export const section = {
   text: (
     <p>
       The following example shows how to configure selection via the{' '}
-      <EuiCode>selection</EuiCode>
+      <WuiCode>selection</WuiCode>
       property. You can set items to be selected initially by passing an array
-      of items as the <EuiCode>initialSelected</EuiCode> value inside{' '}
-      <EuiCode>selection</EuiCode> property. You can also use the{' '}
-      <EuiCode>setSelection</EuiCode> method to take complete control over table
+      of items as the <WuiCode>initialSelected</WuiCode> value inside{' '}
+      <WuiCode>selection</WuiCode> property. You can also use the{' '}
+      <WuiCode>setSelection</WuiCode> method to take complete control over table
       selection. This can be useful if you want to handle selection in table
       based on user interaction with another part of the UI.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { WuiBasicTable },
   demo: <Table />,
 };

@@ -1,12 +1,12 @@
-.euiHeaderAlert {
+.wuiHeaderAlert {
   min-width: 300px;
   position: relative;
   margin-bottom: $euiSizeL;
   padding: 0 $euiSizeS $euiSizeL;
-  border-bottom: $euiBorderThin;
+  border-bottom: $wuiBorderThin;
   border-top: none;
 
-  .euiHeaderAlert__dismiss {
+  .wuiHeaderAlert__dismiss {
     opacity: 0;
     position: absolute;
     right: $euiSize - 4px;
@@ -14,26 +14,26 @@
     transition: opacity $euiAnimSpeedNormal ease-in;
   }
 
-  &:hover .euiHeaderAlert__dismiss,
-  .euiHeaderAlert__dismiss:focus {
+  &:hover .wuiHeaderAlert__dismiss,
+  .wuiHeaderAlert__dismiss:focus {
     opacity: 1;
   }
 
-  .euiHeaderAlert__title {
-    @include euiTitle('xs');
+  .wuiHeaderAlert__title {
+    @include wuiTitle('xs');
     margin-bottom: $euiSizeS;
   }
 
-  .euiHeaderAlert__text {
+  .wuiHeaderAlert__text {
     @include euiFontSizeS;
     margin-bottom: $euiSize;
   }
 
-  .euiHeaderAlert__action {
+  .wuiHeaderAlert__action {
     @include euiFontSizeS;
   }
 
-  .euiHeaderAlert__date {
+  .wuiHeaderAlert__date {
     @include euiFontSizeXS;
     color: $euiColorDarkShade;
   }

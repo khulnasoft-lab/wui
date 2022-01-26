@@ -3,16 +3,16 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiLink,
-  EuiSwitch,
-  EuiSpacer,
-  EuiBadge,
-  EuiToken,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiDataGrid,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiLink,
+  WuiSwitch,
+  WuiSpacer,
+  WuiBadge,
+  WuiToken,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components/';
 
 const data = [];
@@ -23,50 +23,50 @@ for (let i = 0; i < 10; i++) {
     <span>{fake('{{name.firstName}}')}</span>,
 
     <span>
-      <EuiLink href="#/tabular-content/data-grid-focus">
+      <WuiLink href="#/tabular-content/data-grid-focus">
         {fake('{{internet.email}}')}
-      </EuiLink>
+      </WuiLink>
     </span>,
     <span>
-      <EuiLink href="#/tabular-content/data-grid-focus">
+      <WuiLink href="#/tabular-content/data-grid-focus">
         {fake('{{internet.email}}')}
-      </EuiLink>
+      </WuiLink>
     </span>,
 
     <span>
-      <EuiButtonEmpty size="xs" onClick={() => console.log('clicked Yes')}>
+      <WuiButtonEmpty size="xs" onClick={() => console.log('clicked Yes')}>
         Yes
-      </EuiButtonEmpty>
-      <EuiButtonEmpty
+      </WuiButtonEmpty>
+      <WuiButtonEmpty
         size="xs"
         color="danger"
         onClick={() => console.log('clicked No')}>
         No
-      </EuiButtonEmpty>
+      </WuiButtonEmpty>
     </span>,
     <span>
-      <EuiButtonEmpty size="xs" onClick={() => console.log('clicked Yes')}>
+      <WuiButtonEmpty size="xs" onClick={() => console.log('clicked Yes')}>
         Yes
-      </EuiButtonEmpty>
-      <EuiButtonEmpty
+      </WuiButtonEmpty>
+      <WuiButtonEmpty
         size="xs"
         color="danger"
         onClick={() => console.log('clicked No')}>
         No
-      </EuiButtonEmpty>
+      </WuiButtonEmpty>
     </span>,
   ]);
 }
 
 const renderHeaderIcon = areHeadersInteractive =>
   areHeadersInteractive ? (
-    <EuiFlexItem grow={false}>
-      <EuiButtonIcon
+    <WuiFlexItem grow={false}>
+      <WuiButtonIcon
         aria-label="column settings"
         iconType="gear"
         onClick={() => console.log('gear icon clicked')}
       />
-    </EuiFlexItem>
+    </WuiFlexItem>
   ) : null;
 
 export default () => {
@@ -81,20 +81,20 @@ export default () => {
       {
         id: 'no-interactives not expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
             {renderHeaderIcon(areHeadersInteractive)}
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="wuiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>0 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>0 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -102,38 +102,38 @@ export default () => {
       {
         id: 'no-interactives is expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="wuiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>0 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>0 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         actions: false,
       },
       {
         id: 'one-interactive not expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="wuiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>1 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>1 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -141,20 +141,20 @@ export default () => {
       {
         id: 'one-interactives is expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
             {renderHeaderIcon(areHeadersInteractive)}
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="wuiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>1 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>1 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         actions: false,
       },
@@ -162,19 +162,19 @@ export default () => {
         id: 'two-interactives not expandable',
 
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="wuiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>2 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>2 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -183,19 +183,19 @@ export default () => {
         id: 'two-interactives is expandable',
 
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <WuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <WuiFlexItem grow={false}>
+              <WuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="wuiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>2 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>2 interactive</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         ),
         actions: false,
       },
@@ -235,17 +235,17 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <WuiSwitch
         label="Use interactive headers - toggling will reset the datagrid and any internal states"
         checked={areHeadersInteractive}
         onChange={switchInteractiveHeaders}
       />
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiDataGrid
+      <WuiDataGrid
         key={areHeadersInteractive ? 'interactive-headers' : 'static-headers'}
-        aria-label="Top EUI contributors"
+        aria-label="Top WUI contributors"
         columns={columns}
         columnVisibility={{ visibleColumns, setVisibleColumns }}
         rowCount={data.length}

@@ -21,7 +21,7 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCode } from './code';
+import { WuiCode } from './code';
 
 function snapshotCodeBlock(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -34,9 +34,9 @@ function snapshotCodeBlock(component: ReactWrapper) {
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCode', () => {
+describe('WuiCode', () => {
   test('renders a code snippet', () => {
-    const component = mount(<EuiCode {...requiredProps}>{code}</EuiCode>);
+    const component = mount(<WuiCode {...requiredProps}>{code}</WuiCode>);
 
     expect(snapshotCodeBlock(component)).toMatchSnapshot();
   });

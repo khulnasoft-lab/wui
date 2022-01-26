@@ -18,22 +18,22 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { EuiI18n } from '../../../i18n';
-import { EuiFlexGrid, EuiFlexItem } from '../../../flex';
-import { EuiTitle } from '../../../title';
-import { EuiLink } from '../../../link';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
+import { WuiI18n } from '../../../i18n';
+import { WuiFlexGrid, WuiFlexItem } from '../../../flex';
+import { WuiTitle } from '../../../title';
+import { WuiLink } from '../../../link';
+import { WuiHorizontalRule } from '../../../horizontal_rule';
 import { htmlIdGenerator } from '../../../../services';
 import { DurationRange, ApplyTime } from '../../types';
 
 const generateId = htmlIdGenerator();
 
-export interface EuiCommonlyUsedTimeRangesProps {
+export interface WuiCommonlyUsedTimeRangesProps {
   applyTime: ApplyTime;
   commonlyUsedRanges: DurationRange[];
 }
 
-export const EuiCommonlyUsedTimeRanges: FunctionComponent<EuiCommonlyUsedTimeRangesProps> = ({
+export const WuiCommonlyUsedTimeRanges: FunctionComponent<WuiCommonlyUsedTimeRangesProps> = ({
   applyTime,
   commonlyUsedRanges,
 }) => {
@@ -46,29 +46,29 @@ export const EuiCommonlyUsedTimeRanges: FunctionComponent<EuiCommonlyUsedTimeRan
       ? `superDatePickerCommonlyUsed_${label.replace(' ', '_')}`
       : undefined;
     return (
-      <EuiFlexItem
+      <WuiFlexItem
         key={label}
         component="li"
-        className="euiCommonlyUsedTimeRanges__item">
-        <EuiLink onClick={applyCommonlyUsed} data-test-subj={dataTestSubj}>
+        className="wuiCommonlyUsedTimeRanges__item">
+        <WuiLink onClick={applyCommonlyUsed} data-test-subj={dataTestSubj}>
           {label}
-        </EuiLink>
-      </EuiFlexItem>
+        </WuiLink>
+      </WuiFlexItem>
     );
   });
 
   return (
     <fieldset>
-      <EuiTitle size="xxxs">
+      <WuiTitle size="xxxs">
         <legend id={legendId} aria-label="Commonly used time ranges">
-          <EuiI18n
-            token="euiCommonlyUsedTimeRanges.legend"
+          <WuiI18n
+            token="wuiCommonlyUsedTimeRanges.legend"
             default="Commonly used"
           />
         </legend>
-      </EuiTitle>
-      <div className="euiQuickSelectPopover__section">
-        <EuiFlexGrid
+      </WuiTitle>
+      <div className="wuiQuickSelectPopover__section">
+        <WuiFlexGrid
           aria-labelledby={legendId}
           gutterSize="s"
           columns={2}
@@ -76,11 +76,11 @@ export const EuiCommonlyUsedTimeRanges: FunctionComponent<EuiCommonlyUsedTimeRan
           responsive={false}
           component="ul">
           {links}
-        </EuiFlexGrid>
+        </WuiFlexGrid>
       </div>
-      <EuiHorizontalRule margin="s" />
+      <WuiHorizontalRule margin="s" />
     </fieldset>
   );
 };
 
-EuiCommonlyUsedTimeRanges.displayName = 'EuiCommonlyUsedTimeRanges';
+WuiCommonlyUsedTimeRanges.displayName = 'WuiCommonlyUsedTimeRanges';

@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiImage } from '../../../../src/components/';
+import { WuiImage } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiImage.__docgenInfo)
-    ? EuiImage.__docgenInfo[0]
-    : EuiImage.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiImage.__docgenInfo)
+    ? WuiImage.__docgenInfo[0]
+    : WuiImage.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.size = {
@@ -26,14 +26,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiImage',
+      componentName: 'WuiImage',
       props: propsToUse,
       scope: {
-        EuiImage,
+        WuiImage,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiImage'],
+        '@wazuh/wui': {
+          named: ['WuiImage'],
         },
       },
     },

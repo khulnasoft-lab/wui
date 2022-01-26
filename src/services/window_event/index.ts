@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiWindowEvent } from './window_event';
+export { WuiWindowEvent } from './window_event';

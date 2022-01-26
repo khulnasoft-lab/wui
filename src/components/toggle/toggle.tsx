@@ -30,7 +30,7 @@ export const TYPES = Object.keys(typeToInputTypeMap);
 
 export type ToggleType = keyof typeof typeToInputTypeMap;
 
-export type EuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
+export type WuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
   CommonProps & {
     id?: string;
     /**
@@ -58,7 +58,7 @@ export type EuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
     value?: string | number;
   };
 
-export const EuiToggle: SFC<EuiToggleProps> = ({
+export const WuiToggle: SFC<WuiToggleProps> = ({
   id,
   className,
   checked,
@@ -75,12 +75,12 @@ export const EuiToggle: SFC<EuiToggleProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiToggle',
-    { 'euiToggle--checked': checked },
+    'wuiToggle',
+    { 'wuiToggle--checked': checked },
     className
   );
 
-  const inputClasses = classNames('euiToggle__input', inputClassName);
+  const inputClasses = classNames('wuiToggle__input', inputClassName);
 
   return (
     <div className={classes} {...rest}>
@@ -103,6 +103,6 @@ export const EuiToggle: SFC<EuiToggleProps> = ({
   );
 };
 
-EuiToggle.defaultProps = {
+WuiToggle.defaultProps = {
   type: 'multi',
 };

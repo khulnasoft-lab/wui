@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageBody } from './page_body';
+import { WuiPageBody } from './page_body';
 
-describe('EuiPageBody', () => {
+describe('WuiPageBody', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageBody {...requiredProps} />);
+    const component = render(<WuiPageBody {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiPageBody', () => {
   describe('restrict width', () => {
     test('can be set to a default', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth={true} />
+        <WuiPageBody {...requiredProps} restrictWidth={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('EuiPageBody', () => {
 
     test('can be set to a custom number', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth={1024} />
+        <WuiPageBody {...requiredProps} restrictWidth={1024} />
       );
 
       expect(component).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('EuiPageBody', () => {
 
     test('can be set to a custom value and measurement', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth="24rem" />
+        <WuiPageBody {...requiredProps} restrictWidth="24rem" />
       );
 
       expect(component).toMatchSnapshot();

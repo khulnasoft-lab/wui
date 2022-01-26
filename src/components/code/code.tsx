@@ -21,9 +21,9 @@ import { CommonProps } from '../common';
 
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 
-import { EuiCodeBlockImpl } from './_code_block';
+import { WuiCodeBlockImpl } from './_code_block';
 
-export interface EuiCodeSharedProps {
+export interface WuiCodeSharedProps {
   /**
    * Sets the syntax highlighting for a specific language
    * @see http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html#language-names-and-aliases
@@ -33,15 +33,15 @@ export interface EuiCodeSharedProps {
   transparentBackground?: boolean;
 }
 
-interface Props extends EuiCodeSharedProps {
+interface Props extends WuiCodeSharedProps {
   inline?: true;
 }
 
-export type EuiCodeProps = CommonProps & Props & HTMLAttributes<HTMLElement>;
+export type WuiCodeProps = CommonProps & Props & HTMLAttributes<HTMLElement>;
 
-export const EuiCode: FunctionComponent<EuiCodeProps> = ({
+export const WuiCode: FunctionComponent<WuiCodeProps> = ({
   inline,
   ...rest
 }) => {
-  return <EuiCodeBlockImpl inline={true} {...rest} />;
+  return <WuiCodeBlockImpl inline={true} {...rest} />;
 };

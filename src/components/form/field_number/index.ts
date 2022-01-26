@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFieldNumber, EuiFieldNumberProps } from './field_number';
+export { WuiFieldNumber, WuiFieldNumberProps } from './field_number';

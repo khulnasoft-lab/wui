@@ -22,22 +22,22 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 import { isWithinRange } from '../../../services/number';
-import { EuiInputPopover } from '../../popover';
+import { WuiInputPopover } from '../../popover';
 import { htmlIdGenerator } from '../../../services/accessibility';
 
-import { EuiRangeHighlight } from './range_highlight';
-import { EuiRangeInput, EuiRangeInputProps } from './range_input';
-import { EuiRangeLabel } from './range_label';
-import { EuiRangeLevel } from './range_levels';
-import { EuiRangeSlider } from './range_slider';
-import { EuiRangeTick } from './range_ticks';
-import { EuiRangeTooltip } from './range_tooltip';
-import { EuiRangeTrack } from './range_track';
-import { EuiRangeWrapper } from './range_wrapper';
+import { WuiRangeHighlight } from './range_highlight';
+import { WuiRangeInput, WuiRangeInputProps } from './range_input';
+import { WuiRangeLabel } from './range_label';
+import { WuiRangeLevel } from './range_levels';
+import { WuiRangeSlider } from './range_slider';
+import { WuiRangeTick } from './range_ticks';
+import { WuiRangeTooltip } from './range_tooltip';
+import { WuiRangeTrack } from './range_track';
+import { WuiRangeWrapper } from './range_wrapper';
 
-export interface EuiRangeProps
+export interface WuiRangeProps
   extends CommonProps,
-    Omit<EuiRangeInputProps, 'onChange' | 'digitTolerance'> {
+    Omit<WuiRangeInputProps, 'onChange' | 'digitTolerance'> {
   compressed?: boolean;
   readOnly?: boolean;
   fullWidth?: boolean;
@@ -45,7 +45,7 @@ export interface EuiRangeProps
   /**
    * Create colored indicators for certain intervals
    */
-  levels?: EuiRangeLevel[];
+  levels?: WuiRangeLevel[];
   step?: number;
   /**
    * Pass `true` to displays an extra input control for direct manipulation.
@@ -71,7 +71,7 @@ export interface EuiRangeProps
   /**
    * Specified ticks at specified values
    */
-  ticks?: EuiRangeTick[];
+  ticks?: WuiRangeTick[];
   /**
    * Modifies the number of tick marks and at what interval
    */
@@ -93,7 +93,7 @@ export interface EuiRangeProps
   ) => void;
 }
 
-export class EuiRange extends Component<EuiRangeProps> {
+export class WuiRange extends Component<WuiRangeProps> {
   static defaultProps = {
     min: 0,
     max: 100,
@@ -209,7 +209,7 @@ export class EuiRange extends Component<EuiRangeProps> {
     const canShowDropdown = showInputOnly && !readOnly && !disabled;
 
     const theInput: ReactNode = !!showInput ? (
-      <EuiRangeInput
+      <WuiRangeInput
         id={id}
         min={min}
         max={max}
@@ -231,19 +231,19 @@ export class EuiRange extends Component<EuiRangeProps> {
       />
     ) : null;
 
-    const classes = classNames('euiRange', className);
+    const classes = classNames('wuiRange', className);
 
     const theRange = (
-      <EuiRangeWrapper
+      <WuiRangeWrapper
         className={classes}
         fullWidth={fullWidth}
         compressed={compressed}>
         {showLabels && (
-          <EuiRangeLabel side="min" disabled={disabled}>
+          <WuiRangeLabel side="min" disabled={disabled}>
             {min}
-          </EuiRangeLabel>
+          </WuiRangeLabel>
         )}
-        <EuiRangeTrack
+        <WuiRangeTrack
           disabled={disabled}
           compressed={compressed}
           max={max}
@@ -257,7 +257,7 @@ export class EuiRange extends Component<EuiRangeProps> {
           value={value}
           aria-hidden={showInput === true}>
           {showRange && this.isValid && (
-            <EuiRangeHighlight
+            <WuiRangeHighlight
               compressed={compressed}
               showTicks={showTicks}
               min={Number(min)}
@@ -267,7 +267,7 @@ export class EuiRange extends Component<EuiRangeProps> {
             />
           )}
 
-          <EuiRangeSlider
+          <WuiRangeSlider
             id={showInput ? undefined : id} // Attach id only to the input if there is one
             name={name}
             min={min}
@@ -293,7 +293,7 @@ export class EuiRange extends Component<EuiRangeProps> {
           />
 
           {showValue && !!String(value).length && (
-            <EuiRangeTooltip
+            <WuiRangeTooltip
               compressed={compressed}
               value={value}
               max={max}
@@ -304,31 +304,31 @@ export class EuiRange extends Component<EuiRangeProps> {
               valueAppend={valueAppend}
             />
           )}
-        </EuiRangeTrack>
+        </WuiRangeTrack>
         {showLabels && (
-          <EuiRangeLabel side="max" disabled={disabled}>
+          <WuiRangeLabel side="max" disabled={disabled}>
             {max}
-          </EuiRangeLabel>
+          </WuiRangeLabel>
         )}
         {showInput && !showInputOnly && (
           <>
-            <div className="euiRange__horizontalSpacer" />
+            <div className="wuiRange__horizontalSpacer" />
             {theInput}
           </>
         )}
-      </EuiRangeWrapper>
+      </WuiRangeWrapper>
     );
 
     const thePopover = showInputOnly ? (
-      <EuiInputPopover
-        className="euiRange__popover"
+      <WuiInputPopover
+        className="wuiRange__popover"
         input={theInput!} // `showInputOnly` confirms existence
         fullWidth={fullWidth}
         isOpen={this.state.isPopoverOpen}
         closePopover={this.closePopover}
         disableFocusTrap={true}>
         {theRange}
-      </EuiInputPopover>
+      </WuiInputPopover>
     ) : (
       undefined
     );

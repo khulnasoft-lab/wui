@@ -2,61 +2,61 @@
 //sass-lint:disable nesting-depth
 
 // Our base button
-.euiButton {
-  @include euiButton;
-  @include euiSlightShadow;
+.wuiButton {
+  @include wuiButton;
+  @include wuiSlightShadow;
 
-  border-radius: $euiBorderRadius;
-  min-width: $euiButtonMinWidth;
+  border-radius: $wuiBorderRadius;
+  min-width: $wuiButtonMinWidth;
 
-  .euiButton__content {
+  .wuiButton__content {
     padding: 0 ($euiSize - $euiSizeXS);
   }
 
-  .euiButton__text {
+  .wuiButton__text {
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  &.euiButton--small {
-    height: $euiButtonHeightSmall;
-    line-height: $euiButtonHeightSmall; // prevents descenders from getting cut off
+  &.wuiButton--small {
+    height: $wuiButtonHeightSmall;
+    line-height: $wuiButtonHeightSmall; // prevents descenders from getting cut off
   }
 
   &:hover,
   &:active {
-    @include euiSlightShadowHover;
+    @include wuiSlightShadowHover;
   }
 
   &:enabled {
     &:hover,
     &:focus {
-      background-color: transparentize($euiColorPrimary, .9);
+      background-color: transparentize($wuiColorPrimary, .9);
     }
   }
 
   &:disabled {
-    @include euiButtonContentDisabled;
+    @include wuiButtonContentDisabled;
 
-    color: $euiButtonColorDisabledText;
-    border-color: $euiButtonColorDisabled;
+    color: $wuiButtonColorDisabledText;
+    border-color: $wuiButtonColorDisabled;
 
-    &.euiButton--fill {
+    &.wuiButton--fill {
       // Only increase the contrast of background color to text to 2.0 for disabled
-      color: makeHighContrastColor($euiButtonColorDisabled, $euiButtonColorDisabled, 2);
-      background-color: $euiButtonColorDisabled;
-      border-color: $euiButtonColorDisabled;
+      color: makeHighContrastColor($wuiButtonColorDisabled, $wuiButtonColorDisabled, 2);
+      background-color: $wuiButtonColorDisabled;
+      border-color: $wuiButtonColorDisabled;
 
       &:hover,
       &:focus {
-        background-color: $euiButtonColorDisabled;
-        border-color: $euiButtonColorDisabled;
+        background-color: $wuiButtonColorDisabled;
+        border-color: $wuiButtonColorDisabled;
       }
     }
 
     &:hover,
     &:focus {
-      @include euiSlightShadow;
+      @include wuiSlightShadow;
 
       text-decoration: none;
     }
@@ -64,8 +64,8 @@
 }
 
 // Create button modifiers based upon the map.
-@each $name, $color in $euiButtonTypes {
-  .euiButton--#{$name} {
+@each $name, $color in $wuiButtonTypes {
+  .wuiButton--#{$name} {
     @if ($name == 'ghost') {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
@@ -74,17 +74,17 @@
       color: $euiTextColor;
     } @else {
       // Other colors need to check their contrast against the page background color.
-      color: makeHighContrastColor($color, $euiPageBackgroundColor);
+      color: makeHighContrastColor($color, $wuiPageBackgroundColor);
     }
 
     border-color: $color;
 
-    &.euiButton--fill {
+    &.wuiButton--fill {
       background-color: $color;
       border-color: $color;
 
       // The function makes that hexes safe for theming
-      $fillTextColor: chooseLightOrDarkText($color, $euiColorGhost, $euiColorInk);
+      $fillTextColor: chooseLightOrDarkText($color, $euiColorGhost, $wuiColorInk);
 
       color: $fillTextColor;
 
@@ -98,19 +98,19 @@
     }
 
     &:enabled {
-      $shadowColor: $euiShadowColor;
+      $shadowColor: $wuiShadowColor;
       @if ($name == 'ghost') {
-        $shadowColor: $euiColorInk;
+        $shadowColor: $wuiColorInk;
       } @else if (lightness($euiTextColor) < 50) {
         // Only if this is the light theme do we use the button variant color to colorize the shadow
         $shadowColor: desaturate($color, 60%);
       }
 
-      @include euiSlightShadow($shadowColor);
+      @include wuiSlightShadow($shadowColor);
 
       &:hover,
       &:focus {
-        @include euiSlightShadowHover($shadowColor);
+        @include wuiSlightShadowHover($shadowColor);
         background-color: transparentize($color, .9);
 
         @if ($name == 'disabled') {
@@ -122,22 +122,22 @@
 }
 
 // Fix ghost/disabled look specifically
-.euiButton:disabled.euiButton--ghost {
+.wuiButton:disabled.wuiButton--ghost {
   &,
   &:hover,
   &:focus {
-    @include euiSlightShadow($euiColorInk);
-    color: $euiButtonColorGhostDisabled;
-    border-color: $euiButtonColorGhostDisabled;
+    @include wuiSlightShadow($wuiColorInk);
+    color: $wuiButtonColorGhostDisabled;
+    border-color: $wuiButtonColorGhostDisabled;
   }
 
-  &.euiButton--fill {
-    background-color: $euiButtonColorGhostDisabled;
-    color: makeHighContrastColor($euiButtonColorGhostDisabled, $euiButtonColorGhostDisabled, 2);
+  &.wuiButton--fill {
+    background-color: $wuiButtonColorGhostDisabled;
+    color: makeHighContrastColor($wuiButtonColorGhostDisabled, $wuiButtonColorGhostDisabled, 2);
   }
 }
 
-.euiButton--fullWidth {
+.wuiButton--fullWidth {
   display: block;
   width: 100%;
 }

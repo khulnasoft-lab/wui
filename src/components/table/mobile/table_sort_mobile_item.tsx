@@ -21,7 +21,7 @@ import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-import { EuiContextMenuItem } from '../../context_menu';
+import { WuiContextMenuItem } from '../../context_menu';
 
 interface Props extends CommonProps {
   /**
@@ -40,7 +40,7 @@ interface Props extends CommonProps {
   ariaLabel?: string;
 }
 
-export const EuiTableSortMobileItem: FunctionComponent<Props> = ({
+export const WuiTableSortMobileItem: FunctionComponent<Props> = ({
   children,
   onSort,
   isSorted,
@@ -54,8 +54,8 @@ export const EuiTableSortMobileItem: FunctionComponent<Props> = ({
     sortIcon = isSortAscending ? 'sortUp' : 'sortDown';
   }
 
-  const buttonClasses = classNames('euiTableSortMobileItem', className, {
-    'euiTableSortMobileItem-isSorted': isSorted,
+  const buttonClasses = classNames('wuiTableSortMobileItem', className, {
+    'wuiTableSortMobileItem-isSorted': isSorted,
   });
 
   const columnTitle = ariaLabel ? ariaLabel : children;
@@ -64,13 +64,13 @@ export const EuiTableSortMobileItem: FunctionComponent<Props> = ({
   }`;
 
   return (
-    <EuiContextMenuItem
+    <WuiContextMenuItem
       className={buttonClasses}
       icon={sortIcon}
       onClick={onSort}
       aria-label={statefulAriaLabel}
       {...rest}>
       {children}
-    </EuiContextMenuItem>
+    </WuiContextMenuItem>
   );
 };

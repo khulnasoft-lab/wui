@@ -23,31 +23,31 @@ import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
 import {
-  EuiFormFieldsetProps,
-  EuiFormLegendProps,
-  EuiFormFieldset,
+  WuiFormFieldsetProps,
+  WuiFormLegendProps,
+  WuiFormFieldset,
 } from '../form_fieldset';
-import { EuiRadio, EuiRadioProps } from './radio';
+import { WuiRadio, WuiRadioProps } from './radio';
 
-export interface EuiRadioGroupOption
-  extends Omit<EuiRadioProps, 'checked' | 'onChange'> {
+export interface WuiRadioGroupOption
+  extends Omit<WuiRadioProps, 'checked' | 'onChange'> {
   id: string;
 }
 
-export type EuiRadioGroupChangeCallback = (id: string, value?: string) => void;
+export type WuiRadioGroupChangeCallback = (id: string, value?: string) => void;
 
-// Must omit inherit `onChange` properties or else TS complains when applying to the EuiRadio
+// Must omit inherit `onChange` properties or else TS complains when applying to the WuiRadio
 type AsDivProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>;
-type WithLegendProps = Omit<EuiFormFieldsetProps, 'onChange'> & {
+type WithLegendProps = Omit<WuiFormFieldsetProps, 'onChange'> & {
   /**
    * If the individual labels for each radio do not provide a sufficient description, add a legend.
-   * Wraps the group in a `EuiFormFieldset` which adds an `EuiLegend` for titling the whole group.
-   * Accepts an `EuiFormLegendProps` shape.
+   * Wraps the group in a `WuiFormFieldset` which adds an `WuiLegend` for titling the whole group.
+   * Accepts an `WuiFormLegendProps` shape.
    */
-  legend?: EuiFormLegendProps;
+  legend?: WuiFormLegendProps;
 };
 
-export type EuiRadioGroupProps = CommonProps & {
+export type WuiRadioGroupProps = CommonProps & {
   disabled?: boolean;
   /**
    * Tightens up the spacing between radio rows and sends down the
@@ -55,12 +55,12 @@ export type EuiRadioGroupProps = CommonProps & {
    */
   compressed?: boolean;
   name?: string;
-  options: EuiRadioGroupOption[];
+  options: WuiRadioGroupOption[];
   idSelected?: string;
-  onChange: EuiRadioGroupChangeCallback;
+  onChange: WuiRadioGroupChangeCallback;
 } & ExclusiveUnion<AsDivProps, WithLegendProps>;
 
-export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
+export const WuiRadioGroup: FunctionComponent<WuiRadioGroupProps> = ({
   options = [],
   idSelected,
   onChange,
@@ -80,8 +80,8 @@ export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
       ...optionRest
     } = option;
     return (
-      <EuiRadio
-        className={classNames('euiRadioGroup__item', optionClass)}
+      <WuiRadio
+        className={classNames('wuiRadioGroup__item', optionClass)}
         key={index}
         name={name}
         checked={id === idSelected}
@@ -100,12 +100,12 @@ export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
     legend.compressed = compressed;
 
     return (
-      <EuiFormFieldset
+      <WuiFormFieldset
         className={className}
         legend={legend}
-        {...(rest as EuiFormFieldsetProps)}>
+        {...(rest as WuiFormFieldsetProps)}>
         {radios}
-      </EuiFormFieldset>
+      </WuiFormFieldset>
     );
   }
 

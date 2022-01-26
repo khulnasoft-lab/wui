@@ -2,9 +2,9 @@
  * 1. Shift arrow 1px more than half its size to account for border radius
  */
 
-.euiToolTip {
+.wuiToolTip {
   @include euiToolTipStyle;
-  @include euiToolTipAnimation('top');
+  @include wuiToolTipAnimation('top');
   position: absolute;
   opacity: 0;
 
@@ -13,12 +13,12 @@
   $arrowPlusSize: (($arrowSize/2) + 1px) * -1; /* 1 */
   $arrowMinusSize: (($arrowSize/2) - 1px) * -1; /* 1 */
 
-  .euiToolTip__arrow {
+  .wuiToolTip__arrow {
     content: '';
     position: absolute;
     transform-origin: center;
     border-radius: 2px;
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $wuiTooltipBackgroundColor;
     width: $arrowSize;
     height: $arrowSize;
 
@@ -26,36 +26,36 @@
   }
 
   // Positions the arrow and animates in from the same side.
-  &.euiToolTip--right {
-    animation-name: euiToolTipRight;
+  &.wuiToolTip--right {
+    animation-name: wuiToolTipRight;
 
-    .euiToolTip__arrow {
+    .wuiToolTip__arrow {
       transform: translateX($arrowMinusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  &.euiToolTip--bottom {
-    animation-name: euiToolTipBottom;
+  &.wuiToolTip--bottom {
+    animation-name: wuiToolTipBottom;
 
-    .euiToolTip__arrow {
+    .wuiToolTip__arrow {
       transform: translateY($arrowMinusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  &.euiToolTip--left {
-    animation-name: euiToolTipLeft;
+  &.wuiToolTip--left {
+    animation-name: wuiToolTipLeft;
 
-    .euiToolTip__arrow {
+    .wuiToolTip__arrow {
       transform: translateX($arrowPlusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  .euiToolTip__title {
+  .wuiToolTip__title {
     @include euiToolTipTitle;
   }
 }
 
-.euiToolTipAnchor {
+.wuiToolTipAnchor {
   display: inline-block;
 
   // disabled elements don't fire mouse events which means leaving a disabled element
@@ -68,7 +68,7 @@
 }
 
 // Keyframes to animate in the tooltip.
-@keyframes euiToolTipTop {
+@keyframes wuiToolTipTop {
   0% {
     opacity: 0;
     transform: translateY(-$euiSize);
@@ -80,7 +80,7 @@
   }
 }
 
-@keyframes euiToolTipBottom {
+@keyframes wuiToolTipBottom {
   0% {
     opacity: 0;
     transform: translateY($euiSize);
@@ -92,7 +92,7 @@
   }
 }
 
-@keyframes euiToolTipLeft {
+@keyframes wuiToolTipLeft {
   0% {
     opacity: 0;
     transform: translateX(-$euiSize);
@@ -104,7 +104,7 @@
   }
 }
 
-@keyframes euiToolTipRight {
+@keyframes wuiToolTipRight {
   0% {
     opacity: 0;
     transform: translateX($euiSize);

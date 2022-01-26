@@ -23,29 +23,29 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 
 const sizeToClassNameMap = {
-  xs: 'euiSpacer--xs',
-  s: 'euiSpacer--s',
-  m: 'euiSpacer--m',
-  l: 'euiSpacer--l',
-  xl: 'euiSpacer--xl',
-  xxl: 'euiSpacer--xxl',
+  xs: 'wuiSpacer--xs',
+  s: 'wuiSpacer--s',
+  m: 'wuiSpacer--m',
+  l: 'wuiSpacer--l',
+  xl: 'wuiSpacer--xl',
+  xxl: 'wuiSpacer--xxl',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
 export type SpacerSize = keyof typeof sizeToClassNameMap;
 
-export type EuiSpacerProps = HTMLAttributes<HTMLDivElement> &
+export type WuiSpacerProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     size?: SpacerSize;
   };
 
-export const EuiSpacer: FunctionComponent<EuiSpacerProps> = ({
+export const WuiSpacer: FunctionComponent<WuiSpacerProps> = ({
   className,
   size = 'l',
   ...rest
 }) => {
-  const classes = classNames('euiSpacer', sizeToClassNameMap[size], className);
+  const classes = classNames('wuiSpacer', sizeToClassNameMap[size], className);
 
   return <div className={classes} {...rest} />;
 };

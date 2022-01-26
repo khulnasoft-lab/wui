@@ -1,23 +1,23 @@
 import React from 'react';
 
 import {
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
+  WuiIcon,
+  WuiKeyPadMenu,
+  WuiKeyPadMenuItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiKeyPadMenu>
-    <EuiKeyPadMenuItem
+  <WuiKeyPadMenu>
+    <WuiKeyPadMenuItem
       label="Dashboard"
       onClick={() => window.alert('Clicked')}>
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
-    <EuiKeyPadMenuItem
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
+    <WuiKeyPadMenuItem
       label="Dashboard"
       isDisabled
       onClick={() => window.alert('Clicked')}>
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
-  </EuiKeyPadMenu>
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
+  </WuiKeyPadMenu>
 );

@@ -4,22 +4,22 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import {
-  EuiFieldSearch,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiSideNav,
-  EuiSpacer,
-  EuiText,
-  EuiButtonIcon,
-  EuiPopover,
-  EuiPopoverTitle,
+  WuiFieldSearch,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
+  WuiSideNav,
+  WuiSpacer,
+  WuiText,
+  WuiButtonIcon,
+  WuiPopover,
+  WuiPopoverTitle,
 } from '../../../../src/components';
 
 import { GuideLocaleSelector } from '../guide_locale_selector';
 import { GuideThemeSelector } from '../guide_theme_selector';
-import { EuiHighlight } from '../../../../src/components/highlight';
-import { EuiBadge } from '../../../../src/components/badge';
+import { WuiHighlight } from '../../../../src/components/highlight';
+import { WuiBadge } from '../../../../src/components/badge';
 
 const scrollTo = position => {
   window.scrollTo({ top: position, behavior: 'smooth' });
@@ -75,13 +75,13 @@ export class GuidePageChrome extends Component {
     // wait a bit for react to blow away and re-create the DOM
     // then scroll the selected nav section into view
     const selectedButton = document.querySelector(
-      '.euiSideNavItemButton-isSelected'
+      '.wuiSideNavItemButton-isSelected'
     );
     if (selectedButton) {
       let root = selectedButton.parentNode;
 
       while (
-        !root.classList.contains('euiSideNavItem--root') &&
+        !root.classList.contains('wuiSideNavItem--root') &&
         !root.classList.contains('guideSideNav')
       ) {
         root = root.parentNode;
@@ -121,46 +121,46 @@ export class GuidePageChrome extends Component {
 
   renderIdentity() {
     const button = (
-      <EuiButtonIcon
+      <WuiButtonIcon
         iconType="gear"
         onClick={this.onButtonClick.bind(this)}
-        aria-label="Open EUI options menu"
+        aria-label="Open WUI options menu"
         color="text"
       />
     );
     return (
-      <EuiFlexGroup
+      <WuiFlexGroup
         alignItems="center"
         gutterSize="s"
         justifyContent="spaceBetween"
         responsive={false}
         wrap>
-        <EuiFlexItem grow={false}>
-          <EuiFlexGroup
+        <WuiFlexItem grow={false}>
+          <WuiFlexGroup
             alignItems="center"
             gutterSize="s"
             responsive={false}
             wrap>
-            <EuiFlexItem grow={false}>
+            <WuiFlexItem grow={false}>
               <Link to="/" className="guideLogo" aria-label="Go to home page">
-                <EuiIcon type="logoElastic" size="l" />
+                <WuiIcon type="logoWazuh" size="l" />
               </Link>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <Link to="/" aria-label="Go to home page" className="euiLink">
-                <strong>Elastic UI</strong>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <Link to="/" aria-label="Go to home page" className="wuiLink">
+                <strong>Wazuh UI</strong>
               </Link>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiFlexItem>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             id="guidePageChromeThemePopover"
             button={button}
             isOpen={this.state.isPopoverOpen}
             closePopover={this.closePopover.bind(this)}>
-            <EuiPopoverTitle>Docs options</EuiPopoverTitle>
+            <WuiPopoverTitle>Docs options</WuiPopoverTitle>
             <div className="guideOptionsPopover">
               <GuideThemeSelector />
               {location.host === 'localhost:8030' ? ( // eslint-disable-line no-restricted-globals
@@ -170,9 +170,9 @@ export class GuidePageChrome extends Component {
                 />
               ) : null}
             </div>
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiPopover>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     );
   }
 
@@ -198,11 +198,11 @@ export class GuidePageChrome extends Component {
       let name = title;
       if (searchTerm) {
         name = (
-          <EuiHighlight
+          <WuiHighlight
             className="guideSideNav__item--inSearch"
             search={searchTerm}>
             {title}
-          </EuiHighlight>
+          </WuiHighlight>
         );
       }
 
@@ -249,20 +249,20 @@ export class GuidePageChrome extends Component {
         let newBadge;
         if (isNew) {
           newBadge = (
-            <EuiBadge color="accent" className="guideSideNav__newBadge">
+            <WuiBadge color="accent" className="guideSideNav__newBadge">
               NEW
-            </EuiBadge>
+            </WuiBadge>
           );
         }
 
         let visibleName = name;
         if (searchTerm) {
           visibleName = (
-            <EuiHighlight
+            <WuiHighlight
               className="guideSideNav__item--inSearch"
               search={searchTerm}>
               {name}
-            </EuiHighlight>
+            </WuiHighlight>
           );
         }
 
@@ -300,19 +300,19 @@ export class GuidePageChrome extends Component {
 
     if (sideNav.length) {
       sideNavContent = (
-        <EuiSideNav
+        <WuiSideNav
           mobileTitle="Navigate components"
           toggleOpenOnMobile={this.toggleOpenOnMobile}
           isOpenOnMobile={this.state.isSideNavOpenOnMobile}
           items={sideNav}
-          aria-label="EUI"
+          aria-label="WUI"
         />
       );
     } else {
       sideNavContent = (
-        <EuiText color="subdued" size="s">
+        <WuiText color="subdued" size="s">
           <p>No matches</p>
-        </EuiText>
+        </WuiText>
       );
     }
 
@@ -321,10 +321,10 @@ export class GuidePageChrome extends Component {
         <div className="guideSideNav__identity">
           {this.renderIdentity()}
 
-          <EuiSpacer size="m" />
+          <WuiSpacer size="m" />
 
           <div className="guideSideNav__search">
-            <EuiFieldSearch
+            <WuiFieldSearch
               placeholder="Search"
               value={this.state.search}
               onChange={this.onSearchChange}

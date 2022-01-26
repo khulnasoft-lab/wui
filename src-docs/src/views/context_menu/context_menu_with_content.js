@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenu,
-  EuiIcon,
-  EuiPopover,
-  EuiSpacer,
-  EuiText,
+  WuiButton,
+  WuiContextMenu,
+  WuiIcon,
+  WuiPopover,
+  WuiSpacer,
+  WuiText,
 } from '../../../../src/components';
 
-import EuiTabsExample from '../tabs/tabbed_content';
+import WuiTabsExample from '../tabs/tabbed_content';
 
 function flattenPanelTree(tree, array = []) {
   array.push(tree);
@@ -53,7 +53,7 @@ export default () => {
       items: [
         {
           name: 'Show fullscreen',
-          icon: <EuiIcon type="search" size="m" />,
+          icon: <WuiIcon type="search" size="m" />,
           onClick: () => {
             closePopover();
             window.alert('Show fullscreen');
@@ -78,9 +78,9 @@ export default () => {
   };
 
   const panels = createPanelTree(() => (
-    <EuiText style={{ padding: 24 }} textAlign="center">
+    <WuiText style={{ padding: 24 }} textAlign="center">
       <p>
-        <EuiIcon type="faceHappy" size="xxl" />
+        <WuiIcon type="faceHappy" size="xxl" />
       </p>
 
       <h3>Context panels can contain anything</h3>
@@ -89,29 +89,29 @@ export default () => {
         though. This panel is set to 400px and the height will grow as space
         allows.
       </p>
-    </EuiText>
+    </WuiText>
   ));
 
-  const dynamicPanels = createPanelTree(EuiTabsExample);
+  const dynamicPanels = createPanelTree(WuiTabsExample);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Click me to load mixed content menu
-    </EuiButton>
+    </WuiButton>
   );
 
   const dynamicButton = (
-    <EuiButton
+    <WuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onDynamicButtonClick}>
       Click me to load dynamic mixed content menu
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
     <React.Fragment>
-      <EuiPopover
+      <WuiPopover
         id="contextMenuNormal"
         button={button}
         isOpen={isPopoverOpen}
@@ -119,12 +119,12 @@ export default () => {
         panelPaddingSize="none"
         withTitle
         anchorPosition="upLeft">
-        <EuiContextMenu initialPanelId={0} panels={panels} />
-      </EuiPopover>
+        <WuiContextMenu initialPanelId={0} panels={panels} />
+      </WuiPopover>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiPopover
+      <WuiPopover
         id="contextMenuDynamic"
         button={dynamicButton}
         isOpen={isDynamicPopoverOpen}
@@ -132,8 +132,8 @@ export default () => {
         panelPaddingSize="none"
         withTitle
         anchorPosition="upLeft">
-        <EuiContextMenu initialPanelId={0} panels={dynamicPanels} />
-      </EuiPopover>
+        <WuiContextMenu initialPanelId={0} panels={dynamicPanels} />
+      </WuiPopover>
     </React.Fragment>
   );
 };

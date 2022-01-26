@@ -4,10 +4,10 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiDataGrid,
-  EuiCode,
-  EuiCodeBlock,
-  EuiListGroupItem,
+  WuiDataGrid,
+  WuiCode,
+  WuiCodeBlock,
+  WuiListGroupItem,
 } from '../../../../src/components';
 
 import DataGridContainer from './container';
@@ -30,13 +30,13 @@ const dataGridColumnActionsSource = require('!!raw-loader!./column_actions');
 const dataGridColumnActionsHtml = renderToHtml(DataGridColumnActions);
 
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnActions,
-  EuiDataGridStyle,
-  EuiDataGridToolBarVisibilityOptions,
+  WuiDataGridColumn,
+  WuiDataGridColumnActions,
+  WuiDataGridStyle,
+  WuiDataGridToolBarVisibilityOptions,
 } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-const gridSnippet = `<EuiDataGrid
+const gridSnippet = `<WuiDataGrid
   {...usualProps}
   columns={[
     // three columns are available, but restrict Avatar to 50px and don't let users resize it
@@ -53,22 +53,22 @@ const gridSnippet = `<EuiDataGrid
     showColumnSelector: false
     additionalControls: (
       <Fragment>
-        <EuiButtonEmpty
+        <WuiButtonEmpty
           size="xs"
           iconType="bell"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="wuiDataGrid__controlBtn"
           onClick={() => alert('You clicked me! Hugs.')}>
           New button
-        </EuiButtonEmpty>
-        <EuiButtonEmpty
+        </WuiButtonEmpty>
+        <WuiButtonEmpty
           size="xs"
           iconType="branch"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="wuiDataGrid__controlBtn"
           onClick={() => alert('You clicked me! Hugs.')}>
           Another button
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       </Fragment>
     )
   }}
@@ -88,35 +88,35 @@ const gridSnippet = `<EuiDataGrid
 />
 `;
 
-const controlsSnippet = `<EuiDataGrid
+const controlsSnippet = `<WuiDataGrid
   {...usualGridProps}
   toolbarVisibility={{
     // Use of a fragment for multiple items will insure proper margins
     additionalControls: (
       <Fragment>
-        <EuiButtonEmpty
+        <WuiButtonEmpty
           size="xs"
           iconType="bell"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="wuiDataGrid__controlBtn"
           onClick={() => alert('You clicked me! Hugs.')}>
           New button
-        </EuiButtonEmpty>
-        <EuiButtonEmpty
+        </WuiButtonEmpty>
+        <WuiButtonEmpty
           size="xs"
           iconType="branch"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="wuiDataGrid__controlBtn"
           onClick={() => alert('You clicked me! Hugs.')}>
           Another button
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       </Fragment>
     )
   }}
 />
 `;
 
-const widthsSnippet = `<EuiDataGrid
+const widthsSnippet = `<WuiDataGrid
   {...usualGridProps}
   columns={[
     {
@@ -149,32 +149,32 @@ export const DataGridStylingExample = {
         <Fragment>
           <p>
             Styling can be passed down to the grid through the{' '}
-            <EuiCode>gridStyle</EuiCode> prop. It accepts an object that allows
+            <WuiCode>gridStyle</WuiCode> prop. It accepts an object that allows
             for customization.
           </p>
           <p>
-            The <EuiCode>toolbarVisibility</EuiCode> prop when used as a boolean
+            The <WuiCode>toolbarVisibility</WuiCode> prop when used as a boolean
             controls the visibility of the toolbar displayed above the grid.
             Using the prop as a shape, allows setting the visibility of the
             individual buttons within.
           </p>
           <p>
-            With the default settings, the <EuiCode>showStyleSelector</EuiCode>{' '}
-            setting in <EuiCode>toolbarVisibility</EuiCode> means the user has
+            With the default settings, the <WuiCode>showStyleSelector</WuiCode>{' '}
+            setting in <WuiCode>toolbarVisibility</WuiCode> means the user has
             the ability to override the padding and font size passed into{' '}
-            <EuiCode>gridStyle</EuiCode> by the engineer.
+            <WuiCode>gridStyle</WuiCode> by the engineer.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <WuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridStyling },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        WuiDataGrid,
+        WuiDataGridStyle,
+        WuiDataGridToolBarVisibilityOptions,
       },
       demo: <DataGridStyling />,
     },
@@ -194,7 +194,7 @@ export const DataGridStylingExample = {
         <p>
           When wrapped inside a container, like a dashboard panel, the grid will
           start hiding controls and adopt a more strict flex layout. Use the
-          <EuiCode>minSizeForControls</EuiCode> prop to control the min width to
+          <WuiCode>minSizeForControls</WuiCode> prop to control the min width to
           enables/disables grid controls based on available width.
         </p>
       ),
@@ -216,12 +216,12 @@ export const DataGridStylingExample = {
       title: 'Additional controls in the toolbar',
       text: (
         <p>
-          Use the <EuiCode>toolbarVisibility.additionalControls</EuiCode> prop
+          Use the <WuiCode>toolbarVisibility.additionalControls</WuiCode> prop
           to pass additional controls to the toolbar. These will always live to
           the left of the full screen button. It will respect the{' '}
-          <EuiCode language="js">toolbarVisibility={'{false}'}</EuiCode> setting
+          <WuiCode language="js">toolbarVisibility={'{false}'}</WuiCode> setting
           and hide when appropriate. Although any node can fit in this space,
-          the recommendation is to use <strong>EuiButtonEmpty</strong>{' '}
+          the recommendation is to use <strong>WuiButtonEmpty</strong>{' '}
           components with the configuration shown in the snippet.
         </p>
       ),
@@ -247,11 +247,11 @@ export const DataGridStylingExample = {
             By default, visible columns are given equal widths to fill up
             available space in the grid and can be resized by the user to any
             desired width. There are two parameters on{' '}
-            <strong>EuiDataGridColumn</strong> to change this default behavior.{' '}
-            <EuiCode>initialWidth</EuiCode> is a numeric value providing the
+            <strong>WuiDataGridColumn</strong> to change this default behavior.{' '}
+            <WuiCode>initialWidth</WuiCode> is a numeric value providing the
             starting width of a column, in pixels. Second, the{' '}
-            <EuiCode>isResizable</EuiCode> value can be set to{' '}
-            <EuiCode>false</EuiCode> to remove the user&apos;s ability to resize
+            <WuiCode>isResizable</WuiCode> value can be set to{' '}
+            <WuiCode>false</WuiCode> to remove the user&apos;s ability to resize
             column.
           </p>
           <p>
@@ -264,8 +264,8 @@ export const DataGridStylingExample = {
       components: { DataGridColumnWidths },
       snippet: widthsSnippet,
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
+        WuiDataGrid,
+        WuiDataGridColumn,
       },
       demo: <DataGridColumnWidths />,
     },
@@ -286,11 +286,11 @@ export const DataGridStylingExample = {
           <p>
             By default, columns provide actions for sorting, moving and hiding.
             These can be extended with custom actions. You can customize the
-            actions by setting the <EuiCode>actions</EuiCode> value of{' '}
-            <strong>EuiDataGridColumn</strong>. Setting it to{' '}
-            <EuiCode>false</EuiCode> removes the action menu displayed. You can
+            actions by setting the <WuiCode>actions</WuiCode> value of{' '}
+            <strong>WuiDataGridColumn</strong>. Setting it to{' '}
+            <WuiCode>false</WuiCode> removes the action menu displayed. You can
             configure it by passing an object of type{' '}
-            <strong>EuiDataGridColumnAction</strong>. This allows you a hide,
+            <strong>WuiDataGridColumnAction</strong>. This allows you a hide,
             configure the existing actions and add new ones.
           </p>
           <p>
@@ -304,10 +304,10 @@ export const DataGridStylingExample = {
       components: { DataGridColumnActions },
       snippet: widthsSnippet,
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
-        EuiDataGridColumnActions,
-        EuiListGroupItem,
+        WuiDataGrid,
+        WuiDataGridColumn,
+        WuiDataGridColumnActions,
+        WuiListGroupItem,
       },
       demo: <DataGridColumnActions />,
     },

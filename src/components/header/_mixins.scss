@@ -1,41 +1,41 @@
-@mixin euiHeaderDarkTheme($backgroundColor) {
+@mixin wuiHeaderDarkTheme($backgroundColor) {
   background-color: $backgroundColor;
-  border-bottom-color: lightOrDarkTheme($backgroundColor, $euiHeaderBorderColor);
+  border-bottom-color: lightOrDarkTheme($backgroundColor, $wuiHeaderBorderColor);
 
-  .euiHeaderLogo__text,
-  .euiHeaderLink,
-  .euiHeaderSectionItem__button {
+  .wuiHeaderLogo__text,
+  .wuiHeaderLink,
+  .wuiHeaderSectionItem__button {
     color: $euiColorGhost;
   }
 
-  .euiHeaderLink-isActive {
-    color: makeHighContrastColor($euiColorPrimary, $backgroundColor);
+  .wuiHeaderLink-isActive {
+    color: makeHighContrastColor($wuiColorPrimary, $backgroundColor);
   }
 
-  .euiHeaderSectionItem {
+  .wuiHeaderSectionItem {
     &:after {
-      background: lightOrDarkTheme($euiColorDarkShade, $euiColorLightestShade);
+      background: lightOrDarkTheme($euiColorDarkShade, $wuiColorLightestShade);
     }
   }
 
-  .euiHeaderLogo,
-  .euiHeaderLink,
-  .euiHeaderSectionItem__button {
+  .wuiHeaderLogo,
+  .wuiHeaderLink,
+  .wuiHeaderSectionItem__button {
     &:hover {
-      background: transparentize(lightOrDarkTheme($euiColorDarkShade, $euiColorLightestShade), .5);
+      background: transparentize(lightOrDarkTheme($euiColorDarkShade, $wuiColorLightestShade), .5);
     }
 
     &:focus {
-      background: shade($euiColorPrimary, 50%);
+      background: shade($wuiColorPrimary, 50%);
     }
   }
 
-  .euiHeaderNotification,
-  .euiHeaderSectionItemButton__notification--badge {
+  .wuiHeaderNotification,
+  .wuiHeaderSectionItemButton__notification--badge {
     box-shadow: 0 0 0 1px $backgroundColor;
   }
 
-  .euiHeaderSectionItemButton__notification--dot {
+  .wuiHeaderSectionItemButton__notification--dot {
     stroke: $backgroundColor;
   }
 }

@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import {
-  EuiTitle,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiBetaBadge,
-  EuiTab,
-  EuiTabs,
-  EuiHorizontalRule,
+  WuiTitle,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiBetaBadge,
+  WuiTab,
+  WuiTabs,
+  WuiHorizontalRule,
 } from '../../../../src/components';
 
 const GuidePageComponent = ({
@@ -24,7 +24,7 @@ const GuidePageComponent = ({
   history,
 }) => {
   const betaBadge = isBeta ? (
-    <EuiBetaBadge
+    <WuiBetaBadge
       label="Beta"
       tooltipContent="This component is still under development and may contain breaking changes in the nearby future."
     />
@@ -70,14 +70,14 @@ const GuidePageComponent = ({
       else isSelected = !isGuideLineView && !isPlaygroundView;
 
       return (
-        <EuiTab
+        <WuiTab
           onClick={() => {
             if (handleClick) handleClick();
           }}
           isSelected={isSelected}
           key={index}>
           {name}
-        </EuiTab>
+        </WuiTab>
       );
     });
   };
@@ -85,24 +85,24 @@ const GuidePageComponent = ({
   return (
     <Fragment>
       <div className="guideSection__text">
-        <EuiFlexGroup justifyContent="spaceBetween">
-          <EuiFlexItem grow={false}>
-            <EuiTitle size="l">
+        <WuiFlexGroup justifyContent="spaceBetween">
+          <WuiFlexItem grow={false}>
+            <WuiTitle size="l">
               <h1>
                 {title} {betaBadge}
               </h1>
-            </EuiTitle>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiTabs display="condensed">
+            </WuiTitle>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiTabs display="condensed">
               {tabs.length > 1 && renderTabs()}
-            </EuiTabs>
-          </EuiFlexItem>
-        </EuiFlexGroup>
+            </WuiTabs>
+          </WuiFlexItem>
+        </WuiFlexGroup>
 
-        {tabs.length > 1 && <EuiHorizontalRule />}
+        {tabs.length > 1 && <WuiHorizontalRule />}
 
-        <EuiSpacer size="m" />
+        <WuiSpacer size="m" />
       </div>
 
       <Switch>
@@ -119,7 +119,7 @@ const GuidePageComponent = ({
       </Switch>
 
       {/* Give some space between the bottom of long content and the bottom of the screen */}
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
     </Fragment>
   );
 };

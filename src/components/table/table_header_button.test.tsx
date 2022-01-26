@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableHeaderButton } from './table_header_button';
+import { WuiTableHeaderButton } from './table_header_button';
 
-describe('EuiTableHeaderButton', () => {
+describe('WuiTableHeaderButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableHeaderButton {...requiredProps} />);
+    const component = render(<WuiTableHeaderButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

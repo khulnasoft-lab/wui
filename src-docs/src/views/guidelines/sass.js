@@ -12,31 +12,31 @@ import { getSassVars } from './_get_sass_vars';
 import { allowedColors } from './colors/_utilities';
 
 import {
-  EuiText,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiTitle,
-  EuiLink,
-  EuiCode,
-  EuiCodeBlock,
-  EuiCallOut,
-  EuiPanel,
+  WuiText,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexGrid,
+  WuiFlexItem,
+  WuiTitle,
+  WuiLink,
+  WuiCode,
+  WuiCodeBlock,
+  WuiCallOut,
+  WuiPanel,
 } from '../../../../src/components';
 
-const euiColors = [...allowedColors, 'euiColorGhost', 'euiColorInk'];
+const wuiColors = [...allowedColors, 'euiColorGhost', 'wuiColorInk'];
 
-const euiTextColors = ['euiTextColor', 'euiColorDarkShade', 'euiLinkColor'];
+const euiTextColors = ['euiTextColor', 'euiColorDarkShade', 'wuiLinkColor'];
 
-const euiSizes = [
+const euiSizeS = [
   'euiSizeXS',
   'euiSizeS',
   'euiSizeM',
-  'euiSize',
+  'wuiSize',
   'euiSizeL',
   'euiSizeXL',
-  'euiSizeXXL',
+  'wuiSizeXXL',
 ];
 
 const euiFontSizes = [
@@ -48,94 +48,94 @@ const euiFontSizes = [
   'euiFontSizeXL',
 ];
 
-const euiShadows = [
-  'euiBottomShadowFlat',
-  'euiSlightShadow',
-  'euiBottomShadowSmall',
-  'euiBottomShadowMedium',
-  'euiBottomShadow',
-  'euiBottomShadowLarge',
+const wuiShadows = [
+  'wuiBottomShadowFlat',
+  'wuiSlightShadow',
+  'wuiBottomShadowSmall',
+  'wuiBottomShadowMedium',
+  'wuiBottomShadow',
+  'wuiBottomShadowLarge',
 ];
 
-const euiBorders = ['euiBorderThin', 'euiBorderThick', 'euiBorderEditable'];
+const wuiBorders = ['wuiBorderThin', 'wuiBorderThick', 'wuiBorderEditable'];
 
-const euiLevels = [
-  'euiZToastList',
-  'euiZComboBox',
-  'euiZModal',
-  'euiZMask',
-  'euiZNavigation',
-  'euiZContentMenu',
-  'euiZHeader',
-  'euiZContent',
+const wuiLevels = [
+  'wuiZToastList',
+  'wuiZComboBox',
+  'wuiZModal',
+  'wuiZMask',
+  'wuiZNavigation',
+  'wuiZContentMenu',
+  'wuiZHeader',
+  'wuiZContent',
 ];
 
-const euiAnimationSpeeds = [
-  'euiAnimSpeedExtraFast',
-  'euiAnimSpeedFast',
+const wuiAnimationSpeeds = [
+  'wuiAnimSpeedExtraFast',
+  'wuiAnimSpeedFast',
   'euiAnimSpeedNormal',
-  'euiAnimSpeedSlow',
-  'euiAnimSpeedExtraSlow',
+  'wuiAnimSpeedSlow',
+  'wuiAnimSpeedExtraSlow',
 ];
 
-const euiAnimationTimings = ['euiAnimSlightBounce', 'euiAnimSlightResistance'];
+const wuiAnimationTimings = ['wuiAnimSlightBounce', 'wuiAnimSlightResistance'];
 
-const euiBreakPoints = Object.getOwnPropertyNames(breakpoints.euiBreakpoints);
+const wuiBreakPoints = Object.getOwnPropertyNames(breakpoints.wuiBreakpoints);
 
 function renderPaletteColor(palette, color) {
   let optionalDefault;
   if (color === 'euiTextColor') {
     optionalDefault = (
-      <EuiFlexItem grow={false}>
+      <WuiFlexItem grow={false}>
         <strong>default</strong>
-      </EuiFlexItem>
+      </WuiFlexItem>
     );
   }
 
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       className="guideSass__swatchItem"
       key={color}>
-      <EuiFlexItem grow={false}>
+      <WuiFlexItem grow={false}>
         <div
           className="guideSass__swatch"
           style={{ background: rgbToHex(palette[color].rgba).toUpperCase() }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiCode>${color}</EuiCode>
-      </EuiFlexItem>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
+        <WuiCode>${color}</WuiCode>
+      </WuiFlexItem>
       {optionalDefault}
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   );
 }
 
 function renderSize(size) {
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={size}
       className="guideSass__sizeRow">
-      <EuiFlexItem grow={false} className="guideSass__sizeItem">
+      <WuiFlexItem grow={false} className="guideSass__sizeItem">
         <div
           className="guideSass__size"
           style={{ width: sizes[size], height: sizes[size] }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} style={{ minWidth: 184 }}>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false} style={{ minWidth: 184 }}>
         <div>
-          <EuiCode>${size}</EuiCode>
+          <WuiCode>${size}</WuiCode>
         </div>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{sizes[size]}px</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiText size="s">{sizes[size]}px</WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 }
 
@@ -145,34 +145,34 @@ function renderFontSize(size) {
       <div className={`guideSass__fontSize guideSass__fontSize--${size}`}>
         The quick brown fox
       </div>
-      <EuiCode>${size}</EuiCode>
+      <WuiCode>${size}</WuiCode>
     </div>
   );
 }
 
 function renderLevel(level, index) {
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={level}
       className="guideSass__levelRow">
-      <EuiFlexItem grow={false}>
+      <WuiFlexItem grow={false}>
         <div
           className="guideSass__level"
           style={{ opacity: 1 - index * 0.1 }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} style={{ minWidth: 200, paddingLeft: 16 }}>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false} style={{ minWidth: 200, paddingLeft: 16 }}>
         <div>
-          <EuiCode>${level}</EuiCode>
+          <WuiCode>${level}</WuiCode>
         </div>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{zindexs[level]}</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiText size="s">{zindexs[level]}</WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 }
 
@@ -181,22 +181,22 @@ function renderShadow(shadow) {
     <div
       key={shadow}
       className={`guideSass__shadow guideSass__shadow--${shadow}`}>
-      <EuiCodeBlock language="scss" paddingSize="none" transparentBackground>
+      <WuiCodeBlock language="scss" paddingSize="none" transparentBackground>
         @include {shadow};
-      </EuiCodeBlock>
+      </WuiCodeBlock>
     </div>
   );
 }
 
 function renderBorder(border) {
   return (
-    <EuiFlexItem
+    <WuiFlexItem
       key={border}
       className={`guideSass__border guideSass__border--${border}`}>
-      <EuiCodeBlock language="scss" paddingSize="none" transparentBackground>
+      <WuiCodeBlock language="scss" paddingSize="none" transparentBackground>
         border: ${border}
-      </EuiCodeBlock>
-    </EuiFlexItem>
+      </WuiCodeBlock>
+    </WuiFlexItem>
   );
 }
 
@@ -205,19 +205,19 @@ function renderAnimationSpeed(speed) {
     <div
       key={speed}
       className={`guideSass__animRow guideSass__animRow--${speed}`}>
-      <EuiFlexGroup alignItems="center" gutterSize="s">
-        <EuiFlexItem grow={false}>
+      <WuiFlexGroup alignItems="center" gutterSize="s">
+        <WuiFlexItem grow={false}>
           {animations[speed]}ms
-          <EuiSpacer size="s" />
-          <EuiCodeBlock
+          <WuiSpacer size="s" />
+          <WuiCodeBlock
             transparentBackground
             paddingSize="none"
             language="scss">
             animation-duration: ${speed}
-          </EuiCodeBlock>
-          <EuiSpacer size="s" />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiCodeBlock>
+          <WuiSpacer size="s" />
+        </WuiFlexItem>
+      </WuiFlexGroup>
       <div className={'guideSass__animParent'}>
         <div className="guideSass__animChild" />
       </div>
@@ -230,19 +230,19 @@ function renderAnimationTiming(speed) {
     <div
       key={speed}
       className={`guideSass__animRow guideSass__animRow--${speed}`}>
-      <EuiFlexGroup alignItems="center" gutterSize="s">
-        <EuiFlexItem grow={false}>
+      <WuiFlexGroup alignItems="center" gutterSize="s">
+        <WuiFlexItem grow={false}>
           {animations[speed]}
-          <EuiSpacer size="s" />
-          <EuiCodeBlock
+          <WuiSpacer size="s" />
+          <WuiCodeBlock
             transparentBackground
             paddingSize="none"
             language="scss">
             animation-timing-function: ${speed}
-          </EuiCodeBlock>
-          <EuiSpacer size="s" />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiCodeBlock>
+          <WuiSpacer size="s" />
+        </WuiFlexItem>
+      </WuiFlexGroup>
       <div className={'guideSass__animParent'}>
         <div className="guideSass__animChild" />
       </div>
@@ -252,58 +252,58 @@ function renderAnimationTiming(speed) {
 
 function renderBreakpoint(size) {
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={size}>
-      <EuiFlexItem grow={false}>
-        <EuiText size="s" className="eui-textRight" style={{ minWidth: 50 }}>
-          <EuiCode>{size}</EuiCode>
-        </EuiText>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{breakpoints.euiBreakpoints[size]}px</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      <WuiFlexItem grow={false}>
+        <WuiText size="s" className="wui-textRight" style={{ minWidth: 50 }}>
+          <WuiCode>{size}</WuiCode>
+        </WuiText>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiText size="s">{breakpoints.wuiBreakpoints[size]}px</WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 }
 
 const bemExample = `// Use camelCase naming
-.euiButton {
+.wuiButton {
   // Put mixins first before properties
-  @include euiButton;
-  @include euiSlightShadow;
+  @include wuiButton;
+  @include wuiSlightShadow;
 
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
 
 
   // Elements exist within the component
-  .euiButton__content {
+  .wuiButton__content {
     padding: 0 ($euiSize - $euiSizeXS);
   }
 
   // Modifiers augment existing components or elements
-  &.euiButton--primary {
-    background-color: $euiColorPrimary;
+  &.wuiButton--primary {
+    background-color: $wuiColorPrimary;
   }
 
   // States are written with a verb prefix
-  &.euiButton-isLoading {
+  &.wuiButton-isLoading {
     opacity: .5;
   }
 }
 
 // Put breakpoints at the bottom of the document
-@include euiBreakpoint("xs", "s") {
-  .euiButton {
+@include wuiBreakpoint("xs", "s") {
+  .wuiButton {
     width: 100%;
   }
 }
 `;
 
-const borderRadiusExample = `border: $euiBorderThin;
-border-radius: $euiBorderRadius;
+const borderRadiusExample = `border: $wuiBorderThin;
+border-radius: $wuiBorderRadius;
 `;
 
 const importKibanaExample = `// In Kibana you can add this to the top of your Sass file
@@ -311,18 +311,18 @@ const importKibanaExample = `// In Kibana you can add this to the top of your Sa
 `;
 
 const importOutsideExample = `// In an outside project, import the core variables like so
-@import '@elastic/eui/src/global_styling/functions/index';
-@import '@elastic/eui/src/global_styling/variables/index';
-@import '@elastic/eui/src/global_styling/mixins/index';
+@import '@wazuh/wui/src/global_styling/functions/index';
+@import '@wazuh/wui/src/global_styling/variables/index';
+@import '@wazuh/wui/src/global_styling/mixins/index';
 `;
 
 const tintOrShadeExample = `// tintOrShade(color, tint_percent, shade_percent)
 // will tint the color by % in light themes
 // and shade the color by % in dark themes
 .themedBox {
-  background-color: tintOrShade($euiColorPrimary, 90%, 70%);
-  border-left: $euiBorderThick;
-  border-color: $euiColorPrimary;
+  background-color: tintOrShade($wuiColorPrimary, 90%, 70%);
+  border-left: $wuiBorderThick;
+  border-color: $wuiColorPrimary;
   padding: $euiSize;
   color: $euiTextColor;
 }
@@ -330,18 +330,18 @@ const tintOrShadeExample = `// tintOrShade(color, tint_percent, shade_percent)
 
 const contrastExample = `// Make sure text passes a contrast check
 .contrastBox {
-  $backgroundColor: tintOrShade($euiColorWarning, 90%, 70%);
+  $backgroundColor: tintOrShade($wuiColorWarning, 90%, 70%);
   background: $backgroundColor;
 
   // Given two colors, adjust the first until contrast is 4.5
-  color: makeHighContrastColor($euiColorWarning, $backgroundColor);
+  color: makeHighContrastColor($wuiColorWarning, $backgroundColor);
   padding: $euiSize;
-  border-left: $euiBorderThick;
-  border-color: $euiColorWarning;
+  border-left: $wuiBorderThick;
+  border-color: $wuiColorWarning;
 
   // Graphics can have a lower minimum contrast level of 3.0
   .square {
-    fill: makeGraphicContrastColor($euiColorWarning, $backgroundColor);
+    fill: makeGraphicContrastColor($wuiColorWarning, $backgroundColor);
   }
 }
 `;
@@ -351,206 +351,206 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
   return (
     <GuidePage title="Sass guidelines">
-      <EuiTitle>
+      <WuiTitle>
         <h2>Core variables</h2>
-      </EuiTitle>
+      </WuiTitle>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <WuiTitle size="s">
               <h3>Sizing</h3>
-            </EuiTitle>
+            </WuiTitle>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            {euiSizes.map(function(size, index) {
+            {euiSizeS.map(function(size, index) {
               return renderSize(size, index);
             })}
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            <EuiTitle size="s">
+            <WuiTitle size="s">
               <h3>Z-index</h3>
-            </EuiTitle>
+            </WuiTitle>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            {euiLevels.map(function(level, index) {
+            {wuiLevels.map(function(level, index) {
               return renderLevel(level, index);
             })}
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Color</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          {euiColors.map(function(color, index) {
+          {wuiColors.map(function(color, index) {
             return renderPaletteColor(palette, color, index);
           })}
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
       <GuideRuleTitle>Going beyond the provided colors</GuideRuleTitle>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Theming patterns</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
-          <EuiText>
+          <WuiSpacer />
+          <WuiText>
             <p>
               Often you need to go beyond the provided color set. When doing so{' '}
               <strong>always</strong> use color functions to modify the base
               set. Here are some examples.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </WuiText>
+          <WuiSpacer />
 
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+          <WuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <WuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--danger" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiCodeDanger</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiCode>$wuiCodeDanger</WuiCode>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+          <WuiSpacer />
+          <WuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <WuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--dangerTint" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>tint($euiCodeDanger, 30%)</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiCode>tint($wuiCodeDanger, 30%)</WuiCode>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+          <WuiSpacer />
+          <WuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <WuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--dangerShade" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>shade($euiCodeDanger, 30%)</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiCode>shade($wuiCodeDanger, 30%)</WuiCode>
+            </WuiFlexItem>
+          </WuiFlexGroup>
 
-          <EuiSpacer />
-          <EuiText>
+          <WuiSpacer />
+          <WuiText>
             <p>
-              Remember that EUI provides dark and light mode theming support.
+              Remember that WUI provides dark and light mode theming support.
               Sometimes the traditional color functions don&apos;t give enough
               flexibility for both modes.
             </p>
             <p>
               For example, depending upon what theme you use{' '}
-              <EuiCode>$EuiColorPrimary</EuiCode> will be a different hex value.
+              <WuiCode>$WuiColorPrimary</WuiCode> will be a different hex value.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </WuiText>
+          <WuiSpacer />
 
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem
+          <WuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <WuiFlexItem
               grow={false}
               style={{ background: '#FFF', padding: 8 }}>
               <div className="guideSass__swatch guideSass__swatch--primaryLight" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiColorPrimary</EuiCode>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiText size="s">
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiCode>$wuiColorPrimary</WuiCode>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiText size="s">
                 <p>is #0079A5 in the light theme</p>
-              </EuiText>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem
+              </WuiText>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+          <WuiSpacer />
+          <WuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <WuiFlexItem
               grow={false}
               style={{ background: '#222', padding: 8 }}>
               <div className="guideSass__swatch guideSass__swatch--primaryDark" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiColorPrimary</EuiCode>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiText size="s">
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiCode>$wuiColorPrimary</WuiCode>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiText size="s">
                 <p>is #4da1c0 in the dark theme</p>
-              </EuiText>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+              </WuiText>
+            </WuiFlexItem>
+          </WuiFlexGroup>
 
-          <EuiSpacer />
-          <EuiText>
+          <WuiSpacer />
+          <WuiText>
             <p>
               Taking the default primary color above we want to tint the color
               in the light mode, but shade it in the dark mode. This makes the
               background color more subtle in both use cases.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiCodeBlock
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {tintOrShadeExample}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiFlexGrid columns={2}>
-            <EuiFlexItem style={{ background: '#FFF', padding: 16 }}>
+          <WuiFlexGrid columns={2}>
+            <WuiFlexItem style={{ background: '#FFF', padding: 16 }}>
               <div className="guideSass__themedBox guideSass__themedBox--light">
                 Light theme
               </div>
-            </EuiFlexItem>
-            <EuiFlexItem style={{ background: '#222', padding: 16 }}>
+            </WuiFlexItem>
+            <WuiFlexItem style={{ background: '#222', padding: 16 }}>
               <div className="guideSass__themedBox guideSass__themedBox--dark">
                 Dark theme
               </div>
-            </EuiFlexItem>
-          </EuiFlexGrid>
-        </EuiFlexItem>
+            </WuiFlexItem>
+          </WuiFlexGrid>
+        </WuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Color contrast patterns</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>
-              EUI provides some nifty color functions for auto-adjusting color
+              WUI provides some nifty color functions for auto-adjusting color
               to pass AA contrast checks. Often this is needed when using the
               base colors on top of each other. Here is an example similar to
               our callouts with a pesky orange.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiCodeBlock
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {contrastExample}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
           <div className="guideSass__contrastExample">
             <svg
@@ -571,237 +571,237 @@ export const SassGuidelines = ({ selectedTheme }) => {
             This orange text now passes a contrast check!
           </div>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTitle size="s">
+          <WuiTitle size="s">
             <h3>More on color contrast</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>
               Consult the larger{' '}
               <Link to="/guidelines/colors">color guidelines</Link> page for a
               better explanation about passing color contrast.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          <WuiSpacer />
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
       <GuideRuleTitle>Typography</GuideRuleTitle>
 
-      <EuiText grow={false} className="guideSection__text">
+      <WuiText grow={false} className="guideSection__text">
         <p>
           View the{' '}
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/variables/_typography.scss">
+          <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/variables/_typography.scss">
             variable
-          </EuiLink>{' '}
+          </WuiLink>{' '}
           and{' '}
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_typography.scss">
+          <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/mixins/_typography.scss">
             mixins
-          </EuiLink>{' '}
+          </WuiLink>{' '}
           Sass code for typography. For most of your components we recommend
-          using <Link to="/display/text">EuiText</Link> or{' '}
-          <Link to="/display/title">EuiTitle</Link> instead of these Sass
+          using <Link to="/display/text">WuiText</Link> or{' '}
+          <Link to="/display/title">WuiTitle</Link> instead of these Sass
           variables.
         </p>
-      </EuiText>
+      </WuiText>
 
-      <EuiSpacer />
-      <EuiCallOut
+      <WuiSpacer />
+      <WuiCallOut
         size="s"
         color="warning"
         title={
           <span>
             It is more common to use these as a mixin (e.g.{' '}
-            <EuiCode language="css">@include euiFontSizeS;</EuiCode>) to
+            <WuiCode language="css">@include euiFontSizeS;</WuiCode>) to
             automatically apply line-height as well as size.
           </span>
         }
       />
 
-      <EuiSpacer />
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <WuiSpacer />
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Text sizes</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
           {euiFontSizes.map(function(size, index) {
             return renderFontSize(size, index);
           })}
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </WuiFlexItem>
+        <WuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <WuiTitle size="s">
               <h3>Text colors</h3>
-            </EuiTitle>
+            </WuiTitle>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
             {euiTextColors.map(function(color, index) {
               return renderPaletteColor(palette, color, index);
             })}
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            <EuiTitle>
+            <WuiTitle>
               <h3>Font families</h3>
-            </EuiTitle>
+            </WuiTitle>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            <EuiFlexGroup responsive={false} alignItems="center">
-              <EuiFlexItem grow={false} className="guideSass__fontFamily">
+            <WuiFlexGroup responsive={false} alignItems="center">
+              <WuiFlexItem grow={false} className="guideSass__fontFamily">
                 Abc
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiCode language="css">@include euiFont;</EuiCode>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+              </WuiFlexItem>
+              <WuiFlexItem grow={false}>
+                <WuiCode language="css">@include wuiFont;</WuiCode>
+              </WuiFlexItem>
+            </WuiFlexGroup>
 
-            <EuiFlexGroup responsive={false} alignItems="center">
-              <EuiFlexItem
+            <WuiFlexGroup responsive={false} alignItems="center">
+              <WuiFlexItem
                 grow={false}
                 className="guideSass__fontFamily guideSass__fontFamily--code">
                 Abc
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiCode language="css">@include euiCodeFont;</EuiCode>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+              </WuiFlexItem>
+              <WuiFlexItem grow={false}>
+                <WuiCode language="css">@include wuiCodeFont;</WuiCode>
+              </WuiFlexItem>
+            </WuiFlexGroup>
           </div>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
       <GuideRuleTitle>Borders</GuideRuleTitle>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
-      <EuiText grow={false}>
+      <WuiText grow={false}>
         <p>
-          EUI provides some helper variables for setting common border types.
+          WUI provides some helper variables for setting common border types.
         </p>
-      </EuiText>
+      </WuiText>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        {euiBorders.map(function(border, index) {
+      <WuiFlexGrid columns={3}>
+        {wuiBorders.map(function(border, index) {
           return renderBorder(border, index);
         })}
-      </EuiFlexGrid>
+      </WuiFlexGrid>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiText grow={false}>
+      <WuiText grow={false}>
         <p>
-          In addition, you can utilize <EuiCode>$euiBorderRadius</EuiCode> to
+          In addition, you can utilize <WuiCode>$wuiBorderRadius</WuiCode> to
           round the corners.
         </p>
-      </EuiText>
+      </WuiText>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem className="guideSass__border guideSass__border--radius">
-          <EuiCodeBlock
+      <WuiFlexGrid columns={3}>
+        <WuiFlexItem className="guideSass__border guideSass__border--radius">
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {borderRadiusExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </WuiCodeBlock>
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
       <GuideRuleTitle>Shadow and Depth</GuideRuleTitle>
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Use mixins for shadows</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiText>
+          <WuiText>
             <p>
-              <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/mixins/_shadow.scss">
                 View the Sass code for shadow mixins
-              </EuiLink>
+              </WuiLink>
               .
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          {euiShadows.map(function(shadow, index) {
+          {wuiShadows.map(function(shadow, index) {
             return renderShadow(shadow, index);
           })}
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTitle size="s">
+          <WuiTitle size="s">
             <h3>Adding color to shadows</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiText>
+          <WuiText>
             <p>Most shadow mixins can also accept color.</p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <div className="guideSass__shadow guideSass__shadow--color eui-textBreakAll">
-            <EuiCodeBlock
+          <div className="guideSass__shadow guideSass__shadow--color wui-textBreakAll">
+            <WuiCodeBlock
               language="scss"
               paddingSize="none"
               transparentBackground>
-              @include euiBottomShadowLarge(desaturate($euiColorPrimary, 30%));
-            </EuiCodeBlock>
+              @include wuiBottomShadowLarge(desaturate($wuiColorPrimary, 30%));
+            </WuiCodeBlock>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Shadows to create graceful overflows</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiText>
+          <WuiText>
             <p>
               Primarily used in modals and flyouts, the overflow shadow masks
               the edges to indicate there is more content.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTitle size="xs">
+          <WuiTitle size="xs">
             <h4>
-              Vertical scrolling with <EuiCode>euiYScrollWithShadows</EuiCode>
+              Vertical scrolling with <WuiCode>euiYScrollWithShadows</WuiCode>
             </h4>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
 
-          <EuiPanel paddingSize="none" grow={false}>
+          <WuiPanel paddingSize="none" grow={false}>
             <div className="guideSass__overflowShadows">
-              <EuiText className="guideSass__overflowShadowText" size="s">
+              <WuiText className="guideSass__overflowShadowText" size="s">
                 <p>
                   It requires a wrapping element to control the height with{' '}
-                  <EuiCode>overflow-y: hidden;</EuiCode> and the content to
-                  <EuiCode>@include euiYScrollWithShadows;</EuiCode> or use the{' '}
+                  <WuiCode>overflow-y: hidden;</WuiCode> and the content to
+                  <WuiCode>@include euiYScrollWithShadows;</WuiCode> or use the{' '}
                   <Link to="/utilities/css-utility-classes">
                     CSS utility class
                   </Link>{' '}
-                  <EuiCode>.eui-yScrollWithShadows</EuiCode>.
+                  <WuiCode>.wui-yScrollWithShadows</WuiCode>.
                 </p>
                 <p>
                   <b>Example:</b>
                 </p>
-                <EuiCodeBlock language="sass" isCopyable paddingSize="s">
+                <WuiCodeBlock language="sass" isCopyable paddingSize="s">
                   {`.overflowY {
   height: 200px;
   overflow-y: hidden;
@@ -810,7 +810,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
     @include euiYScrollWithShadows;
   }
 }`}
-                </EuiCodeBlock>
+                </WuiCodeBlock>
                 <p>
                   Consequuntur atque nulla atque nemo tenetur numquam. Assumenda
                   aspernatur qui aut sit. Aliquam doloribus iure sint id.
@@ -825,216 +825,216 @@ export const SassGuidelines = ({ selectedTheme }) => {
                   velit. Quidem delectus eos veritatis et vitae et nisi.
                   Doloribus ut corrupti voluptates qui exercitationem dolores.
                 </p>
-              </EuiText>
+              </WuiText>
             </div>
-          </EuiPanel>
+          </WuiPanel>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTitle size="xs">
+          <WuiTitle size="xs">
             <h4>
-              Horizontal scrolling with <EuiCode>euiXScrollWithShadows</EuiCode>
+              Horizontal scrolling with <WuiCode>wuiXScrollWithShadows</WuiCode>
             </h4>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
 
-          <EuiPanel paddingSize="none" grow={false}>
+          <WuiPanel paddingSize="none" grow={false}>
             <div className="guideSass__overflowShadowsX">
-              <EuiText className="guideSass__overflowShadowTextX" size="s">
+              <WuiText className="guideSass__overflowShadowTextX" size="s">
                 <p>
-                  You may want to add at least <EuiCode>$euiSizeS</EuiCode>
+                  You may want to add at least <WuiCode>$euiSizeS</WuiCode>
                   &apos;s worth of padding to the sides of your content so the
                   mask doesn&apos;t overlay it.
                 </p>
                 <p>
                   <b>Example:</b>
                 </p>
-                <EuiCodeBlock language="sass" isCopyable paddingSize="s">
+                <WuiCodeBlock language="sass" isCopyable paddingSize="s">
                   {`.overflowXContent {
-  @include euiXScrollWithShadows;
+  @include wuiXScrollWithShadows;
   padding-left: $euiSizeS;
   padding-right: $euiSizeS;
 }`}
-                </EuiCodeBlock>
-              </EuiText>
+                </WuiCodeBlock>
+              </WuiText>
             </div>
-          </EuiPanel>
-          <EuiSpacer size="xl" />
-          <EuiText>
+          </WuiPanel>
+          <WuiSpacer size="xl" />
+          <WuiText>
             <p>
               If you need to further customize the position or side of the
-              overflow shadow use the <EuiCode>euiOverflowShadow</EuiCode>{' '}
-              <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">
+              overflow shadow use the <WuiCode>wuiOverflowShadow</WuiCode>{' '}
+              <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/mixins/_shadow.scss">
                 mixin
-              </EuiLink>
+              </WuiLink>
               .
             </p>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </WuiText>
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
       <GuideRuleTitle>Media queries and breakpoints</GuideRuleTitle>
 
-      <EuiText className="guideSection__text">
+      <WuiText className="guideSection__text">
         <p>
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_responsive.scss">
+          <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/mixins/_responsive.scss">
             View the Sass code for media queries
-          </EuiLink>
+          </WuiLink>
           .
         </p>
         <p>
-          Breakpoints in EUI are provided through the use of a Sass mixin{' '}
-          <EuiCode>@include euiBreakpoint()</EuiCode> that accepts an array of
+          Breakpoints in WUI are provided through the use of a Sass mixin{' '}
+          <WuiCode>@include wuiBreakpoint()</WuiCode> that accepts an array of
           sizes.
         </p>
-      </EuiText>
+      </WuiText>
 
-      <EuiSpacer />
+      <WuiSpacer />
       <div className="guideSass__breakpointExample" />
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <WuiTitle size="s">
               <h3>Breakpoint sizing</h3>
-            </EuiTitle>
+            </WuiTitle>
 
-            <EuiSpacer />
+            <WuiSpacer />
 
-            {euiBreakPoints.map(function(size, index) {
+            {wuiBreakPoints.map(function(size, index) {
               return renderBreakpoint(size, index);
             })}
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Mixin usage</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>Target mobile devices only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xs','s') {...}"}
-          </EuiCodeBlock>
+          </WuiText>
+          <WuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include wuiBreakpoint('xs','s') {...}"}
+          </WuiCodeBlock>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>Target mobile and tablets</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xs', 's', 'm') {...}"}
-          </EuiCodeBlock>
+          </WuiText>
+          <WuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include wuiBreakpoint('xs', 's', 'm') {...}"}
+          </WuiCodeBlock>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>Target tablets only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('m') {...}"}
-          </EuiCodeBlock>
+          </WuiText>
+          <WuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include wuiBreakpoint('m') {...}"}
+          </WuiCodeBlock>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText>
+          <WuiText>
             <p>Target very wide displays only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xl') {...}"}
-          </EuiCodeBlock>
+          </WuiText>
+          <WuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include wuiBreakpoint('xl') {...}"}
+          </WuiCodeBlock>
 
-          <EuiSpacer />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          <WuiSpacer />
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
 
       <GuideRuleTitle>Animation</GuideRuleTitle>
-      <EuiText grow={false} className="guideSection__text">
+      <WuiText grow={false} className="guideSection__text">
         <p>
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/variables/_animations.scss">
+          <WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/variables/_animations.scss">
             View the Sass code for animation
-          </EuiLink>
+          </WuiLink>
           .
         </p>
         <p>
-          EUI utilizes the following constants to maintain a similar
+          WUI utilizes the following constants to maintain a similar
           &apos;bounce&apos; to its animations. That said, animations are
           tricky, and if they aren&apos;t working for your specific application
           this is the one place where we think it&apos;s OK to come up with your
           own rules.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      </WuiText>
+      <WuiSpacer />
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Speed</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          {euiAnimationSpeeds.map(function(speed, index) {
+          {wuiAnimationSpeeds.map(function(speed, index) {
             return renderAnimationSpeed(speed, index);
           })}
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiTitle size="s">
             <h3>Timing</h3>
-          </EuiTitle>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          {euiAnimationTimings.map(function(speed, index) {
+          {wuiAnimationTimings.map(function(speed, index) {
             return renderAnimationTiming(speed, index);
           })}
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </WuiFlexItem>
+      </WuiFlexGrid>
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
       <GuideRuleTitle>Sass best practices</GuideRuleTitle>
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiText>
+      <WuiFlexGrid columns={2}>
+        <WuiFlexItem>
+          <WuiText>
             <h3>Component based naming</h3>
             <p>
-              EUI is written in a{' '}
-              <EuiLink href="http://getbem.com/introduction/">BEM</EuiLink>ish
+              WUI is written in a{' '}
+              <WuiLink href="http://getbem.com/introduction/">BEM</WuiLink>ish
               style with the addition of verb states (ex:{' '}
-              <EuiCode>*-isLoading</EuiCode>). Below is an example of proper
+              <WuiCode>*-isLoading</WuiCode>). Below is an example of proper
               formatting.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock
+          </WuiText>
+          <WuiSpacer />
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {bemExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiText grow={false} className="guideSection__text">
-            <h3>Writing Sass the EUI way</h3>
+          </WuiCodeBlock>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiText grow={false} className="guideSection__text">
+            <h3>Writing Sass the WUI way</h3>
             <p>
-              In general, when writing new SCSS in a project that installs EUI
+              In general, when writing new SCSS in a project that installs WUI
               as a dependency try to follow these best practices:
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiText size="s" grow={false} className="guideSection__text">
+          </WuiText>
+          <WuiSpacer />
+          <WuiText size="s" grow={false} className="guideSection__text">
             <ul>
               <li>
                 Utilize color variables and functions rather than hard-coded
@@ -1063,48 +1063,48 @@ export const SassGuidelines = ({ selectedTheme }) => {
                 nature
               </li>
             </ul>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTitle size="s">
-            <h3>Importing EUI global Sass</h3>
-          </EuiTitle>
+          <WuiTitle size="s">
+            <h3>Importing WUI global Sass</h3>
+          </WuiTitle>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiText grow={false} className="guideSection__text">
+          <WuiText grow={false} className="guideSection__text">
             <p>
-              Most EUI based projects should already import the EUI global
+              Most WUI based projects should already import the WUI global
               scope. For example, Kibana has its own liner that will give you
               everything on this page.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock
+          </WuiText>
+          <WuiSpacer />
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {importKibanaExample}
-          </EuiCodeBlock>
-          <EuiSpacer />
-          <EuiText grow={false} className="guideSection__text">
+          </WuiCodeBlock>
+          <WuiSpacer />
+          <WuiText grow={false} className="guideSection__text">
             <p>
               If you want to construct your own import, you would just need to
               import the following core files into a fresh Sass project.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiCodeBlock
+          <WuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {importOutsideExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </WuiCodeBlock>
+        </WuiFlexItem>
+      </WuiFlexGrid>
     </GuidePage>
   );
 };

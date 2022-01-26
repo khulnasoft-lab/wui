@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiErrorBoundary } from '../../../../src/components';
+import { WuiErrorBoundary } from '../../../../src/components';
 
 import ErrorBoundary from './error_boundary';
 const errorBoundarySource = require('!!raw-loader!./error_boundary');
@@ -26,11 +26,11 @@ export const ErrorBoundaryExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiErrorBoundary</strong> to prevent errors from taking
+          Use <strong>WuiErrorBoundary</strong> to prevent errors from taking
           down the entire app.
         </p>
       ),
-      props: { EuiErrorBoundary },
+      props: { WuiErrorBoundary },
       demo: <ErrorBoundary />,
     },
   ],

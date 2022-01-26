@@ -1,59 +1,59 @@
 // Nav drawer. Global application navigation.
 
-.euiNavDrawer {
-  width: $euiNavDrawerWidthCollapsed;
-  height: calc(100% - #{$euiNavDrawerTopPosition});
+.wuiNavDrawer {
+  width: $wuiNavDrawerWidthCollapsed;
+  height: calc(100% - #{$wuiNavDrawerTopPosition});
   position: fixed;
   left: 0;
-  top: $euiNavDrawerTopPosition;
+  top: $wuiNavDrawerTopPosition;
   overflow: hidden;
-  z-index: $euiZHeader;
-  background: $euiHeaderBackgroundColor;
-  box-shadow: $euiNavDrawerSideShadow;
-  transition: width $euiAnimSpeedExtraFast $euiAnimSlightResistance;
+  z-index: $wuiZHeader;
+  background: $wuiHeaderBackgroundColor;
+  box-shadow: $wuiNavDrawerSideShadow;
+  transition: width $wuiAnimSpeedExtraFast $wuiAnimSlightResistance;
   display: flex;
 
-  .euiNavDrawerMenu {
-    @include euiScrollBar;
+  .wuiNavDrawerMenu {
+    @include wuiScrollBar;
     overflow-y: auto;
     overflow-x: hidden;
-    width: $euiNavDrawerWidthCollapsed;
+    width: $wuiNavDrawerWidthCollapsed;
     height: 100%;
 
     &-hasFooter {
       margin-bottom: $euiSizeXXL;
     }
 
-    .euiAccordion__button {
+    .wuiAccordion__button {
       padding: $euiSizeS;
     }
 
-    .euiListGroupItem__button {
+    .wuiListGroupItem__button {
       padding: $euiSizeM $euiSize;
     }
   }
 
-  .euiNavDrawer__expandButton {
-    @include euiBottomShadowFlat;
+  .wuiNavDrawer__expandButton {
+    @include wuiBottomShadowFlat;
     background-color: $euiColorEmptyShade;
     position: fixed;
     bottom: 0;
-    width: $euiNavDrawerWidthCollapsed;
-    transition: width $euiAnimSpeedExtraFast;
-    z-index: $euiZHeader + 1;
+    width: $wuiNavDrawerWidthCollapsed;
+    transition: width $wuiAnimSpeedExtraFast;
+    z-index: $wuiZHeader + 1;
 
 
-    .navDrawerExpandButton-isCollapsed .euiListGroupItem__button {
+    .navDrawerExpandButton-isCollapsed .wuiListGroupItem__button {
       max-width: 100%;
     }
   }
 
-  &.euiNavDrawer-isCollapsed  {
-    &.euiNavDrawer-flyoutIsExpanded {
-      width: $euiNavDrawerWidthCollapsed + $euiNavDrawerWidthExpanded;
+  &.wuiNavDrawer-isCollapsed  {
+    &.wuiNavDrawer-flyoutIsExpanded {
+      width: $wuiNavDrawerWidthCollapsed + $wuiNavDrawerWidthExpanded;
     }
 
-    .euiNavDrawerMenu {
+    .wuiNavDrawerMenu {
       // Prevents scrollbar from overlapping links in collapsed form
       // sass-lint:disable-block no-vendor-prefixes
       // sass-lint:disable-block no-misspelled-properties
@@ -65,98 +65,98 @@
         height: 0;
       }
 
-      .euiListGroupItem__extraAction {
+      .wuiListGroupItem__extraAction {
         // Hides extra action from scrolling into view when tabbing in the collapsed view
         visibility: hidden;
       }
     }
   }
 
-  &.euiNavDrawer-isExpanded {
-    width: $euiNavDrawerWidthExpanded;
+  &.wuiNavDrawer-isExpanded {
+    width: $wuiNavDrawerWidthExpanded;
 
-    .euiNavDrawerMenu,
-    .euiNavDrawer__expandButton {
-      width: $euiNavDrawerWidthExpanded;
+    .wuiNavDrawerMenu,
+    .wuiNavDrawer__expandButton {
+      width: $wuiNavDrawerWidthExpanded;
     }
 
-    &.euiNavDrawer-flyoutIsExpanded {
-      width: $euiNavDrawerWidthExpanded + $euiNavDrawerWidthCollapsed;
+    &.wuiNavDrawer-flyoutIsExpanded {
+      width: $wuiNavDrawerWidthExpanded + $wuiNavDrawerWidthCollapsed;
     }
   }
 }
 
-.euiNavDrawerPage {
+.wuiNavDrawerPage {
   height: 100%;
 
-  .euiNavDrawerPage__pageBody {
-    margin-left: $euiNavDrawerWidthCollapsed;
+  .wuiNavDrawerPage__pageBody {
+    margin-left: $wuiNavDrawerWidthCollapsed;
   }
 }
 
-.euiBody--navDrawerIsDocked {
-  padding-left: $euiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
-  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+.wuiBody--navDrawerIsDocked {
+  padding-left: $wuiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
+  transition: padding $wuiAnimSpeedFast $wuiAnimSlightResistance;
 }
 
-.euiBody--navDrawerNotDocked {
-  padding-left: $euiNavDrawerWidthCollapsed !important; // sass-lint:disable-line no-important
-  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+.wuiBody--navDrawerNotDocked {
+  padding-left: $wuiNavDrawerWidthCollapsed !important; // sass-lint:disable-line no-important
+  transition: padding $wuiAnimSpeedFast $wuiAnimSlightResistance;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiBody--navDrawerNotDocked {
+@include wuiBreakpoint('xs', 's') {
+  .wuiBody--navDrawerNotDocked {
     padding-left: unset !important; // sass-lint:disable-line no-important
   }
 
-  .euiNavDrawer {
+  .wuiNavDrawer {
     width: 0;
 
-    &.euiNavDrawer-isExpanded .euiNavDrawerMenu {
-      .euiListGroupItem__icon {
+    &.wuiNavDrawer-isExpanded .wuiNavDrawerMenu {
+      .wuiListGroupItem__icon {
         margin-right: $euiSizeM;
       }
     }
 
-    &.euiNavDrawer-flyoutIsCollapsed .euiNavDrawerFlyout {
+    &.wuiNavDrawer-flyoutIsCollapsed .wuiNavDrawerFlyout {
       width: 0;
       transition-duration: 0s;
     }
 
     // No expand toggle on mobile
 
-    .euiNavDrawerMenu-hasFooter {
+    .wuiNavDrawerMenu-hasFooter {
       margin-bottom: 0;
     }
 
-    .euiNavDrawer__expandButton {
+    .wuiNavDrawer__expandButton {
       display: none;
     }
   }
 
-  .euiNavDrawerPage .euiNavDrawerPage__pageBody {
+  .wuiNavDrawerPage .wuiNavDrawerPage__pageBody {
     margin-left: 0;
   }
 }
 
-@include euiBreakpoint('xs', 's', 'm', 'l') {
-  .euiNavDrawer__expandButtonLockAction {
+@include wuiBreakpoint('xs', 's', 'm', 'l') {
+  .wuiNavDrawer__expandButtonLockAction {
     display: none;
   }
 }
 
-@include euiBreakpoint('xl') {
-  .euiNavDrawer-isLocked {
-    + .euiNavDrawerPage .euiNavDrawerPage__pageBody {
+@include wuiBreakpoint('xl') {
+  .wuiNavDrawer-isLocked {
+    + .wuiNavDrawerPage .wuiNavDrawerPage__pageBody {
       // Shrink the content from the left so it's no longer overlapped by the nav drawer (ALWAYS)
-      margin-left: $euiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
-      transition: margin $euiAnimSpeedFast $euiAnimSlightResistance;
+      margin-left: $wuiNavDrawerWidthExpanded !important; // sass-lint:disable-line no-important
+      transition: margin $wuiAnimSpeedFast $wuiAnimSlightResistance;
     }
 
-    &.euiNavDrawer-flyoutIsExpanded {
+    &.wuiNavDrawer-flyoutIsExpanded {
       // Instead of one collapsed and one expanded, they're now both expanded
       // Double the width of expanded sidebars
-      width: $euiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
+      width: $wuiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
       // Prevents a shift in the main menu on initial open.
       // The lack of horizontal transition is less alarming than the shift.
       transition: none;
@@ -165,7 +165,7 @@
 
   // In case they unlock while the flyout is expanded,
   // the nav drawer doesn't actually get collapsed until an interaction
-  .euiNavDrawer-isExpanded.euiNavDrawer-flyoutIsExpanded {
-    width: $euiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
+  .wuiNavDrawer-isExpanded.wuiNavDrawer-flyoutIsExpanded {
+    width: $wuiNavDrawerWidthExpanded * 2 !important; // sass-lint:disable-line no-important
   }
 }

@@ -20,26 +20,26 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiColorPicker } from './color_picker';
+import { WuiColorPicker } from './color_picker';
 import { VISUALIZATION_COLORS, keys } from '../../services';
 import { requiredProps, findTestSubject, sleep } from '../../test';
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  WuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const onChange = jest.fn();
 
-test('renders EuiColorPicker', () => {
+test('renders WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders compressed EuiColorPicker', () => {
+test('renders compressed WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       compressed={true}
@@ -49,9 +49,9 @@ test('renders compressed EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders readOnly EuiColorPicker', () => {
+test('renders readOnly WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       readOnly={true}
@@ -61,9 +61,9 @@ test('renders readOnly EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders fullWidth EuiColorPicker', () => {
+test('renders fullWidth WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       fullWidth={true}
@@ -73,9 +73,9 @@ test('renders fullWidth EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders disabled EuiColorPicker', () => {
+test('renders disabled WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       disabled={true}
@@ -85,9 +85,9 @@ test('renders disabled EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders inline EuiColorPicker', () => {
+test('renders inline WuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       display="inline"
@@ -97,9 +97,9 @@ test('renders inline EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders a EuiColorPicker with a prepend and append', () => {
+test('renders a WuiColorPicker with a prepend and append', () => {
   const component = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       prepend="prepend"
@@ -111,9 +111,9 @@ test('renders a EuiColorPicker with a prepend and append', () => {
   expect(component).toMatchSnapshot();
 });
 
-test('renders a EuiColorPicker with an alpha range selector', () => {
+test('renders a WuiColorPicker with an alpha range selector', () => {
   const component = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       showAlpha={true}
@@ -124,37 +124,37 @@ test('renders a EuiColorPicker with an alpha range selector', () => {
   expect(component).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with an empty swatch when color is null', () => {
+test('renders WuiColorPicker with an empty swatch when color is null', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={null} {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color={null} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with an empty swatch when color is ""', () => {
+test('renders WuiColorPicker with an empty swatch when color is ""', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={''} {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color={''} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a color swatch when color is defined', () => {
+test('renders WuiColorPicker with a color swatch when color is defined', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={'#ffffff'} {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color={'#ffffff'} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a custom placeholder', () => {
+test('renders WuiColorPicker with a custom placeholder', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} placeholder="Auto" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} placeholder="Auto" {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a clearable input', () => {
+test('renders WuiColorPicker with a clearable input', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color={'#ffeedd'}
       isClearable={true}
@@ -166,7 +166,7 @@ test('renders EuiColorPicker with a clearable input', () => {
 
 test('popover color selector is not shown by default', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
   const colorSelector = findTestSubject(colorPicker, 'colorPickerPopover');
@@ -176,7 +176,7 @@ test('popover color selector is not shown by default', () => {
 test('popover color selector is shown when the input is clicked', () => {
   const onFocusHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       onFocus={onFocusHandler}
       color="#ffeedd"
@@ -193,7 +193,7 @@ test('popover color selector is shown when the input is clicked', () => {
 test('popover color selector is hidden when the ESC key pressed', async () => {
   const onBlurHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       onBlur={onBlurHandler}
@@ -213,7 +213,7 @@ test('popover color selector is hidden when the ESC key pressed', async () => {
 test('popover color selector is hidden and input regains focus when the ENTER key pressed', () => {
   const onBlurHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       onBlur={onBlurHandler}
@@ -222,7 +222,7 @@ test('popover color selector is hidden and input regains focus when the ENTER ke
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
-  findTestSubject(colorPicker, 'euiSaturation').simulate('keydown', {
+  findTestSubject(colorPicker, 'wuiSaturation').simulate('keydown', {
     key: keys.ENTER,
   });
   expect(
@@ -234,7 +234,7 @@ test('popover color selector is hidden and input regains focus when the ENTER ke
 
 test('Setting a new color calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
@@ -252,11 +252,11 @@ test('Setting a new color calls onChange', () => {
 
 test('Clicking a swatch calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.wuiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
   swatches.first().simulate('click');
   expect(onChange).toBeCalled();
@@ -269,7 +269,7 @@ test('Clicking a swatch calls onChange', () => {
 
 test('Setting a new alpha value calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       showAlpha={true}
@@ -303,7 +303,7 @@ test('Setting a new alpha value calls onChange', () => {
 
 test('Clicking the "clear" button calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       isClearable={true}
@@ -311,7 +311,7 @@ test('Clicking the "clear" button calls onChange', () => {
     />
   );
 
-  colorPicker.find('.euiFormControlLayoutClearButton').simulate('click');
+  colorPicker.find('.wuiFormControlLayoutClearButton').simulate('click');
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith('', {
     hex: '',
@@ -322,21 +322,21 @@ test('Clicking the "clear" button calls onChange', () => {
 
 test('default mode does renders child components', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <WuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
-  const saturation = findTestSubject(colorPicker, 'euiSaturation');
+  const saturation = findTestSubject(colorPicker, 'wuiSaturation');
   expect(saturation.length).toBe(1);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('WuiHue');
   expect(hue.length).toBe(1);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.wuiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
 });
 
-test('swatch mode does not render EuiSaturation or EuiHue', () => {
+test('swatch mode does not render WuiSaturation or WuiHue', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       mode="swatch"
       color="#ffeedd"
@@ -345,17 +345,17 @@ test('swatch mode does not render EuiSaturation or EuiHue', () => {
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
-  const saturation = colorPicker.find('EuiSaturation');
+  const saturation = colorPicker.find('WuiSaturation');
   expect(saturation.length).toBe(0);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('WuiHue');
   expect(hue.length).toBe(0);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.wuiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
 });
 
 test('picker mode does not render swatches', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       mode="picker"
       color="#ffeedd"
@@ -364,17 +364,17 @@ test('picker mode does not render swatches', () => {
   );
 
   findTestSubject(colorPicker, 'colorPickerAnchor').simulate('click');
-  const saturation = findTestSubject(colorPicker, 'euiSaturation');
+  const saturation = findTestSubject(colorPicker, 'wuiSaturation');
   expect(saturation.length).toBe(1);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('WuiHue');
   expect(hue.length).toBe(1);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.wuiColorPicker__swatchSelect');
   expect(swatches.length).toBe(0);
 });
 
 test('secondaryInputDisplay `top` has a popover panel input', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       secondaryInputDisplay="top"
       color="#ffeedd"
@@ -391,7 +391,7 @@ test('secondaryInputDisplay `top` has a popover panel input', () => {
 
 test('secondaryInputDisplay `bottom` has a popover panel input', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <WuiColorPicker
       onChange={onChange}
       secondaryInputDisplay="bottom"
       color="#ffeedd"

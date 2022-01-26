@@ -1,25 +1,25 @@
-.euiTableRowCell__mobileHeader {
+.wuiTableRowCell__mobileHeader {
   // Don't display by default unless table is responsive
   display: none;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiTableRowCell--hideForMobile { // must come last to override any special cases
+@include wuiBreakpoint('xs', 's') {
+  .wuiTableRowCell--hideForMobile { // must come last to override any special cases
     // sass-lint:disable-block no-important
     display: none !important;
   }
 }
 
-@include euiBreakpoint('m', 'l', 'xl') {
-  .euiTableRowCell--hideForDesktop { // must come last to override any special cases
+@include wuiBreakpoint('m', 'l', 'xl') {
+  .wuiTableRowCell--hideForDesktop { // must come last to override any special cases
     // sass-lint:disable-block no-important
     display: none !important;
   }
 }
 
-@include euiBreakpoint('xs', 's') {
+@include wuiBreakpoint('xs', 's') {
 
-  .euiTable.euiTable--responsive {
+  .wuiTable.wuiTable--responsive {
     // Not allowing compressed styles in mobile view (for now)
 
     thead {
@@ -31,9 +31,9 @@
     }
 
     // Make each row a Panel
-    @include euiPanel($selector: '.euiTableRow');
+    @include wuiPanel($selector: '.wuiTableRow');
 
-    .euiTableRowCell__mobileHeader {
+    .wuiTableRowCell__mobileHeader {
       // Always truncate
       @include euiTextTruncate;
       @include fontSize($euiFontSize * .6875);
@@ -46,95 +46,95 @@
       min-height: $euiSizeL; // aligns contents of cells if header doesn't exist
 
       // Remove min-height of cell header if it's the only cell
-      .euiTableRowCell:only-child & {
+      .wuiTableRowCell:only-child & {
         min-height: 0;
       }
     }
 
-    .euiTableRowCell--enlargeForMobile {
+    .wuiTableRowCell--enlargeForMobile {
       @include euiFontSize;
     }
 
-    .euiTableRowCell--isMobileFullWidth {
+    .wuiTableRowCell--isMobileFullWidth {
       width: 100%;
 
-      .euiTableCellContent--alignCenter {
+      .wuiTableCellContent--alignCenter {
         justify-content: center;
         text-align: center;
       }
     }
 
-    .euiTableRow {
+    .wuiTableRow {
       display: flex;
       flex-wrap: wrap;
-      padding: $euiTableCellContentPadding;
-      margin-bottom: $euiTableCellContentPadding;
+      padding: $wuiTableCellContentPadding;
+      margin-bottom: $wuiTableCellContentPadding;
 
       &:hover {
         background-color: transparent;
       }
 
-      &.euiTableRow-isExpandable,
-      &.euiTableRow-hasActions {
-        @include euiTableActionsBackgroundMobile;
+      &.wuiTableRow-isExpandable,
+      &.wuiTableRow-hasActions {
+        @include wuiTableActionsBackgroundMobile;
         padding-right: $euiSizeXXL;
         position: relative;
       }
 
-      &.euiTableRow-isExpandable .euiTableRowCell--isExpander,
-      &.euiTableRow-hasActions .euiTableRowCell--hasActions {
+      &.wuiTableRow-isExpandable .wuiTableRowCell--isExpander,
+      &.wuiTableRow-hasActions .wuiTableRowCell--hasActions {
         min-width: 0;
         width: $euiSizeL;
         position: absolute;
-        top: $euiTableCellContentPadding + (($euiTableCellContentPadding * $euiLineHeight) - $euiTableCellContentPadding) + $euiSizeXS; // same as row padding-top + cell padding + 1/2 line height
-        right: $euiTableCellContentPadding;
+        top: $wuiTableCellContentPadding + (($wuiTableCellContentPadding * $wuiLineHeight) - $wuiTableCellContentPadding) + $euiSizeXS; // same as row padding-top + cell padding + 1/2 line height
+        right: $wuiTableCellContentPadding;
 
         &::before {
           display: none; // Don't display table headers
         }
 
-        .euiTableCellContent {
+        .wuiTableCellContent {
           flex-direction: column;
           padding: 0;
 
-          .euiLink {
+          .wuiLink {
             padding: $euiSizeXS;
           }
         }
       }
 
-      &.euiTableRow-hasActions.euiTableRow-isExpandable {
-        .euiTableRowCell--isExpander {
+      &.wuiTableRow-hasActions.wuiTableRow-isExpandable {
+        .wuiTableRowCell--isExpander {
           top: auto;
           bottom: $euiSize; // same as row padding-bottom
         }
       }
 
-      &.euiTableRow-isSelectable {
-        padding-left: $euiTableCellCheckboxWidth + ($euiTableCellContentPadding / 2);
+      &.wuiTableRow-isSelectable {
+        padding-left: $wuiTableCellCheckboxWidth + ($wuiTableCellContentPadding / 2);
         position: relative;
 
-        .euiTableRowCellCheckbox {
+        .wuiTableRowCellCheckbox {
           position: absolute;
-          left: $euiTableCellContentPadding / 2;
+          left: $wuiTableCellContentPadding / 2;
           top: $euiSizeS;
         }
       }
 
       // override hover & selected colors
-      &.euiTableRow-isSelected {
+      &.wuiTableRow-isSelected {
         &,
         &:hover,
-        + .euiTableRow.euiTableRow-isExpandedRow,
-        &:hover + .euiTableRow.euiTableRow-isExpandedRow .euiTableRowCell {
-          background-color: $euiTableSelectedColor;
+        + .wuiTableRow.wuiTableRow-isExpandedRow,
+        &:hover + .wuiTableRow.wuiTableRow-isExpandedRow .wuiTableRowCell {
+          background-color: $wuiTableSelectedColor;
         }
       }
 
-      &.euiTableRow-isExpandedRow {
-        @include euiTableActionsBackgroundMobile;
-        @include euiBottomShadowSmall;
-        margin-top: -$euiTableCellContentPadding * 2;
+      &.wuiTableRow-isExpandedRow {
+        @include wuiTableActionsBackgroundMobile;
+        @include wuiBottomShadowSmall;
+        margin-top: -$wuiTableCellContentPadding * 2;
         position: relative;
         z-index: 2; // on top of its parent/previous row
         border-top: none;
@@ -146,7 +146,7 @@
           background-color: $euiColorEmptyShade; // keep white background to cover triggering row's border
         }
 
-        .euiTableRowCell {
+        .wuiTableRowCell {
           width: calc(100% - #{$euiSizeXXL});
 
           &::before {
@@ -156,18 +156,18 @@
       }
     }
 
-    .euiTableRowCell {
+    .wuiTableRowCell {
       display: block; /* IE requires block to grow and wrap. */
       min-width: 50%;
       border: none;
     }
 
-    .euiTableRowCellCheckbox {
+    .wuiTableRowCellCheckbox {
       border: none;
     }
 
     // never show hidden items and always show hover items on mobile,
-    .euiTableRow-hasActions .euiTableCellContent--showOnHover {
+    .wuiTableRow-hasActions .wuiTableCellContent--showOnHover {
       > * {
         margin-left: 0;
       }
@@ -176,7 +176,7 @@
         display: none;
       }
 
-      .euiTableCellContent__hoverItem {
+      .wuiTableCellContent__hoverItem {
         opacity: 1;
         filter: none;
         margin-left: 0;
@@ -185,11 +185,11 @@
     }
 
     // force all content back to left side
-    .euiTableCellContent--alignRight {
+    .wuiTableCellContent--alignRight {
       justify-content: flex-start;
     }
 
-    .euiTableCellContent--alignCenter {
+    .wuiTableCellContent--alignCenter {
       justify-content: flex-start;
     }
   }

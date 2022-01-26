@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiModalBody } from './modal_body';
+import { WuiModalBody } from './modal_body';
 
-test('renders EuiModalBody', () => {
-  const component = <EuiModalBody {...requiredProps}>children</EuiModalBody>;
+test('renders WuiModalBody', () => {
+  const component = <WuiModalBody {...requiredProps}>children</WuiModalBody>;
   expect(render(component)).toMatchSnapshot();
 });

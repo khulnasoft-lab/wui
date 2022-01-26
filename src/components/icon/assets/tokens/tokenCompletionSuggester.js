@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconTokenCompletionSuggester = ({ title, titleId, ...props }) => (
+const WuiIconTokenCompletionSuggester = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -18,4 +18,4 @@ const EuiIconTokenCompletionSuggester = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenCompletionSuggester;
+export const icon = WuiIconTokenCompletionSuggester;

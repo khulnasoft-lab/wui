@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import { EuiText } from '../../../../src/components/text';
-import { EuiBadge } from '../../../../src/components/badge';
-import { EuiSelectableTemplateSitewide } from '../../../../src/components/selectable';
-import { EuiSelectableTemplateSitewideOption } from '../../../../src/components/selectable/selectable_templates/selectable_template_sitewide_option';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiLink } from '../../../../src/components/link';
-import { EuiButton } from '../../../../src/components/button';
+import { WuiText } from '../../../../src/components/text';
+import { WuiBadge } from '../../../../src/components/badge';
+import { WuiSelectableTemplateSitewide } from '../../../../src/components/selectable';
+import { WuiSelectableTemplateSitewideOption } from '../../../../src/components/selectable/selectable_templates/selectable_template_sitewide_option';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
+import { WuiLink } from '../../../../src/components/link';
+import { WuiButton } from '../../../../src/components/button';
 
 export default () => {
   const [searchValue, setSearchValue] = useState('');
@@ -31,7 +31,7 @@ export default () => {
    * Take the first 5 options and simulate recently viewed
    */
   const recents = searchData.slice(0, 5);
-  const recentsWithIcon: EuiSelectableTemplateSitewideOption[] = recents.map(
+  const recentsWithIcon: WuiSelectableTemplateSitewideOption[] = recents.map(
     recent => {
       return {
         ...recent,
@@ -73,14 +73,14 @@ export default () => {
   /**
    * Do something with the selection based on the found option with `checked: on`
    */
-  const onChange = (updatedOptions: EuiSelectableTemplateSitewideOption[]) => {
+  const onChange = (updatedOptions: WuiSelectableTemplateSitewideOption[]) => {
     const clickedItem = updatedOptions.find(option => option.checked === 'on');
     if (!clickedItem) return;
     if (clickedItem && clickedItem.url) console.log(clickedItem.url);
   };
 
   return (
-    <EuiSelectableTemplateSitewide
+    <WuiSelectableTemplateSitewide
       isLoading={isLoading}
       onChange={onChange}
       options={searchValueExists ? searchData : recentsWithIcon}
@@ -96,25 +96,25 @@ export default () => {
       popoverProps={{
         className: 'customPopoverClass',
       }}
-      popoverButton={<EuiButton>Mobile toggle</EuiButton>}
+      popoverButton={<WuiButton>Mobile toggle</WuiButton>}
       popoverButtonBreakpoints={['xs', 's']}
       popoverFooter={
-        <EuiText color="subdued" size="xs">
-          <EuiFlexGroup
+        <WuiText color="subdued" size="xs">
+          <WuiFlexGroup
             alignItems="center"
             gutterSize="s"
             responsive={false}
             wrap>
-            <EuiFlexItem grow={false}>
-              {searchValueExists && <EuiLink>View more results</EuiLink>}
-            </EuiFlexItem>
-            <EuiFlexItem />
-            <EuiFlexItem grow={false}>Quickly search using</EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>Command + K</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiText>
+            <WuiFlexItem grow={false}>
+              {searchValueExists && <WuiLink>View more results</WuiLink>}
+            </WuiFlexItem>
+            <WuiFlexItem />
+            <WuiFlexItem grow={false}>Quickly search using</WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiBadge>Command + K</WuiBadge>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+        </WuiText>
       }
     />
   );
@@ -123,7 +123,7 @@ export default () => {
 /**
  * The options object
  */
-const searchData: EuiSelectableTemplateSitewideOption[] = [
+const searchData: WuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Welcome dashboards',
     avatar: {
@@ -189,23 +189,8 @@ const searchData: EuiSelectableTemplateSitewideOption[] = [
     label: 'Dashboards',
     url: 'dashboards',
     icon: {
-      type: 'logoKibana',
+      type: 'logoWazuh',
     },
-  },
-  {
-    label:
-      'Generate HAR Archive of Network Timings/Details for Kibana requests',
-    meta: [
-      {
-        text: 'Article',
-        type: 'article',
-      },
-      {
-        text:
-          'https://discuss.elastic.co/t/generate-har-archive-of-network-timings',
-        highlightSearchString: true,
-      },
-    ],
   },
   {
     label: '[Logs] Web Traffic',
@@ -281,7 +266,7 @@ const searchData: EuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Maps',
     url: 'maps',
-    icon: { type: 'logoKibana' },
+    icon: { type: 'logoWazuh' },
     meta: [
       {
         text: 'Analyze application',
@@ -291,8 +276,8 @@ const searchData: EuiSelectableTemplateSitewideOption[] = [
     space: 'Hello World',
   },
   {
-    label: 'Kibana monitoring with MB',
-    searchableLabel: 'Kibana monitoring with MB; Case no. 00508173',
+    label: 'Wazuh monitoring with MB',
+    searchableLabel: 'Wazuh monitoring with MB; Case no. 00508173',
     meta: [
       {
         text: 'Case',

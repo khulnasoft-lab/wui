@@ -21,23 +21,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiForm } from './form';
+import { WuiForm } from './form';
 
-describe('EuiForm', () => {
+describe('WuiForm', () => {
   test('is rendered', () => {
-    const component = render(<EuiForm {...requiredProps} />);
+    const component = render(<WuiForm {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders a form element', () => {
-    const component = render(<EuiForm {...requiredProps} component="form" />);
+    const component = render(<WuiForm {...requiredProps} component="form" />);
 
     expect(component).toMatchSnapshot();
   });
   test('renders without error callout when invalidCallout is "none"', () => {
     const component = render(
-      <EuiForm {...requiredProps} isInvalid invalidCallout="none" />
+      <WuiForm {...requiredProps} isInvalid invalidCallout="none" />
     );
 
     expect(component).toMatchSnapshot();

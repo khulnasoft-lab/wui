@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiSuggestItem, EuiSpacer } from '../../../../src/components';
+import { WuiSuggestItem, WuiSpacer } from '../../../../src/components';
 
 const shortDescription = 'This is the description';
 
@@ -43,27 +43,27 @@ const longLabel =
 export default () => (
   <div>
     {sampleItems.map((item, index) => (
-      <EuiSuggestItem
+      <WuiSuggestItem
         type={item.type}
         key={index}
         label={item.label}
         description={item.description}
       />
     ))}
-    <EuiSpacer size="m" />
-    <EuiSuggestItem
+    <WuiSpacer size="m" />
+    <WuiSuggestItem
       type={typeObj}
       label={longLabel}
       description="This item has a fixed width label"
     />
-    <EuiSuggestItem
+    <WuiSuggestItem
       type={typeObj}
       labelDisplay="expand"
       label={longLabel}
       description="This item will expand its label if needed"
     />
-    <EuiSpacer size="m" />
-    <EuiSuggestItem
+    <WuiSpacer size="m" />
+    <WuiSuggestItem
       type={{ iconType: 'search', color: 'tint10' }}
       label="Items with no description will expand their label"
     />

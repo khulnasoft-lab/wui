@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonToggle,
-  EuiSpacer,
-  EuiTitle,
+  WuiButtonToggle,
+  WuiSpacer,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -27,21 +27,21 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonToggle
+      <WuiButtonToggle
         label="Toggle Me"
         iconType={toggle0On ? 'starPlusEmpty' : 'starFilledSpace'}
         onChange={onToggle0Change}
         isSelected={toggle0On}
       />
       &emsp;
-      <EuiButtonToggle
+      <WuiButtonToggle
         label={toggle1On ? "I'm a filled toggle" : "I'm a primary toggle"}
         fill={toggle1On}
         onChange={onToggle1Change}
         isSelected={toggle1On}
       />
       &emsp;
-      <EuiButtonToggle
+      <WuiButtonToggle
         label="Toggle Me"
         iconType={toggle4On ? 'eye' : 'eyeClosed'}
         onChange={onToggle4Change}
@@ -49,19 +49,19 @@ export default () => {
         isEmpty
         isIconOnly
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <WuiSpacer size="m" />
+      <WuiTitle size="xxs">
         <h3>Disabled</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonToggle
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiButtonToggle
         isDisabled
         label="Can't toggle this"
         fill={toggle2On}
         isSelected={toggle2On}
       />
       &emsp;
-      <EuiButtonToggle
+      <WuiButtonToggle
         isDisabled
         label="Can't toggle this either"
         fill={toggle3On}

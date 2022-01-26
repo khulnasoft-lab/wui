@@ -23,36 +23,36 @@ import moment, { Moment, LocaleSpecifier } from 'moment'; // eslint-disable-line
 
 import dateMath from '@elastic/datemath';
 
-import { EuiDatePicker, EuiDatePickerProps } from '../../date_picker';
-import { EuiFormRow, EuiFieldText, EuiFormLabel } from '../../../form';
+import { WuiDatePicker, WuiDatePickerProps } from '../../date_picker';
+import { WuiFormRow, WuiFieldText, WuiFormLabel } from '../../../form';
 import { toSentenceCase } from '../../../../services/string/to_case';
-import { EuiDatePopoverContentProps } from './date_popover_content';
+import { WuiDatePopoverContentProps } from './date_popover_content';
 
-export interface EuiAbsoluteTabProps {
+export interface WuiAbsoluteTabProps {
   dateFormat: string;
   timeFormat: string;
   locale?: LocaleSpecifier;
   value: string;
-  onChange: EuiDatePopoverContentProps['onChange'];
+  onChange: WuiDatePopoverContentProps['onChange'];
   roundUp: boolean;
   position: 'start' | 'end';
   utcOffset?: number;
 }
 
-interface EuiAbsoluteTabState {
+interface WuiAbsoluteTabState {
   isTextInvalid: boolean;
   sentenceCasedPosition: string;
   textInputValue: string;
   valueAsMoment: Moment | null;
 }
 
-export class EuiAbsoluteTab extends Component<
-  EuiAbsoluteTabProps,
-  EuiAbsoluteTabState
+export class WuiAbsoluteTab extends Component<
+  WuiAbsoluteTabProps,
+  WuiAbsoluteTabState
 > {
-  state: EuiAbsoluteTabState;
+  state: WuiAbsoluteTabState;
 
-  constructor(props: EuiAbsoluteTabProps) {
+  constructor(props: WuiAbsoluteTabProps) {
     super(props);
 
     const sentenceCasedPosition = toSentenceCase(props.position);
@@ -73,7 +73,7 @@ export class EuiAbsoluteTab extends Component<
     };
   }
 
-  handleChange: EuiDatePickerProps['onChange'] = (date, event) => {
+  handleChange: WuiDatePickerProps['onChange'] = (date, event) => {
     const { onChange } = this.props;
     if (date === null) {
       return;
@@ -117,7 +117,7 @@ export class EuiAbsoluteTab extends Component<
 
     return (
       <div>
-        <EuiDatePicker
+        <WuiDatePicker
           inline
           showTimeSelect
           shadow={false}
@@ -128,19 +128,19 @@ export class EuiAbsoluteTab extends Component<
           locale={locale}
           utcOffset={utcOffset}
         />
-        <EuiFormRow
-          className="euiSuperDatePicker__absoluteDateFormRow"
+        <WuiFormRow
+          className="wuiSuperDatePicker__absoluteDateFormRow"
           isInvalid={isTextInvalid}
           error={isTextInvalid ? `Expected format ${dateFormat}` : undefined}>
-          <EuiFieldText
+          <WuiFieldText
             compressed
             isInvalid={isTextInvalid}
             value={textInputValue}
             onChange={this.handleTextChange}
             data-test-subj={'superDatePickerAbsoluteDateInput'}
-            prepend={<EuiFormLabel>{sentenceCasedPosition} date</EuiFormLabel>}
+            prepend={<WuiFormLabel>{sentenceCasedPosition} date</WuiFormLabel>}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       </div>
     );
   }

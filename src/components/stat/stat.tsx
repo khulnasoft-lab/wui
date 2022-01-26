@@ -27,26 +27,26 @@ import React, {
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
-import { EuiText } from '../text';
-import { EuiTitle, EuiTitleSize } from '../title/title';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { WuiText } from '../text';
+import { WuiTitle, WuiTitleSize } from '../title/title';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiI18n } from '../i18n';
 
 const colorToClassNameMap = {
   default: null,
-  subdued: 'euiStat__title--subdued',
-  primary: 'euiStat__title--primary',
-  secondary: 'euiStat__title--secondary',
-  danger: 'euiStat__title--danger',
-  accent: 'euiStat__title--accent',
+  subdued: 'wuiStat__title--subdued',
+  primary: 'wuiStat__title--primary',
+  secondary: 'wuiStat__title--secondary',
+  danger: 'wuiStat__title--danger',
+  accent: 'wuiStat__title--accent',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const textAlignToClassNameMap = {
-  left: 'euiStat--leftAligned',
-  center: 'euiStat--centerAligned',
-  right: 'euiStat--rightAligned',
+  left: 'wuiStat--leftAligned',
+  center: 'wuiStat--centerAligned',
+  right: 'wuiStat--rightAligned',
 };
 
 export const isColorClass = (
@@ -57,7 +57,7 @@ export const isColorClass = (
 
 export const ALIGNMENTS = keysOf(textAlignToClassNameMap);
 
-export interface EuiStatProps {
+export interface WuiStatProps {
   /**
    * Set the description (label) text
    */
@@ -80,9 +80,9 @@ export interface EuiStatProps {
    */
   titleColor?: keyof typeof colorToClassNameMap | string;
   /**
-   * Size of the title. See EuiTitle for options ('s', 'm', 'l'... etc)
+   * Size of the title. See WuiTitle for options ('s', 'm', 'l'... etc)
    */
-  titleSize?: EuiTitleSize;
+  titleSize?: WuiTitleSize;
   /**
    * HTML Element to be used for title
    */
@@ -93,9 +93,9 @@ export interface EuiStatProps {
   descriptionElement?: string;
 }
 
-export const EuiStat: FunctionComponent<CommonProps &
+export const WuiStat: FunctionComponent<CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> &
-  EuiStatProps> = ({
+  WuiStatProps> = ({
   children,
   className,
   description,
@@ -110,16 +110,16 @@ export const EuiStat: FunctionComponent<CommonProps &
   ...rest
 }) => {
   const classes = classNames(
-    'euiStat',
+    'wuiStat',
     textAlignToClassNameMap[textAlign],
     className
   );
 
   const titleClasses = classNames(
-    'euiStat__title',
+    'wuiStat__title',
     isColorClass(titleColor) ? colorToClassNameMap[titleColor] : null,
     {
-      'euiStat__title-isLoading': isLoading,
+      'wuiStat__title-isLoading': isLoading,
     }
   );
 
@@ -128,9 +128,9 @@ export const EuiStat: FunctionComponent<CommonProps &
   };
 
   const descriptionDisplay = (
-    <EuiText size="s" className="euiStat__description">
+    <WuiText size="s" className="wuiStat__description">
       {createElement(descriptionElement, commonProps, description)}
-    </EuiText>
+    </WuiText>
   );
 
   const titlePropsWithColor = {
@@ -143,27 +143,27 @@ export const EuiStat: FunctionComponent<CommonProps &
   const titleChildren = isLoading ? '--' : title;
 
   const titleDisplay = isColorClass(titleColor) ? (
-    <EuiTitle size={titleSize} className={titleClasses}>
+    <WuiTitle size={titleSize} className={titleClasses}>
       {createElement(titleElement, commonProps, titleChildren)}
-    </EuiTitle>
+    </WuiTitle>
   ) : (
-    <EuiTitle size={titleSize} className={titleClasses}>
+    <WuiTitle size={titleSize} className={titleClasses}>
       {createElement(titleElement, titlePropsWithColor, titleChildren)}
-    </EuiTitle>
+    </WuiTitle>
   );
 
   const screenReader = (
-    <EuiScreenReaderOnly>
+    <WuiScreenReaderOnly>
       <p>
         {isLoading ? (
-          <EuiI18n token="euiStat.loadingText" default="Statistic is loading" />
+          <WuiI18n token="wuiStat.loadingText" default="Statistic is loading" />
         ) : (
           <Fragment>
             {reverse ? `${title} ${description}` : `${description} ${title}`}
           </Fragment>
         )}
       </p>
-    </EuiScreenReaderOnly>
+    </WuiScreenReaderOnly>
   );
 
   const statDisplay = (

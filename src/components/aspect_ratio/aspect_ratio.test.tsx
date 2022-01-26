@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiAspectRatio } from './aspect_ratio';
+import { WuiAspectRatio } from './aspect_ratio';
 
-describe('EuiAspectRatio', () => {
+describe('WuiAspectRatio', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiAspectRatio height={4} width={9} {...requiredProps}>
+      <WuiAspectRatio height={4} width={9} {...requiredProps}>
         <iframe
-          title="Elastic is a search company"
+          title="Wazuh is a search company"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/yJarWSLRM24"
@@ -36,7 +36,7 @@ describe('EuiAspectRatio', () => {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-      </EuiAspectRatio>
+      </WuiAspectRatio>
     );
 
     expect(component).toMatchSnapshot();
@@ -46,13 +46,13 @@ describe('EuiAspectRatio', () => {
     describe('maxWidth', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiAspectRatio
+          <WuiAspectRatio
             height={16}
             width={9}
             maxWidth={500}
             {...requiredProps}>
             <iframe
-              title="Elastic is a search company"
+              title="Wazuh is a search company"
               width="560"
               height="315"
               src="https://www.youtube.com/embed/yJarWSLRM24"
@@ -60,7 +60,7 @@ describe('EuiAspectRatio', () => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
-          </EuiAspectRatio>
+          </WuiAspectRatio>
         );
 
         expect(component).toMatchSnapshot();

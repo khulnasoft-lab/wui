@@ -1,25 +1,25 @@
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiCard,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
+  WuiButton,
+  WuiCard,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
 } from '../../../../src/components';
 
 const cardFooterContent = (
-  <EuiFlexGroup justifyContent="flexEnd">
-    <EuiFlexItem grow={false}>
-      <EuiButton>Go for it</EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup justifyContent="flexEnd">
+    <WuiFlexItem grow={false}>
+      <WuiButton>Go for it</WuiButton>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );
 
 export default () => (
-  <EuiFlexGroup gutterSize="l">
-    <EuiFlexItem>
-      <EuiCard
+  <WuiFlexGroup gutterSize="l">
+    <WuiFlexItem>
+      <WuiCard
         textAlign="left"
         image={
           <div>
@@ -29,29 +29,29 @@ export default () => (
             />
           </div>
         }
-        title="Elastic in Nature"
+        title="Wazuh in Nature"
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiCard
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiCard
         textAlign="left"
         image="https://source.unsplash.com/400x200/?Water"
-        title="Elastic in Water"
+        title="Wazuh in Water"
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiCard
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiCard
         textAlign="left"
-        href="https://elastic.github.io/eui/"
+        href="https://wazuh.github.io/wui/"
         image="https://source.unsplash.com/400x200/?City"
-        icon={<EuiIcon size="xxl" type="logoBeats" />}
+        icon={<WuiIcon size="xxl" type="logoBeats" />}
         title={'Beats in the City'}
         description="This card has an href and should be a link."
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

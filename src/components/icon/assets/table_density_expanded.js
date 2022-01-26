@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EuiIconTableDensityExpanded = ({ title, titleId, ...props }) => (
+const WuiIconTableDensityExpanded = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTableDensityExpanded = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTableDensityExpanded;
+export const icon = WuiIconTableDensityExpanded;

@@ -1,47 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderLink can render as specific color 1`] = `
+exports[`WuiHeaderLink can render as specific color 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--danger euiHeaderLink"
+  class="wuiButtonEmpty wuiButtonEmpty--danger wuiHeaderLink"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="wuiButtonContent wuiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="wuiButtonEmpty__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiHeaderLink is rendered 1`] = `
+exports[`WuiHeaderLink is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiButtonEmpty euiButtonEmpty--text euiHeaderLink testClass1 testClass2"
+  class="wuiButtonEmpty wuiButtonEmpty--text wuiHeaderLink testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="wuiButtonContent wuiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="wuiButtonEmpty__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiHeaderLink is rendered as active 1`] = `
+exports[`WuiHeaderLink is rendered as active 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--primary euiHeaderLink euiHeaderLink-isActive"
+  class="wuiButtonEmpty wuiButtonEmpty--primary wuiHeaderLink wuiHeaderLink-isActive"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="wuiButtonContent wuiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="wuiButtonEmpty__text"
     />
   </span>
 </button>

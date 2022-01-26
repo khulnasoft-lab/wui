@@ -27,7 +27,7 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
@@ -49,12 +49,12 @@ interface SideNavItemProps {
   depth?: number;
 }
 
-type ExcludeEuiSideNavItemProps<T> = Pick<
+type ExcludeWuiSideNavItemProps<T> = Pick<
   T,
   Exclude<keyof T, keyof SideNavItemProps | 'renderItem'>
 >;
-type OmitEuiSideNavItemProps<T> = {
-  [K in keyof ExcludeEuiSideNavItemProps<T>]: T[K];
+type OmitWuiSideNavItemProps<T> = {
+  [K in keyof ExcludeWuiSideNavItemProps<T>]: T[K];
 };
 
 interface GuaranteedRenderItemProps {
@@ -70,10 +70,10 @@ interface GuaranteedRenderItemProps {
 }
 export type RenderItem<T> = (
   // argument is the set of extra component props + GuaranteedRenderItemProps
-  props: OmitEuiSideNavItemProps<T> & GuaranteedRenderItemProps
+  props: OmitWuiSideNavItemProps<T> & GuaranteedRenderItemProps
 ) => JSX.Element;
 
-export type EuiSideNavItemProps<T> = T extends { renderItem: Function }
+export type WuiSideNavItemProps<T> = T extends { renderItem: Function }
   ? T & { renderItem: RenderItem<T> }
   : T;
 
@@ -116,7 +116,7 @@ const DefaultRenderItem = ({
   );
 };
 
-export function EuiSideNavItem<
+export function WuiSideNavItem<
   T extends ItemProps &
     SideNavItemProps & { renderItem?: (props: any) => JSX.Element }
 >({
@@ -134,52 +134,52 @@ export function EuiSideNavItem<
   depth = 0,
   className,
   ...rest
-}: EuiSideNavItemProps<T>) {
+}: WuiSideNavItemProps<T>) {
   const isHrefValid = !_href || validateHref(_href);
   const href = isHrefValid ? _href : '';
   let childItems;
 
   if (items && isOpen) {
-    childItems = <div className="euiSideNavItem__items">{items}</div>;
+    childItems = <div className="wuiSideNavItem__items">{items}</div>;
   }
 
   let buttonIcon;
 
   if (icon) {
     buttonIcon = cloneElement(icon, {
-      className: classNames('euiSideNavItemButton__icon', icon.props.className),
+      className: classNames('wuiSideNavItemButton__icon', icon.props.className),
     });
   }
 
   const classes = classNames(
-    'euiSideNavItem',
+    'wuiSideNavItem',
     {
-      'euiSideNavItem--root': depth === 0,
-      'euiSideNavItem--rootIcon': depth === 0 && icon,
-      'euiSideNavItem--trunk': depth === 1,
-      'euiSideNavItem--branch': depth > 1,
-      'euiSideNavItem--hasChildItems': !!childItems,
+      'wuiSideNavItem--root': depth === 0,
+      'wuiSideNavItem--rootIcon': depth === 0 && icon,
+      'wuiSideNavItem--trunk': depth === 1,
+      'wuiSideNavItem--branch': depth > 1,
+      'wuiSideNavItem--hasChildItems': !!childItems,
     },
     className
   );
 
-  const buttonClasses = classNames('euiSideNavItemButton', {
-    'euiSideNavItemButton--isClickable': onClick || href,
-    'euiSideNavItemButton-isOpen': depth > 0 && isOpen && !isSelected,
-    'euiSideNavItemButton-isSelected': isSelected,
+  const buttonClasses = classNames('wuiSideNavItemButton', {
+    'wuiSideNavItemButton--isClickable': onClick || href,
+    'wuiSideNavItemButton-isOpen': depth > 0 && isOpen && !isSelected,
+    'wuiSideNavItemButton-isSelected': isSelected,
   });
 
   let caret;
 
   if (depth > 0 && isParent && !isOpen && !isSelected) {
-    caret = <EuiIcon type="arrowDown" color="subdued" size="s" />;
+    caret = <WuiIcon type="arrowDown" color="subdued" size="s" />;
   }
 
   const buttonContent = (
-    <span className="euiSideNavItemButton__content">
+    <span className="wuiSideNavItemButton__content">
       {buttonIcon}
 
-      <span className="euiSideNavItemButton__label">{children}</span>
+      <span className="wuiSideNavItemButton__label">{children}</span>
 
       {caret}
     </span>

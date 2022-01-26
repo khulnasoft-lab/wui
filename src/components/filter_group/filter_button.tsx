@@ -20,13 +20,13 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiI18n } from '../i18n';
-import { EuiNotificationBadge } from '../badge/notification_badge';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button/button_empty';
+import { WuiI18n } from '../i18n';
+import { WuiNotificationBadge } from '../badge/notification_badge';
+import { WuiButtonEmpty, WuiButtonEmptyProps } from '../button/button_empty';
 
 import { useInnerText } from '../inner_text';
 
-export type EuiFilterButtonProps = EuiButtonEmptyProps & {
+export type WuiFilterButtonProps = WuiButtonEmptyProps & {
   /**
    * Bolds the button if true
    */
@@ -60,7 +60,7 @@ export type EuiFilterButtonProps = EuiButtonEmptyProps & {
   noDivider?: boolean;
 };
 
-export const EuiFilterButton: FunctionComponent<EuiFilterButtonProps> = ({
+export const WuiFilterButton: FunctionComponent<WuiFilterButtonProps> = ({
   children,
   className,
   iconType,
@@ -82,21 +82,21 @@ export const EuiFilterButton: FunctionComponent<EuiFilterButtonProps> = ({
   const numFiltersDefined = numFilters != null;
 
   const classes = classNames(
-    'euiFilterButton',
+    'wuiFilterButton',
     {
-      'euiFilterButton-isSelected': isSelected,
-      'euiFilterButton-hasActiveFilters': hasActiveFilters,
-      'euiFilterButton-hasNotification': numFiltersDefined,
-      'euiFilterButton--hasIcon': iconType,
-      'euiFilterButton--noGrow': !grow,
-      'euiFilterButton--withNext': noDivider || withNext,
+      'wuiFilterButton-isSelected': isSelected,
+      'wuiFilterButton-hasActiveFilters': hasActiveFilters,
+      'wuiFilterButton-hasNotification': numFiltersDefined,
+      'wuiFilterButton--hasIcon': iconType,
+      'wuiFilterButton--noGrow': !grow,
+      'wuiFilterButton--withNext': noDivider || withNext,
     },
     className
   );
 
   const buttonTextClassNames = classNames(
-    // 'euiFilterButton__textShift',
-    { 'euiFilterButton__text-hasNotification': numFiltersDefined },
+    // 'wuiFilterButton__textShift',
+    { 'wuiFilterButton__text-hasNotification': numFiltersDefined },
     textProps && textProps.className
   );
 
@@ -110,15 +110,15 @@ export const EuiFilterButton: FunctionComponent<EuiFilterButtonProps> = ({
     <Fragment>
       <span
         ref={ref}
-        className="euiFilterButton__textShift"
+        className="wuiFilterButton__textShift"
         data-text={dataText || innerText}
         title={dataText || innerText}>
         {children}
       </span>
 
       {numFiltersDefined && (
-        <EuiI18n
-          token="euiFilterButton.filterBadge"
+        <WuiI18n
+          token="wuiFilterButton.filterBadge"
           values={{
             count: numActiveFilters || numFilters,
             hasActiveFilters: hasActiveFilters ? 'active' : 'available',
@@ -126,22 +126,22 @@ export const EuiFilterButton: FunctionComponent<EuiFilterButtonProps> = ({
           default="{count} {hasActiveFilters} filters">
           {(filterBadge: string) => {
             return (
-              <EuiNotificationBadge
-                className="euiFilterButton__notification"
+              <WuiNotificationBadge
+                className="wuiFilterButton__notification"
                 size="m"
                 aria-label={filterBadge}
                 color={isDisabled || !hasActiveFilters ? 'subdued' : 'accent'}>
                 {numActiveFilters || numFilters}
-              </EuiNotificationBadge>
+              </WuiNotificationBadge>
             );
           }}
-        </EuiI18n>
+        </WuiI18n>
       )}
     </Fragment>
   );
 
   return (
-    <EuiButtonEmpty
+    <WuiButtonEmpty
       className={classes}
       color={color}
       isDisabled={isDisabled}
@@ -151,6 +151,6 @@ export const EuiFilterButton: FunctionComponent<EuiFilterButtonProps> = ({
       textProps={{ ...textProps, className: buttonTextClassNames }}
       {...rest}>
       {buttonContents}
-    </EuiButtonEmpty>
+    </WuiButtonEmpty>
   );
 };

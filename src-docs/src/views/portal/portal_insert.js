@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { EuiPortal, EuiButton } from '../../../../src/components';
-import { EuiSpacer } from '../../../../src/components/spacer/spacer';
+import { WuiPortal, WuiButton } from '../../../../src/components';
+import { WuiSpacer } from '../../../../src/components/spacer/spacer';
 
 let buttonRef = null;
 
@@ -18,17 +18,17 @@ export const PortalInsert = () => {
 
   if (isPortalVisible) {
     portal = (
-      <EuiPortal insert={{ sibling: buttonRef, position: 'after' }}>
-        <EuiSpacer />
+      <WuiPortal insert={{ sibling: buttonRef, position: 'after' }}>
+        <WuiSpacer />
         <p>This element is appended immediately after the button.</p>
-      </EuiPortal>
+      </WuiPortal>
     );
   }
   return (
     <div>
-      <EuiButton onClick={togglePortal} buttonRef={setButtonRef}>
+      <WuiButton onClick={togglePortal} buttonRef={setButtonRef}>
         Toggle portal
-      </EuiButton>
+      </WuiButton>
       {portal}
     </div>
   );

@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  WuiDatePicker,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,30 +17,30 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="className example">
-        <EuiDatePicker
+      <WuiFormRow label="className example">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           className="dpTest__purpleInput"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="calendarClassName example">
-        <EuiDatePicker
+      <WuiFormRow label="calendarClassName example">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           calendarClassName="dpTest__purpleCal"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="dayClassName example">
-        <EuiDatePicker
+      <WuiFormRow label="dayClassName example">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
@@ -48,18 +48,18 @@ export default () => {
             date.date() < Math.random() * 31 ? 'dpTest__purpleDay' : undefined
           }
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="popperClassName example">
-        <EuiDatePicker
+      <WuiFormRow label="popperClassName example">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           popperClassName="dpTest__purplePopper"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </div>
   );
 };

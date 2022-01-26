@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiSpacer, EuiText } from '../../../../src/components';
+import { WuiCode, WuiSpacer, WuiText } from '../../../../src/components';
 
 import InnerText from './inner_text';
 const innerTextSource = require('!!raw-loader!./inner_text');
@@ -13,19 +13,19 @@ const useInnerTextSnippet = `const [ref, innerText] = useInnerText();
 <span ref={ref} title={innerText}>
   Content
 </span>`;
-const euiInnerTextSnippet = `<EuiInnerText>
+const wuiInnerTextSnippet = `<WuiInnerText>
   {(ref, innerText) => (
     <span ref={ref} title={innerText}>
       Content
     </span>
   )}
-</EuiInnerText>`;
+</WuiInnerText>`;
 
 export const InnerTextExample = {
   title: 'Inner text',
   intro: (
     <React.Fragment>
-      <EuiText>
+      <WuiText>
         <p>
           For instances where accessing the text content of a component that may
           be wrapped or interspersed with other components, two utilities are
@@ -33,22 +33,22 @@ export const InnerTextExample = {
         </p>
         <ul>
           <li>
-            <EuiCode>useInnerText</EuiCode> - A custom React hook, usable in
+            <WuiCode>useInnerText</WuiCode> - A custom React hook, usable in
             function components
           </li>
           <li>
-            <EuiCode>{'<EuiInnerText />'}</EuiCode> - A higher order{' '}
-            <EuiCode>useInnerText</EuiCode> component for use in class
+            <WuiCode>{'<WuiInnerText />'}</WuiCode> - A higher order{' '}
+            <WuiCode>useInnerText</WuiCode> component for use in class
             components
           </li>
         </ul>
         <p>
-          Both utilities make available a <EuiCode>ref</EuiCode> reference to
+          Both utilities make available a <WuiCode>ref</WuiCode> reference to
           add to the target DOM element, and the resulting{' '}
-          <EuiCode>innerText</EuiCode> value to use as needed.
+          <WuiCode>innerText</WuiCode> value to use as needed.
         </p>
-      </EuiText>
-      <EuiSpacer />
+      </WuiText>
+      <WuiSpacer />
     </React.Fragment>
   ),
   sections: [
@@ -65,7 +65,7 @@ export const InnerTextExample = {
         },
       ],
       demo: <InnerText />,
-      snippet: [useInnerTextSnippet, euiInnerTextSnippet],
+      snippet: [useInnerTextSnippet, wuiInnerTextSnippet],
     },
   ],
 };

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPage } from './page';
+import { WuiPage } from './page';
 
-describe('EuiPage', () => {
+describe('WuiPage', () => {
   test('is rendered', () => {
-    const component = render(<EuiPage {...requiredProps} />);
+    const component = render(<WuiPage {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiPage', () => {
   describe('restrict width', () => {
     test('can be set to a default', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth={true} />
+        <WuiPage {...requiredProps} restrictWidth={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('EuiPage', () => {
 
     test('can be set to a custom number', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth={1024} />
+        <WuiPage {...requiredProps} restrictWidth={1024} />
       );
 
       expect(component).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('EuiPage', () => {
 
     test('can be set to a custom value and measurement', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth="24rem" />
+        <WuiPage {...requiredProps} restrictWidth="24rem" />
       );
 
       expect(component).toMatchSnapshot();

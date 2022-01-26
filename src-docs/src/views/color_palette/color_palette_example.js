@@ -7,10 +7,10 @@ import { GuideSectionTypes } from '../../components';
 import { qualitativePropsInfo, palettePropsInfo } from './props_info';
 
 import {
-  EuiCode,
-  EuiText,
-  EuiSpacer,
-  EuiCallOut,
+  WuiCode,
+  WuiText,
+  WuiSpacer,
+  WuiCallOut,
 } from '../../../../src/components';
 
 import ColorPalette from './color_palette';
@@ -29,13 +29,13 @@ export const ColorPaletteExample = {
   title: 'Color palettes',
   intro: (
     <>
-      <EuiText>
+      <WuiText>
         <p>
-          EUI provides a base set of color palettes that return an array of
-          hexadecimal color for use in other EUI components or charts.
+          WUI provides a base set of color palettes that return an array of
+          hexadecimal color for use in other WUI components or charts.
         </p>
-      </EuiText>
-      <EuiSpacer />
+      </WuiText>
+      <WuiSpacer />
     </>
   ),
   sections: [
@@ -55,8 +55,8 @@ export const ColorPaletteExample = {
         <div>
           <p>
             Qualitative palettes are best suited for communicating and comparing
-            discrete data series. EUI recommends using the{' '}
-            <EuiCode>euiPaletteColorBlind()</EuiCode> for qualitative and
+            discrete data series. WUI recommends using the{' '}
+            <WuiCode>wuiPaletteColorBlind()</WuiCode> for qualitative and
             categorical data.
           </p>
           <p>
@@ -66,9 +66,9 @@ export const ColorPaletteExample = {
           </p>
           <p>
             These colors are meant to be used as graphics and contrasted against
-            the value of <EuiCode>euiColorEmptyShade</EuiCode> for the current
+            the value of <WuiCode>euiColorEmptyShade</WuiCode> for the current
             theme. When placing text on top of these colors, use the{' '}
-            <EuiCode>euiPaletteColorBlindBehindText()</EuiCode> variant. It is a
+            <WuiCode>wuiPaletteColorBlindBehindText()</WuiCode> variant. It is a
             brightened version of the base palette to create better contrast
             with text.
           </p>
@@ -76,8 +76,8 @@ export const ColorPaletteExample = {
       ),
       demo: <ColorPalette />,
       snippet: [
-        'euiPaletteColorBlind()',
-        "euiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
+        'wuiPaletteColorBlind()',
+        "wuiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
       ],
       props: qualitativePropsInfo,
     },
@@ -101,12 +101,12 @@ export const ColorPaletteExample = {
             demographic-based data sets.
           </p>
           <p>
-            EUI provides the following common palettes for quantitative data and{' '}
-            <Link to="/elastic-charts/creating-charts">charts</Link>. Just pass
-            in the number of steps needed and the function will interpolate
-            between the colors.
+            WUI provides the following common palettes for quantitative data and{' '}
+            <Link to="/wazuh-charts/creating-charts">charts</Link>. Just pass in
+            the number of steps needed and the function will interpolate between
+            the colors.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             color="warning"
             iconType="accessibility"
             title="The palette for status is the only palette that has proper contrast ratios. When using the other palettes, consider adding another form of the data for screen readers."
@@ -130,10 +130,10 @@ export const ColorPaletteExample = {
       text: (
         <div>
           <p>
-            Use the <EuiCode>colorPalette</EuiCode> service to generate a
+            Use the <WuiCode>colorPalette</WuiCode> service to generate a
             custom, gradiated palette array of any length from one or more
             hexadecimal color codes. The third parameter{' '}
-            <EuiCode>divergent</EuiCode>, will interpolate between the two
+            <WuiCode>divergent</WuiCode>, will interpolate between the two
             halves of the spectrums separately. If a middle point is not
             provided, it will graduate to light gray.
           </p>

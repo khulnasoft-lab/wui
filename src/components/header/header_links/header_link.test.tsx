@@ -21,23 +21,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiHeaderLink } from './header_link';
+import { WuiHeaderLink } from './header_link';
 
-describe('EuiHeaderLink', () => {
+describe('WuiHeaderLink', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLink {...requiredProps} />);
+    const component = render(<WuiHeaderLink {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('is rendered as active', () => {
-    const component = render(<EuiHeaderLink isActive />);
+    const component = render(<WuiHeaderLink isActive />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('can render as specific color', () => {
-    const component = render(<EuiHeaderLink color="danger" />);
+    const component = render(<WuiHeaderLink color="danger" />);
 
     expect(component).toMatchSnapshot();
   });

@@ -9,6 +9,6 @@
   padding: 0 $euiSize;
 
   @if (lightness($euiTextColor) < 50) {
-    background: $euiColorDarkestShade;
+    background: $wuiColorDarkestShade;
   }
 }

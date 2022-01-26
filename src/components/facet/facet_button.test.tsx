@@ -21,13 +21,13 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFacetButton } from './facet_button';
-import { EuiIcon } from '../icon';
+import { WuiFacetButton } from './facet_button';
+import { WuiIcon } from '../icon';
 
-describe('EuiFacetButton', () => {
+describe('WuiFacetButton', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFacetButton {...requiredProps}>Content</EuiFacetButton>
+      <WuiFacetButton {...requiredProps}>Content</WuiFacetButton>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiFacetButton', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFacetButton isDisabled>Content</EuiFacetButton>
+          <WuiFacetButton isDisabled>Content</WuiFacetButton>
         );
 
         expect(component).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe('EuiFacetButton', () => {
     describe('isLoading', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFacetButton isLoading>Content</EuiFacetButton>
+          <WuiFacetButton isLoading>Content</WuiFacetButton>
         );
 
         expect(component).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('EuiFacetButton', () => {
     describe('isSelected', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFacetButton isSelected>Content</EuiFacetButton>
+          <WuiFacetButton isSelected>Content</WuiFacetButton>
         );
 
         expect(component).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe('EuiFacetButton', () => {
     describe('quantity', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFacetButton quantity={60}>Content</EuiFacetButton>
+          <WuiFacetButton quantity={60}>Content</WuiFacetButton>
         );
 
         expect(component).toMatchSnapshot();
@@ -77,7 +77,7 @@ describe('EuiFacetButton', () => {
     describe('icon', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFacetButton icon={<EuiIcon type="dot" />}>Content</EuiFacetButton>
+          <WuiFacetButton icon={<WuiIcon type="dot" />}>Content</WuiFacetButton>
         );
 
         expect(component).toMatchSnapshot();
@@ -88,7 +88,7 @@ describe('EuiFacetButton', () => {
       it('supports onClick', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiFacetButton onClick={handler}>Content</EuiFacetButton>
+          <WuiFacetButton onClick={handler}>Content</WuiFacetButton>
         );
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);

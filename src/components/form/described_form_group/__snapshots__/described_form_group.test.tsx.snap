@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDescribedFormGroup is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup is rendered 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -14,37 +14,37 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -57,16 +57,16 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -75,11 +75,11 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -88,17 +88,17 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props description is not rendered when it's not provided 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup props description is not rendered when it's not provided 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -110,39 +110,39 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
+            </WuiTitle>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -151,11 +151,11 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -164,17 +164,17 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup props fullWidth is rendered 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -188,37 +188,37 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup euiDescribedFormGroup--fullWidth testClass1 testClass2"
+    className="wuiDescribedFormGroup wuiDescribedFormGroup--fullWidth testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -231,16 +231,16 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={true}
@@ -249,11 +249,11 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow euiFormRow--fullWidth"
+                className="wuiFormRow wuiFormRow--fullWidth"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -262,17 +262,17 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup props gutterSize is rendered 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -286,37 +286,37 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="s"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -329,16 +329,16 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -347,11 +347,11 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -360,17 +360,17 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props props for the flex item containers are passed down 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup props props for the flex item containers are passed down 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -393,39 +393,39 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={2}
         >
           <div
-            className="euiFlexItem euiFlexItem--flexGrow2"
+            className="wuiFlexItem wuiFlexItem--flexGrow2"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -438,17 +438,17 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           component="section"
         >
           <section
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -457,11 +457,11 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -470,17 +470,17 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </section>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup props titleSize is rendered 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -494,37 +494,37 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="l"
             >
               <h3
-                className="euiTitle euiTitle--large euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--large wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -537,16 +537,16 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--large"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--large"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--large"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--large"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -555,11 +555,11 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -568,17 +568,17 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
-<EuiDescribedFormGroup
+exports[`WuiDescribedFormGroup ties together parts for accessibility 1`] = `
+<WuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -591,37 +591,37 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="wuiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <WuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--directionRow wuiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <WuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="wuiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <WuiTitle
+              className="wuiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="wuiTitle wuiTitle--xsmall wuiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </WuiTitle>
+            <WuiText
+              className="wuiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
                 <EuiTextColor
                   color="subdued"
@@ -634,16 +634,16 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
                   </div>
                 </EuiTextColor>
               </div>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </WuiFlexItem>
+        <WuiFlexItem
+          className="wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="wuiFlexItem wuiDescribedFormGroup__fields wuiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <WuiFormRow
               describedByIds={Array []}
               display="row"
               error={
@@ -661,15 +661,15 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="wuiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__labelWrapper"
+                  className="wuiFormRow__labelWrapper"
                 >
-                  <EuiFormLabel
+                  <WuiFormLabel
                     aria-invalid={true}
-                    className="euiFormRow__label"
+                    className="wuiFormRow__label"
                     htmlFor="generated-id"
                     isFocused={false}
                     isInvalid={true}
@@ -677,15 +677,15 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
                   >
                     <label
                       aria-invalid={true}
-                      className="euiFormLabel euiFormRow__label euiFormLabel-isInvalid"
+                      className="wuiFormLabel wuiFormRow__label wuiFormLabel-isInvalid"
                       htmlFor="generated-id"
                     >
                       Label
                     </label>
-                  </EuiFormLabel>
+                  </WuiFormLabel>
                 </div>
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="wuiFormRow__fieldWrapper"
                 >
                   <input
                     aria-describedby="generated-id-help generated-id-error-0 generated-id-error-1"
@@ -693,50 +693,50 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
                     onBlur={[Function]}
                     onFocus={[Function]}
                   />
-                  <EuiFormErrorText
-                    className="euiFormRow__text"
+                  <WuiFormErrorText
+                    className="wuiFormRow__text"
                     id="generated-id-error-0"
                     key="Error one"
                   >
                     <div
                       aria-live="polite"
-                      className="euiFormErrorText euiFormRow__text"
+                      className="wuiFormErrorText wuiFormRow__text"
                       id="generated-id-error-0"
                     >
                       Error one
                     </div>
-                  </EuiFormErrorText>
-                  <EuiFormErrorText
-                    className="euiFormRow__text"
+                  </WuiFormErrorText>
+                  <WuiFormErrorText
+                    className="wuiFormRow__text"
                     id="generated-id-error-1"
                     key="Error two"
                   >
                     <div
                       aria-live="polite"
-                      className="euiFormErrorText euiFormRow__text"
+                      className="wuiFormErrorText wuiFormRow__text"
                       id="generated-id-error-1"
                     >
                       Error two
                     </div>
-                  </EuiFormErrorText>
-                  <EuiFormHelpText
-                    className="euiFormRow__text"
+                  </WuiFormErrorText>
+                  <WuiFormHelpText
+                    className="wuiFormRow__text"
                     id="generated-id-help"
                   >
                     <div
-                      className="euiFormHelpText euiFormRow__text"
+                      className="wuiFormHelpText wuiFormRow__text"
                       id="generated-id-help"
                     >
                       Help text
                     </div>
-                  </EuiFormHelpText>
+                  </WuiFormHelpText>
                 </div>
               </div>
-            </EuiFormRow>
+            </WuiFormRow>
           </div>
-        </EuiFlexItem>
+        </WuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</WuiDescribedFormGroup>
 `;

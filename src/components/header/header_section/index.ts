@@ -17,14 +17,14 @@
  * under the License.
  */
 
-export { EuiHeaderSection } from './header_section';
+export { WuiHeaderSection } from './header_section';
 
 export {
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemProps,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemProps,
 } from './header_section_item';
 
 export {
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  WuiHeaderSectionItemButton,
+  WuiHeaderSectionItemButtonProps,
 } from './header_section_item_button';

@@ -24,12 +24,12 @@ import moment, { Moment, MomentInput } from 'moment';
 
 const utc = moment.utc;
 
-const GRANULARITY_KEY = '__eui_granularity';
-const FORMAT_KEY = '__eui_format';
+const GRANULARITY_KEY = '__wui_granularity';
+const FORMAT_KEY = '__wui_format';
 
-export interface EuiMoment extends Moment {
-  __eui_granularity?: GranularityType;
-  __eui_format?: string;
+export interface WuiMoment extends Moment {
+  __wui_granularity?: GranularityType;
+  __wui_format?: string;
 }
 
 export interface GranularityType {
@@ -84,7 +84,7 @@ export const Granularity: GranularitiesType = Object.freeze({
 });
 
 const parseTime = (value: string) => {
-  const parsed: EuiMoment = utc(
+  const parsed: WuiMoment = utc(
     value,
     ['HH:mm', 'H:mm', 'H:mm', 'h:mm a', 'h:mm A', 'hh:mm a', 'hh:mm A'],
     true
@@ -96,7 +96,7 @@ const parseTime = (value: string) => {
 };
 
 const parseDay = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: WuiMoment;
 
   switch (value.toLowerCase()) {
     case 'today':
@@ -156,7 +156,7 @@ const parseDay = (value: string) => {
 };
 
 const parseWeek = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: WuiMoment;
   switch (value.toLowerCase()) {
     case 'this week':
       parsed = utc();
@@ -185,7 +185,7 @@ const parseWeek = (value: string) => {
 };
 
 const parseMonth = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: WuiMoment;
   switch (value.toLowerCase()) {
     case 'this month':
       parsed = utc();
@@ -230,7 +230,7 @@ const parseMonth = (value: string) => {
 };
 
 const parseYear = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: WuiMoment;
   switch (value.toLowerCase()) {
     case 'this year':
       parsed = utc().startOf('year');
@@ -264,7 +264,7 @@ const parseYear = (value: string) => {
 };
 
 const parseDefault = (value: string) => {
-  let parsed: EuiMoment = utc(
+  let parsed: WuiMoment = utc(
     value,
     [
       moment.ISO_8601,
@@ -387,7 +387,7 @@ export const printIso8601 = (value: MomentInput) => {
   return utc(value).format(moment.defaultFormatUtc);
 };
 
-export const dateGranularity = (parsedDate: EuiMoment) => {
+export const dateGranularity = (parsedDate: WuiMoment) => {
   return parsedDate[GRANULARITY_KEY]!;
 };
 
@@ -406,15 +406,15 @@ export const dateFormat = Object.freeze({
     return parsed;
   },
 
-  print(date: EuiMoment | MomentInput, defaultGranularity = undefined) {
+  print(date: WuiMoment | MomentInput, defaultGranularity = undefined) {
     date = moment.isMoment(date) ? date : utc(date);
-    const euiDate: EuiMoment = date as EuiMoment;
+    const wuiDate: WuiMoment = date as WuiMoment;
     const now = utc();
-    const format = euiDate[FORMAT_KEY];
+    const format = wuiDate[FORMAT_KEY];
     if (!format) {
       return date.format(dateFormatAliases.iso8601);
     }
-    const granularity = euiDate[GRANULARITY_KEY] || defaultGranularity;
+    const granularity = wuiDate[GRANULARITY_KEY] || defaultGranularity;
     switch (granularity) {
       case Granularity.DAY:
         return printDay(now, date, format);
