@@ -1,24 +1,22 @@
-<img src="https://repository-images.githubusercontent.com/107422373/d4a9f100-4734-11ea-8bb9-bf6a193cb8fb" />
 
-# Elastic UI Framework
+# Wazuh WUI Framework
 
-> The Elastic UI Framework is a collection of React UI components for quickly building user interfaces
-> at Elastic. Not using React? No problem! You can still use the CSS behind each component.
+> The Wazuh WUI Framework is a collection of React UI components for quickly building user interfaces
+> at Wazuh. Not using React? No problem! You can still use the CSS behind each component.
 
-You should check out our [living style guide][docs], which contains many examples of components in the EUI framework aesthetic, and how to use them in your products. We also have a [FAQ][faq] that covers common usage questions.
 
 ## Installation
 
-To install the Elastic UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
+To install the Wazuh WUI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
 
 ```
 yarn add wazuh-wui
 ```
 
-Note that EUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume EUI][consuming].
+Note that WUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project.
 
 ```
-yarn add @elastic/eui @elastic/datemath moment prop-types
+yarn add wazuh-wui @elastic/datemath moment prop-types
 ```
 
 
@@ -50,43 +48,15 @@ If another process is already listening on port 8030, the next free port will be
 ```
 yarn start --port 9000
 ```
-
-## Goals
-
-The primary goal of this library is to provide reusable UI components that can be used throughout
-Elastic's web products. As React components, they remove CSS from the process of building UIs.
-As a single source of truth, the framework allows our designers to make changes to our aesthetic
-directly in the code. And unit test coverage for the UI components allows us to deliver a stable
-"API for user interfaces".
-
-
-## Wiki
-
-### Consumption
-
-* [Consuming EUI][consuming]
-* [Using EUI with react-router](wiki/react-router.md)
-
-### Maintenance / Contributing
-
-[CONTRIBUTING.md](CONTRIBUTING.md)
-
-* [Component design](wiki/component-design.md)
-* [Component development](wiki/component-development.md)
-  * [Creating components manually](wiki/creating-components-manually.md)
-  * [Creating components with Yeoman](wiki/creating-components-yeoman.md)
-* [Creating icons](wiki/creating-icons.md)
-* [Theming](wiki/theming.md)
-* [Testing](wiki/testing.md)
-  * [Accessibility Testing](wiki/automated-accessibility-testing.md)
-* [Documentation](wiki/documentation-guidelines.md)
-* [Releasing versions](wiki/releasing-versions.md)
-
 ## License
 
-[Apache Licensed.][license] Read the [FAQ][faq] for details.
+The Wazuh WUI Framework is licensed under the [Apache License 2.0][license].
 
 [license]: LICENSE
 [faq]: FAQ.md
 [consuming]: wiki/consuming.md
 [docs]: https://elastic.github.io/eui/
+
+## Credits and Thanks
+
+This library was forked from the [Elastic eui](https://github.com/elastic/eui) and our changes were made from the [v29.3.2](https://github.com/elastic/eui/tree/v29.3.2) tag. The original license is [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Thanks to the original authors for their work.
