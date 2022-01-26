@@ -12,8 +12,8 @@ export default () => (
     <WuiFlexItem>
       <WuiCard
         layout="horizontal"
-        icon={<WuiIcon size="xl" type={'logoBeats'} />}
-        title={'Wazuh Beats'}
+        icon={<WuiIcon size="xl" type={'logoWazuh'} />}
+        title={'Wazuh'}
         description="This card adds uses an 'xl' size icon which works well in a horizontal layout."
         onClick={() => window.alert('Card clicked')}
       />
@@ -21,7 +21,7 @@ export default () => (
     <WuiFlexItem>
       <WuiCard
         layout="horizontal"
-        icon={<WuiIcon size="l" type={'logoCloud'} />}
+        icon={<WuiIcon size="l" type={'logoWazuh'} />}
         titleSize="xs"
         title={'Wazuh Cloud'}
         description="This card uses an 'l' size icon but also shrinks the 'titleSize' to 'xs'."

@@ -30,7 +30,7 @@ import { htmlIdGenerator } from '../../../../src/services';
 export default () => {
   const renderLogo = () => (
     <WuiHeaderLogo
-      iconType="logoElastic"
+      iconType="logoWazuh"
       href="#"
       onClick={e => e.preventDefault()}
       aria-label="Go to home page"

@@ -27,7 +27,7 @@ export default () => {
 
   const sideNav = [
     createItem('Elasticsearch', {
-      icon: <WuiIcon type="logoElasticsearch" />,
+      icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Data sources'),
         createItem('Users'),

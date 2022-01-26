@@ -45,7 +45,9 @@ export default () => {
         sections={[
           {
             items: [
-              <WuiHeaderLogo iconType="logoElastic">Elastic</WuiHeaderLogo>,
+              <WuiHeaderLogo mono iconType="logoWazuh">
+                Wazuh
+              </WuiHeaderLogo>,
             ],
             borders: 'none',
           },

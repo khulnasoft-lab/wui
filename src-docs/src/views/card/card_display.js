@@ -15,7 +15,7 @@ export default () => (
       <WuiFlexItem>
         <WuiCard
           layout="horizontal"
-          icon={<WuiIcon size="xl" type="logoLogging" />}
+          icon={<WuiIcon size="xl" type="logoWazuh" />}
           onClick={() => {}}
           title="Logs"
           display="plain"
@@ -24,7 +24,7 @@ export default () => (
       </WuiFlexItem>
       <WuiFlexItem>
         <WuiCard
-          icon={<WuiIcon size="xl" type="logoLogging" />}
+          icon={<WuiIcon size="xl" type="logoWazuh" />}
           title="Logs"
           display="plain"
           description="Wazuh is the most popular open source security platform."
@@ -34,7 +34,7 @@ export default () => (
       <WuiFlexItem>
         <WuiCard
           layout="horizontal"
-          icon={<WuiIcon size="xl" type="logoLogging" />}
+          icon={<WuiIcon size="xl" type="logoWazuh" />}
           title="Logs"
           display="plain"
           description="Wazuh is the most popular open source security platform."

@@ -7,15 +7,15 @@ import {
   WuiFlexItem,
 } from '../../../../src/components';
 
-const icons = ['Beats', 'Cloud', 'Logging', 'Kibana'];
+const icons = ['Wazuh', 'Wazuh', 'Wazuh', 'Wazuh'];
 
 const cardNodes = icons.map(function(item, index) {
   return (
     <WuiFlexItem key={index}>
       <WuiCard
         icon={<WuiIcon size="xxl" type={`logo${item}`} />}
-        title={`Wazuh ${item}`}
-        isDisabled={item === 'Kibana' ? true : false}
+        title={`${item} example`}
+        isDisabled={!index}
         description="Example of a card's description. Stick to one or two sentences."
         onClick={() => window.alert('Card clicked')}
       />

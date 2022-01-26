@@ -48,7 +48,7 @@ export default () => (
         textAlign="left"
         href="https://wazuh.github.io/wui/"
         image="https://source.unsplash.com/400x200/?City"
-        icon={<WuiIcon size="xxl" type="logoBeats" />}
+        icon={<WuiIcon size="xxl" type="logoWazuh" />}
         title={'Beats in the City'}
         description="This card has an href and should be a link."
       />

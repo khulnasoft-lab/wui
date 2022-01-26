@@ -288,7 +288,7 @@ export default ({ theme }) => {
             sections={[
               {
                 items: [
-                  <WuiHeaderLogo iconType="logoElastic" href="">
+                  <WuiHeaderLogo iconType="logoWazuh" href="">
                     Elastic
                   </WuiHeaderLogo>,
                   deploymentMenu,

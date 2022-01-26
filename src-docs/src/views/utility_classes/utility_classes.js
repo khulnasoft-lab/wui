@@ -159,32 +159,28 @@ export default () => (
     <WuiSpacer />
 
     <div>
-      <WuiIcon type="logoElasticStack" size="xxl" className="wui-alignTop" />
+      <WuiIcon type="logoWazuh" size="xxl" className="wui-alignTop" />
       <WuiCode>.wui-alignTop</WuiCode>
     </div>
 
     <WuiSpacer />
 
     <div>
-      <WuiIcon type="logoElasticStack" size="xxl" className="wui-alignMiddle" />
+      <WuiIcon type="logoWazuh" size="xxl" className="wui-alignMiddle" />
       <WuiCode>.wui-alignMiddle</WuiCode>
     </div>
 
     <WuiSpacer />
 
     <div>
-      <WuiIcon type="logoElasticStack" size="xxl" className="wui-alignBottom" />
+      <WuiIcon type="logoWazuh" size="xxl" className="wui-alignBottom" />
       <WuiCode>.wui-alignBottom</WuiCode>
     </div>
 
     <WuiSpacer />
 
     <div>
-      <WuiIcon
-        type="logoElasticStack"
-        size="xxl"
-        className="wui-alignBaseline"
-      />
+      <WuiIcon type="logoWazuh" size="xxl" className="wui-alignBaseline" />
       <WuiCode>.wui-alignBaseline</WuiCode>
     </div>
 

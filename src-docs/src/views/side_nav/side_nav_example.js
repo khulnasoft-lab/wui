@@ -44,7 +44,7 @@ const sideNavComplexSnippet = `<WuiSideNav
   items={[
     {
       name: 'Elasticsearch',
-      icon: <WuiIcon type="logoElasticsearch" />,
+      icon: <WuiIcon type="logoWazuh" />,
       id: '0',
       items: [
         {
