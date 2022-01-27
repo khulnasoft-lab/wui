@@ -20,7 +20,7 @@ export default () => (
       <h4>Custom &amp; Spaces type</h4>
     </WuiTitle>
     <WuiSpacer />
-    <WuiAvatar size="m" type="space" name="Kibana" initialsLength={2} />
+    <WuiAvatar size="m" type="space" name="Wazuh" initialsLength={2} />
     &emsp;
     <WuiAvatar size="m" type="space" name="Leonardo Dude" initialsLength={1} />
     &emsp;

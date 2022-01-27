@@ -58,7 +58,7 @@ export const propsInfo = {
         },
         toESQuery: {
           description:
-            'Builds and returns an Elasticsearch query object out of the given query',
+            'Builds and returns an query object out of the given query',
           type: {
             name:
               'static (query: #Query | string, options?: #ToESQueryOptions) => ESQuery',

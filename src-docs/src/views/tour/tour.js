@@ -20,7 +20,7 @@ const demoTourSteps = [
         <p>Copy and paste this sample query.</p>
         <WuiSpacer />
         <WuiCodeBlock language="html" paddingSize="s" isCopyable>
-          {'SELECT email FROM “kibana_sample_data_ecommerce”'}
+          {'SELECT email FROM “wazuh_sample_data_ecommerce”'}
         </WuiCodeBlock>
       </span>
     ),

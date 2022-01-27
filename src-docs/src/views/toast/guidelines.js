@@ -130,7 +130,7 @@ and space to read it properly. Alternatively just link to a full page.
         <WuiFlexItem grow={false} style={{ minWidth: 120 }}>
           <WuiToast
             style={{ width: 300 }}
-            title="Search failed.  Check your Elasticsearch connection."
+            title="Search failed.  Check your Wazuh connection."
             color="danger"
           />
         </WuiFlexItem>

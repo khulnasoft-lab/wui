@@ -70,7 +70,7 @@ export default () => {
             <p>This is a security measure.</p>
             <p>
               Please move your mouse to show that you&rsquo;re still using
-              Kibana.
+              Wazuh.
             </p>
           </Fragment>
         ),

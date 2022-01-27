@@ -158,7 +158,7 @@ export const CommentListExample = {
             Change the type to <WuiCode>update</WuiCode> to display comments
             that generally do not have a body and are logging actions that
             either the user or the system has performed (e.g. &ldquo;jsmith
-            edited a case&rdquo; or &ldquo;kibanamachine added the review
+            edited a case&rdquo; or &ldquo;wazuhmachine added the review
             label&rdquo;).
           </p>
         </div>

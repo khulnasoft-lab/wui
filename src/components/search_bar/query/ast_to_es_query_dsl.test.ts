@@ -36,11 +36,11 @@ describe('astToEsQueryDsl', () => {
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - '-group:es group:kibana -group:beats group:logstash'", () => {
+  test("ast - '-group:es group:wazuh -group:beats group:logstash'", () => {
     const query = astToEsQueryDsl(
       AST.create([
         AST.Field.mustNot.eq('group', 'es'),
-        AST.Field.must.eq('group', 'kibana'),
+        AST.Field.must.eq('group', 'wazuh'),
         AST.Field.mustNot.eq('group', 'beats'),
         AST.Field.must.eq('group', 'logstash'),
       ])
@@ -48,18 +48,18 @@ describe('astToEsQueryDsl', () => {
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'is:online group:kibana john'", () => {
+  test("ast - 'is:online group:wazuh john'", () => {
     const query = astToEsQueryDsl(
       AST.create([
         AST.Is.must('online'),
-        AST.Field.must.eq('group', 'kibana'),
+        AST.Field.must.eq('group', 'wazuh'),
         AST.Term.must('john'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'john -doe is:online group:eng group:es -group:kibana -is:active'", () => {
+  test("ast - 'john -doe is:online group:eng group:es -group:wazuh -is:active'", () => {
     const query = astToEsQueryDsl(
       AST.create([
         AST.Term.must('john'),
@@ -67,30 +67,30 @@ describe('astToEsQueryDsl', () => {
         AST.Is.must('online'),
         AST.Field.must.eq('group', 'eng'),
         AST.Field.must.eq('group', 'es'),
-        AST.Field.mustNot.eq('group', 'kibana'),
+        AST.Field.mustNot.eq('group', 'wazuh'),
         AST.Is.mustNot('active'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'john group:(eng or es) -group:kibana'", () => {
+  test("ast - 'john group:(eng or es) -group:wazuh'", () => {
     const query = astToEsQueryDsl(
       AST.create([
         AST.Term.must('john'),
         AST.Field.must.eq('group', ['eng', 'es']),
-        AST.Field.mustNot.eq('group', 'kibana'),
+        AST.Field.mustNot.eq('group', 'wazuh'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test('ast - \'john group:(eng or "marketing org") -group:"kibana team"', () => {
+  test('ast - \'john group:(eng or "marketing org") -group:"wazuh team"', () => {
     const query = astToEsQueryDsl(
       AST.create([
         AST.Term.must('john'),
         AST.Field.must.eq('group', ['eng', 'marketing org']),
-        AST.Field.mustNot.eq('group', 'kibana team'),
+        AST.Field.mustNot.eq('group', 'wazuh team'),
       ])
     );
     expect(query).toMatchSnapshot();

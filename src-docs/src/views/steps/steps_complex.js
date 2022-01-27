@@ -52,7 +52,7 @@ const steps = [
         </p>
         <p className="wuiStep__subSteps">
           Go to <strong>Overview &gt;&gt; Endpoints</strong> note{' '}
-          <strong>Elasticsearch</strong> as <WuiCode>&lt;thing&gt;</WuiCode>.
+          <strong>Wazuh</strong> as <WuiCode>&lt;thing&gt;</WuiCode>.
         </p>
       </WuiText>
     ),

@@ -30,7 +30,7 @@ describe('WuiCheckboxGroup behavior', () => {
     const onChangeHandler = jest.fn();
     const component = mount(
       <WuiCheckboxGroup
-        options={[{ id: '1', label: 'kibana', disabled: false }]}
+        options={[{ id: '1', label: 'wazuh', disabled: false }]}
         idToSelectedMap={{
           '1': true,
         }}

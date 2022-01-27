@@ -37,7 +37,7 @@ export const TopNavLinks: WuiPinnableListGroupItemProps[] = [
   { label: 'Maps', pinned: true },
 ];
 
-export const KibanaNavLinks: WuiPinnableListGroupItemProps[] = [
+export const WazuhNavLinks: WuiPinnableListGroupItemProps[] = [
   { label: 'Discover' },
   { label: 'Visualize' },
   { label: 'Dashboards' },
@@ -60,7 +60,7 @@ export const DeploymentsGroup = (
     isCollapsible={true}
     initialIsOpen={false}
     background="dark">
-    <div role="group" className="kibanaNavDeployment__content">
+    <div role="group" className="wazuhNavDeployment__content">
       <WuiListGroup listItems={deploymentsList} flush />
       <WuiSpacer size="s" />
       <WuiButton color="ghost" fullWidth>
@@ -110,12 +110,12 @@ export default () => (
       />
     </WuiCollapsibleNavGroup>
     <WuiCollapsibleNavGroup
-      title="Kibana"
-      iconType="logoKibana"
+      title="Wazuh"
+      iconType="logoWazuh"
       isCollapsible={true}
       initialIsOpen={true}>
       <WuiPinnableListGroup
-        listItems={KibanaNavLinks}
+        listItems={WazuhNavLinks}
         onPinClick={() => {}}
         maxWidth="none"
         color="subdued"

@@ -15,8 +15,8 @@ export default () => {
     isOpen: false,
     value: (
       <Fragment>
-        <p>.kibana_task_manager,</p>
-        <p>kibana_sample_data_ecommerce</p>
+        <p>.wazuh_task_manager,</p>
+        <p>wazuh_sample_data_ecommerce</p>
       </Fragment>
     ),
   });
@@ -28,19 +28,19 @@ export default () => {
 
   const options = [
     {
-      label: '.kibana_task_manager',
+      label: '.wazuh_task_manager',
     },
     {
-      label: 'kibana_sample_data_ecommerce',
+      label: 'wazuh_sample_data_ecommerce',
     },
     {
-      label: '.kibana-event-log-8.0.0-000001',
+      label: '.wazuh-event-log-8.0.0-000001',
     },
     {
-      label: 'kibana_sample_data_flights',
+      label: 'wazuh_sample_data_flights',
     },
     {
-      label: '.kibana-event-log-8.0.0',
+      label: '.wazuh-event-log-8.0.0',
     },
   ];
 
@@ -184,7 +184,7 @@ export default () => {
       <WuiExpression
         display="columns"
         description="Except"
-        value="kibana_sample_data_ky_counties"
+        value="wazuh_sample_data_ky_counties"
       />
       <WuiSpacer />
       <WuiTitle size="xxs">
@@ -194,7 +194,7 @@ export default () => {
         description="join"
         display="columns"
         descriptionWidth={50}
-        value="kibana_sample_data_ky_avl"
+        value="wazuh_sample_data_ky_avl"
         onClick={() => {}}
       />
     </div>

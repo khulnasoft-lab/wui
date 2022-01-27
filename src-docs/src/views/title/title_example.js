@@ -36,7 +36,7 @@ export const TitleExample = {
       text: (
         <p>
           <strong>WuiTitle</strong> styles the page, section, and content
-          headings we use in Kibana. They can contain any markup, but usually
+          headings we use in Wazuh. They can contain any markup, but usually
           contain a heading tag of some sort. Unlike <strong>WuiText</strong>{' '}
           they are margin neutral and more suitable for general layout design.
         </p>

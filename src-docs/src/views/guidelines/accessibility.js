@@ -314,11 +314,11 @@ export default {
               text="Do. These are good example of page titles.">
               <div>
                 <strong className="wui-textCenter wui-displayBlock">
-                  Discover - Kibana
+                  Discover - Wazuh
                 </strong>
                 <WuiSpacer />
                 <strong className="wui-textCenter wui-displayBlock">
-                  Rollup Jobs - Management - Kibana
+                  Rollup Jobs - Management - Wazuh
                 </strong>
               </div>
             </GuideRuleExample>
@@ -327,7 +327,7 @@ export default {
               frame="frame"
               type="dont"
               minHeight={200}
-              text="Don’t. Though unique, this does not provide enough context; use: Watchers - Management - Kibana.">
+              text="Don’t. Though unique, this does not provide enough context; use: Watchers - Management - Wazuh.">
               <strong className="wui-textCenter wui-displayBlock">
                 Watchers
               </strong>
@@ -339,9 +339,9 @@ export default {
               frame="frame"
               type="dont"
               minHeight={200}
-              text="Don’t. Although it provides all the context, putting the most important bit at the end is hard to find; use: Spaces - Management - Kibana.">
+              text="Don’t. Although it provides all the context, putting the most important bit at the end is hard to find; use: Spaces - Management - Wazuh.">
               <strong className="wui-textCenter wui-displayBlock">
-                Elastic Kibana - Spaces
+                Elastic Wazuh - Spaces
               </strong>
             </GuideRuleExample>
             {/* This spacer is hacks because code blocks can't have multi-line captions */}
@@ -351,9 +351,9 @@ export default {
               frame="frame"
               type="dont"
               minHeight={200}
-              text="Don’t. Although this provides all the context and in a good order, a title is not the place for any extra words; use: Reporting - Management - Kibana.">
+              text="Don’t. Although this provides all the context and in a good order, a title is not the place for any extra words; use: Reporting - Management - Wazuh.">
               <strong className="wui-textCenter wui-displayBlock">
-                This is the Reporting page of the Management section of Kibana.
+                This is the Reporting page of the Management section of Wazuh.
               </strong>
             </GuideRuleExample>
           </GuideRule>

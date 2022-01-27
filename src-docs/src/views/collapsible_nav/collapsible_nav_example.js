@@ -158,12 +158,12 @@ export const CollapsibleNavExample = {
       ),
       demo: <CollapsibleNavList />,
       snippet: `<WuiCollapsibleNavGroup
-  title="Kibana"
-  iconType="logoKibana"
+  title="Wazuh"
+  iconType="logoWazuh"
   isCollapsible={true}
   initialIsOpen={true}>
   <WuiPinnableListGroup
-    aria-label="Kibana"
+    aria-label="Wazuh"
     listItems={[
       { label: 'Discover' },
       { label: 'Visualize' }

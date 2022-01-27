@@ -28,10 +28,8 @@ const tags = [
   { name: 'earlybirds', color: 'success' },
   { name: 'people-ops', color: 'danger' },
   { name: 'solutions', color: 'success' },
-  { name: 'elasticsearch', color: 'success' },
-  { name: 'kibana', color: 'success' },
   { name: 'cloud', color: 'danger' },
-  { name: 'logstash', color: 'warning' },
+  { name: 'wazuh', color: 'warning' },
   { name: 'beats', color: 'warning' },
   { name: 'legal', color: 'danger' },
   { name: 'revenue', color: 'success' },
@@ -236,7 +234,7 @@ export const SearchBarFilters = () => {
     <WuiFlexGroup>
       <WuiFlexItem grow={4}>
         <WuiTitle size="s">
-          <h3>Elasticsearch Query String</h3>
+          <h3>Query String</h3>
         </WuiTitle>
         <WuiSpacer size="s" />
         <WuiCodeBlock language="js">
@@ -246,7 +244,7 @@ export const SearchBarFilters = () => {
         <WuiSpacer size="l" />
 
         <WuiTitle size="s">
-          <h3>Elasticsearch Query DSL</h3>
+          <h3>Query DSL</h3>
         </WuiTitle>
         <WuiSpacer size="s" />
         <WuiCodeBlock language="js">

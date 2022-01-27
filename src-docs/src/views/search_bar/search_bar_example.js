@@ -42,7 +42,7 @@ export const SearchBarExample = {
             the query syntax in a search box or by clicking any of the
             configured filters. The query language is not meant to be full blown
             search language for arbitrary data (e.g. as required in the Discover
-            App in Kibana), yet it does provide some useful features:
+            App in Wazuh), yet it does provide some useful features:
           </p>
           <ul>
             <li>

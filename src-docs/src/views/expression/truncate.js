@@ -6,8 +6,8 @@ const value = 'and a very long string as value';
 const description = 'some very very long description';
 const nodes = (
   <Fragment>
-    <p className="wui-textTruncate">.kibana_task_manager</p>
-    <p className="wui-textTruncate">kibana_sample_data_ecommerce</p>
+    <p className="wui-textTruncate">.wazuh_task_manager</p>
+    <p className="wui-textTruncate">wazuh_sample_data_ecommerce</p>
   </Fragment>
 );
 

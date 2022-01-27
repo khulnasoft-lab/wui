@@ -15,7 +15,7 @@ const cardNodes = icons.map(function(item, index) {
     <WuiFlexItem key={index}>
       <WuiCard
         icon={<WuiIcon size="xxl" type={`${item}App`} />}
-        title={`Kibana ${item}`}
+        title={`Wazuh ${item}`}
         description="Example of a card's description. Stick to one or two sentences."
         betaBadgeLabel={badges[index]}
         betaBadgeTooltipContent={

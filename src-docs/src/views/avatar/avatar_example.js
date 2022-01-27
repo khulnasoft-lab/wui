@@ -23,7 +23,7 @@ const avatarInitialsHtml = renderToHtml(AvatarInitials);
 const avatarInitialsSnippet = [
   `<WuiAvatar size="m" type="user" name="Two Words" />
 `,
-  `<WuiAvatar size="m" type="space" name="Kibana" initialsLength={2}/>
+  `<WuiAvatar size="m" type="space" name="Wazuh" initialsLength={2}/>
 `,
   `<WuiAvatar size="m" type="space"  name="Engineering Space" initials="En" initialsLength={2} />
 `,

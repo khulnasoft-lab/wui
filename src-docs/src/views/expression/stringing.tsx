@@ -7,11 +7,11 @@ export default () => (
     <WuiExpression description="Select" value="count(*)" onClick={() => {}} />
     <WuiExpression
       description="From"
-      value="kibana_sample_data_ky_counties left"
+      value="wazuh_sample_data_ky_counties left"
     />
     <WuiExpression
       description="join"
-      value="kibana_sample_data_ky_avl right"
+      value="wazuh_sample_data_ky_avl right"
       onClick={() => {}}
     />
     <WuiExpression description="on" value="left.smis = right.kytccountynmbr" />

@@ -83,7 +83,7 @@ export default () => {
           <WuiHeaderSection grow={false}>
             <WuiHeaderSectionItem border="right">
               <WuiHeaderLogo
-                iconType="logoKibana"
+                iconType="logoWazuh"
                 href="#"
                 aria-label="Go to home page"
               />

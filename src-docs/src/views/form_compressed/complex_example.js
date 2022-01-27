@@ -215,7 +215,7 @@ export default () => {
               aria-label="Dynamic toggle"
               title="Make dynamic"
             />,
-            'kibana_sample_ecommerce_data',
+            'wazuh_sample_ecommerce_data',
           ]}
           append="px"
         />

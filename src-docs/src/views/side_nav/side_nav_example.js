@@ -15,7 +15,7 @@ const sideNavSnippet = `<WuiSideNav
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
-      name: 'Kibana',
+      name: 'Wazuh',
       id: 0,
       items: [
         {
@@ -43,7 +43,7 @@ const sideNavComplexSnippet = `<WuiSideNav
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
-      name: 'Elasticsearch',
+      name: 'Wazuh',
       icon: <WuiIcon type="logoWazuh" />,
       id: '0',
       items: [
@@ -60,8 +60,8 @@ const sideNavComplexSnippet = `<WuiSideNav
       ],
     },
     {
-      name: 'Kibana',
-      icon: <WuiIcon type="logoKibana" />,
+      name: 'Wazuh',
+      icon: <WuiIcon type="logoWazuh" />,
       id: '1',
       items: [
         {
@@ -109,11 +109,11 @@ const sideNavForceSnippet = `<WuiSideNav
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
-      name: 'Kibana',
+      name: 'Wazuh',
       id: '1',
       items: [
         {
-          name: 'Kibana',
+          name: 'Wazuh',
           id: '1',
           items: [
             {

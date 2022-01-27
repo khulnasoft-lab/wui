@@ -38,8 +38,8 @@ describe('TermToggleGroupFilter', () => {
         field: 'group',
         items: [
           {
-            value: 'kibana',
-            name: 'Kibana',
+            value: 'wazuh',
+            name: 'Wazuh',
           },
           {
             value: 'es',
@@ -58,14 +58,14 @@ describe('TermToggleGroupFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('group:kibana'),
+      query: Query.parse('group:wazuh'),
       config: {
         type: 'field_value_toggle_group',
         field: 'group',
         items: [
           {
-            value: 'kibana',
-            name: 'Kibana',
+            value: 'wazuh',
+            name: 'Wazuh',
           },
           {
             value: 'es',
@@ -84,14 +84,14 @@ describe('TermToggleGroupFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('-group:kibana'),
+      query: Query.parse('-group:wazuh'),
       config: {
         type: 'field_value_toggle_group',
         field: 'group',
         items: [
           {
-            value: 'kibana',
-            name: 'Kibana',
+            value: 'wazuh',
+            name: 'Wazuh',
           },
           {
             value: 'es',
@@ -110,15 +110,15 @@ describe('TermToggleGroupFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('-group:kibana'),
+      query: Query.parse('-group:wazuh'),
       config: {
         type: 'field_value_toggle_group',
         field: 'group',
         items: [
           {
-            value: 'kibana',
-            name: 'Kibana',
-            negatedName: '-Kibana',
+            value: 'wazuh',
+            name: 'Wazuh',
+            negatedName: '-Wazuh',
           },
           {
             value: 'es',

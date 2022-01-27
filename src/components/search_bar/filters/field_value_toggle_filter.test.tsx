@@ -36,8 +36,8 @@ describe('FieldValueToggleFilter', () => {
       config: {
         type: 'field_value_toggle',
         field: 'group',
-        value: 'kibana',
-        name: 'Kibana',
+        value: 'wazuh',
+        name: 'Wazuh',
       },
     };
 
@@ -50,12 +50,12 @@ describe('FieldValueToggleFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('group:kibana'),
+      query: Query.parse('group:wazuh'),
       config: {
         type: 'field_value_toggle',
         field: 'group',
-        value: 'kibana',
-        name: 'Kibana',
+        value: 'wazuh',
+        name: 'Wazuh',
       },
     };
 
@@ -68,12 +68,12 @@ describe('FieldValueToggleFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('-group:kibana'),
+      query: Query.parse('-group:wazuh'),
       config: {
         type: 'field_value_toggle',
         field: 'group',
-        value: 'kibana',
-        name: 'Kibana',
+        value: 'wazuh',
+        name: 'Wazuh',
       },
     };
 
@@ -86,12 +86,12 @@ describe('FieldValueToggleFilter', () => {
       ...requiredProps,
       index: 0,
       onChange: () => {},
-      query: Query.parse('-group:kibana'),
+      query: Query.parse('-group:wazuh'),
       config: {
         type: 'field_value_toggle',
         field: 'group',
-        value: 'kibana',
-        name: 'Kibana',
+        value: 'wazuh',
+        name: 'Wazuh',
         negatedName: 'Others',
       },
     };

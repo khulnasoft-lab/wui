@@ -36,14 +36,14 @@ const wazuhsearchTab = {
   content: <p>Wazuhsearch content</p>,
 };
 
-const kibanaTab = {
-  id: 'kibana',
-  name: <strong>Kibana</strong>,
-  'data-test-subj': 'kibanaTab',
-  content: <p>Kibana content</p>,
+const wazuhTab = {
+  id: 'wazuh',
+  name: <strong>Wazuh</strong>,
+  'data-test-subj': 'wazuhTab',
+  content: <p>Wazuh content</p>,
 };
 
-const tabs = [wazuhsearchTab, kibanaTab];
+const tabs = [wazuhsearchTab, wazuhTab];
 
 describe('WuiTabbedContent', () => {
   test('is rendered with required props and tabs', () => {
@@ -60,16 +60,16 @@ describe('WuiTabbedContent', () => {
         const component = mount(
           <WuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
         );
-        findTestSubject(component, 'kibanaTab').simulate('click');
+        findTestSubject(component, 'wazuhTab').simulate('click');
         expect(onTabClickHandler).toBeCalledTimes(1);
-        expect(onTabClickHandler).toBeCalledWith(kibanaTab);
+        expect(onTabClickHandler).toBeCalledWith(wazuhTab);
       });
     });
 
     describe('selectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <WuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent selectedTab={wazuhTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -78,7 +78,7 @@ describe('WuiTabbedContent', () => {
     describe('initialSelectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <WuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent initialSelectedTab={wazuhTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -123,13 +123,13 @@ describe('WuiTabbedContent', () => {
       const tabs = [
         wazuhsearchTab,
         {
-          ...kibanaTab,
+          ...wazuhTab,
         },
       ];
       const component = mount(<WuiTabbedContent tabs={tabs} />);
 
       component
-        .find('WuiTab[id="kibana"] button')
+        .find('WuiTab[id="wazuh"] button')
         .first()
         .simulate('click');
 
@@ -137,8 +137,8 @@ describe('WuiTabbedContent', () => {
         tabs: [
           wazuhsearchTab,
           {
-            ...kibanaTab,
-            content: <p>updated Kibana content</p>,
+            ...wazuhTab,
+            content: <p>updated Wazuh content</p>,
           },
         ],
       });

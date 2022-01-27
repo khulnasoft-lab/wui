@@ -26,8 +26,8 @@ export default () => {
   };
 
   const sideNav = [
-    createItem('Kibana', {
-      icon: <WuiIcon type="logoKibana" />,
+    createItem('Wazuh', {
+      icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Has normal children', {
           items: [

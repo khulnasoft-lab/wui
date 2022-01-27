@@ -49,7 +49,7 @@ describe('WuiCheckboxGroup (mocked checkbox)', () => {
       <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
-          { id: '1', label: 'kibana' },
+          { id: '1', label: 'wazuh' },
           { id: '2', label: 'wazuh' },
         ]}
       />
@@ -63,7 +63,7 @@ describe('WuiCheckboxGroup (mocked checkbox)', () => {
       <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
-          { id: '1', label: 'kibana' },
+          { id: '1', label: 'wazuh' },
           { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{
@@ -81,7 +81,7 @@ describe('WuiCheckboxGroup (mocked checkbox)', () => {
       <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
-          { id: '1', label: 'kibana' },
+          { id: '1', label: 'wazuh' },
           { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{
@@ -100,7 +100,7 @@ describe('WuiCheckboxGroup (mocked checkbox)', () => {
       <WuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
-          { id: '1', label: 'kibana', disabled: true },
+          { id: '1', label: 'wazuh', disabled: true },
           { id: '2', label: 'wazuh' },
         ]}
         idToSelectedMap={{

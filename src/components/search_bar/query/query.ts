@@ -56,7 +56,7 @@ export class Query {
     return AST.Field.isInstance(clause);
   }
 
-  // This ought to be `private`, but Kibana has some customizations that rely on access to this field
+  // This ought to be `private`, but Wazuh has some customizations that rely on access to this field
   public ast: _AST;
   public text: string;
   private syntax: Syntax;

@@ -260,7 +260,7 @@ export const SearchBar = () => {
     <WuiFlexGroup>
       <WuiFlexItem grow={4}>
         <WuiTitle size="s">
-          <h3>Elasticsearch Query String</h3>
+          <h3>Query String</h3>
         </WuiTitle>
         <WuiSpacer size="s" />
         <WuiCodeBlock language="js">
@@ -270,7 +270,7 @@ export const SearchBar = () => {
         <WuiSpacer size="l" />
 
         <WuiTitle size="s">
-          <h3>Elasticsearch Query DSL</h3>
+          <h3>Query DSL</h3>
         </WuiTitle>
         <WuiSpacer size="s" />
         <WuiCodeBlock language="js">

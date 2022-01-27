@@ -11,7 +11,7 @@ export default () => {
 
   const sideNav = [
     {
-      name: 'Kibana',
+      name: 'Wazuh',
       id: 0,
       items: [
         {

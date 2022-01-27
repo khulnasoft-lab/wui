@@ -130,7 +130,7 @@ export const SuggestExample = {
         <div>
           <WuiCallOut color="warning" title="Demo of visual pattern only">
             <p>
-              This documents a <strong>visual</strong> pattern for Kibana&apos;s
+              This documents a <strong>visual</strong> pattern for Wazuh&apos;s
               global query and filter bars. The filter bar has been broken down
               into multiple components. There are still bugs and not all the
               logic is well-formed.

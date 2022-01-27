@@ -26,7 +26,7 @@ export default () => {
   };
 
   const sideNav = [
-    createItem('Elasticsearch', {
+    createItem('Wazuh', {
       icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Data sources'),
@@ -38,8 +38,8 @@ export default () => {
         ),
       ],
     }),
-    createItem('Kibana', {
-      icon: <WuiIcon type="logoKibana" />,
+    createItem('Wazuh', {
+      icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Advanced settings', {
           items: [

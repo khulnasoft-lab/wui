@@ -40,7 +40,7 @@ export class WuiMutationObserver extends WuiObserver<Props> {
   };
 
   beginObserve = () => {
-    // IE11 and the MutationObserver polyfill used in Kibana (for Jest) implement
+    // IE11 and the MutationObserver polyfill used in Wazuh (for Jest) implement
     // an older spec in which specifying `attributeOldValue` or `attributeFilter`
     // without specifying `attributes` results in a `SyntaxError`.
     // The following logic patches the newer spec in which `attributes: true` can be

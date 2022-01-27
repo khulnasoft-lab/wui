@@ -486,7 +486,7 @@ export const SelectableExample = {
   {
     label: 'Label',
     icon: {
-      type: 'logoKibana'
+      type: 'logoWazuh'
     }
     avatar: {
       name: 'Default',
@@ -525,7 +525,7 @@ export const SelectableExample = {
               overridden.
             </li>
             <li>
-              <WuiCode>avatar</WuiCode>: Represents the Kibana Space that the
+              <WuiCode>avatar</WuiCode>: Represents the Wazuh Space that the
               item is located in, <strong>if</strong> multiple spaces are
               present. Type and size are predetermined but can be overridden.
             </li>

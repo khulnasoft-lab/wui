@@ -24,7 +24,7 @@ import { GuideFullScreen } from '../../services/full_screen/full_screen';
 
 import {
   DeploymentsGroup,
-  KibanaNavLinks,
+  WazuhNavLinks,
   SecurityGroup,
 } from './collapsible_nav_list';
 import { WuiShowFor } from '../../../../src/components/responsive';
@@ -39,7 +39,7 @@ const TopLinks: WuiPinnableListGroupItemProps[] = [
     pinnable: false,
   },
 ];
-const KibanaLinks: WuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
+const WazuhLinks: WuiPinnableListGroupItemProps[] = WazuhNavLinks.map(
   link => {
     return {
       ...link,
@@ -67,7 +67,7 @@ export default () => {
    */
   const [openGroups, setOpenGroups] = useState(
     JSON.parse(String(localStorage.getItem('openNavGroups'))) || [
-      'Kibana',
+      'Wazuh',
       'Learn',
     ]
   );
@@ -182,16 +182,16 @@ export default () => {
 
       {/* BOTTOM */}
       <WuiFlexItem className="wui-yScroll">
-        {/* Kibana section */}
+        {/* Wazuh section */}
         <WuiCollapsibleNavGroup
-          title="Kibana"
-          iconType="logoKibana"
+          title="Wazuh"
+          iconType="logoWazuh"
           isCollapsible={true}
-          initialIsOpen={openGroups.includes('Kibana')}
-          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Kibana')}>
+          initialIsOpen={openGroups.includes('Wazuh')}
+          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Wazuh')}>
           <WuiPinnableListGroup
-            aria-label="Kibana" // A11y : WuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
-            listItems={alterLinksWithCurrentState(KibanaLinks)}
+            aria-label="Wazuh" // A11y : WuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+            listItems={alterLinksWithCurrentState(WazuhLinks)}
             pinTitle={addLinkNameToPinTitle}
             onPinClick={addPin}
             maxWidth="none"

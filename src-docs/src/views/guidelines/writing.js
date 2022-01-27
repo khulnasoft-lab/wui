@@ -159,14 +159,14 @@ export default () => (
         type="do"
         text="Do. Writing in active voice puts the subject first.">
         <GuideRuleWriting>
-          The Elasticsearch Query DSL builds filters.
+          The Wazuh Query DSL builds filters.
         </GuideRuleWriting>
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
         text="Don't. With passive voice, it's harder to tell who's doing what.">
         <GuideRuleWriting>
-          Filters are built using the Elasticsearch Query DSL.
+          Filters are built using the Wazuh Query DSL.
         </GuideRuleWriting>
       </GuideRuleExample>
     </GuideRule>
@@ -205,7 +205,7 @@ export default () => (
         type="dont"
         text="Don't. Use unnecessary introductory phrases.">
         <GuideRuleWriting>
-          In order to use Kibana, you must configure at least one index pattern.
+          In order to use Wazuh, you must configure at least one index pattern.
         </GuideRuleWriting>
       </GuideRuleExample>
     </GuideRule>
@@ -358,7 +358,7 @@ export default () => (
           <span>Index management</span>
         </WuiTitle>
         <WuiText>
-          Update your Elasticsearch indices individually or in bulk
+          Update your Wazuh indices individually or in bulk
         </WuiText>
       </GuideRuleExample>
     </GuideRule>
@@ -399,7 +399,7 @@ export default () => (
         type="dont"
         text="Don't. Use exclamation points in error messages.">
         <GuideRuleWriting>
-          Couldn&apos;t find any Elasticsearch data!
+          Couldn&apos;t find any Wazuh data!
         </GuideRuleWriting>
       </GuideRuleExample>
     </GuideRule>
@@ -695,7 +695,7 @@ export default () => (
         type="do"
         text="Do. Make it fun only if it fits the experience.">
         <GuideRuleWriting>
-          Odd, exciting, and scary trends and anomalies in your Elasticsearch
+          Odd, exciting, and scary trends and anomalies in your Wazuh
           data
         </GuideRuleWriting>
       </GuideRuleExample>

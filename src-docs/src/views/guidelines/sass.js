@@ -306,7 +306,7 @@ const borderRadiusExample = `border: $wuiBorderThin;
 border-radius: $wuiBorderRadius;
 `;
 
-const importKibanaExample = `// In Kibana you can add this to the top of your Sass file
+const importWazuhExample = `// In Wazuh you can add this to the top of your Sass file
 @import 'ui/public/styles/styling_constants';
 `;
 
@@ -1076,7 +1076,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
           <WuiText grow={false} className="guideSection__text">
             <p>
               Most WUI based projects should already import the WUI global
-              scope. For example, Kibana has its own liner that will give you
+              scope. For example, Wazuh has its own liner that will give you
               everything on this page.
             </p>
           </WuiText>
@@ -1085,7 +1085,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
             language="scss"
             transparentBackground
             paddingSize="none">
-            {importKibanaExample}
+            {importWazuhExample}
           </WuiCodeBlock>
           <WuiSpacer />
           <WuiText grow={false} className="guideSection__text">

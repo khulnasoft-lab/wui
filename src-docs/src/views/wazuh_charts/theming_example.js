@@ -68,13 +68,13 @@ const wuiTheme = isDarkTheme ? WUI_CHARTS_THEME_DARK.theme : WUI_CHARTS_THEME_LI
 
 <Settings theme={wuiTheme} />`}
           </WuiCodeBlock>
-          <WuiCallOut title="Kibana engineers" iconType="logoKibana">
+          <WuiCallOut title="Wazuh engineers" iconType="logoWazuh">
             <p>
               WUI provides a plugin utility for ease of pulling in the correct
-              theme object depending on the current Kibana theme. Learn more
+              theme object depending on the current Wazuh theme. Learn more
               from this{' '}
               <WuiLink
-                href="https://github.com/elastic/kibana/tree/master/src/plugins/charts"
+                href="https://wazuh.com"
                 target="_blank">
                 readme
               </WuiLink>
