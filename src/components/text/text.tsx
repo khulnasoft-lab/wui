@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-import { TextColor, EuiTextColor } from './text_color';
+import { TextColor, WuiTextColor } from './text_color';
 
 import { WuiTextAlign, TextAlignment } from './text_align';
 
@@ -64,9 +64,9 @@ export const WuiText: FunctionComponent<WuiTextProps> = ({
   let optionallyAlteredText;
   if (color) {
     optionallyAlteredText = (
-      <EuiTextColor color={color} component="div">
+      <WuiTextColor color={color} component="div">
         {children}
-      </EuiTextColor>
+      </WuiTextColor>
     );
   }
 

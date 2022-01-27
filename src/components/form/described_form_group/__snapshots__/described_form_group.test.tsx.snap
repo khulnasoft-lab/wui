@@ -46,16 +46,16 @@ exports[`WuiDescribedFormGroup is rendered 1`] = `
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>
@@ -220,16 +220,16 @@ exports[`WuiDescribedFormGroup props fullWidth is rendered 1`] = `
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>
@@ -318,16 +318,16 @@ exports[`WuiDescribedFormGroup props gutterSize is rendered 1`] = `
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>
@@ -427,16 +427,16 @@ exports[`WuiDescribedFormGroup props props for the flex item containers are pass
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>
@@ -526,16 +526,16 @@ exports[`WuiDescribedFormGroup props titleSize is rendered 1`] = `
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>
@@ -623,16 +623,16 @@ exports[`WuiDescribedFormGroup ties together parts for accessibility 1`] = `
               <div
                 className="wuiText wuiText--small wuiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <WuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="wuiTextColor wuiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </WuiTextColor>
               </div>
             </WuiText>
           </div>

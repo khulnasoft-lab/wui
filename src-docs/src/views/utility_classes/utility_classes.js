@@ -5,7 +5,7 @@ import {
   WuiCode,
   WuiSpacer,
   WuiIcon,
-  EuiTextColor,
+  WuiTextColor,
   WuiCodeBlock,
 } from '../../../../src/components';
 
@@ -46,10 +46,10 @@ export default () => (
 
     <WuiSpacer />
 
-    <EuiTextColor color="danger">
+    <WuiTextColor color="danger">
       <WuiCode className="wui-textInheritColor">.wui-textInheritColor</WuiCode>{' '}
       will force text to inherit its color from its parent.
-    </EuiTextColor>
+    </WuiTextColor>
 
     <WuiSpacer />
 

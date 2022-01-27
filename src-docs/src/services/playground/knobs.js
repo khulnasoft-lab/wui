@@ -15,7 +15,7 @@ import {
   WuiTableHeaderCell,
   WuiTableRow,
   WuiTableRowCell,
-  EuiTextColor,
+  WuiTextColor,
   WuiTextArea,
   WuiFormRow,
 } from '../../../../src/components/';
@@ -294,7 +294,7 @@ const KnobColumn = ({ state, knobNames, error, set }) => {
           humanizedName = (
             <span>
               {humanizedName}{' '}
-              <EuiTextColor color="danger">(required)</EuiTextColor>
+              <WuiTextColor color="danger">(required)</WuiTextColor>
             </span>
           );
         }

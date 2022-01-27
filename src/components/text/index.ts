@@ -18,5 +18,5 @@
  */
 
 export { WuiText, WuiTextProps } from './text';
-export { EuiTextColor } from './text_color';
+export { WuiTextColor } from './text_color';
 export { WuiTextAlign } from './text_align';

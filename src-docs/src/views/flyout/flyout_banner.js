@@ -11,7 +11,7 @@ import {
   WuiLink,
   WuiButton,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
   WuiTitle,
 } from '../../../../src/components';
 
@@ -32,10 +32,10 @@ export default () => {
         </WuiFlexItem>
         <WuiFlexItem>
           {' '}
-          <EuiTextColor color="subdued">
+          <WuiTextColor color="subdued">
             Here&rsquo;s some stuff that you need to know. This banner helps
             highlight important information.
-          </EuiTextColor>
+          </WuiTextColor>
           <WuiLink href="#">View docs</WuiLink>
         </WuiFlexItem>
       </WuiFlexGroup>

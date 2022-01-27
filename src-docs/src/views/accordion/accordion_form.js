@@ -3,7 +3,7 @@ import React from 'react';
 import {
   WuiAccordion,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
   WuiForm,
   WuiFormRow,
   WuiFieldText,
@@ -59,9 +59,9 @@ const buttonContent = (
 
     <WuiText size="s">
       <p>
-        <EuiTextColor color="subdued">
+        <WuiTextColor color="subdued">
           Will send a POST request to www.example.com/some/path/
-        </EuiTextColor>
+        </WuiTextColor>
       </p>
     </WuiText>
   </div>

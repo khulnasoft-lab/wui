@@ -31,7 +31,7 @@ import { WuiTitle, WuiTitleSize } from '../title/title';
 import { WuiFlexGroup, WuiFlexItem } from '../flex';
 import { WuiSpacer } from '../spacer';
 import { WuiIcon, IconColor, IconType } from '../icon/icon';
-import { WuiText, EuiTextColor } from '../text';
+import { WuiText, WuiTextColor } from '../text';
 
 export type WuiEmptyPromptProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
@@ -91,10 +91,10 @@ export const WuiEmptyPrompt: FunctionComponent<WuiEmptyPromptProps> = ({
     }
 
     content = (
-      <EuiTextColor color="subdued">
+      <WuiTextColor color="subdued">
         {titleEl}
         {bodyEl}
-      </EuiTextColor>
+      </WuiTextColor>
     );
   }
 

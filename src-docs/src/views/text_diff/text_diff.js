@@ -4,7 +4,7 @@ import {
   useWuiTextDiff,
   WuiCode,
   WuiSpacer,
-  EuiTextColor,
+  WuiTextColor,
   WuiText,
 } from '../../../../src/components';
 
@@ -40,8 +40,8 @@ export default () => {
       </WuiText>
       <WuiSpacer />
       <WuiCode>
-        <EuiTextColor color="secondary"> {ins} </EuiTextColor> Insertions,
-        <EuiTextColor color="danger"> {del} </EuiTextColor>
+        <WuiTextColor color="secondary"> {ins} </WuiTextColor> Insertions,
+        <WuiTextColor color="danger"> {del} </WuiTextColor>
         Deletions
       </WuiCode>
     </>

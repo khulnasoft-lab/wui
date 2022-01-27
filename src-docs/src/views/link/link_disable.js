@@ -3,7 +3,7 @@ import {
   WuiLink,
   WuiSwitch,
   WuiSpacer,
-  EuiTextColor,
+  WuiTextColor,
 } from '../../../../src/components';
 
 export const LinkDisable = () => {
@@ -35,7 +35,7 @@ export const LinkDisable = () => {
         in it.
       </p>
       <WuiSpacer size="m" />
-      <EuiTextColor color="accent">
+      <WuiTextColor color="accent">
         When links are disabled, they inherit the{' '}
         <WuiLink
           color="secondary"
@@ -44,7 +44,7 @@ export const LinkDisable = () => {
           color
         </WuiLink>{' '}
         of surrounding text.
-      </EuiTextColor>
+      </WuiTextColor>
     </div>
   );
 };

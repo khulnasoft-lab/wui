@@ -7,7 +7,7 @@ import { GuideSectionTypes } from '../../components';
 import {
   WuiCode,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
   WuiTextAlign,
 } from '../../../../src/components';
 import Guidelines from '../text_scaling/text_scaling_sandbox';
@@ -33,7 +33,7 @@ const textColorHtml = renderToHtml(TextColor);
 const textColorSnippet = [
   `<WuiText color="danger"><!-- Raw HTML content --></WuiText>
 `,
-  `<EuiTextColor color="subdued">Subdued text color</EuiTextColor>
+  `<WuiTextColor color="subdued">Subdued text color</WuiTextColor>
 `,
 ];
 
@@ -119,13 +119,13 @@ export const TextExample = {
       text: (
         <p>
           There are two ways to color text. Either individually by applying{' '}
-          <strong>EuiTextColor</strong> on individual text objects, or by
+          <strong>WuiTextColor</strong> on individual text objects, or by
           passing the <WuiCode>color</WuiCode> prop directly on{' '}
           <strong>WuiText</strong> for a blanket approach across the entirety of
           your text.
         </p>
       ),
-      props: { EuiTextColor },
+      props: { WuiTextColor },
       snippet: textColorSnippet,
       demo: <TextColor />,
     },

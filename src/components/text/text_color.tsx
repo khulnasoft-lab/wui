@@ -22,13 +22,13 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const colorsToClassNameMap = {
-  default: 'euiTextColor--default',
-  subdued: 'euiTextColor--subdued',
-  secondary: 'euiTextColor--secondary',
-  accent: 'euiTextColor--accent',
-  danger: 'euiTextColor--danger',
-  warning: 'euiTextColor--warning',
-  ghost: 'euiTextColor--ghost',
+  default: 'wuiTextColor--default',
+  subdued: 'wuiTextColor--subdued',
+  secondary: 'wuiTextColor--secondary',
+  accent: 'wuiTextColor--accent',
+  danger: 'wuiTextColor--danger',
+  warning: 'wuiTextColor--warning',
+  ghost: 'wuiTextColor--ghost',
 };
 
 export type TextColor = keyof typeof colorsToClassNameMap;
@@ -47,7 +47,7 @@ type Props = CommonProps &
     component?: 'div' | 'span';
   };
 
-export const EuiTextColor: FunctionComponent<Props> = ({
+export const WuiTextColor: FunctionComponent<Props> = ({
   children,
   color = 'default',
   className,
@@ -55,7 +55,7 @@ export const EuiTextColor: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextColor',
+    'wuiTextColor',
     colorsToClassNameMap[color],
     className
   );

@@ -523,7 +523,7 @@ exports[`WuiDualRange props slider should display in popover 1`] = `
             class="wuiText wuiText--small wuiFormControlLayoutDelimited__delimeter"
           >
             <div
-              class="euiTextColor euiTextColor--subdued"
+              class="wuiTextColor wuiTextColor--subdued"
             >
               →
             </div>

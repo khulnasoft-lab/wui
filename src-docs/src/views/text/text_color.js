@@ -3,7 +3,7 @@ import React from 'react';
 import {
   WuiSpacer,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
   WuiTitle,
 } from '../../../../src/components';
 
@@ -11,11 +11,11 @@ export default () => (
   <div>
     <WuiTitle>
       <h2>
-        <EuiTextColor color="default">You </EuiTextColor>
-        <EuiTextColor color="secondary">use </EuiTextColor>
-        <EuiTextColor color="accent">it </EuiTextColor>
-        <EuiTextColor color="warning">on </EuiTextColor>
-        <EuiTextColor color="danger">anything!</EuiTextColor>
+        <WuiTextColor color="default">You </WuiTextColor>
+        <WuiTextColor color="secondary">use </WuiTextColor>
+        <WuiTextColor color="accent">it </WuiTextColor>
+        <WuiTextColor color="warning">on </WuiTextColor>
+        <WuiTextColor color="danger">anything!</WuiTextColor>
       </h2>
     </WuiTitle>
 
@@ -23,28 +23,28 @@ export default () => (
 
     <WuiText>
       <p>
-        <EuiTextColor color="default">Default text color</EuiTextColor>
+        <WuiTextColor color="default">Default text color</WuiTextColor>
       </p>
       <p>
-        <EuiTextColor color="subdued">Subdued text color</EuiTextColor>
+        <WuiTextColor color="subdued">Subdued text color</WuiTextColor>
       </p>
       <p>
-        <EuiTextColor color="secondary">Secondary text color</EuiTextColor>
+        <WuiTextColor color="secondary">Secondary text color</WuiTextColor>
       </p>
       <p>
-        <EuiTextColor color="accent">Accent text color</EuiTextColor>
+        <WuiTextColor color="accent">Accent text color</WuiTextColor>
       </p>
       <p>
-        <EuiTextColor color="warning">Warning text color</EuiTextColor>
+        <WuiTextColor color="warning">Warning text color</WuiTextColor>
       </p>
       <p>
-        <EuiTextColor color="danger">Danger text color</EuiTextColor>
+        <WuiTextColor color="danger">Danger text color</WuiTextColor>
       </p>
       <p>
         <span style={{ background: '#222' }}>
-          <EuiTextColor color="ghost">
+          <WuiTextColor color="ghost">
             Ghost text color is always white regardless of theme.
-          </EuiTextColor>
+          </WuiTextColor>
         </span>
       </p>
     </WuiText>

@@ -27,7 +27,7 @@ import {
 
 const wuiColors = [...allowedColors, 'euiColorGhost', 'wuiColorInk'];
 
-const euiTextColors = ['euiTextColor', 'wuiColorDarkShade', 'wuiLinkColor'];
+const wuiTextColors = ['wuiTextColor', 'wuiColorDarkShade', 'wuiLinkColor'];
 
 const euiSizeS = [
   'euiSizeXS',
@@ -84,7 +84,7 @@ const wuiBreakPoints = Object.getOwnPropertyNames(breakpoints.wuiBreakpoints);
 
 function renderPaletteColor(palette, color) {
   let optionalDefault;
-  if (color === 'euiTextColor') {
+  if (color === 'wuiTextColor') {
     optionalDefault = (
       <WuiFlexItem grow={false}>
         <strong>default</strong>
@@ -324,7 +324,7 @@ const tintOrShadeExample = `// tintOrShade(color, tint_percent, shade_percent)
   border-left: $wuiBorderThick;
   border-color: $wuiColorPrimary;
   padding: $euiSize;
-  color: $euiTextColor;
+  color: $wuiTextColor;
 }
 `;
 
@@ -643,7 +643,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
             <WuiSpacer />
 
-            {euiTextColors.map(function(color, index) {
+            {wuiTextColors.map(function(color, index) {
               return renderPaletteColor(palette, color, index);
             })}
 

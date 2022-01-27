@@ -5,7 +5,7 @@ exports[`WuiSelectableMessage bordered is rendered 1`] = `
   class="wuiText wuiText--extraSmall wuiSelectableMessage wuiSelectableMessage--bordered"
 >
   <div
-    class="euiTextColor euiTextColor--subdued"
+    class="wuiTextColor wuiTextColor--subdued"
   />
 </div>
 `;
@@ -17,7 +17,7 @@ exports[`WuiSelectableMessage is rendered 1`] = `
   data-test-subj="test subject string"
 >
   <div
-    class="euiTextColor euiTextColor--subdued"
+    class="wuiTextColor wuiTextColor--subdued"
   />
 </div>
 `;

@@ -8,7 +8,7 @@ import {
   WuiFlexGroup,
   WuiFlexItem,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
 } from '../../../../src/components';
 
 export default () => {
@@ -79,9 +79,9 @@ export default () => {
             </WuiText>
           </div>
           <WuiPopoverFooter>
-            <EuiTextColor color="subdued">
+            <WuiTextColor color="subdued">
               Hello, I&rsquo;m a small popover footer caption
-            </EuiTextColor>
+            </WuiTextColor>
           </WuiPopoverFooter>
         </WuiPopover>
       </WuiFlexItem>

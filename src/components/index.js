@@ -329,7 +329,7 @@ export { WuiBasicTable, WuiInMemoryTable } from './basic_table';
 
 export { WuiTab, WuiTabs, WuiTabbedContent } from './tabs';
 
-export { WuiText, EuiTextColor, WuiTextAlign } from './text';
+export { WuiText, WuiTextColor, WuiTextAlign } from './text';
 
 export { useWuiTextDiff } from './text_diff';
 

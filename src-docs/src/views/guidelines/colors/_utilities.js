@@ -34,7 +34,7 @@ export const grayColors = [
 
 export const textColors = [
   'wuiTextSubduedColor',
-  'euiTextColor',
+  'wuiTextColor',
   'wuiTitleColor',
   'euiColorGhost',
   'wuiColorInk',

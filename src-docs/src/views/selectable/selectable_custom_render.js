@@ -4,7 +4,7 @@ import {
   WuiBadge,
   WuiHighlight,
   WuiSpacer,
-  EuiTextColor,
+  WuiTextColor,
   WuiSwitch,
 } from '../../../../src/components';
 import { WuiSelectable } from '../../../../src/components/selectable';
@@ -42,13 +42,13 @@ export default () => {
       <>
         <WuiHighlight search={searchValue}>{option.label}</WuiHighlight>
         <br />
-        <EuiTextColor color="subdued">
+        <WuiTextColor color="subdued">
           <small>
             <WuiHighlight search={searchValue}>
               I am secondary content, I am!
             </WuiHighlight>
           </small>
-        </EuiTextColor>
+        </WuiTextColor>
       </>
     );
   };

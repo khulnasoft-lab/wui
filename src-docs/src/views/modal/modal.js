@@ -42,7 +42,7 @@ export default () => {
         <Fragment>
           <strong>Option one</strong>
           <WuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+            <p className="wuiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
           </WuiText>
@@ -56,7 +56,7 @@ export default () => {
         <Fragment>
           <strong>Option two</strong>
           <WuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+            <p className="wuiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
           </WuiText>
@@ -70,7 +70,7 @@ export default () => {
         <Fragment>
           <strong>Option three</strong>
           <WuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+            <p className="wuiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
           </WuiText>

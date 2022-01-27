@@ -51,7 +51,7 @@ exports[`WuiDatePickerRange is rendered 1`] = `
     class="wuiText wuiText--small wuiDatePickerRange__delimeter"
   >
     <div
-      class="euiTextColor euiTextColor--subdued"
+      class="wuiTextColor wuiTextColor--subdued"
     >
       →
     </div>

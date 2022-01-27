@@ -14,7 +14,7 @@ exports[`WuiEmptyPrompt is rendered 1`] = `
     class="wuiSpacer wuiSpacer--s"
   />
   <span
-    class="euiTextColor euiTextColor--subdued"
+    class="wuiTextColor wuiTextColor--subdued"
   >
     <h2
       class="wuiTitle wuiTitle--medium"
@@ -84,7 +84,7 @@ exports[`WuiEmptyPrompt props body renders alone 1`] = `
   class="wuiEmptyPrompt"
 >
   <span
-    class="euiTextColor euiTextColor--subdued"
+    class="wuiTextColor wuiTextColor--subdued"
   >
     <div
       class="wuiText wuiText--medium"
@@ -114,7 +114,7 @@ exports[`WuiEmptyPrompt props title renders alone 1`] = `
   class="wuiEmptyPrompt"
 >
   <span
-    class="euiTextColor euiTextColor--subdued"
+    class="wuiTextColor wuiTextColor--subdued"
   >
     <div
       class="wuiTitle wuiTitle--medium"

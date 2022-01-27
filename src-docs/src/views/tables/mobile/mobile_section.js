@@ -4,7 +4,7 @@ import { renderToHtml } from '../../../services';
 
 import { Table } from './mobile';
 import { propsInfo } from './props_info';
-import { EuiTextColor } from '../../../../../src/components/text';
+import { WuiTextColor } from '../../../../../src/components/text';
 import { WuiCode, WuiCodeBlock } from '../../../../../src/components/code';
 const source = require('!!raw-loader!./mobile');
 const html = renderToHtml(Table);
@@ -46,7 +46,7 @@ export const section = {
       </p>
       <h4>
         To make your table work responsively, please make sure you add the
-        following <EuiTextColor color="danger">additional</EuiTextColor> props
+        following <WuiTextColor color="danger">additional</WuiTextColor> props
         to the top level table component (<strong>WuiBasicTable</strong> or{' '}
         <strong>WuiInMemoryTable</strong>):
       </h4>

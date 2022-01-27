@@ -15,7 +15,7 @@ import {
   WuiTableRowCell,
   WuiTabs,
   WuiText,
-  EuiTextColor,
+  WuiTextColor,
   WuiTitle,
   WuiLink,
   WuiButtonEmpty,
@@ -355,7 +355,7 @@ export class GuideSection extends Component {
         humanizedName = (
           <span>
             {humanizedName}{' '}
-            <EuiTextColor color="danger">(required)</EuiTextColor>
+            <WuiTextColor color="danger">(required)</WuiTextColor>
           </span>
         );
       }

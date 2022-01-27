@@ -18,7 +18,7 @@ exports[`WuiFormControlLayoutDelimited is rendered 1`] = `
       class="wuiText wuiText--small wuiFormControlLayoutDelimited__delimeter"
     >
       <div
-        class="euiTextColor euiTextColor--subdued"
+        class="wuiTextColor wuiTextColor--subdued"
       >
         →
       </div>
@@ -48,7 +48,7 @@ exports[`WuiFormControlLayoutDelimited props delimiter is rendered as a node 1`]
       class="wuiText wuiText--small wuiFormControlLayoutDelimited__delimeter"
     >
       <div
-        class="euiTextColor euiTextColor--subdued"
+        class="wuiTextColor wuiTextColor--subdued"
       >
         <div
           data-wuiicon-type="alert"
@@ -80,7 +80,7 @@ exports[`WuiFormControlLayoutDelimited props delimiter is rendered as a string 1
       class="wuiText wuiText--small wuiFormControlLayoutDelimited__delimeter"
     >
       <div
-        class="euiTextColor euiTextColor--subdued"
+        class="wuiTextColor wuiTextColor--subdued"
       >
         +
       </div>
