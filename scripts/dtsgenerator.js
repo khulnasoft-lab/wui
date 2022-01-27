@@ -92,8 +92,8 @@ const generator = dtsGenerator({
   },
 });
 
-// NOTE: once EUI is all converted to typescript this madness can be deleted forever
-// 1. strip any `/// <reference` lines from the generated eui.d.ts
+// NOTE: once WUI is all converted to typescript this madness can be deleted forever
+// 1. strip any `/// <reference` lines from the generated wui.d.ts
 // 2. replace any import("src/...") declarations to import("wazuh-wui/src/...")
 // 3. replace any import("./...") declarations to import("wazuh-wui/src/...)
 generator.then(() => {

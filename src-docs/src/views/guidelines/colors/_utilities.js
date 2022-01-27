@@ -23,7 +23,7 @@ export const coreTextVariants = [
 ];
 
 export const grayColors = [
-  'euiColorEmptyShade',
+  'wuiColorEmptyShade',
   'wuiColorLightestShade',
   'wuiColorLightShade',
   'wuiColorMediumShade',
@@ -36,7 +36,7 @@ export const textColors = [
   'wuiTextSubduedColor',
   'wuiTextColor',
   'wuiTitleColor',
-  'euiColorGhost',
+  'wuiColorGhost',
   'wuiColorInk',
 ];
 

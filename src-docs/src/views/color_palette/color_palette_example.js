@@ -66,7 +66,7 @@ export const ColorPaletteExample = {
           </p>
           <p>
             These colors are meant to be used as graphics and contrasted against
-            the value of <WuiCode>euiColorEmptyShade</WuiCode> for the current
+            the value of <WuiCode>wuiColorEmptyShade</WuiCode> for the current
             theme. When placing text on top of these colors, use the{' '}
             <WuiCode>wuiPaletteColorBlindBehindText()</WuiCode> variant. It is a
             brightened version of the base palette to create better contrast

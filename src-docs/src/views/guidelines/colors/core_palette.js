@@ -17,7 +17,7 @@ export const CorePalette = ({ theme, colors }) => {
   function renderPaletteColor(palette, color, index) {
     const hex = palette[color];
     const iconClass =
-      color === 'wuiColorLightestShade' || color === 'euiColorEmptyShade'
+      color === 'wuiColorLightestShade' || color === 'wuiColorEmptyShade'
         ? 'colorGuidelines_colorPreviewTooLight'
         : undefined;
 

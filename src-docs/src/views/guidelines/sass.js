@@ -25,27 +25,27 @@ import {
   WuiPanel,
 } from '../../../../src/components';
 
-const wuiColors = [...allowedColors, 'euiColorGhost', 'wuiColorInk'];
+const wuiColors = [...allowedColors, 'wuiColorGhost', 'wuiColorInk'];
 
 const wuiTextColors = ['wuiTextColor', 'wuiColorDarkShade', 'wuiLinkColor'];
 
-const euiSizeS = [
-  'euiSizeXS',
-  'euiSizeS',
-  'euiSizeM',
+const wuiSizeS = [
+  'wuiSizeXS',
+  'wuiSizeS',
+  'wuiSizeM',
   'wuiSize',
-  'euiSizeL',
-  'euiSizeXL',
+  'wuiSizeL',
+  'wuiSizeXL',
   'wuiSizeXXL',
 ];
 
-const euiFontSizes = [
-  'euiFontSizeXS',
-  'euiFontSizeS',
-  'euiFontSizeM',
-  'euiFontSize',
-  'euiFontSizeL',
-  'euiFontSizeXL',
+const wuiFontSizes = [
+  'wuiFontSizeXS',
+  'wuiFontSizeS',
+  'wuiFontSizeM',
+  'wuiFontSize',
+  'wuiFontSizeL',
+  'wuiFontSizeXL',
 ];
 
 const wuiShadows = [
@@ -280,7 +280,7 @@ const bemExample = `// Use camelCase naming
 
   // Elements exist within the component
   .wuiButton__content {
-    padding: 0 ($euiSize - $euiSizeXS);
+    padding: 0 ($wuiSize - $wuiSizeXS);
   }
 
   // Modifiers augment existing components or elements
@@ -323,7 +323,7 @@ const tintOrShadeExample = `// tintOrShade(color, tint_percent, shade_percent)
   background-color: tintOrShade($wuiColorPrimary, 90%, 70%);
   border-left: $wuiBorderThick;
   border-color: $wuiColorPrimary;
-  padding: $euiSize;
+  padding: $wuiSize;
   color: $wuiTextColor;
 }
 `;
@@ -335,7 +335,7 @@ const contrastExample = `// Make sure text passes a contrast check
 
   // Given two colors, adjust the first until contrast is 4.5
   color: makeHighContrastColor($wuiColorWarning, $backgroundColor);
-  padding: $euiSize;
+  padding: $wuiSize;
   border-left: $wuiBorderThick;
   border-color: $wuiColorWarning;
 
@@ -366,7 +366,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
             <WuiSpacer />
 
-            {euiSizeS.map(function(size, index) {
+            {wuiSizeS.map(function(size, index) {
               return renderSize(size, index);
             })}
 
@@ -617,7 +617,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
         title={
           <span>
             It is more common to use these as a mixin (e.g.{' '}
-            <WuiCode language="css">@include euiFontSizeS;</WuiCode>) to
+            <WuiCode language="css">@include wuiFontSizeS;</WuiCode>) to
             automatically apply line-height as well as size.
           </span>
         }
@@ -631,7 +631,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
           </WuiTitle>
 
           <WuiSpacer />
-          {euiFontSizes.map(function(size, index) {
+          {wuiFontSizes.map(function(size, index) {
             return renderFontSize(size, index);
           })}
         </WuiFlexItem>
@@ -780,7 +780,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
           <WuiTitle size="xs">
             <h4>
-              Vertical scrolling with <WuiCode>euiYScrollWithShadows</WuiCode>
+              Vertical scrolling with <WuiCode>wuiYScrollWithShadows</WuiCode>
             </h4>
           </WuiTitle>
 
@@ -792,7 +792,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
                 <p>
                   It requires a wrapping element to control the height with{' '}
                   <WuiCode>overflow-y: hidden;</WuiCode> and the content to
-                  <WuiCode>@include euiYScrollWithShadows;</WuiCode> or use the{' '}
+                  <WuiCode>@include wuiYScrollWithShadows;</WuiCode> or use the{' '}
                   <Link to="/utilities/css-utility-classes">
                     CSS utility class
                   </Link>{' '}
@@ -807,7 +807,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
   overflow-y: hidden;
 
   .overflowY__content {
-    @include euiYScrollWithShadows;
+    @include wuiYScrollWithShadows;
   }
 }`}
                 </WuiCodeBlock>
@@ -843,7 +843,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
             <div className="guideSass__overflowShadowsX">
               <WuiText className="guideSass__overflowShadowTextX" size="s">
                 <p>
-                  You may want to add at least <WuiCode>$euiSizeS</WuiCode>
+                  You may want to add at least <WuiCode>$wuiSizeS</WuiCode>
                   &apos;s worth of padding to the sides of your content so the
                   mask doesn&apos;t overlay it.
                 </p>
@@ -853,8 +853,8 @@ export const SassGuidelines = ({ selectedTheme }) => {
                 <WuiCodeBlock language="sass" isCopyable paddingSize="s">
                   {`.overflowXContent {
   @include wuiXScrollWithShadows;
-  padding-left: $euiSizeS;
-  padding-right: $euiSizeS;
+  padding-left: $wuiSizeS;
+  padding-right: $wuiSizeS;
 }`}
                 </WuiCodeBlock>
               </WuiText>

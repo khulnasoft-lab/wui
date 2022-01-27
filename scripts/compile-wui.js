@@ -170,7 +170,7 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/themes/charts/'),
     files: ['themes.ts'],
     resolveModuleId() {
-      return 'wazuh-wui/dist/eui_charts_theme';
+      return 'wazuh-wui/dist/wui_charts_theme';
     },
     resolveModuleImport(params) {
    		if (params.importedModuleId === '../../components/common') {

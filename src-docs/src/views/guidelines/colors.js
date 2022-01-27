@@ -160,7 +160,7 @@ export default ({ selectedTheme }) => {
         <WuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorEmptyShade'}
+          color={'wuiColorEmptyShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -182,7 +182,7 @@ export default ({ selectedTheme }) => {
             <p>
               If you need a color that is full white in{' '}
               <strong>both light and dark modes</strong>, use{' '}
-              <WuiCode>euiColorGhost</WuiCode>.
+              <WuiCode>wuiColorGhost</WuiCode>.
             </p>
           )}
         </ColorSection>
@@ -287,13 +287,13 @@ export default ({ selectedTheme }) => {
         minimumContrast={contrastValue}
         showTextVariants={showTextVariants}>
         <p>
-          The opposite of <WuiCode>euiColorEmptyShade</WuiCode>.
+          The opposite of <WuiCode>wuiColorEmptyShade</WuiCode>.
         </p>
         {selectedThemeIsDark ? (
           <p>
             If you need a color that is full white in{' '}
             <strong>both light and dark modes</strong>, use{' '}
-            <WuiCode>euiColorGhost</WuiCode>.
+            <WuiCode>wuiColorGhost</WuiCode>.
           </p>
         ) : (
           <p>
@@ -312,7 +312,7 @@ export default ({ selectedTheme }) => {
         <p>
           The following colors are color-blind safe and should be used in
           categorically seried visualizations and graphics. They are meant to be
-          contrasted against the value of <WuiCode>euiColorEmptyShade</WuiCode>{' '}
+          contrasted against the value of <WuiCode>wuiColorEmptyShade</WuiCode>{' '}
           for the current theme.
         </p>
         <p>
