@@ -10,7 +10,7 @@
   min-width: $wuiButtonMinWidth;
 
   .wuiButton__content {
-    padding: 0 ($euiSize - $euiSizeXS);
+    padding: 0 ($wuiSize - $wuiSizeXS);
   }
 
   .wuiButton__text {
@@ -71,7 +71,7 @@
       color: $color;
     } @else if ($name == 'text') {
       // The default color is lighter than the normal text color, make the it the text color
-      color: $euiTextColor;
+      color: $wuiTextColor;
     } @else {
       // Other colors need to check their contrast against the page background color.
       color: makeHighContrastColor($color, $wuiPageBackgroundColor);
@@ -84,7 +84,7 @@
       border-color: $color;
 
       // The function makes that hexes safe for theming
-      $fillTextColor: chooseLightOrDarkText($color, $euiColorGhost, $wuiColorInk);
+      $fillTextColor: chooseLightOrDarkText($color, $wuiColorGhost, $wuiColorInk);
 
       color: $fillTextColor;
 
@@ -101,7 +101,7 @@
       $shadowColor: $wuiShadowColor;
       @if ($name == 'ghost') {
         $shadowColor: $wuiColorInk;
-      } @else if (lightness($euiTextColor) < 50) {
+      } @else if (lightness($wuiTextColor) < 50) {
         // Only if this is the light theme do we use the button variant color to colorize the shadow
         $shadowColor: desaturate($color, 60%);
       }

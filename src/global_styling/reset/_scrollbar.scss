@@ -4,5 +4,5 @@
 html {
   // sass-lint:disable-block no-misspelled-properties
   scrollbar-width: thin;
-  scrollbar-color: transparentize($euiColorDarkShade, .5) transparent; // Firefox support
+  scrollbar-color: transparentize($wuiColorDarkShade, .5) transparent; // Firefox support
 }

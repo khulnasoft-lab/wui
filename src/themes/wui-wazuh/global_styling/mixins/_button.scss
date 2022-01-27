@@ -1,11 +1,11 @@
 @mixin wuiButton {
   @include wuiButtonBase;
   @include wuiFont;
-  @include euiFontSize;
+  @include wuiFontSize;
 
   font-weight: $wuiFontWeightMedium;
   text-decoration: none;
-  transition: all $euiAnimSpeedNormal $wuiAnimSlightBounce;
+  transition: all $wuiAnimSpeedNormal $wuiAnimSlightBounce;
 
   // sass-lint:disable mixins-before-declarations
   // focus states should come after all default styles

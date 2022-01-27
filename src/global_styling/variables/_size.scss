@@ -1,13 +1,13 @@
-$euiSize:     16px !default;
+$wuiSize:     16px !default;
 
-$euiSizeXS:   $euiSize * .25 !default;
-$euiSizeS:    $euiSize * .5 !default;
-$euiSizeM:    $euiSize * .75 !default;
-$euiSizeL:    $euiSize * 1.5 !default;
-$euiSizeXL:   $euiSize * 2 !default;
-$euiSizeXXL:  $euiSize * 2.5 !default;
+$wuiSizeXS:   $wuiSize * .25 !default;
+$wuiSizeS:    $wuiSize * .5 !default;
+$wuiSizeM:    $wuiSize * .75 !default;
+$wuiSizeL:    $wuiSize * 1.5 !default;
+$wuiSizeXL:   $wuiSize * 2 !default;
+$wuiSizeXXL:  $wuiSize * 2.5 !default;
 
-$wuiButtonMinWidth: $euiSize * 7 !default;
+$wuiButtonMinWidth: $wuiSize * 7 !default;
 
-$wuiScrollBar: $euiSize !default;
-$wuiScrollBarCorner: $euiSizeS * .75 !default;
+$wuiScrollBar: $wuiSize !default;
+$wuiScrollBarCorner: $wuiSizeS * .75 !default;

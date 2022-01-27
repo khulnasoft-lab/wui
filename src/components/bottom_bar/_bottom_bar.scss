@@ -1,7 +1,7 @@
 .wuiBottomBar {
   @include wuiBottomShadowFlat($wuiShadowColorLarge);
   background: tintOrShade($wuiColorFullShade, 25%, 100%);
-  color: $euiColorEmptyShade;
+  color: $wuiColorEmptyShade;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -10,15 +10,15 @@
   z-index: $wuiZHeader - 2;
 
   &.wuiBottomBar--paddingSmall {
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
   }
 
   &.wuiBottomBar--paddingMedium {
-    padding: $euiSize;
+    padding: $wuiSize;
   }
 
   &.wuiBottomBar--paddingLarge {
-    padding: $euiSizeL;
+    padding: $wuiSizeL;
   }
 }
 

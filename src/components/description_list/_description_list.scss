@@ -6,7 +6,7 @@
     .wuiDescriptionList__title {
       @include wuiTitle('xs');
       line-height: $wuiLineHeight;
-      margin-top: $euiSize;
+      margin-top: $wuiSize;
 
       // Make sure the first <dt> doesn't get a margin.
       &:first-of-type {
@@ -15,7 +15,7 @@
     }
 
     .wuiDescriptionList__description {
-      @include euiFontSizeS;
+      @include wuiFontSizeS;
     }
 
     // Lists can be aligned.
@@ -27,7 +27,7 @@
     &.wuiDescriptionList--reverse {
       .wuiDescriptionList__title {
         @include wuiText;
-        @include euiFontSizeS;
+        @include wuiFontSizeS;
       }
 
       .wuiDescriptionList__description {
@@ -44,13 +44,13 @@
       }
 
       .wuiDescriptionList__description {
-        @include euiFontSizeS;
+        @include wuiFontSizeS;
       }
 
       &.wuiDescriptionList--reverse {
         .wuiDescriptionList__title {
           @include wuiText;
-          @include euiFontSizeS;
+          @include wuiFontSizeS;
         }
 
         .wuiDescriptionList__description {
@@ -69,7 +69,7 @@
     flex-wrap: wrap;
 
     > * {
-      margin-top: $euiSize;
+      margin-top: $wuiSize;
     }
 
     // First two items don't have margin
@@ -82,13 +82,13 @@
       @include wuiTitle('xs');
       line-height: $wuiLineHeight;
       width: 50%; // Flex-basis doesn't work in IE with padding
-      padding-right: $euiSizeS;
+      padding-right: $wuiSizeS;
     }
 
     .wuiDescriptionList__description {
-      @include euiFontSize;
+      @include wuiFontSize;
       width: 50%; // Flex-basis doesn't work in IE with padding
-      padding-left: $euiSizeS;
+      padding-left: $wuiSizeS;
     }
 
     // Align the title to smash against the description.
@@ -101,7 +101,7 @@
     &.wuiDescriptionList--reverse {
       .wuiDescriptionList__title {
         @include wuiText;
-        @include euiFontSize;
+        @include wuiFontSize;
       }
 
       .wuiDescriptionList__description {
@@ -117,13 +117,13 @@
       }
 
       .wuiDescriptionList__description {
-        @include euiFontSizeS;
+        @include wuiFontSizeS;
       }
 
       &.wuiDescriptionList--reverse {
         .wuiDescriptionList__title {
           @include wuiText;
-          @include euiFontSizeS;
+          @include wuiFontSizeS;
         }
 
         .wuiDescriptionList__description {
@@ -145,7 +145,7 @@
       }
 
       .wuiDescriptionList__description {
-        @include euiFontSizeS;
+        @include wuiFontSizeS;
         margin-top: 0;
       }
 
@@ -158,7 +158,7 @@
 
       &.wuiDescriptionList--reverse {
         .wuiDescriptionList__title {
-          @include euiFontSizeS;
+          @include wuiFontSizeS;
         }
 
         .wuiDescriptionList__description {
@@ -171,14 +171,14 @@
   &.wuiDescriptionList--inline {
 
     .wuiDescriptionList__title {
-      @include euiFontSizeS;
+      @include wuiFontSizeS;
       display: inline;
       border-radius: $wuiBorderRadius;
       font-weight: $wuiFontWeightRegular;
       background: $wuiColorLightestShade;
       border: $wuiBorderThin;
-      padding:  0 $euiSizeXS;
-      margin: 0 $euiSizeXS;
+      padding:  0 $wuiSizeXS;
+      margin: 0 $wuiSizeXS;
 
       // Make sure the first <dt> doesn't get a margin.
       &:first-of-type {
@@ -187,7 +187,7 @@
     }
 
     .wuiDescriptionList__description {
-      @include euiFontSizeS;
+      @include wuiFontSizeS;
       display: inline;
       word-break: break-all;
     }
@@ -196,11 +196,11 @@
     &.wuiDescriptionList--compressed {
 
       .wuiDescriptionList__title {
-        @include euiFontSizeXS;
+        @include wuiFontSizeXS;
       }
 
       .wuiDescriptionList__description {
-        @include euiFontSizeXS;
+        @include wuiFontSizeXS;
       }
     }
 

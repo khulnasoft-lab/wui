@@ -17,10 +17,10 @@
   // Disable indentation for transition legibility
   // sass-lint:disable-block indentation
   display: block;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
   height: $wuiKeyPadMenuSize;
   width: $wuiKeyPadMenuSize;
-  color: $euiColorDarkShade;
+  color: $wuiColorDarkShade;
   border: $wuiBorderThin;
   border-color: transparent;
   border-radius: $wuiBorderRadius;
@@ -69,13 +69,13 @@
 
     .wuiKeyPadMenuItem__betaBadgeWrapper {
       position: absolute;
-      top: $euiSizeXS;
-      right: $euiSizeS;
+      top: $wuiSizeXS;
+      right: $wuiSizeS;
       z-index: 3;
 
       // sass-lint:disable-block nesting-depth
       .wuiKeyPadMenuItem__betaBadge:not(.wuiBetaBadge--iconOnly) {
-        padding: 0 ($euiSizeM / 2);  /* 2 */
+        padding: 0 ($wuiSizeM / 2);  /* 2 */
         overflow: hidden;  /* 2 */
         letter-spacing: 3rem;  /* 2 */
       }
@@ -91,19 +91,19 @@
   box-shadow: none;
 
   .wuiBetaBadge__icon {
-    @include size($euiSizeM);
+    @include size($wuiSizeM);
   }
 }
 
 .wuiKeyPadMenuItem__icon {
-  transition: transform $euiAnimSpeedNormal $wuiAnimSlightBounce;
+  transition: transform $wuiAnimSpeedNormal $wuiAnimSlightBounce;
   transform: translateY(2px);
-  margin-bottom: $euiSizeM;
+  margin-bottom: $wuiSizeM;
 }
 
 .wuiKeyPadMenuItem__label {
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   font-weight: $wuiFontWeightMedium;
-  line-height: $euiSize;
+  line-height: $wuiSize;
   text-align: center;
 }

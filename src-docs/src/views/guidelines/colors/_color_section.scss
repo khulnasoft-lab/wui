@@ -2,13 +2,13 @@
   .guideColorsPage__stickySlider {
     position: sticky;
     top: 0;
-    z-index: $euiZLevel1;
+    z-index: $wuiZLevel1;
   }
 }
 
 .guideColorSection__button {
-  padding: $euiSizeXS;
-  margin-bottom: $euiSizeXS / 2;
+  padding: $wuiSizeXS;
+  margin-bottom: $wuiSizeXS / 2;
   border-radius: $wuiBorderRadius;
   width: 100%;
   max-width: 300px;

@@ -1,24 +1,24 @@
 // Sizing
-$wuiFormMaxWidth: $euiSizeXXL * 10 !default;
-$wuiFormControlHeight: $euiSizeXXL !default;
-$wuiFormControlCompressedHeight: $euiSizeXL !default;
-$wuiFormControlPadding: $euiSizeM !default;
-$wuiFormControlCompressedPadding: $euiSizeS !default;
+$wuiFormMaxWidth: $wuiSizeXXL * 10 !default;
+$wuiFormControlHeight: $wuiSizeXXL !default;
+$wuiFormControlCompressedHeight: $wuiSizeXL !default;
+$wuiFormControlPadding: $wuiSizeM !default;
+$wuiFormControlCompressedPadding: $wuiSizeS !default;
 $wuiFormControlBorderRadius: 0 !default;
 $wuiFormControlCompressedBorderRadius: $wuiBorderRadius / 2 !default;
 
-$wuiRadioSize: $euiSize !default;
-$wuiCheckBoxSize: $euiSize !default;
+$wuiRadioSize: $wuiSize !default;
+$wuiCheckBoxSize: $wuiSize !default;
 $wuiCheckboxBorderRadius: $wuiBorderRadius !default;
 
 // Switch
-$wuiSwitchHeight: $euiSize * 1.25 !default;
-$wuiSwitchWidth: ($euiSize * 2.5) + $euiSizeXS !default;
+$wuiSwitchHeight: $wuiSize * 1.25 !default;
+$wuiSwitchWidth: ($wuiSize * 2.5) + $wuiSizeXS !default;
 $wuiSwitchThumbSize: $wuiSwitchHeight !default;
-$wuiSwitchIconHeight: $euiSize !default;
+$wuiSwitchIconHeight: $wuiSize !default;
 
-$wuiSwitchHeightCompressed: $euiSize !default;
-$wuiSwitchWidthCompressed: $euiSize * 1.75 !default;
+$wuiSwitchHeightCompressed: $wuiSize !default;
+$wuiSwitchWidthCompressed: $wuiSize * 1.75 !default;
 $wuiSwitchThumbSizeCompressed: $wuiSwitchHeightCompressed !default;
 
 $wuiSwitchHeightMini: $wuiSwitchHeight * .5 !default;
@@ -46,11 +46,11 @@ $wuiFormControlLayoutGroupInputCompressedHeight: $wuiFormControlCompressedHeight
 $wuiFormControlLayoutGroupInputCompressedBorderRadius: $wuiFormControlCompressedBorderRadius / 2 !default;
 
 // Range
-$wuiRangeTrackColor: $euiColorDarkShade !default;
+$wuiRangeTrackColor: $wuiColorDarkShade !default;
 
 $wuiRangeThumbRadius: 50% !default;
-$wuiRangeThumbHeight: $euiSize !default;
-$wuiRangeThumbWidth: $euiSize !default;
+$wuiRangeThumbHeight: $wuiSize !default;
+$wuiRangeThumbWidth: $wuiSize !default;
 $wuiRangeThumbBorderColor: $wuiRangeTrackColor !default;
 
 $wuiRangeTrackWidth: 100% !default;
@@ -61,5 +61,5 @@ $wuiRangeTrackRadius: $wuiBorderRadius !default;
 
 $wuiRangeDisabledOpacity: .25 !default;
 
-$wuiRangeHighlightHeight: $euiSizeXS !default;
+$wuiRangeHighlightHeight: $wuiSizeXS !default;
 

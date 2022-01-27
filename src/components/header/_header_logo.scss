@@ -7,7 +7,7 @@
   height: $wuiHeaderChildSize;
   line-height: $wuiHeaderChildSize;
   min-width: $wuiHeaderChildSize + 1px;
-  padding: 0 ($euiSizeM + 1px) 0 $euiSizeM;
+  padding: 0 ($wuiSizeM + 1px) 0 $wuiSizeM;
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
@@ -25,18 +25,18 @@
 
 .wuiHeaderLogo__text {
   @include wuiTitle('s');
-  padding-left: $euiSize;
+  padding-left: $wuiSize;
   font-weight: $wuiFontWeightLight;
 }
 
 @include wuiBreakpoint('xs') {
   .wuiHeaderLogo {
-    padding: 0 $euiSizeM;
+    padding: 0 $wuiSizeM;
   }
 
   .wuiHeaderLogo__icon.wuiIcon--xLarge {
-    width: $euiSizeL;
-    height: $euiSizeL;
+    width: $wuiSizeL;
+    height: $wuiSizeL;
   }
 
   .wuiHeaderLogo__text {

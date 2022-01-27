@@ -1,17 +1,17 @@
 .wuiHeaderAlert {
   min-width: 300px;
   position: relative;
-  margin-bottom: $euiSizeL;
-  padding: 0 $euiSizeS $euiSizeL;
+  margin-bottom: $wuiSizeL;
+  padding: 0 $wuiSizeS $wuiSizeL;
   border-bottom: $wuiBorderThin;
   border-top: none;
 
   .wuiHeaderAlert__dismiss {
     opacity: 0;
     position: absolute;
-    right: $euiSize - 4px;
-    top: $euiSize - 4px;
-    transition: opacity $euiAnimSpeedNormal ease-in;
+    right: $wuiSize - 4px;
+    top: $wuiSize - 4px;
+    transition: opacity $wuiAnimSpeedNormal ease-in;
   }
 
   &:hover .wuiHeaderAlert__dismiss,
@@ -21,20 +21,20 @@
 
   .wuiHeaderAlert__title {
     @include wuiTitle('xs');
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
   }
 
   .wuiHeaderAlert__text {
-    @include euiFontSizeS;
-    margin-bottom: $euiSize;
+    @include wuiFontSizeS;
+    margin-bottom: $wuiSize;
   }
 
   .wuiHeaderAlert__action {
-    @include euiFontSizeS;
+    @include wuiFontSizeS;
   }
 
   .wuiHeaderAlert__date {
-    @include euiFontSizeXS;
-    color: $euiColorDarkShade;
+    @include wuiFontSizeXS;
+    color: $wuiColorDarkShade;
   }
 }

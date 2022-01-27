@@ -9,19 +9,19 @@
     background-image: linear-gradient(
                         to right,
                         transparent 0,
-                        transparent ($euiSize - 1),
-                        $wuiBorderColor ($euiSize - 1),
-                        $wuiBorderColor ($euiSize + 1),
-                        transparent ($euiSize + 1),
+                        transparent ($wuiSize - 1),
+                        $wuiBorderColor ($wuiSize - 1),
+                        $wuiBorderColor ($wuiSize + 1),
+                        transparent ($wuiSize + 1),
                         transparent 100%
                       );
     background-repeat: no-repeat;
-    background-position: left $euiSizeXXL;
+    background-position: left $wuiSizeXXL;
   }
 
   &--small {
     &:not(:last-of-type) {
-      background-position: left -#{$euiSizeXS} top $euiSizeXL;
+      background-position: left -#{$wuiSizeXS} top $wuiSizeXL;
     }
 
     .wuiStep__content {
@@ -60,8 +60,8 @@
 }
 
 .wuiStep__content {
-  padding: $euiSize $euiSize $euiSizeXL;
-  margin: $euiSizeS 0;
+  padding: $wuiSize $wuiSize $wuiSizeXL;
+  margin: $wuiSizeS 0;
 
   // Align the content's contents with the title
   padding-left: ($wuiStepNumberSize / 2) + $wuiStepNumberMargin;

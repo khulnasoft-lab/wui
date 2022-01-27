@@ -35,15 +35,15 @@
 
     .wuiTableRowCell__mobileHeader {
       // Always truncate
-      @include euiTextTruncate;
-      @include fontSize($euiFontSize * .6875);
+      @include wuiTextTruncate;
+      @include fontSize($wuiFontSize * .6875);
 
       display: block;
-      color: $euiColorDarkShade;
-      padding: $euiSizeS;
+      color: $wuiColorDarkShade;
+      padding: $wuiSizeS;
       padding-bottom: 0;
-      margin-bottom: -$euiSizeS; // pull up cell content closer
-      min-height: $euiSizeL; // aligns contents of cells if header doesn't exist
+      margin-bottom: -$wuiSizeS; // pull up cell content closer
+      min-height: $wuiSizeL; // aligns contents of cells if header doesn't exist
 
       // Remove min-height of cell header if it's the only cell
       .wuiTableRowCell:only-child & {
@@ -52,7 +52,7 @@
     }
 
     .wuiTableRowCell--enlargeForMobile {
-      @include euiFontSize;
+      @include wuiFontSize;
     }
 
     .wuiTableRowCell--isMobileFullWidth {
@@ -77,16 +77,16 @@
       &.wuiTableRow-isExpandable,
       &.wuiTableRow-hasActions {
         @include wuiTableActionsBackgroundMobile;
-        padding-right: $euiSizeXXL;
+        padding-right: $wuiSizeXXL;
         position: relative;
       }
 
       &.wuiTableRow-isExpandable .wuiTableRowCell--isExpander,
       &.wuiTableRow-hasActions .wuiTableRowCell--hasActions {
         min-width: 0;
-        width: $euiSizeL;
+        width: $wuiSizeL;
         position: absolute;
-        top: $wuiTableCellContentPadding + (($wuiTableCellContentPadding * $wuiLineHeight) - $wuiTableCellContentPadding) + $euiSizeXS; // same as row padding-top + cell padding + 1/2 line height
+        top: $wuiTableCellContentPadding + (($wuiTableCellContentPadding * $wuiLineHeight) - $wuiTableCellContentPadding) + $wuiSizeXS; // same as row padding-top + cell padding + 1/2 line height
         right: $wuiTableCellContentPadding;
 
         &::before {
@@ -98,7 +98,7 @@
           padding: 0;
 
           .wuiLink {
-            padding: $euiSizeXS;
+            padding: $wuiSizeXS;
           }
         }
       }
@@ -106,7 +106,7 @@
       &.wuiTableRow-hasActions.wuiTableRow-isExpandable {
         .wuiTableRowCell--isExpander {
           top: auto;
-          bottom: $euiSize; // same as row padding-bottom
+          bottom: $wuiSize; // same as row padding-bottom
         }
       }
 
@@ -117,7 +117,7 @@
         .wuiTableRowCellCheckbox {
           position: absolute;
           left: $wuiTableCellContentPadding / 2;
-          top: $euiSizeS;
+          top: $wuiSizeS;
         }
       }
 
@@ -140,14 +140,14 @@
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        padding-left: $euiSizeS; // override selectable as the padding is already applied via the contents
+        padding-left: $wuiSizeS; // override selectable as the padding is already applied via the contents
 
         &:hover {
-          background-color: $euiColorEmptyShade; // keep white background to cover triggering row's border
+          background-color: $wuiColorEmptyShade; // keep white background to cover triggering row's border
         }
 
         .wuiTableRowCell {
-          width: calc(100% - #{$euiSizeXXL});
+          width: calc(100% - #{$wuiSizeXXL});
 
           &::before {
             display: none;
@@ -180,7 +180,7 @@
         opacity: 1;
         filter: none;
         margin-left: 0;
-        margin-bottom: $euiSizeS;
+        margin-bottom: $wuiSizeS;
       }
     }
 

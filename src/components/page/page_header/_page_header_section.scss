@@ -1,6 +1,6 @@
 .wuiPageHeaderSection {
   & + & {
-    margin-left: $euiSizeXL;
+    margin-left: $wuiSizeXL;
   }
 }
 
@@ -10,7 +10,7 @@
 
     + .wuiPageHeaderSection {
       margin-left: 0;
-      margin-top: $euiSize;
+      margin-top: $wuiSize;
     }
   }
 }

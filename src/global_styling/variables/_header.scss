@@ -1,10 +1,10 @@
 // Themeable colors
-$wuiHeaderBackgroundColor: $euiColorEmptyShade !default;
+$wuiHeaderBackgroundColor: $wuiColorEmptyShade !default;
 $wuiHeaderBorderColor: $wuiBorderColor !default;
 $wuiHeaderBreadcrumbColor: $wuiColorDarkestShade !default;
 
 // Layout vars
-$wuiHeaderHeight: $euiSizeXXL + $euiSizeS !default;
+$wuiHeaderHeight: $wuiSizeXXL + $wuiSizeS !default;
 $wuiHeaderChildSize: $wuiHeaderHeight !default;
 
 // Use the following variable in other components to afford for the fixed header

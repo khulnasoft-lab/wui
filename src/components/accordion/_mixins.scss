@@ -5,10 +5,10 @@
 
 @mixin wuiAccordionIconMargin($align: left) {
   @if $align == left {
-    margin-left: $euiSizeXS;
-    margin-right: $euiSizeS;
+    margin-left: $wuiSizeXS;
+    margin-right: $wuiSizeS;
   } @else {
-    margin-left: $euiSizeS;
-    margin-right: $euiSizeXS;
+    margin-left: $wuiSizeS;
+    margin-right: $wuiSizeXS;
   }
 }

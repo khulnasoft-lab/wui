@@ -36,7 +36,7 @@
 
   .wuiFormControlLayout__prepend,
   .wuiFormControlLayout__append {
-    @include euiTextTruncate;
+    @include wuiTextTruncate;
     flex-shrink: 0;
     height: 100%;
     border-radius: 0;
@@ -45,8 +45,8 @@
 
     &.wuiIcon,
     .wuiIcon {
-      padding: 0 $euiSizeS;
-      width: $euiSizeXL;
+      padding: 0 $wuiSizeS;
+      width: $wuiSizeXL;
       border-radius: 0;
       background-color: $wuiFormInputGroupLabelBackground;
     }
@@ -62,14 +62,14 @@
       .wuiIcon {
         background: none !important;
         padding: 0;
-        width: $euiSize;
+        width: $wuiSize;
       }
     }
   }
 
   .wuiButtonIcon {
-    padding: 0 $euiSizeS;
-    width: $euiSizeXL;
+    padding: 0 $wuiSizeS;
+    width: $wuiSizeXL;
     border-radius: 0;
     background-color: $wuiFormInputGroupLabelBackground;
 
@@ -81,8 +81,8 @@
   .wuiToolTipAnchor > .wuiIcon {
     height: 100%;
     background-color: $wuiFormInputGroupLabelBackground;
-    padding: 0 $euiSizeS;
-    width: $euiSizeXL;
+    padding: 0 $wuiSizeS;
+    width: $wuiSizeXL;
     border-radius: 0;
   }
 
@@ -100,7 +100,7 @@
   .wuiText {
     background-color: $wuiFormInputGroupLabelBackground;
     padding: $wuiFormControlPadding;
-    line-height: $euiFontSize !important;
+    line-height: $wuiFontSize !important;
     cursor: default !important; // pointer cursor on some form labels but not others is confusing
 
     // If the next sibling is not the input, pull it closer to the text to reduce space

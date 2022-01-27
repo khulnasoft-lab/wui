@@ -3,12 +3,12 @@
  * 2. Need this on the button element to color the underline.
  */
 .wuiSideNavItemButton {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   text-align: left; /* 1 */
   display: block;
   width: 100%;
-  padding: $euiSizeXS / 2 0;
-  color: $euiTextColor; /* 2 */
+  padding: $wuiSizeXS / 2 0;
+  color: $wuiTextColor; /* 2 */
 
   &.wuiSideNavItemButton--isClickable {
     &:hover .wuiSideNavItemButton__label {
@@ -18,7 +18,7 @@
     // Focus state background regardless of index/selected state.
     &:focus {
       // sass-lint:disable-block no-important
-      background-color: $euiFocusBackgroundColor !important;
+      background-color: $wuiFocusBackgroundColor !important;
     }
   }
 
@@ -29,7 +29,7 @@
 
     .wuiSideNavItemButton__label {
       color: $wuiColorPrimary;
-      font-weight: $euiFontWeightBold;
+      font-weight: $wuiFontWeightBold;
       text-decoration: underline;
     }
   }
@@ -41,7 +41,7 @@
 }
 
 .wuiSideNavItemButton__icon {
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
 }
 
 /**
@@ -69,7 +69,7 @@
     position: absolute;
     content: '';
     top: 0;
-    bottom: $euiSizeM;
+    bottom: $wuiSizeM;
     width: 1px;
     background: $wuiBorderColor;
     left: 0;
@@ -78,19 +78,19 @@
 
 .wuiSideNavItem--root {
   &.wuiSideNavItem--rootIcon > .wuiSideNavItem__items {
-    margin-left: $euiSizeL;
+    margin-left: $wuiSizeL;
   }
 
   /**
    * 1. Create padding around focus area without indenting the item itself.
    */
   & > .wuiSideNavItemButton {
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
     padding: 0;
-    padding-left: $euiSizeS; /* 1 */
-    padding-right: $euiSizeS; /* 1 */
-    margin-left: -$euiSizeS; /* 1 */
-    width: calc(100% + #{$euiSizeS * 2}); /* 1 */
+    padding-left: $wuiSizeS; /* 1 */
+    padding-right: $wuiSizeS; /* 1 */
+    margin-left: -$wuiSizeS; /* 1 */
+    width: calc(100% + #{$wuiSizeS * 2}); /* 1 */
 
     .wuiSideNavItemButton__label {
       @include wuiTitle('xs');
@@ -108,7 +108,7 @@
   }
 
   & + & {
-    margin-top: $euiSizeXL;
+    margin-top: $wuiSizeXL;
   }
 }
 
@@ -117,14 +117,14 @@
    * 1. Create padding around focus area without indenting the item itself.
    */
   & > .wuiSideNavItemButton {
-    padding-left: $euiSizeS; /* 1 */
-    padding-right: $euiSizeS; /* 1 */
-    margin-left: -$euiSizeS; /* 1 */
-    width: calc(100% + #{$euiSizeS * 2}); /* 1 */
+    padding-left: $wuiSizeS; /* 1 */
+    padding-right: $wuiSizeS; /* 1 */
+    margin-left: -$wuiSizeS; /* 1 */
+    width: calc(100% + #{$wuiSizeS * 2}); /* 1 */
   }
 
   & > .wuiSideNavItem__items {
-    margin-left: $euiSizeS;
+    margin-left: $wuiSizeS;
     width: 100%;
   }
 }
@@ -135,22 +135,22 @@
    */
   & > .wuiSideNavItemButton {
     position: relative; /* 1 */
-    padding-left: $euiSizeS;
-    padding-right: $euiSizeS; /* 1 */
+    padding-left: $wuiSizeS;
+    padding-right: $wuiSizeS; /* 1 */
 
     &:after {
       position: absolute; /* 1 */
       content: '';
       top: 50%;
       left: 0;
-      width: $euiSizeXS;
+      width: $wuiSizeXS;
       height: 1px;
       background: $wuiBorderColor;
     }
   }
 
   & > .wuiSideNavItem__items {
-    margin-left: $euiSize;
+    margin-left: $wuiSize;
   }
 
   .wuiSideNavItemButton__icon {

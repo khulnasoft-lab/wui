@@ -1,5 +1,5 @@
 // For using icons as background images (data-uri)
-@mixin wuiIconBackground($type, $color: $euiColorEmptyShade) {
+@mixin wuiIconBackground($type, $color: $wuiColorEmptyShade) {
   // sass-lint:disable-block quotes
   @if variable-exists(type) == false {
     @error 'A $type:string must be provided to @mixin wuiIconBackground().';

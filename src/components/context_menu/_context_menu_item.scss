@@ -1,9 +1,9 @@
 .wuiContextMenuItem {
   display: block;
-  padding: $euiSizeM;
+  padding: $wuiSizeM;
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $wuiTextColor;
 
   &:hover,
   &:focus {
@@ -11,7 +11,7 @@
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
   }
 
   &.wuiContextMenuItem-isDisabled {

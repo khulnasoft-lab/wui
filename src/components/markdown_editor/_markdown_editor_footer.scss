@@ -1,6 +1,6 @@
 .wuiMarkdownEditorFooter {
   display: inline-flex;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
   border: $wuiBorderThin;
   align-items: center;
   background: $wuiPageBackgroundColor;
@@ -16,7 +16,7 @@
 
   > button,
   > span {
-    margin-right: $euiSizeXS;
+    margin-right: $wuiSizeXS;
     align-self: center;
   }
 
@@ -29,7 +29,7 @@
     border-radius: $wuiBorderRadius;
 
     > span {
-      padding: 0 $euiSizeXS;
+      padding: 0 $wuiSizeXS;
     }
   }
 }

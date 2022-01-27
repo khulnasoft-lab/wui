@@ -4,22 +4,22 @@
 
   &.wuiContextMenuPanel-txInLeft {
     pointer-events: none;
-    animation: wuiContextMenuPanelTxInLeft $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxInLeft $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
   &.wuiContextMenuPanel-txOutLeft {
     pointer-events: none;
-    animation: wuiContextMenuPanelTxOutLeft $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxOutLeft $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
   &.wuiContextMenuPanel-txInRight {
     pointer-events: none;
-    animation: wuiContextMenuPanelTxInRight $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxInRight $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
   &.wuiContextMenuPanel-txOutRight {
     pointer-events: none;
-    animation: wuiContextMenuPanelTxOutRight $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    animation: wuiContextMenuPanelTxOutRight $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 }
 

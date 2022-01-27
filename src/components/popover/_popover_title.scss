@@ -7,7 +7,7 @@
 
   @each $modifier, $amount in $wuiPanelPaddingModifiers {
     .wuiPopover__panel.wuiPanel--#{$modifier} & {
-      padding: $euiSizeM $amount;
+      padding: $wuiSizeM $amount;
       margin: ($amount * -1) ($amount * -1) $amount;
     }
   }

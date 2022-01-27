@@ -48,7 +48,7 @@
 }
 
 .wui-textTruncate {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
 }
 
 /**
@@ -111,7 +111,7 @@
   * Overflow scrolling with shadows
   */
 .wui-yScrollWithShadows {
-  @include euiYScrollWithShadows;
+  @include wuiYScrollWithShadows;
 }
 
 .wui-xScrollWithShadows {
@@ -119,8 +119,8 @@
 }
 
 // TODO: 10/22 DEPRECATE in favor of the correctly formatted class .wui-yScrollWithShadows
-.euiYScrollWithShadows {
-  @include euiYScrollWithShadows;
+.wuiYScrollWithShadows {
+  @include wuiYScrollWithShadows;
 }
 
 /**

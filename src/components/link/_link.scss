@@ -5,15 +5,15 @@ $textColors: (
   accent: $wuiColorAccentText,
   warning: $wuiColorWarningText,
   danger: $wuiColorDangerText,
-  text: $euiTextColor,
-  ghost: $euiColorGhost,
+  text: $wuiTextColor,
+  ghost: $wuiColorGhost,
 );
 
 .wuiLink {
   @include wuiLink;
 
   .wuiLink__externalIcon {
-    margin-left: $euiSizeXS;
+    margin-left: $wuiSizeXS;
   }
 
   &.wuiLink-disabled {

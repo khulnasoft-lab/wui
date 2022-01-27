@@ -4,19 +4,19 @@ $wuiIconLoadingOpacity: .05;
 $wuiIconColors: (
   accent: makeGraphicContrastColor($wuiColorAccent),
   danger: makeGraphicContrastColor($wuiColorDanger),
-  ghost: $euiColorGhost,
+  ghost: $wuiColorGhost,
   primary: makeGraphicContrastColor($wuiColorPrimary),
   secondary: makeGraphicContrastColor($wuiColorSecondary),
   success: makeGraphicContrastColor($wuiColorSuccess),
   subdued: $wuiTextSubduedColor,
-  text: $euiTextColor,
+  text: $wuiTextColor,
   warning: makeGraphicContrastColor($wuiColorWarning),
 );
 
 $wuiIconSizes: (
-  small: $euiSizeM,
-  medium: $euiSize,
-  large: $euiSizeL,
-  xLarge: $euiSizeXL,
-  xxLarge: $euiSizeXXL
+  small: $wuiSizeM,
+  medium: $wuiSize,
+  large: $wuiSizeL,
+  xLarge: $wuiSizeXL,
+  xxLarge: $wuiSizeXXL
 );

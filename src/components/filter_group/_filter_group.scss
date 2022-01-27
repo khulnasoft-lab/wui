@@ -7,7 +7,7 @@
 
   > * {
     flex: 1 1 auto;
-    min-width: $euiSize * 3;
+    min-width: $wuiSize * 3;
   }
 
   > .wuiFilterButton--noGrow  {
@@ -15,11 +15,11 @@
   }
 
   > .wuiFilterButton-hasNotification {
-    min-width: $euiSize * 6;
+    min-width: $wuiSize * 6;
   }
 
   > .wuiFilterButton--hasIcon {
-    min-width: $euiSize * 8;
+    min-width: $wuiSize * 8;
   }
 
   // Force popover anchors to expand for now
@@ -39,7 +39,7 @@
 // A fixed width is required in IE11 because of the shift in widths that can be caused
 // by the loading animation that precedes the results.
 .wuiFilterGroup__popoverPanel {
-  width: $euiSize * 18;
+  width: $wuiSize * 18;
 }
 
 @include wuiBreakpoint('xs', 's') {

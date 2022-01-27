@@ -2,8 +2,8 @@
 
 .wuiTab {
   font-weight: $wuiFontWeightMedium;
-  height: $euiSizeXXL + $euiSizeS;
-  border-radius: $euiSizeS $euiSizeS 0 0;
+  height: $wuiSizeXXL + $wuiSizeS;
+  border-radius: $wuiSizeS $wuiSizeS 0 0;
 
   &.wuiTab-isSelected {
 
@@ -14,11 +14,11 @@
 }
 
 .wuiTabs--small .wuiTab {
-  height: $euiSizeXXL;
-  border-radius: $euiSizeXS $euiSizeXS 0 0;
+  height: $wuiSizeXXL;
+  border-radius: $wuiSizeXS $wuiSizeXS 0 0;
 }
 
 .wuiTabs--large .wuiTab {
   @include fontSize($wuiTabFontSizeL);
-  height: $euiSizeXXL + $euiSizeS;
+  height: $wuiSizeXXL + $wuiSizeS;
 }

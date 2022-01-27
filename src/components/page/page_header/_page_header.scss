@@ -1,5 +1,5 @@
 .wuiPageHeader {
-  margin-bottom: $euiSize;
+  margin-bottom: $wuiSize;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,7 +8,7 @@
 
 @include wuiBreakpoint('xs', 's') {
   .wuiPageHeader {
-    padding: $euiSize 0;
+    padding: $wuiSize 0;
     margin-bottom: 0;
   }
 

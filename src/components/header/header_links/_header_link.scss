@@ -2,7 +2,7 @@
   .wuiHeaderLink {
     display: block;
     width: 100%;
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
 
     // WuiButtons normally center, which makes sense. In mobile though we want
     // them to align left. This is a safe hack given the specificity.

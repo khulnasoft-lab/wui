@@ -14,14 +14,14 @@
 
 // Adds the focus (and hover) animation for translating up 1px
 @mixin wuiButtonFocus {
-  transition: all $euiAnimSpeedNormal ease-in-out;
+  transition: all $wuiAnimSpeedNormal ease-in-out;
 
   &:hover:not(:disabled) {
     transform: translateY(-1px);
   }
 
   &:focus {
-    animation: wuiButtonActive $euiAnimSpeedNormal $wuiAnimSlightBounce;
+    animation: wuiButtonActive $wuiAnimSpeedNormal $wuiAnimSlightBounce;
   }
 
   &:active:not(:disabled) {
@@ -34,7 +34,7 @@
 @mixin wuiButton {
   @include wuiButtonBase;
   @include wuiFont;
-  @include euiFontSize;
+  @include wuiFontSize;
 
   text-decoration: none;
   border: solid 1px transparent;
@@ -73,7 +73,7 @@
 
     > * + * {
       margin-inline-start: 0; // 1, 2
-      margin-inline-end: $euiSizeS; // 1, 2
+      margin-inline-end: $wuiSizeS; // 1, 2
     }
   } @else {
     display: flex;
@@ -81,7 +81,7 @@
     align-items: center;
 
     > * + * {
-      margin-inline-start: $euiSizeS; // 1
+      margin-inline-start: $wuiSizeS; // 1
     }
   }
 }

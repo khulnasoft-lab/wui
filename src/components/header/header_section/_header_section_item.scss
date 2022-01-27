@@ -8,7 +8,7 @@
   &:after {
     position: absolute;
     content: '';
-    top: $euiSize;
+    top: $wuiSize;
     bottom: 0;
     background: $wuiBorderColor;
     left: 0;
@@ -31,7 +31,7 @@
   }
 
   &:focus {
-    background: $euiFocusBackgroundColor;
+    background: $wuiFocusBackgroundColor;
   }
 }
 
@@ -86,17 +86,17 @@
   // On small screens just show a small dot indicating there are notifications
   .wuiHeaderNotification,
   .wuiHeaderSectionItemButton__notification--badge {
-    @include size($euiSizeS);
+    @include size($wuiSizeS);
     top: 20%;
     min-width: 0;
-    border-radius: $euiSizeS;
+    border-radius: $wuiSizeS;
     color: $wuiColorAccent;
     overflow: hidden;
   }
 
   // Using specificty to override the default icon size
   .wuiHeaderSectionItemButton__notification.wuiHeaderSectionItemButton__notification--dot {
-    @include size($euiSize);
+    @include size($wuiSize);
     top: 9%;
   }
 }

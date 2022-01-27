@@ -2,13 +2,13 @@
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   border-radius: $wuiBorderRadius;
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   font-weight: $wuiFontWeightMedium;
-  line-height: $euiSize;
-  height: $euiSize;
-  min-width: $euiSize;
-  padding-left: $euiSizeXS;
-  padding-right: $euiSizeXS;
+  line-height: $wuiSize;
+  height: $wuiSize;
+  min-width: $wuiSize;
+  padding-left: $wuiSizeXS;
+  padding-right: $wuiSizeXS;
   vertical-align: middle;
   text-align: center;
   transition: all $wuiAnimSpeedFast ease-in;
@@ -16,19 +16,19 @@
 
   $backgroundColor: $wuiColorAccent;
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $wuiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $wuiColorGhost, $wuiColorInk);
 }
 
 .wuiNotificationBadge--medium {
   // Increase the default size a bit
-  $size: $euiSize + $euiSizeXS;
+  $size: $wuiSize + $wuiSizeXS;
   line-height: $size;
   height: $size;
-  min-width: $euiSizeL;
+  min-width: $wuiSizeL;
 }
 
 .wuiNotificationBadge--subdued {
   $backgroundColor: tint($wuiColorLightShade, 30%);
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $wuiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $wuiColorGhost, $wuiColorInk);
 }

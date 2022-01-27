@@ -10,8 +10,8 @@
     #FF28FB 88%,
     #FF0094 100%
    );
-  height: $euiSizeL;
-  margin: $euiSizeXS 0;
+  height: $wuiSizeL;
+  margin: $wuiSizeXS 0;
   position: relative;
 
 
@@ -21,8 +21,8 @@
     content: '';
     left: 0;
     position: absolute;
-    height: $euiSizeS;
-    background: $euiColorEmptyShade;
+    height: $wuiSizeS;
+    background: $wuiColorEmptyShade;
     width: 100%;
   }
 
@@ -39,7 +39,7 @@
   }
 
   position: relative;
-  height: $euiSizeL;
+  height: $wuiSizeL;
   width: calc(100% + 2px); // Allow for overlap
   margin: 0 -1px; // Use ^ overlap to allow thumb to fully cover gradient ends
   appearance: none;
@@ -61,7 +61,7 @@
   }
 
   &::-ms-track {
-    height: $euiSizeL;
+    height: $wuiSizeL;
     background: transparent;
     border-color: transparent;
     color: transparent;

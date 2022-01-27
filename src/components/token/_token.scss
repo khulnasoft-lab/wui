@@ -20,38 +20,38 @@
 }
 
 .wuiToken--xsmall {
-  width: $euiSizeM;
-  height: $euiSizeM;
+  width: $wuiSizeM;
+  height: $wuiSizeM;
 
   &.wuiToken--rectangle {
-    padding: 0 $euiSizeXS;
+    padding: 0 $wuiSizeXS;
   }
 }
 
 .wuiToken--small {
-  width: $euiSize;
-  height: $euiSize;
+  width: $wuiSize;
+  height: $wuiSize;
 
   &.wuiToken--rectangle {
-    padding: 0 $euiSizeXS;
+    padding: 0 $wuiSizeXS;
   }
 }
 
 .wuiToken--medium {
-  width: $euiSizeL;
-  height: $euiSizeL;
+  width: $wuiSizeL;
+  height: $wuiSizeL;
 
   &.wuiToken--rectangle {
-    padding: 0 $euiSizeS;
+    padding: 0 $wuiSizeS;
   }
 }
 
 .wuiToken--large {
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+  width: $wuiSizeXL;
+  height: $wuiSizeXL;
 
   &.wuiToken--rectangle {
-    padding: 0 ($euiSize * .5);
+    padding: 0 ($wuiSize * .5);
   }
 }
 
@@ -79,7 +79,7 @@
 
     &.wuiToken--dark {
       background-color: $color;
-      color: chooseLightOrDarkText($color, $euiColorGhost, $wuiColorInk);
+      color: chooseLightOrDarkText($color, $wuiColorGhost, $wuiColorInk);
     }
   }
 }

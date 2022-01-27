@@ -10,9 +10,9 @@
   padding-bottom: 10vh;
   animation: wuiAnimFadeIn $wuiAnimSpeedFast ease-in;
 
-  $backgroundColor: $euiColorEmptyShade;
+  $backgroundColor: $wuiColorEmptyShade;
 
-  @if (lightness($euiTextColor) > 50) {
+  @if (lightness($wuiTextColor) > 50) {
     $backgroundColor: $wuiColorLightShade;
   }
 

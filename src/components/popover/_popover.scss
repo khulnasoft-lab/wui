@@ -33,7 +33,7 @@
   // sass-lint:disable-block indentation, mixins-before-declarations
   position: absolute;
   min-width: $wuiButtonMinWidth; /* 1 */
-  max-width: calc(100vw - #{$euiSizeXL}); /* 3 */
+  max-width: calc(100vw - #{$wuiSizeXL}); /* 3 */
   backface-visibility: hidden;
   pointer-events: none;
   transition: /* 2 */
@@ -84,7 +84,7 @@
         bottom: -$wuiPopoverArrowSize + 3;
         border-left: $wuiPopoverArrowSize solid transparent;
         border-right: $wuiPopoverArrowSize solid transparent;
-        border-top: $wuiPopoverArrowSize solid $euiColorEmptyShade;
+        border-top: $wuiPopoverArrowSize solid $wuiColorEmptyShade;
       }
     }
 
@@ -102,7 +102,7 @@
         top: 50%;
         border-top: $wuiPopoverArrowSize solid transparent;
         border-bottom: $wuiPopoverArrowSize solid transparent;
-        border-right: $wuiPopoverArrowSize solid $euiColorEmptyShade;
+        border-right: $wuiPopoverArrowSize solid $wuiColorEmptyShade;
       }
     }
 
@@ -118,7 +118,7 @@
         top: -$wuiPopoverArrowSize + 1;
         border-left: $wuiPopoverArrowSize solid transparent;
         border-right: $wuiPopoverArrowSize solid transparent;
-        border-bottom: $wuiPopoverArrowSize solid $euiColorEmptyShade;
+        border-bottom: $wuiPopoverArrowSize solid $wuiColorEmptyShade;
       }
     }
 
@@ -136,7 +136,7 @@
         top: 50%;
         border-top: $wuiPopoverArrowSize solid transparent;
         border-bottom: $wuiPopoverArrowSize solid transparent;
-        border-left: $wuiPopoverArrowSize solid $euiColorEmptyShade;
+        border-left: $wuiPopoverArrowSize solid $wuiColorEmptyShade;
       }
     }
   }

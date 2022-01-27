@@ -6,11 +6,11 @@
 .guideRule__example {
   .guideRule__example__panel {
     border-bottom: 2px solid;
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
     flex-grow: 1; /* 1 */
 
     &:not(.wuiPanel) {
-      padding-bottom: $euiSize; // only change the bottom padding if it's not an wuiPanel
+      padding-bottom: $wuiSize; // only change the bottom padding if it's not an wuiPanel
     }
   }
 
@@ -20,8 +20,8 @@
   }
 
   .guideRule__caption {
-    @include euiFontSizeS;
-    max-height: $euiFontSizeS * $wuiLineHeight; /* 1 */
+    @include wuiFontSizeS;
+    max-height: $wuiFontSizeS * $wuiLineHeight; /* 1 */
     overflow-y: visible; /* 1 */
   }
 
@@ -48,7 +48,7 @@
 
   &.guideRule__example--frame {
     .guideRule__example__panel {
-      padding: $euiSizeL;
+      padding: $wuiSizeL;
       background-color: $wuiColorLightestShade;
       display: flex;
       align-items: center;

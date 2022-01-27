@@ -25,7 +25,7 @@
     .wuiCard__title,
     .wuiCard__description,
     .wuiCard__top {
-      color: $euiColorDarkShade;
+      color: $wuiColorDarkShade;
     }
 
     .wuiCard__top svg,
@@ -239,6 +239,6 @@
 
   .wuiCard__top .wuiCard__icon {
     margin-top: 0;
-    margin-right: $euiSize;
+    margin-right: $wuiSize;
   }
 }

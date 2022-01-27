@@ -3,9 +3,9 @@
  *    works.
  */
 .wuiComboBoxTitle {
-  font-size: $euiFontSizeXS;
-  padding: ($euiSizeXS + $euiSizeS - 1px) $euiSizeS $euiSizeXS; /* 1 */
+  font-size: $wuiFontSizeXS;
+  padding: ($wuiSizeXS + $wuiSizeS - 1px) $wuiSizeS $wuiSizeXS; /* 1 */
   width: 100%;
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
   color: $wuiColorFullShade;
 }

@@ -69,7 +69,7 @@
 
   .wui-definitionListReverse dt {
     font-size: convertToRem($baseFontSize * nth($wuiTextScale, 7));
-    color: $euiTextColor;
+    color: $wuiTextColor;
   }
 
   h5 {
@@ -99,7 +99,7 @@
 
 .wuiText {
   @include wuiText;
-  @include euiFontSize;
+  @include wuiFontSize;
   // The wuiText mixin forces a color. Since wuiText is usually a child
   // of other styling concerns, we should inherit their coloring. The default
   // coloring will likely coming from the reset.scss anyway.
@@ -156,7 +156,7 @@
       width: 50%;
       right: 0;
       transform: translateX(-50%);
-      background: $euiColorDarkShade;
+      background: $wuiColorDarkShade;
     }
 
     &:before {
@@ -213,7 +213,7 @@
     font-weight: $wuiFontWeightRegular;
   }
 
-  @include wuiScaleText($euiFontSize);
+  @include wuiScaleText($wuiFontSize);
 
   &.wuiText--constrainedWidth {
     max-width: $wuiTextConstrainedMaxWidth;
@@ -223,17 +223,17 @@
   }
 
   > :last-child,
-  .euiTextColor > :last-child {
+  .wuiTextColor > :last-child {
     margin-bottom: 0 !important; // sass-lint:disable-line no-important
   }
 }
 
 .wuiText--small {
-  @include fontSize($euiFontSizeS);
-  @include wuiScaleText($euiFontSizeS);
+  @include fontSize($wuiFontSizeS);
+  @include wuiScaleText($wuiFontSizeS);
 }
 
 .wuiText--extraSmall {
-  @include fontSize($euiFontSizeXS);
-  @include wuiScaleText($euiFontSizeXS);
+  @include fontSize($wuiFontSizeXS);
+  @include wuiScaleText($wuiFontSizeXS);
 }

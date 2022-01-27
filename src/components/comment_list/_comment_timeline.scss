@@ -1,5 +1,5 @@
 .wuiCommentTimeline__content {
-  min-width: $euiSizeXXL;
+  min-width: $wuiSizeXXL;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +16,12 @@
   background-color: $wuiColorLightestShade;
 
   &.wuiCommentTimeline__icon--regular {
-    width: $euiSizeXXL;
-    height: $euiSizeXXL;
+    width: $wuiSizeXXL;
+    height: $wuiSizeXXL;
   }
 
   &.wuiCommentTimeline__icon--update {
-    width: $euiSizeL;
-    height: $euiSizeL;
+    width: $wuiSizeL;
+    height: $wuiSizeL;
   }
 }

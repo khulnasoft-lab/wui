@@ -1,4 +1,4 @@
-$wuiContextMenuWidth: $euiSize * 16;
+$wuiContextMenuWidth: $wuiSize * 16;
 
 .wuiContextMenu {
   width: $wuiContextMenuWidth;
@@ -9,7 +9,7 @@ $wuiContextMenuWidth: $euiSize * 16;
   border-radius: $wuiBorderRadius;
 
   .wuiContextMenu__content {
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
   }
 }
 
@@ -23,5 +23,5 @@ $wuiContextMenuWidth: $euiSize * 16;
 }
 
 .wuiContextMenu__icon {
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
 }

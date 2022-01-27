@@ -1,5 +1,5 @@
 .wuiLoadingChart {
-  height: $euiSizeXL;
+  height: $wuiSizeXL;
   z-index: 500;
   overflow: hidden;
   display: inline-block;
@@ -7,7 +7,7 @@
 
 .wuiLoadingChart__bar {
   height: 100%;
-  width: $euiSizeS;
+  width: $wuiSizeS;
   display: inline-block;
 }
 
@@ -16,14 +16,14 @@
 }
 
 .wuiLoadingChart--medium {
-  height: $euiSize;
+  height: $wuiSize;
 
 }
 
 .wuiLoadingChart--large {
-  height: $euiSizeL;
+  height: $wuiSizeL;
 }
 
 .wuiLoadingChart--xLarge {
-  height: $euiSizeXL;
+  height: $wuiSizeXL;
 }

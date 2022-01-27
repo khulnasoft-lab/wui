@@ -5,16 +5,16 @@
 
   &--group,
   input {
-    box-shadow: inset 0 0 0 1px transparentize($euiColorGhost, .7);
+    box-shadow: inset 0 0 0 1px transparentize($wuiColorGhost, .7);
   }
 
   &:not(:focus-within) {
-    color: transparentize($euiColorGhost, .3);
+    color: transparentize($wuiColorGhost, .3);
 
     input {
       // Increase contrast of placeholder text
       @include wuiPlaceholderPerBrowser {
-        color: transparentize($euiColorGhost, .6);
+        color: transparentize($wuiColorGhost, .6);
       }
 
       // Inherit color from form control layout

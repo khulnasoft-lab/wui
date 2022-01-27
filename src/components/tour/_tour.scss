@@ -1,11 +1,11 @@
 .wuiTour--minWidth-default {
-  min-width: $euiSizeL * 10;
+  min-width: $wuiSizeL * 10;
 }
 
 .wuiTourHeader {
   border-bottom: none;
   // Overriding default `WuiPopoverTitle` styles
-  margin-bottom: $euiSizeS !important; // sass-lint:disable-line no-important
+  margin-bottom: $wuiSizeS !important; // sass-lint:disable-line no-important
 
 
   .wuiTourHeader__title { // nested for additional specificity to override WuiTitle styles
@@ -15,13 +15,13 @@
 }
 
 .wuiTourHeader__subtitle {
-  color: $euiColorDarkShade;
+  color: $wuiColorDarkShade;
 }
 
 .wuiTourFooter {
   background-color: $wuiColorLightestShade;
   // Overriding default `WuiPopoverFooter` styles
-  margin-top: $euiSizeL !important; // sass-lint:disable-line no-important
+  margin-top: $wuiSizeL !important; // sass-lint:disable-line no-important
 }
 
 .wuiTour {

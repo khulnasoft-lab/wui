@@ -46,13 +46,13 @@ function createTheme(colors: any): WuiChartThemeType {
     lineAnnotation: {
       line: {
         strokeWidth: 1,
-        stroke: colors.euiColorDarkShade.rgba,
+        stroke: colors.wuiColorDarkShade.rgba,
         opacity: 1,
       },
       details: {
         fontSize: 10,
         fontFamily: fontFamily,
-        fill: colors.euiColorDarkShade.rgba,
+        fill: colors.wuiColorDarkShade.rgba,
         padding: 0,
       },
     },
@@ -73,12 +73,12 @@ function createTheme(colors: any): WuiChartThemeType {
       },
       outerSizeRatio: 1,
       circlePadding: 4,
-      sectorLineStroke: colors.euiColorEmptyShade.rgba,
+      sectorLineStroke: colors.wuiColorEmptyShade.rgba,
       sectorLineWidth: 1.5,
     },
     theme: {
       background: {
-        color: colors.euiColorEmptyShade.rgba,
+        color: colors.wuiColorEmptyShade.rgba,
       },
       chartMargins: {
         left: 0,
@@ -91,7 +91,7 @@ function createTheme(colors: any): WuiChartThemeType {
           strokeWidth: 2,
         },
         point: {
-          fill: colors.euiColorEmptyShade.rgba,
+          fill: colors.wuiColorEmptyShade.rgba,
           strokeWidth: 2,
           radius: 3,
         },
@@ -105,7 +105,7 @@ function createTheme(colors: any): WuiChartThemeType {
         },
         point: {
           visible: false,
-          fill: colors.euiColorEmptyShade.rgba,
+          fill: colors.wuiColorEmptyShade.rgba,
           strokeWidth: 2,
           radius: 3,
         },
@@ -114,7 +114,7 @@ function createTheme(colors: any): WuiChartThemeType {
         displayValue: {
           fontSize: 8,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkShade.rgba,
+          fill: colors.wuiColorDarkShade.rgba,
         },
       },
       scales: {
@@ -137,7 +137,7 @@ function createTheme(colors: any): WuiChartThemeType {
         tickLabel: {
           fontSize: 10,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkShade.rgba,
+          fill: colors.wuiColorDarkShade.rgba,
           padding: {
             outer: 8,
             inner: 10,
@@ -174,7 +174,7 @@ function createTheme(colors: any): WuiChartThemeType {
           fill: colors.wuiColorChartBand.rgba,
         },
         line: {
-          stroke: colors.euiColorDarkShade.rgba,
+          stroke: colors.wuiColorDarkShade.rgba,
           strokeWidth: 1,
           dash: [4, 4],
         },

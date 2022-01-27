@@ -63,8 +63,8 @@
 
 .wuiListGroupItem__text,
 .wuiListGroupItem__button {
-  line-height: $euiSizeL;
-  padding: $euiSizeXS $euiSizeS;
+  line-height: $wuiSizeL;
+  padding: $wuiSizeXS $wuiSizeS;
   display: flex;
   align-items: center;
   flex: 1 0 auto; // The flex-shrink and flex-basis values are needed for IE11
@@ -73,7 +73,7 @@
   font-weight: inherit;
 
   .wuiListGroupItem-hasExtraAction & {
-    max-width: calc(100% - #{$euiSizeXL});
+    max-width: calc(100% - #{$wuiSizeXL});
   }
 
   @each $colorName, $color in $wuiListGroupItemColorTypes {
@@ -83,7 +83,7 @@
   }
 
   .wuiListGroupItem-isActive:not(.wuiListGroupItem--ghost) & {
-    color: $euiTextColor;
+    color: $wuiTextColor;
   }
 }
 
@@ -95,7 +95,7 @@
 
 .wuiListGroupItem__extraAction {
   opacity: 0;
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
   transition: opacity $wuiAnimSpeedFast;
 
   .wuiListGroupItem:not(.wuiListGroupItem-isDisabled):focus &,
@@ -107,7 +107,7 @@
 }
 
 .wuiListGroupItem__icon {
-  margin-right: $euiSizeM;
+  margin-right: $wuiSizeM;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -128,14 +128,14 @@
 .wuiListGroupItem--xSmall {
   .wuiListGroupItem__button,
   .wuiListGroupItem__text {
-    line-height: $euiSize;
+    line-height: $wuiSize;
   }
 }
 
 .wuiListGroupItem--large {
   .wuiListGroupItem__button,
   .wuiListGroupItem__text {
-    line-height: $euiSizeXL;
+    line-height: $wuiSizeXL;
   }
 }
 

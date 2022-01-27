@@ -9,7 +9,7 @@
 
   + .wuiFormRow,
   + .wuiButton {
-    margin-top: $euiSize;
+    margin-top: $wuiSize;
   }
 }
 
@@ -18,7 +18,7 @@
 }
 
 .wuiFormRow--hasEmptyLabelSpace {
-  margin-top: ($euiFontSizeXS * $wuiLineHeight) + $euiSizeXS; /* 2 */
+  margin-top: ($wuiFontSizeXS * $wuiLineHeight) + $wuiSizeXS; /* 2 */
   // the following ensure that contents that aren't inherently the same height
   // as inputs will align to the vertical center
   min-height: $wuiFormControlHeight;
@@ -30,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: $euiSizeXS;
+  margin-bottom: $wuiSizeXS;
 }
 
 .wuiFormRow--horizontal {
@@ -46,8 +46,8 @@
   .wuiFormRow__labelWrapper {
     display: block;
     line-height: $wuiFormControlCompressedHeight - 1px; // The 1px less helps the alignment of the text baseline
-    width: calc(33% - #{$euiSizeS});
-    margin-right: $euiSizeS;
+    width: calc(33% - #{$wuiSizeS});
+    margin-right: $wuiSizeS;
     margin-bottom: 0;
   }
 
@@ -56,30 +56,30 @@
   }
 
   + .wuiFormRow--horizontal {
-    margin-top: $euiSizeS;
+    margin-top: $wuiSizeS;
   }
 
   + .wuiFormRow--horizontal.wuiFormRow--hasSwitch {
-    margin-top: $euiSizeM; // More spacing since we reduced the height to match that of the switch
+    margin-top: $wuiSizeM; // More spacing since we reduced the height to match that of the switch
   }
 
   &.wuiFormRow--hasSwitch {
     .wuiFormRow__labelWrapper {
       line-height: $wuiSwitchHeight - 1px; // The 1px less helps the alignment of the text baseline
       width: auto;
-      min-width: calc(33% - #{$euiSizeS});
+      min-width: calc(33% - #{$wuiSizeS});
     }
 
     .wuiFormRow__fieldWrapper {
       width: auto;
 
       .wuiSwitch--compressed {
-        margin-top: $euiSizeXS / 2; // Better vertical alignment of a compressed switch to the horizontal label
+        margin-top: $wuiSizeXS / 2; // Better vertical alignment of a compressed switch to the horizontal label
       }
     }
 
     + .wuiFormRow--horizontal {
-      margin-top: $euiSizeM; // More spacing since we reduced the height to match that of the switch
+      margin-top: $wuiSizeM; // More spacing since we reduced the height to match that of the switch
     }
   }
 }

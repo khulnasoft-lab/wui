@@ -4,8 +4,8 @@
  */
 
 .wuiBreadcrumbs {
-  @include euiFontSizeS;
-  margin-bottom: -$euiSizeXS; /* 1 */
+  @include wuiFontSizeS;
+  margin-bottom: -$wuiSizeXS; /* 1 */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@
 
 .wuiBreadcrumb {
   display: inline-block;
-  margin-bottom: $euiSizeXS; /* 1 */
+  margin-bottom: $wuiSizeXS; /* 1 */
 
   &:not(.wuiBreadcrumb--last) {
     margin-right: $wuiBreadcrumbSpacing;
@@ -34,14 +34,14 @@
   display: inline-block;
   margin-right: $wuiBreadcrumbSpacing;
   width: 1px;
-  height: $euiSize;
+  height: $wuiSize;
   transform: translateY(-1px) rotate(15deg);
   background: $wuiColorLightShade;
 }
 
 .wuiBreadcrumbs__inPopover .wuiBreadcrumb--last {
   font-weight: $wuiFontWeightRegular;
-  color: $euiColorDarkShade !important; // sass-lint:disable-line no-important
+  color: $wuiColorDarkShade !important; // sass-lint:disable-line no-important
 }
 
 .wuiBreadcrumbs--truncate {
@@ -61,7 +61,7 @@
 }
 
 .wuiBreadcrumb--truncate {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
   max-width: $wuiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that

@@ -1,6 +1,6 @@
 .wuiComboBoxOption {
-  font-size: $euiFontSizeS;
-  padding: $euiSizeXS $euiSizeS $euiSizeXS #{$euiSizeM + $euiSizeXS};
+  font-size: $wuiFontSizeS;
+  padding: $wuiSizeXS $wuiSizeS $wuiSizeXS #{$wuiSizeM + $wuiSizeXS};
   width: 100%;
   text-align: left;
   border: $wuiBorderThin;
@@ -15,7 +15,7 @@
   &.wuiComboBoxOption-isFocused {
     cursor: pointer;
     color: $wuiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
   }
 
   &.wuiComboBoxOption-isDisabled {
@@ -39,7 +39,7 @@
 
   .wuiComboBoxOption__enterBadge {
     align-self: flex-start;
-    margin-left: $euiSizeXS;
+    margin-left: $wuiSizeXS;
   }
 }
 

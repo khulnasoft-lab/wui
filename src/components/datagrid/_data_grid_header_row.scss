@@ -2,15 +2,15 @@
   display: inline-flex;
   min-width: 100%; // Needed to prevent wraps. Inline flex is tricky
   z-index: 3; // Needs to sit above the content and focused cells
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
   position: sticky; // In IE11 this does not work, but doesn't cause a break.
   top: 0;
 }
 
 @include wuiDataGridHeaderCell {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
 
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
   padding: $wuiDataGridCellPaddingM;
   flex: 0 0 auto;
   position: relative;
@@ -47,11 +47,11 @@
       align-items: center;
       display: flex;
       text-align: left;
-      font-weight: $euiFontWeightBold;
+      font-weight: $wuiFontWeightBold;
     }
 
     .wuiDataGridHeaderCell__content {
-      @include euiTextTruncate;
+      @include wuiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
       flex-grow: 1;
@@ -61,14 +61,14 @@
       flex-grow: 0;
       flex-basis: auto;
       width: auto;
-      padding-left: $euiSizeXS;
+      padding-left: $wuiSizeXS;
     }
   }
 }
 
 .wuiDataGridHeader__action--selected {
   // sass-lint:disable-block no-important
-  font-weight: $euiFontWeightBold !important;
+  font-weight: $wuiFontWeightBold !important;
 }
 
 // Header alternates
@@ -76,7 +76,7 @@
 
 @include wuiDataGridStyles(bordersNone, bordersHorizontal) {
   .wuiDataGridHeader {
-    background: $euiColorEmptyShade;
+    background: $wuiColorEmptyShade;
   }
 }
 
@@ -86,14 +86,14 @@
     border-left: none;
     border-right: none;
     border-bottom: $wuiBorderThick;
-    border-bottom-color: $euiTextColor;
+    border-bottom-color: $wuiTextColor;
   }
 }
 
 @include wuiDataGridStyles(bordersNone, headerUnderline) {
   @include wuiDataGridHeaderCell {
     border-bottom: $wuiBorderThick;
-    border-color: $euiTextColor;
+    border-color: $wuiTextColor;
   }
 }
 
@@ -140,13 +140,13 @@
 // Font alternates
 @include wuiDataGridStyles(fontSizeSmall) {
   @include wuiDataGridHeaderCell {
-    @include euiFontSizeXS;
+    @include wuiFontSizeXS;
   }
 }
 
 @include wuiDataGridStyles(fontSizeLarge) {
   @include wuiDataGridHeaderCell {
-    @include euiFontSize;
+    @include wuiFontSize;
   }
 }
 

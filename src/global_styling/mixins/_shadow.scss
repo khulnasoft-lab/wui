@@ -90,11 +90,11 @@
   $hideHeight: $wuiScrollBarCorner * 1.25;
   $gradient: null;
   $gradientStart:
-  transparentize(red, .9) 0%,
-  transparentize(red, 0) $hideHeight;
+  transparentize(#F00, .9) 0%,
+  transparentize(#F00, 0) $hideHeight;
   $gradientEnd:
-  transparentize(red, 0) calc(100% - #{$hideHeight}),
-  transparentize(red, .9) 100%;
+  transparentize(#F00, 0) calc(100% - #{$hideHeight}),
+  transparentize(#F00, .9) 100%;
   @if ($side == 'both' or $side == 'start' or $side == 'end') {
     @if ($side == 'both') {
       $gradient: $gradientStart, $gradientEnd;

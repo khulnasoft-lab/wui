@@ -18,7 +18,7 @@
 }
 
 @mixin wuiText {
-  color: $euiTextColor;
+  color: $wuiTextColor;
   font-weight: $wuiFontWeightRegular;
 }
 
@@ -41,32 +41,32 @@
 
 // Font sizing extends, using rem mixin
 
-@mixin euiFontSizeXS {
-  @include fontSize($euiFontSizeXS);
+@mixin wuiFontSizeXS {
+  @include fontSize($wuiFontSizeXS);
   line-height: $wuiLineHeight;
 }
 
-@mixin euiFontSizeS {
-  @include fontSize($euiFontSizeS);
+@mixin wuiFontSizeS {
+  @include fontSize($wuiFontSizeS);
   line-height: $wuiLineHeight;
 }
 
-@mixin euiFontSize {
-  @include fontSize($euiFontSize);
+@mixin wuiFontSize {
+  @include fontSize($wuiFontSize);
   line-height: $wuiLineHeight;
 }
 
-@mixin euiFontSizeM {
-  @include fontSize($euiFontSizeM);
+@mixin wuiFontSizeM {
+  @include fontSize($wuiFontSizeM);
   line-height: $wuiLineHeight;
 }
 
-@mixin euiFontSizeL {
-  @include fontSize($euiFontSizeL);
+@mixin wuiFontSizeL {
+  @include fontSize($wuiFontSizeL);
   line-height: $wuiLineHeight;
 }
 
-@mixin euiFontSizeXL {
+@mixin wuiFontSizeXL {
   @each $property, $value in map-get($wuiTitles, 'm') {
     @if ($property == 'font-size') {
       @include fontSize($value);
@@ -77,7 +77,7 @@
   line-height: 1.25;
 }
 
-@mixin euiFontSizeXXL {
+@mixin wuiFontSizeXXL {
   @each $property, $value in map-get($wuiTitles, 'l') {
     @if ($property == 'font-size') {
       @include fontSize($value);
@@ -105,7 +105,7 @@
 // 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
 //    nodes.
 
-@mixin euiTextTruncate {
+@mixin wuiTextTruncate {
   // sass-lint:disable-block no-important
   max-width: 100%; // 1
   overflow: hidden !important;
@@ -125,7 +125,7 @@
 // this mixin will ensure that the sizing is dependent on the boldest
 // weight so it doesn't shifter sibling content.
 
-@mixin wuiTextShift($fontWeight: $euiFontWeightBold, $attr: 'data-text') {
+@mixin wuiTextShift($fontWeight: $wuiFontWeightBold, $attr: 'data-text') {
   &::after {
     display: block;
     content: attr(#{$attr});

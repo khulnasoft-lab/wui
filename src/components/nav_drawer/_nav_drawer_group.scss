@@ -7,12 +7,12 @@
     color: inherit; // Force color to inherit from regular text color in case it's an anchor tag
 
     &:focus {
-      background-color: $euiFocusBackgroundColor;
+      background-color: $wuiFocusBackgroundColor;
     }
   }
 
   .wuiListGroupItem__icon {
-    max-width: $euiSize;
+    max-width: $wuiSize;
     white-space: nowrap;
   }
 }
@@ -20,9 +20,9 @@
 // Default icon will simulate an avatar but with coloring specific to
 .wuiNavDrawerGroup__itemDefaultIcon {
   @include innerBorder('dark', 50%, .05);
-  @include size($euiSize);
-  line-height: $euiSize;
-  font-size: $euiSizeM;
+  @include size($wuiSize);
+  line-height: $wuiSize;
+  font-size: $wuiSizeM;
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   text-align: center;
@@ -32,10 +32,10 @@
   border-radius: 50%;
 
   &:after {
-    top: -$euiSizeXS;
-    left: -$euiSizeXS;
-    right: -$euiSizeXS;
-    bottom: -$euiSizeXS;
+    top: -$wuiSizeXS;
+    left: -$wuiSizeXS;
+    right: -$wuiSizeXS;
+    bottom: -$wuiSizeXS;
   }
 }
 

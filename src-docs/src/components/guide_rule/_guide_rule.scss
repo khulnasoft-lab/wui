@@ -1,15 +1,15 @@
 .guideRule {
-  margin-top: $euiSizeXXL;
+  margin-top: $wuiSizeXXL;
 
   + .guideRule {
-    margin-top: $euiSizeL;
+    margin-top: $wuiSizeL;
 
     &.guideRule--hasDescription {
-      margin-top: $euiSizeXXL * 1.5;
+      margin-top: $wuiSizeXXL * 1.5;
     }
 
     &.guideRule--hasHeading {
-      margin-top: $euiSizeXXL * 2;
+      margin-top: $wuiSizeXXL * 2;
     }
   }
 

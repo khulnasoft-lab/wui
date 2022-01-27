@@ -43,9 +43,9 @@
   * 1. Prevent really long input from overflowing the container.
   */
 .wuiComboBoxOptionsList__empty {
-  padding: $euiSizeS;
+  padding: $wuiSizeS;
   text-align: center;
-  color: $euiColorDarkShade;
+  color: $wuiColorDarkShade;
   word-wrap: break-word; /* 1 */
 }
 

@@ -2,24 +2,24 @@
 // Colors guideline page
 // -------------------------------------
 .guidelineColor__palette {
-  padding: $euiSize;
-  padding-bottom: $euiSizeXL;
+  padding: $wuiSize;
+  padding-bottom: $wuiSizeXL;
 }
 
 .guidelineColor__swatch {
-  height: $euiSizeM;
-  width: $euiSizeM;
+  height: $wuiSizeM;
+  width: $wuiSizeM;
   border-radius: 50%;
 }
 
 .guidelineColor__stripe {
-  height: $euiSizeL;
-  line-height: $euiSizeL;
+  height: $wuiSizeL;
+  line-height: $wuiSizeL;
 }
 
 .guidelineColor__test {
   text-align: center;
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
 }
 
 // sass-lint:disable no-important
@@ -29,13 +29,13 @@
 
 .guideColorPalette__swatch {
   span {
-    height: $euiSize;
-    width: $euiSizeL;
+    height: $wuiSize;
+    width: $wuiSizeL;
   }
 
   &--small span {
     width: auto;
-    height: $euiSizeS;
+    height: $wuiSizeS;
   }
 }
 
@@ -48,12 +48,12 @@
 // Sass guideline page
 // -------------------------------------
 .guideSass__swatchItem + .guideSass__swatchItem {
-  margin-top: $euiSize;
+  margin-top: $wuiSize;
 }
 
 .guideSass__swatch {
-  height: $euiSizeL;
-  width: $euiSizeL;
+  height: $wuiSizeL;
+  width: $wuiSizeL;
 }
 
 .guideSass__swatch--danger {
@@ -79,22 +79,22 @@
 }
 
 .guideSass__levelRow {
-  padding-left: $euiSizeS;
+  padding-left: $wuiSizeS;
 }
 
 .guideSass__levelRow + .guideSass__levelRow {
-  margin-top: $euiSizeS;
+  margin-top: $wuiSizeS;
 }
 
 .guideSass__level {
   background-color: $wuiColorMediumShade;
   transform: scaleY(.5) rotate(30deg) skew(-30deg, 0deg);
-  width: $euiSize;
-  height: $euiSize;
+  width: $wuiSize;
+  height: $wuiSize;
 }
 
 .guideSass__sizeRow + .guideSass__sizeRow {
-  margin-top: $euiSize;
+  margin-top: $wuiSize;
 }
 
 .guideSass__size {
@@ -103,53 +103,53 @@
 }
 
 .guideSass__sizeItem {
-  width: $euiSizeXXL;
+  width: $wuiSizeXXL;
   text-align: right;
 }
 
 .guideSass__fontSizeExample + .guideSass__fontSizeExample {
-  margin-top: $euiSizeL;
+  margin-top: $wuiSizeL;
 }
 
 .guideSass__fontSize {
-  margin-bottom: $euiSizeS;
+  margin-bottom: $wuiSizeS;
 }
 
-.guideSass__fontSize--euiFontSizeXS {
-  @include euiFontSizeXS;
+.guideSass__fontSize--wuiFontSizeXS {
+  @include wuiFontSizeXS;
 }
 
-.guideSass__fontSize--euiFontSizeS {
-  @include euiFontSizeS;
+.guideSass__fontSize--wuiFontSizeS {
+  @include wuiFontSizeS;
 }
 
-.guideSass__fontSize--euiFontSizeM {
-  @include euiFontSizeM;
+.guideSass__fontSize--wuiFontSizeM {
+  @include wuiFontSizeM;
 }
 
-.guideSass__fontSize--euiFontSize {
-  @include euiFontSize;
+.guideSass__fontSize--wuiFontSize {
+  @include wuiFontSize;
 }
 
-.guideSass__fontSize--euiFontSizeL {
-  @include euiFontSizeL;
+.guideSass__fontSize--wuiFontSizeL {
+  @include wuiFontSizeL;
 }
 
-.guideSass__fontSize--euiFontSizeXL {
-  @include euiFontSizeXL;
+.guideSass__fontSize--wuiFontSizeXL {
+  @include wuiFontSizeXL;
 }
 
-.guideSass__fontSize--euiFontSizeXXL {
-  @include euiFontSizeXL;
+.guideSass__fontSize--wuiFontSizeXXL {
+  @include wuiFontSizeXL;
 }
 
 .guideSass__shadow {
-  padding: $euiSizeXXL;
-  background: $euiColorEmptyShade;
+  padding: $wuiSizeXXL;
+  background: $wuiColorEmptyShade;
   border-radius: $wuiBorderRadius;
 
   & + .guideSass__shadow {
-    margin-top: $euiSizeXL;
+    margin-top: $wuiSizeXL;
   }
 }
 
@@ -170,14 +170,14 @@
   height: 200px;
 
   .guideSass__overflowShadowText {
-    @include euiYScrollWithShadows;
-    padding: $euiSizeS;
+    @include wuiYScrollWithShadows;
+    padding: $wuiSizeS;
   }
 }
 
 .guideSass__overflowShadowsX {
   @include wuiXScrollWithShadows;
-  padding: $euiSizeS $euiSizeS 0;
+  padding: $wuiSizeS $wuiSizeS 0;
 
   .guideSass__overflowShadowTextX {
     width: 150%;
@@ -190,7 +190,7 @@
 
 .guideSass__border {
   display: flex;
-  padding: $euiSize;
+  padding: $wuiSize;
 }
 
 .guideSass__border--radius {
@@ -211,13 +211,13 @@
 }
 
 .guideSass__fontFamily {
-  font-size: $euiSizeL;
+  font-size: $wuiSizeL;
   background: $wuiColorDarkestShade;
   text-align: center;
-  width: $euiSizeXL * 2;
-  height: $euiSizeXL;
-  line-height: $euiSizeXL;
-  color: $euiColorEmptyShade;
+  width: $wuiSizeXL * 2;
+  height: $wuiSizeXL;
+  line-height: $wuiSizeXL;
+  color: $wuiColorEmptyShade;
 
   &--code {
     @include wuiCodeFont;
@@ -225,19 +225,19 @@
 }
 
 .guideSass__animRow + .guideSass__animRow {
-  margin-top: $euiSizeL;
+  margin-top: $wuiSizeL;
 }
 
 .guideSass__animParent {
   background: $wuiColorLightestShade;
-  height: $euiSize;
-  margin-top: $euiSizeS;
+  height: $wuiSize;
+  margin-top: $wuiSizeS;
   position: relative;
 }
 
 .guideSass__animChild {
-  width: $euiSize;
-  height: $euiSize;
+  width: $wuiSize;
+  height: $wuiSize;
   background: $wuiColorDarkestShade;
   position: absolute;
   left: 0;
@@ -246,7 +246,7 @@
 .guideSass__animRow:hover .guideSass__animChild {
   transition-property: left;
   transition-timing-function: linear;
-  left: calc(100% - #{$euiSize});
+  left: calc(100% - #{$wuiSize});
 }
 
 .guideSass__animRow--wuiAnimSpeedExtraFast:hover .guideSass__animChild {
@@ -257,8 +257,8 @@
   transition-duration: $wuiAnimSpeedFast;
 }
 
-.guideSass__animRow--euiAnimSpeedNormal:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedNormal;
+.guideSass__animRow--wuiAnimSpeedNormal:hover .guideSass__animChild {
+  transition-duration: $wuiAnimSpeedNormal;
 }
 
 .guideSass__animRow--wuiAnimSpeedSlow:hover .guideSass__animChild {
@@ -280,12 +280,12 @@
 }
 
 .guideSass__breakpointExample {
-  padding: $euiSize;
-  color: $euiColorGhost;
+  padding: $wuiSize;
+  color: $wuiColorGhost;
 }
 
 .guideSass__themedBox {
-  padding: $euiSize;
+  padding: $wuiSize;
   border-left: $wuiBorderThick;
 }
 
@@ -308,7 +308,7 @@
 
   background: $backgroundColor;
   color: makeHighContrastColor($wuiColorWarning, $backgroundColor);
-  padding: $euiSize;
+  padding: $wuiSize;
   border-left: $wuiBorderThick;
   border-color: $wuiColorWarning;
 
@@ -320,12 +320,12 @@
 
 .guideSection__shadedBox {
   background-color: $wuiPageBackgroundColor;
-  padding: $euiSize;
+  padding: $wuiSize;
   border-radius: $wuiBorderRadius;
 }
 
 .guideSection__emptyBox {
-  background-color: $euiColorEmptyShade;
+  background-color: $wuiColorEmptyShade;
 }
 
 @import 'colors/color_section';

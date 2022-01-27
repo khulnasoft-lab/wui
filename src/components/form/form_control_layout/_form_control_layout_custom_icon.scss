@@ -7,7 +7,7 @@
 }
 
 .wuiFormControlLayoutCustomIcon--clickable {
-  @include size($euiSize);
+  @include size($wuiSize);
 
   pointer-events: all;
 

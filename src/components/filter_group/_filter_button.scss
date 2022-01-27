@@ -4,7 +4,7 @@
   width: auto;
   border: 1px solid $wuiFormBorderColor;
   border-right: none;
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
 
   &:disabled {
     color: $wuiButtonColorDisabledText;
@@ -28,7 +28,7 @@
 }
 
 .wuiFilterButton-hasActiveFilters {
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
 }
 
 .wuiFilterButton--hasIcon .wuiButtonEmpty__content {
@@ -36,7 +36,7 @@
 }
 
 .wuiFilterButton--withNext + .wuiFilterButton {
-  margin-left: $euiSizeXS * -1;
+  margin-left: $wuiSizeXS * -1;
   border-left: none;
 }
 
@@ -50,12 +50,12 @@
 }
 
 .wuiFilterButton__notification {
-  margin-left: $euiSizeS;
+  margin-left: $wuiSizeS;
   vertical-align: text-bottom;
 }
 
 .wuiFilterButton__textShift {
   @include wuiTextShift;
-  @include euiTextTruncate;
-  min-width: $euiSize * 3;
+  @include wuiTextTruncate;
+  min-width: $wuiSize * 3;
 }

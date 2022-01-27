@@ -2,10 +2,10 @@
   @include wuiFormLabel;
 
   &:not(.wuiFormLegend-isHidden) {
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
 
     &.wuiFormLegend--compressed {
-      margin-bottom: $euiSizeXS;
+      margin-bottom: $wuiSizeXS;
     }
   }
 }

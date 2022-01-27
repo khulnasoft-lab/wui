@@ -67,7 +67,7 @@
     height: $wuiRangeThumbHeight;
     width: $wuiRangeThumbHeight;
     border-radius: $wuiRangeThumbHeight;
-    background: $euiColorEmptyShade;
+    background: $wuiColorEmptyShade;
   }
 }
 
@@ -77,7 +77,7 @@
   margin-top: 0;
   pointer-events: auto;
   cursor: grab;
-  border: solid ($euiSizeXS - 1px) $euiColorEmptyShade;
+  border: solid ($wuiSizeXS - 1px) $wuiColorEmptyShade;
   box-shadow:
     0 0 0 1px $wuiColorMediumShade,
     0 2px 2px -1px rgba($wuiShadowColor, .2),

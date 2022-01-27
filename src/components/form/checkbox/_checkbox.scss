@@ -7,8 +7,8 @@
     ~ .wuiCheckbox__label {
       display: inline-block;
       padding-left: ($wuiCheckBoxSize * 1.5);
-      line-height: $euiSizeL;
-      font-size: $euiFontSizeS;
+      line-height: $wuiSizeL;
+      font-size: $wuiFontSizeS;
       position: relative;
       z-index: 2;
       cursor: pointer;
@@ -20,7 +20,7 @@
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($euiSizeL - $wuiCheckBoxSize) / 2) - 1px;
+      top: (($wuiSizeL - $wuiCheckBoxSize) / 2) - 1px;
     }
 
     &:checked {

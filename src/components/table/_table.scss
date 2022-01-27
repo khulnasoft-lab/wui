@@ -3,14 +3,14 @@
  * specifying a column width, e.g. the checkbox column.
  */
 .wuiTable {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   @include wuiNumberFormat;
 
   width: 100%;
   table-layout: fixed;
   border: none;
   border-collapse: collapse;
-  background-color: $euiColorEmptyShade;
+  background-color: $wuiColorEmptyShade;
 
   &.wuiTable--auto {
     table-layout: auto;
@@ -25,7 +25,7 @@
 @include wuiBreakpoint('m', 'l', 'xl') {
   .wuiTable--compressed {
     .wuiTableCellContent {
-      @include euiFontSizeXS;
+      @include wuiFontSizeXS;
       padding: $wuiTableCellContentPaddingCompressed;
     }
   }
@@ -44,13 +44,13 @@
   }
 
   .wuiTableCellContent__text {
-    @include euiFontSizeXS;
+    @include wuiFontSizeXS;
     font-weight: $wuiFontWeightSemiBold;
   }
 }
 
 .wuiTableHeaderButton {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   color: inherit;
   width: 100%;
 
@@ -68,7 +68,7 @@
 }
 
 .wuiTableSortIcon {
-  margin-left: $euiSizeXS;
+  margin-left: $wuiSizeXS;
   flex-shrink: 0; // makes sure the icon doesn't change size because the text is long
 
   .wuiTableHeaderButton-isSorted & {
@@ -113,7 +113,7 @@
 .wuiTableRowCell {
   @include wuiTableCell;
 
-  color: $euiTextColor;
+  color: $wuiTextColor;
 
   &.wuiTableRowCell--isMobileHeader {
     display: none; // Hide if not mobile breakpoint
@@ -181,7 +181,7 @@
 
 .wuiTableCellContent--showOnHover {
   > *:not(:first-child) {
-    margin-left: $euiSizeS;
+    margin-left: $wuiSizeS;
   }
 }
 
@@ -191,7 +191,7 @@
       flex-shrink: 0;
       opacity: .7;
       filter: grayscale(100%);
-      transition: opacity $euiAnimSpeedNormal $wuiAnimSlightResistance, filter $euiAnimSpeedNormal $wuiAnimSlightResistance;
+      transition: opacity $wuiAnimSpeedNormal $wuiAnimSlightResistance, filter $wuiAnimSpeedNormal $wuiAnimSlightResistance;
     }
 
     .expandedItemActions__completelyHide,
@@ -218,7 +218,7 @@
 
 .wuiTableRow-isExpandedRow .wuiTableCellContent {
   overflow: hidden;
-  animation: $euiAnimSpeedNormal $wuiAnimSlightResistance 1 normal forwards growExpandedRow;
+  animation: $wuiAnimSpeedNormal $wuiAnimSlightResistance 1 normal forwards growExpandedRow;
 }
 
 @keyframes growExpandedRow {

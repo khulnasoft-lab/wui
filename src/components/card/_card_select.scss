@@ -1,7 +1,7 @@
 .wuiCardSelect {
   // Option select button that expands to sides and bottom
   @include wuiCardBottomNodePosition;
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
 
   // Create button modifiers based upon the map.
   @each $name, $color in $wuiCardSelectButtonBackgrounds {

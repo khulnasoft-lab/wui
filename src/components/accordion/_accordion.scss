@@ -4,7 +4,7 @@
 }
 
 .wuiAccordion__button {
-  @include euiFontSize;
+  @include wuiFontSize;
   text-align: left;
   width: 100%;
   flex-grow: 1;
@@ -35,7 +35,7 @@
 }
 
 .wuiAccordion__iconWrapper {
-  @include size($euiSize);
+  @include size($wuiSize);
   @include wuiAccordionIconMargin;
   border-radius: $wuiBorderRadius;
   flex-shrink: 0;
@@ -43,7 +43,7 @@
   // Nested to override WuiIcon
   .wuiAccordion__icon {
     vertical-align: top;
-    transition: transform $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    transition: transform $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   }
 
   .wuiAccordion__icon-isOpen {
@@ -71,16 +71,16 @@
   transform: translatez(0);
   // sass-lint:disable-block indentation
   transition:
-    height $euiAnimSpeedNormal $wuiAnimSlightResistance,
-    opacity $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    height $wuiAnimSpeedNormal $wuiAnimSlightResistance,
+    opacity $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 }
 
 $paddingSizes: (
-  xs: $euiSizeXS,
-  s: $euiSizeS,
-  m: $euiSize,
-  l: $euiSizeL,
-  xl: $euiSizeXL,
+  xs: $wuiSizeXS,
+  s: $wuiSizeS,
+  m: $wuiSize,
+  l: $wuiSizeL,
+  xl: $wuiSizeXL,
 );
 
 // Create button modifiers based upon the map.
@@ -104,6 +104,6 @@ $paddingSizes: (
   align-items: center;
 
   .wuiAccordion__spinner {
-    margin-right: $euiSizeXS;
+    margin-right: $wuiSizeXS;
   }
 }

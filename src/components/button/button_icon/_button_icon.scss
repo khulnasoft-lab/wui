@@ -5,10 +5,10 @@
   background-color: transparent;
   box-shadow: none;
   height: auto;
-  min-height: $euiSizeL;
-  min-width: $euiSizeL;
+  min-height: $wuiSizeL;
+  min-width: $wuiSizeL;
   line-height: 0; // ensures the icon creates the line-height and so it's always vertically centered
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
   border-radius: $wuiBorderRadius;
 
   & > svg {

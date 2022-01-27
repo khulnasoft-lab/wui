@@ -10,7 +10,7 @@
   position: fixed;
   z-index: $wuiZToastList;
   bottom: 0;
-  width: $wuiToastWidth + ($euiSize * 5); /* 2 */
+  width: $wuiToastWidth + ($wuiSize * 5); /* 2 */
   max-height: 100vh; /* 1 */
   overflow-y: auto;
 
@@ -28,23 +28,23 @@
   // when there's no toasts in the list, meaning you can't click anything beneath it.
   // Only add the padding if there's content.
   &:not(:empty) {
-    padding: $euiSize;
+    padding: $wuiSize;
   }
 }
 
 .wuiGlobalToastList--right:not(:empty) {
   right: 0;
-  padding-left: $euiSize * 4; /* 2 */
+  padding-left: $wuiSize * 4; /* 2 */
 }
 
 .wuiGlobalToastList--left:not(:empty) {
   left: 0;
-  padding-right: $euiSize * 4; /* 2 */
+  padding-right: $wuiSize * 4; /* 2 */
 }
 
 .wuiGlobalToastListItem {
-  margin-bottom: $euiSize;
-  animation: $euiAnimSpeedNormal wuiShowToast $wuiAnimSlightResistance;
+  margin-bottom: $wuiSize;
+  animation: $wuiAnimSpeedNormal wuiShowToast $wuiAnimSlightResistance;
   opacity: 1;
 
   /**
@@ -60,14 +60,14 @@
   }
 
   &.wuiGlobalToastListItem-isDismissed {
-    transition: opacity $euiAnimSpeedNormal;
+    transition: opacity $wuiAnimSpeedNormal;
     opacity: 0;
   }
 }
 
 @keyframes wuiShowToast {
   from {
-    transform: translateY($euiSizeL) scale(.9);
+    transform: translateY($wuiSizeL) scale(.9);
     opacity: 0;
   }
 
@@ -83,8 +83,8 @@
    */
   .wuiGlobalToastList:not(:empty) {
     left: 0;
-    padding-left: $euiSize;
-    padding-right: $euiSize;
+    padding-left: $wuiSize;
+    padding-right: $wuiSize;
     width: 100%; /* 1 */
   }
 }

@@ -33,7 +33,7 @@
 
     // add a slight divider if two selected items are next to each other
     + [class*='checked'] {
-      box-shadow: -1px 0 0 transparentize($euiColorEmptyShade, .9);
+      box-shadow: -1px 0 0 transparentize($wuiColorEmptyShade, .9);
     }
   }
 
@@ -98,7 +98,7 @@
     height: $wuiFormControlCompressedHeight - 2px;
     // sass-lint:disable-block no-important
     box-shadow: none !important;
-    font-size: $euiFontSizeS;
+    font-size: $wuiFontSizeS;
     min-width: 0;
     border: none;
     border-radius: $wuiBorderRadius;
@@ -108,12 +108,12 @@
     background-clip: content-box;
 
     &:not(.wuiButtonGroup__button--selected):not(:disabled) {
-      color: $euiColorDarkShade;
+      color: $wuiColorDarkShade;
     }
 
     .wuiButton__content {
-      padding-left: $euiSizeS;
-      padding-right: $euiSizeS;
+      padding-left: $wuiSizeS;
+      padding-right: $wuiSizeS;
     }
   }
 

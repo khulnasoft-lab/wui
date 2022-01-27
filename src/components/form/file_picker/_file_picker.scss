@@ -42,18 +42,18 @@
 
 .wuiFilePicker__icon {
   position: absolute;
-  left: $euiSizeM;
-  top: $euiSizeM;
+  left: $wuiSizeM;
+  top: $wuiSizeM;
   transition: transform $wuiAnimSpeedFast $wuiAnimSlightResistance;
 
   .wuiFilePicker--compressed & {
-    top: $euiSizeS;
-    left: $euiSizeS;
+    top: $wuiSizeS;
+    left: $wuiSizeS;
   }
 
   .wuiFilePicker--large & {
     position: static;
-    margin-bottom: $euiSize;
+    margin-bottom: $wuiSize;
   }
 }
 
@@ -89,7 +89,7 @@
 
   .wuiFilePicker--large & {
     height: $wuiFilePickerTallHeight; /* 4 */
-    padding: 0 $euiSizeL;
+    padding: 0 $wuiSizeL;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +97,7 @@
   }
 
   .wuiFilePicker--large.wuiFilePicker--compressed & {
-    height: $wuiFilePickerTallHeight - $euiSizeL; /* 4 */
+    height: $wuiFilePickerTallHeight - $wuiSizeL; /* 4 */
   }
 
   .wuiFilePicker-isInvalid & {
@@ -106,9 +106,9 @@
 }
 
 .wuiFilePicker__promptText {
-  @include euiFontSizeS;
-  @include euiTextTruncate;
-  line-height: $euiSize;
+  @include wuiFontSizeS;
+  @include wuiTextTruncate;
+  line-height: $wuiSize;
 
   // make normal sized prompt look like placeholder
   .wuiFilePicker:not(.wuiFilePicker--large):not(.wuiFilePicker-hasFiles) & {
@@ -119,11 +119,11 @@
 .wuiFilePicker__clearButton,
 .wuiFilePicker__loadingSpinner {
   position: absolute;
-  right: $euiSizeM;
-  top: $euiSizeM;
+  right: $wuiSizeM;
+  top: $wuiSizeM;
 
   .wuiFilePicker--compressed & {
-    top: $euiSizeS;
+    top: $wuiSizeS;
   }
 }
 
@@ -169,7 +169,7 @@
 
 // When the filepicker has files in it
 .wuiFilePicker-hasFiles .wuiFilePicker__promptText {
-  color: $euiTextColor;
+  color: $wuiTextColor;
 }
 
 // Large styles only
@@ -203,6 +203,6 @@
   }
 
   &.wuiFilePicker-hasFiles .wuiFilePicker__promptText {
-    font-weight: $euiFontWeightBold;
+    font-weight: $wuiFontWeightBold;
   }
 }

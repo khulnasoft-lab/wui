@@ -1,7 +1,7 @@
 @import '../wui/wui_colors_dark.scss';
 
 // These colors stay the same no matter the theme
-$euiColorGhost: #FFF;
+$wuiColorGhost: #FFF;
 $wuiColorInk: #000;
 
 // Core
@@ -15,11 +15,11 @@ $wuiColorWarning: #F97D37;
 $wuiColorDanger: #F86B63;
 
 // Grays
-$euiColorEmptyShade: #2A2D34;
+$wuiColorEmptyShade: #2A2D34;
 $wuiColorLightestShade: #343741;
 $wuiColorLightShade: #4C505C;
 $wuiColorMediumShade: #98A2B3;
-$euiColorDarkShade: #9298A8;
+$wuiColorDarkShade: #9298A8;
 $wuiColorDarkestShade: #FFF;
 $wuiColorFullShade: #FFF;
 
@@ -28,10 +28,10 @@ $wuiPageBackgroundColor: shade($wuiColorLightestShade, 45%);
 $wuiColorHighlight: #2E2D25;
 
 // Variations from core
-$euiTextColor: $wuiColorDarkestShade;
-$wuiTitleColor: $euiTextColor;
+$wuiTextColor: $wuiColorDarkestShade;
+$wuiTitleColor: $wuiTextColor;
 $wuiTextSubduedColor: makeHighContrastColor($wuiColorMediumShade);
-$wuiColorDisabled: shade($euiTextColor, 70%);
+$wuiColorDisabled: shade($wuiTextColor, 70%);
 
 // Contrasty text variants
 $wuiColorPrimaryText: makeHighContrastColor($wuiColorPrimary);

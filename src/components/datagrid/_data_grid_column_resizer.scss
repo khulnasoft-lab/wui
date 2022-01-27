@@ -2,9 +2,9 @@
 .wuiDataGridColumnResizer {
   position: absolute;
   top: 0;
-  right: -$euiSizeS;
+  right: -$wuiSizeS;
   height: 100%;
-  width: $euiSize;
+  width: $wuiSize;
   cursor: ew-resize;
   opacity: 0;
   z-index: 2; // Needs to be a level above the cells themselves in case of overlaps
@@ -13,7 +13,7 @@
   &:after {
     content: '';
     position: absolute;
-    left: $euiSizeS - 1px;
+    left: $wuiSizeS - 1px;
     top: 0;
     bottom: 0;
     width: $wuiDataGridColumnResizerWidth;

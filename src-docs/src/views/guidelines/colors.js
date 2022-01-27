@@ -247,7 +247,7 @@ export default ({ selectedTheme }) => {
         <WuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorDarkShade'}
+          color={'wuiColorDarkShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>

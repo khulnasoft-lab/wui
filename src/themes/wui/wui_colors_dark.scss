@@ -7,7 +7,7 @@ $wuiColorAccent: #F990C0;
 $wuiColorHighlight: #2E2D25;
 
 // These colors stay the same no matter the theme
-$euiColorGhost: #FFF;
+$wuiColorGhost: #FFF;
 $wuiColorInk: #000;
 
 // Status
@@ -16,23 +16,23 @@ $wuiColorWarning: #FFCE7A;
 $wuiColorDanger: #F66;
 
 // Grays
-$euiColorEmptyShade: #1D1E24;
+$wuiColorEmptyShade: #1D1E24;
 $wuiColorLightestShade: #25262E;
 $wuiColorLightShade: #343741;
 $wuiColorMediumShade: #535966;
-$euiColorDarkShade: #98A2B3;
+$wuiColorDarkShade: #98A2B3;
 $wuiColorDarkestShade: #D4DAE5;
 $wuiColorFullShade: #FFF;
 
 // Variations from core
-$euiTextColor: #DFE5EF;
+$wuiTextColor: #DFE5EF;
 $wuiLinkColor: $wuiColorPrimary;
-$euiFocusBackgroundColor: #232635;
+$wuiFocusBackgroundColor: #232635;
 $wuiShadowColor: #000;
 $wuiShadowColorLarge: #000;
 $wuiPageBackgroundColor: shade($wuiColorLightestShade, 30%);
 $wuiTextSubduedColor: makeHighContrastColor($wuiColorMediumShade);
-$wuiTitleColor: $euiTextColor;
+$wuiTitleColor: $wuiTextColor;
 
 // Contrasty text variants
 $wuiColorPrimaryText: makeHighContrastColor($wuiColorPrimary);

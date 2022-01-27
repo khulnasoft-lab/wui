@@ -1,12 +1,12 @@
 .wuiPaginationButton {
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
   padding: 0;
   text-align: center;
   border-radius: $wuiBorderRadius;
 }
 
 .wuiPaginationButton-isActive {
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
 
   &#{&} {
     color: $wuiColorPrimary;
@@ -25,10 +25,10 @@
 .wuiPaginationButton-isPlaceholder {
   align-items: baseline;
   color: $wuiButtonColorDisabledText;
-  font-size: $euiFontSizeS;
-  padding: 0 $euiSizeS;
-  height: $euiSizeL;
-  padding-top: $euiSizeM / 2;
+  font-size: $wuiFontSizeS;
+  padding: 0 $wuiSizeS;
+  height: $wuiSizeL;
+  padding-top: $wuiSizeM / 2;
 }
 
 @include wuiBreakpoint('xs', 's') {

@@ -16,7 +16,7 @@
   transition-duration: $wuiAnimSpeedFast; /* 2 */
 
   .wuiButtonEmpty__content {
-    padding: 0 $euiSizeS;
+    padding: 0 $wuiSizeS;
   }
 
   .wuiButtonEmpty__text {
@@ -29,8 +29,8 @@
   }
 
   &.wuiButtonEmpty--xSmall {
-    height: $euiSizeL;
-    font-size: $euiFontSizeS;
+    height: $wuiSizeL;
+    font-size: $wuiFontSizeS;
   }
 
   &:disabled {
@@ -60,11 +60,11 @@
 }
 
 .wuiButtonEmpty--flushLeft {
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
 }
 
 .wuiButtonEmpty--flushRight {
-  margin-left: $euiSizeS;
+  margin-left: $wuiSizeS;
 }
 
 // Modifier naming and colors.
@@ -72,8 +72,8 @@ $wuiButtonEmptyTypes: (
   primary: $wuiColorPrimary,
   danger: $wuiColorDanger,
   disabled: $wuiButtonColorDisabledText,
-  ghost: $euiColorGhost,
-  text: $euiTextColor,
+  ghost: $wuiColorGhost,
+  text: $wuiTextColor,
 );
 
 // Create button modifiers based upon the map.
@@ -84,10 +84,10 @@ $wuiButtonEmptyTypes: (
       color: $color;
     } @else if ($name == 'text') {
       // The default color is lighter than the normal text color, make the it the text color
-      color: $euiTextColor;
+      color: $wuiTextColor;
     } @else {
       // Other colors need to check their contrast against the page background color.
-      color: makeHighContrastColor($color, $euiColorEmptyShade);
+      color: makeHighContrastColor($color, $wuiColorEmptyShade);
     }
 
     &:focus {

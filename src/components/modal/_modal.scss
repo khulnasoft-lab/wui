@@ -12,7 +12,7 @@
   display: flex; /* 1 */
 
   position: relative;
-  background-color: $euiColorEmptyShade;
+  background-color: $wuiColorEmptyShade;
   border-radius: $wuiBorderRadius;
   z-index: $wuiZModal;
   min-width: $wuiFormMaxWidth;
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $euiSizeL $euiSizeXXL $euiSize $euiSizeL;
+  padding: $wuiSizeL $wuiSizeXXL $wuiSize $wuiSizeL;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -56,48 +56,48 @@
   flex-direction: column;
 
   .wuiModalBody__overflow {
-    @include euiYScrollWithShadows;
-    padding: $euiSizeS $euiSizeL;
+    @include wuiYScrollWithShadows;
+    padding: $wuiSizeS $wuiSizeL;
   }
 }
 
 .wuiModalFooter {
   display: flex;
   justify-content: flex-end;
-  padding: $euiSize $euiSizeL $euiSizeL;
+  padding: $wuiSize $wuiSizeL $wuiSizeL;
   flex-grow: 0;
   flex-shrink: 0; // ensure the height of the footer is based off its contents and doesn't squish
 
   > * + * {
-    margin-left: $euiSize;
+    margin-left: $wuiSize;
   }
 }
 
 // If a body doesn't exist, remove some extra padding from footer
 .wuiModalHeader + .wuiModalFooter {
-  padding-top: $euiSizeS;
+  padding-top: $wuiSizeS;
 }
 
 // If a footer doesn't exist (body is the last element) add padding to the bottom
 .wuiModalBody:last-of-type .wuiModalBody__overflow {
-  padding-bottom: $euiSizeL;
+  padding-bottom: $wuiSizeL;
 }
 
 
 // The actual size of the X button in pixels is a bit fuzzy because of all the
 // button padding so there is some pixel pushing here.
 .wuiModal__closeIcon {
-  background-color: transparentize($euiColorEmptyShade, .1);
+  background-color: transparentize($wuiColorEmptyShade, .1);
   position: absolute;
-  right: $euiSizeXS;
-  top: $euiSizeXS;
+  right: $wuiSizeXS;
+  top: $wuiSizeXS;
   z-index: 3;
 }
 
 @keyframes wuiModal {
   0% {
     opacity: 0;
-    transform: translateY($euiSizeXL);
+    transform: translateY($wuiSizeXL);
   }
 
   100% {
@@ -137,7 +137,7 @@
 
   .wuiModalFooter {
     background: $wuiColorLightestShade;
-    padding: $euiSizeM $euiSizeL !important; // sass-lint:disable-line no-important
+    padding: $wuiSizeM $wuiSizeL !important; // sass-lint:disable-line no-important
     width: 100vw;
     justify-content: stretch;
 
@@ -154,7 +154,7 @@
     width: 100vw;
 
     .wuiModalBody__overflow {
-      padding-bottom: $euiSizeL;
+      padding-bottom: $wuiSizeL;
     }
   }
 }

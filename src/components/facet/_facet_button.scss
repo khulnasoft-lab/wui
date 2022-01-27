@@ -4,7 +4,7 @@
 .wuiFacetButton {
   @include wuiButtonBase;
   @include wuiFont;
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
 
   height: $wuiButtonHeightSmall;
   text-align: left;
@@ -19,9 +19,9 @@
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
     // use box-shadow as a "faux outline" to apply left/right padding only
-    box-shadow: -$euiSizeXS 0 $euiFocusBackgroundColor, $euiSizeXS 0 $euiFocusBackgroundColor;
+    box-shadow: -$wuiSizeXS 0 $wuiFocusBackgroundColor, $wuiSizeXS 0 $wuiFocusBackgroundColor;
   }
 
   &:disabled {
@@ -55,12 +55,12 @@
 
 .wuiFacetButton__text {
   @include wuiTextShift;
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
   flex-grow: 1;
   vertical-align: middle;
 
   .wuiFacetButton--isSelected & {
-    font-weight: $euiFontWeightBold;
+    font-weight: $wuiFontWeightBold;
   }
 }
 

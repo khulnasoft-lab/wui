@@ -4,14 +4,14 @@
 }
 
 .wuiTreeView .wuiTreeView {
-  padding-left: $euiSizeL;
+  padding-left: $wuiSizeL;
 }
 
 .wuiTreeView__node {
-  max-height: $euiSizeXL;
+  max-height: $wuiSizeXL;
   overflow: hidden;
   cursor: pointer;
-  line-height: $euiSizeXL;
+  line-height: $wuiSizeXL;
 }
 
 .wuiTreeView__node--expanded {
@@ -20,19 +20,19 @@
 }
 
 .wuiTreeView__nodeInner {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
 
-  padding-left: $euiSizeS;
+  padding-left: $wuiSizeS;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $euiSizeXL;
+  height: $wuiSizeXL;
   border-radius: $wuiBorderRadius;
   width: 100%;
   text-align-last: left;
 
   &:focus {
-    box-shadow: inset 0 0 0 $euiSizeXS / 4 $wuiFocusRingColor;
+    box-shadow: inset 0 0 0 $wuiSizeXS / 4 $wuiFocusRingColor;
   }
 
   &:hover,
@@ -41,37 +41,37 @@
   }
 
   .wuiTreeView__iconPlaceholder {
-    width: $euiSizeXL;
+    width: $wuiSizeXL;
   }
 
 }
 
 .wuiTreeView__nodeLabel {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
 }
 
 .wuiTreeView__iconWrapper {
-  margin-top: -($euiSizeXS / 2);
-  margin-right: $euiSizeS;
+  margin-top: -($wuiSizeXS / 2);
+  margin-right: $wuiSizeS;
 
   // This helps tokens appear vertically centered
   .wuiToken {
-    margin-top: $euiSizeXS / 2;
+    margin-top: $wuiSizeXS / 2;
   }
 }
 
 .wuiTreeView--compressed {
   .wuiTreeView__node {
-    max-height: $euiSizeL;
-    line-height: $euiSizeL;
+    max-height: $wuiSizeL;
+    line-height: $wuiSizeL;
 
     .wuiTreeView__nodeInner {
-      height: $euiSizeL;
+      height: $wuiSizeL;
 
     }
 
     .wuiTreeView__iconWrapper {
-      margin: 0 ($euiSizeS * .75) 0 0;
+      margin: 0 ($wuiSizeS * .75) 0 0;
     }
 
     .wuiTreeView__nodeLabel {
@@ -79,7 +79,7 @@
     }
 
     .wuiTreeView__iconPlaceholder {
-      width: $euiSizeL;
+      width: $wuiSizeL;
     }
   }
 
@@ -91,7 +91,7 @@
 
 .wuiTreeView--withArrows {
   .wuiTreeView__expansionArrow {
-    margin-right: $euiSizeXS;
+    margin-right: $wuiSizeXS;
   }
 
   &.wuiTreeView {
@@ -102,7 +102,7 @@
     }
 
     .wuiTreeView__iconWrapper {
-      margin-left: $euiSize + $euiSizeXS;
+      margin-left: $wuiSize + $wuiSizeXS;
     }
   }
 
@@ -114,7 +114,7 @@
     }
 
     .wuiTreeView__iconWrapper {
-      margin-left: $euiSize;
+      margin-left: $wuiSize;
     }
   }
 }

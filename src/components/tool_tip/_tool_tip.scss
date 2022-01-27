@@ -3,13 +3,13 @@
  */
 
 .wuiToolTip {
-  @include euiToolTipStyle;
+  @include wuiToolTipStyle;
   @include wuiToolTipAnimation('top');
   position: absolute;
   opacity: 0;
 
   // Custom sizing
-  $arrowSize: $euiSizeM;
+  $arrowSize: $wuiSizeM;
   $arrowPlusSize: (($arrowSize/2) + 1px) * -1; /* 1 */
   $arrowMinusSize: (($arrowSize/2) - 1px) * -1; /* 1 */
 
@@ -51,7 +51,7 @@
   }
 
   .wuiToolTip__title {
-    @include euiToolTipTitle;
+    @include wuiToolTipTitle;
   }
 }
 
@@ -71,7 +71,7 @@
 @keyframes wuiToolTipTop {
   0% {
     opacity: 0;
-    transform: translateY(-$euiSize);
+    transform: translateY(-$wuiSize);
   }
 
   100% {
@@ -83,7 +83,7 @@
 @keyframes wuiToolTipBottom {
   0% {
     opacity: 0;
-    transform: translateY($euiSize);
+    transform: translateY($wuiSize);
   }
 
   100% {
@@ -95,7 +95,7 @@
 @keyframes wuiToolTipLeft {
   0% {
     opacity: 0;
-    transform: translateX(-$euiSize);
+    transform: translateX(-$wuiSize);
   }
 
   100% {
@@ -107,7 +107,7 @@
 @keyframes wuiToolTipRight {
   0% {
     opacity: 0;
-    transform: translateX($euiSize);
+    transform: translateX($wuiSize);
   }
 
   100% {

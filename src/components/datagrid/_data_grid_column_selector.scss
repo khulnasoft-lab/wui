@@ -1,21 +1,21 @@
 .wuiDataGridColumnSelector__item {
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
 
   &-isDragging {
     @include wuiBottomShadow;
-    background: $euiColorEmptyShade;
+    background: $wuiColorEmptyShade;
   }
 }
 
 // Because we only want this to scroll vertically, we need to offset inner wuiFlexGroup negative padding by adding padding
 .wuiDataGridColumnSelector__columnList {
-  @include euiYScrollWithShadows;
+  @include wuiYScrollWithShadows;
   max-height: 400px;
-  margin: 0 (-$euiSizeS);
+  margin: 0 (-$wuiSizeS);
 }
 
 .wuiDataGridColumnSelector__itemLabel {
-  @include euiFontSizeXS;
+  @include wuiFontSizeXS;
 }
 
 .wuiDataGridColumnSelectorPopover {
@@ -23,7 +23,7 @@
   // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
-  margin-top: -$euiSizeS;
+  margin-top: -$wuiSizeS;
   // IE11 needs a min-width
-  min-width: $euiSize * 12;
+  min-width: $wuiSize * 12;
 }

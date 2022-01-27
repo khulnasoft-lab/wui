@@ -5,7 +5,7 @@
   .wuiHeaderLogo__text,
   .wuiHeaderLink,
   .wuiHeaderSectionItem__button {
-    color: $euiColorGhost;
+    color: $wuiColorGhost;
   }
 
   .wuiHeaderLink-isActive {
@@ -14,7 +14,7 @@
 
   .wuiHeaderSectionItem {
     &:after {
-      background: lightOrDarkTheme($euiColorDarkShade, $wuiColorLightestShade);
+      background: lightOrDarkTheme($wuiColorDarkShade, $wuiColorLightestShade);
     }
   }
 
@@ -22,7 +22,7 @@
   .wuiHeaderLink,
   .wuiHeaderSectionItem__button {
     &:hover {
-      background: transparentize(lightOrDarkTheme($euiColorDarkShade, $wuiColorLightestShade), .5);
+      background: transparentize(lightOrDarkTheme($wuiColorDarkShade, $wuiColorLightestShade), .5);
     }
 
     &:focus {

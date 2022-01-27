@@ -27,7 +27,7 @@ export const grayColors = [
   'wuiColorLightestShade',
   'wuiColorLightShade',
   'wuiColorMediumShade',
-  'euiColorDarkShade',
+  'wuiColorDarkShade',
   'wuiColorDarkestShade',
   'wuiColorFullShade',
 ];

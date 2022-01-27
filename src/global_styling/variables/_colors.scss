@@ -8,7 +8,7 @@ $wuiColorAccent: #DD0A73 !default;
 $wuiColorHighlight: #FFFCDD !default;
 
 // These colors stay the same no matter the theme
-$euiColorGhost: #FFF !default;
+$wuiColorGhost: #FFF !default;
 $wuiColorInk: #000 !default;
 
 // Status
@@ -17,21 +17,21 @@ $wuiColorDanger: #BD271E !default;
 $wuiColorWarning: #F5A700 !default;
 
 // Grays
-$euiColorEmptyShade: #FFF !default;
+$wuiColorEmptyShade: #FFF !default;
 $wuiColorLightestShade: #F5F7FA !default;
 $wuiColorLightShade: #D3DAE6 !default;
 $wuiColorMediumShade: #98A2B3 !default;
-$euiColorDarkShade: #69707D !default;
+$wuiColorDarkShade: #69707D !default;
 $wuiColorDarkestShade: #343741 !default;
 $wuiColorFullShade: #000 !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
-$euiTextColor: $wuiColorDarkestShade !default;
+$wuiTextColor: $wuiColorDarkestShade !default;
 $wuiPageBackgroundColor: tintOrShade($wuiColorLightestShade, 50%, 30%) !default;
 $wuiTextSubduedColor: makeHighContrastColor($wuiColorMediumShade) !default;
-$wuiTitleColor: shadeOrTint($euiTextColor, 50%, 0%) !default;
+$wuiTitleColor: shadeOrTint($wuiTextColor, 50%, 0%) !default;
 $wuiLinkColor: $wuiColorPrimary !default;
-$euiFocusBackgroundColor: tintOrShade($wuiColorPrimary, 90%, 50%) !default;
+$wuiFocusBackgroundColor: tintOrShade($wuiColorPrimary, 90%, 50%) !default;
 
 // Contrasty text variants
 $wuiColorPrimaryText: makeHighContrastColor($wuiColorPrimary) !default;
@@ -121,7 +121,7 @@ $wuiColorChartBand: $wuiColorLightestShade !default;
 
 // Code
 $wuiCodeBlockBackgroundColor: $wuiColorLightestShade !default;
-$wuiCodeBlockColor: makeHighContrastColor($euiTextColor, $wuiCodeBlockBackgroundColor) !default;
+$wuiCodeBlockColor: makeHighContrastColor($wuiTextColor, $wuiCodeBlockBackgroundColor) !default;
 $wuiCodeBlockSelectedBackgroundColor: inherit !default;
 $wuiCodeBlockCommentColor: makeHighContrastColor($wuiTextSubduedColor, $wuiCodeBlockBackgroundColor) !default;
 $wuiCodeBlockSelectorTagColor: inherit !default;

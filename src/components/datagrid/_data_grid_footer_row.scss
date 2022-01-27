@@ -1,5 +1,5 @@
 @include wuiDataGridFooterCell {
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
 }
 
 @include wuiDataGridStyles(stickyFooter) {
@@ -13,8 +13,8 @@
   @include wuiDataGridFooterCell {
     border-top: $wuiBorderThick;
     // sass-lint:disable-block no-important
-    border-top-color: $euiTextColor !important;
-    background: $euiColorEmptyShade !important;
+    border-top-color: $wuiTextColor !important;
+    background: $wuiColorEmptyShade !important;
   }
 }
 

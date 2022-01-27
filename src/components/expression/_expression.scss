@@ -4,29 +4,29 @@
  */
 .wuiExpression {
   @include wuiTextBreakWord; /* 1 */
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   @include wuiCodeFont;
 
   border-bottom: $wuiBorderWidthThick solid transparent;
   display: inline-block; /* 1 */
   text-align: left;
-  padding: ($euiSizeXS / 2) 0;
-  transition: all $euiAnimSpeedNormal ease-in-out;
-  color: $euiTextColor;
+  padding: ($wuiSizeXS / 2) 0;
+  transition: all $wuiAnimSpeedNormal ease-in-out;
+  color: $wuiTextColor;
 
   &:focus {
     border-bottom-style: solid;
   }
 
   & + .wuiExpression {
-    margin-left: $euiSizeS;
+    margin-left: $wuiSizeS;
   }
 
   &.wuiExpression--columns {
     border-color: transparent;
     // Ensures there's no flash of the dashed style before turning solid for the active state
     border-bottom-style: solid;
-    margin-bottom: $euiSizeXS;
+    margin-bottom: $wuiSizeXS;
   }
 
   &.wuiExpression--truncate {
@@ -34,7 +34,7 @@
 
     .wuiExpression__description,
     .wuiExpression__value {
-      @include euiTextTruncate;
+      @include wuiTextTruncate;
       display: inline-block;
       vertical-align: bottom;
     }
@@ -57,7 +57,7 @@
 }
 
 .wuiExpression__icon {
-  margin-left: $euiSizeXS;
+  margin-left: $wuiSizeXS;
 }
 
 .wuiExpression-isActive {
@@ -67,8 +67,8 @@
 .wuiExpression--columns {
   width: 100%;
   display: flex;
-  padding: $euiSizeXS;
-  border-radius: $euiSizeXS;
+  padding: $wuiSizeXS;
+  border-radius: $wuiSizeXS;
 
   &.wuiExpression-isClickable {
     background-color: $wuiColorLightestShade;
@@ -86,7 +86,7 @@
 
   .wuiExpression__description {
     text-align: right;
-    margin-right: $euiSizeS;
+    margin-right: $wuiSizeS;
     flex-shrink: 0; // Ensures it doesn't get smaller in case the value is really long
   }
 
@@ -95,7 +95,7 @@
   }
 
   .wuiExpression__icon {
-    margin-top: $euiSizeXS;
+    margin-top: $wuiSizeXS;
   }
 }
 

@@ -1,9 +1,9 @@
 .wuiSelectableListItem {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   display: inline-flex; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $wuiTextColor;
   cursor: pointer;
 
   &:not(:last-of-type) {
@@ -13,7 +13,7 @@
   &-isFocused:not([aria-disabled='true']),
   &:hover:not([aria-disabled='true']) {
     color: $wuiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
 
     .wuiSelectableListItem__text {
       text-decoration: underline;
@@ -35,16 +35,16 @@
 
 .wuiSelectableListItem__icon,
 .wuiSelectableListItem__prepend {
-  margin-right: $euiSizeM;
+  margin-right: $wuiSizeM;
   flex-shrink: 0;
 }
 
 .wuiSelectableListItem__append {
-  margin-left: $euiSizeM;
+  margin-left: $wuiSizeM;
   flex-shrink: 0;
 }
 
 .wuiSelectableListItem__text {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
   flex-grow: 1; // Pushes appended content to the far right
 }

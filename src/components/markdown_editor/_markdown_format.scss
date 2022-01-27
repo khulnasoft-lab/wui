@@ -50,9 +50,9 @@ $browserDefaultFontSize: 16px;
   $wuiMarkdownAlphaDarkShade: rgba($wuiColorFullShade, .65);
 
   // Reverse grayscale for opposite of theme
-  $wuiMarkdownAlphaLightestShadeReversed: rgba($euiColorEmptyShade, .05);
-  $wuiMarkdownAlphaLightShadeReversed: rgba($euiColorEmptyShade, .15);
-  $wuiMarkdownAlphaDarkShadeReversed: rgba($euiColorEmptyShade, .65);
+  $wuiMarkdownAlphaLightestShadeReversed: rgba($wuiColorEmptyShade, .05);
+  $wuiMarkdownAlphaLightShadeReversed: rgba($wuiColorEmptyShade, .15);
+  $wuiMarkdownAlphaDarkShadeReversed: rgba($wuiColorEmptyShade, .65);
 
   &--reversed {
     color: $wuiColorLightestShade;

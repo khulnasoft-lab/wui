@@ -1,15 +1,15 @@
 .wuiFlyout {
   @include wuiFlyout;
-  animation: wuiFlyout $euiAnimSpeedNormal $wuiAnimSlightResistance;
+  animation: wuiFlyout $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 }
 
 // The actual size of the X button in pixels is a bit fuzzy because of all the
 // button padding so there is some pixel pushing here.
 .wuiFlyout__closeButton {
-  background-color: transparentize($euiColorEmptyShade, .1);
+  background-color: transparentize($wuiColorEmptyShade, .1);
   position: absolute;
-  right: $euiSizeL - 7px;
-  top: $euiSizeL - 7px;
+  right: $wuiSizeL - 7px;
+  top: $wuiSizeL - 7px;
   z-index: 3;
 }
 
@@ -24,7 +24,7 @@ $flyoutSizes: (
   ),
   'medium': (
     // Calculated for forms plus padding
-    min: $wuiFormMaxWidth + ($euiSizeM * 2),
+    min: $wuiFormMaxWidth + ($wuiSizeM * 2),
     width: 50vw,
     max: map-get($wuiBreakpoints, 'm'),
   ),

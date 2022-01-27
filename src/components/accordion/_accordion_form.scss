@@ -1,6 +1,6 @@
 .wuiAccordionForm__extraAction {
   opacity: 0;
-  transition: opacity $euiAnimSpeedNormal $wuiAnimSlightResistance;
+  transition: opacity $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 
   &:focus {
     opacity: 1;
@@ -12,7 +12,7 @@
 }
 
 .wuiAccordionForm__button {
-  padding: $euiSize $euiSize $euiSize 0;
+  padding: $wuiSize $wuiSize $wuiSize 0;
 
   &:hover {
     text-decoration: none;

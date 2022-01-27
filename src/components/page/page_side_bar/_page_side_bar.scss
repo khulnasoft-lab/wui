@@ -2,9 +2,9 @@
  * 1. Prevent side bar width from changing when content width changes.
  */
 .wuiPageSideBar {
-  min-width: $euiSize * 12; /* 1 */
+  min-width: $wuiSize * 12; /* 1 */
   flex: 0 1 0%; /* 1 */
-  margin-right: $euiSizeL;
+  margin-right: $wuiSizeL;
 }
 
 @include wuiBreakpoint('xs', 's') {

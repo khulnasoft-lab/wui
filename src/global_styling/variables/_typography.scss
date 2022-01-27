@@ -5,21 +5,21 @@
 // Typography mixins
 
 @function convertToRem($size) {
-  @return #{$size / $euiFontSize}rem;
+  @return #{$size / $wuiFontSize}rem;
 }
 
 // Spit out rem and px
-@mixin fontSize($size: $euiFontSize) {
+@mixin fontSize($size: $wuiFontSize) {
   font-size: $size;
   font-size: convertToRem($size);
 }
 
 // Our base gridline is at 1/2 the font-size, ensure line-heights stay on that gridline.
 // EX: A proper line-height for text is 1.5 times the font-size.
-//     If our base font size (euiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
+//     If our base font size (wuiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
 //     text stays on the baseline, we pass a multiplier to calculate a line-height in rems.
 @function lineHeightFromBaseline($multiplier: 3) {
-  @return convertToRem(($euiFontSize/2)*$multiplier);
+  @return convertToRem(($wuiFontSize/2)*$multiplier);
 }
 @mixin lineHeightFromBaseline($multiplier: 3) {
   line-height: lineHeightFromBaseline($multiplier);
@@ -35,13 +35,13 @@ $wuiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
 // Font sizes -- scale is loosely based on Major Third (1.250)
 $wuiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
 
-$euiFontSize:       $euiSize !default; // 5th position in scale
-$euiFontSizeXS:     $euiFontSize * nth($wuiTextScale, 7) !default; // 12px
-$euiFontSizeS:      $euiFontSize * nth($wuiTextScale, 6) !default; // 14px
-$euiFontSizeM:      $euiFontSize * nth($wuiTextScale, 4) !default; // 18px
-$euiFontSizeL:      $euiFontSize * nth($wuiTextScale, 3) !default; // 20px
-$euiFontSizeXL:     $euiFontSize * nth($wuiTextScale, 2) !default; // 28px
-$euiFontSizeXXL:    $euiFontSize * nth($wuiTextScale, 1) !default; // 36px
+$wuiFontSize:       $wuiSize !default; // 5th position in scale
+$wuiFontSizeXS:     $wuiFontSize * nth($wuiTextScale, 7) !default; // 12px
+$wuiFontSizeS:      $wuiFontSize * nth($wuiTextScale, 6) !default; // 14px
+$wuiFontSizeM:      $wuiFontSize * nth($wuiTextScale, 4) !default; // 18px
+$wuiFontSizeL:      $wuiFontSize * nth($wuiTextScale, 3) !default; // 20px
+$wuiFontSizeXL:     $wuiFontSize * nth($wuiTextScale, 2) !default; // 28px
+$wuiFontSizeXXL:    $wuiFontSize * nth($wuiTextScale, 1) !default; // 36px
 
 // Line height
 $wuiLineHeight:     1.5;
@@ -51,42 +51,42 @@ $wuiFontWeightLight:    300 !default;
 $wuiFontWeightRegular:  400 !default;
 $wuiFontWeightMedium:   500 !default;
 $wuiFontWeightSemiBold: 600 !default;
-$euiFontWeightBold:     700 !default;
+$wuiFontWeightBold:     700 !default;
 
 // Titles map
 // Lists all the properties per WuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
 $wuiTitles: (
   'xxxs': (
-    'font-size': $euiFontSizeXS,
+    'font-size': $wuiFontSizeXS,
     'line-height': lineHeightFromBaseline(3),
-    'font-weight': $euiFontWeightBold,
+    'font-weight': $wuiFontWeightBold,
   ),
   'xxs': (
-    'font-size': $euiFontSizeS,
+    'font-size': $wuiFontSizeS,
     'line-height': lineHeightFromBaseline(3),
-    'font-weight': $euiFontWeightBold,
+    'font-weight': $wuiFontWeightBold,
   ),
   'xs': (
-    'font-size': $euiFontSize,
+    'font-size': $wuiFontSize,
     'line-height': lineHeightFromBaseline(3),
     'font-weight': $wuiFontWeightSemiBold,
     'letter-spacing': -.02em,
   ),
   's': (
-    'font-size': $euiFontSizeL,
+    'font-size': $wuiFontSizeL,
     'line-height': lineHeightFromBaseline(4),
     'font-weight': $wuiFontWeightMedium,
     'letter-spacing': -.025em,
   ),
   'm': (
-    'font-size': $euiFontSizeXL,
+    'font-size': $wuiFontSizeXL,
     'line-height': lineHeightFromBaseline(5),
     'font-weight': $wuiFontWeightLight,
     'letter-spacing': -.04em,
   ),
   'l': (
-    'font-size': $euiFontSizeXXL,
+    'font-size': $wuiFontSizeXXL,
     'line-height': lineHeightFromBaseline(6),
     'font-weight': $wuiFontWeightLight,
     'letter-spacing': -.03em,

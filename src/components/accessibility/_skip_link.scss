@@ -13,8 +13,8 @@
 
   &.wuiSkipLink--fixed:focus {
     position: fixed;
-    top: $euiSizeXS;
-    left: $euiSizeXS;
+    top: $wuiSizeXS;
+    left: $wuiSizeXS;
     z-index: $wuiZHeader + 1;
   }
 }

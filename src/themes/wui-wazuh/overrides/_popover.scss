@@ -1,11 +1,11 @@
 .wuiPopover__panel {
   .wuiPopover__panelArrow {
     &:before {
-      filter: blur($euiSizeXS - 1px);
+      filter: blur($wuiSizeXS - 1px);
       opacity: .2;
     }
 
-    $arrowShadowCompensation: $euiSizeXS;
+    $arrowShadowCompensation: $wuiSizeXS;
 
     &.wuiPopover__panelArrow--top {
       &:before {

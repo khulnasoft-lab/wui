@@ -21,20 +21,20 @@
 // Modifiers for sizing.
 $avatarSizing: (
   s: (
-    size: $euiSizeL,
-    font-size: $euiSizeM
+    size: $wuiSizeL,
+    font-size: $wuiSizeM
   ),
   m: (
-    size: $euiSizeXL,
-    font-size: $euiSize*.9
+    size: $wuiSizeXL,
+    font-size: $wuiSize*.9
   ),
   l: (
-    size: $euiSizeXXL,
-    font-size: $euiSizeL*.8
+    size: $wuiSizeXXL,
+    font-size: $wuiSizeL*.8
   ),
   xl: (
-    size: ($euiSize * 4),
-    font-size: $euiSizeXL*.8
+    size: ($wuiSize * 4),
+    font-size: $wuiSizeXL*.8
   ),
 );
 

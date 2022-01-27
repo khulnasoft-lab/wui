@@ -23,12 +23,12 @@
 }
 
 $ruleMargins: (
-  marginXSmall: $euiSizeS,
-  marginSmall: $euiSizeM,
-  marginMedium: $euiSize,
-  marginLarge: $euiSizeL,
-  marginXLarge: $euiSizeXL,
-  marginXXLarge: $euiSizeXXL,
+  marginXSmall: $wuiSizeS,
+  marginSmall: $wuiSizeM,
+  marginMedium: $wuiSize,
+  marginLarge: $wuiSizeL,
+  marginXLarge: $wuiSizeXL,
+  marginXXLarge: $wuiSizeXXL,
 );
 
 @each $name, $size in $ruleMargins {

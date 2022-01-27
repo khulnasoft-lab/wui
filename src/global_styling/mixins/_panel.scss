@@ -5,7 +5,7 @@
     #{$selector} {
 
       @include wuiBottomShadowSmall;
-      background-color: $euiColorEmptyShade;
+      background-color: $wuiColorEmptyShade;
       border: $wuiBorderThin;
       border-radius: $wuiBorderRadius;
       flex-grow: 1;
@@ -34,7 +34,7 @@
       &#{$selector}--shadow {
         @include wuiBottomShadowMedium;
 
-        @if (lightness($euiTextColor) < 50) {
+        @if (lightness($wuiTextColor) < 50) {
           border-bottom-color: transparentize($wuiShadowColor, .5);
         } @else {
           // Applied again here in case dark theme overrides light

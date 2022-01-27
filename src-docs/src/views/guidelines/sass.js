@@ -27,7 +27,7 @@ import {
 
 const wuiColors = [...allowedColors, 'euiColorGhost', 'wuiColorInk'];
 
-const euiTextColors = ['euiTextColor', 'euiColorDarkShade', 'wuiLinkColor'];
+const euiTextColors = ['euiTextColor', 'wuiColorDarkShade', 'wuiLinkColor'];
 
 const euiSizeS = [
   'euiSizeXS',
@@ -73,7 +73,7 @@ const wuiLevels = [
 const wuiAnimationSpeeds = [
   'wuiAnimSpeedExtraFast',
   'wuiAnimSpeedFast',
-  'euiAnimSpeedNormal',
+  'wuiAnimSpeedNormal',
   'wuiAnimSpeedSlow',
   'wuiAnimSpeedExtraSlow',
 ];

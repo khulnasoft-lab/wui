@@ -2,26 +2,26 @@
   position: absolute;
   left: ($wuiRangeThumbWidth / 2);
   right: ($wuiRangeThumbWidth / 2);
-  top: $euiSizeS;
+  top: $wuiSizeS;
   display: flex;
 }
 
 .wuiRangeTick {
   overflow-x: hidden;
   text-overflow: ellipsis;
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   position: relative;
-  padding-top: $euiSize;
+  padding-top: $wuiSize;
 
   &::before {
-    @include size($euiSizeXS);
+    @include size($wuiSizeXS);
 
     content: '';
-    background-color: $euiColorDarkShade;
+    background-color: $wuiColorDarkShade;
     border-radius: 100%;
     position: absolute;
     top: 0;
-    left: calc(50% - #{($euiSizeXS/2)});
+    left: calc(50% - #{($wuiSizeXS/2)});
   }
 
   &--isCustom {
@@ -45,9 +45,9 @@
 }
 
 .wuiRangeTicks--compressed {
-  top: $euiSizeS - 2px;
+  top: $wuiSizeS - 2px;
 
   .wuiRangeTick {
-    padding-top: $euiSize - 2px;
+    padding-top: $wuiSize - 2px;
   }
 }

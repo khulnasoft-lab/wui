@@ -18,7 +18,7 @@
 
   &--absolute {
     position: absolute;
-    z-index: $euiZLevel1;
+    z-index: $wuiZLevel1;
   }
 
   &--relative {
@@ -26,7 +26,7 @@
   }
 
   &-isOpen {
-    animation-duration: $euiAnimSpeedNormal;
+    animation-duration: $wuiAnimSpeedNormal;
     animation-timing-function: $wuiAnimSlightResistance;
     animation-fill-mode: forwards;
   }
@@ -57,7 +57,7 @@
   align-items: center;
   overflow-y: hidden; // Ensures the movement of buttons in :focus don't cause scrollbars
   overflow-x: auto;
-  padding: 0 $euiSizeM;
+  padding: 0 $wuiSizeM;
 }
 
 .wuiControlBar__content {
@@ -77,8 +77,8 @@
 
 .wuiControlBar__icon {
   flex-shrink: 0;
-  margin-left: $euiSizeS;
-  margin-right: $euiSizeS;
+  margin-left: $wuiSizeS;
+  margin-right: $wuiSizeS;
 }
 
 .wuiControlBar__buttonIcon {
@@ -90,8 +90,8 @@
 .wuiControlBar__button {
   flex-shrink: 0;
   border-radius: $wuiBorderRadius / 2;
-  margin-left: $euiSizeXS;
-  font-size: $euiFontSizeS;
+  margin-left: $wuiSizeXS;
+  font-size: $wuiFontSizeS;
 
   &:enabled:hover {
     transform: none;
@@ -99,7 +99,7 @@
   }
 
   &:last-child {
-    margin-right: $euiSizeXS;
+    margin-right: $wuiSizeXS;
   }
 }
 
@@ -126,9 +126,9 @@
 }
 
 .wuiControlBar__text {
-  @include euiTextTruncate;
-  @include euiFontSizeS;
-  padding: 0 $euiSizeS;
+  @include wuiTextTruncate;
+  @include wuiFontSizeS;
+  padding: 0 $wuiSizeS;
   color: $wuiControlBarText;
 
   &:last-child {
@@ -137,10 +137,10 @@
 }
 
 .wuiControlBar__tab {
-  @include euiTextTruncate;
-  @include euiFontSizeS;
+  @include wuiTextTruncate;
+  @include wuiFontSizeS;
   color: $wuiControlBarText;
-  padding: 0 $euiSize;
+  padding: 0 $wuiSize;
   text-align: center;
   height: 100%;
 
@@ -168,7 +168,7 @@
     }
 
     .wuiLink.wuiLink--text {
-      color: $euiColorGhost;
+      color: $wuiColorGhost;
     }
 
     .wuiControlBar__button.wuiButton--#{$colorName}:enabled {

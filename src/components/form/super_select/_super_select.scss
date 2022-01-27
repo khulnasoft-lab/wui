@@ -33,13 +33,13 @@
 }
 
 .wuiSuperSelect__item {
-  @include euiFontSizeS;
-  padding: $euiSizeS;
+  @include wuiFontSizeS;
+  padding: $wuiSizeS;
 
   &:hover:not(:disabled),
   &:focus {
     text-decoration: none;
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
   }
 
   &:disabled {

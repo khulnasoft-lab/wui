@@ -2,7 +2,7 @@
 .wuiSideNav__mobileToggle {
   display: none;
   border-bottom: $wuiBorderThin;
-  padding: $euiSize $euiSizeL;
+  padding: $wuiSize $wuiSizeL;
   width: 100%;
   text-align: left;
 
@@ -29,17 +29,17 @@
 }
 
 .wuiSideNav__hideButton {
-  width: $euiSizeL;
-  height: $euiSizeL;
+  width: $wuiSizeL;
+  height: $wuiSizeL;
   border-radius: $wuiBorderRadius;
   border: $wuiBorderThin;
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  right: -$euiSizeXXL;
-  top: $euiSizeXL;
+  right: -$wuiSizeXXL;
+  top: $wuiSizeXL;
 }
 
 @include wuiBreakpoint('xs', 's') {
@@ -51,9 +51,9 @@
     .wuiSideNav__content {
       visibility: visible;
       opacity: 1;
-      margin: $euiSizeL;
+      margin: $wuiSizeL;
       max-height: 5000px; /* 1 */
-      transition: all $euiAnimSpeedNormal $wuiAnimSlightResistance;
+      transition: all $wuiAnimSpeedNormal $wuiAnimSlightResistance;
     }
   }
 
@@ -66,6 +66,6 @@
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    margin: 0 $euiSizeL;
+    margin: 0 $wuiSizeL;
   }
 }

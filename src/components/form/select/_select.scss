@@ -35,12 +35,12 @@
   }
 
   &:focus::-ms-value {
-    color: $euiTextColor;
+    color: $wuiTextColor;
     background: transparent;
   }
 
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $euiTextColor;
+    text-shadow: 0 0 0 $wuiTextColor;
   }
 }

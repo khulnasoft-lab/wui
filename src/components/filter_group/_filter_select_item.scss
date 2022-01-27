@@ -1,11 +1,11 @@
 .wuiFilterSelectItem {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
 
-  padding: $euiSizeXS $euiSizeM;
+  padding: $wuiSizeXS $wuiSizeM;
   display: block; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $wuiTextColor;
   border-bottom: $wuiBorderThin;
   border-color: darken($wuiColorLightestShade, 2%);
 
@@ -18,7 +18,7 @@
   &-isFocused {
     cursor: pointer;
     color: $wuiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
   }
 
   &[disabled] {
@@ -32,7 +32,7 @@
 }
 
 .wuiFilterSelectItem__content {
-  @include euiTextTruncate;
+  @include wuiTextTruncate;
 }
 
 
@@ -40,11 +40,11 @@
   @include wuiScrollBar;
 
   overflow-y: auto;
-  max-height: $euiSize * 30;
+  max-height: $wuiSize * 30;
 }
 
 .wuiFilterSelect__note {
-  height: $euiSize * 4;
+  height: $wuiSize * 4;
   text-align: center;
   display: flex;
   align-items: center;
@@ -52,6 +52,6 @@
 }
 
 .wuiFilterSelect__noteContent {
-  color: $euiColorDarkShade;
-  font-size: $euiFontSizeS;
+  color: $wuiColorDarkShade;
+  font-size: $wuiFontSizeS;
 }

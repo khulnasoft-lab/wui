@@ -25,20 +25,20 @@
 
 .wuiTab {
   @include fontSize($wuiTabFontSize);
-  color: $euiTextColor;
+  color: $wuiTextColor;
   background-color: transparent;
   cursor: pointer;
   line-height: $wuiLineHeight;
-  padding: $euiSizeM $euiSize;
+  padding: $wuiSizeM $wuiSize;
   position: relative;
-  transition: color $euiAnimSpeedNormal $wuiAnimSlightResistance, background-color $euiAnimSpeedNormal $wuiAnimSlightResistance;
+  transition: color $wuiAnimSpeedNormal $wuiAnimSlightResistance, background-color $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 
   &:hover:not(.wuiTab-isSelected) {
     text-decoration: underline;
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
     text-decoration: underline;
 
     &::before {
@@ -82,17 +82,17 @@
 
   .wuiTabs--small & {
     @include fontSize($wuiTabFontSizeS);
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
   }
 
   // Condensed Tabs Group Modifier
 
   .wuiTabs--condensed & {
     font-weight: $wuiFontWeightSemiBold;
-    padding: $euiSizeS $euiSizeXS;
+    padding: $wuiSizeS $wuiSizeXS;
 
     &:focus {
-      background-color: $euiFocusBackgroundColor;
+      background-color: $wuiFocusBackgroundColor;
 
       &::before {
         display: none;
@@ -104,7 +104,7 @@
     }
 
     & + .wuiTab {
-      margin-left: $euiSize;
+      margin-left: $wuiSize;
     }
   }
 

@@ -5,7 +5,7 @@
   $color: rgba($wuiColorDarkestShade, $alpha);
 
   @if $type == 'light' {
-    $color: rgba($euiColorEmptyShade, $alpha);
+    $color: rgba($wuiColorEmptyShade, $alpha);
   }
 
   position: relative;
@@ -37,7 +37,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: transparentize($euiColorDarkShade, .5);
+    background-color: transparentize($wuiColorDarkShade, .5);
     border: $wuiScrollBarCorner solid transparent;
     background-clip: content-box;
   }
@@ -61,7 +61,7 @@
 }
 
 // The full overflow with shadow
-@mixin euiYScrollWithShadows {
+@mixin wuiYScrollWithShadows {
   @include wuiYScroll;
   @include wuiOverflowShadow('y');
 }

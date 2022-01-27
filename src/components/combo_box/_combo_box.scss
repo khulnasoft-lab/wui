@@ -17,7 +17,7 @@
     @include wuiFormControlStyle($includeStates: false, $includeSizes: true);
     @include wuiFormControlWithIcon($isIconOptional: true);
     @include wuiFormControlSize(auto, $includeAlternates: true);
-    padding: $euiSizeXS $euiSizeS;
+    padding: $wuiSizeXS $wuiSizeS;
     display: flex; /* 1 */
 
     // sass-lint:disable-block mixins-before-declarations
@@ -25,17 +25,17 @@
     @include wuiFormControlLayoutPadding(1); /* 2 */
 
     .wuiComboBoxPill {
-      $inputMinWidth: $euiSize;
+      $inputMinWidth: $wuiSize;
 
       // Ensure the input doesn't drop to the next line when the WuiBadge has a very long text
       // Overrides the default WuiBadge max-width that is 100%
-      max-width: calc(100% - #{$euiSizeXS * .5} - #{$inputMinWidth});
+      max-width: calc(100% - #{$wuiSizeXS * .5} - #{$inputMinWidth});
     }
 
     &:not(.wuiComboBox__inputWrap--noWrap) {
-      padding-top: $euiSizeXS;
-      padding-bottom: $euiSizeXS;
-      padding-left: $euiSizeXS;
+      padding-top: $wuiSizeXS;
+      padding-bottom: $wuiSizeXS;
+      padding-left: $wuiSizeXS;
       height: auto;  /* 3 */
       flex-wrap: wrap; /* 1 */
       align-content: flex-start;
@@ -68,7 +68,7 @@
   .wuiComboBox__input {
     // sass-lint:disable-block no-important
     display: inline-flex !important; /* 1 */
-    height: $euiSizeXL; /* 2 */
+    height: $wuiSizeXL; /* 2 */
     overflow: hidden; /* 5 */
 
     > input {
@@ -77,9 +77,9 @@
       padding: 0;
       border: none;
       background: transparent;
-      font-size: $euiFontSizeS;
-      color: $euiTextColor;
-      margin: $euiSizeXS;
+      font-size: $wuiFontSizeS;
+      color: $wuiTextColor;
+      margin: $wuiSizeXS;
       line-height: $wuiLineHeight; /* 4 */
     }
   }

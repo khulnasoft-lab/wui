@@ -78,7 +78,7 @@
 }
 
 .wuiImage__caption {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   text-align: center;
 }
 
@@ -86,8 +86,8 @@
   visibility: hidden;
   fill-opacity: 0;
   position: absolute;
-  right: $euiSize;
-  top: $euiSize;
+  right: $wuiSize;
+  top: $wuiSize;
   transition: fill-opacity $wuiAnimSpeedSlow $wuiAnimSlightResistance;
   cursor: pointer;
 }
@@ -111,8 +111,8 @@
 
   &__icon {
     position: absolute;
-    right: $euiSize;
-    top: $euiSize;
+    right: $wuiSize;
+    top: $wuiSize;
   }
 
   &__img {
@@ -127,7 +127,7 @@
 @keyframes wuiImageFullScreen {
   0% {
     opacity: 0;
-    transform: translateY($euiSizeXL * 2);
+    transform: translateY($wuiSizeXL * 2);
   }
 
   100% {

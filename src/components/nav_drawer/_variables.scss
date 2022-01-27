@@ -10,7 +10,7 @@ $wuiNavDrawerSideShadow: 2px 0 2px -1px rgba($wuiShadowColor, .3);
 $wuiNavDrawerTopPosition: $wuiHeaderHeight;
 
 // Animation variables
-$wuiNavDrawerExpandingDelay: $euiAnimSpeedNormal;
+$wuiNavDrawerExpandingDelay: $wuiAnimSpeedNormal;
 $wuiNavDrawerContractingDelay: $wuiAnimSpeedFast;
 $wuiNavDrawerExtendedDelay: $wuiAnimSpeedExtraSlow * 2;
 $wuiNavDrawerMenuAddedDelay: $wuiAnimSpeedExtraFast;

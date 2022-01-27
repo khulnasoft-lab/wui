@@ -14,14 +14,14 @@
 
 .wuiSelectableTemplateSitewide__optionMetasList {
   display: block;
-  margin-top: $euiSizeXS;
-  font-size: $euiFontSizeXS;
+  margin-top: $wuiSizeXS;
+  font-size: $wuiFontSizeXS;
   color: $wuiTextSubduedColor;
 }
 
 .wuiSelectableTemplateSitewide__optionMeta:not(:last-of-type)::after {
   content: '•';
-  margin: 0 $euiSizeXS;
+  margin: 0 $wuiSizeXS;
   color: $wuiTextSubduedColor;
 }
 

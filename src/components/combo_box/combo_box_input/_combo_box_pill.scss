@@ -3,28 +3,28 @@
  * that make sense in the input wrap.
  */
 .wuiComboBoxPill {
-  height: $euiSizeL - 2px;
-  line-height: $euiSizeL - 2px;
+  height: $wuiSizeL - 2px;
+  line-height: $wuiSizeL - 2px;
   vertical-align: baseline;
 
   &,
   & + & /* 1 */ {
-    margin: $euiSizeXS;
+    margin: $wuiSizeXS;
   }
 
   .wuiComboBox--compressed &,
   .wuiComboBox--compressed & + & /* 1 */ {
-    margin: ($euiSizeXS + 1px) $euiSizeXS 0 0;
+    margin: ($wuiSizeXS + 1px) $wuiSizeXS 0 0;
   }
 
   &--plainText {
     @include wuiFont;
-    @include euiTextTruncate;
+    @include wuiTextTruncate;
 
-    line-height: $euiSizeL;
-    font-size: $euiFontSizeS;
+    line-height: $wuiSizeL;
+    font-size: $wuiFontSizeS;
     padding: 0;
-    color: $euiTextColor;
+    color: $wuiTextColor;
     vertical-align: middle;
     display: inline-block;
   }

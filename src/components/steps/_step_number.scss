@@ -7,7 +7,7 @@
   }
 
   &--small {
-    @include createStepsNumber($wuiStepNumberSmallSize, $euiFontSizeXS);
+    @include createStepsNumber($wuiStepNumberSmallSize, $wuiFontSizeXS);
 
     .wuiStepNumber__icon {
       top: -1px;

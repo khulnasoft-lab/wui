@@ -1,34 +1,34 @@
 .wuiLoadingSpinner {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+  width: $wuiSizeXL;
+  height: $wuiSizeXL;
   border-radius: 50%;
-  border: solid $euiSizeXS / 2 $wuiColorLightShade;
+  border: solid $wuiSizeXS / 2 $wuiColorLightShade;
   border-color: wuiLoadingSpinnerBorderColors();
   animation: wuiLoadingSpinner .6s infinite linear;
 }
 
 .wuiLoadingSpinner--small {
-  width: $euiSizeS;
-  height: $euiSizeS;
+  width: $wuiSizeS;
+  height: $wuiSizeS;
   border-width: 1px;
 }
 
 .wuiLoadingSpinner--medium {
-  width: $euiSize;
-  height: $euiSize;
+  width: $wuiSize;
+  height: $wuiSize;
   border-width: 1px;
 }
 
 .wuiLoadingSpinner--large {
-  width: $euiSizeL;
-  height: $euiSizeL;
+  width: $wuiSizeL;
+  height: $wuiSizeL;
 }
 
 .wuiLoadingSpinner--xLarge {
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+  width: $wuiSizeXL;
+  height: $wuiSizeXL;
 }
 
 @keyframes wuiLoadingSpinner {

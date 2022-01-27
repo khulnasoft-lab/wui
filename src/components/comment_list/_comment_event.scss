@@ -16,7 +16,7 @@
   flex-wrap: wrap;
 
   > div {
-    padding-right: $euiSizeXS;
+    padding-right: $wuiSizeXS;
   }
 }
 
@@ -28,10 +28,10 @@
   border: $wuiBorderThin;
 
   .wuiCommentEvent__header {
-    min-height: $euiSizeXXL;
+    min-height: $wuiSizeXXL;
     background-color: $wuiColorLightestShade;
     border-bottom: $wuiBorderThin;
-    padding: $euiSizeXS $euiSizeS;
+    padding: $wuiSizeXS $wuiSizeS;
 
     /**
      * Fix for IE when using align-items:center in an item that has min-height
@@ -42,7 +42,7 @@
       &::after {
         content: '';
         // Calculates the minimum height based on full header's min-height minus the vertical padding
-        min-height: $euiSizeXXL - $euiSizeS;
+        min-height: $wuiSizeXXL - $wuiSizeS;
         font-size: 0;
         display: block;
       }
@@ -55,21 +55,21 @@
   }
 
   .wuiCommentEvent__body {
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
   }
 }
 
 .wuiCommentEvent--update {
   .wuiCommentEvent__header {
     justify-content: flex-start;
-    padding: $euiSizeXS 0;
+    padding: $wuiSizeXS 0;
   }
 
   .wuiCommentEvent__headerData {
-    padding-right: $euiSizeS;
+    padding-right: $wuiSizeS;
   }
 
   .wuiCommentEvent__body {
-    padding-top: $euiSizeXS;
+    padding-top: $wuiSizeXS;
   }
 }

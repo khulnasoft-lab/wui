@@ -1,12 +1,12 @@
 // Labels
 @mixin wuiFormLabel {
-  @include euiFontSizeXS;
+  @include wuiFontSizeXS;
   color: $wuiTitleColor;
   font-weight: $wuiFontWeightSemiBold;
 }
 
 @mixin wuiFormControlLayoutPadding($numOfIcons, $side: 'right', $compressed: false) {
-  $iconSize: $euiSize;
+  $iconSize: $wuiSize;
   $iconPadding: $wuiFormControlPadding;
   $marginBetweenIcons: $wuiFormControlPadding / 2;
 
@@ -26,11 +26,11 @@
 }
 
 @mixin wuiFormControlLayoutClearIcon($iconClass) {
-  $clearSize: $euiSize;
+  $clearSize: $wuiSize;
   @include size($clearSize);
 
   pointer-events: all;
-  background-color: lightOrDarkTheme($wuiColorMediumShade, $euiColorDarkShade);
+  background-color: lightOrDarkTheme($wuiColorMediumShade, $wuiColorDarkShade);
   border-radius: $clearSize;
   line-height: 0; // ensures the icon stays vertically centered
 
@@ -39,9 +39,9 @@
   }
 
   #{$iconClass} {
-    @include size($euiSizeS);
-    fill: $euiColorEmptyShade;
-    stroke: $euiColorEmptyShade;
+    @include size($wuiSizeS);
+    fill: $wuiColorEmptyShade;
+    stroke: $wuiColorEmptyShade;
     stroke-width: 2px; // increase thickness of icon at such a small size
   }
 }
@@ -67,8 +67,8 @@
 
 @mixin wuiFormControlText {
   @include wuiFont;
-  font-size: $euiFontSizeS;
-  color: $euiTextColor;
+  font-size: $wuiFontSizeS;
+  color: $wuiTextColor;
 
   @include internetExplorerOnly {
     line-height: 1em; // fixes text alignment in IE
@@ -76,7 +76,7 @@
 
   // sass-lint:disable-block mixins-before-declarations
   @include wuiPlaceholderPerBrowser {
-    color: $euiColorDarkShade;
+    color: $wuiColorDarkShade;
   }
 }
 
@@ -168,7 +168,7 @@
 
 @mixin wuiFormControlFocusStyle($borderOnly: false) {
   // sass-lint:disable-block indentation, empty-args
-  background-color: tintOrShade($euiColorEmptyShade, 0%, 40%);
+  background-color: tintOrShade($wuiColorEmptyShade, 0%, 40%);
   background-image: wuiFormControlGradient();
   background-size: 100% 100%; // 1
 
@@ -287,7 +287,7 @@
 
 // Custom styles and states for checkboxes and radios
 
-@mixin wuiCustomControl($type: null, $size: $euiSize) {
+@mixin wuiCustomControl($type: null, $size: $wuiSize) {
   @include wuiSlightShadow;
 
   @if $size {
@@ -296,7 +296,7 @@
   }
 
   border: 1px solid $wuiFormCustomControlBorderColor;
-  background: $euiColorEmptyShade no-repeat center;
+  background: $wuiColorEmptyShade no-repeat center;
 
   @if $type == 'round' {
     border-radius: $size;
@@ -313,7 +313,7 @@
   background-color: $wuiColorPrimary;
 
   @if $type != null {
-    @include wuiIconBackground($type, $euiColorEmptyShade);
+    @include wuiIconBackground($type, $wuiColorEmptyShade);
   }
 }
 

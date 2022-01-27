@@ -2,7 +2,7 @@
   display: flex;
   flex-grow: 1;
   align-items: center;
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   white-space: nowrap;
 
   &.wuiSuggestItem-isClickable {
@@ -40,11 +40,11 @@
     position: relative;
     flex-shrink: 0;
     flex-basis: auto;
-    width: $euiSizeXL;
-    height: $euiSizeXL;
+    width: $wuiSizeXL;
+    height: $wuiSizeXL;
     text-align: center;
     overflow: hidden;
-    padding: $euiSizeXS;
+    padding: $wuiSizeXS;
     justify-content: center;
     align-items: center;
   }
@@ -55,8 +55,8 @@
     font-family: $wuiCodeFontFamily;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: $euiSizeXS $euiSizeS;
-    color: $euiTextColor;
+    padding: $wuiSizeXS $wuiSizeS;
+    color: $wuiTextColor;
 
     &.wuiSuggestItem__labelDisplay--expand {
       flex-basis: auto;
@@ -66,14 +66,14 @@
 
   .wuiSuggestItem__description,
   .wuiSuggestItem__label {
-    @include euiTextTruncate;
+    @include wuiTextTruncate;
     display: block;
   }
 
   .wuiSuggestItem__description {
-    color: $euiColorDarkShade;
+    color: $wuiColorDarkShade;
     flex-basis: auto;
-    padding-top: $euiSizeXS * .5;
+    padding-top: $wuiSizeXS * .5;
 
     &:empty {
       flex-grow: 0;

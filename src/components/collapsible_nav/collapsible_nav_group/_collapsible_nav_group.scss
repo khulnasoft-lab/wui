@@ -7,7 +7,7 @@
   .wuiAccordion__triggerWrapper {
     // Add padding to the trigger wrapper in case an `extraAction` is passed
     // that doesn't get wrapped in the `__heading`
-    padding: $euiSize;
+    padding: $wuiSize;
   }
 }
 
@@ -17,7 +17,7 @@
 
 .wuiCollapsibleNavGroup--dark {
   background-color: $wuiCollapsibleNavGroupDarkBackgroundColor;
-  color: $euiColorGhost;
+  color: $wuiColorGhost;
 
   // Forcing better contrast of focus state on WuiAccordion toggle icon
   .wuiCollapsibleNavGroup__heading:focus .wuiAccordion__iconWrapper {
@@ -36,12 +36,12 @@
 
   // If the heading is not in an accordion, it needs the padding
   &:not(.wuiAccordion__button) {
-    padding: $euiSize;
+    padding: $wuiSize;
   }
 }
 
 .wuiCollapsibleNavGroup__children {
-  padding: $euiSizeS;
+  padding: $wuiSizeS;
 }
 
 .wuiCollapsibleNavGroup--withHeading .wuiCollapsibleNavGroup__children {

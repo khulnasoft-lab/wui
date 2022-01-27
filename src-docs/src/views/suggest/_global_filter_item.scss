@@ -1,7 +1,7 @@
 .globalFilterItem {
-  line-height: $euiSizeL + $euiSizeXS;
+  line-height: $wuiSizeL + $wuiSizeXS;
   border: none;
-  color: $euiTextColor;
+  color: $wuiTextColor;
 
   &:not(.globalFilterItem-isDisabled) {
     @include wuiFormControlDefaultShadow;
@@ -24,7 +24,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: $euiSizeXS;
+    width: $wuiSizeXS;
     background-color: $wuiColorSuccess;
     border-top-left-radius: $wuiBorderRadius / 2;
     border-bottom-left-radius: $wuiBorderRadius / 2;

@@ -3,7 +3,7 @@
 
 @mixin wuiRangeTrackSize {
   height: $wuiRangeTrackHeight;
-  transition: all $euiAnimSpeedNormal ease-in;
+  transition: all $wuiAnimSpeedNormal ease-in;
   width: $wuiRangeTrackWidth;
 }
 

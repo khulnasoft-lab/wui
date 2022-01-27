@@ -5,7 +5,7 @@
   border: $wuiBorderThin;
   border-color: $wuiColorLightShade;
   border-bottom: none;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
 
   &__buttons {
     display: flex;
@@ -14,16 +14,16 @@
     align-items: center;
 
     > * {
-      margin-right: $euiSizeXS;
+      margin-right: $wuiSizeXS;
     }
   }
 
   &__divider {
     content: '';
-    height: $euiSizeL;
+    height: $wuiSizeL;
     display: block;
-    margin-left: $euiSizeXS;
-    padding-right: $euiSizeXS;
+    margin-left: $wuiSizeXS;
+    padding-right: $wuiSizeXS;
     border-left: 1px solid $wuiColorLightShade;
   }
 }

@@ -5,14 +5,14 @@
   // Transform the whole thing so that the button doesn't
   // steal pointer events from input
   &:not(.wuiButtonToggle--isDisabled) {
-    transition: transform $euiAnimSpeedNormal $wuiAnimSlightBounce;
+    transition: transform $wuiAnimSpeedNormal $wuiAnimSlightBounce;
 
     &:hover {
       transform: translateY(-1px);
     }
 
     &:focus {
-      animation: wuiButtonActive $euiAnimSpeedNormal $wuiAnimSlightBounce;
+      animation: wuiButtonActive $wuiAnimSpeedNormal $wuiAnimSlightBounce;
     }
 
     &:active {
@@ -30,7 +30,7 @@
     min-width: 0;
 
     .wuiButton__content {
-      padding: 0 $euiSizeS;
+      padding: 0 $wuiSizeS;
     }
 
     .wuiButton__text:empty {
@@ -51,8 +51,8 @@ $wuiButtonToggleTypes: (
   secondary: $wuiColorSecondary,
   warning: $wuiColorWarning,
   danger: $wuiColorDanger,
-  ghost: $euiColorGhost, // Ghost is special, and does not care about theming.
-  text: $euiColorDarkShade, // Reserved for special use cases
+  ghost: $wuiColorGhost, // Ghost is special, and does not care about theming.
+  text: $wuiColorDarkShade, // Reserved for special use cases
 );
 
 // Add hover states based on input state

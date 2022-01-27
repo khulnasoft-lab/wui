@@ -4,13 +4,13 @@
 }
 
 @include wuiDataGridRowCell {
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
 
   padding: $wuiDataGridCellPaddingM;
   border-right: $wuiDataGridVerticalBorder;
   border-bottom: $wuiBorderThin;
   flex: 0 0 auto;
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
   position: relative;
   align-items: center;
   display: flex;
@@ -67,7 +67,7 @@
     .wuiDataGridRowCell__content,
     .wuiDataGridRowCell__truncate,
     .wuiDataGridRowCell__expandContent {
-      @include euiTextTruncate;
+      @include wuiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
     }
@@ -108,10 +108,10 @@
 }
 
 .wuiDataGridRowCell__expandButtonIcon {
-  height: $euiSizeM;
-  min-height: $euiSizeM;
+  height: $wuiSizeM;
+  min-height: $wuiSizeM;
   background: $wuiColorPrimary;
-  color: $euiColorGhost;
+  color: $wuiColorGhost;
   border-radius: $wuiBorderRadius / 2;
   padding: 0;
   width: 0;
@@ -165,13 +165,13 @@
 // Font alternates
 @include wuiDataGridStyles(fontSizeSmall) {
   @include wuiDataGridRowCell {
-    @include euiFontSizeXS;
+    @include wuiFontSizeXS;
   }
 }
 
 @include wuiDataGridStyles(fontSizeLarge) {
   @include wuiDataGridRowCell {
-    @include euiFontSize;
+    @include wuiFontSize;
   }
 }
 

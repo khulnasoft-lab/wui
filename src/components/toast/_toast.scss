@@ -5,8 +5,8 @@
   @include wuiBottomShadowLarge($adjustBorders: true);
 
   position: relative;
-  padding: $euiSize;
-  background-color: $euiColorEmptyShade;
+  padding: $wuiSize;
+  background-color: $wuiColorEmptyShade;
   width: 100%;
 
   &:hover .wuiToast__closeButton,
@@ -20,8 +20,8 @@
   */
 .wuiToast__closeButton {
   position: absolute;
-  top: $euiSize;
-  right: $euiSize;
+  top: $wuiSize;
+  right: $wuiSize;
   line-height: 0; /* 1 */
   appearance: none;
   opacity: 0;
@@ -38,7 +38,7 @@
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
     opacity: 1;
 
     svg {
@@ -49,10 +49,10 @@
 
 // Modifier naming and colors.
 $wuiToastTypes: (
-  primary: makeGraphicContrastColor($wuiColorPrimary, $euiColorEmptyShade),
-  success: makeGraphicContrastColor($wuiColorSecondary, $euiColorEmptyShade),
-  warning: makeGraphicContrastColor($wuiColorWarning, $euiColorEmptyShade),
-  danger: makeGraphicContrastColor($wuiColorDanger, $euiColorEmptyShade),
+  primary: makeGraphicContrastColor($wuiColorPrimary, $wuiColorEmptyShade),
+  success: makeGraphicContrastColor($wuiColorSecondary, $wuiColorEmptyShade),
+  warning: makeGraphicContrastColor($wuiColorWarning, $wuiColorEmptyShade),
+  danger: makeGraphicContrastColor($wuiColorDanger, $wuiColorEmptyShade),
 );
 
 // Create button modifiers based upon the map.
@@ -68,12 +68,12 @@ $wuiToastTypes: (
  * 3. Account for close button.
  */
 .wuiToastHeader {
-  padding-right: $euiSizeL; /* 3 */
+  padding-right: $wuiSizeL; /* 3 */
   display: flex;
   align-items: baseline; /* 1 */
 
   > * + * {
-    margin-left: $euiSizeS; /* 2 */
+    margin-left: $wuiSizeS; /* 2 */
   }
 }
 
@@ -93,7 +93,7 @@ $wuiToastTypes: (
 }
 
 .wuiToastHeader--withBody {
-  margin-bottom: $euiSizeS;
+  margin-bottom: $wuiSizeS;
 }
 
 /**

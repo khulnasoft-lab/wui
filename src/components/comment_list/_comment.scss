@@ -1,8 +1,8 @@
 .wuiComment {
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
   display: flex;
-  padding-bottom: $euiSize;
-  min-height: $euiSize * 3.5;
+  padding-bottom: $wuiSize;
+  min-height: $wuiSize * 3.5;
 
   .wuiCommentEvent {
     flex-grow: 1;
@@ -11,16 +11,16 @@
   .wuiCommentTimeline {
     position: relative;
     flex-grow: 0;
-    margin-right: $euiSize;
+    margin-right: $wuiSize;
 
     &::before {
       content: '';
       position: absolute;
-      left: $euiSizeXXL / 2;
-      top: $euiSizeL;
-      width: $euiSizeXS / 2;
+      left: $wuiSizeXXL / 2;
+      top: $wuiSizeL;
+      width: $wuiSizeXS / 2;
       background-color: $wuiColorLightShade;
-      height: calc(100% + #{$euiSizeL});
+      height: calc(100% + #{$wuiSizeL});
     }
   }
 }

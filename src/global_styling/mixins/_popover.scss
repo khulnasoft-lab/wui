@@ -1,6 +1,6 @@
 @mixin wuiPopoverTitle {
   @include wuiTitle('xxs');
-  padding: $euiSizeM;
+  padding: $wuiSizeM;
   text-transform: uppercase;
   border-bottom: $wuiBorderThin;
 
@@ -11,8 +11,8 @@
 }
 
 @mixin wuiPopoverFooter {
-  @include euiFontSizeS;
-  padding: $euiSizeM;
+  @include wuiFontSizeS;
+  padding: $wuiSizeM;
   border-top: $wuiBorderThin;
 
   // Subtract 1px from the border radius since it's inside another container that also has the border radius

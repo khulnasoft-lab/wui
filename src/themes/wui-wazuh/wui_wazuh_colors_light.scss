@@ -12,11 +12,11 @@ $wuiColorWarning: #FF7A2F;
 $wuiColorDanger: #BD271E;
 
 // Grays
-$euiColorEmptyShade: #FFF;
+$wuiColorEmptyShade: #FFF;
 $wuiColorLightestShade: #EBF2FB;
 $wuiColorLightShade: #B7C6D7;
 $wuiColorMediumShade: #657C97;
-$euiColorDarkShade: #545F73;
+$wuiColorDarkShade: #545F73;
 $wuiColorDarkestShade: #292929;
 $wuiColorFullShade: #000;
 
@@ -25,10 +25,10 @@ $wuiPageBackgroundColor: tint($wuiColorLightestShade, 50%);
 $wuiColorHighlight: tint($wuiColorWarning, 90%);
 
 // Variations from core
-$euiTextColor: $wuiColorDarkestShade;
-$wuiTitleColor: $euiTextColor;
+$wuiTextColor: $wuiColorDarkestShade;
+$wuiTitleColor: $wuiTextColor;
 $wuiTextSubduedColor: makeHighContrastColor($wuiColorMediumShade);
-$wuiColorDisabled: shade($euiTextColor, 70%);
+$wuiColorDisabled: shade($wuiTextColor, 70%);
 
 $wuiColorPrimaryText: makeHighContrastColor($wuiColorPrimary);
 $wuiColorSecondaryText: makeHighContrastColor($wuiColorSecondary);

@@ -1,7 +1,7 @@
 @include wuiPanel($selector: '.wuiCheckableCard');
 
 .wuiCheckableCard {
-  transition: border-color $euiAnimSpeedNormal ease-in;
+  transition: border-color $wuiAnimSpeedNormal ease-in;
   overflow: hidden; // Hides background color inside panel rounded corners
 
   &:not(.wuiCheckableCard-isDisabled) {
@@ -22,11 +22,11 @@
 
 .wuiCheckableCard__control {
   display: flex;
-  flex: 0 0 $euiSizeXXL;
+  flex: 0 0 $wuiSizeXXL;
   justify-content: center;
   align-items: center;
   background-color: map-get($wuiCardSelectButtonBackgrounds, 'text');
-  transition: background-color $euiAnimSpeedNormal ease-in;
+  transition: background-color $wuiAnimSpeedNormal ease-in;
 
   .wuiCheckableCard-isChecked & {
     background-color: map-get($wuiCardSelectButtonBackgrounds, 'primary');
@@ -35,9 +35,9 @@
 
 .wuiCheckableCard__label {
   flex-grow: 1;
-  font-size: $euiFontSize;
-  line-height: $euiSizeL;
-  padding: $euiSizeS $euiSizeS $euiSizeS $euiSize;
+  font-size: $wuiFontSize;
+  line-height: $wuiSizeL;
+  padding: $wuiSizeS $wuiSizeS $wuiSizeS $wuiSize;
   cursor: pointer;
 }
 
@@ -47,5 +47,5 @@
 }
 
 .wuiCheckableCard__children {
-  padding:  0 $euiSizeS $euiSizeS $euiSize;
+  padding:  0 $wuiSizeS $wuiSizeS $wuiSize;
 }

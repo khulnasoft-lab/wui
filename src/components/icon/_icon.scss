@@ -7,13 +7,13 @@
 
   &:focus {
     opacity: 1; // We often hide icons on hover. Make sure they appear on focus.
-    background: $euiFocusBackgroundColor;
+    background: $wuiFocusBackgroundColor;
   }
 }
 
 // App icons are two-toned so get an extra class. This provides the base color.
 .wuiIcon--app {
-  fill: $euiTextColor;
+  fill: $wuiTextColor;
 
   // This provides the default secondary color
   .wuiIcon__fillSecondary {
@@ -28,7 +28,7 @@
 }
 
 .wuiIcon-isLoaded {
-  animation: wuiIconLoading $euiAnimSpeedNormal ease-in 0s 1 forwards;
+  animation: wuiIconLoading $wuiAnimSpeedNormal ease-in 0s 1 forwards;
 }
 
 // COLORS

@@ -1,10 +1,10 @@
 @import '../../../src/global_styling/mixins/helpers';
 
 $guideSideNavWidth: 240px;
-$guideZLevelHighest: $euiZLevel9 + 1000;
+$guideZLevelHighest: $wuiZLevel9 + 1000;
 
 .guideBody {
-  background: linear-gradient(90deg, $wuiPageBackgroundColor 50%, $euiColorEmptyShade 50%);
+  background: linear-gradient(90deg, $wuiPageBackgroundColor 50%, $wuiColorEmptyShade 50%);
 
   &--overflowHidden {
     overflow: hidden;
@@ -45,19 +45,19 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
   .guideSideNav__identity {
     border-bottom: $wuiBorderThin;
-    padding: $euiSize;
+    padding: $wuiSize;
   }
 
   .guideSideNav__theme {
-    font-size: $euiFontSizeS;
-    color: $euiColorDarkShade;
+    font-size: $wuiFontSizeS;
+    color: $wuiColorDarkShade;
   }
 
   .guideSideNav__content {
     @include wuiScrollBar;
 
     width: $guideSideNavWidth;
-    padding: $euiSize;
+    padding: $wuiSize;
     position: absolute;
     bottom: 0;
     top: 132px;
@@ -76,8 +76,8 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
   }
 
   .guideSideNav__newBadge {
-    margin-left: $euiSizeXS;
-    margin-right: $euiSizeXS;
+    margin-left: $wuiSizeXS;
+    margin-right: $wuiSizeXS;
   }
 
   // Shift the margin on the badge when selected and the dropdown arrow no longer shows
@@ -87,14 +87,14 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 }
 
 .guideSideNav__item--inSearch {
-  color: $euiColorDarkShade;
+  color: $wuiColorDarkShade;
 }
 
 .guidePageContent {
   flex: 1 1 auto;
-  padding: $euiSize $euiSizeXL;
+  padding: $wuiSize $wuiSizeXL;
   min-height: 100vh;
-  background-color: $euiColorEmptyShade;
+  background-color: $wuiColorEmptyShade;
   border-left: $wuiBorderThin;
   max-width: 1000px;
   margin-left: 240px;
@@ -132,34 +132,34 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
 // sass-lint:disable no-important
 .guideDemo__textLines {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($wuiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 8px !important;
   background-position-y: 2px;
 }
 
 // sass-lint:disable no-important
 .guideDemo__textLines--s {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($wuiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 7px !important;
   background-position-y: -2px;
 }
 
 .guideDemo__color {
-  padding: $euiSizeS;
-  color: $euiColorEmptyShade;
-  font-size: $euiFontSizeS;
-  margin-top: $euiSizeS;
+  padding: $wuiSizeS;
+  color: $wuiColorEmptyShade;
+  font-size: $wuiFontSizeS;
+  margin-top: $wuiSizeS;
   line-height: 1.5;
   height: 64px;
 
   .guideDemo__colorHex {
-    font-size: $euiFontSize;
+    font-size: $wuiFontSize;
   }
 }
 
 
 .guideDemo__size {
-  background: $euiTextColor;
+  background: $wuiTextColor;
   display: inline-block;
 }
 
@@ -168,11 +168,11 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 }
 
 .guideDemo__sizeGrid {
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
 }
 
 .guideDemo__ghostBackground {
-  @if (lightness($euiTextColor) < 50) {
+  @if (lightness($wuiTextColor) < 50) {
     background: $wuiColorDarkestShade;
   }
 }
@@ -182,7 +182,7 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
   svg,
   img {
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
   }
 }
 
@@ -203,25 +203,25 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 }
 
 .guideOptionsPopover {
-  width: $euiSize * 16;
+  width: $wuiSize * 16;
 }
 
 .guideCharts__customLegend {
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   position: absolute;
   width: 93px;
   right: 0;
   bottom: 0;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
 }
 
 .guideCharts__customLegendLine {
   display: inline-block;
-  width: $euiSize;
-  height: $euiSizeM / 2;
+  width: $wuiSize;
+  height: $wuiSizeM / 2;
   background-color: currentColor;
   vertical-align: middle;
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
 }
 
 .guideCharts__customLegendLine--thin {
@@ -246,7 +246,7 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
 .wuiTreeView__nodeInnerExample {
   color: $wuiColorDanger;
-  font-weight: $euiFontWeightBold;
+  font-weight: $wuiFontWeightBold;
 }
 
 .wuiSelectableTemplateSitewide__optionMeta--PINK {
@@ -293,7 +293,7 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
     .guideSideNav__mobileToggle {
       background: $wuiColorPrimary;
-      color: $euiColorEmptyShade !important;
+      color: $wuiColorEmptyShade !important;
     }
   }
 

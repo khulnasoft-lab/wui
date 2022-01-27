@@ -4,11 +4,11 @@
 }
 
 .wuiDatePopoverContent__padded {
-  padding: $euiSizeS;
+  padding: $wuiSizeS;
 }
 
 .wuiDatePopoverContent__padded--large {
-  padding: $euiSize;
+  padding: $wuiSize;
 }
 
 @include wuiBreakpoint('xs', 's') {

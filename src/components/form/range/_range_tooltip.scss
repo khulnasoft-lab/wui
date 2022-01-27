@@ -13,21 +13,21 @@
 .wuiRangeTooltip__value {
   // Indentation for legibility in transition
   // sass-lint:disable-block indentation
-  @include euiFontSizeS;
+  @include wuiFontSizeS;
   border: 1px solid $wuiTooltipBackgroundColor;
   position: absolute;
   border-radius: $wuiBorderRadius;
-  padding: ($euiSizeXS / 2) $euiSizeS;
+  padding: ($wuiSizeXS / 2) $wuiSizeS;
   background-color: $wuiTooltipBackgroundColor;
-  color: $euiColorGhost;
+  color: $wuiColorGhost;
   max-width: 256px;
   top: 50%;
   transition:
-    box-shadow $euiAnimSpeedNormal $wuiAnimSlightResistance,
-    transform $euiAnimSpeedNormal $wuiAnimSlightResistance;
+    box-shadow $wuiAnimSpeedNormal $wuiAnimSlightResistance,
+    transform $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 
   // Custom sizing
-  $arrowSize: $euiSizeM;
+  $arrowSize: $wuiSizeM;
   $arrowMinusSize: (($arrowSize / 2) - 1px) * -1;
 
   &::after,
@@ -49,7 +49,7 @@
 
   // Positions the arrow
   &.wuiRangeTooltip__value--right {
-    margin-left: $euiSizeL;
+    margin-left: $wuiSizeL;
 
     &:before,
     &:after {
@@ -62,7 +62,7 @@
   }
 
   &.wuiRangeTooltip__value--left {
-    margin-right: $euiSizeL;
+    margin-right: $wuiSizeL;
 
     &:before,
     &:after {

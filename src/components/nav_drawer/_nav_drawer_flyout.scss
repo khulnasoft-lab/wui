@@ -2,7 +2,7 @@
   @include wuiScrollBar;
   width: 0;
   height: 100%;
-  padding: $euiSizeM 0;
+  padding: $wuiSizeM 0;
   overflow-y: auto;
   background-color: $wuiNavDrawerBackgroundColor;
   border-left: $wuiBorderThin;
@@ -14,7 +14,7 @@
     visibility: visible;
     opacity: 1;
     width: $wuiNavDrawerWidthExpanded;
-    transition: opacity $wuiAnimSpeedFast $wuiNavDrawerContractingDelay, width $euiAnimSpeedNormal;
+    transition: opacity $wuiAnimSpeedFast $wuiNavDrawerContractingDelay, width $wuiAnimSpeedNormal;
   }
 
   &.wuiNavDrawerFlyout-isCollapsed {
@@ -22,7 +22,7 @@
   }
 
   .wuiNavDrawerFlyout__title {
-    margin: 0 $euiSizeS $euiSizeXS;
+    margin: 0 $wuiSizeS $wuiSizeXS;
   }
 
   .wuiNavDrawerFlyout__listGroup {

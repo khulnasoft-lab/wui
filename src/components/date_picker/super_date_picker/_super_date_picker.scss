@@ -1,7 +1,7 @@
 .wuiSuperDatePicker__flexWrapper {
   // Need to offset 8px because of negative margins added by small size gutter
-  max-width: calc(100% + #{$euiSizeS});
-  width: $wuiSuperDatePickerWidth + $wuiSuperDatePickerButtonWidth + $euiSizeS;
+  max-width: calc(100% + #{$wuiSizeS});
+  width: $wuiSuperDatePickerWidth + $wuiSuperDatePickerButtonWidth + $wuiSizeS;
 }
 
 .wuiSuperDatePicker__flexWrapper--isAutoRefreshOnly {
@@ -34,7 +34,7 @@
 .wuiSuperDatePicker__startPopoverButton {
   // Fixes margin around delimiter
   // Only needed on first popover since basic .wuiFormControlLayout takes care of the last one
-  margin-right: -$euiSizeM;
+  margin-right: -$wuiSizeM;
 }
 
 .wuiSuperDatePicker__prettyFormat {
@@ -54,7 +54,7 @@
 
   &:disabled {
     background-color: $wuiFormBackgroundDisabledColor;
-    color: $euiColorDarkShade;
+    color: $wuiColorDarkShade;
     cursor: not-allowed;
 
     .wuiSuperDatePicker__prettyFormatLink {
@@ -65,7 +65,7 @@
 
 .wuiSuperDatePicker__prettyFormatLink {
   color: $wuiLinkColor;
-  padding-left: $euiSizeXS; // Adds some separation between date text and link
+  padding-left: $wuiSizeXS; // Adds some separation between date text and link
   flex-shrink: 0;
 }
 

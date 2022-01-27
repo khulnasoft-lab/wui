@@ -21,21 +21,21 @@
     height: 100%;
 
     &-hasFooter {
-      margin-bottom: $euiSizeXXL;
+      margin-bottom: $wuiSizeXXL;
     }
 
     .wuiAccordion__button {
-      padding: $euiSizeS;
+      padding: $wuiSizeS;
     }
 
     .wuiListGroupItem__button {
-      padding: $euiSizeM $euiSize;
+      padding: $wuiSizeM $wuiSize;
     }
   }
 
   .wuiNavDrawer__expandButton {
     @include wuiBottomShadowFlat;
-    background-color: $euiColorEmptyShade;
+    background-color: $wuiColorEmptyShade;
     position: fixed;
     bottom: 0;
     width: $wuiNavDrawerWidthCollapsed;
@@ -114,7 +114,7 @@
 
     &.wuiNavDrawer-isExpanded .wuiNavDrawerMenu {
       .wuiListGroupItem__icon {
-        margin-right: $euiSizeM;
+        margin-right: $wuiSizeM;
       }
     }
 

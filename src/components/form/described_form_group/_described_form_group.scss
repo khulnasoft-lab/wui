@@ -2,7 +2,7 @@
   max-width: $wuiFormMaxWidth * 2;
 
   + * {
-    margin-top: $euiSizeL;
+    margin-top: $wuiSizeL;
   }
 
   &.wuiDescribedFormGroup--fullWidth {
@@ -10,7 +10,7 @@
   }
 
   .wuiDescribedFormGroup__description {
-    padding-top: $euiSizeS;
+    padding-top: $wuiSizeS;
   }
 
   .wuiDescribedFormGroup__fields {
@@ -18,12 +18,12 @@
   }
 
   .wuiDescribedFormGroup__fieldPadding {
-    &--xxxsmall {padding-top: ($euiFontSizeXS * 1.5) - $euiFontSizeXS + 2px;}
-    &--xxsmall {padding-top: ($euiFontSizeS * 1.5) - $euiFontSizeXS + 2px;}
-    &--xsmall {padding-top: ($euiFontSize * 1.5) - $euiFontSizeXS + 2px;}
-    &--small {padding-top: ($euiFontSizeL * 1.5) - $euiFontSizeXS + 2px;}
-    &--medium {padding-top: ($euiFontSizeXL * 1.5) - $euiFontSizeXS + 2px;}
-    &--large {padding-top: ($euiFontSizeXXL * 1.5) - $euiFontSizeXS + 2px;}
+    &--xxxsmall {padding-top: ($wuiFontSizeXS * 1.5) - $wuiFontSizeXS + 2px;}
+    &--xxsmall {padding-top: ($wuiFontSizeS * 1.5) - $wuiFontSizeXS + 2px;}
+    &--xsmall {padding-top: ($wuiFontSize * 1.5) - $wuiFontSizeXS + 2px;}
+    &--small {padding-top: ($wuiFontSizeL * 1.5) - $wuiFontSizeXS + 2px;}
+    &--medium {padding-top: ($wuiFontSizeXL * 1.5) - $wuiFontSizeXS + 2px;}
+    &--large {padding-top: ($wuiFontSizeXXL * 1.5) - $wuiFontSizeXS + 2px;}
   }
 
   @include wuiBreakpoint('xs', 's') {

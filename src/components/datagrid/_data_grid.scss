@@ -14,10 +14,10 @@
   right: 0;
   bottom: 0;
   z-index: $wuiZModal;
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
 
   .wuiDataGrid__pagination {
-    padding-bottom: $euiSizeXS;
+    padding-bottom: $wuiSizeXS;
     background: $wuiColorLightestShade;
     border-top: $wuiBorderThin;
   }
@@ -44,11 +44,11 @@
   position: relative;
   z-index: 3; // Needs to sit above the content blow that sits below it
   border: $wuiBorderThin;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
   flex-grow: 0;
 
   > * {
-    margin-left: $euiSizeXS / 2;
+    margin-left: $wuiSizeXS / 2;
   }
 }
 
@@ -69,7 +69,7 @@
 @include wuiDataGridStyles(bordersNone) {
   .wuiDataGrid__controls {
     border: none;
-    background: $euiColorEmptyShade;
+    background: $wuiColorEmptyShade;
   }
 }
 
@@ -78,13 +78,13 @@
     border-right: none;
     border-left: none;
     border-top: none;
-    background: $euiColorEmptyShade;
+    background: $wuiColorEmptyShade;
   }
 }
 
 .wuiDataGrid__pagination {
 
-  padding-top: $euiSizeXS;
+  padding-top: $wuiSizeXS;
   flex-grow: 0;
 }
 
@@ -97,7 +97,7 @@
 .wuiDataGrid__overflow {
   overflow-y: hidden;
   height: 100%;
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
 }
 
 // This is used to remove extra scrollbars on the body when fullscreen is enabled
@@ -108,10 +108,10 @@
 
 
 .wuiDataGrid__controlScroll {
-  @include euiYScrollWithShadows;
+  @include wuiYScrollWithShadows;
   max-height: $wuiDataGridPopoverMaxHeight;
-  padding: $euiSizeS;
-  margin: -$euiSizeS; // Offset against the panel to make the scrollbar flush scrollbars
+  padding: $wuiSizeS;
+  margin: -$wuiSizeS; // Offset against the panel to make the scrollbar flush scrollbars
 }
 
 .wuiDataGrid__focusWrap {
