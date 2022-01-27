@@ -24,8 +24,8 @@ exports[`WuiTabbedContent behavior when selected tab state isn't controlled by t
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -33,7 +33,7 @@ exports[`WuiTabbedContent behavior when selected tab state isn't controlled by t
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
@@ -64,12 +64,12 @@ exports[`WuiTabbedContent behavior when uncontrolled, the selected tab should up
       },
       Object {
         "content": <p>
-          updated Kibana content
+          updated Wazuh content
         </p>,
-        "data-test-subj": "kibanaTab",
-        "id": "kibana",
+        "data-test-subj": "wazuhTab",
+        "id": "wazuh",
         "name": <strong>
-          Kibana
+          Wazuh
         </strong>,
       },
     ]
@@ -110,19 +110,19 @@ exports[`WuiTabbedContent behavior when uncontrolled, the selected tab should up
         </WuiTab>
         <WuiTab
           aria-controls="42"
-          data-test-subj="kibanaTab"
-          id="kibana"
+          data-test-subj="wazuhTab"
+          id="wazuh"
           isSelected={true}
-          key="kibana"
+          key="wazuh"
           onClick={[Function]}
         >
           <button
             aria-controls="42"
             aria-selected={true}
             className="wuiTab wuiTab-isSelected"
-            data-test-subj="kibanaTab"
+            data-test-subj="wazuhTab"
             disabled={false}
-            id="kibana"
+            id="wazuh"
             onClick={[Function]}
             role="tab"
             type="button"
@@ -131,7 +131,7 @@ exports[`WuiTabbedContent behavior when uncontrolled, the selected tab should up
               className="wuiTab__content"
             >
               <strong>
-                Kibana
+                Wazuh
               </strong>
             </span>
           </button>
@@ -139,12 +139,12 @@ exports[`WuiTabbedContent behavior when uncontrolled, the selected tab should up
       </div>
     </WuiTabs>
     <div
-      aria-labelledby="kibana"
+      aria-labelledby="wazuh"
       id="42"
       role="tabpanel"
     >
       <p>
-        updated Kibana content
+        updated Wazuh content
       </p>
     </div>
   </div>
@@ -179,8 +179,8 @@ exports[`WuiTabbedContent is rendered with required props and tabs 1`] = `
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -188,7 +188,7 @@ exports[`WuiTabbedContent is rendered with required props and tabs 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
@@ -229,8 +229,8 @@ exports[`WuiTabbedContent props autoFocus initial is rendered 1`] = `
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -238,7 +238,7 @@ exports[`WuiTabbedContent props autoFocus initial is rendered 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
@@ -279,8 +279,8 @@ exports[`WuiTabbedContent props autoFocus selected is rendered 1`] = `
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -288,7 +288,7 @@ exports[`WuiTabbedContent props autoFocus selected is rendered 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
@@ -329,8 +329,8 @@ exports[`WuiTabbedContent props display can be condensed 1`] = `
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -338,7 +338,7 @@ exports[`WuiTabbedContent props display can be condensed 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
@@ -379,8 +379,8 @@ exports[`WuiTabbedContent props initialSelectedTab renders a selected tab 1`] = 
       aria-controls="42"
       aria-selected="true"
       class="wuiTab wuiTab-isSelected"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -388,18 +388,18 @@ exports[`WuiTabbedContent props initialSelectedTab renders a selected tab 1`] = 
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
   </div>
   <div
-    aria-labelledby="kibana"
+    aria-labelledby="wazuh"
     id="42"
     role="tabpanel"
   >
     <p>
-      Kibana content
+      Wazuh content
     </p>
   </div>
 </div>
@@ -429,8 +429,8 @@ exports[`WuiTabbedContent props selectedTab renders a selected tab 1`] = `
       aria-controls="42"
       aria-selected="true"
       class="wuiTab wuiTab-isSelected"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -438,18 +438,18 @@ exports[`WuiTabbedContent props selectedTab renders a selected tab 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>
   </div>
   <div
-    aria-labelledby="kibana"
+    aria-labelledby="wazuh"
     id="42"
     role="tabpanel"
   >
     <p>
-      Kibana content
+      Wazuh content
     </p>
   </div>
 </div>
@@ -479,8 +479,8 @@ exports[`WuiTabbedContent props size can be small 1`] = `
       aria-controls="42"
       aria-selected="false"
       class="wuiTab"
-      data-test-subj="kibanaTab"
-      id="kibana"
+      data-test-subj="wazuhTab"
+      id="wazuh"
       role="tab"
       type="button"
     >
@@ -488,7 +488,7 @@ exports[`WuiTabbedContent props size can be small 1`] = `
         class="wuiTab__content"
       >
         <strong>
-          Kibana
+          Wazuh
         </strong>
       </span>
     </button>

@@ -10,7 +10,7 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Kibana
+    Wazuh
   </WuiFilterButton>,
   <WuiFilterButton
     aria-pressed={false}
@@ -35,7 +35,7 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    -Kibana
+    -Wazuh
   </WuiFilterButton>,
   <WuiFilterButton
     aria-pressed={false}
@@ -60,7 +60,7 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Not Kibana
+    Not Wazuh
   </WuiFilterButton>,
   <WuiFilterButton
     aria-pressed={false}
@@ -85,7 +85,7 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Kibana
+    Wazuh
   </WuiFilterButton>,
   <WuiFilterButton
     aria-pressed={false}

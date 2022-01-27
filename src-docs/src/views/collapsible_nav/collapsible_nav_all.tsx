@@ -39,14 +39,12 @@ const TopLinks: WuiPinnableListGroupItemProps[] = [
     pinnable: false,
   },
 ];
-const WazuhLinks: WuiPinnableListGroupItemProps[] = WazuhNavLinks.map(
-  link => {
-    return {
-      ...link,
-      href: '#/navigation/collapsible-nav',
-    };
-  }
-);
+const WazuhLinks: WuiPinnableListGroupItemProps[] = WazuhNavLinks.map(link => {
+  return {
+    ...link,
+    href: '#/navigation/collapsible-nav',
+  };
+});
 const LearnLinks: WuiPinnableListGroupItemProps[] = [
   { label: 'Docs', href: '#/navigation/collapsible-nav' },
   { label: 'Blogs', href: '#/navigation/collapsible-nav' },

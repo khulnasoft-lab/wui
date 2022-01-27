@@ -71,11 +71,9 @@ const wuiTheme = isDarkTheme ? WUI_CHARTS_THEME_DARK.theme : WUI_CHARTS_THEME_LI
           <WuiCallOut title="Wazuh engineers" iconType="logoWazuh">
             <p>
               WUI provides a plugin utility for ease of pulling in the correct
-              theme object depending on the current Wazuh theme. Learn more
-              from this{' '}
-              <WuiLink
-                href="https://wazuh.com"
-                target="_blank">
+              theme object depending on the current Wazuh theme. Learn more from
+              this{' '}
+              <WuiLink href="https://wazuh.com" target="_blank">
                 readme
               </WuiLink>
               .

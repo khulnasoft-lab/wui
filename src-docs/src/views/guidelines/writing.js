@@ -158,9 +158,7 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Do. Writing in active voice puts the subject first.">
-        <GuideRuleWriting>
-          The Wazuh Query DSL builds filters.
-        </GuideRuleWriting>
+        <GuideRuleWriting>The Wazuh Query DSL builds filters.</GuideRuleWriting>
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
@@ -357,9 +355,7 @@ export default () => (
         <WuiTitle>
           <span>Index management</span>
         </WuiTitle>
-        <WuiText>
-          Update your Wazuh indices individually or in bulk
-        </WuiText>
+        <WuiText>Update your Wazuh indices individually or in bulk</WuiText>
       </GuideRuleExample>
     </GuideRule>
 
@@ -398,9 +394,7 @@ export default () => (
       <GuideRuleExample
         type="dont"
         text="Don't. Use exclamation points in error messages.">
-        <GuideRuleWriting>
-          Couldn&apos;t find any Wazuh data!
-        </GuideRuleWriting>
+        <GuideRuleWriting>Couldn&apos;t find any Wazuh data!</GuideRuleWriting>
       </GuideRuleExample>
     </GuideRule>
 
@@ -695,8 +689,7 @@ export default () => (
         type="do"
         text="Do. Make it fun only if it fits the experience.">
         <GuideRuleWriting>
-          Odd, exciting, and scary trends and anomalies in your Wazuh
-          data
+          Odd, exciting, and scary trends and anomalies in your Wazuh data
         </GuideRuleWriting>
       </GuideRuleExample>
       <GuideRuleExample

@@ -7,7 +7,7 @@ exports[`WuiCheckboxGroup (mocked checkbox) disabled is rendered 1`] = `
     class="wuiCheckboxGroup__item"
     disabled=""
     id="1"
-    label="kibana"
+    label="wazuh"
   />
   <wui_checkbox
     class="wuiCheckboxGroup__item"
@@ -24,7 +24,7 @@ exports[`WuiCheckboxGroup (mocked checkbox) idToSelectedMap is rendered 1`] = `
     checked=""
     class="wuiCheckboxGroup__item"
     id="1"
-    label="kibana"
+    label="wazuh"
   />
   <wui_checkbox
     class="wuiCheckboxGroup__item"
@@ -41,7 +41,7 @@ exports[`WuiCheckboxGroup (mocked checkbox) individual disabled is rendered 1`] 
     class="wuiCheckboxGroup__item"
     disabled=""
     id="1"
-    label="kibana"
+    label="wazuh"
   />
   <wui_checkbox
     class="wuiCheckboxGroup__item"
@@ -74,7 +74,7 @@ exports[`WuiCheckboxGroup (mocked checkbox) options are rendered 1`] = `
   <wui_checkbox
     class="wuiCheckboxGroup__item"
     id="1"
-    label="kibana"
+    label="wazuh"
   />
   <wui_checkbox
     class="wuiCheckboxGroup__item"
