@@ -3329,32 +3329,6 @@ exports[`WuiIcon props type lockOpen is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoAPM is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M10 32H7.238C3.793 32 1 28.865 1 24.998V15h9v17z"
-    fill="#F04E98"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M10 32h9V8h-9z"
-  />
-  <path
-    d="M31 32h-9V0l1.973.024C27.866.072 31 3.731 31 8.228V32z"
-    fill="#07C"
-  />
-</svg>
-`;
-
 exports[`WuiIcon props type logoAWS is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -3661,32 +3635,6 @@ exports[`WuiIcon props type logoApache is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoAppSearch is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M19.5.938a7.002 7.002 0 00-7 0l-8 4.619A7 7 0 001 11.62v9.237a7 7 0 003.5 6.062l7.5 4.33V17.979a7 7 0 013.5-6.062L27 5.276 19.5.939z"
-    fill="#0080D5"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M19.5.938a7.002 7.002 0 00-7 0L5 5.277l11 6.35 11-6.35-7.5-4.34z"
-  />
-  <path
-    d="M28.435 7.76l-10.026 5.79a6.994 6.994 0 011.59 4.428v13.27l7.5-4.33a7 7 0 003.5-6.061v-9.238a6.992 6.992 0 00-1.586-4.422l-.978.564z"
-    fill="#FA744E"
-  />
-</svg>
-`;
-
 exports[`WuiIcon props type logoAzure is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -3722,63 +3670,6 @@ exports[`WuiIcon props type logoAzureMono is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoBeats is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M15 20H4V0h11c5.522 0 10 4.478 10 10s-4.478 10-10 10"
-    fill="#0080D5"
-  />
-  <path
-    d="M26.702 15.624C24.6 19.979 20.152 23 15 23H4v9h15c5.522 0 10-4.478 10-10a9.952 9.952 0 00-2.298-6.376"
-    fill="#00C2B3"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M24.338 13.554A9.942 9.942 0 0019 12H4v8h11c4.27 0 7.903-2.68 9.338-6.446"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoBusinessAnalytics is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g
-    fill="none"
-    fill-rule="evenodd"
-  >
-    <path
-      d="M0 22c0 5.522 4.478 10 10 10V12C4.478 12 0 16.478 0 22"
-      fill="#00BFB3"
-    />
-    <path
-      class="wuiIcon__fillNegative"
-      d="M10 12v10h10c0-5.522-4.478-10-10-10"
-    />
-    <path
-      d="M10 0v9c7.168 0 13 5.832 13 13h9C32 9.85 22.15 0 10 0"
-      fill="#F04E98"
-    />
-  </g>
-</svg>
-`;
-
 exports[`WuiIcon props type logoCeph is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -3794,89 +3685,6 @@ exports[`WuiIcon props type logoCeph is rendered 1`] = `
   <path
     d="M25.471 27.56c-1.06-.567-1.676-1.206-1.811-1.902-.13-.673.17-1.421.918-2.288a11.29 11.29 0 002.773-7.42A11.324 11.324 0 0016.042 4.64l-.05.001h-.05A11.324 11.324 0 004.632 15.949a11.291 11.291 0 002.774 7.422c.753.872 1.047 1.591.928 2.257-.13.694-.74 1.342-1.817 1.93-1.657-1.375-3.116-3.212-4.01-5.056a14.943 14.943 0 01-1.117-3.139A14.997 14.997 0 011 15.95a14.901 14.901 0 014.378-10.57 14.924 14.924 0 014.752-3.204C11.97 1.395 13.95.996 15.948 1h.101a14.888 14.888 0 0110.57 4.378 14.912 14.912 0 013.982 13.985 14.871 14.871 0 01-1.118 3.14c-.9 1.843-2.358 3.681-4.01 5.057h-.003zm-5.523 2.798c-.173-.11-.767-.55-1.345-1.353a6.122 6.122 0 01-1.174-3.738 8.26 8.26 0 01.611-2.964 8.42 8.42 0 011.627-2.54l.004-.008.154-.178c.263-.305.536-.622.753-.99.268-.454.462-.931.578-1.42.178-.758.188-1.547.029-2.31a5.3 5.3 0 00-.858-1.956 5.264 5.264 0 00-4.29-2.217h-.108a5.25 5.25 0 00-4.29 2.216 5.31 5.31 0 00-.856 1.956c-.16.763-.15 1.552.03 2.311.115.488.31.965.576 1.419.219.37.49.684.753.99l.155.179.003.007a8.384 8.384 0 011.628 2.54 8.24 8.24 0 01.61 2.964 6.123 6.123 0 01-1.173 3.738c-.58.795-1.174 1.243-1.346 1.352l-.867-.26a15.434 15.434 0 01-2.49-1.098 4.245 4.245 0 002.234-3.736c0-1.034-.403-2.028-1.195-2.95l-.034-.034-.237-.26-.636-.746a8.924 8.924 0 01-1.525-3.26 8.983 8.983 0 01-.05-3.905 8.906 8.906 0 011.46-3.313A8.993 8.993 0 0111.23 8.39a8.937 8.937 0 014.702-1.344h.112c.42 0 .84.029 1.255.088a8.938 8.938 0 013.448 1.256 9.003 9.003 0 012.554 2.404 9.093 9.093 0 011.459 3.313 9.043 9.043 0 01-.05 3.912 8.925 8.925 0 01-1.526 3.26c-.2.265-.409.495-.637.745l-.23.254c-.017.016-.03.027-.04.043-.804.961-1.195 1.927-1.195 2.948a4.25 4.25 0 002.237 3.735c-.795.441-1.63.809-2.491 1.098l-.862.26-.018-.004zm-3.956-11.314a2.957 2.957 0 01-2.952-2.952 2.957 2.957 0 012.952-2.952 2.956 2.956 0 012.95 2.952 2.957 2.957 0 01-2.95 2.952"
     fill="#F05C56"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoCloud is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g
-    fill="none"
-    fill-rule="evenodd"
-  >
-    <path
-      class="wuiIcon__fillNegative"
-      d="M12.37 18.352c.032-.01.066-.014.1-.023A6 6 0 0118 10V0C9.163 0 2 7.164 2 16c0 2.793.72 5.417 1.976 7.702a18.947 18.947 0 018.393-5.349"
-    />
-    <path
-      d="M18 0A15.959 15.959 0 005.717 5.75a16.006 16.006 0 007.541 5.032c.71.22 1.477.135 2.146-.188A5.94 5.94 0 0118 10a5.94 5.94 0 012.596.594c.669.323 1.436.408 2.146.188a16.01 16.01 0 007.541-5.032A15.959 15.959 0 0018 0"
-      fill="#0080D5"
-    />
-    <path
-      d="M22.742 21.218c-.71-.22-1.478-.135-2.146.188A5.947 5.947 0 0118 22a5.94 5.94 0 01-2.596-.594c-.669-.323-1.436-.408-2.146-.188a16.006 16.006 0 00-7.54 5.032A15.959 15.959 0 0018 32c4.936 0 9.348-2.236 12.283-5.75a16.016 16.016 0 00-7.54-5.032"
-      fill="#00BFB3"
-    />
-  </g>
-</svg>
-`;
-
-exports[`WuiIcon props type logoCloudEnterprise is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    class="wuiIcon__fillNegative"
-    d="M18 0v10a6 6 0 00-5.53 8.33c-.034.009-.068.012-.1.023A18.947 18.947 0 003.975 23.7 15.934 15.934 0 012 16C2 7.164 9.163 0 18 0zm0 13a3 3 0 110 6 3 3 0 010-6z"
-  />
-  <path
-    d="M22.742 21.218c-.71-.22-1.478-.135-2.146.188A5.947 5.947 0 0118 22a5.94 5.94 0 01-2.596-.594c-.669-.323-1.436-.408-2.146-.188a16.006 16.006 0 00-7.54 5.032A15.959 15.959 0 0018 32c4.936 0 9.348-2.236 12.283-5.75a16.016 16.016 0 00-7.54-5.032"
-    fill="#00AEFA"
-  />
-  <path
-    d="M18 0A15.959 15.959 0 005.717 5.75a16.006 16.006 0 007.541 5.032c.71.22 1.477.135 2.146-.188A5.94 5.94 0 0118 10a5.94 5.94 0 012.596.594c.669.323 1.436.408 2.146.188a16.01 16.01 0 007.541-5.032A15.959 15.959 0 0018 0"
-    fill="#0080D5"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoCode is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    class="wuiIcon__fillNegative"
-    d="M9.75 12L16 32h10l-3.4-10.88A13 13 0 0010.19 12h-.44z"
-  />
-  <path
-    d="M25.725 11.93A17 17 0 009.5 0H6l3.75 12h.44a13 13 0 0112.41 9.12L26 32h6l-6.275-20.07z"
-    fill="#22A7F3"
-  />
-  <path
-    d="M7.91 16.175L0 32h12.855z"
-    fill="#0377CA"
   />
 </svg>
 `;
@@ -4017,38 +3825,6 @@ exports[`WuiIcon props type logoDropwizard is rendered 1`] = `
       />
     </linearGradient>
   </defs>
-</svg>
-`;
-
-exports[`WuiIcon props type logoEnterpriseSearch is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    clip-rule="evenodd"
-    d="M16 0c-2.918 0-5.645.794-8 2.158 4.777 2.768 8 7.923 8 13.842 0 5.919-3.223 11.074-8 13.842A15.907 15.907 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"
-    fill="#00BFB3"
-    fill-rule="evenodd"
-  />
-  <path
-    clip-rule="evenodd"
-    d="M8 24h2.222A12.996 12.996 0 0013 16c0-2.935-1.012-5.744-2.778-8H8a8 8 0 000 16z"
-    fill="#FEC514"
-    fill-rule="evenodd"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    clip-rule="evenodd"
-    d="M16 8h-2.152A15.877 15.877 0 0116 16c0 2.918-.786 5.647-2.152 8H16a8 8 0 000-16z"
-    fill-rule="evenodd"
-  />
 </svg>
 `;
 
@@ -4780,84 +4556,6 @@ exports[`WuiIcon props type logoKubernetes is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoLogging is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M2 10v13a9 9 0 019 9h13c0-12.15-9.85-22-22-22"
-    fill="#0080D5"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M14 13.565V32h10c0-7.722-3.981-14.51-10-18.436"
-  />
-  <path
-    d="M14 0v10.226C21.666 14.468 26.869 22.636 26.869 32H30V16c0-8.837-7.163-16-16-16"
-    fill="#00BFB3"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoLogstash is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M19 32h11V20H19z"
-    fill="#3EBEB0"
-  />
-  <path
-    d="M4 0H3v20h13v-8C16 5.373 10.627 0 4 0"
-    fill="#FEC514"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M3 20c0 6.627 5.373 12 12 12h1V20H3z"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoMaps is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M25.5 9.5c0 6.65-9.5 11.425-9.5 11.425S6.5 16.15 6.5 9.5A9.5 9.5 0 0116 0a9.5 9.5 0 019.5 9.5"
-    fill="#22A7F3"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M16 20.925s4.326-2.183 7.141-5.645l-2.505-1.878a7.725 7.725 0 00-9.272 0L8.859 15.28C11.674 18.742 16 20.925 16 20.925"
-  />
-  <path
-    d="M25.53 17.073a21.124 21.124 0 01-2.834 2.916c-2.62 2.235-5.239 3.561-5.349 3.616L16 24.282l-1.348-.677c-.109-.055-2.728-1.381-5.349-3.616a21.182 21.182 0 01-2.834-2.916L0 21.925l11.364 8.523a7.724 7.724 0 009.271 0L32 21.925l-6.47-4.852z"
-    fill="#FA744E"
-  />
-</svg>
-`;
-
 exports[`WuiIcon props type logoMemcached is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -4970,37 +4668,6 @@ exports[`WuiIcon props type logoMemcached is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoMetrics is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g
-    fill="none"
-    fill-rule="evenodd"
-  >
-    <path
-      d="M2 32h28V20l-6.465-6.465a5 5 0 00-7.07 0L2 28v4z"
-      fill="#F04E98"
-    />
-    <path
-      class="wuiIcon__fillNegative"
-      d="M16.465 13.535l-3.536 3.536a9.965 9.965 0 007.07 2.93 9.965 9.965 0 007.072-2.93l-3.536-3.536a5 5 0 00-7.07 0"
-    />
-    <path
-      d="M14.343 11.414A7.951 7.951 0 0120 9.071c2.137 0 4.146.832 5.657 2.343l3.207 3.207A9.955 9.955 0 0030 10.001c0-5.524-4.477-10-10-10-5.522 0-10 4.476-10 10 0 1.667.414 3.237 1.137 4.62l3.206-3.207z"
-      fill="#FEC514"
-    />
-  </g>
-</svg>
-`;
-
 exports[`WuiIcon props type logoMongodb is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -5092,32 +4759,6 @@ exports[`WuiIcon props type logoNginx is rendered 1`] = `
       fill-rule="nonzero"
     />
   </g>
-</svg>
-`;
-
-exports[`WuiIcon props type logoObservability is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M10 32H7.238C3.793 32 1 28.865 1 24.998V15h9v17z"
-    fill="#F04E98"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M10 32h9V8h-9z"
-  />
-  <path
-    d="M31 32h-9V0l1.973.024C27.866.072 31 3.731 31 8.228V32z"
-    fill="#07C"
-  />
 </svg>
 `;
 
@@ -5438,63 +5079,6 @@ exports[`WuiIcon props type logoRedis is rendered 1`] = `
 </svg>
 `;
 
-exports[`WuiIcon props type logoSecurity is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M9 7.008V0h20v16.744c0 3.913-6.378 6.477-9.015 7.256V7.008H9z"
-    fill="#FA744E"
-  />
-  <path
-    d="M3 20.073V10h14v22C7.667 27.98 3 24.004 3 20.073z"
-    fill="#1DBAB0"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M9 10h8v14c-2.983-1.14-8-3.756-8-7.043V10z"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoSiteSearch is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g
-    fill="none"
-    fill-rule="evenodd"
-  >
-    <path
-      d="M27.05 10h-7.34l-11 22s15.696-4.96 21.855-16.076C32.037 13.266 30.088 10 27.05 10"
-      fill="#FA744E"
-    />
-    <path
-      d="M21.355 0H7.533L.427 14.211C-.903 16.871 1.032 20 4.004 20h7.351l10-20z"
-      fill="#00BFB3"
-    />
-    <path
-      class="wuiIcon__fillNegative"
-      d="M2.533 10L.428 14.211C-.903 16.871 1.032 20 4.005 20h7.35l5-10H2.533z"
-    />
-  </g>
-</svg>
-`;
-
 exports[`WuiIcon props type logoSketch is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -5667,32 +5251,6 @@ exports[`WuiIcon props type logoWindows is rendered 1`] = `
   <path
     d="M0 4.51l12.977-1.768.006 12.518-12.971.074L0 4.51zm12.97 12.192l.011 12.529-12.97-1.784-.002-10.829 12.962.084zm1.574-14.19L31.751 0v15.1l-17.207.137V2.511zm17.21 14.308l-.003 15.033-17.207-2.429-.024-12.632 17.235.028z"
     fill="#00ADEF"
-  />
-</svg>
-`;
-
-exports[`WuiIcon props type logoWorkplaceSearch is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="wuiIcon wuiIcon--medium wuiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M17.557 5.05c.17-.202.457-.512.86-.93C19.483 3.017 21.828 1 23.801 1H30v30h-6.2c-1.972 0-3.995-1.449-5.383-3.106l-.764-1.052 2.75-3.477c3.462-4.376 3.463-10.332.001-14.707L17.557 5.05z"
-    fill="#FEC514"
-  />
-  <path
-    d="M2 31V1h5.81c1.71 0 3.35.786 4.387 2.1l5.855 7.42c2.598 3.283 2.598 7.698-.002 10.983l-5.855 7.403C11.158 30.217 9.52 31 7.815 31H2z"
-    fill="#F04E98"
-  />
-  <path
-    class="wuiIcon__fillNegative"
-    d="M15.384 24.89L12.15 21.7c-2.868-3.318-2.868-8.22.002-11.322 1.535-1.639 2.611-2.718 3.23-3.238l2.67 3.238c2.637 3.385 2.575 7.987-.062 11.374l-2.607 3.137z"
   />
 </svg>
 `;
