@@ -17,11 +17,11 @@
  * under the License.
  */
 
-declare module 'wazuh-wui' {
+declare module '@wazuh/wui' {
   // @ts-ignore path only exists at build time
-  export * from 'wazuh-wui/src/components/common'; // eslint-disable-line import/no-unresolved
+  export * from '@wazuh/wui/src/components/common'; // eslint-disable-line import/no-unresolved
   // @ts-ignore path only exists at build time
-  export * from 'wazuh-wui/src/components/date_picker/react-datepicker'; // eslint-disable-line import/no-unresolved
+  export * from '@wazuh/wui/src/components/date_picker/react-datepicker'; // eslint-disable-line import/no-unresolved
 }
 
 declare module '*.json' {

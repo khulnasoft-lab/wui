@@ -10,13 +10,13 @@
 To install the Wazuh WUI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
 
 ```
-yarn add wazuh-wui
+yarn add @wazuh/wui
 ```
 
 Note that WUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project.
 
 ```
-yarn add wazuh-wui @elastic/datemath moment prop-types
+yarn add @wazuh/wui @elastic/datemath moment prop-types
 ```
 
 

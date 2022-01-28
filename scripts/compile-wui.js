@@ -131,11 +131,11 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/test/'),
     files: ['index.ts'],
     resolveModuleId({ currentModuleId }) {
-      return `wazuh-wui/lib/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
+      return `@wazuh/wui/lib/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
    		if (currentModuleId === 'index') {
-  			return `wazuh-wui/lib/test/${importedModuleId.replace('./', '')}`;
+  			return `@wazuh/wui/lib/test/${importedModuleId.replace('./', '')}`;
   		}
 			return null;
 	  }
@@ -146,11 +146,11 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/test/'),
     files: ['index.ts'],
     resolveModuleId({ currentModuleId }) {
-      return `wazuh-wui/es/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
+      return `@wazuh/wui/es/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
    		if (currentModuleId === 'index') {
-          return `wazuh-wui/es/test/${importedModuleId.replace('./', '')}`;
+          return `@wazuh/wui/es/test/${importedModuleId.replace('./', '')}`;
   		}
 			return null;
 	  }
@@ -170,11 +170,11 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/themes/charts/'),
     files: ['themes.ts'],
     resolveModuleId() {
-      return 'wazuh-wui/dist/wui_charts_theme';
+      return '@wazuh/wui/dist/wui_charts_theme';
     },
     resolveModuleImport(params) {
    		if (params.importedModuleId === '../../components/common') {
-  			return 'wazuh-wui/src/components/common';
+  			return '@wazuh/wui/src/components/common';
   		}
 			return null;
 	  }
