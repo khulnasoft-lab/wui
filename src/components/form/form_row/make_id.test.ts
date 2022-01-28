@@ -27,7 +27,7 @@ describe('makeId', () => {
       // swallow the deprecation warning
       if (
         args[0] ===
-        'WARNING: makeId is deprecated. Use htmlIdGenerator from @elastic/wui instead.'
+        'WARNING: makeId is deprecated. Use htmlIdGenerator from @wazuh/wui instead.'
       )
         return;
       _consoleLog.apply(console, args);

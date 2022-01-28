@@ -341,7 +341,7 @@ export default {
               minHeight={200}
               text="Don’t. Although it provides all the context, putting the most important bit at the end is hard to find; use: Spaces - Management - Wazuh.">
               <strong className="wui-textCenter wui-displayBlock">
-                Elastic Wazuh - Spaces
+                Wazuh - Spaces
               </strong>
             </GuideRuleExample>
             {/* This spacer is hacks because code blocks can't have multi-line captions */}
@@ -384,7 +384,7 @@ export default {
               keyboard users know where focus is currently at. All browsers ship
               with focus states for interactive elements, and most of the time
               you shouldn’t need to alter these. WUI goes further to customize
-              focus states to match the Elastic brand and provide better visual
+              focus states to match the Wazuh brand and provide better visual
               states, including color contrast.
             </p>
             <h3>Where is the focus state going?</h3>
@@ -513,7 +513,7 @@ export default {
             </p>
             <WuiCodeBlock language="html" paddingSize="s" fontSize="m">
               {`<input type="checkbox" id="subscribe">
-<label for="subscribe">Subscribe to Elastic news</label>`}
+<label for="subscribe">Subscribe to Wazuh news</label>`}
             </WuiCodeBlock>
             <h3>Of note: Repeated calls to action</h3>
             <p>

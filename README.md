@@ -59,4 +59,4 @@ The Wazuh WUI Framework is licensed under the [Apache License 2.0][license].
 
 ## Credits and Thanks
 
-This library was forked from the [Elastic eui](https://github.com/elastic/eui) and our changes were made from the [v29.3.2](https://github.com/elastic/eui/tree/v29.3.2) tag. The original license is [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Thanks to the original authors for their work.
+This library was forked from the [@elastic/eui](https://github.com/elastic/eui) and our changes were made from the [v29.3.2](https://github.com/elastic/eui/tree/v29.3.2) tag. The original license is [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Thanks so much to the original authors for their work.

@@ -13,17 +13,17 @@ The complexity of the component should determine how many examples you need to c
 Here are our formatting guidelines for writing documentation:
 
 - Use sentence case, always, for page and section titles. Example: `This component does something`
-- When referencing the component name, wrap it in `<strong>` tags. Example: `<strong>EuiComponent</strong>`
-- When referencing the component name, always include the `Eui` prefix unless you are referencing the generic term. Example: `EuiFlyout` vs `flyout`
-- Wrap references to prop names and elements in `<EuiCode>` blocks. Example: `<EuiCode>propName</EuiCode>`
-- If the code reference is more than a single prop name or value, add the language type. Example: `<EuiCode language="js">propName=true</EuiCode>`
-- When referencing another EUI component, wrap the reference in a link to the component. Example: `<Link to="/component/url><strong>EuiComponent</strong><Link>`
+- When referencing the component name, wrap it in `<strong>` tags. Example: `<strong>WuiComponent</strong>`
+- When referencing the component name, always include the `Wui` prefix unless you are referencing the generic term. Example: `WuiFlyout` vs `flyout`
+- Wrap references to prop names and elements in `<WuiCode>` blocks. Example: `<WuiCode>propName</WuiCode>`
+- If the code reference is more than a single prop name or value, add the language type. Example: `<WuiCode language="js">propName=true</WuiCode>`
+- When referencing another WUI component, wrap the reference in a link to the component. Example: `<Link to="/component/url><strong>WuiComponent</strong><Link>`
 
-## Linking between EUI doc pages/components
+## Linking between WUI doc pages/components
 
-In instances where you would like to provide a link to another EUI component
+In instances where you would like to provide a link to another WUI component
 referenced in a given component description or example, take advantage of `react-router`,
-which is used for routing in EUI docs. Aside from the benefit of shorter path names, `react-router` will take the environment into account and provide the correct URL for both development and production locations.
+which is used for routing in WUI docs. Aside from the benefit of shorter path names, `react-router` will take the environment into account and provide the correct URL for both development and production locations.
 
 ### Basic example:
 
@@ -40,18 +40,18 @@ for a better explanation about passing color contrast.
 
 ### Linking to external resources
 
-When referring to external sites or resources, use EUI components that take an `href` prop, such as `EuiLink`.
+When referring to external sites or resources, use WUI components that take an `href` prop, such as `WuiLink`.
 
 #### Basic example:
 
 ```js
 import {
-  EuiLink,
+  WuiLink,
 } from '/src/components';
 
 // ...
 
-<EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</EuiLink>.
+<WuiLink href="https://github.com/wazuh/wui/blob/master/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</WuiLink>.
 ```
 
 ## Adding snippets
@@ -69,7 +69,7 @@ There are a couple themes to keep in mind when adding snippets:
 - All other props, like enums, should be written with proper value types.
 
 ``` js
-<EuiPopover
+<WuiPopover
   id={popoverId}
   button={button}
   isOpen={isPopoverOpen}
@@ -77,48 +77,48 @@ There are a couple themes to keep in mind when adding snippets:
   anchorPosition="downLeft"
 >
   <!-- Popover content -->
-</EuiPopover>
+</WuiPopover>
 ```
 
 - If the demo code provides lots of examples, this is probably mostly for us maintainers to manage all the different states. However, **the consumer really just needs a single basic snippet**. In some cases, you can add a second one with the **most commonly used props**. The basic example should always come first.
 
 ```js
-<EuiLink href="#"><!-- Link text --></EuiLink>
+<WuiLink href="#"><!-- Link text --></WuiLink>
 ```
 
 ```js
-<EuiLink href="#" color="secondary">
+<WuiLink href="#" color="secondary">
   <!-- Colored link text -->
-</EuiLink>
+</WuiLink>
 ```
 
 
 - Use HTML comments to suggest what the `children` might be.
 
 ``` js
-<EuiText color="danger"><!-- Raw HTML content --></EuiText>
+<WuiText color="danger"><!-- Raw HTML content --></WuiText>
 ```
 
 - The snippet should illustrate when a component requires its children to be wrapped with a specific tag.
 
 ``` js
-<EuiCallOut>
+<WuiCallOut>
   <p><!-- Content --></p>
-</EuiCallOut>
+</WuiCallOut>
 ```
 
 - When a component contains a single element child the snippet should illustrate it. Enforce best practices by providing a description.
 
 ``` js
-<EuiTitle>
+<WuiTitle>
   <h2><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-</EuiTitle>
+</WuiTitle>
 ```
 
 - When a prop receives an array of objects, display only one object and show all the required keys.
 
 ``` js
-<EuiSteps
+<WuiSteps
   steps={[
     {
       title: 'Step 1',
@@ -139,4 +139,4 @@ Any updates to the `src/` folder require an entry in the [CHANGELOG.md](../CHANG
 * Avoid documenting internal implementation changes that don't affect the public interface
 * Write your entry in the **past tense**, starting with a verb (e.g. Added... , Fixed...)
 
-[docs]: https://elastic.github.io/eui/
+[docs]: https://wazuh.github.io/wui/

@@ -2,7 +2,7 @@
 
 ## What's available
 
-Wazuh WUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [Elastic UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
+Wazuh WUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [Wazuh UI Framework website](https://wazuh.github.io/wui) for comprehensive info on what's available.
 
 WUI is published through [NPM](https://www.npmjs.com/package/wazuh-wui) as a dependency.
 
@@ -12,9 +12,9 @@ You can import React components from the top-level WUI module.
 
 ```js
 import {
-  EuiButton,
-  EuiCallOut,
-  EuiPanel,
+  WuiButton,
+  WuiCallOut,
+  WuiPanel,
 } from 'wazuh-wui';
 ```
 
@@ -50,21 +50,21 @@ You can consume WUI in standalone projects, such as plugins and prototypes.
 Most of the time, you just need the CSS, which provides the styling for the React components. In this case, you can use Webpack to import the compiled WUI CSS with the `style`,`css`, and `postcss` loaders.
 
 ```js
-import 'wazuh-wui/dist/eui_theme_wazuh_light.css';
+import 'wazuh-wui/dist/wui_theme_wazuh_light.css';
 ```
 
 If you want access to the Sass variables, functions, and mixins in WUI then you'll need to import the Sass files. This will require `style`, `css`, `postcss`, and `sass` loaders. You'll also want to import the Sass file into one of your own Sass files, to gain access to these variables, functions, and mixins.
 
 ```scss
-@import 'wazuh-wui/src/themes/eui/eui_colors_light.scss';
-@import 'wazuh-wui/src/themes/eui/eui_globals.scss';
+@import 'wazuh-wui/src/themes/wui/wui_colors_light.scss';
+@import 'wazuh-wui/src/themes/wui/wui_globals.scss';
 ```
 
 For the dark theme, import the dark colors file before the globals.
 
 ```scss
-@import 'wazuh-wui/src/themes/eui/eui_colors_dark.scss';
-@import 'wazuh-wui/src/themes/eui/eui_globals.scss';
+@import 'wazuh-wui/src/themes/wui/wui_colors_dark.scss';
+@import 'wazuh-wui/src/themes/wui/wui_globals.scss';
 ```
 
 
@@ -84,15 +84,15 @@ The Sass variables are also made available for consumption as json files. This e
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import * as euiVars from 'wazuh-wui/dist/eui_theme_light.json';
+import * as wuiVars from 'wazuh-wui/dist/wui_theme_light.json';
 
 const CustomComponent = styled.div`
-  color: ${props => props.theme.euiColorPrimary};
-  border: ${props => props.theme.euiBorderThin};
+  color: ${props => props.theme.wuiColorPrimary};
+  border: ${props => props.theme.wuiBorderThin};
 `;
 
 ReactDOM.render(
-  <ThemeProvider theme={euiVars}>
+  <ThemeProvider theme={wuiVars}>
     <CustomComponent>content</CustomComponent>
   </ThemeProvider>
 , document.querySelector('#renderTarget'));
@@ -109,26 +109,26 @@ To reduce WUI's impact to application bundle sizes, the icons are dynamically im
 ```javascript
 import { appendIconComponentCache } from 'wazuh-wui/es/components/icon/icon';
 
-import { icon as EuiIconArrowDown } from 'wazuh-wui/es/components/icon/assets/arrow_down';
-import { icon as EuiIconArrowLeft } from 'wazuh-wui/es/components/icon/assets/arrow_left';
+import { icon as WuiIconArrowDown } from 'wazuh-wui/es/components/icon/assets/arrow_down';
+import { icon as WuiIconArrowLeft } from 'wazuh-wui/es/components/icon/assets/arrow_left';
 
 // One or more icons are passed in as an object of iconKey (string): IconComponent
 appendIconComponentCache({
-  arrowDown: EuiIconArrowDown,
-  arrowLeft: EuiIconArrowLeft,
+  arrowDown: WuiIconArrowDown,
+  arrowLeft: WuiIconArrowLeft,
 });
 ```
 
 ## Customizing with `className`
 
-We do not recommend customizing WUI components by applying styles directly to WUI classes, eg. `.euiButton`. All components allow you to pass a custom `className` prop directly to the component which will then append this to the class list. Utilizing the cascade feature of CSS, you can then customize by overriding styles so long as your styles are imported **after** the WUI import.
+We do not recommend customizing WUI components by applying styles directly to WUI classes, eg. `.wuiButton`. All components allow you to pass a custom `className` prop directly to the component which will then append this to the class list. Utilizing the cascade feature of CSS, you can then customize by overriding styles so long as your styles are imported **after** the WUI import.
 
-```html
-<EuiButton className="myCustomClass__button" />
+```jsx
+<WuiButton className="myCustomClass__button" />
 
 // Renders as:
 
-<button class="euiButton myCustomClass__button" />
+<button class="wuiButton myCustomClass__button" />
 ```
 
 ## Using the `test-env` build

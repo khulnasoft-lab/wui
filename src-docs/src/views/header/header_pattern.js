@@ -289,7 +289,7 @@ export default ({ theme }) => {
               {
                 items: [
                   <WuiHeaderLogo iconType="logoWazuh" href="">
-                    Elastic
+                    Wazuh
                   </WuiHeaderLogo>,
                   deploymentMenu,
                 ],

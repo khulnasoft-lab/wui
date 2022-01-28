@@ -22,7 +22,7 @@ export default ({ theme }: { theme: any }) => (
     sections={[
       {
         items: [
-          <WuiHeaderLogo>Elastic</WuiHeaderLogo>,
+          <WuiHeaderLogo>Wazuh</WuiHeaderLogo>,
           <WuiHeaderLinks aria-label="App navigation dark theme example">
             <WuiHeaderLink isActive>Docs</WuiHeaderLink>
             <WuiHeaderLink>Code</WuiHeaderLink>
