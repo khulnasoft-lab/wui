@@ -12,7 +12,7 @@ export default () => {
   return (
     <WuiHeader>
       <WuiHeaderSectionItem border="right">
-        <WuiHeaderLogo>Elastic</WuiHeaderLogo>
+        <WuiHeaderLogo>Wazuh</WuiHeaderLogo>
       </WuiHeaderSectionItem>
 
       <WuiHeaderSectionItem>

@@ -1,5 +1,5 @@
 {
-  "name": "wazuh-wui",
+  "name": "@wazuh/wui",
   "description": "Wazuh UI Component Library",
   "version": "36.0.0",
   "license": "Apache-2.0",

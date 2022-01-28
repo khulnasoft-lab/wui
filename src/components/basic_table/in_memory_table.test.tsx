@@ -950,7 +950,7 @@ describe('WuiInMemoryTable', () => {
         .simulate('click');
 
       // forces WuiInMemoryTable's getDerivedStateFromProps to re-execute
-      // this is specifically testing regression against https://github.com/elastic/wui/issues/1007
+      // this is specifically testing regression against https://github.com/elastic/eui/issues/1007
       component.setProps({});
 
       expect(component).toMatchSnapshot();

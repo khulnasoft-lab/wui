@@ -25,7 +25,7 @@ function hasParentIndex(pathToFile) {
 }
 
 const generator = dtsGenerator({
-  prefix: 'wazuh-wui',
+  prefix: '@wazuh/wui',
   project: baseDir,
   out: 'wui.d.ts',
   exclude: [
@@ -44,14 +44,14 @@ const generator = dtsGenerator({
       path.basename(params.currentModuleId) === 'index' &&
       !hasParentIndex(path.resolve(baseDir, params.currentModuleId))
     ) {
-      // this module is exporting from an `index(.d)?.ts` file, declare its exports straight to wazuh-wui module
-      return 'wazuh-wui';
+      // this module is exporting from an `index(.d)?.ts` file, declare its exports straight to @wazuh/wui module
+      return '@wazuh/wui';
     } else {
-      // otherwise export as the module's path relative to the wazuh-wui namespace
+      // otherwise export as the module's path relative to the @wazuh/wui namespace
       if (params.currentModuleId.endsWith('/index')) {
-        return path.join('wazuh-wui', path.dirname(params.currentModuleId));
+        return path.join('@wazuh/wui', path.dirname(params.currentModuleId));
       } else {
-        return path.join('wazuh-wui', params.currentModuleId);
+        return path.join('@wazuh/wui', params.currentModuleId);
       }
     }
   },
@@ -66,7 +66,7 @@ const generator = dtsGenerator({
 
     if (isRelativeImport) {
       // if importing from an `index` file (directly or targeting a directory with an index),
-      // then if there is no parent index file this should import from wazuh-wui
+      // then if there is no parent index file this should import from @wazuh/wui
       const importPathTarget = resolve.sync(params.importedModuleId, {
         basedir: importFromBaseDir,
         extensions: ['.ts', '.tsx', '.d.ts'],
@@ -76,12 +76,12 @@ const generator = dtsGenerator({
       const isModuleIndex = isIndexFile && !hasParentIndex(importPathTarget);
 
       if (isModuleIndex) {
-        // importing an `index` file, in `resolveModuleId` above we change those modules to 'wazuh-wui'
-        return 'wazuh-wui';
+        // importing an `index` file, in `resolveModuleId` above we change those modules to '@wazuh/wui'
+        return '@wazuh/wui';
       } else {
-        // importing from a non-index TS source file, keep the import path but re-scope it to 'wazuh-wui' namespace
+        // importing from a non-index TS source file, keep the import path but re-scope it to '@wazuh/wui' namespace
         return path.join(
-          'wazuh-wui',
+          '@wazuh/wui',
           path.dirname(params.currentModuleId),
           params.importedModuleId
         );
@@ -94,8 +94,8 @@ const generator = dtsGenerator({
 
 // NOTE: once WUI is all converted to typescript this madness can be deleted forever
 // 1. strip any `/// <reference` lines from the generated wui.d.ts
-// 2. replace any import("src/...") declarations to import("wazuh-wui/src/...")
-// 3. replace any import("./...") declarations to import("wazuh-wui/src/...)
+// 2. replace any import("src/...") declarations to import("@wazuh/wui/src/...")
+// 3. replace any import("./...") declarations to import("@wazuh/wui/src/...)
 generator.then(() => {
   const defsFilePath = path.resolve(baseDir, 'wui.d.ts');
 
@@ -105,7 +105,7 @@ generator.then(() => {
       .readFileSync(defsFilePath)
       .toString()
       .replace(/\/\/\/\W+<reference.*/g, '') // 1.
-      .replace(/import\("src\/(.*?)"\)/g, 'import("wazuh-wui/src/$1")') // 2.
+      .replace(/import\("src\/(.*?)"\)/g, 'import("@wazuh/wui/src/$1")') // 2.
       .replace(
         // start 3.
         // find any singular `declare module { ... }` block
@@ -124,8 +124,8 @@ generator.then(() => {
             (importStatement, importPath) => {
               let target = path.join(path.dirname(moduleName), importPath);
 
-              // if the target resolves to an orphaned index.ts file, remap to 'wazuh-wui'
-              const filePath = target.replace('wazuh-wui', baseDir);
+              // if the target resolves to an orphaned index.ts file, remap to '@wazuh/wui'
+              const filePath = target.replace('@wazuh/wui', baseDir);
               const filePathTs = `${filePath}.ts`;
               const filePathTsx = `${filePath}.tsx`;
               const filePathResolvedToIndex = path.join(filePath, 'index.ts');
@@ -136,7 +136,7 @@ generator.then(() => {
                 fs.existsSync(filePathResolvedToIndex) && // and it resolves to an index.ts
                 hasParentIndex(filePathResolvedToIndex) === false // does not get exported at a higher level
               ) {
-                target = 'wazuh-wui';
+                target = '@wazuh/wui';
               }
 
               return `import ("${target}")`;

@@ -8,7 +8,7 @@
 4. Create an `_index.scss` file in this directory that import all of the new component SCSS files you created.
 5. Import the `_index.scss` file into `src/components/index.scss`.
 
-This makes your styles available to your project and to the [EUI documentation][docs].
+This makes your styles available to your project and to the [WUI documentation][docs].
 
 ## Create the React component
 
@@ -27,5 +27,5 @@ This makes your React component available for import into your project.
 
 ### 👉 Refer to the [Documentation Guidelines](documentation-guidelines.md) for more instruction on writing docs.
 
-[docs]: https://elastic.github.io/eui/
+[docs]: https://wazuh.github.io/wui/
 [docs-logical-group]: component-development.md#logically-grouped-components

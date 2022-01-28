@@ -12,7 +12,7 @@ export default () => {
 
   const sections = [
     {
-      items: [<WuiHeaderLogo>Elastic</WuiHeaderLogo>],
+      items: [<WuiHeaderLogo>Wazuh</WuiHeaderLogo>],
       borders: 'right',
     },
   ];

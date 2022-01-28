@@ -26,7 +26,7 @@ export default ({ selectedTheme }) => {
   return (
     <GuidePage title="Color guidelines">
       <WuiText grow={false} className="guideSection__text">
-        <h2>Elastic UI builds with a very limited palette.</h2>
+        <h2>Wazuh UI builds with a very limited palette.</h2>
         <p>
           We use a core set of three colors, combined with a green / orange /
           red qualitative set of three, and finally combine those against a

@@ -1,6 +1,6 @@
-# Elastic Visual Regression
+# Wazuh Visual Regression
 
-This module is a test suite used to test [EUI components](https://elastic.github.io/eui/#/). It is to be used to verify
+This module is a test suite used to test [WUI components](https://wazuh.github.io/wui/#/). It is to be used to verify
 that changes to code do not break the components visually by verifying current screenshots to a baseline taken 
 previously. 
 
@@ -71,13 +71,13 @@ describe('My Custom Component', function () {
 
   beforeEach(function () {
     browser.url('/#/display/toast');
-    browser.waitForExist('.euiTitle');
-    expect('.euiTitle').to.have.text('Toast');
+    browser.waitForExist('.wuiTitle');
+    expect('.wuiTitle').to.have.text('Toast');
   });
 
   it('Default Toast', function () {
     browser.waitForExist('#default');
-    const results = browser.checkElement('#default .euiToast');
+    const results = browser.checkElement('#default .wuiToast');
     expectImageToBeSame (results);
   });
 
@@ -106,4 +106,4 @@ be refreshed.
 
 3.) Rerun tests. 
 
-4.) Commit new baselines to [EUI](https://github.com/elastic/eui). 
+4.) Commit new baselines to [WUI](https://github.com/wazuh/wui). 

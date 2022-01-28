@@ -49,9 +49,9 @@ import HeaderStacked from './header_stacked';
 const headerStackedSource = require('!!raw-loader!./header_stacked');
 const headerStackedHtml = renderToHtml(HeaderStacked);
 
-import HeaderElasticPattern from './header_pattern';
-const headerElasticPatternSource = require('!!raw-loader!./header_pattern');
-const headerElasticPatternHtml = renderToHtml(HeaderElasticPattern);
+import HeaderWazuhPattern from './header_pattern';
+const headerWazuhPatternSource = require('!!raw-loader!./header_pattern');
+const headerWazuhPatternHtml = renderToHtml(HeaderWazuhPattern);
 
 const headerSnippet = `<WuiHeader>
   <WuiHeaderSection grow={false}>
@@ -353,15 +353,15 @@ export const HeaderExample = {
       demo: <HeaderStacked />,
     },
     {
-      title: 'The Elastic navigation pattern',
+      title: 'The Wazuh navigation pattern',
       source: [
         {
           type: GuideSectionTypes.JS,
-          code: headerElasticPatternSource,
+          code: headerWazuhPatternSource,
         },
         {
           type: GuideSectionTypes.HTML,
-          code: headerElasticPatternHtml,
+          code: headerWazuhPatternHtml,
         },
       ],
       text: (
@@ -385,7 +385,7 @@ export const HeaderExample = {
           </p>
         </>
       ),
-      demo: <HeaderElasticPattern theme={lightColors} />,
+      demo: <HeaderWazuhPattern theme={lightColors} />,
     },
   ],
 };
