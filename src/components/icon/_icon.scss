@@ -21,6 +21,14 @@
   }
 }
 
+.wuiLogoFill {
+  fill: $wuiWazuhLogoPrimaryColor;
+}
+
+.wuiLogoSecondaryFill {
+  fill: $wuiWazuhLogoSecondaryColor;
+}
+
 .wuiIcon-isLoading {
   opacity: $wuiIconLoadingOpacity;
   background-color: currentColor;
