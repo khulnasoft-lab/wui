@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconGrid = ({ title, titleId, ...props }) => (
   <svg

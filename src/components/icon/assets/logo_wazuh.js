@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconLogoWazuh = ({ title, titleId, ...props }) => (
   <svg
@@ -9,10 +9,14 @@ const WuiIconLogoWazuh = ({ title, titleId, ...props }) => (
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
-    <g fill="none">
-    <path d="M117.4 81.4L92.4 0.1H72.6L47.6 81.4L22.7 0H0L36.2 118.7H54.7L82.5 32.8L110.2 118.7H128.6L164.8 0.1H142.2L117.4 81.4Z" class="wuiLogoFill"/>
-    <path d="M183.6 121C193.928 121 202.3 112.628 202.3 102.3C202.3 91.9723 193.928 83.6 183.6 83.6C173.272 83.6 164.9 91.9723 164.9 102.3C164.9 112.628 173.272 121 183.6 121Z" class="wuiLogoSecondaryFill"/>
-    </g>
+    <path
+      d="M117.4 81.4L92.4.1H72.6l-25 81.3L22.7 0H0l36.2 118.7h18.5l27.8-85.9 27.7 85.9h18.4L164.8.1h-22.6l-24.8 81.3z"
+      className="wuiLogoFill"
+    />
+    <path
+      d="M183.6 121c10.328 0 18.7-8.372 18.7-18.7s-8.372-18.7-18.7-18.7-18.7 8.372-18.7 18.7 8.372 18.7 18.7 18.7z"
+      className="wuiLogoSecondaryFill"
+    />
   </svg>
 );
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconPageSelect = ({ title, titleId, ...props }) => (
   <svg

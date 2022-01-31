@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconFullScreen = ({ title, titleId, ...props }) => (
   <svg

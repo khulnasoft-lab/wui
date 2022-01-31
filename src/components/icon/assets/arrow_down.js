@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconArrowDown = ({ title, titleId, ...props }) => (
   <svg

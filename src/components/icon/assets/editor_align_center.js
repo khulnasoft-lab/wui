@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconEditorAlignCenter = ({ title, titleId, ...props }) => (
   <svg

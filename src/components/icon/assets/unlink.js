@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconUnlink = ({ title, titleId, ...props }) => (
   <svg

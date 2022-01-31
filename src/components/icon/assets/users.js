@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconUsers = ({ title, titleId, ...props }) => (
   <svg

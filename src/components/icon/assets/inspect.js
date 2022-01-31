@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconInspect = ({ title, titleId, ...props }) => (
   <svg

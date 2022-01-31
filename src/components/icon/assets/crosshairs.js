@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconCrosshairs = ({ title, titleId, ...props }) => (
   <svg

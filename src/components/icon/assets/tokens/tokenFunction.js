@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconTokenFunction = ({ title, titleId, ...props }) => (
   <svg

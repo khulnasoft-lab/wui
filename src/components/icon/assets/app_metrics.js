@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconAppMetrics = ({ title, titleId, ...props }) => (
   <svg

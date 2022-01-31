@@ -25,8 +25,8 @@ $wuiColorDarkShade: #69707D !default;
 $wuiColorDarkestShade: #343741 !default;
 $wuiColorFullShade: #000 !default;
 
-$wuiWazuhLogoPrimaryColor: #000;
-$wuiWazuhLogoSecondaryColor: #007AFF;
+$wuiWazuhLogoPrimaryColor: #000 !default;
+$wuiWazuhLogoSecondaryColor: #007AFF !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
 $wuiTextColor: $wuiColorDarkestShade !default;

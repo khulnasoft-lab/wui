@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconScale = ({ title, titleId, ...props }) => (
   <svg

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconEditorUndo = ({ title, titleId, ...props }) => (
   <svg

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconAppCrossClusterReplication = ({ title, titleId, ...props }) => (
   <svg

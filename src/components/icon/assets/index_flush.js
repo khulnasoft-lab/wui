@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WuiIconIndexFlush = ({ title, titleId, ...props }) => (
   <svg
