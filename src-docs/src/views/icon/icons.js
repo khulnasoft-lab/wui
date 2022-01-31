@@ -225,9 +225,6 @@ export const iconTypes = [
   'visTable',
   'visTagCloud',
   'visText',
-  'visTimelion',
-  'visVega',
-  'visVisualBuilder',
   'wrench',
 ];
 

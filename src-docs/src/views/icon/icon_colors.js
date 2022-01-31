@@ -19,8 +19,8 @@ import {
   WuiIcon,
   WuiPanel,
   WuiText,
-  WuiCallOut,
-  WuiSpacer,
+  WuiCallOut, // eslint-disable-line @typescript-eslint/no-unused-vars
+  WuiSpacer, // eslint-disable-line @typescript-eslint/no-unused-vars
 } from '../../../../src/components';
 
 const iconColors = [
@@ -61,7 +61,10 @@ export default () => (
       ))}
     </WuiFlexGrid>
 
-    <WuiSpacer />
+    {/* By the moment, this section has been disabled because
+     there are not apps icons. This shows how to colorize them.
+    */}
+    {/* <WuiSpacer />
 
     <WuiCallOut
       color="warning"
@@ -74,7 +77,7 @@ export default () => (
     <WuiFlexGrid columns={4}>
       <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
         <WuiPanel>
-          <WuiIcon type="gisApp" size="xl" />
+          <WuiIcon type="sampleApp" size="xl" />
           <WuiText size="s">
             <p>
               Default coloring of <strong>App</strong> icons is two-toned
@@ -84,7 +87,7 @@ export default () => (
       </WuiFlexItem>
       <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
         <WuiPanel>
-          <WuiIcon type="gisApp" color="text" size="xl" />
+          <WuiIcon type="sampleApp" color="text" size="xl" />
           <WuiText size="s">
             <p>
               <strong>Special:</strong> the text color makes{' '}
@@ -95,7 +98,7 @@ export default () => (
       </WuiFlexItem>
       <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
         <WuiPanel>
-          <WuiIcon type="createAdvancedJob" color="primary" size="xl" />
+          <WuiIcon type="sampleApp" color="primary" size="xl" />
           <WuiText size="s">
             <p>
               <strong>Special:</strong> the primary color makes{' '}
@@ -104,6 +107,6 @@ export default () => (
           </WuiText>
         </WuiPanel>
       </WuiFlexItem>
-    </WuiFlexGrid>
+    </WuiFlexGrid> */}
   </div>
 );

@@ -35,14 +35,13 @@ const tokensSnippet = [
 />`,
 ];
 
+// Icons for apps were removed, but we keep the component that renders the section
+// for future additions
 import Apps from './apps';
-const appsSnippet = '<WuiIcon type="addDataApp" size="xl" />';
+const appsSnippet = '<WuiIcon type="sampleApp" size="xl" />';
 
 import Editor from './editor';
 const editorSnippet = '<WuiIcon type="editorAlignLeft" />';
-
-import Ml from './ml';
-const mlSnippet = '<WuiIcon type="dataVisualizer" size="xl" />';
 
 import Logos from './logos';
 const logosSnippet = '<WuiIcon type="logoWazuh" size="xl" />';
@@ -132,17 +131,6 @@ export const IconExample = {
       demo: <Editor />,
     },
     {
-      title: 'Apps',
-      text: (
-        <p>
-          App logos are usually displayed at <WuiCode>32x32</WuiCode> or above
-          and can contain multiple colors.
-        </p>
-      ),
-      snippet: appsSnippet,
-      demo: <Apps />,
-    },
-    {
       title: 'Tokens',
       text: (
         <div>
@@ -159,17 +147,6 @@ export const IconExample = {
       props: { WuiToken },
       snippet: tokensSnippet,
       demo: <Tokens />,
-    },
-    {
-      title: 'Machine learning icons',
-      text: (
-        <p>
-          ML has some specific icons for job creation. Again, these are made for{' '}
-          <WuiCode>32x32</WuiCode>.
-        </p>
-      ),
-      snippet: mlSnippet,
-      demo: <Ml />,
     },
     {
       title: 'Wazuh logos',
