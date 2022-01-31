@@ -24,7 +24,6 @@ const markdownEditorErrorsHtml = renderToHtml(MarkdownEditorErrors);
 export const MarkdownEditorExample = {
   title: 'Markdown editor',
   beta: true,
-  isNew: true,
   intro: (
     <Fragment>
       <WuiText>

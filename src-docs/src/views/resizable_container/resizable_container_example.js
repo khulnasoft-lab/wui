@@ -59,7 +59,6 @@ const snippet = `<WuiResizableContainer style={{ height: '400px' }}>
 
 export const ResizableContainerExample = {
   title: 'Resizable container',
-  isNew: true,
   intro: (
     <Fragment>
       <WuiCallOut title="Consuming" color="warning">

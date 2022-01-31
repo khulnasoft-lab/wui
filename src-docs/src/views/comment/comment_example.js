@@ -80,7 +80,6 @@ const commentListSnippet = `<WuiCommentList
 
 export const CommentListExample = {
   title: 'Comment list',
-  isNew: true,
   sections: [
     {
       source: [
