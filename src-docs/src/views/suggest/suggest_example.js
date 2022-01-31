@@ -46,12 +46,12 @@ const suggestSnippet = [
   onItemClick={onItemClick}
   suggestions={[
     {
-      type: { iconType: 'kqlField', color: 'tint4' },
+      type: { iconType: 'qryField', color: 'tint4' },
       label: 'Field sample',
       description: 'This is the description',
     },
     {
-      type: { iconType: 'kqlValue', color: 'tint0' },
+      type: { iconType: 'qryValue', color: 'tint0' },
       label: 'Value sample',
       description: 'This is the description',
     },
