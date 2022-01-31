@@ -168,7 +168,7 @@ export class WuiSuperUpdateButton extends Component<WuiSuperUpdateButtonProps> {
           className={classes}
           color={needsUpdate || isLoading ? 'secondary' : 'primary'}
           fill
-          iconType={needsUpdate || isLoading ? 'kqlFunction' : 'refresh'}
+          iconType={needsUpdate || isLoading ? 'qryFunction' : 'refresh'}
           textProps={{ className: 'wuiSuperUpdateButton__text' }}
           isDisabled={isDisabled}
           onClick={onClick}

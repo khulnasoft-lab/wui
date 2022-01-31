@@ -6,22 +6,22 @@ const shortDescription = 'This is the description';
 
 const sampleItems = [
   {
-    type: { iconType: 'kqlField', color: 'tint5' },
+    type: { iconType: 'qryField', color: 'tint5' },
     label: 'Field sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlValue', color: 'tint0' },
+    type: { iconType: 'qryValue', color: 'tint0' },
     label: 'Value sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlSelector', color: 'tint3' },
+    type: { iconType: 'qrySelector', color: 'tint3' },
     label: 'Conjunction sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlOperand', color: 'tint1' },
+    type: { iconType: 'qryOperand', color: 'tint1' },
     label: 'Operator sample',
     description: shortDescription,
   },
@@ -35,7 +35,7 @@ const sampleItems = [
   },
 ];
 
-const typeObj = { iconType: 'kqlValue', color: 'tint0' };
+const typeObj = { iconType: 'qryValue', color: 'tint0' };
 
 const longLabel =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut quam eget augue pulvinar.';
