@@ -13,7 +13,6 @@ import {
   WuiFlexGroup,
   WuiFlexItem,
   WuiTitle,
-  WuiAspectRatio,
   WuiIcon,
 } from '../../../../src/components';
 
@@ -48,24 +47,6 @@ export default {
         </p>
       </WuiText>
 
-      <WuiSpacer size="xl" />
-      <WuiTitle size="xs">
-        <p>For a technical intro to accessibility and how WUI tackles it</p>
-      </WuiTitle>
-
-      <WuiSpacer size="l" />
-
-      <WuiAspectRatio width={16} height={9} maxWidth={700}>
-        <iframe
-          title="Building and Testing for Accessibility with WUI"
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/iDXoEe8NkrE"
-          frameBorder="0"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </WuiAspectRatio>
       <WuiSpacer size="xl" />
     </>
   ),
