@@ -1,56 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiImage is rendered 1`] = `
+exports[`WuiImage is rendered 1`] = `
 <figure
-  class="euiImage testClass1 testClass2 euiImage--large"
+  class="wuiImage testClass1 testClass2 wuiImage--large"
 >
   <img
     alt="alt"
     aria-label="aria-label"
-    class="euiImage__img"
+    class="wuiImage__img"
     data-test-subj="test subject string"
     src="/cat.jpg"
   />
 </figure>
 `;
 
-exports[`EuiImage is rendered and allows full screen 1`] = `
+exports[`WuiImage is rendered and allows full screen 1`] = `
 <figure
-  class="euiImage euiImage--allowFullScreen testClass1 testClass2 euiImage--large"
+  class="wuiImage wuiImage--allowFullScreen testClass1 testClass2 wuiImage--large"
 >
   <button
     aria-label="Open full screen alt image"
-    class="euiImage__button"
+    class="wuiImage__button"
     data-test-subj="activateFullScreenButton"
     type="button"
   >
     <img
       alt="alt"
       aria-label="aria-label"
-      class="euiImage__img"
+      class="wuiImage__img"
       data-test-subj="test subject string"
       src="/cat.jpg"
     />
     <div
-      class="euiImage__icon"
+      class="wuiImage__icon"
       color="ghost"
-      data-euiicon-type="fullScreen"
+      data-wuiicon-type="fullScreen"
     />
   </button>
 </figure>
 `;
 
-exports[`EuiImage is rendered with a node as the caption 1`] = `
+exports[`WuiImage is rendered with a node as the caption 1`] = `
 <figure
-  class="euiImage "
+  class="wuiImage "
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="wuiImage__img"
     src="/cat.jpg"
   />
   <figcaption
-    class="euiImage__caption"
+    class="wuiImage__caption"
   >
     <span>
       caption
@@ -59,13 +59,13 @@ exports[`EuiImage is rendered with a node as the caption 1`] = `
 </figure>
 `;
 
-exports[`EuiImage is rendered with custom size 1`] = `
+exports[`WuiImage is rendered with custom size 1`] = `
 <figure
-  class="euiImage"
+  class="wuiImage"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="wuiImage__img"
     src="/cat.jpg"
     style="max-width:50px;max-height:50px;width:auto"
   />

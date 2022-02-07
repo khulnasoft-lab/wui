@@ -1,72 +1,72 @@
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiHideFor,
-  EuiShowFor,
-  EuiText,
-  EuiSpacer,
+  WuiCode,
+  WuiHideFor,
+  WuiShowFor,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiText>
-    <EuiHideFor sizes={'none'}>
+  <WuiText>
+    <WuiHideFor sizes={'none'}>
       <p>
-        Hiding from <EuiCode>{'"none"'}</EuiCode> of the screen sizes
+        Hiding from <WuiCode>{'"none"'}</WuiCode> of the screen sizes
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs']}>
+    </WuiHideFor>
+    <WuiHideFor sizes={['xs']}>
       <p>
-        Hiding from <EuiCode>xs</EuiCode> screens only
+        Hiding from <WuiCode>xs</WuiCode> screens only
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs', 's']}>
+    </WuiHideFor>
+    <WuiHideFor sizes={['xs', 's']}>
       <p>
-        Hiding from <EuiCode>xs, s</EuiCode> screens
+        Hiding from <WuiCode>xs, s</WuiCode> screens
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs', 's', 'm', 'l']}>
+    </WuiHideFor>
+    <WuiHideFor sizes={['xs', 's', 'm', 'l']}>
       <p>
-        Hiding from <EuiCode>xs, s, m, l</EuiCode> screens
+        Hiding from <WuiCode>xs, s, m, l</WuiCode> screens
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xl']}>
+    </WuiHideFor>
+    <WuiHideFor sizes={['xl']}>
       <p>
-        Hiding from <EuiCode>xl</EuiCode> screens only
+        Hiding from <WuiCode>xl</WuiCode> screens only
       </p>
-    </EuiHideFor>
+    </WuiHideFor>
 
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
 
-    <EuiShowFor sizes={'all'}>
+    <WuiShowFor sizes={'all'}>
       <p>
-        Showing for <EuiCode>{'"all"'}</EuiCode> of the screen sizes
+        Showing for <WuiCode>{'"all"'}</WuiCode> of the screen sizes
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs']}>
+    </WuiShowFor>
+    <WuiShowFor sizes={['xs']}>
       <p>
-        Showing for <EuiCode>xs</EuiCode> screens only
+        Showing for <WuiCode>xs</WuiCode> screens only
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs', 's']}>
+    </WuiShowFor>
+    <WuiShowFor sizes={['xs', 's']}>
       <p>
-        Showing for <EuiCode>xs, s</EuiCode> screens
+        Showing for <WuiCode>xs, s</WuiCode> screens
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs', 's', 'm', 'l']}>
+    </WuiShowFor>
+    <WuiShowFor sizes={['xs', 's', 'm', 'l']}>
       <p>
-        Showing for <EuiCode>xs, s, m, l</EuiCode> screens
+        Showing for <WuiCode>xs, s, m, l</WuiCode> screens
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xl']}>
+    </WuiShowFor>
+    <WuiShowFor sizes={['xl']}>
       <p>
-        Showing for <EuiCode>xl</EuiCode> screen only
+        Showing for <WuiCode>xl</WuiCode> screen only
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['m', 'l', 'xl']}>
+    </WuiShowFor>
+    <WuiShowFor sizes={['m', 'l', 'xl']}>
       <p>
-        Showing for <EuiCode>m, l, xl</EuiCode> screen only
+        Showing for <WuiCode>m, l, xl</WuiCode> screen only
       </p>
-    </EuiShowFor>
-  </EuiText>
+    </WuiShowFor>
+  </WuiText>
 );

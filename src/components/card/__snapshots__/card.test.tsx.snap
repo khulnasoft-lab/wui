@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCard is rendered 1`] = `
+exports[`WuiCard is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned testClass1 testClass2"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -27,21 +27,21 @@ exports[`EuiCard is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCard props a null icon 1`] = `
+exports[`WuiCard props a null icon 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -52,21 +52,21 @@ exports[`EuiCard props a null icon 1`] = `
 </div>
 `;
 
-exports[`EuiCard props children 1`] = `
+exports[`WuiCard props children 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned euiCard--hasChildren"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned wuiCard--hasChildren"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -78,21 +78,21 @@ exports[`EuiCard props children 1`] = `
 </div>
 `;
 
-exports[`EuiCard props display 1`] = `
+exports[`WuiCard props display 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--plain euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--plain wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -103,21 +103,21 @@ exports[`EuiCard props display 1`] = `
 </div>
 `;
 
-exports[`EuiCard props footer 1`] = `
+exports[`WuiCard props footer 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -126,7 +126,7 @@ exports[`EuiCard props footer 1`] = `
     </div>
   </div>
   <div
-    class="euiCard__footer"
+    class="wuiCard__footer"
   >
     <span>
       Footer
@@ -135,21 +135,21 @@ exports[`EuiCard props footer 1`] = `
 </div>
 `;
 
-exports[`EuiCard props horizontal 1`] = `
+exports[`WuiCard props horizontal 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned euiCard--horizontal"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned wuiCard--horizontal"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -160,80 +160,80 @@ exports[`EuiCard props horizontal 1`] = `
 </div>
 `;
 
-exports[`EuiCard props href supports href as a link 1`] = `
-<EuiCard
+exports[`WuiCard props href supports href as a link 1`] = `
+<WuiCard
   description="There"
   href="#"
   title="Hoi"
 >
   <div
-    className="euiCard euiCard--paddingMedium euiCard--centerAligned euiCard--isClickable"
+    className="wuiCard wuiCard--paddingMedium wuiCard--centerAligned wuiCard--isClickable"
     onClick={[Function]}
   >
     <div
-      className="euiCard__content"
+      className="wuiCard__content"
     >
-      <EuiTitle
-        className="euiCard__title"
+      <WuiTitle
+        className="wuiCard__title"
         id="generated-idTitle"
         size="s"
       >
         <span
-          className="euiTitle euiTitle--small euiCard__title"
+          className="wuiTitle wuiTitle--small wuiCard__title"
           id="generated-idTitle"
         >
           <a
             aria-describedby="generated-idDescription"
-            className="euiCard__titleAnchor"
+            className="wuiCard__titleAnchor"
             href="#"
             rel="noreferrer"
           >
             Hoi
           </a>
         </span>
-      </EuiTitle>
-      <EuiText
-        className="euiCard__description"
+      </WuiTitle>
+      <WuiText
+        className="wuiCard__description"
         id="generated-idDescription"
         size="s"
       >
         <div
-          className="euiText euiText--small euiCard__description"
+          className="wuiText wuiText--small wuiCard__description"
           id="generated-idDescription"
         >
           <p>
             There
           </p>
         </div>
-      </EuiText>
+      </WuiText>
     </div>
   </div>
-</EuiCard>
+</WuiCard>
 `;
 
-exports[`EuiCard props icon 1`] = `
+exports[`WuiCard props icon 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned euiCard--hasIcon"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned wuiCard--hasIcon"
 >
   <div
-    class="euiCard__top"
+    class="wuiCard__top"
   >
     <div
-      class="myIconClass euiCard__icon"
-      data-euiicon-type="apmApp"
+      class="myIconClass wuiCard__icon"
+      data-wuiicon-type="apmApp"
     />
   </div>
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -244,21 +244,21 @@ exports[`EuiCard props icon 1`] = `
 </div>
 `;
 
-exports[`EuiCard props paddingSize l is applied 1`] = `
+exports[`WuiCard props paddingSize l is applied 1`] = `
 <div
-  class="euiCard euiCard--paddingLarge euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingLarge wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -269,21 +269,21 @@ exports[`EuiCard props paddingSize l is applied 1`] = `
 </div>
 `;
 
-exports[`EuiCard props paddingSize m is applied 1`] = `
+exports[`WuiCard props paddingSize m is applied 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -294,21 +294,21 @@ exports[`EuiCard props paddingSize m is applied 1`] = `
 </div>
 `;
 
-exports[`EuiCard props paddingSize none is applied 1`] = `
+exports[`WuiCard props paddingSize none is applied 1`] = `
 <div
-  class="euiCard euiCard--paddingNone euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingNone wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -319,21 +319,21 @@ exports[`EuiCard props paddingSize none is applied 1`] = `
 </div>
 `;
 
-exports[`EuiCard props paddingSize s is applied 1`] = `
+exports[`WuiCard props paddingSize s is applied 1`] = `
 <div
-  class="euiCard euiCard--paddingSmall euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingSmall wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -344,21 +344,21 @@ exports[`EuiCard props paddingSize s is applied 1`] = `
 </div>
 `;
 
-exports[`EuiCard props selectable 1`] = `
+exports[`WuiCard props selectable 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned euiCard--isClickable euiCard--isSelectable euiCard--isSelectable--text"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned wuiCard--isClickable wuiCard--isSelectable wuiCard--isSelectable--text"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -369,15 +369,15 @@ exports[`EuiCard props selectable 1`] = `
   <button
     aria-checked="false"
     aria-describedby="generated-idTitle generated-idDescription"
-    class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiCardSelect euiCardSelect--text"
+    class="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall wuiCardSelect wuiCardSelect--text"
     role="switch"
     type="button"
   >
     <span
-      class="euiButtonContent euiButtonEmpty__content"
+      class="wuiButtonContent wuiButtonEmpty__content"
     >
       <span
-        class="euiButtonEmpty__text"
+        class="wuiButtonEmpty__text"
       >
         Select
       </span>
@@ -386,21 +386,21 @@ exports[`EuiCard props selectable 1`] = `
 </div>
 `;
 
-exports[`EuiCard props textAlign 1`] = `
+exports[`WuiCard props textAlign 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--rightAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--rightAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -411,21 +411,21 @@ exports[`EuiCard props textAlign 1`] = `
 </div>
 `;
 
-exports[`EuiCard props titleElement 1`] = `
+exports[`WuiCard props titleElement 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <h4
-      class="euiTitle euiTitle--small euiCard__title"
+      class="wuiTitle wuiTitle--small wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </h4>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>
@@ -436,21 +436,21 @@ exports[`EuiCard props titleElement 1`] = `
 </div>
 `;
 
-exports[`EuiCard props titleSize 1`] = `
+exports[`WuiCard props titleSize 1`] = `
 <div
-  class="euiCard euiCard--paddingMedium euiCard--centerAligned"
+  class="wuiCard wuiCard--paddingMedium wuiCard--centerAligned"
 >
   <div
-    class="euiCard__content"
+    class="wuiCard__content"
   >
     <span
-      class="euiTitle euiTitle--xsmall euiCard__title"
+      class="wuiTitle wuiTitle--xsmall wuiCard__title"
       id="generated-idTitle"
     >
       Card title
     </span>
     <div
-      class="euiText euiText--small euiCard__description"
+      class="wuiText wuiText--small wuiCard__description"
       id="generated-idDescription"
     >
       <p>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -32,101 +32,101 @@ export default () => {
   const closePopover4 = () => setIsPopoverOpen4(false);
 
   return (
-    <EuiFlexGroup wrap={true}>
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <WuiFlexGroup wrap={true}>
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick2}>
               Title and small padding
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen2}
           closePopover={closePopover2}
           anchorPosition="upCenter"
           panelPaddingSize="s">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <WuiPopoverTitle>Hello, I&rsquo;m a popover title</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>Popover content</p>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick1}>
               Title and default padding (m)
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen1}
           closePopover={closePopover1}
           anchorPosition="upCenter">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <WuiPopoverTitle>Hello, I&rsquo;m a popover title</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>Popover content</p>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick4}>
               Title and large padding
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen4}
           closePopover={closePopover4}
           anchorPosition="upCenter"
           panelPaddingSize="l">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <WuiPopoverTitle>Hello, I&rsquo;m a popover title</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>Popover content</p>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           ownFocus
           button={
-            <EuiButton
+            <WuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick3}>
               Title and no padding
-            </EuiButton>
+            </WuiButton>
           }
           isOpen={isPopoverOpen3}
           closePopover={closePopover3}
           anchorPosition="upCenter"
           panelPaddingSize="none">
-          <EuiPopoverTitle>As the title, I keep my padding</EuiPopoverTitle>
+          <WuiPopoverTitle>As the title, I keep my padding</WuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText>
+            <WuiText>
               <p>Popover content</p>
-            </EuiText>
+            </WuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiPopover>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

@@ -1,11 +1,11 @@
 import React, { useState, Fragment } from 'react';
 import {
-  EuiDelayRender,
-  EuiFlexItem,
-  EuiCheckbox,
-  EuiFormRow,
-  EuiFieldNumber,
-  EuiLoadingSpinner,
+  WuiDelayRender,
+  WuiFlexItem,
+  WuiCheckbox,
+  WuiFormRow,
+  WuiFieldNumber,
+  WuiLoadingSpinner,
 } from '../../../../src/components';
 
 export default () => {
@@ -24,32 +24,32 @@ export default () => {
   const label = `Child (${status})`;
   return (
     <Fragment>
-      <EuiFlexItem>
-        <EuiFormRow>
-          <EuiCheckbox
+      <WuiFlexItem>
+        <WuiFormRow>
+          <WuiCheckbox
             id="dummy-id"
             checked={render}
             onChange={onChangeHide}
             label="Show child"
           />
-        </EuiFormRow>
-        <EuiFormRow label="Minimum delay">
-          <EuiFieldNumber
+        </WuiFormRow>
+        <WuiFormRow label="Minimum delay">
+          <WuiFieldNumber
             value={minimumDelay}
             onChange={onChangeMinimumDelay}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiFormRow label={label}>
+        <WuiFormRow label={label}>
           {render ? (
-            <EuiDelayRender delay={minimumDelay}>
-              <EuiLoadingSpinner size="m" />
-            </EuiDelayRender>
+            <WuiDelayRender delay={minimumDelay}>
+              <WuiLoadingSpinner size="m" />
+            </WuiDelayRender>
           ) : (
             <Fragment />
           )}
-        </EuiFormRow>
-      </EuiFlexItem>
+        </WuiFormRow>
+      </WuiFlexItem>
     </Fragment>
   );
 };

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,24 +35,24 @@ import classNames from 'classnames';
 
 import { Moment } from 'moment'; // eslint-disable-line import/named
 
-import { EuiFormControlLayout, EuiValidatableControl } from '../form';
-import { EuiFormControlLayoutIconsProps } from '../form/form_control_layout/form_control_layout_icons';
+import { WuiFormControlLayout, WuiValidatableControl } from '../form';
+import { WuiFormControlLayoutIconsProps } from '../form/form_control_layout/form_control_layout_icons';
 
-import { EuiErrorBoundary } from '../error_boundary';
+import { WuiErrorBoundary } from '../error_boundary';
 
-import { EuiI18nConsumer } from '../context';
+import { WuiI18nConsumer } from '../context';
 import { ApplyClassComponentDefaults, CommonProps } from '../common';
 
 // @ts-ignore the type is provided by react-datepicker.d.ts
 import { ReactDatePicker as _ReactDatePicker } from '../../../packages';
 import ReactDatePicker, { ReactDatePickerProps } from './react-datepicker'; // eslint-disable-line import/no-unresolved
 
-export const euiDatePickerDefaultDateFormat = 'MM/DD/YYYY';
-export const euiDatePickerDefaultTimeFormat = 'hh:mm A';
+export const wuiDatePickerDefaultDateFormat = 'MM/DD/YYYY';
+export const wuiDatePickerDefaultTimeFormat = 'hh:mm A';
 
 const DatePicker = _ReactDatePicker as typeof ReactDatePicker;
 
-interface EuiExtendedDatePickerProps extends ReactDatePickerProps {
+interface WuiExtendedDatePickerProps extends ReactDatePickerProps {
   /**
    * Applies classes to the numbered days provided. Check docs for example.
    */
@@ -93,7 +106,7 @@ interface EuiExtendedDatePickerProps extends ReactDatePickerProps {
   /**
    * Pass an icon type to change the default `calendar` or `clock` icon
    */
-  iconType?: EuiFormControlLayoutIconsProps['icon'];
+  iconType?: WuiFormControlLayoutIconsProps['icon'];
 
   /**
    * Sets the placement of the popover. It accepts: `"bottom"`, `"bottom-end"`, `"bottom-start"`, `"left"`, `"left-end"`, `"left-start"`, `"right"`, `"right-end"`, `"right-start"`, `"top"`, `"top-end"`, `"top-start"`
@@ -101,16 +114,16 @@ interface EuiExtendedDatePickerProps extends ReactDatePickerProps {
   popoverPlacement?: ReactDatePickerProps['popperPlacement'];
 }
 
-type _EuiDatePickerProps = CommonProps & EuiExtendedDatePickerProps;
+type _WuiDatePickerProps = CommonProps & WuiExtendedDatePickerProps;
 
-export type EuiDatePickerProps = ApplyClassComponentDefaults<
-  typeof EuiDatePicker
+export type WuiDatePickerProps = ApplyClassComponentDefaults<
+  typeof WuiDatePicker
 >;
 
-export class EuiDatePicker extends Component<_EuiDatePickerProps> {
+export class WuiDatePicker extends Component<_WuiDatePickerProps> {
   static defaultProps = {
     adjustDateOnChange: true,
-    dateFormat: euiDatePickerDefaultDateFormat,
+    dateFormat: wuiDatePickerDefaultDateFormat,
     fullWidth: false,
     inputRef: () => {},
     isLoading: false,
@@ -118,7 +131,7 @@ export class EuiDatePicker extends Component<_EuiDatePickerProps> {
     shouldCloseOnSelect: true,
     showIcon: true,
     showTimeSelect: false,
-    timeFormat: euiDatePickerDefaultTimeFormat,
+    timeFormat: wuiDatePickerDefaultTimeFormat,
     popoverPlacement: 'bottom-start',
   };
 
@@ -162,24 +175,24 @@ export class EuiDatePicker extends Component<_EuiDatePickerProps> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiDatePicker', {
-      'euiDatePicker--shadow': shadow,
-      'euiDatePicker--inline': inline,
+    const classes = classNames('wuiDatePicker', {
+      'wuiDatePicker--shadow': shadow,
+      'wuiDatePicker--inline': inline,
     });
 
     const datePickerClasses = classNames(
-      'euiDatePicker',
-      'euiFieldText',
+      'wuiDatePicker',
+      'wuiFieldText',
       {
-        'euiFieldText--fullWidth': fullWidth,
-        'euiFieldText-isLoading': isLoading,
-        'euiFieldText--withIcon': !inline && showIcon,
-        'euiFieldText-isInvalid': isInvalid,
+        'wuiFieldText--fullWidth': fullWidth,
+        'wuiFieldText-isLoading': isLoading,
+        'wuiFieldText--withIcon': !inline && showIcon,
+        'wuiFieldText-isInvalid': isInvalid,
       },
       className
     );
 
-    let optionalIcon: EuiFormControlLayoutIconsProps['icon'];
+    let optionalIcon: WuiFormControlLayoutIconsProps['icon'];
     if (inline || customInput || !showIcon) {
       optionalIcon = undefined;
     } else if (iconType) {
@@ -193,15 +206,15 @@ export class EuiDatePicker extends Component<_EuiDatePickerProps> {
     // In case the consumer did not alter the default date format but wants
     // to add the time select, we append the default time format
     let fullDateFormat = dateFormat;
-    if (showTimeSelect && dateFormat === euiDatePickerDefaultDateFormat) {
+    if (showTimeSelect && dateFormat === wuiDatePickerDefaultDateFormat) {
       fullDateFormat = `${dateFormat} ${timeFormat}`;
     }
 
-    // EuiDatePicker only supports a subset of props from react-datepicker. Using any of
+    // WuiDatePicker only supports a subset of props from react-datepicker. Using any of
     // the unsupported props below will spit out an error.
     const PropNotSupported = () => {
-      throw new Error(`You are using a prop from react-datepicker that EuiDatePicker
-        does not support. Please check the EUI documentation for more information.`);
+      throw new Error(`You are using a prop from react-datepicker that WuiDatePicker
+        does not support. Please check the WUI documentation for more information.`);
     };
 
     if (
@@ -227,22 +240,22 @@ export class EuiDatePicker extends Component<_EuiDatePickerProps> {
       this.props.withPortal
     ) {
       return (
-        <EuiErrorBoundary>
+        <WuiErrorBoundary>
           <PropNotSupported />
-        </EuiErrorBoundary>
+        </WuiErrorBoundary>
       );
     }
 
     return (
       <span>
         <span className={classes}>
-          <EuiFormControlLayout
+          <WuiFormControlLayout
             icon={optionalIcon}
             fullWidth={fullWidth}
             clear={selected && onClear ? { onClick: onClear } : undefined}
             isLoading={isLoading}>
-            <EuiValidatableControl isInvalid={isInvalid}>
-              <EuiI18nConsumer>
+            <WuiValidatableControl isInvalid={isInvalid}>
+              <WuiI18nConsumer>
                 {({ locale: contextLocale }) => {
                   return (
                     <DatePicker
@@ -282,9 +295,9 @@ export class EuiDatePicker extends Component<_EuiDatePickerProps> {
                     />
                   );
                 }}
-              </EuiI18nConsumer>
-            </EuiValidatableControl>
-          </EuiFormControlLayout>
+              </WuiI18nConsumer>
+            </WuiValidatableControl>
+          </WuiFormControlLayout>
         </span>
       </span>
     );

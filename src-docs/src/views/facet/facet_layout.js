@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFacetButton,
-  EuiFacetGroup,
-  EuiIcon,
-  EuiAvatar,
-  EuiTitle,
-  EuiSpacer,
+  WuiFacetButton,
+  WuiFacetGroup,
+  WuiIcon,
+  WuiAvatar,
+  WuiTitle,
+  WuiSpacer,
 } from '../../../../src/components';
 
-import { euiPaletteColorBlind } from '../../../../src/services';
+import { wuiPaletteColorBlind } from '../../../../src/services';
 
 export default () => {
   const [icon, setIcon] = useState(false);
@@ -67,42 +67,42 @@ export default () => {
       id: 'facet0',
       label: 'Simple, no icon',
       quantity: 6,
-      iconColor: euiPaletteColorBlind()[0],
+      iconColor: wuiPaletteColorBlind()[0],
       onClick: facet0Clicked,
     },
     {
       id: 'facet1',
       label: 'Label or color indicator',
       quantity: 60,
-      iconColor: euiPaletteColorBlind()[1],
+      iconColor: wuiPaletteColorBlind()[1],
       onClick: facet1Clicked,
     },
     {
       id: 'facet2',
       label: 'Disable all others',
       quantity: 600,
-      iconColor: euiPaletteColorBlind()[2],
+      iconColor: wuiPaletteColorBlind()[2],
       onClick: facet2Clicked,
     },
     {
       id: 'facet3',
       label: 'Avatars instead of icons',
       quantity: 60,
-      iconColor: euiPaletteColorBlind()[3],
+      iconColor: wuiPaletteColorBlind()[3],
       onClick: facet3Clicked,
     },
     {
       id: 'facet4',
       label: 'Show all as loading',
       quantity: 6,
-      iconColor: euiPaletteColorBlind()[4],
+      iconColor: wuiPaletteColorBlind()[4],
       onClick: facet4Clicked,
     },
     {
       id: 'facet5',
       label: 'Just here to show truncation of really long labels',
       quantity: 0,
-      iconColor: euiPaletteColorBlind()[5],
+      iconColor: wuiPaletteColorBlind()[5],
     },
   ];
 
@@ -119,13 +119,13 @@ export default () => {
         {list.map(facet => {
           let iconNode;
           if (icon) {
-            iconNode = <EuiIcon type="dot" color={facet.iconColor} />;
+            iconNode = <WuiIcon type="dot" color={facet.iconColor} />;
           } else if (avatars) {
-            iconNode = <EuiAvatar size="s" name={facet.label} />;
+            iconNode = <WuiAvatar size="s" name={facet.label} />;
           }
 
           return (
-            <EuiFacetButton
+            <WuiFacetButton
               key={facet.id}
               id={`${facet.id}_${align}`}
               quantity={facet.quantity}
@@ -137,7 +137,7 @@ export default () => {
                 facet.onClick ? () => facet.onClick(facet.id) : undefined
               }>
               {facet.label}
-            </EuiFacetButton>
+            </WuiFacetButton>
           );
         })}
       </>
@@ -146,21 +146,21 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle size="s">
+      <WuiTitle size="s">
         <h3>Vertical</h3>
-      </EuiTitle>
-      <EuiFacetGroup style={{ maxWidth: 200 }}>
+      </WuiTitle>
+      <WuiFacetGroup style={{ maxWidth: 200 }}>
         {facets('Vertical')}
-      </EuiFacetGroup>
+      </WuiFacetGroup>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiTitle size="s">
+      <WuiTitle size="s">
         <h3>Horizontal and large gutter</h3>
-      </EuiTitle>
-      <EuiFacetGroup layout="horizontal" gutterSize="l">
+      </WuiTitle>
+      <WuiFacetGroup layout="horizontal" gutterSize="l">
         {facets('Horizontal')}
-      </EuiFacetGroup>
+      </WuiFacetGroup>
     </div>
   );
 };

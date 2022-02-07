@@ -5,10 +5,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiFilterGroup,
-  EuiFilterButton,
-  EuiFilterSelectItem,
+  WuiCode,
+  WuiFilterGroup,
+  WuiFilterButton,
+  WuiFilterSelectItem,
 } from '../../../../src/components';
 
 import FilterGroup from './filter_group';
@@ -41,36 +41,36 @@ export const FilterGroupExample = {
       text: (
         <Fragment>
           <p>
-            Use <strong>EuiFilterGroup</strong> to wrap{' '}
-            <strong>EuiFilterButtons</strong> into a container that looks nice
+            Use <strong>WuiFilterGroup</strong> to wrap{' '}
+            <strong>WuiFilterButtons</strong> into a container that looks nice
             against form fields (like search). These buttons are used in two
             different patterns. The most simplest use is that of an on/off
             pattern to show whether a filter is on. Add the prop{' '}
-            <EuiCode>withNext</EuiCode> to remove the border between it and the
-            next EuiFilterButton to visually group similar or opposite style
+            <WuiCode>withNext</WuiCode> to remove the border between it and the
+            next WuiFilterButton to visually group similar or opposite style
             filters.
           </p>
           <p>
-            Add the prop <EuiCode>withNext</EuiCode> to remove the border
-            between it and the next EuiFilterButton to visually group similar or
+            Add the prop <WuiCode>withNext</WuiCode> to remove the border
+            between it and the next WuiFilterButton to visually group similar or
             opposite style filters.
           </p>
           <p>
-            Set <EuiCode>hasActiveFilters</EuiCode> to true when the filter is
+            Set <WuiCode>hasActiveFilters</WuiCode> to true when the filter is
             active.
           </p>
         </Fragment>
       ),
-      props: { EuiFilterGroup, EuiFilterButton },
+      props: { WuiFilterGroup, WuiFilterButton },
       demo: <FilterGroupSimple />,
-      snippet: `<EuiFilterGroup>
-  <EuiFilterButton
+      snippet: `<WuiFilterGroup>
+  <WuiFilterButton
     hasActiveFilters={isFilterOn}
     onClick={toggleFilter}
   >
     Single filter
-  </EuiFilterButton>
-</EuiFilterGroup>`,
+  </WuiFilterButton>
+</WuiFilterGroup>`,
     },
     {
       title: 'Multi-select',
@@ -90,26 +90,26 @@ export const FilterGroupExample = {
             To provide a long list of grouped filter, use a popover for
             filtering an array of passed items. This mostly uses standard
             popover mechanics, but the component{' '}
-            <strong>EuiFilterSelectItem</strong> is used for the items
+            <strong>WuiFilterSelectItem</strong> is used for the items
             themselves.
           </p>
           <h3>Indicating number of filters</h3>
           <p>
-            By passing a number to <EuiCode>numFilters</EuiCode> you can express
+            By passing a number to <WuiCode>numFilters</WuiCode> you can express
             the number of filters available. When the user has applied these
-            filter add the prop <EuiCode>hasActiveFilters</EuiCode> as before
+            filter add the prop <WuiCode>hasActiveFilters</WuiCode> as before
             and this will change the coloring of the indicator. You can also
-            supply a number to <EuiCode>numActiveFilters</EuiCode>
+            supply a number to <WuiCode>numActiveFilters</WuiCode>
             which will change the number displayed.
           </p>
         </Fragment>
       ),
-      props: { EuiFilterButton, EuiFilterSelectItem },
+      props: { WuiFilterButton, WuiFilterSelectItem },
       demo: <FilterGroupMulti />,
-      snippet: `<EuiFilterGroup>
-  <EuiPopover
+      snippet: `<WuiFilterGroup>
+  <WuiPopover
     button={
-      <EuiFilterButton
+      <WuiFilterButton
         iconType="arrowDown"
         onClick={onButtonClick}
         isSelected={isPopoverOpen}
@@ -118,14 +118,14 @@ export const FilterGroupExample = {
         numActiveFilters={2}
       >
         Filters
-      </EuiFilterButton>
+      </WuiFilterButton>
     }
     isOpen={isPopoverOpen}
     closePopover={closePopover}
   >
     ...
-  </EuiPopover>
-</EuiFilterGroup>`,
+  </WuiPopover>
+</WuiFilterGroup>`,
     },
     {
       title: 'Layout',
@@ -143,25 +143,25 @@ export const FilterGroupExample = {
         <p>
           By default, the bar is auto-widthed based on its contents. To expand
           the bar to fill its parent&apos;s width add{' '}
-          <EuiCode>fullWidth</EuiCode>. This will also set each button to grow.
+          <WuiCode>fullWidth</WuiCode>. This will also set each button to grow.
           If you do not want the button to grow, set{' '}
-          <EuiCode language="js">grow=false</EuiCode>.
+          <WuiCode language="js">grow=false</WuiCode>.
         </p>
       ),
-      components: { EuiFilterGroup },
-      props: { EuiFilterGroup, EuiFilterButton, EuiFilterSelectItem },
+      components: { WuiFilterGroup },
+      props: { WuiFilterGroup, WuiFilterButton, WuiFilterSelectItem },
       demo: <FilterGroup />,
-      snippet: `<EuiFilterGroup fullWidth>
-  <EuiFilterButton>
+      snippet: `<WuiFilterGroup fullWidth>
+  <WuiFilterButton>
     Single filter
-  </EuiFilterButton>
-  <EuiFilterButton grow={false} withNext>
+  </WuiFilterButton>
+  <WuiFilterButton grow={false} withNext>
     On
-  </EuiFilterButton>
-  <EuiFilterButton grow={false}>
+  </WuiFilterButton>
+  <WuiFilterButton grow={false}>
     Off
-  </EuiFilterButton>
-</EuiFilterGroup>`,
+  </WuiFilterButton>
+</WuiFilterGroup>`,
     },
   ],
 };

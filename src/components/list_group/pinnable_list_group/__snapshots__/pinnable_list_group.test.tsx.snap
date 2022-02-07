@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
+exports[`WuiPinnableListGroup can have custom pin icon titles 1`] = `
 <ul
   aria-label="aria-label"
-  class="euiListGroup euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiPinnableListGroup testClass1 testClass2"
+  class="wuiListGroup wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiPinnableListGroup testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <span
-      class="euiListGroupItem__text"
+      class="wuiListGroupItem__text"
     >
       <div
-        class="euiListGroupItem__icon"
-        data-euiicon-type="stop"
+        class="wuiListGroupItem__icon"
+        data-wuiicon-type="stop"
       />
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Label with iconType"
       >
         Label with iconType
@@ -25,25 +25,25 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
     </span>
     <button
       aria-label="Pin Label with iconType to the top"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin Label with iconType to the top"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <span
-      class="euiListGroupItem__text"
+      class="wuiListGroupItem__text"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Custom extra action"
       >
         Custom extra action
@@ -51,26 +51,26 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
     </span>
     <button
       aria-label="bell"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiListGroupItem__extraAction-alwaysShow"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiListGroupItem__extraAction-alwaysShow"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="bell"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="bell"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isActive euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isActive wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Active link"
       >
         Active link
@@ -78,26 +78,26 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
     </a>
     <button
       aria-label="Pin Active link to the top"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin Active link to the top"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <button
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       type="button"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Button with onClick"
       >
         Button with onClick
@@ -105,27 +105,27 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
     </button>
     <button
       aria-label="Unpin Button with onClick to the top"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiListGroupItem__extraAction-alwaysShow euiPinnableListGroup__itemExtraAction euiPinnableListGroup__itemExtraAction-pinned"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiListGroupItem__extraAction-alwaysShow wuiPinnableListGroup__itemExtraAction wuiPinnableListGroup__itemExtraAction-pinned"
       title="Unpin Button with onClick to the top"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Link with href"
       >
         Link with href
@@ -133,27 +133,27 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
     </a>
     <button
       aria-label="Pin Link with href to the top"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin Link with href to the top"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Not pinnable"
       >
         Not pinnable
@@ -163,24 +163,24 @@ exports[`EuiPinnableListGroup can have custom pin icon titles 1`] = `
 </ul>
 `;
 
-exports[`EuiPinnableListGroup is rendered 1`] = `
+exports[`WuiPinnableListGroup is rendered 1`] = `
 <ul
   aria-label="aria-label"
-  class="euiListGroup euiListGroup--gutterSmall euiListGroup-maxWidthDefault euiPinnableListGroup testClass1 testClass2"
+  class="wuiListGroup wuiListGroup--gutterSmall wuiListGroup-maxWidthDefault wuiPinnableListGroup testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <span
-      class="euiListGroupItem__text"
+      class="wuiListGroupItem__text"
     >
       <div
-        class="euiListGroupItem__icon"
-        data-euiicon-type="stop"
+        class="wuiListGroupItem__icon"
+        data-wuiicon-type="stop"
       />
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Label with iconType"
       >
         Label with iconType
@@ -188,25 +188,25 @@ exports[`EuiPinnableListGroup is rendered 1`] = `
     </span>
     <button
       aria-label="Pin item"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin item"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <span
-      class="euiListGroupItem__text"
+      class="wuiListGroupItem__text"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Custom extra action"
       >
         Custom extra action
@@ -214,26 +214,26 @@ exports[`EuiPinnableListGroup is rendered 1`] = `
     </span>
     <button
       aria-label="bell"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiListGroupItem__extraAction-alwaysShow"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiListGroupItem__extraAction-alwaysShow"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="bell"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="bell"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isActive euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isActive wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Active link"
       >
         Active link
@@ -241,26 +241,26 @@ exports[`EuiPinnableListGroup is rendered 1`] = `
     </a>
     <button
       aria-label="Pin item"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin item"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <button
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       type="button"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Button with onClick"
       >
         Button with onClick
@@ -268,27 +268,27 @@ exports[`EuiPinnableListGroup is rendered 1`] = `
     </button>
     <button
       aria-label="Unpin item"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiListGroupItem__extraAction-alwaysShow euiPinnableListGroup__itemExtraAction euiPinnableListGroup__itemExtraAction-pinned"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiListGroupItem__extraAction-alwaysShow wuiPinnableListGroup__itemExtraAction wuiPinnableListGroup__itemExtraAction-pinned"
       title="Unpin item"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiListGroupItem-hasExtraAction euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiListGroupItem-hasExtraAction wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Link with href"
       >
         Link with href
@@ -296,27 +296,27 @@ exports[`EuiPinnableListGroup is rendered 1`] = `
     </a>
     <button
       aria-label="Pin item"
-      class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiPinnableListGroup__itemExtraAction"
+      class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiPinnableListGroup__itemExtraAction"
       title="Pin item"
       type="button"
     >
       <div
         aria-hidden="true"
-        class="euiButtonIcon__icon"
-        data-euiicon-type="pinFilled"
+        class="wuiButtonIcon__icon"
+        data-wuiicon-type="pinFilled"
       />
     </button>
   </li>
   <li
-    class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable euiPinnableListGroup__item"
+    class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable wuiPinnableListGroup__item"
   >
     <a
-      class="euiListGroupItem__button"
+      class="wuiListGroupItem__button"
       href="#"
       rel="noreferrer"
     >
       <span
-        class="euiListGroupItem__label"
+        class="wuiListGroupItem__label"
         title="Not pinnable"
       >
         Not pinnable

@@ -1,16 +1,16 @@
-.euiFilterButton {
-  background-color: $euiFormBackgroundColor;
-  height: $euiFormControlHeight;
+.wuiFilterButton {
+  background-color: $wuiFormBackgroundColor;
+  height: $wuiFormControlHeight;
   width: auto;
-  border: 1px solid $euiFormBorderColor;
+  border: 1px solid $wuiFormBorderColor;
   border-right: none;
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $wuiButtonColorDisabledText;
     pointer-events: none;
 
-    .euiFilterButton__notification {
+    .wuiFilterButton__notification {
       opacity: .5;
     }
   }
@@ -20,42 +20,42 @@
     // Remove underline from whole button so notifications don't get the underline
     text-decoration: none;
 
-    .euiFilterButton__textShift {
+    .wuiFilterButton__textShift {
       // Add put it only on the actual text part
       text-decoration: underline;
     }
   }
 }
 
-.euiFilterButton-hasActiveFilters {
-  font-weight: $euiFontWeightBold;
+.wuiFilterButton-hasActiveFilters {
+  font-weight: $wuiFontWeightBold;
 }
 
-.euiFilterButton--hasIcon .euiButtonEmpty__content {
+.wuiFilterButton--hasIcon .wuiButtonEmpty__content {
   justify-content: space-between;
 }
 
-.euiFilterButton--withNext + .euiFilterButton {
-  margin-left: $euiSizeXS * -1;
+.wuiFilterButton--withNext + .wuiFilterButton {
+  margin-left: $wuiSizeXS * -1;
   border-left: none;
 }
 
-.euiFilterButton-isSelected {
-  background-color: $euiColorLightestShade;
+.wuiFilterButton-isSelected {
+  background-color: $wuiColorLightestShade;
 }
 
-.euiFilterButton__text-hasNotification {
+.wuiFilterButton__text-hasNotification {
   display: flex;
   align-items: center;
 }
 
-.euiFilterButton__notification {
-  margin-left: $euiSizeS;
+.wuiFilterButton__notification {
+  margin-left: $wuiSizeS;
   vertical-align: text-bottom;
 }
 
-.euiFilterButton__textShift {
-  @include euiTextShift;
-  @include euiTextTruncate;
-  min-width: $euiSize * 3;
+.wuiFilterButton__textShift {
+  @include wuiTextShift;
+  @include wuiTextTruncate;
+  min-width: $wuiSize * 3;
 }

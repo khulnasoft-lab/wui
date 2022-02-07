@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,12 +35,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
 export type FilterChecked = 'on' | 'off';
-export interface EuiFilterSelectItemProps
+export interface WuiFilterSelectItemProps
   extends CommonProps,
     ButtonHTMLAttributes<HTMLButtonElement> {
   checked?: FilterChecked;
@@ -50,7 +63,7 @@ const resolveIconAndColor = (checked?: FilterChecked) => {
       };
 };
 
-export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
+export class WuiFilterSelectItem extends Component<WuiFilterSelectItemProps> {
   static defaultProps = {
     showIcons: true,
   };
@@ -82,9 +95,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
       ...rest
     } = this.props;
     const classes = classNames(
-      'euiFilterSelectItem',
+      'wuiFilterSelectItem',
       {
-        'euiFilterSelectItem-isFocused': isFocused,
+        'wuiFilterSelectItem-isFocused': isFocused,
       },
       className
     );
@@ -93,9 +106,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
     if (showIcons) {
       const { icon, color } = resolveIconAndColor(checked);
       iconNode = (
-        <EuiFlexItem grow={false}>
-          <EuiIcon color={color} type={icon} />
-        </EuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiIcon color={color} type={icon} />
+        </WuiFlexItem>
       );
     }
 
@@ -109,18 +122,18 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
         disabled={disabled}
         aria-disabled={disabled}
         {...rest}>
-        <EuiFlexGroup
+        <WuiFlexGroup
           alignItems="center"
           gutterSize="s"
           component="span"
           responsive={false}>
           {iconNode}
-          <EuiFlexItem
-            className="euiFilterSelectItem__content"
+          <WuiFlexItem
+            className="wuiFilterSelectItem__content"
             component="span">
             {children}
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
       </button>
     );
   }

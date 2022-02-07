@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,22 +34,22 @@ import React, { FunctionComponent, ButtonHTMLAttributes } from 'react';
 
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiIcon } from '../../icon';
-import { EuiI18n } from '../../i18n';
+import { WuiIcon } from '../../icon';
+import { WuiI18n } from '../../i18n';
 
-export type EuiFormControlLayoutClearButtonProps = CommonProps &
+export type WuiFormControlLayoutClearButtonProps = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLayoutClearButtonProps> = ({
+export const WuiFormControlLayoutClearButton: FunctionComponent<WuiFormControlLayoutClearButtonProps> = ({
   className,
   onClick,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutClearButton', className);
+  const classes = classNames('wuiFormControlLayoutClearButton', className);
 
   return (
-    <EuiI18n
-      token="euiFormControlLayoutClearButton.label"
+    <WuiI18n
+      token="wuiFormControlLayoutClearButton.label"
       default="Clear input">
       {(label: string) => (
         <button
@@ -45,12 +58,12 @@ export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLa
           onClick={onClick}
           aria-label={label}
           {...rest}>
-          <EuiIcon
-            className="euiFormControlLayoutClearButton__icon"
+          <WuiIcon
+            className="wuiFormControlLayoutClearButton__icon"
             type="cross"
           />
         </button>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

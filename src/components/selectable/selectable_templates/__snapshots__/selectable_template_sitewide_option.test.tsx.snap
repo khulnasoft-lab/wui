@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are formatted with euiSelectableTemplateSitewideFormatOptions() 1`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are formatted with wuiSelectableTemplateSitewideFormatOptions() 1`] = `
 Array [
   Object {
-    "append": <EuiAvatar
+    "append": <WuiAvatar
       name="Default Space"
       size="s"
       type="space"
@@ -12,7 +12,7 @@ Array [
     "avatar": Object {
       "name": "Default Space",
     },
-    "className": "euiSelectableTemplateSitewide__listItem testClass1 testClass2",
+    "className": "wuiSelectableTemplateSitewide__listItem testClass1 testClass2",
     "data-test-subj": "test subject string",
     "key": "Basic data application",
     "label": "Basic data application",
@@ -28,7 +28,7 @@ Array [
   },
   Object {
     "append": undefined,
-    "className": "euiSelectableTemplateSitewide__listItem",
+    "className": "wuiSelectableTemplateSitewide__listItem",
     "icon": Object {
       "type": "user",
     },
@@ -45,7 +45,7 @@ Array [
         "type": "deployment",
       },
     ],
-    "prepend": <EuiIcon
+    "prepend": <WuiIcon
       color="subdued"
       size="l"
       type="user"
@@ -54,7 +54,7 @@ Array [
   },
   Object {
     "append": undefined,
-    "className": "euiSelectableTemplateSitewide__listItem",
+    "className": "wuiSelectableTemplateSitewide__listItem",
     "icon": Object {
       "color": "accent",
       "type": "alert",
@@ -78,7 +78,7 @@ Array [
         "type": "PINK",
       },
     ],
-    "prepend": <EuiIcon
+    "prepend": <WuiIcon
       color="accent"
       size="l"
       type="alert"
@@ -89,188 +89,188 @@ Array [
 ]
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() 1`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() 1`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search=""
   >
     Basic data application
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--application euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--application wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="application"
     >
       Application
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() 2`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() 2`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search=""
   >
     Platform with deployment highlighted
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--platform euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--platform wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="platform"
     >
       Account
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--deployment euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--deployment wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="deployment"
     >
       personal-databoard
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() 3`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() 3`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search=""
   >
     Other metas
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--article euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--article wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="article"
     >
       Article
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--case euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--case wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="case"
     >
       Case
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta"
       search=""
     >
       Text
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--PINK euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--PINK wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="PINK"
     >
       I have a custom type
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() and search text 1`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() and search text 1`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search="data"
   >
     Basic data application
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--application euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--application wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="application"
     >
       Application
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() and search text 2`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() and search text 2`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search="data"
   >
     Platform with deployment highlighted
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--platform euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--platform wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="platform"
     >
       Account
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--deployment euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--deployment wuiSelectableTemplateSitewide__optionMeta"
       search="data"
       type="deployment"
     >
       personal-databoard
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;
 
-exports[`EuiSelectableTemplateSitewideOptions different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() and search text 3`] = `
+exports[`WuiSelectableTemplateSitewideOptions different configurations are rendered with wuiSelectableTemplateSitewideRenderOptions() and search text 3`] = `
 <React.Fragment>
-  <EuiHighlight
-    className="euiSelectableTemplateSitewide__listItemTitle"
+  <WuiHighlight
+    className="wuiSelectableTemplateSitewide__listItemTitle"
     search="data"
   >
     Other metas
-  </EuiHighlight>
+  </WuiHighlight>
   <span
-    className="euiSelectableTemplateSitewide__optionMetasList"
+    className="wuiSelectableTemplateSitewide__optionMetasList"
   >
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--article euiSelectableTemplateSitewide__optionMeta"
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--article wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="article"
     >
       Article
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--case euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--case wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="case"
     >
       Case
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta"
       search=""
     >
       Text
-    </EuiHighlight>
-    <EuiHighlight
-      className="euiSelectableTemplateSitewide__optionMeta--PINK euiSelectableTemplateSitewide__optionMeta"
+    </WuiHighlight>
+    <WuiHighlight
+      className="wuiSelectableTemplateSitewide__optionMeta--PINK wuiSelectableTemplateSitewide__optionMeta"
       search=""
       type="PINK"
     >
       I have a custom type
-    </EuiHighlight>
+    </WuiHighlight>
   </span>
 </React.Fragment>
 `;

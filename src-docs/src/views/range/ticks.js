@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiRange,
-  EuiSpacer,
-  EuiTitle,
-  EuiDualRange,
+  WuiRange,
+  WuiSpacer,
+  WuiTitle,
+  WuiDualRange,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -23,24 +23,24 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <WuiRange
         id={htmlIdGenerator()()}
         step={10}
         value={value}
         onChange={onChange}
         showTicks
-        aria-label="An example of EuiRange with ticks"
+        aria-label="An example of WuiRange with ticks"
       />
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <WuiTitle size="xxs">
         <h3>Custom tick interval</h3>
-      </EuiTitle>
+      </WuiTitle>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiRange
+      <WuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={onChange}
@@ -48,18 +48,18 @@ export default () => {
         showRange
         showTicks
         tickInterval={20}
-        aria-label="An example of EuiRange with custom tickInterval"
+        aria-label="An example of WuiRange with custom tickInterval"
       />
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <WuiTitle size="xxs">
         <h3>Custom ticks object</h3>
-      </EuiTitle>
+      </WuiTitle>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiDualRange
+      <WuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={onDualChange}
@@ -69,7 +69,7 @@ export default () => {
           { label: '100kb', value: 100 },
         ]}
         showInput
-        aria-label="An example of EuiDualRange with ticks"
+        aria-label="An example of WuiDualRange with ticks"
       />
     </Fragment>
   );

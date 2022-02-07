@@ -1,18 +1,18 @@
 import React, { useState, useRef } from 'react';
 
 import {
-  EuiButton,
-  EuiCheckboxGroup,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiLink,
-  EuiRange,
-  EuiSelect,
-  EuiSpacer,
-  EuiSwitch,
-  EuiText,
+  WuiButton,
+  WuiCheckboxGroup,
+  WuiFieldText,
+  WuiForm,
+  WuiFormRow,
+  WuiFilePicker,
+  WuiLink,
+  WuiRange,
+  WuiSelect,
+  WuiSpacer,
+  WuiSwitch,
+  WuiText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -54,19 +54,19 @@ export default () => {
   };
 
   return (
-    <EuiForm component="form">
-      <EuiFormRow label="Text field" helpText="I am some friendly help text.">
-        <EuiFieldText name="first" />
-      </EuiFormRow>
+    <WuiForm component="form">
+      <WuiFormRow label="Text field" helpText="I am some friendly help text.">
+        <WuiFieldText name="first" />
+      </WuiFormRow>
 
-      <EuiFormRow
+      <WuiFormRow
         label="Select (with no initial selection)"
         labelAppend={
-          <EuiText size="xs">
-            <EuiLink>Link to some help</EuiLink>
-          </EuiText>
+          <WuiText size="xs">
+            <WuiLink>Link to some help</WuiLink>
+          </WuiText>
         }>
-        <EuiSelect
+        <WuiSelect
           hasNoInitialSelection
           options={[
             { value: 'option_one', text: 'Option one' },
@@ -74,30 +74,30 @@ export default () => {
             { value: 'option_three', text: 'Option three' },
           ]}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="File picker">
-        <EuiFilePicker />
-      </EuiFormRow>
+      <WuiFormRow label="File picker">
+        <WuiFilePicker />
+      </WuiFormRow>
 
-      <EuiFormRow label="Range">
-        <EuiRange min={0} max={100} name="range" id="range" />
-      </EuiFormRow>
+      <WuiFormRow label="Range">
+        <WuiRange min={0} max={100} name="range" id="range" />
+      </WuiFormRow>
 
-      <EuiFormRow
+      <WuiFormRow
         label="Use a switch instead of a single checkbox and set 'hasChildLabel' to false"
         hasChildLabel={false}>
-        <EuiSwitch
+        <WuiSwitch
           name="switch"
           label="Should we do this?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         options={checkboxes}
         idToSelectedMap={checkboxIdToSelectedMap}
         onChange={onCheckboxChange}
@@ -107,11 +107,11 @@ export default () => {
         }}
       />
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiButton type="submit" fill>
+      <WuiButton type="submit" fill>
         Save form
-      </EuiButton>
-    </EuiForm>
+      </WuiButton>
+    </WuiForm>
   );
 };

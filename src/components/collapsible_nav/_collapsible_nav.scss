@@ -1,70 +1,70 @@
-// Extends euiFlyout
+// Extends wuiFlyout
 @import '../flyout/variables';
 @import '../flyout/mixins';
 
-.euiCollapsibleNav {
-  @include euiFlyout;
+.wuiCollapsibleNav {
+  @include wuiFlyout;
   border-left: none;
   right: auto;
   left: 0;
-  width: $euiCollapsibleNavWidth;
+  width: $wuiCollapsibleNavWidth;
   max-width: 80vw;
-  animation: euiCollapsibleNavIn $euiAnimSpeedNormal $euiAnimSlightResistance;
+  animation: wuiCollapsibleNavIn $wuiAnimSpeedNormal $wuiAnimSlightResistance;
   clip-path: polygon(0 0, 150% 0, 150% 100%, 0 100%); // Must include the width of the close button too
 }
 
-.euiCollapsibleNav__closeButton {
+.wuiCollapsibleNav__closeButton {
   position: absolute;
   right: 0;
-  top: $euiSize;
+  top: $wuiSize;
   margin-right: -27%;
-  padding: $euiSizeM 0;
+  padding: $wuiSizeM 0;
   line-height: 1;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
 
   &:focus {
-    @include euiFocusRing;
+    @include wuiFocusRing;
   }
 
   &,
   &:focus {
-    // Override default `EuiButtonEmpty` :focus background to ensure better contrast
-    background: $euiColorEmptyShade;
+    // Override default `WuiButtonEmpty` :focus background to ensure better contrast
+    background: $wuiColorEmptyShade;
   }
 }
 
 // The addition of this class is handled through JS
 // via the `dockingBreakpoint` and `isDocked` combination
-.euiCollapsibleNav.euiCollapsibleNav--isDocked {
-  @include euiBottomShadowMedium;
-  z-index: $euiZHeader; // When docked, make it the same level as the header
+.wuiCollapsibleNav.wuiCollapsibleNav--isDocked {
+  @include wuiBottomShadowMedium;
+  z-index: $wuiZHeader; // When docked, make it the same level as the header
   clip-path: none;
 
-  .euiCollapsibleNav__closeButton {
+  .wuiCollapsibleNav__closeButton {
     display: none;
   }
 }
 
-.euiBody--collapsibleNavIsDocked {
+.wuiBody--collapsibleNavIsDocked {
   // Shrink the content from the left so it's no longer overlapped by the nav drawer (ALWAYS)
-  padding-left: $euiCollapsibleNavWidth !important; // sass-lint:disable-line no-important
-  transition: padding $euiAnimSpeedFast $euiAnimSlightResistance;
+  padding-left: $wuiCollapsibleNavWidth !important; // sass-lint:disable-line no-important
+  transition: padding $wuiAnimSpeedFast $wuiAnimSlightResistance;
 }
 
-@include euiBreakpoint('xs') {
+@include wuiBreakpoint('xs') {
   // At tiny screens, reduce the close button to a simple `x`
-  .euiCollapsibleNav__closeButton {
+  .wuiCollapsibleNav__closeButton {
     margin-right: -15%;
 
-    .euiCollapsibleNav__closeButtonText {
+    .wuiCollapsibleNav__closeButtonText {
       // But be sure the text can still be read by a screen reader
-      @include euiScreenReaderOnly;
+      @include wuiScreenReaderOnly;
     }
   }
 }
 
 // Specific keyframes so in comes in from the left
-@keyframes euiCollapsibleNavIn {
+@keyframes wuiCollapsibleNavIn {
   0% {
     opacity: 0;
     transform: translateX(-100%);

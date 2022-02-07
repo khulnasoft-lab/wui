@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiExpression, COLORS } from './expression';
+import { WuiExpression, COLORS } from './expression';
 
-describe('EuiExpression', () => {
+describe('WuiExpression', () => {
   test('renders', () => {
     const component = (
-      <EuiExpression
+      <WuiExpression
         description="the answer is"
         value="42"
         isActive={false}
@@ -40,7 +53,7 @@ describe('EuiExpression', () => {
 
   test('render with only description', () => {
     const component = (
-      <EuiExpression
+      <WuiExpression
         description="the answer is"
         isActive={false}
         onClick={() => {}}
@@ -55,7 +68,7 @@ describe('EuiExpression', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiExpression
+            <WuiExpression
               description="the answer is"
               value="42"
               color={color}
@@ -71,7 +84,7 @@ describe('EuiExpression', () => {
     describe('uppercase', () => {
       test('true renders uppercase', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             uppercase={true}
@@ -83,7 +96,7 @@ describe('EuiExpression', () => {
 
       test('false renders inherited case', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             uppercase={false}
@@ -97,7 +110,7 @@ describe('EuiExpression', () => {
     describe('display', () => {
       test('can be columns', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             display="columns"
@@ -111,7 +124,7 @@ describe('EuiExpression', () => {
     describe('isInvalid', () => {
       test('renders error state', () => {
         const component = (
-          <EuiExpression description="the answer is" value="42" isInvalid />
+          <WuiExpression description="the answer is" value="42" isInvalid />
         );
 
         expect(render(component)).toMatchSnapshot();
@@ -121,7 +134,7 @@ describe('EuiExpression', () => {
     describe('descriptionWidth', () => {
       test('changes the description&apos;s width when using columns', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             descriptionWidth={50}
             value="42"
@@ -137,7 +150,7 @@ describe('EuiExpression', () => {
     describe('textWrap', () => {
       test('can truncate text', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             textWrap="truncate"
@@ -151,7 +164,7 @@ describe('EuiExpression', () => {
     describe('isActive', () => {
       test('true renders active', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             isActive={true}
@@ -163,7 +176,7 @@ describe('EuiExpression', () => {
 
       test('false renders inactive', () => {
         const component = (
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             isActive={false}
@@ -178,7 +191,7 @@ describe('EuiExpression', () => {
       it('is called when the button is clicked', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiExpression
+          <WuiExpression
             description="the answer is"
             value="42"
             isActive={false}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiFieldSearch, EuiSwitch } from '../../../../src/components';
+import { WuiFieldSearch, WuiSwitch } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default () => {
@@ -17,7 +17,7 @@ export default () => {
       canPrepend
       canAppend
       extras={[
-        <EuiSwitch
+        <WuiSwitch
           compressed
           label={'clearable'}
           checked={isClearable}
@@ -26,7 +26,7 @@ export default () => {
           }}
         />,
       ]}>
-      <EuiFieldSearch
+      <WuiFieldSearch
         placeholder="Search this"
         value={value}
         onChange={e => onChange(e)}

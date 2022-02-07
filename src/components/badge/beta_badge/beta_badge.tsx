@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,9 +34,9 @@ import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
-import { EuiToolTip, ToolTipPositions } from '../../tool_tip';
+import { WuiToolTip, ToolTipPositions } from '../../tool_tip';
 
-import { EuiIcon, IconType } from '../../icon';
+import { WuiIcon, IconType } from '../../icon';
 
 // `label` prop can be a `ReactNode` only if `title` or `tooltipContent` is provided
 type LabelAsNode = (
@@ -74,11 +87,11 @@ type BadgeProps = {
   title?: string;
 } & ExclusiveUnion<LabelAsNode, LabelAsString>;
 
-type EuiBetaBadgeProps = CommonProps &
+type WuiBetaBadgeProps = CommonProps &
   Omit<HTMLAttributes<HTMLSpanElement>, 'title'> &
   BadgeProps;
 
-export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
+export const WuiBetaBadge: FunctionComponent<WuiBetaBadgeProps> = ({
   className,
   label,
   tooltipContent,
@@ -88,9 +101,9 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiBetaBadge',
+    'wuiBetaBadge',
     {
-      'euiBetaBadge--iconOnly': iconType,
+      'wuiBetaBadge--iconOnly': iconType,
     },
     className
   );
@@ -98,8 +111,8 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
   let icon;
   if (iconType) {
     icon = (
-      <EuiIcon
-        className="euiBetaBadge__icon"
+      <WuiIcon
+        className="wuiBetaBadge__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -109,14 +122,14 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
 
   if (tooltipContent) {
     return (
-      <EuiToolTip
+      <WuiToolTip
         position={tooltipPosition}
         content={tooltipContent}
         title={title || label}>
         <span tabIndex={0} className={classes} {...rest}>
           {icon || label}
         </span>
-      </EuiToolTip>
+      </WuiToolTip>
     );
   } else {
     const spanTitle = title || label;

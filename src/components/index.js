@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,331 +30,330 @@
  * under the License.
  */
 
-export { EuiAccordion } from './accordion';
+export { WuiAccordion } from './accordion';
 
-export { EuiAspectRatio } from './aspect_ratio';
+export { WuiAspectRatio } from './aspect_ratio';
 
-export { EuiAvatar } from './avatar';
+export { WuiAvatar } from './avatar';
 
 export {
-  EuiKeyboardAccessible,
-  EuiScreenReaderOnly,
-  EuiSkipLink,
+  WuiKeyboardAccessible,
+  WuiScreenReaderOnly,
+  WuiSkipLink,
 } from './accessibility';
 
 export {
-  EuiBadge,
-  EuiBetaBadge,
-  EuiNotificationBadge,
-  EuiBadgeGroup,
+  WuiBadge,
+  WuiBetaBadge,
+  WuiNotificationBadge,
+  WuiBadgeGroup,
 } from './badge';
 
-export { EuiBeacon } from './beacon';
+export { WuiBeacon } from './beacon';
 
-export { EuiBottomBar } from './bottom_bar';
+export { WuiBottomBar } from './bottom_bar';
 
-export { EuiBreadcrumbs } from './breadcrumbs';
+export { WuiBreadcrumbs } from './breadcrumbs';
 
 export {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiButtonToggle,
-  EuiButtonGroup,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiButtonToggle,
+  WuiButtonGroup,
 } from './button';
 
-export { EuiCallOut } from './call_out';
+export { WuiCallOut } from './call_out';
 
-export { EuiCard, EuiCheckableCard } from './card';
+export { WuiCard, WuiCheckableCard } from './card';
 
-export { EuiCode, EuiCodeBlock, EuiCodeBlockImpl } from './code';
+export { WuiCode, WuiCodeBlock, WuiCodeBlockImpl } from './code';
 
-export { EuiCodeEditor } from './code_editor';
+export { WuiCodeEditor } from './code_editor';
 
-export { EuiCollapsibleNav, EuiCollapsibleNavGroup } from './collapsible_nav';
+export { WuiCollapsibleNav, WuiCollapsibleNavGroup } from './collapsible_nav';
 
 export {
-  EuiColorPicker,
-  EuiColorPickerSwatch,
-  EuiColorStops,
-  EuiHue,
-  EuiSaturation,
+  WuiColorPicker,
+  WuiColorPickerSwatch,
+  WuiColorStops,
+  WuiHue,
+  WuiSaturation,
 } from './color_picker';
 
-export { EuiColorPalettePicker } from './color_picker/color_palette_picker';
+export { WuiColorPalettePicker } from './color_picker/color_palette_picker';
 
-export { EuiComboBox } from './combo_box';
+export { WuiComboBox } from './combo_box';
 
-export { EuiComment, EuiCommentList } from './comment_list';
+export { WuiComment, WuiCommentList } from './comment_list';
 
-export { EuiContext, EuiI18nConsumer } from './context';
+export { WuiContext, WuiI18nConsumer } from './context';
 
 export {
-  EuiContextMenu,
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
+  WuiContextMenu,
+  WuiContextMenuPanel,
+  WuiContextMenuItem,
 } from './context_menu';
 
-export { EuiControlBar } from './control_bar';
+export { WuiControlBar } from './control_bar';
 
-export { EuiCopy } from './copy';
+export { WuiCopy } from './copy';
 
-export { EuiDataGrid } from './datagrid';
+export { WuiDataGrid } from './datagrid';
 
 export {
-  EuiDatePicker,
-  EuiDatePickerRange,
-  EuiSuperDatePicker,
-  EuiSuperUpdateButton,
+  WuiDatePicker,
+  WuiDatePickerRange,
+  WuiSuperDatePicker,
+  WuiSuperUpdateButton,
   prettyDuration,
   commonDurationRanges,
 } from './date_picker';
 
-export { EuiDelayHide } from './delay_hide';
-export { EuiDelayRender } from './delay_render';
+export { WuiDelayHide } from './delay_hide';
+export { WuiDelayRender } from './delay_render';
 
 export {
-  EuiDescriptionList,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  WuiDescriptionList,
+  WuiDescriptionListTitle,
+  WuiDescriptionListDescription,
 } from './description_list';
 
 export {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  euiDragDropCopy,
-  euiDragDropMove,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
+  wuiDragDropCopy,
+  wuiDragDropMove,
+  wuiDragDropReorder,
 } from './drag_and_drop';
 
-export { EuiEmptyPrompt } from './empty_prompt';
+export { WuiEmptyPrompt } from './empty_prompt';
 
-export { EuiErrorBoundary } from './error_boundary';
+export { WuiErrorBoundary } from './error_boundary';
 
-export { EuiExpression } from './expression';
+export { WuiExpression } from './expression';
 
 export {
-  EuiFilterButton,
-  EuiFilterGroup,
-  EuiFilterSelectItem,
+  WuiFilterButton,
+  WuiFilterGroup,
+  WuiFilterSelectItem,
 } from './filter_group';
 
-export { EuiFacetButton, EuiFacetGroup } from './facet';
+export { WuiFacetButton, WuiFacetGroup } from './facet';
 
-export { EuiFlexGroup, EuiFlexGrid, EuiFlexItem } from './flex';
+export { WuiFlexGroup, WuiFlexGrid, WuiFlexItem } from './flex';
 
 export {
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutFooter,
-  EuiFlyoutHeader,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutFooter,
+  WuiFlyoutHeader,
 } from './flyout';
 
-export { EuiFocusTrap } from './focus_trap';
+export { WuiFocusTrap } from './focus_trap';
 
 export {
-  EuiCheckbox,
-  EuiCheckboxGroup,
-  EuiDescribedFormGroup,
-  EuiDualRange,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiFieldSearch,
-  EuiFieldText,
-  EuiFilePicker,
-  EuiForm,
-  EuiFormControlLayout,
-  EuiFormControlLayoutDelimited,
-  EuiFormErrorText,
-  EuiFormFieldset,
-  EuiFormHelpText,
-  EuiFormLabel,
-  EuiFormLegend,
-  EuiFormRow,
-  EuiRadio,
-  EuiRadioGroup,
-  EuiRange,
-  EuiSelect,
-  EuiSuperSelect,
-  EuiSuperSelectControl,
-  EuiSwitch,
-  EuiTextArea,
-  EuiValidatableControl,
+  WuiCheckbox,
+  WuiCheckboxGroup,
+  WuiDescribedFormGroup,
+  WuiDualRange,
+  WuiFieldNumber,
+  WuiFieldPassword,
+  WuiFieldSearch,
+  WuiFieldText,
+  WuiFilePicker,
+  WuiForm,
+  WuiFormControlLayout,
+  WuiFormControlLayoutDelimited,
+  WuiFormErrorText,
+  WuiFormFieldset,
+  WuiFormHelpText,
+  WuiFormLabel,
+  WuiFormLegend,
+  WuiFormRow,
+  WuiRadio,
+  WuiRadioGroup,
+  WuiRange,
+  WuiSelect,
+  WuiSuperSelect,
+  WuiSuperSelectControl,
+  WuiSwitch,
+  WuiTextArea,
+  WuiValidatableControl,
 } from './form';
 
 export {
-  EuiHeader,
-  EuiHeaderAlert,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderLink,
-  EuiHeaderLinks,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
+  WuiHeader,
+  WuiHeaderAlert,
+  WuiHeaderBreadcrumbs,
+  WuiHeaderLink,
+  WuiHeaderLinks,
+  WuiHeaderLogo,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemButton,
 } from './header';
 
-export { EuiHealth } from './health';
+export { WuiHealth } from './health';
 
-export { EuiHighlight } from './highlight';
+export { WuiHighlight } from './highlight';
 
-export { EuiHorizontalRule } from './horizontal_rule';
+export { WuiHorizontalRule } from './horizontal_rule';
 
-export { ICON_TYPES, EuiIcon } from './icon';
+export { ICON_TYPES, WuiIcon } from './icon';
 
-export { EuiImage } from './image';
+export { WuiImage } from './image';
 
-export { useInnerText, EuiInnerText, useRenderToText } from './inner_text';
+export { useInnerText, WuiInnerText, useRenderToText } from './inner_text';
 
-export { EuiI18n, EuiI18nNumber, useEuiI18n } from './i18n';
+export { WuiI18n, WuiI18nNumber, useWuiI18n } from './i18n';
 
 export {
-  EuiLoadingKibana,
-  EuiLoadingElastic,
-  EuiLoadingChart,
-  EuiLoadingContent,
-  EuiLoadingSpinner,
-  EuiLoadingDots,
-  EuiLoadingRunningLines,
+  WuiLoadingWazuh,
+  WuiLoadingChart,
+  WuiLoadingContent,
+  WuiLoadingSpinner,
+  WuiLoadingDots,
+  WuiLoadingRunningLines,
 } from './loading';
 
-export { EuiKeyPadMenu, EuiKeyPadMenuItem } from './key_pad_menu';
+export { WuiKeyPadMenu, WuiKeyPadMenuItem } from './key_pad_menu';
 
-export { EuiLink } from './link';
+export { WuiLink } from './link';
 
 export {
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiPinnableListGroup,
+  WuiListGroup,
+  WuiListGroupItem,
+  WuiPinnableListGroup,
 } from './list_group';
 
 export {
-  EuiMarkdownEditor,
-  EuiMarkdownContext,
-  EuiMarkdownFormat,
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
+  WuiMarkdownEditor,
+  WuiMarkdownContext,
+  WuiMarkdownFormat,
+  getDefaultWuiMarkdownParsingPlugins,
+  getDefaultWuiMarkdownProcessingPlugins,
 } from './markdown_editor';
-export { EuiMark } from './mark';
+export { WuiMark } from './mark';
 
 export {
-  EUI_MODAL_CANCEL_BUTTON,
-  EUI_MODAL_CONFIRM_BUTTON,
-  EuiConfirmModal,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
+  WUI_MODAL_CANCEL_BUTTON,
+  WUI_MODAL_CONFIRM_BUTTON,
+  WuiConfirmModal,
+  WuiModal,
+  WuiModalBody,
+  WuiModalFooter,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
 } from './modal';
 
-export { EuiMutationObserver } from './observer/mutation_observer';
+export { WuiMutationObserver } from './observer/mutation_observer';
 
 export {
-  EuiNavDrawer,
-  EuiNavDrawerGroup,
-  EuiNavDrawerFlyout,
+  WuiNavDrawer,
+  WuiNavDrawerGroup,
+  WuiNavDrawerFlyout,
 } from './nav_drawer';
 
-export { EuiOutsideClickDetector } from './outside_click_detector';
+export { WuiOutsideClickDetector } from './outside_click_detector';
 
-export { EuiOverlayMask } from './overlay_mask';
+export { WuiOverlayMask } from './overlay_mask';
 
 export {
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiPageHeader,
-  EuiPageHeaderSection,
-  EuiPageSideBar,
+  WuiPage,
+  WuiPageBody,
+  WuiPageContent,
+  WuiPageContentBody,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiPageHeader,
+  WuiPageHeaderSection,
+  WuiPageSideBar,
 } from './page';
 
-export { EuiPagination, EuiPaginationButton } from './pagination';
+export { WuiPagination, WuiPaginationButton } from './pagination';
 
-export { EuiPanel } from './panel';
+export { WuiPanel } from './panel';
 
 export {
-  EuiInputPopover,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiPopoverFooter,
-  EuiWrappingPopover,
+  WuiInputPopover,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiPopoverFooter,
+  WuiWrappingPopover,
 } from './popover';
 
-export { EuiPortal } from './portal';
+export { WuiPortal } from './portal';
 
-export { EuiProgress } from './progress';
+export { WuiProgress } from './progress';
 
-export { EuiTreeView } from './tree_view';
+export { WuiTreeView } from './tree_view';
 
 export {
-  EuiResizeObserver,
+  WuiResizeObserver,
   useResizeObserver,
 } from './observer/resize_observer';
 
-export { EuiSearchBar, Query, Ast } from './search_bar';
+export { WuiSearchBar, Query, Ast } from './search_bar';
 
 export {
-  EuiSelectable,
-  EuiSelectableList,
-  EuiSelectableListItem,
-  EuiSelectableMessage,
-  EuiSelectableSearch,
-  EuiSelectableTemplateSitewide,
+  WuiSelectable,
+  WuiSelectableList,
+  WuiSelectableListItem,
+  WuiSelectableMessage,
+  WuiSelectableSearch,
+  WuiSelectableTemplateSitewide,
 } from './selectable';
 
-export { EuiSideNav } from './side_nav';
+export { WuiSideNav } from './side_nav';
 
-export { EuiSpacer } from './spacer';
+export { WuiSpacer } from './spacer';
 
-export { EuiStat } from './stat';
+export { WuiStat } from './stat';
 
-export { EuiStep, EuiSteps, EuiSubSteps, EuiStepsHorizontal } from './steps';
+export { WuiStep, WuiSteps, WuiSubSteps, WuiStepsHorizontal } from './steps';
 
-export { EuiSuggestInput, EuiSuggestItem, EuiSuggest } from './suggest';
+export { WuiSuggestInput, WuiSuggestItem, WuiSuggest } from './suggest';
 
 export {
-  EuiTable,
-  EuiTableBody,
-  EuiTableFooter,
-  EuiTableFooterCell,
-  EuiTableHeader,
-  EuiTableHeaderButton,
-  EuiTableHeaderCell,
-  EuiTableHeaderCellCheckbox,
-  EuiTablePagination,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTableRowCellCheckbox,
-  EuiTableHeaderMobile,
-  EuiTableSortMobile,
-  EuiTableSortMobileItem,
+  WuiTable,
+  WuiTableBody,
+  WuiTableFooter,
+  WuiTableFooterCell,
+  WuiTableHeader,
+  WuiTableHeaderButton,
+  WuiTableHeaderCell,
+  WuiTableHeaderCellCheckbox,
+  WuiTablePagination,
+  WuiTableRow,
+  WuiTableRowCell,
+  WuiTableRowCellCheckbox,
+  WuiTableHeaderMobile,
+  WuiTableSortMobile,
+  WuiTableSortMobileItem,
 } from './table';
 
-export { EuiToken } from './token';
+export { WuiToken } from './token';
 
-export { EuiTour, EuiTourStep, useEuiTour } from './tour';
+export { WuiTour, WuiTourStep, useWuiTour } from './tour';
 
-export { EuiBasicTable, EuiInMemoryTable } from './basic_table';
+export { WuiBasicTable, WuiInMemoryTable } from './basic_table';
 
-export { EuiTab, EuiTabs, EuiTabbedContent } from './tabs';
+export { WuiTab, WuiTabs, WuiTabbedContent } from './tabs';
 
-export { EuiText, EuiTextColor, EuiTextAlign } from './text';
+export { WuiText, WuiTextColor, WuiTextAlign } from './text';
 
-export { useEuiTextDiff } from './text_diff';
+export { useWuiTextDiff } from './text_diff';
 
-export { EuiTitle } from './title';
+export { WuiTitle } from './title';
 
-export { EuiGlobalToastList, EuiGlobalToastListItem, EuiToast } from './toast';
+export { WuiGlobalToastList, WuiGlobalToastListItem, WuiToast } from './toast';
 
-export { EuiToggle } from './toggle';
+export { WuiToggle } from './toggle';
 
-export { EuiIconTip, EuiToolTip } from './tool_tip';
+export { WuiIconTip, WuiToolTip } from './tool_tip';
 
-export { EuiHideFor, EuiShowFor } from './responsive';
+export { WuiHideFor, WuiShowFor } from './responsive';
 
-export { EuiResizableContainer } from './resizable_container';
+export { WuiResizableContainer } from './resizable_container';

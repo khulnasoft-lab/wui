@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiSwitch,
-  EuiSpacer,
-  EuiAvatar,
-  EuiIcon,
+  WuiHeader,
+  WuiHeaderLogo,
+  WuiHeaderSectionItemButton,
+  WuiSwitch,
+  WuiSpacer,
+  WuiAvatar,
+  WuiIcon,
 } from '../../../../src/components';
 
 export default () => {
@@ -30,54 +30,56 @@ export default () => {
    * Docs Note: This additional class is needed only for docs to override the usually single header
    */
   useEffect(() => {
-    if (isFixed) document.body.classList.add('euiBody--headerIsFixed--double');
+    if (isFixed) document.body.classList.add('wuiBody--headerIsFixed--double');
 
     return () => {
-      document.body.classList.remove('euiBody--headerIsFixed--double');
+      document.body.classList.remove('wuiBody--headerIsFixed--double');
     };
   }, [isFixed]);
 
   const headers = (
     <>
-      <EuiHeader
+      <WuiHeader
         theme="dark"
         position={isFixed ? 'fixed' : 'static'}
         sections={[
           {
             items: [
-              <EuiHeaderLogo iconType="logoElastic">Elastic</EuiHeaderLogo>,
+              <WuiHeaderLogo mono iconType="logoWazuh">
+                Wazuh
+              </WuiHeaderLogo>,
             ],
             borders: 'none',
           },
           {
             items: [
-              <EuiHeaderSectionItemButton aria-label="Account menu">
-                <EuiAvatar name="John Username" size="s" />
-              </EuiHeaderSectionItemButton>,
+              <WuiHeaderSectionItemButton aria-label="Account menu">
+                <WuiAvatar name="John Username" size="s" />
+              </WuiHeaderSectionItemButton>,
             ],
             borders: 'none',
           },
         ]}
       />
-      <EuiHeader
+      <WuiHeader
         position={isFixed ? 'fixed' : 'static'}
         sections={[
           {
             items: [
-              <EuiHeaderSectionItemButton aria-label="Account menu">
-                <EuiAvatar type="space" name="Default Space" size="s" />
-              </EuiHeaderSectionItemButton>,
+              <WuiHeaderSectionItemButton aria-label="Account menu">
+                <WuiAvatar type="space" name="Default Space" size="s" />
+              </WuiHeaderSectionItemButton>,
             ],
             breadcrumbs: breadcrumbs,
             borders: 'right',
           },
           {
             items: [
-              <EuiHeaderSectionItemButton
+              <WuiHeaderSectionItemButton
                 aria-label="News feed: Updates available"
                 notification={true}>
-                <EuiIcon type="cheer" size="m" />
-              </EuiHeaderSectionItemButton>,
+                <WuiIcon type="cheer" size="m" />
+              </WuiHeaderSectionItemButton>,
             ],
             borders: 'none',
           },
@@ -88,12 +90,12 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <WuiSwitch
         label={'Make header fixed position'}
         checked={isFixed}
         onChange={e => setIsFixed(e.target.checked)}
       />
-      <EuiSpacer />
+      <WuiSpacer />
       {headers}
     </>
   );

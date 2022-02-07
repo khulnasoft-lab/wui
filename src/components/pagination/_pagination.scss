@@ -1,4 +1,4 @@
-.euiPagination {
+.wuiPagination {
   display: flex;
   align-items: center;
 
@@ -7,21 +7,21 @@
     align-items: center;
 
     > *:first-child {
-      margin-right: $euiSizeXS;
+      margin-right: $wuiSizeXS;
     }
 
     > *:last-child {
-      margin-left: $euiSizeXS;
+      margin-left: $wuiSizeXS;
     }
   }
 }
 
-.euiPagination__list {
+.wuiPagination__list {
   display: flex;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPagination__list {
+@include wuiBreakpoint('xs', 's') {
+  .wuiPagination__list {
     display: none;
   }
 }

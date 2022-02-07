@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenuPanel,
-  EuiPopover,
+  WuiButton,
+  WuiContextMenuPanel,
+  WuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -18,26 +18,26 @@ export default () => {
   };
 
   const button = (
-    <EuiButton
+    <WuiButton
       size="s"
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}>
       Click to show some content
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       id="contentPanel"
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelPaddingSize="s"
       anchorPosition="downLeft">
-      <EuiContextMenuPanel>
+      <WuiContextMenuPanel>
         This context menu doesn&#39;t render items, it passes a child instead.
-      </EuiContextMenuPanel>
-    </EuiPopover>
+      </WuiContextMenuPanel>
+    </WuiPopover>
   );
 };

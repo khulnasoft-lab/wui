@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -50,7 +63,7 @@ interface Props {
   children: ReactElement;
 }
 
-export class EuiKeyboardAccessible extends Component<Props> {
+export class WuiKeyboardAccessible extends Component<Props> {
   onKeyDown = (event: KeyboardEvent<any>) => {
     // Prevent a scroll from occurring if the user has hit space.
     if (event.key === keys.SPACE) {
@@ -92,9 +105,9 @@ export class EuiKeyboardAccessible extends Component<Props> {
   }
 }
 
-// @ts-ignore defining this as a static on EuiKeyboardAccessible breaks the
+// @ts-ignore defining this as a static on WuiKeyboardAccessible breaks the
 // tests
-EuiKeyboardAccessible.propTypes = {
+WuiKeyboardAccessible.propTypes = {
   children: keyboardInaccessibleElement,
 };
 

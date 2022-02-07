@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
-export interface EuiCommentEventProps extends CommonProps {
+export interface WuiCommentEventProps extends CommonProps {
   /**
    * Author of the comment. Display a small icon or avatar with it if needed.
    */
@@ -41,18 +54,18 @@ export interface EuiCommentEventProps extends CommonProps {
   /**
    * Use "update" when the comment is primarily showing info about actions that the user or the system has performed (e.g. "user1 edited a case").
    */
-  type?: EuiCommentType;
+  type?: WuiCommentType;
 }
 
 const typeToClassNameMap = {
-  regular: 'euiCommentEvent--regular',
-  update: 'euiCommentEvent--update',
+  regular: 'wuiCommentEvent--regular',
+  update: 'wuiCommentEvent--update',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiCommentType = keyof typeof typeToClassNameMap;
+export type WuiCommentType = keyof typeof typeToClassNameMap;
 
-export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
+export const WuiCommentEvent: FunctionComponent<WuiCommentEventProps> = ({
   children,
   className,
   username,
@@ -62,7 +75,7 @@ export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
   actions,
 }) => {
   const classes = classNames(
-    'euiCommentEvent',
+    'wuiCommentEvent',
     typeToClassNameMap[type],
     className
   );
@@ -76,12 +89,12 @@ export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
 
   return (
     <Element className={classes}>
-      <HeaderElement className="euiCommentEvent__header">
-        <div className="euiCommentEvent__headerData">
-          <div className="euiCommentEvent__headerUsername">{username}</div>
-          <div className="euiCommentEvent__headerEvent">{event}</div>
+      <HeaderElement className="wuiCommentEvent__header">
+        <div className="wuiCommentEvent__headerData">
+          <div className="wuiCommentEvent__headerUsername">{username}</div>
+          <div className="wuiCommentEvent__headerEvent">{event}</div>
           {timestamp ? (
-            <div className="euiCommentEvent__headerTimestamp">
+            <div className="wuiCommentEvent__headerTimestamp">
               <time>{timestamp}</time>
             </div>
           ) : (
@@ -89,13 +102,13 @@ export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
           )}
         </div>
         {actions ? (
-          <div className="euiCommentEvent__headerActions">{actions}</div>
+          <div className="wuiCommentEvent__headerActions">{actions}</div>
         ) : (
           undefined
         )}
       </HeaderElement>
       {children ? (
-        <div className="euiCommentEvent__body">{children}</div>
+        <div className="wuiCommentEvent__body">{children}</div>
       ) : (
         undefined
       )}

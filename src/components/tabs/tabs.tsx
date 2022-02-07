@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,24 +40,24 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const displayToClassNameMap = {
-  condensed: 'euiTabs--condensed',
+  condensed: 'wuiTabs--condensed',
   default: null,
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
-export type EuiTabsDisplaySizes = keyof typeof displayToClassNameMap;
+export type WuiTabsDisplaySizes = keyof typeof displayToClassNameMap;
 
 const sizeToClassNameMap = {
-  s: 'euiTabs--small',
+  s: 'wuiTabs--small',
   m: null,
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiTabsSizes = keyof typeof sizeToClassNameMap;
+export type WuiTabsSizes = keyof typeof sizeToClassNameMap;
 
-export type EuiTabsProps = CommonProps &
+export type WuiTabsProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * ReactNode to render as this component's content
@@ -53,18 +66,18 @@ export type EuiTabsProps = CommonProps &
     /**
      * Choose `default` or alternative `condensed` display styles
      */
-    display?: EuiTabsDisplaySizes;
+    display?: WuiTabsDisplaySizes;
     /**
      * Evenly stretches each tab to fill the
      * horizontal space
      */
     expand?: boolean;
-    size?: EuiTabsSizes;
+    size?: WuiTabsSizes;
   };
 
-export type EuiTabRef = HTMLDivElement;
+export type WuiTabRef = HTMLDivElement;
 
-export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
+export const WuiTabs = forwardRef<WuiTabRef, PropsWithChildren<WuiTabsProps>>(
   (
     {
       children,
@@ -73,15 +86,15 @@ export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
       expand = false,
       size = 'm',
       ...rest
-    }: PropsWithChildren<EuiTabsProps>,
+    }: PropsWithChildren<WuiTabsProps>,
     ref
   ) => {
     const classes = classNames(
-      'euiTabs',
+      'wuiTabs',
       displayToClassNameMap[display],
       sizeToClassNameMap[size],
       {
-        'euiTabs--expand': expand,
+        'wuiTabs--expand': expand,
       },
       className
     );
@@ -94,4 +107,4 @@ export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
   }
 );
 
-EuiTabs.displayName = 'EuiTabs';
+WuiTabs.displayName = 'WuiTabs';

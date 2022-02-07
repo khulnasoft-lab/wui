@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiSpacer,
+  WuiColorPicker,
+  WuiColorStops,
+  WuiSpacer,
 } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
@@ -20,15 +20,15 @@ export default () => {
     <React.Fragment>
       {/* DisplayToggles wrapper for Docs only */}
       <DisplayToggles canLoading={false} canPrepend={true} canAppend={true}>
-        <EuiColorPicker color={color} onChange={setColor} />
+        <WuiColorPicker color={color} onChange={setColor} />
       </DisplayToggles>
-      <EuiSpacer />
+      <WuiSpacer />
       {/* DisplayToggles wrapper for Docs only */}
       <DisplayToggles
         canLoading={false}
         canInvalid={false}
         canCompressed={false}>
-        <EuiColorStops
+        <WuiColorStops
           label="Kitchen sink"
           colorStops={colorStops}
           onChange={setColorStops}

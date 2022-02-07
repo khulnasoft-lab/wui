@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,14 +37,14 @@ import React, {
   MouseEventHandler,
 } from 'react';
 import classNames from 'classnames';
-import { EuiIcon } from '../icon';
-import { EuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
+import { WuiI18n } from '../i18n';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiLinkType = 'button' | 'reset' | 'submit';
-export type EuiLinkColor =
+export type WuiLinkType = 'button' | 'reset' | 'submit';
+export type WuiLinkColor =
   | 'primary'
   | 'subdued'
   | 'secondary'
@@ -41,52 +54,52 @@ export type EuiLinkColor =
   | 'text'
   | 'ghost';
 
-const colorsToClassNameMap: { [color in EuiLinkColor]: string } = {
-  primary: 'euiLink--primary',
-  subdued: 'euiLink--subdued',
-  secondary: 'euiLink--secondary',
-  accent: 'euiLink--accent',
-  danger: 'euiLink--danger',
-  warning: 'euiLink--warning',
-  ghost: 'euiLink--ghost',
-  text: 'euiLink--text',
+const colorsToClassNameMap: { [color in WuiLinkColor]: string } = {
+  primary: 'wuiLink--primary',
+  subdued: 'wuiLink--subdued',
+  secondary: 'wuiLink--secondary',
+  accent: 'wuiLink--accent',
+  danger: 'wuiLink--danger',
+  warning: 'wuiLink--warning',
+  ghost: 'wuiLink--ghost',
+  text: 'wuiLink--text',
 };
 
 export const COLORS = keysOf(colorsToClassNameMap);
 
 export interface LinkButtonProps {
-  type?: EuiLinkType;
-  color?: EuiLinkColor;
+  type?: WuiLinkType;
+  color?: WuiLinkColor;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export interface EuiLinkButtonProps
+export interface WuiLinkButtonProps
   extends CommonProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'color' | 'onClick'>,
     LinkButtonProps {}
 
 export interface LinkAnchorProps {
-  type?: EuiLinkType;
-  color?: EuiLinkColor;
+  type?: WuiLinkType;
+  color?: WuiLinkColor;
   /**
    * Set to true to show an icon indicating that it is an external link.
    */
   external?: boolean;
 }
 
-export interface EuiLinkAnchorProps
+export interface WuiLinkAnchorProps
   extends CommonProps,
     Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'type' | 'color' | 'onClick'>,
     LinkAnchorProps {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-export type EuiLinkProps = ExclusiveUnion<
-  EuiLinkButtonProps,
-  EuiLinkAnchorProps
+export type WuiLinkProps = ExclusiveUnion<
+  WuiLinkButtonProps,
+  WuiLinkAnchorProps
 >;
 
-const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
+const WuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, WuiLinkProps>(
   (
     {
       children,
@@ -107,16 +120,16 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
     const disabled = _disabled || !isHrefValid;
 
     const externalLinkIcon = external ? (
-      <EuiI18n token="euiLink.external.ariaLabel" default="External link">
+      <WuiI18n token="wuiLink.external.ariaLabel" default="External link">
         {(ariaLabel: string) => (
-          <EuiIcon
+          <WuiIcon
             aria-label={ariaLabel}
             size="s"
-            className="euiLink__externalIcon"
+            className="wuiLink__externalIcon"
             type="popout"
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     ) : (
       undefined
     );
@@ -124,8 +137,8 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
     if (href === undefined || !isHrefValid) {
       const buttonProps = {
         className: classNames(
-          'euiLink',
-          disabled ? 'euiLink-disabled' : colorsToClassNameMap[color],
+          'wuiLink',
+          disabled ? 'wuiLink-disabled' : colorsToClassNameMap[color],
           className
         ),
         type,
@@ -137,7 +150,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
       return (
         <button
           ref={ref as React.Ref<HTMLButtonElement>}
-          {...(buttonProps as EuiLinkButtonProps)}>
+          {...(buttonProps as WuiLinkButtonProps)}>
           {children}
         </button>
       );
@@ -145,7 +158,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
 
     const secureRel = getSecureRelForTarget({ href, target, rel });
     const anchorProps = {
-      className: classNames('euiLink', colorsToClassNameMap[color], className),
+      className: classNames('wuiLink', colorsToClassNameMap[color], className),
       href,
       target,
       rel: secureRel,
@@ -156,7 +169,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
     return (
       <a
         ref={ref as React.Ref<HTMLAnchorElement>}
-        {...(anchorProps as EuiLinkAnchorProps)}>
+        {...(anchorProps as WuiLinkAnchorProps)}>
         {children}
         {externalLinkIcon}
       </a>
@@ -164,5 +177,5 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
   }
 );
 
-EuiLink.displayName = 'EuiLink';
-export { EuiLink };
+WuiLink.displayName = 'WuiLink';
+export { WuiLink };

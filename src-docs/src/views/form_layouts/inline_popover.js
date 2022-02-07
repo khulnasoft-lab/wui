@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiPopover,
-  EuiForm,
-  EuiFormRow,
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFieldNumber,
-  EuiRange,
-  EuiSpacer,
-  EuiSwitch,
+  WuiButton,
+  WuiPopover,
+  WuiForm,
+  WuiFormRow,
+  WuiFieldText,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFieldNumber,
+  WuiRange,
+  WuiSpacer,
+  WuiSwitch,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -42,91 +42,91 @@ export default () => {
   };
 
   const button = (
-    <EuiButton
+    <WuiButton
       iconSide="right"
       fill
       iconType="arrowDown"
       onClick={onButtonClick}>
       Inline form in a popover
-    </EuiButton>
+    </WuiButton>
   );
 
   const formSample = (
-    <EuiForm>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false} style={{ width: 100 }}>
-          <EuiFormRow label="Age">
-            <EuiFieldNumber max={10} placeholder={42} />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiFormRow label="Full name">
-            <EuiFieldText icon="user" placeholder="John Doe" />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiFormRow hasEmptyLabelSpace>
-            <EuiButton>Save</EuiButton>
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiForm>
+    <WuiForm>
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false} style={{ width: 100 }}>
+          <WuiFormRow label="Age">
+            <WuiFieldNumber max={10} placeholder={42} />
+          </WuiFormRow>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiFormRow label="Full name">
+            <WuiFieldText icon="user" placeholder="John Doe" />
+          </WuiFormRow>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiFormRow hasEmptyLabelSpace>
+            <WuiButton>Save</WuiButton>
+          </WuiFormRow>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiForm>
   );
 
   const button2 = (
-    <EuiButton
+    <WuiButton
       iconSide="right"
       fill
       iconType="arrowDown"
       onClick={onButton2Click}>
       Vertical form in a popover
-    </EuiButton>
+    </WuiButton>
   );
 
   const formSample2 = (
-    <EuiForm>
-      <EuiFormRow>
-        <EuiSwitch
+    <WuiForm>
+      <WuiFormRow>
+        <WuiSwitch
           id={htmlIdGenerator()()}
           name="popswitch"
           label="Isn't this popover form cool?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="A text field">
-        <EuiFieldText name="popfirst" />
-      </EuiFormRow>
+      <WuiFormRow label="A text field">
+        <WuiFieldText name="popfirst" />
+      </WuiFormRow>
 
-      <EuiFormRow label="Range" helpText="Some help text for the range">
-        <EuiRange min={0} max={100} name="poprange" />
-      </EuiFormRow>
+      <WuiFormRow label="Range" helpText="Some help text for the range">
+        <WuiRange min={0} max={100} name="poprange" />
+      </WuiFormRow>
 
-      <EuiSpacer />
-      <EuiButton fullWidth>Save</EuiButton>
-    </EuiForm>
+      <WuiSpacer />
+      <WuiButton fullWidth>Save</WuiButton>
+    </WuiForm>
   );
 
   return (
     <div>
-      <EuiPopover
+      <WuiPopover
         id="inlineFormPopover"
         ownFocus
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
         <div style={{ width: 500 }}>{formSample}</div>
-      </EuiPopover>
+      </WuiPopover>
       &emsp;
-      <EuiPopover
+      <WuiPopover
         id="formPopover"
         ownFocus
         button={button2}
         isOpen={isPopover2Open}
         closePopover={closePopover2}>
         <div style={{ width: '300px' }}>{formSample2}</div>
-      </EuiPopover>
+      </WuiPopover>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiImage } from '../../../../src/components';
+import { WuiImage } from '../../../../src/components';
 
 export default () => (
-  <EuiImage
+  <WuiImage
     size="l"
     hasShadow
     caption="Random nature image"

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiSpacer,
-  EuiTitle,
+  WuiBreadcrumbs,
+  WuiSpacer,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -46,24 +46,24 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle size="xs">
+      <WuiTitle size="xs">
         <span>Truncation on the entire set</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiBreadcrumbs
         truncate={true}
         breadcrumbs={breadcrumbs}
-        aria-label="An example of EuiBreadcrumbs with truncate prop"
+        aria-label="An example of WuiBreadcrumbs with truncate prop"
       />
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      <WuiSpacer />
+      <WuiTitle size="xs">
         <span>Truncation on a single item</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiBreadcrumbs
         truncate={false}
         breadcrumbs={breadcrumbs}
-        aria-label="An example of EuiBreadcrumbs without truncate prop"
+        aria-label="An example of WuiBreadcrumbs without truncate prop"
       />
     </div>
   );

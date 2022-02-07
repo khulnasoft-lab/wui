@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,9 +35,9 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 import { bigGrey, bigColor } from './animations';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-export const EuiLoadingDots: FunctionComponent<CommonProps &
+export const WuiLoadingDots: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
@@ -38,17 +51,17 @@ export const EuiLoadingDots: FunctionComponent<CommonProps &
     autoPlay: true,
   };
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       direction="row"
       alignItems="center"
       justifyContent="flexStart"
       responsive={false}
       className={classes}>
-      <EuiFlexItem grow={false}>
-        <div className="euiLoadingDots__wrapper">
+      <WuiFlexItem grow={false}>
+        <div className="wuiLoadingDots__wrapper">
           <Lottie options={options} />
         </div>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

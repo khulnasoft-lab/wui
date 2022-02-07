@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,24 +49,24 @@ export const insertPositions: InsertPositionsMap = {
   before: 'beforebegin',
 };
 
-export const INSERT_POSITIONS: EuiPortalInsertPosition[] = keysOf(
+export const INSERT_POSITIONS: WuiPortalInsertPosition[] = keysOf(
   insertPositions
 );
 
-type EuiPortalInsertPosition = keyof typeof insertPositions;
+type WuiPortalInsertPosition = keyof typeof insertPositions;
 
-interface EuiPortalProps {
+interface WuiPortalProps {
   /**
    * ReactNode to render as this component's content
    */
   children: React.ReactNode;
-  insert?: { sibling: HTMLElement; position: EuiPortalInsertPosition };
+  insert?: { sibling: HTMLElement; position: WuiPortalInsertPosition };
   portalRef?: (ref: HTMLDivElement | null) => void;
 }
 
-export class EuiPortal extends React.Component<EuiPortalProps> {
+export class WuiPortal extends React.Component<WuiPortalProps> {
   portalNode: HTMLDivElement;
-  constructor(props: EuiPortalProps) {
+  constructor(props: WuiPortalProps) {
     super(props);
 
     const { insert } = this.props;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -24,13 +24,13 @@ export const controlledPaginationSection = {
   text: (
     <div>
       <p>
-        By default <EuiCode>EuiInMemoryTable</EuiCode> resets its page index
-        when receiving a new <EuiCode>EuiInMemoryTable</EuiCode> array. To avoid
+        By default <WuiCode>WuiInMemoryTable</WuiCode> resets its page index
+        when receiving a new <WuiCode>WuiInMemoryTable</WuiCode> array. To avoid
         this behavior the pagination object optionally takes a
-        <EuiCode>pageIndex</EuiCode> value to control this yourself.
-        Additionally, <EuiCode>pageSize</EuiCode> can also be controlled the
+        <WuiCode>pageIndex</WuiCode> value to control this yourself.
+        Additionally, <WuiCode>pageSize</WuiCode> can also be controlled the
         same way. Both of these are provided to your app during the
-        <EuiCode>onTableChange</EuiCode> callback.
+        <WuiCode>onTableChange</WuiCode> callback.
       </p>
       <p>
         The example below updates the array of users every second, randomly

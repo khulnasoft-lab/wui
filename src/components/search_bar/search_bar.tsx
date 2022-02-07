@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,12 +32,12 @@
 
 import React, { Component, ReactElement } from 'react';
 import { isString } from '../../services/predicate';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiSearchBox, SchemaType } from './search_box';
-import { EuiSearchFilters, SearchFilterConfig } from './search_filters';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
+import { WuiSearchBox, SchemaType } from './search_box';
+import { WuiSearchFilters, SearchFilterConfig } from './search_filters';
 import { Query } from './query';
 import { CommonProps } from '../common';
-import { EuiFieldSearchProps } from '../form/field_search';
+import { WuiFieldSearchProps } from '../form/field_search';
 
 export { Query, AST as Ast } from './query';
 
@@ -44,7 +57,7 @@ interface ArgsWithError {
   error: Error;
 }
 
-export interface EuiSearchBarProps extends CommonProps {
+export interface WuiSearchBarProps extends CommonProps {
   onChange?: (args: ArgsWithQuery | ArgsWithError) => void | boolean;
 
   /**
@@ -62,9 +75,9 @@ export interface EuiSearchBarProps extends CommonProps {
    Configures the search box. Set `placeholder` to change the placeholder text in the box and
    `incremental` to support incremental (as you type) search.
    */
-  box?: EuiFieldSearchProps & {
-    // Boolean values are not meaningful to this EuiSearchBox, but are allowed so that other
-    // components can use e.g. a true value to mean "auto-derive a schema". See EuiInMemoryTable.
+  box?: WuiFieldSearchProps & {
+    // Boolean values are not meaningful to this WuiSearchBox, but are allowed so that other
+    // components can use e.g. a true value to mean "auto-derive a schema". See WuiInMemoryTable.
     // Admittedly, this is a bit of a hack.
     schema?: SchemaType | boolean;
   };
@@ -92,7 +105,7 @@ export interface EuiSearchBarProps extends CommonProps {
 
 const parseQuery = (
   query: QueryType | undefined,
-  props: EuiSearchBarProps
+  props: WuiSearchBarProps
 ): Query => {
   let schema: SchemaType | undefined = undefined;
   if (props.box && props.box.schema && typeof props.box.schema === 'object') {
@@ -116,10 +129,10 @@ interface State {
 // when `error` is not null.
 type StateWithOptionalQuery = Omit<State, 'query'> & { query: Query | null };
 
-export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
+export class WuiSearchBar extends Component<WuiSearchBarProps, State> {
   static Query = Query;
 
-  constructor(props: EuiSearchBarProps) {
+  constructor(props: WuiSearchBarProps) {
     super(props);
     const query = parseQuery(props.defaultQuery || props.query, props);
     this.state = {
@@ -130,7 +143,7 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
   }
 
   static getDerivedStateFromProps(
-    nextProps: EuiSearchBarProps,
+    nextProps: WuiSearchBarProps,
     prevState: State
   ): State | null {
     if (
@@ -202,19 +215,19 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
 
     if (Array.isArray(tools)) {
       return tools.map(tool => (
-        <EuiFlexItem grow={false} key={tool.key == null ? undefined : tool.key}>
+        <WuiFlexItem grow={false} key={tool.key == null ? undefined : tool.key}>
           {tool}
-        </EuiFlexItem>
+        </WuiFlexItem>
       ));
     }
 
-    return <EuiFlexItem grow={false}>{tools}</EuiFlexItem>;
+    return <WuiFlexItem grow={false}>{tools}</WuiFlexItem>;
   }
 
   render() {
     const { query, queryText, error } = this.state;
     const {
-      box: { schema, ...box } = { schema: '' }, // strip `schema` out to prevent passing it to EuiSearchBox
+      box: { schema, ...box } = { schema: '' }, // strip `schema` out to prevent passing it to WuiSearchBox
       filters,
       toolsLeft,
       toolsRight,
@@ -225,32 +238,32 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
     const filtersBar = !filters ? (
       undefined
     ) : (
-      <EuiFlexItem className="euiSearchBar__filtersHolder" grow={false}>
-        <EuiSearchFilters
+      <WuiFlexItem className="wuiSearchBar__filtersHolder" grow={false}>
+        <WuiSearchFilters
           filters={filters}
           query={query}
           onChange={this.onFiltersChange}
         />
-      </EuiFlexItem>
+      </WuiFlexItem>
     );
 
     const toolsRightEl = this.renderTools(toolsRight);
 
     return (
-      <EuiFlexGroup gutterSize="m" alignItems="center" wrap>
+      <WuiFlexGroup gutterSize="m" alignItems="center" wrap>
         {toolsLeftEl}
-        <EuiFlexItem className="euiSearchBar__searchHolder" grow={true}>
-          <EuiSearchBox
+        <WuiFlexItem className="wuiSearchBar__searchHolder" grow={true}>
+          <WuiSearchBox
             {...box}
             query={queryText}
             onSearch={this.onSearch}
             isInvalid={error != null}
             title={error ? error.message : undefined}
           />
-        </EuiFlexItem>
+        </WuiFlexItem>
         {filtersBar}
         {toolsRightEl}
-      </EuiFlexGroup>
+      </WuiFlexGroup>
     );
   }
 }

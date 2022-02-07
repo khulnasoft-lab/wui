@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,8 +34,8 @@ import React, { Component, createRef, HTMLAttributes, ReactNode } from 'react';
 
 import { htmlIdGenerator } from '../../../services';
 
-import { EuiTabs, EuiTabsDisplaySizes, EuiTabsSizes } from '../tabs';
-import { EuiTab } from '../tab';
+import { WuiTabs, WuiTabsDisplaySizes, WuiTabsSizes } from '../tabs';
+import { WuiTab } from '../tab';
 import { CommonProps } from '../../common';
 
 /**
@@ -30,18 +43,18 @@ import { CommonProps } from '../../common';
  */
 export const AUTOFOCUS = ['initial', 'selected'] as const;
 
-export interface EuiTabbedContentTab {
+export interface WuiTabbedContentTab {
   id: string;
   name: ReactNode;
   content: ReactNode;
 }
 
-interface EuiTabbedContentState {
+interface WuiTabbedContentState {
   selectedTabId: string | undefined;
   inFocus: boolean;
 }
 
-export type EuiTabbedContentProps = CommonProps &
+export type WuiTabbedContentProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * When tabbing into the tabs, set the focus on `initial` for the first tab,
@@ -52,7 +65,7 @@ export type EuiTabbedContentProps = CommonProps &
     /**
      * Choose `default` or alternative `condensed` display styles
      */
-    display?: EuiTabsDisplaySizes;
+    display?: WuiTabsDisplaySizes;
     /**
      * Evenly stretches each tab to fill the horizontal space
      */
@@ -61,23 +74,23 @@ export type EuiTabbedContentProps = CommonProps &
      * Use this prop to set the initially selected tab while letting the tabbed content component
      * control selection state internally
      */
-    initialSelectedTab?: EuiTabbedContentTab;
-    onTabClick?: (selectedTab: EuiTabbedContentTab) => void;
+    initialSelectedTab?: WuiTabbedContentTab;
+    onTabClick?: (selectedTab: WuiTabbedContentTab) => void;
     /**
      * Use this prop if you want to control selection state within the owner component
      */
-    selectedTab?: EuiTabbedContentTab;
-    size?: EuiTabsSizes;
+    selectedTab?: WuiTabbedContentTab;
+    size?: WuiTabsSizes;
     /**
      * Each tab needs id and content properties, so we can associate it with its panel for accessibility.
      * The name property (a node) is also required to display to the user.
      */
-    tabs: EuiTabbedContentTab[];
+    tabs: WuiTabbedContentTab[];
   };
 
-export class EuiTabbedContent extends Component<
-  EuiTabbedContentProps,
-  EuiTabbedContentState
+export class WuiTabbedContent extends Component<
+  WuiTabbedContentProps,
+  WuiTabbedContentState
 > {
   static defaultProps = {
     autoFocus: 'initial',
@@ -87,7 +100,7 @@ export class EuiTabbedContent extends Component<
 
   private readonly tabsRef = createRef<HTMLDivElement>();
 
-  constructor(props: EuiTabbedContentProps) {
+  constructor(props: WuiTabbedContentProps) {
     super(props);
 
     const { initialSelectedTab, selectedTab, tabs } = props;
@@ -109,7 +122,7 @@ export class EuiTabbedContent extends Component<
     // IE11 doesn't support the `relatedTarget` event property for blur events
     // but does add it for focusout. React doesn't support `onFocusOut` so here we are.
     if (this.tabsRef.current) {
-      // Current short-term solution for event listener (see https://github.com/elastic/eui/pull/2717)
+      // Current short-term solution for event listener (see https://github.com/wazuh/wui/pull/2717)
       this.tabsRef.current.addEventListener(
         'focusout' as 'blur',
         this.removeFocus
@@ -119,7 +132,7 @@ export class EuiTabbedContent extends Component<
 
   componentWillUnmount() {
     if (this.tabsRef.current) {
-      // Current short-term solution for event listener (see https://github.com/elastic/eui/pull/2717)
+      // Current short-term solution for event listener (see https://github.com/wazuh/wui/pull/2717)
       this.tabsRef.current.removeEventListener(
         'focusout' as 'blur',
         this.removeFocus
@@ -156,7 +169,7 @@ export class EuiTabbedContent extends Component<
     }
   };
 
-  onTabClick = (selectedTab: EuiTabbedContentTab) => {
+  onTabClick = (selectedTab: WuiTabbedContentTab) => {
     const { onTabClick, selectedTab: externalSelectedTab } = this.props;
 
     if (onTabClick) {
@@ -189,20 +202,20 @@ export class EuiTabbedContent extends Component<
     const selectedTab =
       externalSelectedTab ||
       tabs.find(
-        (tab: EuiTabbedContentTab) => tab.id === this.state.selectedTabId
+        (tab: WuiTabbedContentTab) => tab.id === this.state.selectedTabId
       );
 
     const { content: selectedTabContent, id: selectedTabId } = selectedTab!;
 
     return (
       <div className={className} {...rest}>
-        <EuiTabs
+        <WuiTabs
           ref={this.tabsRef}
           expand={expand}
           display={display}
           size={size}
           onFocus={this.initializeFocus}>
-          {tabs.map((tab: EuiTabbedContentTab) => {
+          {tabs.map((tab: WuiTabbedContentTab) => {
             const {
               id,
               name,
@@ -218,9 +231,9 @@ export class EuiTabbedContent extends Component<
               'aria-controls': `${this.rootId}`,
             };
 
-            return <EuiTab {...props}>{name}</EuiTab>;
+            return <WuiTab {...props}>{name}</WuiTab>;
           })}
-        </EuiTabs>
+        </WuiTabs>
 
         <div
           role="tabpanel"

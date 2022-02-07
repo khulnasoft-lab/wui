@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiFieldText } from '../../../../src/components';
+import { WuiFieldText } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default function() {
@@ -13,7 +13,7 @@ export default function() {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canPrepend canAppend>
-      <EuiFieldText
+      <WuiFieldText
         placeholder="Placeholder text"
         value={value}
         onChange={e => onChange(e)}

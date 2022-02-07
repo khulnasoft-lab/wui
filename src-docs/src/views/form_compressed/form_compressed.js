@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import {
-  EuiCheckboxGroup,
-  EuiComboBox,
-  EuiFieldText,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSwitch,
-  EuiPanel,
-  EuiSpacer,
+  WuiCheckboxGroup,
+  WuiComboBox,
+  WuiFieldText,
+  WuiFormRow,
+  WuiFilePicker,
+  WuiRange,
+  WuiSelect,
+  WuiSwitch,
+  WuiPanel,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -59,16 +59,16 @@ export default () => {
     setCheckboxIdToSelectedMap(newCheckboxIdToSelectedMap);
   };
   return (
-    <EuiPanel style={{ maxWidth: 300 }}>
-      <EuiFormRow
+    <WuiPanel style={{ maxWidth: 300 }}>
+      <WuiFormRow
         label="Text field"
         helpText="I am some friendly help text."
         display="rowCompressed">
-        <EuiFieldText name="first" isLoading compressed />
-      </EuiFormRow>
+        <WuiFieldText name="first" isLoading compressed />
+      </WuiFormRow>
 
-      <EuiFormRow label="Select" display="rowCompressed">
-        <EuiSelect
+      <WuiFormRow label="Select" display="rowCompressed">
+        <WuiSelect
           options={[
             { value: 'option_one', text: 'Option one' },
             { value: 'option_two', text: 'Option two' },
@@ -76,14 +76,14 @@ export default () => {
           ]}
           compressed
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="File picker" display="rowCompressed">
-        <EuiFilePicker compressed display="default" />
-      </EuiFormRow>
+      <WuiFormRow label="File picker" display="rowCompressed">
+        <WuiFilePicker compressed display="default" />
+      </WuiFormRow>
 
-      <EuiFormRow label="Combobox" display="rowCompressed">
-        <EuiComboBox
+      <WuiFormRow label="Combobox" display="rowCompressed">
+        <WuiComboBox
           options={[
             { label: 'Option one' },
             { label: 'Option two' },
@@ -95,10 +95,10 @@ export default () => {
             setComboBoxSelectionOptions(comboBoxSelectionOptions)
           }
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Range" display="rowCompressed">
-        <EuiRange
+      <WuiFormRow label="Range" display="rowCompressed">
+        <WuiRange
           min={0}
           max={100}
           name="range"
@@ -108,21 +108,21 @@ export default () => {
           value={value}
           onChange={onRangeChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Switch" display="rowCompressed" hasChildLabel={false}>
-        <EuiSwitch
+      <WuiFormRow label="Switch" display="rowCompressed" hasChildLabel={false}>
+        <WuiSwitch
           label="Should we do this?"
           name="switch"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
           compressed
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiCheckboxGroup
+      <WuiCheckboxGroup
         options={checkboxes}
         idToSelectedMap={checkboxIdToSelectedMap}
         onChange={onCheckboxChange}
@@ -131,6 +131,6 @@ export default () => {
         }}
         compressed
       />
-    </EuiPanel>
+    </WuiPanel>
   );
 };

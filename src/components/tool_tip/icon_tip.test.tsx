@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiIconTip } from './icon_tip';
+import { WuiIconTip } from './icon_tip';
 
-describe('EuiIconTip', () => {
+describe('WuiIconTip', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiIconTip title="title" id="id" content="content" {...requiredProps} />
+      <WuiIconTip title="title" id="id" content="content" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +49,7 @@ describe('EuiIconTip', () => {
     describe('type', () => {
       test('is rendered as the icon', () => {
         const component = render(
-          <EuiIconTip type="alert" id="id" content="content" />
+          <WuiIconTip type="alert" id="id" content="content" />
         );
 
         expect(component).toMatchSnapshot();
@@ -46,7 +59,7 @@ describe('EuiIconTip', () => {
     describe('color', () => {
       test('is rendered as the icon color', () => {
         const component = render(
-          <EuiIconTip color="warning" id="id" content="content" />
+          <WuiIconTip color="warning" id="id" content="content" />
         );
 
         expect(component).toMatchSnapshot();
@@ -56,7 +69,7 @@ describe('EuiIconTip', () => {
     describe('size', () => {
       test('is rendered as the icon size', () => {
         const component = render(
-          <EuiIconTip size="xl" id="id" content="content" />
+          <WuiIconTip size="xl" id="id" content="content" />
         );
 
         expect(component).toMatchSnapshot();

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPaginationButton is rendered 1`] = `
+exports[`WuiPaginationButton is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiPaginationButton testClass1 testClass2"
+  class="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall wuiPaginationButton testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="wuiButtonContent wuiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="wuiButtonEmpty__text"
     >
       2
     </span>

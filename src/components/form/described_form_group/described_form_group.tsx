@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,54 +36,54 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf, PropsOf } from '../../common';
 
-import { EuiTitle, EuiTitleSize, EuiTitleProps } from '../../title';
-import { EuiText } from '../../text';
-import { EuiFlexGroup, EuiFlexItem, EuiFlexGroupGutterSize } from '../../flex';
+import { WuiTitle, WuiTitleSize, WuiTitleProps } from '../../title';
+import { WuiText } from '../../text';
+import { WuiFlexGroup, WuiFlexItem, WuiFlexGroupGutterSize } from '../../flex';
 
 const paddingSizeToClassNameMap = {
-  xxxs: 'euiDescribedFormGroup__fieldPadding--xxxsmall',
-  xxs: 'euiDescribedFormGroup__fieldPadding--xxsmall',
-  xs: 'euiDescribedFormGroup__fieldPadding--xsmall',
-  s: 'euiDescribedFormGroup__fieldPadding--small',
-  m: 'euiDescribedFormGroup__fieldPadding--medium',
-  l: 'euiDescribedFormGroup__fieldPadding--large',
+  xxxs: 'wuiDescribedFormGroup__fieldPadding--xxxsmall',
+  xxs: 'wuiDescribedFormGroup__fieldPadding--xxsmall',
+  xs: 'wuiDescribedFormGroup__fieldPadding--xsmall',
+  s: 'wuiDescribedFormGroup__fieldPadding--small',
+  m: 'wuiDescribedFormGroup__fieldPadding--medium',
+  l: 'wuiDescribedFormGroup__fieldPadding--large',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export type EuiDescribedFormGroupPaddingSize = keyof typeof paddingSizeToClassNameMap;
+export type WuiDescribedFormGroupPaddingSize = keyof typeof paddingSizeToClassNameMap;
 
-export type EuiDescribedFormGroupProps = CommonProps &
+export type WuiDescribedFormGroupProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     /**
-     * One or more `EuiFormRow`s
+     * One or more `WuiFormRow`s
      */
     children?: ReactNode;
     /**
-     * Passed to `EuiFlexGroup`
+     * Passed to `WuiFlexGroup`
      */
-    gutterSize?: EuiFlexGroupGutterSize;
+    gutterSize?: WuiFlexGroupGutterSize;
     fullWidth?: boolean;
     /**
      * For better accessibility, it's recommended the use of HTML headings
      */
-    title: EuiTitleProps['children'];
-    titleSize?: EuiTitleSize;
+    title: WuiTitleProps['children'];
+    titleSize?: WuiTitleSize;
     /**
-     * Added as a child of `EuiText`
+     * Added as a child of `WuiText`
      */
     description?: ReactNode;
     /**
-     * For customizing the description container. Extended from `EuiFlexItem`
+     * For customizing the description container. Extended from `WuiFlexItem`
      */
-    descriptionFlexItemProps?: PropsOf<typeof EuiFlexItem>;
+    descriptionFlexItemProps?: PropsOf<typeof WuiFlexItem>;
     /**
-     * For customizing the field container. Extended from `EuiFlexItem`
+     * For customizing the field container. Extended from `WuiFlexItem`
      */
-    fieldFlexItemProps?: PropsOf<typeof EuiFlexItem>;
+    fieldFlexItemProps?: PropsOf<typeof WuiFlexItem>;
   };
 
-export const EuiDescribedFormGroup: React.FunctionComponent<EuiDescribedFormGroupProps> = ({
+export const WuiDescribedFormGroup: React.FunctionComponent<WuiDescribedFormGroupProps> = ({
   children,
   className,
   gutterSize = 'l',
@@ -83,15 +96,15 @@ export const EuiDescribedFormGroup: React.FunctionComponent<EuiDescribedFormGrou
   ...rest
 }) => {
   const classes = classNames(
-    'euiDescribedFormGroup',
+    'wuiDescribedFormGroup',
     {
-      'euiDescribedFormGroup--fullWidth': fullWidth,
+      'wuiDescribedFormGroup--fullWidth': fullWidth,
     },
     className
   );
 
   const fieldClasses = classNames(
-    'euiDescribedFormGroup__fields',
+    'wuiDescribedFormGroup__fields',
     paddingSizeToClassNameMap[titleSize],
     fieldFlexItemProps && fieldFlexItemProps.className
   );
@@ -100,30 +113,30 @@ export const EuiDescribedFormGroup: React.FunctionComponent<EuiDescribedFormGrou
 
   if (description) {
     renderedDescription = (
-      <EuiText
+      <WuiText
         size="s"
         color="subdued"
-        className="euiDescribedFormGroup__description">
+        className="wuiDescribedFormGroup__description">
         {description}
-      </EuiText>
+      </WuiText>
     );
   }
 
   return (
     <div role="group" className={classes} {...rest}>
-      <EuiFlexGroup gutterSize={gutterSize}>
-        <EuiFlexItem {...descriptionFlexItemProps}>
-          <EuiTitle size={titleSize} className="euiDescribedFormGroup__title">
+      <WuiFlexGroup gutterSize={gutterSize}>
+        <WuiFlexItem {...descriptionFlexItemProps}>
+          <WuiTitle size={titleSize} className="wuiDescribedFormGroup__title">
             {title}
-          </EuiTitle>
+          </WuiTitle>
 
           {renderedDescription}
-        </EuiFlexItem>
+        </WuiFlexItem>
 
-        <EuiFlexItem {...fieldFlexItemProps} className={fieldClasses}>
+        <WuiFlexItem {...fieldFlexItemProps} className={fieldClasses}>
           {children}
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

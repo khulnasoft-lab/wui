@@ -2,13 +2,13 @@ import React, { Fragment, useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiCheckableCard,
+  WuiInMemoryTable,
+  WuiLink,
+  WuiHealth,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
+  WuiCheckableCard,
 } from '../../../../../src/components';
 
 /*
@@ -64,9 +64,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -91,7 +91,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
     },
   ];
@@ -193,10 +193,10 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={1}>
+      <WuiFlexGroup>
+        <WuiFlexItem grow={1}>
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="af"
               label="Africa"
               checkableType="radio"
@@ -205,9 +205,9 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="as"
               label="Asia"
               checkableType="radio"
@@ -216,9 +216,9 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="eu"
               label="Europe"
               checkableType="radio"
@@ -227,9 +227,9 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="na"
               label="North America"
               checkableType="radio"
@@ -238,9 +238,9 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="oc"
               label="Oceania"
               checkableType="radio"
@@ -249,9 +249,9 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <div>
-            <EuiCheckableCard
+            <WuiCheckableCard
               id="sa"
               label="South America"
               checkableType="radio"
@@ -260,17 +260,17 @@ export const Table = () => {
               onChange={handleCheckbox}
             />
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem grow={2}>
-          <EuiInMemoryTable
+        </WuiFlexItem>
+        <WuiFlexItem grow={2}>
+          <WuiInMemoryTable
             items={store.users}
             columns={columns}
             search={search}
             pagination={true}
             sorting={true}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </Fragment>
   );
 };

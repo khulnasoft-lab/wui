@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiRangeTrack } from './range_track';
+import { WuiRangeTrack } from './range_track';
 
-describe('EuiRangeTrack', () => {
+describe('WuiRangeTrack', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRangeTrack
+      <WuiRangeTrack
         min={0}
         max={100}
         step={10}
@@ -42,14 +55,14 @@ describe('EuiRangeTrack', () => {
 
   test('should throw error if `max` does not line up with `step` interval', () => {
     const component = () =>
-      render(<EuiRangeTrack min={0} max={105} step={10} />);
+      render(<WuiRangeTrack min={0} max={105} step={10} />);
 
     expect(component).toThrowErrorMatchingSnapshot();
   });
 
   test('should throw error if there are too many ticks to render', () => {
     const component = () =>
-      render(<EuiRangeTrack min={0} max={21} showTicks />);
+      render(<WuiRangeTrack min={0} max={21} showTicks />);
 
     expect(component).toThrowErrorMatchingSnapshot();
   });
@@ -57,7 +70,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if `tickInterval` is off sequence from `step`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack min={0} max={100} step={10} showTicks tickInterval={3} />
+        <WuiRangeTrack min={0} max={100} step={10} showTicks tickInterval={3} />
       );
 
     expect(component).toThrowErrorMatchingSnapshot();
@@ -66,7 +79,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is lower than `min`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <WuiRangeTrack
           min={0}
           max={100}
           showTicks
@@ -80,7 +93,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is higher than `max`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <WuiRangeTrack
           min={0}
           max={100}
           showTicks
@@ -94,7 +107,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is off sequence from `step`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <WuiRangeTrack
           min={0}
           max={100}
           step={50}

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiCardSelect } from './card_select';
+import { WuiCardSelect } from './card_select';
 
-describe('EuiCardSelect', () => {
+describe('WuiCardSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCardSelect onClick={() => {}} {...requiredProps} />
+      <WuiCardSelect onClick={() => {}} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,20 +47,20 @@ describe('EuiCardSelect', () => {
 
   describe('props', () => {
     test('isSelected', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isSelected />);
+      const component = render(<WuiCardSelect onClick={() => {}} isSelected />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isDisabled', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isDisabled />);
+      const component = render(<WuiCardSelect onClick={() => {}} isDisabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can override color', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} color="danger" />
+        <WuiCardSelect onClick={() => {}} color="danger" />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +68,7 @@ describe('EuiCardSelect', () => {
 
     test('can override text', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} children="Custom text" />
+        <WuiCardSelect onClick={() => {}} children="Custom text" />
       );
 
       expect(component).toMatchSnapshot();

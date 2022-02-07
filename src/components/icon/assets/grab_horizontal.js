@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconGrabHorizontal = ({ title, titleId, ...props }) => (
+const WuiIconGrabHorizontal = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconGrabHorizontal = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconGrabHorizontal;
+export const icon = WuiIconGrabHorizontal;

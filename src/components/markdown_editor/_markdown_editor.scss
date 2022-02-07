@@ -1,8 +1,8 @@
-.euiMarkdownEditor {
+.wuiMarkdownEditor {
   transition:
-  box-shadow $euiAnimSpeedFast ease-in;
+  box-shadow $wuiAnimSpeedFast ease-in;
 
   &:focus-within {
-    @include euiSlightShadowHover;
+    @include wuiSlightShadowHover;
   }
 }

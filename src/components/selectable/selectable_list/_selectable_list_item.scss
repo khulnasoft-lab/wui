@@ -1,50 +1,50 @@
-.euiSelectableListItem {
-  @include euiFontSizeS;
+.wuiSelectableListItem {
+  @include wuiFontSizeS;
   display: inline-flex; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $wuiTextColor;
   cursor: pointer;
 
   &:not(:last-of-type) {
-    border-bottom: $euiSelectableListItemBorder;
+    border-bottom: $wuiSelectableListItemBorder;
   }
 
   &-isFocused:not([aria-disabled='true']),
   &:hover:not([aria-disabled='true']) {
-    color: $euiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    color: $wuiColorPrimary;
+    background-color: $wuiFocusBackgroundColor;
 
-    .euiSelectableListItem__text {
+    .wuiSelectableListItem__text {
       text-decoration: underline;
     }
   }
 
   &[aria-disabled='true'] {
-    color: $euiColorMediumShade;
+    color: $wuiColorMediumShade;
     cursor: not-allowed;
   }
 }
 
-.euiSelectableListItem__content {
-  padding: $euiSelectableListItemPadding;
+.wuiSelectableListItem__content {
+  padding: $wuiSelectableListItemPadding;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.euiSelectableListItem__icon,
-.euiSelectableListItem__prepend {
-  margin-right: $euiSizeM;
+.wuiSelectableListItem__icon,
+.wuiSelectableListItem__prepend {
+  margin-right: $wuiSizeM;
   flex-shrink: 0;
 }
 
-.euiSelectableListItem__append {
-  margin-left: $euiSizeM;
+.wuiSelectableListItem__append {
+  margin-left: $wuiSizeM;
   flex-shrink: 0;
 }
 
-.euiSelectableListItem__text {
-  @include euiTextTruncate;
+.wuiSelectableListItem__text {
+  @include wuiTextTruncate;
   flex-grow: 1; // Pushes appended content to the far right
 }

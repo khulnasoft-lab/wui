@@ -1,9 +1,9 @@
 import React from 'react';
-import { EuiLink } from '../../../../src/components';
+import { WuiLink } from '../../../../src/components';
 
 const urls = [
-  'https://elastic.co',
-  '//elastic.co',
+  'https://wazuh.com',
+  '//wazuh.co',
   'relative/url/somewhere',
   'http://username:password@example.com/',
   // eslint-disable-next-line no-script-url
@@ -15,9 +15,9 @@ export const LinkValidation = () => {
     <>
       {urls.map(url => (
         <div key={url}>
-          <EuiLink color="secondary" href={url}>
+          <WuiLink color="secondary" href={url}>
             {url}
-          </EuiLink>
+          </WuiLink>
         </div>
       ))}
     </>

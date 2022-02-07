@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiSwitch,
-  EuiDescriptionList,
-  EuiSpacer,
+  WuiSwitch,
+  WuiDescriptionList,
+  WuiSpacer,
 } from '../../../../src/components';
 
-import { EuiWindowEvent } from '../../../../src/services';
+import { WuiWindowEvent } from '../../../../src/services';
 
 export const MousePosition = () => {
   const [tracking, setTracking] = useState(false);
@@ -32,17 +32,17 @@ export const MousePosition = () => {
   ];
   return (
     <div>
-      <EuiSwitch
+      <WuiSwitch
         label="Track mouse position"
         checked={tracking}
         onChange={onSwitchChange}
       />
       {tracking ? (
-        <EuiWindowEvent event="mousemove" handler={onMouseMove} />
+        <WuiWindowEvent event="mousemove" handler={onMouseMove} />
       ) : null}
-      <EuiSpacer size="l" />
-      <EuiDescriptionList listItems={listItems} />
-      <EuiSpacer size="xxl" />
+      <WuiSpacer size="l" />
+      <WuiDescriptionList listItems={listItems} />
+      <WuiSpacer size="xxl" />
     </div>
   );
 };

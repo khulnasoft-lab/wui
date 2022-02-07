@@ -1,19 +1,19 @@
-.euiDatePopoverContent {
-  width: $euiFormMaxWidth;
+.wuiDatePopoverContent {
+  width: $wuiFormMaxWidth;
   max-width: 100%;
 }
 
-.euiDatePopoverContent__padded {
-  padding: $euiSizeS;
+.wuiDatePopoverContent__padded {
+  padding: $wuiSizeS;
 }
 
-.euiDatePopoverContent__padded--large {
-  padding: $euiSize;
+.wuiDatePopoverContent__padded--large {
+  padding: $wuiSize;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiDatePopoverContent {
+@include wuiBreakpoint('xs', 's') {
+  .wuiDatePopoverContent {
     // Small screens drop the time selector
-    width: $euiDatePickerCalendarWidth;
+    width: $wuiDatePickerCalendarWidth;
   }
 }

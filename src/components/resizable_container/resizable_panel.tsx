@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,17 +42,17 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { useEuiResizablePanelContext } from './context';
+import { useWuiResizablePanelContext } from './context';
 import { htmlIdGenerator } from '../../services';
 
-interface EuiResizablePanelControls {
+interface WuiResizablePanelControls {
   isHorizontal: boolean;
 }
 
-export interface EuiResizablePanelProps
+export interface WuiResizablePanelProps
   extends HTMLAttributes<HTMLDivElement>,
     CommonProps,
-    Partial<EuiResizablePanelControls> {
+    Partial<WuiResizablePanelControls> {
   /**
    * Specify minimum panel size in pixels or percents,
    * for example "300px" or "30%"
@@ -62,7 +75,7 @@ export interface EuiResizablePanelProps
   size?: number;
 
   /**
-   * Add Eui scroll and overflow for the panel
+   * Add Wui scroll and overflow for the panel
    */
   scrollable?: boolean;
 
@@ -79,7 +92,7 @@ export interface EuiResizablePanelProps
 
 const generatePanelId = htmlIdGenerator('resizable-panel');
 
-export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
+export const WuiResizablePanel: FunctionComponent<WuiResizablePanelProps> = ({
   children,
   className,
   id,
@@ -94,13 +107,13 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
   const [innerSize, setInnerSize] = useState(
     initialSize && !size ? initialSize : 0
   );
-  const { registry } = useEuiResizablePanelContext();
+  const { registry } = useWuiResizablePanelContext();
   const divRef = useRef<HTMLDivElement>(null);
   const panelId = useRef(id || generatePanelId());
 
   const classes = classNames(
     {
-      euiResizablePanel: scrollable,
+      wuiResizablePanel: scrollable,
     },
     className
   );
@@ -160,10 +173,10 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
   );
 };
 
-export function euiResizablePanelWithControls(
-  controls: EuiResizablePanelControls
+export function wuiResizablePanelWithControls(
+  controls: WuiResizablePanelControls
 ) {
-  return (props: EuiResizablePanelProps) => (
-    <EuiResizablePanel {...controls} {...props} />
+  return (props: WuiResizablePanelProps) => (
+    <WuiResizablePanel {...controls} {...props} />
   );
 }

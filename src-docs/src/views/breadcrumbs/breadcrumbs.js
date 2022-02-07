@@ -1,13 +1,13 @@
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiButton,
-  EuiPageContent,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiTitle,
-  EuiSpacer,
+  WuiBreadcrumbs,
+  WuiButton,
+  WuiPageContent,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiTitle,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -38,24 +38,24 @@ export default () => {
   ];
 
   return (
-    <EuiPageContent>
-      <EuiBreadcrumbs
+    <WuiPageContent>
+      <WuiBreadcrumbs
         breadcrumbs={breadcrumbs}
         truncate={false}
-        aria-label="An example of EuiBreadcrumbs"
+        aria-label="An example of WuiBreadcrumbs"
       />
-      <EuiSpacer size="xs" />
-      <EuiPageContentHeader>
-        <EuiPageContentHeaderSection>
-          <EuiTitle size="l">
+      <WuiSpacer size="xs" />
+      <WuiPageContentHeader>
+        <WuiPageContentHeaderSection>
+          <WuiTitle size="l">
             <h1>Boa constrictor</h1>
-          </EuiTitle>
-        </EuiPageContentHeaderSection>
+          </WuiTitle>
+        </WuiPageContentHeaderSection>
 
-        <EuiPageContentHeaderSection>
-          <EuiButton>Cancel</EuiButton>
-        </EuiPageContentHeaderSection>
-      </EuiPageContentHeader>
-    </EuiPageContent>
+        <WuiPageContentHeaderSection>
+          <WuiButton>Cancel</WuiButton>
+        </WuiPageContentHeaderSection>
+      </WuiPageContentHeader>
+    </WuiPageContent>
   );
 };

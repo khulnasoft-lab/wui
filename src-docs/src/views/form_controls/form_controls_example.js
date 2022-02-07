@@ -7,27 +7,27 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiBadge,
-  EuiCallOut,
-  EuiCheckbox,
-  EuiCheckboxGroup,
-  EuiCode,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiFieldSearch,
-  EuiFieldText,
-  EuiFilePicker,
-  EuiFormFieldset,
-  EuiFormLegend,
-  EuiFormControlLayout,
-  EuiFormControlLayoutDelimited,
-  EuiLink,
-  EuiRadio,
-  EuiRadioGroup,
-  EuiSelect,
-  EuiSwitch,
-  EuiTextArea,
-  EuiSpacer,
+  WuiBadge,
+  WuiCallOut,
+  WuiCheckbox,
+  WuiCheckboxGroup,
+  WuiCode,
+  WuiFieldNumber,
+  WuiFieldPassword,
+  WuiFieldSearch,
+  WuiFieldText,
+  WuiFilePicker,
+  WuiFormFieldset,
+  WuiFormLegend,
+  WuiFormControlLayout,
+  WuiFormControlLayoutDelimited,
+  WuiLink,
+  WuiRadio,
+  WuiRadioGroup,
+  WuiSelect,
+  WuiSwitch,
+  WuiTextArea,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import playgrounds from './playground';
@@ -36,7 +36,7 @@ import FieldSearch from './field_search';
 const fieldSearchSource = require('!!raw-loader!./field_search');
 const fieldSearchHtml = renderToHtml(FieldSearch);
 const fieldSearchSnippet = [
-  `<EuiFieldSearch
+  `<WuiFieldSearch
   placeholder="Search this"
   value={value}
   isClearable={isClearable}
@@ -48,7 +48,7 @@ import FieldText from './field_text';
 const fieldTextSource = require('!!raw-loader!./field_text');
 const fieldTextHtml = renderToHtml(FieldText);
 const fieldTextSnippet = [
-  `<EuiFieldText
+  `<WuiFieldText
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -59,7 +59,7 @@ import FieldNumber from './field_number';
 const fieldNumberSource = require('!!raw-loader!./field_number');
 const fieldNumberHtml = renderToHtml(FieldNumber);
 const fieldNumberSnippet = [
-  `<EuiFieldNumber
+  `<WuiFieldNumber
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -70,7 +70,7 @@ import FieldPassword from './field_password';
 const fieldPasswordSource = require('!!raw-loader!./field_password');
 const fieldPasswordHtml = renderToHtml(FieldPassword);
 const fieldPasswordSnippet = [
-  `<EuiFieldPassword
+  `<WuiFieldPassword
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -82,7 +82,7 @@ import TextArea from './text_area';
 const textAreaSource = require('!!raw-loader!./text_area');
 const textAreaHtml = renderToHtml(TextArea);
 const textAreaSnippet = [
-  `<EuiTextArea
+  `<WuiTextArea
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -93,7 +93,7 @@ import FilePicker from './file_picker';
 const filePickerSource = require('!!raw-loader!./file_picker');
 const filePickerHtml = renderToHtml(FilePicker);
 const filePickerSnippet = [
-  `<EuiFilePicker
+  `<WuiFilePicker
   id={filePickerId}
   multiple
   initialPromptText="content that appears in the dropzone if no file is attached"
@@ -105,7 +105,7 @@ import Select from './select';
 const selectSource = require('!!raw-loader!./select');
 const selectHtml = renderToHtml(Select);
 const selectSnippet = [
-  `<EuiSelect
+  `<WuiSelect
   options={[
     {
       value: 'option_one',
@@ -121,13 +121,13 @@ import Checkbox from './checkbox';
 const checkboxSource = require('!!raw-loader!./checkbox');
 const checkboxHtml = renderToHtml(Checkbox);
 const checkboxSnippet = [
-  `<EuiCheckbox
+  `<WuiCheckbox
   id={checkboxId}
   label="I am a checkbox"
   checked={checked}
   onChange={onChange}
 />`,
-  `<EuiCheckbox
+  `<WuiCheckbox
   id={checkboxId}
   label="I am an indeterminate checkbox"
   indeterminate={indeterminate}
@@ -143,7 +143,7 @@ import Radio from './radio';
 const radioSource = require('!!raw-loader!./radio');
 const radioHtml = renderToHtml(Radio);
 const radioSnippet = [
-  `<EuiRadio
+  `<WuiRadio
   label="I am a radio"
   checked={checked}
   onChange={onChange}
@@ -158,7 +158,7 @@ import Switch from './switch';
 const switchSource = require('!!raw-loader!./switch');
 const switchHtml = renderToHtml(Switch);
 const switchSnippet = [
-  `<EuiSwitch
+  `<WuiSwitch
   label="I am a switch"
   checked={checked}
   onChange={onChange}
@@ -198,7 +198,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldTextSnippet,
       props: {
-        EuiFieldText,
+        WuiFieldText,
       },
       demo: <FieldText />,
     },
@@ -216,7 +216,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldSearchSnippet,
       props: {
-        EuiFieldSearch,
+        WuiFieldSearch,
       },
       demo: <FieldSearch />,
     },
@@ -234,7 +234,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldNumberSnippet,
       props: {
-        EuiFieldNumber,
+        WuiFieldNumber,
       },
       demo: <FieldNumber />,
     },
@@ -252,7 +252,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldPasswordSnippet,
       props: {
-        EuiFieldPassword,
+        WuiFieldPassword,
       },
       demo: <FieldPassword />,
     },
@@ -271,15 +271,15 @@ export const FormControlsExample = {
       text: (
         <p>
           This component renders a basic HTML{' '}
-          <EuiCode language="html">&lt;select&gt;</EuiCode> element. If you need
+          <WuiCode language="html">&lt;select&gt;</WuiCode> element. If you need
           more customization for how the options and/or selected values render,
           use the{' '}
           <Link to="/forms/super-select">
-            <strong>EuiSuperSelect</strong>
+            <strong>WuiSuperSelect</strong>
           </Link>
           . Another option is to use the{' '}
           <Link to="/forms/combo-box">
-            <strong>EuiComboBox</strong>
+            <strong>WuiComboBox</strong>
           </Link>
           , which has search and multi-select capabilities, but also has
           restrictions on how items are rendered.
@@ -287,7 +287,7 @@ export const FormControlsExample = {
       ),
       snippet: selectSnippet,
       props: {
-        EuiSelect,
+        WuiSelect,
       },
       demo: <Select />,
     },
@@ -305,7 +305,7 @@ export const FormControlsExample = {
       ],
       snippet: textAreaSnippet,
       props: {
-        EuiTextArea,
+        WuiTextArea,
       },
       demo: <TextArea />,
     },
@@ -323,23 +323,23 @@ export const FormControlsExample = {
       ],
       text: (
         <p>
-          <strong>EuiFilePicker</strong> is a stylized, but generic HTML{' '}
-          <EuiCode language="html">&lt;input type=&quot;file&quot;&gt;</EuiCode>{' '}
+          <strong>WuiFilePicker</strong> is a stylized, but generic HTML{' '}
+          <WuiCode language="html">&lt;input type=&quot;file&quot;&gt;</WuiCode>{' '}
           tag. It supports drag and drop as well as on click style selection of
           files. The example below shows how to grab the files using the{' '}
-          <EuiLink
+          <WuiLink
             href="https://developer.mozilla.org/en-US/docs/Web/API/FileList"
             target="_blank">
             FileList API
-          </EuiLink>
+          </WuiLink>
           . Like other form elements, you can wrap it in a{' '}
-          <strong>EuiFormRow</strong> to apply a label.
+          <strong>WuiFormRow</strong> to apply a label.
         </p>
       ),
-      components: { EuiFilePicker },
+      components: { WuiFilePicker },
       snippet: filePickerSnippet,
       demo: <FilePicker />,
-      props: { EuiFilePicker },
+      props: { WuiFilePicker },
     },
     {
       title: 'Checkbox',
@@ -355,7 +355,7 @@ export const FormControlsExample = {
       ],
       snippet: checkboxSnippet,
       props: {
-        EuiCheckbox,
+        WuiCheckbox,
       },
       demo: <Checkbox />,
     },
@@ -372,10 +372,10 @@ export const FormControlsExample = {
         },
       ],
       props: {
-        EuiCheckboxGroup,
+        WuiCheckboxGroup,
       },
       demo: <CheckboxGroup />,
-      snippet: `<EuiCheckboxGroup
+      snippet: `<WuiCheckboxGroup
   options={[
     {
       id: id1,
@@ -400,7 +400,7 @@ export const FormControlsExample = {
       ],
       snippet: radioSnippet,
       props: {
-        EuiRadio,
+        WuiRadio,
       },
       demo: <Radio />,
     },
@@ -417,10 +417,10 @@ export const FormControlsExample = {
         },
       ],
       props: {
-        EuiRadioGroup,
+        WuiRadioGroup,
       },
       demo: <RadioGroup />,
-      snippet: `<EuiRadioGroup
+      snippet: `<WuiRadioGroup
   options={[
     {
       id: id1,
@@ -449,7 +449,7 @@ export const FormControlsExample = {
       ],
       snippet: switchSnippet,
       props: {
-        EuiSwitch,
+        WuiSwitch,
       },
       demo: <Switch />,
     },
@@ -467,7 +467,7 @@ export const FormControlsExample = {
       ],
       text: (
         <Fragment>
-          <EuiCallOut
+          <WuiCallOut
             color="warning"
             iconType="accessibility"
             size="s"
@@ -477,35 +477,35 @@ export const FormControlsExample = {
                 where the individual labels for each control do not provide a
                 sufficient description, and an additional group level
                 description is needed.&quot;{' '}
-                <EuiLink
+                <WuiLink
                   external
                   href="https://www.w3.org/WAI/WCAG21/Techniques/html/H71">
                   WCAG Spec
-                </EuiLink>
+                </WuiLink>
               </span>
             }
           />
-          <EuiSpacer />
+          <WuiSpacer />
           <p>
-            <strong>EuiFormFieldset</strong> simply wraps its children in a{' '}
-            <EuiCode language="html">&lt;fieldset&gt;</EuiCode> with the option
-            to add a <EuiCode language="html">&lt;legend&gt;</EuiCode> via the{' '}
-            <EuiCode>legend</EuiCode> object prop.
+            <strong>WuiFormFieldset</strong> simply wraps its children in a{' '}
+            <WuiCode language="html">&lt;fieldset&gt;</WuiCode> with the option
+            to add a <WuiCode language="html">&lt;legend&gt;</WuiCode> via the{' '}
+            <WuiCode>legend</WuiCode> object prop.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormFieldset,
-        EuiFormLegend,
+        WuiFormFieldset,
+        WuiFormLegend,
       },
       demo: <Fieldset />,
       snippet: [
-        `<EuiFormFieldset legend={{ children: 'Legend' }}>
+        `<WuiFormFieldset legend={{ children: 'Legend' }}>
   <!-- Controls -->
-</EuiFormFieldset>`,
-        `<EuiFormFieldset legend={{ children: 'Hidden legend', display: 'hidden' }}>
+</WuiFormFieldset>`,
+        `<WuiFormFieldset legend={{ children: 'Hidden legend', display: 'hidden' }}>
   <!-- Controls -->
-</EuiFormFieldset>`,
+</WuiFormFieldset>`,
       ],
     },
     {
@@ -513,19 +513,19 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            Most form controls accept a <EuiCode>prepend</EuiCode> and{' '}
-            <EuiCode>append</EuiCode> prop that allows passing a single
+            Most form controls accept a <WuiCode>prepend</WuiCode> and{' '}
+            <WuiCode>append</WuiCode> prop that allows passing a single
             node/string or an array of nodes/strings. Strings will be converted
             into form labels and connected to the input via{' '}
-            <EuiCode>htmlFor</EuiCode> for accessibility.
+            <WuiCode>htmlFor</WuiCode> for accessibility.
           </p>
           <p>
             These are great for demarcating the input&apos;s metric like
             &quot;px&quot; or &quot;ms&quot;. You can also pass buttons for
             input settings or additional filters. Just be sure to use
-            <EuiCode language="js">
-              &lt;EuiButtonEmpty size=&quot;xs&quot; /&gt;
-            </EuiCode>
+            <WuiCode language="js">
+              &lt;WuiButtonEmpty size=&quot;xs&quot; /&gt;
+            </WuiCode>
             .
           </p>
         </Fragment>
@@ -542,11 +542,11 @@ export const FormControlsExample = {
       ],
       demo: <PrependAppend />,
       snippet: [
-        `<EuiFieldText
+        `<WuiFieldText
   prepend="Label"
   append="px"
 />`,
-        `<EuiFieldText
+        `<WuiFieldText
   prepend={prepend}
   append={append}
 />`,
@@ -567,29 +567,29 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            <EuiBadge color={'warning'}>Building block only</EuiBadge>
+            <WuiBadge color={'warning'}>Building block only</WuiBadge>
           </p>
 
           <p>
-            <strong>EuiFormControlLayout</strong> is generally used internally
+            <strong>WuiFormControlLayout</strong> is generally used internally
             to consistently style form controls, but it&rsquo;s published in
             case you want to create your own form control which matches those of
-            EUI. The examples below demonstrate its various states.
+            WUI. The examples below demonstrate its various states.
           </p>
 
-          <EuiCallOut title="Additional padding required" color="warning">
+          <WuiCallOut title="Additional padding required" color="warning">
             <p>
-              The padding on the <EuiCode>input</EuiCode> itself doesn&rsquo;t
+              The padding on the <WuiCode>input</WuiCode> itself doesn&rsquo;t
               take into account the presence of the various icons supported by{' '}
-              <strong>EuiFormControlLayout</strong>. Any input component
-              provided to <strong>EuiFormControlLayout</strong> is responsible
+              <strong>WuiFormControlLayout</strong>. Any input component
+              provided to <strong>WuiFormControlLayout</strong> is responsible
               for its own padding.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </Fragment>
       ),
       props: {
-        EuiFormControlLayout,
+        WuiFormControlLayout,
       },
       demo: <FormControlLayout />,
     },
@@ -608,28 +608,28 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            <EuiBadge color={'warning'}>Building block only</EuiBadge>
+            <WuiBadge color={'warning'}>Building block only</WuiBadge>
           </p>
 
           <p>
-            Like <strong>EuiFormControlLayout</strong>,{' '}
-            <strong>EuiFormControlLayoutDelimited</strong> is generally used
+            Like <strong>WuiFormControlLayout</strong>,{' '}
+            <strong>WuiFormControlLayoutDelimited</strong> is generally used
             internally to consistently style form controls. This component
             specifically lays out two form controls with center text or icon.
           </p>
           <p>
             It takes all of the same props as{' '}
-            <strong>EuiFormControlLayout</strong> except for{' '}
-            <EuiCode>children</EuiCode>. Instead it requires both a{' '}
-            <strong>single</strong> <EuiCode>startControl</EuiCode> and a{' '}
-            <strong>single</strong> <EuiCode>endControl</EuiCode>. You can
+            <strong>WuiFormControlLayout</strong> except for{' '}
+            <WuiCode>children</WuiCode>. Instead it requires both a{' '}
+            <strong>single</strong> <WuiCode>startControl</WuiCode> and a{' '}
+            <strong>single</strong> <WuiCode>endControl</WuiCode>. You can
             optionally change the center content to a different string or node
-            (like an EuiIcon).
+            (like an WuiIcon).
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormControlLayoutDelimited,
+        WuiFormControlLayoutDelimited,
       },
       demo: <FormControlLayoutRange />,
     },

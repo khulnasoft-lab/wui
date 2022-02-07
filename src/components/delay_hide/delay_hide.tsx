@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,20 +39,20 @@ function isComponentBecomingVisible(
   return prevHide === true && nextHide === false;
 }
 
-export interface EuiDelayHideProps {
+export interface WuiDelayHideProps {
   hide: boolean;
   minimumDuration: number;
   render: () => ReactNode;
 }
 
-interface EuiDelayHideState {
+interface WuiDelayHideState {
   hide: boolean;
   countdownExpired?: boolean;
 }
 
-export class EuiDelayHide extends Component<
-  EuiDelayHideProps,
-  EuiDelayHideState
+export class WuiDelayHide extends Component<
+  WuiDelayHideProps,
+  WuiDelayHideState
 > {
   static defaultProps = {
     hide: false,
@@ -47,8 +60,8 @@ export class EuiDelayHide extends Component<
   };
 
   static getDerivedStateFromProps(
-    nextProps: EuiDelayHideProps,
-    prevState: EuiDelayHideState
+    nextProps: WuiDelayHideProps,
+    prevState: WuiDelayHideState
   ) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevState.hide,
@@ -74,7 +87,7 @@ export class EuiDelayHide extends Component<
     }
   }
 
-  componentDidUpdate(prevProps: EuiDelayHideProps) {
+  componentDidUpdate(prevProps: WuiDelayHideProps) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevProps.hide,
       this.props.hide

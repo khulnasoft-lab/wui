@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiIcon, EuiTabs, EuiTab } from '../../../../src/components';
+import { WuiIcon, WuiTabs, WuiTab } from '../../../../src/components';
 
 const tabs = [
   {
@@ -17,7 +17,7 @@ const tabs = [
     id: 'hydrogen',
     name: (
       <span>
-        <EuiIcon type="heatmap" />
+        <WuiIcon type="heatmap" />
         &nbsp;Hydrogen
       </span>
     ),
@@ -39,15 +39,15 @@ export default () => {
 
   const renderTabs = () => {
     return tabs.map((tab, index) => (
-      <EuiTab
+      <WuiTab
         onClick={() => onSelectedTabChanged(tab.id)}
         isSelected={tab.id === selectedTabId}
         disabled={tab.disabled}
         key={index}>
         {tab.name}
-      </EuiTab>
+      </WuiTab>
     ));
   };
 
-  return <EuiTabs display="condensed">{renderTabs()}</EuiTabs>;
+  return <WuiTabs display="condensed">{renderTabs()}</WuiTabs>;
 };

@@ -98,7 +98,7 @@ function traverseFile(filepath) {
     ast,
     {
       JSXOpeningElement(path) {
-        if (path.node.name.name === 'EuiI18n') {
+        if (path.node.name.name === 'WuiI18n') {
           const symbols = handleJSXPath(path);
           for (let i = 0; i < symbols.length; i++) {
             tokenMappings.push(
@@ -108,7 +108,7 @@ function traverseFile(filepath) {
         }
       },
       CallExpression(path) {
-        if (path.node.callee && path.node.callee.type === 'Identifier' && path.node.callee.name === 'useEuiI18n') {
+        if (path.node.callee && path.node.callee.type === 'Identifier' && path.node.callee.name === 'useWuiI18n') {
           const symbols = handleHookPath(path);
           for (let i = 0; i < symbols.length; i++) {
             tokenMappings.push(

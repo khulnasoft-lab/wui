@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,15 +35,15 @@ import { CommonProps } from '../../common';
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { WuiValidatableControl } from '../validatable_control';
 
-export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
+export type WuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
   CommonProps & {
-    icon?: EuiFormControlLayoutProps['icon'];
+    icon?: WuiFormControlLayoutProps['icon'];
     isInvalid?: boolean;
     fullWidth?: boolean;
     isLoading?: boolean;
@@ -41,17 +54,17 @@ export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
      * Creates an input group with element(s) coming before input.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: WuiFormControlLayoutProps['prepend'];
 
     /**
      * Creates an input group with element(s) coming after input.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: WuiFormControlLayoutProps['append'];
 
     /**
      * Completely removes form control layout wrapper and ignores
-     * icon, prepend, and append. Best used inside EuiFormControlLayoutDelimited.
+     * icon, prepend, and append. Best used inside WuiFormControlLayoutDelimited.
      */
     controlOnly?: boolean;
 
@@ -61,7 +74,7 @@ export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
     compressed?: boolean;
   };
 
-export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
+export const WuiFieldText: FunctionComponent<WuiFieldTextProps> = ({
   id,
   name,
   placeholder,
@@ -79,16 +92,16 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
   controlOnly,
   ...rest
 }) => {
-  const classes = classNames('euiFieldText', className, {
-    'euiFieldText--withIcon': icon,
-    'euiFieldText--fullWidth': fullWidth,
-    'euiFieldText--compressed': compressed,
-    'euiFieldText--inGroup': prepend || append,
-    'euiFieldText-isLoading': isLoading,
+  const classes = classNames('wuiFieldText', className, {
+    'wuiFieldText--withIcon': icon,
+    'wuiFieldText--fullWidth': fullWidth,
+    'wuiFieldText--compressed': compressed,
+    'wuiFieldText--inGroup': prepend || append,
+    'wuiFieldText-isLoading': isLoading,
   });
 
   const control = (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <WuiValidatableControl isInvalid={isInvalid}>
       <input
         type="text"
         id={id}
@@ -100,13 +113,13 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
         readOnly={readOnly}
         {...rest}
       />
-    </EuiValidatableControl>
+    </WuiValidatableControl>
   );
 
   if (controlOnly) return control;
 
   return (
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       icon={icon}
       fullWidth={fullWidth}
       isLoading={isLoading}
@@ -116,6 +129,6 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
       append={append}
       inputId={id}>
       {control}
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
   );
 };

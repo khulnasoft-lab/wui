@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiOverlayMask,
-  EuiFieldText,
-  EuiSpacer,
+  WuiModal,
+  WuiModalBody,
+  WuiModalHeader,
+  WuiModalHeaderTitle,
+  WuiOverlayMask,
+  WuiFieldText,
+  WuiSpacer,
 } from '../../../../src/components';
 import { keys } from '../../../../src/services';
 
@@ -27,27 +27,27 @@ const ConflictModal = props => {
   };
 
   return (
-    <EuiOverlayMask>
-      <EuiModal onClose={props.onClose} style={{ width: '800px' }}>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>Example modal</EuiModalHeaderTitle>
-        </EuiModalHeader>
-        <EuiModalBody>
-          <EuiFieldText
+    <WuiOverlayMask>
+      <WuiModal onClose={props.onClose} style={{ width: '800px' }}>
+        <WuiModalHeader>
+          <WuiModalHeaderTitle>Example modal</WuiModalHeaderTitle>
+        </WuiModalHeader>
+        <WuiModalBody>
+          <WuiFieldText
             value={inputValue}
             onChange={updateInputValue}
             onKeyDown={clearInputValueOnEscape}
           />
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
           <p>While typing in this field, ESC will clear the field.</p>
-          <EuiSpacer size="l" />
+          <WuiSpacer size="l" />
           <p>
             Otherwise, the event bubbles up to the window and ESC closes the
             modal.
           </p>
-        </EuiModalBody>
-      </EuiModal>
-    </EuiOverlayMask>
+        </WuiModalBody>
+      </WuiModal>
+    </WuiOverlayMask>
   );
 };
 

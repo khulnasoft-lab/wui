@@ -7,8 +7,8 @@ import React, {
   useEffect,
 } from 'react';
 
-import { EuiFocusTrap } from '../../../../src/components/focus_trap';
-import { EuiButton } from '../../../../src/components/button';
+import { WuiFocusTrap } from '../../../../src/components/focus_trap';
+import { WuiButton } from '../../../../src/components/button';
 
 export const GuideFullScreen: FunctionComponent<{
   children: (setFullScreen: (isFullScreen: boolean) => void) => ReactElement;
@@ -42,11 +42,11 @@ export const GuideFullScreen: FunctionComponent<{
 
   return (
     <Fragment>
-      <EuiButton onClick={openFullScreen} iconType="fullScreen">
+      <WuiButton onClick={openFullScreen} iconType="fullScreen">
         {buttonText}
-      </EuiButton>
+      </WuiButton>
 
-      {fullScreen && <EuiFocusTrap>{children(setFullScreen)}</EuiFocusTrap>}
+      {fullScreen && <WuiFocusTrap>{children(setFullScreen)}</WuiFocusTrap>}
     </Fragment>
   );
 };

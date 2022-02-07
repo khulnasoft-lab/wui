@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,14 +35,14 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export type EuiFormHelpTextProps = CommonProps & HTMLAttributes<HTMLDivElement>;
+export type WuiFormHelpTextProps = CommonProps & HTMLAttributes<HTMLDivElement>;
 
-export const EuiFormHelpText: FunctionComponent<EuiFormHelpTextProps> = ({
+export const WuiFormHelpText: FunctionComponent<WuiFormHelpTextProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiFormHelpText', className);
+  const classes = classNames('wuiFormHelpText', className);
 
   return (
     <div className={classes} {...rest}>

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,7 +38,7 @@ import {
   stopThrowingReactWarnings,
 } from '../../../test';
 
-import { EuiCheckbox, TYPES } from './checkbox';
+import { WuiCheckbox, TYPES } from './checkbox';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
@@ -35,10 +48,10 @@ const checkboxRequiredProps = {
   onChange: () => {},
 };
 
-describe('EuiCheckbox', () => {
+describe('WuiCheckbox', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCheckbox id="id" onChange={() => {}} {...requiredProps} />
+      <WuiCheckbox id="id" onChange={() => {}} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -47,7 +60,7 @@ describe('EuiCheckbox', () => {
   describe('props', () => {
     test('check is rendered', () => {
       const component = render(
-        <EuiCheckbox {...checkboxRequiredProps} checked />
+        <WuiCheckbox {...checkboxRequiredProps} checked />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +68,7 @@ describe('EuiCheckbox', () => {
 
     test('label is rendered', () => {
       const component = render(
-        <EuiCheckbox {...checkboxRequiredProps} label={<span>Label</span>} />
+        <WuiCheckbox {...checkboxRequiredProps} label={<span>Label</span>} />
       );
 
       expect(component).toMatchSnapshot();
@@ -65,7 +78,7 @@ describe('EuiCheckbox', () => {
       TYPES.forEach(value => {
         test(`${value} is rendered`, () => {
           const component = render(
-            <EuiCheckbox {...checkboxRequiredProps} type={value} />
+            <WuiCheckbox {...checkboxRequiredProps} type={value} />
           );
 
           expect(component).toMatchSnapshot();
@@ -76,7 +89,7 @@ describe('EuiCheckbox', () => {
     describe('disabled', () => {
       test('disabled is rendered', () => {
         const component = render(
-          <EuiCheckbox {...checkboxRequiredProps} disabled />
+          <WuiCheckbox {...checkboxRequiredProps} disabled />
         );
 
         expect(component).toMatchSnapshot();

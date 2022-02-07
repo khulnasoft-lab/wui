@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
+import { WuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
 
-describe('EuiDescriptionList', () => {
+describe('WuiDescriptionList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDescriptionList {...requiredProps}>Content</EuiDescriptionList>
+      <WuiDescriptionList {...requiredProps}>Content</WuiDescriptionList>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,9 +64,9 @@ describe('EuiDescriptionList', () => {
         ];
 
         const component = render(
-          <EuiDescriptionList listItems={listItems}>
+          <WuiDescriptionList listItems={listItems}>
             listItems will render instead of this content
-          </EuiDescriptionList>
+          </WuiDescriptionList>
         );
 
         expect(component).toMatchSnapshot();
@@ -62,7 +75,7 @@ describe('EuiDescriptionList', () => {
 
     describe('compressed', () => {
       test('is rendered', () => {
-        const component = render(<EuiDescriptionList compressed />);
+        const component = render(<WuiDescriptionList compressed />);
 
         expect(component).toMatchSnapshot();
       });
@@ -71,7 +84,7 @@ describe('EuiDescriptionList', () => {
     describe('type', () => {
       TYPES.forEach(type => {
         test(`${type} is rendered`, () => {
-          const component = render(<EuiDescriptionList type={type} />);
+          const component = render(<WuiDescriptionList type={type} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -81,7 +94,7 @@ describe('EuiDescriptionList', () => {
     describe('align', () => {
       ALIGNMENTS.forEach(alignment => {
         test(`${alignment} is rendered`, () => {
-          const component = render(<EuiDescriptionList align={alignment} />);
+          const component = render(<WuiDescriptionList align={alignment} />);
 
           expect(component).toMatchSnapshot();
         });

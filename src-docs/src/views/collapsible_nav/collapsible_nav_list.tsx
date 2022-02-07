@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { EuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
-import { EuiText } from '../../../../src/components/text';
+import { WuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
+import { WuiText } from '../../../../src/components/text';
 import {
-  EuiListGroup,
-  EuiListGroupProps,
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  WuiListGroup,
+  WuiListGroupProps,
+  WuiPinnableListGroup,
+  WuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiButton, EuiButtonIcon } from '../../../../src/components/button';
-import { EuiLink } from '../../../../src/components/link';
+import { WuiSpacer } from '../../../../src/components/spacer';
+import { WuiButton, WuiButtonIcon } from '../../../../src/components/button';
+import { WuiLink } from '../../../../src/components/link';
 
-const deploymentsList: EuiListGroupProps['listItems'] = [
+const deploymentsList: WuiListGroupProps['listItems'] = [
   {
     label: 'combining-binaries',
     iconType: 'logoAzureMono',
@@ -25,7 +25,7 @@ const deploymentsList: EuiListGroupProps['listItems'] = [
   },
 ];
 
-export const TopNavLinks: EuiPinnableListGroupItemProps[] = [
+export const TopNavLinks: WuiPinnableListGroupItemProps[] = [
   {
     label: 'Home',
     iconType: 'home',
@@ -37,7 +37,7 @@ export const TopNavLinks: EuiPinnableListGroupItemProps[] = [
   { label: 'Maps', pinned: true },
 ];
 
-export const KibanaNavLinks: EuiPinnableListGroupItemProps[] = [
+export const WazuhNavLinks: WuiPinnableListGroupItemProps[] = [
   { label: 'Discover' },
   { label: 'Visualize' },
   { label: 'Dashboards' },
@@ -48,7 +48,7 @@ export const KibanaNavLinks: EuiPinnableListGroupItemProps[] = [
 ];
 
 export const DeploymentsGroup = (
-  <EuiCollapsibleNavGroup
+  <WuiCollapsibleNavGroup
     title={
       <span>
         <small style={{ fontWeight: 'normal' }}>Deployment</small> <br />
@@ -60,47 +60,47 @@ export const DeploymentsGroup = (
     isCollapsible={true}
     initialIsOpen={false}
     background="dark">
-    <div role="group" className="kibanaNavDeployment__content">
-      <EuiListGroup listItems={deploymentsList} flush />
-      <EuiSpacer size="s" />
-      <EuiButton color="ghost" fullWidth>
+    <div role="group" className="wazuhNavDeployment__content">
+      <WuiListGroup listItems={deploymentsList} flush />
+      <WuiSpacer size="s" />
+      <WuiButton color="ghost" fullWidth>
         Manage deployments
-      </EuiButton>
+      </WuiButton>
     </div>
-  </EuiCollapsibleNavGroup>
+  </WuiCollapsibleNavGroup>
 );
 
 export const SecurityGroup = (
-  <EuiCollapsibleNavGroup
+  <WuiCollapsibleNavGroup
     background="light"
     iconType="logoSecurity"
-    title="Elastic Security"
+    title="Wazuh Security"
     isCollapsible={true}
     initialIsOpen={true}
     arrowDisplay="none"
     extraAction={
-      <EuiButtonIcon
+      <WuiButtonIcon
         aria-label="Hide and never show again"
         title="Hide and never show again"
         iconType="cross"
       />
     }>
-    <EuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
+    <WuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
       <p>
         Threat prevention, detection, and response with SIEM and endpoint
         security.
         <br />
-        <EuiLink>Learn more</EuiLink>
+        <WuiLink>Learn more</WuiLink>
       </p>
-    </EuiText>
-  </EuiCollapsibleNavGroup>
+    </WuiText>
+  </WuiCollapsibleNavGroup>
 );
 
 export default () => (
   <>
     {DeploymentsGroup}
-    <EuiCollapsibleNavGroup background="light">
-      <EuiPinnableListGroup
+    <WuiCollapsibleNavGroup background="light">
+      <WuiPinnableListGroup
         listItems={TopNavLinks}
         onPinClick={() => {}}
         maxWidth="none"
@@ -108,21 +108,21 @@ export default () => (
         gutterSize="none"
         size="s"
       />
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
-      title="Kibana"
-      iconType="logoKibana"
+    </WuiCollapsibleNavGroup>
+    <WuiCollapsibleNavGroup
+      title="Wazuh"
+      iconType="logoWazuh"
       isCollapsible={true}
       initialIsOpen={true}>
-      <EuiPinnableListGroup
-        listItems={KibanaNavLinks}
+      <WuiPinnableListGroup
+        listItems={WazuhNavLinks}
         onPinClick={() => {}}
         maxWidth="none"
         color="subdued"
         gutterSize="none"
         size="s"
       />
-    </EuiCollapsibleNavGroup>
+    </WuiCollapsibleNavGroup>
     {SecurityGroup}
   </>
 );

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -133,7 +146,7 @@ what({ value: 'asdf', foo: 'asdf', bar: false }) // works
 TypeScript is okay with this as a type guard would detect the object is Foo and prevent accessing `bar`.
 Unfortunately this prevents feedback to the user about potentially unintentional effects, for example:
 
-A common pattern in EUI is to render something as a div OR as a button, depending on if an onClick prop is passed.
+A common pattern in WUI is to render something as a div OR as a button, depending on if an onClick prop is passed.
 passing additional props down through `...rest`, which can be specified as
 
 type Spanlike = HTMLAttributes<HTMLSpanElement>;

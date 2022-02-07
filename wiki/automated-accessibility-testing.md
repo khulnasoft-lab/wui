@@ -1,6 +1,6 @@
 # Accessibility testing
 
-The goal is for the entirety of the EUI docs site to be run through [axe](https://www.deque.com/axe/).
+The goal is for the entirety of the WUI docs site to be run through [axe](https://www.deque.com/axe/).
 As of [#2569](https://github.com/elastic/eui/pull/2569), all of the Guidelines pages are tested and the plumbing is in place to add the rest.
 
 ## What is axe?

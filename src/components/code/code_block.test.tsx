@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,7 +37,7 @@ import html from 'html';
 import { act } from 'react-dom/test-utils';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCodeBlock } from './code_block';
+import { WuiCodeBlock } from './code_block';
 import { FONT_SIZES, PADDING_SIZES } from './_code_block';
 
 function snapshotCodeBlock(component: ReactWrapper) {
@@ -38,10 +51,10 @@ function snapshotCodeBlock(component: ReactWrapper) {
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCodeBlock', () => {
+describe('WuiCodeBlock', () => {
   test('renders a code block', () => {
     const component = mount(
-      <EuiCodeBlock {...requiredProps}>{code}</EuiCodeBlock>
+      <WuiCodeBlock {...requiredProps}>{code}</WuiCodeBlock>
     );
 
     expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -51,7 +64,7 @@ describe('EuiCodeBlock', () => {
     describe('transparentBackground', () => {
       it('is rendered', () => {
         const component = mount(
-          <EuiCodeBlock transparentBackground>{code}</EuiCodeBlock>
+          <WuiCodeBlock transparentBackground>{code}</WuiCodeBlock>
         );
 
         expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -60,7 +73,7 @@ describe('EuiCodeBlock', () => {
 
     describe('isCopyable', () => {
       it('is rendered', () => {
-        const component = mount(<EuiCodeBlock isCopyable>{code}</EuiCodeBlock>);
+        const component = mount(<WuiCodeBlock isCopyable>{code}</WuiCodeBlock>);
 
         expect(snapshotCodeBlock(component)).toMatchSnapshot();
       });
@@ -69,7 +82,7 @@ describe('EuiCodeBlock', () => {
     describe('overflowHeight', () => {
       it('is rendered', () => {
         const component = mount(
-          <EuiCodeBlock overflowHeight={200}>{code}</EuiCodeBlock>
+          <WuiCodeBlock overflowHeight={200}>{code}</WuiCodeBlock>
         );
 
         expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -79,7 +92,7 @@ describe('EuiCodeBlock', () => {
     describe('language', () => {
       it('is rendered', () => {
         const component = mount(
-          <EuiCodeBlock language="html">{code}</EuiCodeBlock>
+          <WuiCodeBlock language="html">{code}</WuiCodeBlock>
         );
 
         expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -90,7 +103,7 @@ describe('EuiCodeBlock', () => {
       FONT_SIZES.forEach(fontSize => {
         test(`${fontSize} is rendered`, () => {
           const component = mount(
-            <EuiCodeBlock fontSize={fontSize}>{code}</EuiCodeBlock>
+            <WuiCodeBlock fontSize={fontSize}>{code}</WuiCodeBlock>
           );
 
           expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -102,7 +115,7 @@ describe('EuiCodeBlock', () => {
       PADDING_SIZES.forEach(paddingSize => {
         test(`${paddingSize} is rendered`, () => {
           const component = mount(
-            <EuiCodeBlock paddingSize={paddingSize}>{code}</EuiCodeBlock>
+            <WuiCodeBlock paddingSize={paddingSize}>{code}</WuiCodeBlock>
           );
 
           expect(snapshotCodeBlock(component)).toMatchSnapshot();
@@ -131,7 +144,7 @@ describe('EuiCodeBlock', () => {
         const [value, setValue] = useState('State 1');
 
         useEffect(() => {
-          // Wait a tick for EuiCodeBlock internal state to update on mount
+          // Wait a tick for WuiCodeBlock internal state to update on mount
           setTimeout(() => {
             takeSnapshot();
             act(() => {
@@ -149,9 +162,9 @@ describe('EuiCodeBlock', () => {
 
         return (
           <div>
-            <EuiCodeBlock language="javascript">
+            <WuiCodeBlock language="javascript">
               const value = &apos;{value}&apos;
-            </EuiCodeBlock>
+            </WuiCodeBlock>
           </div>
         );
       }
@@ -161,15 +174,15 @@ describe('EuiCodeBlock', () => {
 
     it('displays content in fullscreen mode', () => {
       const component = mount(
-        <EuiCodeBlock language="javascript" overflowHeight={300}>
+        <WuiCodeBlock language="javascript" overflowHeight={300}>
           const value = &quot;hello&quot;
-        </EuiCodeBlock>
+        </WuiCodeBlock>
       );
 
-      component.find('EuiButtonIcon[iconType="fullScreen"]').simulate('click');
+      component.find('WuiButtonIcon[iconType="fullScreen"]').simulate('click');
       component.update();
 
-      expect(component.find('.euiCodeBlock-isFullScreen').text()).toBe(
+      expect(component.find('.wuiCodeBlock-isFullScreen').text()).toBe(
         'const value = "hello"'
       );
     });

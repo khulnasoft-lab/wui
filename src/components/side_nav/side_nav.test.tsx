@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNav } from './side_nav';
+import { WuiSideNav } from './side_nav';
 import { RenderItem } from './side_nav_item';
 
-describe('EuiSideNav', () => {
+describe('WuiSideNav', () => {
   test('is rendered', () => {
-    const component = render(<EuiSideNav {...requiredProps} />);
+    const component = render(<WuiSideNav {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,13 +47,13 @@ describe('EuiSideNav', () => {
   describe('props', () => {
     describe('isOpenOnMobile', () => {
       test('defaults to false', () => {
-        const component = render(<EuiSideNav />);
+        const component = render(<WuiSideNav />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered when specified as true', () => {
-        const component = render(<EuiSideNav isOpenOnMobile />);
+        const component = render(<WuiSideNav isOpenOnMobile />);
 
         expect(component).toMatchSnapshot();
       });
@@ -75,7 +88,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -85,7 +98,7 @@ describe('EuiSideNav', () => {
           {
             name: 'A',
             id: 0,
-            href: 'http://www.elastic.co',
+            href: 'http://www.wazuh.com',
             items: [
               {
                 name: 'B',
@@ -109,7 +122,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -119,7 +132,7 @@ describe('EuiSideNav', () => {
           {
             name: 'A',
             id: 0,
-            href: 'http://www.elastic.co',
+            href: 'http://www.wazuh.com',
             items: [
               {
                 name: 'B',
@@ -137,7 +150,7 @@ describe('EuiSideNav', () => {
         );
 
         const component = render(
-          <EuiSideNav items={sideNav} renderItem={renderItem} />
+          <WuiSideNav items={sideNav} renderItem={renderItem} />
         );
 
         expect(component).toMatchSnapshot();
@@ -172,7 +185,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -208,7 +221,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<WuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiControlBar, EuiLink } from '../../../../src/components';
+import { WuiControlBar, WuiLink } from '../../../../src/components';
 
 export default () => {
   const soundTheAlarms = () => {
@@ -56,7 +56,7 @@ export default () => {
     {
       controlType: 'text',
       id: 'some_text',
-      text: <EuiLink>A sample link</EuiLink>,
+      text: <WuiLink>A sample link</WuiLink>,
     },
     {
       controlType: 'spacer',
@@ -75,5 +75,5 @@ export default () => {
     },
   ];
 
-  return <EuiControlBar controls={controls} position="relative" showOnMobile />;
+  return <WuiControlBar controls={controls} position="relative" showOnMobile />;
 };

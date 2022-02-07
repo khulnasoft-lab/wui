@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,28 +34,28 @@ export {
   COLORS,
   ButtonColor,
   ButtonSize,
-  EuiButton,
-  EuiButtonProps,
+  WuiButton,
+  WuiButtonProps,
 } from './button';
 
 export {
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
-  EuiButtonEmptySizes,
+  WuiButtonEmpty,
+  WuiButtonEmptyColor,
+  WuiButtonEmptyProps,
+  WuiButtonEmptySizes,
 } from './button_empty';
 
 export {
-  EuiButtonIcon,
-  EuiButtonIconColor,
-  EuiButtonIconProps,
-  EuiButtonIconPropsForButton,
+  WuiButtonIcon,
+  WuiButtonIconColor,
+  WuiButtonIconProps,
+  WuiButtonIconPropsForButton,
 } from './button_icon';
 
-export { EuiButtonToggle, EuiButtonToggleProps } from './button_toggle';
+export { WuiButtonToggle, WuiButtonToggleProps } from './button_toggle';
 
 export {
-  EuiButtonGroup,
-  EuiButtonGroupOption,
-  EuiButtonGroupProps,
+  WuiButtonGroup,
+  WuiButtonGroupOption,
+  WuiButtonGroupProps,
 } from './button_group';

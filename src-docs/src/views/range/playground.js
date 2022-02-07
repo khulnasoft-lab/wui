@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiRange, EuiDualRange } from '../../../../src/components/';
+import { WuiRange, WuiDualRange } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
 
 export const rangeConfig = () => {
-  const docgenInfo = Array.isArray(EuiRange.__docgenInfo)
-    ? EuiRange.__docgenInfo[0]
-    : EuiRange.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiRange.__docgenInfo)
+    ? WuiRange.__docgenInfo[0]
+    : WuiRange.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -34,7 +34,7 @@ export const rangeConfig = () => {
       ...propsToUse.tickInterval.custom,
       checkDep: (val, state) => {
         if (state.showTicks.value && !val) {
-          return 'When passing showTicks to EuiDualRange, you must also provide tickInterval';
+          return 'When passing showTicks to WuiDualRange, you must also provide tickInterval';
         }
         return undefined;
       },
@@ -57,14 +57,14 @@ export const rangeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiRange',
+      componentName: 'WuiRange',
       props: propsToUse,
       scope: {
-        EuiRange,
+        WuiRange,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiRange'],
+        '@wazuh/wui': {
+          named: ['WuiRange'],
         },
       },
       customProps: {
@@ -75,9 +75,9 @@ export const rangeConfig = () => {
 };
 
 export const dualRangeConfig = () => {
-  const docgenInfo = Array.isArray(EuiDualRange.__docgenInfo)
-    ? EuiDualRange.__docgenInfo[0]
-    : EuiDualRange.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiDualRange.__docgenInfo)
+    ? WuiDualRange.__docgenInfo[0]
+    : WuiDualRange.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -109,7 +109,7 @@ export const dualRangeConfig = () => {
       ...propsToUse.tickInterval.custom,
       checkDep: (val, state) => {
         if (state.showTicks.value && !val) {
-          return 'When passing showTicks to EuiRange, you must also provide tickInterval';
+          return 'When passing showTicks to WuiRange, you must also provide tickInterval';
         }
         return undefined;
       },
@@ -118,14 +118,14 @@ export const dualRangeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiDualRange',
+      componentName: 'WuiDualRange',
       props: propsToUse,
       scope: {
-        EuiDualRange,
+        WuiDualRange,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiDualRange'],
+        '@wazuh/wui': {
+          named: ['WuiDualRange'],
         },
       },
       customProps: {

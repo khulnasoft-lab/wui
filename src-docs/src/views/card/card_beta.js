@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiCard,
+  WuiIcon,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 const icons = ['dashboard', 'monitoring', 'watches'];
@@ -12,10 +12,10 @@ const badges = [null, 'Beta', 'Lab'];
 
 const cardNodes = icons.map(function(item, index) {
   return (
-    <EuiFlexItem key={index}>
-      <EuiCard
-        icon={<EuiIcon size="xxl" type={`${item}App`} />}
-        title={`Kibana ${item}`}
+    <WuiFlexItem key={index}>
+      <WuiCard
+        icon={<WuiIcon size="xxl" type={`${item}App`} />}
+        title={`Wazuh ${item}`}
         description="Example of a card's description. Stick to one or two sentences."
         betaBadgeLabel={badges[index]}
         betaBadgeTooltipContent={
@@ -25,8 +25,8 @@ const cardNodes = icons.map(function(item, index) {
         }
         onClick={() => window.alert('Card clicked')}
       />
-    </EuiFlexItem>
+    </WuiFlexItem>
   );
 });
 
-export default () => <EuiFlexGroup gutterSize="l">{cardNodes} </EuiFlexGroup>;
+export default () => <WuiFlexGroup gutterSize="l">{cardNodes} </WuiFlexGroup>;

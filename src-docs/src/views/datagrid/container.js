@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiPanel, EuiLink } from '../../../../src/components/';
+import { WuiDataGrid, WuiPanel, WuiLink } from '../../../../src/components/';
 
 const columns = [
   {
@@ -28,7 +28,7 @@ for (let i = 1; i < 20; i++) {
     name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
     email: fake('{{internet.email}}'),
     city: (
-      <EuiLink href="http://google.com">{fake('{{address.city}}')}</EuiLink>
+      <WuiLink href="http://google.com">{fake('{{address.city}}')}</WuiLink>
     ),
     country: fake('{{address.country}}'),
     account: fake('{{finance.account}}'),
@@ -52,9 +52,9 @@ export default () => {
   );
 
   return (
-    <EuiPanel style={{ width: 400, paddingBottom: 4 }} paddingSize="none">
+    <WuiPanel style={{ width: 400, paddingBottom: 4 }} paddingSize="none">
       <div style={{ height: 300 }}>
-        <EuiDataGrid
+        <WuiDataGrid
           aria-label="Container constrained data grid demo"
           columns={columns}
           columnVisibility={{
@@ -75,6 +75,6 @@ export default () => {
           }}
         />
       </div>
-    </EuiPanel>
+    </WuiPanel>
   );
 };

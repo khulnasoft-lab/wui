@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiComment is rendered 1`] = `
+exports[`WuiComment is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiComment testClass1 testClass2"
+  class="wuiComment testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--default euiCommentTimeline__icon--regular"
+        class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--regular"
       >
         <div
-          data-euiicon-type="user"
+          data-wuiicon-type="user"
         />
       </div>
     </div>
   </div>
   <figure
-    class="euiCommentEvent euiCommentEvent--regular"
+    class="wuiCommentEvent wuiCommentEvent--regular"
   >
     <figcaption
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         />
       </div>
     </figcaption>
@@ -44,41 +44,41 @@ exports[`EuiComment is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiComment props event is rendered 1`] = `
+exports[`WuiComment props event is rendered 1`] = `
 <div
-  class="euiComment"
+  class="wuiComment"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--default euiCommentTimeline__icon--regular"
+        class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--regular"
       >
         <div
-          data-euiicon-type="user"
+          data-wuiicon-type="user"
         />
       </div>
     </div>
   </div>
   <figure
-    class="euiCommentEvent euiCommentEvent--regular"
+    class="wuiCommentEvent wuiCommentEvent--regular"
   >
     <figcaption
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         >
           commented
         </div>
@@ -88,22 +88,22 @@ exports[`EuiComment props event is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiComment props timelineIcon is rendered 1`] = `
+exports[`WuiComment props timelineIcon is rendered 1`] = `
 <div
-  class="euiComment"
+  class="wuiComment"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--regular"
+        class="wuiCommentTimeline__icon--regular"
       >
         <div
           aria-label="Mario"
-          class="euiAvatar euiAvatar--l euiAvatar--user"
+          class="wuiAvatar wuiAvatar--l wuiAvatar--user"
           style="background-image:none;background-color:#f1d86f;color:#000000"
           title="Mario"
         >
@@ -117,21 +117,21 @@ exports[`EuiComment props timelineIcon is rendered 1`] = `
     </div>
   </div>
   <figure
-    class="euiCommentEvent euiCommentEvent--regular"
+    class="wuiCommentEvent wuiCommentEvent--regular"
   >
     <figcaption
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         />
       </div>
     </figcaption>
@@ -139,44 +139,44 @@ exports[`EuiComment props timelineIcon is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiComment props timestamp is rendered 1`] = `
+exports[`WuiComment props timestamp is rendered 1`] = `
 <div
-  class="euiComment"
+  class="wuiComment"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--default euiCommentTimeline__icon--regular"
+        class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--regular"
       >
         <div
-          data-euiicon-type="user"
+          data-wuiicon-type="user"
         />
       </div>
     </div>
   </div>
   <figure
-    class="euiCommentEvent euiCommentEvent--regular"
+    class="wuiCommentEvent wuiCommentEvent--regular"
   >
     <figcaption
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         />
         <div
-          class="euiCommentEvent__headerTimestamp"
+          class="wuiCommentEvent__headerTimestamp"
         >
           <time>
             21 days ago
@@ -188,41 +188,41 @@ exports[`EuiComment props timestamp is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiComment props type is rendered 1`] = `
+exports[`WuiComment props type is rendered 1`] = `
 <div
-  class="euiComment euiComment--update"
+  class="wuiComment wuiComment--update"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--default euiCommentTimeline__icon--update"
+        class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--update"
       >
         <div
-          data-euiicon-type="dot"
+          data-wuiicon-type="dot"
         />
       </div>
     </div>
   </div>
   <div
-    class="euiCommentEvent euiCommentEvent--update"
+    class="wuiCommentEvent wuiCommentEvent--update"
   >
     <div
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         />
       </div>
     </div>
@@ -230,46 +230,46 @@ exports[`EuiComment props type is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiComment renders a body 1`] = `
+exports[`WuiComment renders a body 1`] = `
 <div
-  class="euiComment euiComment--hasBody"
+  class="wuiComment wuiComment--hasBody"
 >
   <div
-    class="euiCommentTimeline"
+    class="wuiCommentTimeline"
   >
     <div
-      class="euiCommentTimeline__content"
+      class="wuiCommentTimeline__content"
     >
       <div
-        class="euiCommentTimeline__icon--default euiCommentTimeline__icon--regular"
+        class="wuiCommentTimeline__icon--default wuiCommentTimeline__icon--regular"
       >
         <div
-          data-euiicon-type="user"
+          data-wuiicon-type="user"
         />
       </div>
     </div>
   </div>
   <figure
-    class="euiCommentEvent euiCommentEvent--regular"
+    class="wuiCommentEvent wuiCommentEvent--regular"
   >
     <figcaption
-      class="euiCommentEvent__header"
+      class="wuiCommentEvent__header"
     >
       <div
-        class="euiCommentEvent__headerData"
+        class="wuiCommentEvent__headerData"
       >
         <div
-          class="euiCommentEvent__headerUsername"
+          class="wuiCommentEvent__headerUsername"
         >
           someuser
         </div>
         <div
-          class="euiCommentEvent__headerEvent"
+          class="wuiCommentEvent__headerEvent"
         />
       </div>
     </figcaption>
     <div
-      class="euiCommentEvent__body"
+      class="wuiCommentEvent__body"
     >
       <p>
         This is the body.

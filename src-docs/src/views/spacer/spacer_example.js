@@ -5,7 +5,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiSpacer } from '../../../../src/components';
+import { WuiCode, WuiSpacer } from '../../../../src/components';
 
 import { spacerConfig } from './playground';
 
@@ -13,7 +13,7 @@ import Spacer from './spacer';
 const spacerSource = require('!!raw-loader!./spacer');
 const spacerHtml = renderToHtml(Spacer);
 
-const spacerSnippet = '<EuiSpacer size="xs" />';
+const spacerSnippet = '<WuiSpacer size="xs" />';
 
 export const SpacerExample = {
   title: 'Spacer',
@@ -31,17 +31,17 @@ export const SpacerExample = {
       ],
       text: (
         <p>
-          The <strong>EuiSpacer</strong> component is a fancy break tag. Use it
+          The <strong>WuiSpacer</strong> component is a fancy break tag. Use it
           to add vertical space between items. Please do not stack them. If
-          passed without a <EuiCode>size</EuiCode> prop, it will default to the
+          passed without a <WuiCode>size</WuiCode> prop, it will default to the
           large size, which matches the margins of{' '}
           <Link to="/layout/flex">
-            <strong>EuiFlexGroup</strong>
+            <strong>WuiFlexGroup</strong>
           </Link>{' '}
           elements.
         </p>
       ),
-      props: { EuiSpacer },
+      props: { WuiSpacer },
       snippet: spacerSnippet,
       demo: (
         <div className="guideDemo__highlightSpacer">

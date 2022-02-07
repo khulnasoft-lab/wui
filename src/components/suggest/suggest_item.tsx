@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,16 +38,16 @@ import React, {
 } from 'react';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import classNames from 'classnames';
-import { EuiIcon, IconType } from '../icon';
+import { WuiIcon, IconType } from '../icon';
 
 interface Type {
   iconType: IconType;
   color: string | keyof typeof colorToClassNameMap;
 }
 
-interface EuiSuggestItemPropsBase {
+interface WuiSuggestItemPropsBase {
   /**
-   * Takes 'iconType' for EuiIcon and 'color'. 'color' can be tint1 through tint9.
+   * Takes 'iconType' for WuiIcon and 'color'. 'color' can be tint1 through tint9.
    */
   type: Type;
 
@@ -62,8 +75,8 @@ type PropsForButton = Omit<
   onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 };
 
-export type EuiSuggestItemProps = CommonProps &
-  EuiSuggestItemPropsBase &
+export type WuiSuggestItemProps = CommonProps &
+  WuiSuggestItemPropsBase &
   ExclusiveUnion<PropsForDiv, PropsForButton>;
 
 interface ColorToClassMap {
@@ -82,29 +95,29 @@ interface ColorToClassMap {
 }
 
 const colorToClassNameMap: ColorToClassMap = {
-  tint0: 'euiSuggestItem__type--tint0',
-  tint1: 'euiSuggestItem__type--tint1',
-  tint2: 'euiSuggestItem__type--tint2',
-  tint3: 'euiSuggestItem__type--tint3',
-  tint4: 'euiSuggestItem__type--tint4',
-  tint5: 'euiSuggestItem__type--tint5',
-  tint6: 'euiSuggestItem__type--tint6',
-  tint7: 'euiSuggestItem__type--tint7',
-  tint8: 'euiSuggestItem__type--tint8',
-  tint9: 'euiSuggestItem__type--tint9',
-  tint10: 'euiSuggestItem__type--tint10',
+  tint0: 'wuiSuggestItem__type--tint0',
+  tint1: 'wuiSuggestItem__type--tint1',
+  tint2: 'wuiSuggestItem__type--tint2',
+  tint3: 'wuiSuggestItem__type--tint3',
+  tint4: 'wuiSuggestItem__type--tint4',
+  tint5: 'wuiSuggestItem__type--tint5',
+  tint6: 'wuiSuggestItem__type--tint6',
+  tint7: 'wuiSuggestItem__type--tint7',
+  tint8: 'wuiSuggestItem__type--tint8',
+  tint9: 'wuiSuggestItem__type--tint9',
+  tint10: 'wuiSuggestItem__type--tint10',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const labelDisplayToClassMap = {
-  fixed: 'euiSuggestItem__labelDisplay--fixed',
-  expand: 'euiSuggestItem__labelDisplay--expand',
+  fixed: 'wuiSuggestItem__labelDisplay--fixed',
+  expand: 'wuiSuggestItem__labelDisplay--expand',
 };
 
 export const DISPLAYS = keysOf(labelDisplayToClassMap);
 
-export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
+export const WuiSuggestItem: FunctionComponent<WuiSuggestItemProps> = ({
   className,
   label,
   type,
@@ -114,9 +127,9 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiSuggestItem',
+    'wuiSuggestItem',
     {
-      'euiSuggestItem-isClickable': onClick,
+      'wuiSuggestItem-isClickable': onClick,
     },
     className
   );
@@ -124,10 +137,10 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
   let colorClass = '';
 
   const labelDisplayClass = classNames(
-    'euiSuggestItem__label',
+    'wuiSuggestItem__label',
     labelDisplayToClassMap[labelDisplay],
     {
-      'euiSuggestItem__labelDisplay--expand': !description,
+      'wuiSuggestItem__labelDisplay--expand': !description,
     }
   );
 
@@ -139,11 +152,11 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
 
   const innerContent = (
     <React.Fragment>
-      <span className={`euiSuggestItem__type ${colorClass}`}>
-        <EuiIcon type={type.iconType} />
+      <span className={`wuiSuggestItem__type ${colorClass}`}>
+        <WuiIcon type={type.iconType} />
       </span>
       <span className={labelDisplayClass}>{label}</span>
-      <span className="euiSuggestItem__description">{description}</span>
+      <span className="wuiSuggestItem__description">{description}</span>
     </React.Fragment>
   );
 

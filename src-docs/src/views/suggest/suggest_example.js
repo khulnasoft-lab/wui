@@ -5,11 +5,11 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiSpacer,
-  EuiSuggest,
-  EuiSuggestItem,
+  WuiCallOut,
+  WuiCode,
+  WuiSpacer,
+  WuiSuggest,
+  WuiSuggestItem,
 } from '../../../../src/components';
 
 import Suggest from './suggest';
@@ -24,13 +24,13 @@ import SuggestItem from './suggest_item';
 const suggestItemSource = require('!!raw-loader!./suggest_item');
 const suggestItemHtml = renderToHtml(SuggestItem);
 const suggestItemSnippet = [
-  `<EuiSuggestItem
+  `<WuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
 />
 `,
-  `<EuiSuggestItem
+  `<WuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
@@ -39,19 +39,19 @@ const suggestItemSnippet = [
 ];
 
 const suggestSnippet = [
-  `<EuiSuggest
+  `<WuiSuggest
   status={status}
   tooltipContent={tooltipContent}
   onInputChange={getInputValue}
   onItemClick={onItemClick}
   suggestions={[
     {
-      type: { iconType: 'kqlField', color: 'tint4' },
+      type: { iconType: 'qryField', color: 'tint4' },
       label: 'Field sample',
       description: 'This is the description',
     },
     {
-      type: { iconType: 'kqlValue', color: 'tint0' },
+      type: { iconType: 'qryValue', color: 'tint0' },
       label: 'Value sample',
       description: 'This is the description',
     },
@@ -76,15 +76,15 @@ export const SuggestExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSuggest</strong> is a text field component used to
+            <strong>WuiSuggest</strong> is a text field component used to
             display suggestions. The status of the component is shown on its
-            right side. The available <EuiCode>status</EuiCode> are:{' '}
-            <EuiCode>unsaved</EuiCode>, <EuiCode>saved</EuiCode>,
-            <EuiCode>unchanged</EuiCode> and <EuiCode>isLoading</EuiCode>.
+            right side. The available <WuiCode>status</WuiCode> are:{' '}
+            <WuiCode>unsaved</WuiCode>, <WuiCode>saved</WuiCode>,
+            <WuiCode>unchanged</WuiCode> and <WuiCode>isLoading</WuiCode>.
           </p>
         </div>
       ),
-      props: { EuiSuggest },
+      props: { WuiSuggest },
       snippet: suggestSnippet,
       demo: <Suggest />,
     },
@@ -103,14 +103,14 @@ export const SuggestExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSuggestItem</strong> is a list item component to display
-            suggestions when typing queries in <strong>EuiSuggest</strong>. Use{' '}
-            <EuiCode>labelDisplay</EuiCode> to set whether the{' '}
-            <EuiCode>label</EuiCode> has a fixed width or not.
+            <strong>WuiSuggestItem</strong> is a list item component to display
+            suggestions when typing queries in <strong>WuiSuggest</strong>. Use{' '}
+            <WuiCode>labelDisplay</WuiCode> to set whether the{' '}
+            <WuiCode>label</WuiCode> has a fixed width or not.
           </p>
         </div>
       ),
-      props: { EuiSuggestItem },
+      props: { WuiSuggestItem },
       snippet: suggestItemSnippet,
       demo: <SuggestItem />,
     },
@@ -128,18 +128,18 @@ export const SuggestExample = {
       ],
       text: (
         <div>
-          <EuiCallOut color="warning" title="Demo of visual pattern only">
+          <WuiCallOut color="warning" title="Demo of visual pattern only">
             <p>
-              This documents a <strong>visual</strong> pattern for Kibana&apos;s
+              This documents a <strong>visual</strong> pattern for Wazuh&apos;s
               global query and filter bars. The filter bar has been broken down
               into multiple components. There are still bugs and not all the
               logic is well-formed.
             </p>
-          </EuiCallOut>
-          <EuiSpacer />
+          </WuiCallOut>
+          <WuiSpacer />
         </div>
       ),
-      props: { EuiSuggest },
+      props: { WuiSuggest },
       demo: <SavedQueries />,
     },
   ],

@@ -5,30 +5,24 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiLoadingKibana,
-  EuiLoadingElastic,
-  EuiLoadingSpinner,
-  EuiLoadingChart,
-  EuiLoadingContent,
-  EuiLoadingRunningLines,
-  EuiLoadingDots,
+  WuiCode,
+  WuiLoadingWazuh,
+  WuiLoadingSpinner,
+  WuiLoadingChart,
+  WuiLoadingContent,
+  WuiLoadingRunningLines,
+  WuiLoadingDots,
 } from '../../../../src/components';
 import {
-  loadingElasticConfig,
+  loadingWazuhConfig,
   loadingChartConfig,
-  loadingKibanaConfig,
   loadingSpinnerConfig,
   loadingContentConfig,
 } from './playground';
 
-import LoadingKibana from './loading_kibana';
-const loadingKibanaSource = require('!!raw-loader!./loading_kibana');
-const loadingKibanaHtml = renderToHtml(LoadingKibana);
-
-import LoadingElastic from './loading_elastic';
-const loadingElasticSource = require('!!raw-loader!./loading_elastic');
-const loadingElasticHtml = renderToHtml(LoadingElastic);
+import LoadingWazuh from './loading_wazuh';
+const loadingWazuhSource = require('!!raw-loader!./loading_wazuh');
+const loadingWazuhHtml = renderToHtml(LoadingWazuh);
 
 import LoadingChart from './loading_chart';
 const loadingChartSource = require('!!raw-loader!./loading_chart');
@@ -58,44 +52,22 @@ export const LoadingExample = {
       source: [
         {
           type: GuideSectionTypes.JS,
-          code: loadingElasticSource,
+          code: loadingWazuhSource,
         },
         {
           type: GuideSectionTypes.HTML,
-          code: loadingElasticHtml,
+          code: loadingWazuhHtml,
         },
       ],
       text: (
         <p>
-          Elastic logo based load. Should only be used in very large panels,
-          like bootup screens.
-        </p>
-      ),
-      props: { EuiLoadingElastic },
-      demo: <LoadingElastic />,
-      snippet: '<EuiLoadingElastic size="m" />',
-    },
-    {
-      title: 'Wazuh bounce',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: loadingKibanaSource,
-        },
-        {
-          type: GuideSectionTypes.HTML,
-          code: loadingKibanaHtml,
-        },
-      ],
-      text: (
-        <p>
-          Logo based loader. Should only be used in very large panels, like
+          Wazuh logo based load. Should only be used in very large panels, like
           bootup screens.
         </p>
       ),
-      props: { EuiLoadingKibana },
-      demo: <LoadingKibana />,
-      snippet: '<EuiLoadingKibana size="m" />',
+      props: { WuiLoadingWazuh },
+      demo: <LoadingWazuh />,
+      snippet: '<WuiLoadingWazuh size="m" />',
     },
     {
       title: 'Chart',
@@ -117,9 +89,9 @@ export const LoadingExample = {
           panels, the smaller, mono versions should be used.
         </p>
       ),
-      props: { EuiLoadingChart },
+      props: { WuiLoadingChart },
       demo: <LoadingChart />,
-      snippet: '<EuiLoadingChart size="m" />',
+      snippet: '<WuiLoadingChart size="m" />',
     },
     {
       title: 'Spinner',
@@ -134,9 +106,9 @@ export const LoadingExample = {
         },
       ],
       text: <p>A simple spinner for most loading applications.</p>,
-      props: { EuiLoadingSpinner },
+      props: { WuiLoadingSpinner },
       demo: <LoadingSpinner />,
-      snippet: '<EuiLoadingSpinner size="m" />',
+      snippet: '<WuiLoadingSpinner size="m" />',
     },
     {
       title: 'Text content',
@@ -153,12 +125,12 @@ export const LoadingExample = {
       text: (
         <p>
           A simple loading animation for displaying placeholder text content.
-          You can pass in a number of <EuiCode>lines</EuiCode> between 1 and 10.
+          You can pass in a number of <WuiCode>lines</WuiCode> between 1 and 10.
         </p>
       ),
-      props: { EuiLoadingContent },
+      props: { WuiLoadingContent },
       demo: <LoadingContent />,
-      snippet: '<EuiLoadingContent lines={3} />',
+      snippet: '<WuiLoadingContent lines={3} />',
     },
     {
       title: 'Dots',
@@ -177,9 +149,9 @@ export const LoadingExample = {
           A big loading animation for displaying big placeholder containers.
         </p>
       ),
-      props: { EuiLoadingDots },
+      props: { WuiLoadingDots },
       demo: <LoadingDots />,
-      snippet: '<EuiLoadingDots />',
+      snippet: '<WuiLoadingDots />',
     },
     {
       title: 'Running lines',
@@ -198,15 +170,14 @@ export const LoadingExample = {
           A simple loading animation for displaying placeholder text content.
         </p>
       ),
-      props: { EuiLoadingRunningLines },
+      props: { WuiLoadingRunningLines },
       demo: <LoadingRunningLines />,
-      snippet: '<EuiLoadingRunningLines />',
+      snippet: '<WuiLoadingRunningLines />',
     },
   ],
   playground: [
-    loadingElasticConfig,
+    loadingWazuhConfig,
     loadingChartConfig,
-    loadingKibanaConfig,
     loadingSpinnerConfig,
     loadingContentConfig,
   ],

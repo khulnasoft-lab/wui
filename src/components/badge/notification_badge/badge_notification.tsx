@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +36,7 @@ import { CommonProps, keysOf } from '../../common';
 
 const colorToClassMap = {
   accent: null,
-  subdued: 'euiNotificationBadge--subdued',
+  subdued: 'wuiNotificationBadge--subdued',
 };
 
 export const COLORS: BadgeNotificationColor[] = keysOf(colorToClassMap);
@@ -31,13 +44,13 @@ export type BadgeNotificationColor = keyof typeof colorToClassMap;
 
 const sizeToClassNameMap = {
   s: null,
-  m: 'euiNotificationBadge--medium',
+  m: 'wuiNotificationBadge--medium',
 };
 
 export const SIZES: BadgeNotificationSize[] = keysOf(sizeToClassNameMap);
 export type BadgeNotificationSize = keyof typeof sizeToClassNameMap;
 
-export interface EuiNotificationBadgeProps
+export interface WuiNotificationBadgeProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLSpanElement>, 'color'> {
   /**
@@ -48,7 +61,7 @@ export interface EuiNotificationBadgeProps
   color?: BadgeNotificationColor;
 }
 
-export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> = ({
+export const WuiNotificationBadge: FunctionComponent<WuiNotificationBadgeProps> = ({
   children,
   className,
   size = 's',
@@ -56,7 +69,7 @@ export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> 
   ...rest
 }) => {
   const classes = classNames(
-    'euiNotificationBadge',
+    'wuiNotificationBadge',
     sizeToClassNameMap[size],
     colorToClassMap[color],
     className

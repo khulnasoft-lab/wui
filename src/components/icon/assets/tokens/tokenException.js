@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconTokenException = ({ title, titleId, ...props }) => (
+const WuiIconTokenException = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTokenException = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenException;
+export const icon = WuiIconTokenException;

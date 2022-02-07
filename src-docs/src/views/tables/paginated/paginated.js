@@ -3,14 +3,14 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiCode,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiSwitch,
+  WuiBasicTable,
+  WuiCode,
+  WuiLink,
+  WuiHealth,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
+  WuiSwitch,
 } from '../../../../../src/components';
 
 /*
@@ -52,7 +52,7 @@ export const Table = () => {
   const renderStatus = online => {
     const color = online ? 'success' : 'danger';
     const label = online ? 'Online' : 'Offline';
-    return <EuiHealth color={color}>{label}</EuiHealth>;
+    return <WuiHealth color={color}>{label}</WuiHealth>;
   };
 
   const togglePerPageOptions = () => setShowPerPageOptions(!showPerPageOptions);
@@ -87,21 +87,21 @@ export const Table = () => {
         fullWidth: true,
       },
       render: (name, item) => (
-        <EuiFlexGroup responsive={false} alignItems="center">
-          <EuiFlexItem>
+        <WuiFlexGroup responsive={false} alignItems="center">
+          <WuiFlexItem>
             {item.firstName} {item.lastName}
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>{renderStatus(item.online)}</EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>{renderStatus(item.online)}</WuiFlexItem>
+        </WuiFlexGroup>
       ),
     },
     {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -136,18 +136,18 @@ export const Table = () => {
 
   return (
     <div>
-      <EuiSwitch
+      <WuiSwitch
         checked={!showPerPageOptions}
         label={
           <span>
             Hide per page options with{' '}
-            <EuiCode>pagination.hidePerPageOptions = true</EuiCode>
+            <WuiCode>pagination.hidePerPageOptions = true</WuiCode>
           </span>
         }
         onChange={togglePerPageOptions}
       />
-      <EuiSpacer size="xl" />
-      <EuiBasicTable
+      <WuiSpacer size="xl" />
+      <WuiBasicTable
         items={pageOfItems}
         columns={columns}
         pagination={pagination}

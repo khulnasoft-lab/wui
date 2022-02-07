@@ -5,9 +5,9 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode } from '../../../../src/components';
+import { WuiCode } from '../../../../src/components';
 
-import { EuiOverlayMaskProps } from './props';
+import { WuiOverlayMaskProps } from './props';
 
 import OverlayMask from './overlay_mask';
 const overlayMaskSource = require('!!raw-loader!./overlay_mask');
@@ -34,7 +34,7 @@ export const OverlayMaskExample = {
       text: (
         <div>
           <p>
-            <strong>EuiOverlayMask</strong> is simply a display component used
+            <strong>WuiOverlayMask</strong> is simply a display component used
             to obscure the main content to bring attention to its children or
             other content. It is best used in conjunction with hyper-focus
             content areas like <Link to="/layout/modal">modals</Link> and{' '}
@@ -47,15 +47,15 @@ export const OverlayMaskExample = {
             </a>{' '}
             to make before choosing to use an overlay. At the very least, you
             must provide a visible button to close the overlay. You can also
-            pass an <EuiCode>onClick</EuiCode> handler to handle closing the
+            pass an <WuiCode>onClick</WuiCode> handler to handle closing the
             overlay.
           </p>
         </div>
       ),
-      props: { EuiOverlayMask: EuiOverlayMaskProps },
-      snippet: `<EuiOverlayMask onClick={() => {}}>
+      props: { WuiOverlayMask: WuiOverlayMaskProps },
+      snippet: `<WuiOverlayMask onClick={() => {}}>
   <!-- Content goes here -->
-</EuiOverlayMask>`,
+</WuiOverlayMask>`,
       demo: <OverlayMask />,
     },
     {
@@ -75,29 +75,29 @@ export const OverlayMaskExample = {
           <p>
             Managing z-index levels of multiple portal-positioned components and
             their different contexts is complicated from within the library.{' '}
-            <strong>EuiOverlayMask</strong> gives you control over whether it
+            <strong>WuiOverlayMask</strong> gives you control over whether it
             should appear below or above an{' '}
             <Link to="/layout/header">
-              <strong>EuiHeader</strong>
+              <strong>WuiHeader</strong>
             </Link>{' '}
-            by providing the <EuiCode>headerZindexLocation</EuiCode> prop. By
-            default this is set to <EuiCode>{'"above"'}</EuiCode> for common
+            by providing the <WuiCode>headerZindexLocation</WuiCode> prop. By
+            default this is set to <WuiCode>{'"above"'}</WuiCode> for common
             cases like with{' '}
             <Link to="/layout/modal">
-              <strong>EuiModal</strong>
+              <strong>WuiModal</strong>
             </Link>{' '}
             where the header should be obscured. However, a component like{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>WuiFlyout</strong>
             </Link>{' '}
             which utilizes the overlay mask but should keep the header visible
-            needs to change this prop to <EuiCode>{'"below"'}</EuiCode>.
+            needs to change this prop to <WuiCode>{'"below"'}</WuiCode>.
           </p>
         </div>
       ),
-      props: { EuiOverlayMask: EuiOverlayMaskProps },
-      snippet: `<EuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
-<EuiFlyout onClose={toggleFlyOut}></EuiFlyout>`,
+      props: { WuiOverlayMask: WuiOverlayMaskProps },
+      snippet: `<WuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
+<WuiFlyout onClose={toggleFlyOut}></WuiFlyout>`,
       demo: <OverlayMaskHeader />,
     },
   ],

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,18 +40,18 @@ import React, {
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayoutIcons,
-  EuiFormControlLayoutIconsProps,
+  WuiFormControlLayoutIcons,
+  WuiFormControlLayoutIconsProps,
 } from './form_control_layout_icons';
 import { CommonProps } from '../../common';
-import { EuiFormLabel } from '../form_label';
+import { WuiFormLabel } from '../form_label';
 
 export { ICON_SIDES } from './form_control_layout_icons';
 
 type StringOrReactElement = string | ReactElement;
 type PrependAppendType = StringOrReactElement | StringOrReactElement[];
 
-export type EuiFormControlLayoutProps = CommonProps &
+export type WuiFormControlLayoutProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Creates an input group with element(s) coming before children.
@@ -51,8 +64,8 @@ export type EuiFormControlLayoutProps = CommonProps &
      */
     append?: PrependAppendType;
     children?: ReactNode;
-    icon?: EuiFormControlLayoutIconsProps['icon'];
-    clear?: EuiFormControlLayoutIconsProps['clear'];
+    icon?: WuiFormControlLayoutIconsProps['icon'];
+    clear?: WuiFormControlLayoutIconsProps['clear'];
     fullWidth?: boolean;
     isLoading?: boolean;
     isDisabled?: boolean;
@@ -65,7 +78,7 @@ export type EuiFormControlLayoutProps = CommonProps &
     inputId?: string;
   };
 
-export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
+export class WuiFormControlLayout extends Component<WuiFormControlLayoutProps> {
   render() {
     const {
       children,
@@ -84,13 +97,13 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     } = this.props;
 
     const classes = classNames(
-      'euiFormControlLayout',
+      'wuiFormControlLayout',
       {
-        'euiFormControlLayout--fullWidth': fullWidth,
-        'euiFormControlLayout--compressed': compressed,
-        'euiFormControlLayout--readOnly': readOnly,
-        'euiFormControlLayout--group': prepend || append,
-        'euiFormControlLayout-isDisabled': isDisabled,
+        'wuiFormControlLayout--fullWidth': fullWidth,
+        'wuiFormControlLayout--compressed': compressed,
+        'wuiFormControlLayout--readOnly': readOnly,
+        'wuiFormControlLayout--group': prepend || append,
+        'wuiFormControlLayout-isDisabled': isDisabled,
       },
       className
     );
@@ -101,10 +114,10 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     return (
       <div className={classes} {...rest}>
         {prependNodes}
-        <div className="euiFormControlLayout__childrenWrapper">
+        <div className="wuiFormControlLayout__childrenWrapper">
           {children}
 
-          <EuiFormControlLayoutIcons
+          <WuiFormControlLayoutIcons
             icon={icon}
             clear={clear}
             isLoading={isLoading}
@@ -143,11 +156,11 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     inputId?: string
   ) {
     return (
-      <EuiFormLabel
+      <WuiFormLabel
         htmlFor={inputId}
-        className={`euiFormControlLayout__${side}`}>
+        className={`wuiFormControlLayout__${side}`}>
         {string}
-      </EuiFormLabel>
+      </WuiFormLabel>
     );
   }
 
@@ -158,7 +171,7 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
   ) {
     return cloneElement(node, {
       className: classNames(
-        `euiFormControlLayout__${side}`,
+        `wuiFormControlLayout__${side}`,
         node.props.className
       ),
       key: key,

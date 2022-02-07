@@ -3,26 +3,26 @@ import React, { Fragment, useState } from 'react';
 import { GuideFullScreen } from '../../services';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiColorPicker,
-  EuiColorPickerSwatch,
-  EuiPage,
-  EuiPageBody,
-  EuiPageHeader,
-  EuiPageHeaderSection,
-  EuiPageContent,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiPageContentBody,
-  EuiSpacer,
-  EuiStat,
-  EuiTab,
-  EuiTabs,
-  EuiTextArea,
-  EuiTitle,
-  EuiTourStep,
-  useEuiTour,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiColorPicker,
+  WuiColorPickerSwatch,
+  WuiPage,
+  WuiPageBody,
+  WuiPageHeader,
+  WuiPageHeaderSection,
+  WuiPageContent,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiPageContentBody,
+  WuiSpacer,
+  WuiStat,
+  WuiTab,
+  WuiTabs,
+  WuiTextArea,
+  WuiTitle,
+  WuiTourStep,
+  useWuiTour,
 } from '../../../../src/components';
 
 const demoTourSteps = [
@@ -62,10 +62,10 @@ export default () => {
   const [color, setColor] = useState('#000');
   const [selectedTabId, setSelectedTabId] = useState('query');
   const [
-    [euiTourStepOne, euiTourStepTwo, euiTourStepThree, euiTourStepFour],
+    [wuiTourStepOne, wuiTourStepTwo, wuiTourStepThree, wuiTourStepFour],
     actions,
     reducerState,
-  ] = useEuiTour(demoTourSteps, tourConfig);
+  ] = useWuiTour(demoTourSteps, tourConfig);
 
   const onSelectColor = color => {
     setColor(color);
@@ -93,80 +93,80 @@ export default () => {
       disabled: false,
       content: (
         <div>
-          <EuiSpacer />
-          <EuiTourStep
-            {...euiTourStepOne}
+          <WuiSpacer />
+          <WuiTourStep
+            {...wuiTourStepOne}
             content={
               <div>
                 <p>This is a neat thing. You enter queries here.</p>
-                <EuiSpacer />
-                <EuiButton color="primary" onClick={actions.incrementStep}>
+                <WuiSpacer />
+                <WuiButton color="primary" onClick={actions.incrementStep}>
                   Ok, got it.
-                </EuiButton>
+                </WuiButton>
               </div>
             }>
-            <EuiTextArea
+            <WuiTextArea
               placeholder="Placeholder text"
               aria-label="Enter ES SQL query"
               defaultValue="{queryValue}"
               style={{ width: 400 }}
             />
-          </EuiTourStep>
+          </WuiTourStep>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiTourStep
-            {...euiTourStepTwo}
+          <WuiTourStep
+            {...wuiTourStepTwo}
             footerAction={
-              <EuiButtonEmpty
+              <WuiButtonEmpty
                 color="text"
                 flush="right"
                 size="xs"
                 onClick={actions.incrementStep}>
                 {"I don't have a favorite color"}
-              </EuiButtonEmpty>
+              </WuiButtonEmpty>
             }>
-            <EuiColorPicker
+            <WuiColorPicker
               onChange={onSelectColor}
               color={color}
               mode="swatch"
               button={
-                <EuiColorPickerSwatch
+                <WuiColorPickerSwatch
                   color={color}
                   aria-label="Select a color"
                 />
               }
             />
-          </EuiTourStep>
+          </WuiTourStep>
         </div>
       ),
     },
     {
       id: 'stat',
       name: (
-        <EuiTourStep {...euiTourStepThree}>
+        <WuiTourStep {...wuiTourStepThree}>
           <span>Stats</span>
-        </EuiTourStep>
+        </WuiTourStep>
       ),
       disabled: false,
       content: (
         <div>
-          <EuiSpacer />
-          <EuiTourStep
-            {...euiTourStepFour}
+          <WuiSpacer />
+          <WuiTourStep
+            {...wuiTourStepFour}
             content={
               <div>
                 <p>That about does it.</p>
-                <EuiSpacer />
-                <EuiButton color="primary" onClick={onReset}>
+                <WuiSpacer />
+                <WuiButton color="primary" onClick={onReset}>
                   Take me to the start.
-                </EuiButton>
+                </WuiButton>
               </div>
             }>
             <div>
-              <EuiStat title="22,123" description="Queries" />
+              <WuiStat title="22,123" description="Queries" />
             </div>
-          </EuiTourStep>
+          </WuiTourStep>
         </div>
       ),
     },
@@ -176,44 +176,44 @@ export default () => {
     <GuideFullScreen onOpen={onReset}>
       {setIsFullScreen => (
         <React.Fragment>
-          <EuiPage className="guideFullScreenOverlay" style={{ zIndex: 9000 }}>
-            <EuiPageBody>
-              <EuiPageHeader>
-                <EuiPageHeaderSection>
-                  <EuiTitle size="l">
+          <WuiPage className="guideFullScreenOverlay" style={{ zIndex: 9000 }}>
+            <WuiPageBody>
+              <WuiPageHeader>
+                <WuiPageHeaderSection>
+                  <WuiTitle size="l">
                     <h1>My app</h1>
-                  </EuiTitle>
-                </EuiPageHeaderSection>
-                <EuiPageHeaderSection>
-                  <EuiButton
+                  </WuiTitle>
+                </WuiPageHeaderSection>
+                <WuiPageHeaderSection>
+                  <WuiButton
                     fill
                     onClick={() => setIsFullScreen(false)}
                     iconType="exit"
                     aria-label="Exit fullscreen demo">
                     Exit fullscreen demo
-                  </EuiButton>
-                </EuiPageHeaderSection>
-              </EuiPageHeader>
-              <EuiPageContent>
-                <EuiPageContentHeader>
-                  <EuiPageContentHeaderSection>
-                    <EuiTitle>
+                  </WuiButton>
+                </WuiPageHeaderSection>
+              </WuiPageHeader>
+              <WuiPageContent>
+                <WuiPageContentHeader>
+                  <WuiPageContentHeaderSection>
+                    <WuiTitle>
                       <h2>A new feature to demo</h2>
-                    </EuiTitle>
-                  </EuiPageContentHeaderSection>
-                </EuiPageContentHeader>
-                <EuiPageContentBody>
-                  <EuiTabs>
+                    </WuiTitle>
+                  </WuiPageContentHeaderSection>
+                </WuiPageContentHeader>
+                <WuiPageContentBody>
+                  <WuiTabs>
                     {tabs.map((tab, index) => (
-                      <EuiTab
+                      <WuiTab
                         id={tab.id}
                         onClick={() => onTabClick(tab.id)}
                         isSelected={tab.id === selectedTabId}
                         key={index}>
                         {tab.name}
-                      </EuiTab>
+                      </WuiTab>
                     ))}
-                  </EuiTabs>
+                  </WuiTabs>
                   {tabs.map((tab, index) => (
                     <Fragment key={index}>
                       {tab.id === selectedTabId && (
@@ -223,10 +223,10 @@ export default () => {
                       )}
                     </Fragment>
                   ))}
-                </EuiPageContentBody>
-              </EuiPageContent>
-            </EuiPageBody>
-          </EuiPage>
+                </WuiPageContentBody>
+              </WuiPageContent>
+            </WuiPageBody>
+          </WuiPage>
         </React.Fragment>
       )}
     </GuideFullScreen>

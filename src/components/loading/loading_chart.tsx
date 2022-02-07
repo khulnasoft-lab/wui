@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,25 +37,25 @@ import { CommonProps, keysOf } from '../common';
 import { chartGrey, chartColor } from './animations';
 
 const sizeToClassNameMap = {
-  m: 'euiLoadingChart--medium',
-  l: 'euiLoadingChart--large',
-  xl: 'euiLoadingChart--xLarge',
+  m: 'wuiLoadingChart--medium',
+  l: 'wuiLoadingChart--large',
+  xl: 'wuiLoadingChart--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingChartSize = keyof typeof sizeToClassNameMap;
+export type WuiLoadingChartSize = keyof typeof sizeToClassNameMap;
 
-export const EuiLoadingChart: FunctionComponent<CommonProps &
+export const WuiLoadingChart: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Makes the loader animation black and white
      */
     mono?: boolean;
-    size?: EuiLoadingChartSize;
+    size?: WuiLoadingChartSize;
   }> = ({ size = 'm', mono = false, className, ...rest }) => {
   const classes = classNames(
-    'euiLoadingChart',
+    'wuiLoadingChart',
     className,
     sizeToClassNameMap[size]
   );

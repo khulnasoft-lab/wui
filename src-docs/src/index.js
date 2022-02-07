@@ -1,4 +1,4 @@
-// specifically polyfill Object.entries for IE11 support (used by @elastic/charts)
+// specifically polyfill Object.entries for IE11 support (used by @wazuh/charts)
 import 'core-js/modules/es7.object.entries';
 import 'core-js/modules/es6.number.is-finite';
 
@@ -42,7 +42,7 @@ const routes = [
   {
     path: '/',
     component: HomeView,
-    name: 'Elastic UI',
+    name: 'Wazuh UI',
   },
   ...childRoutes,
 ];

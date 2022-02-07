@@ -1,123 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiButtonIcon is rendered 1`] = `
+exports[`WuiButtonIcon is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiButtonIcon euiButtonIcon--primary testClass1 testClass2"
+  class="wuiButtonIcon wuiButtonIcon--primary testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color accent is rendered 1`] = `
+exports[`WuiButtonIcon props color accent is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--accent"
+  class="wuiButtonIcon wuiButtonIcon--accent"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color danger is rendered 1`] = `
+exports[`WuiButtonIcon props color danger is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--danger"
+  class="wuiButtonIcon wuiButtonIcon--danger"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color disabled is rendered 1`] = `
+exports[`WuiButtonIcon props color disabled is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--disabled"
+  class="wuiButtonIcon wuiButtonIcon--disabled"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color ghost is rendered 1`] = `
+exports[`WuiButtonIcon props color ghost is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--ghost"
+  class="wuiButtonIcon wuiButtonIcon--ghost"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color primary is rendered 1`] = `
+exports[`WuiButtonIcon props color primary is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--primary"
+  class="wuiButtonIcon wuiButtonIcon--primary"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color subdued is rendered 1`] = `
+exports[`WuiButtonIcon props color subdued is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--subdued"
+  class="wuiButtonIcon wuiButtonIcon--subdued"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color success is rendered 1`] = `
+exports[`WuiButtonIcon props color success is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--success"
+  class="wuiButtonIcon wuiButtonIcon--success"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color text is rendered 1`] = `
+exports[`WuiButtonIcon props color text is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--text"
+  class="wuiButtonIcon wuiButtonIcon--text"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props color warning is rendered 1`] = `
+exports[`WuiButtonIcon props color warning is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--warning"
+  class="wuiButtonIcon wuiButtonIcon--warning"
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props href secures the rel attribute when the target is _blank 1`] = `
+exports[`WuiButtonIcon props href secures the rel attribute when the target is _blank 1`] = `
 <a
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--primary"
+  class="wuiButtonIcon wuiButtonIcon--primary"
   href="#"
   rel="noopener noreferrer"
   target="_blank"
 />
 `;
 
-exports[`EuiButtonIcon props iconType is rendered 1`] = `
+exports[`WuiButtonIcon props iconType is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--primary"
+  class="wuiButtonIcon wuiButtonIcon--primary"
   type="button"
 >
   <div
     aria-hidden="true"
-    class="euiButtonIcon__icon"
-    data-euiicon-type="user"
+    class="wuiButtonIcon__icon"
+    data-wuiicon-type="user"
   />
 </button>
 `;
 
-exports[`EuiButtonIcon props isDisabled is rendered 1`] = `
+exports[`WuiButtonIcon props isDisabled is rendered 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--primary"
+  class="wuiButtonIcon wuiButtonIcon--primary"
   disabled=""
   type="button"
 />
 `;
 
-exports[`EuiButtonIcon props isDisabled renders a button even when href is defined 1`] = `
+exports[`WuiButtonIcon props isDisabled renders a button even when href is defined 1`] = `
 <button
   aria-label="button"
-  class="euiButtonIcon euiButtonIcon--primary"
+  class="wuiButtonIcon wuiButtonIcon--primary"
   disabled=""
   type="button"
 />

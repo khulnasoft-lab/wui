@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiOverlayMask,
-  EuiButton,
-  EuiSpacer,
-  EuiTitle,
+  WuiOverlayMask,
+  WuiButton,
+  WuiSpacer,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -13,40 +13,40 @@ export default () => {
 
   const modal = (
     <React.Fragment>
-      <EuiOverlayMask
+      <WuiOverlayMask
         onClick={() => {
           changeMask(false);
         }}>
-        <EuiTitle>
+        <WuiTitle>
           <h2> Click anywhere to close overlay. </h2>
-        </EuiTitle>
-      </EuiOverlayMask>
+        </WuiTitle>
+      </WuiOverlayMask>
     </React.Fragment>
   );
 
   const maskWithClick = (
-    <EuiOverlayMask>
-      <EuiButton
+    <WuiOverlayMask>
+      <WuiButton
         onClick={() => {
           changeMaskWithClick(false);
         }}>
         Click this button to close
-      </EuiButton>
-    </EuiOverlayMask>
+      </WuiButton>
+    </WuiOverlayMask>
   );
 
   return (
     <React.Fragment>
-      <EuiButton
+      <WuiButton
         onClick={() => {
           changeMask(true);
         }}>
         Overlay with onClick
-      </EuiButton>
-      <EuiSpacer size="xxl" />
-      <EuiButton onClick={() => changeMaskWithClick(true)}>
+      </WuiButton>
+      <WuiSpacer size="xxl" />
+      <WuiButton onClick={() => changeMaskWithClick(true)}>
         Overlay with button
-      </EuiButton>
+      </WuiButton>
       {maskOpen ? modal : undefined}
       {maskWithClickOpen ? maskWithClick : undefined}
     </React.Fragment>

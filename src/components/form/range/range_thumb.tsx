@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,9 +49,9 @@ interface DivLike
   extends BaseProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'onClick' | 'onMouseDown'> {}
 
-export type EuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
+export type WuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
 
-export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
+export const WuiRangeThumb: FunctionComponent<WuiRangeThumbProps> = ({
   className,
   min,
   max,
@@ -52,9 +65,9 @@ export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiRangeThumb',
+    'wuiRangeThumb',
     {
-      'euiRangeThumb--hasTicks': showTicks,
+      'wuiRangeThumb--hasTicks': showTicks,
     },
     className
   );

@@ -5,10 +5,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiLink,
-  EuiDatePicker,
-  EuiDatePickerRange,
+  WuiCode,
+  WuiLink,
+  WuiDatePicker,
+  WuiDatePickerRange,
 } from '../../../../src/components';
 
 import DatePicker from './date_picker';
@@ -56,17 +56,17 @@ const utcSource = require('!!raw-loader!./utc');
 const utcHtml = renderToHtml(Utc);
 
 const datePickerSnippet =
-  '<EuiDatePicker selected={startDate} onChange={handleChange} />';
+  '<WuiDatePicker selected={startDate} onChange={handleChange} />';
 
 const statesSnippet = [
-  `<EuiDatePicker
+  `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   onClear={onClear}
   placeholder="Clearable"
 />
 `,
-  `<EuiDatePicker
+  `<WuiDatePicker
   isInvalid
   selected={startDate}
   onChange={handleChange}
@@ -76,20 +76,20 @@ const statesSnippet = [
 ];
 
 const timeSnippet = [
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
 />
 `,
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
   onChange={handleChange}
 />
 `,
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -99,7 +99,7 @@ const timeSnippet = [
 `,
 ];
 
-const localeSnippet = `<EuiDatePicker
+const localeSnippet = `<WuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
@@ -108,9 +108,9 @@ const localeSnippet = `<EuiDatePicker
   locale="de-de"
 />`;
 
-const rangeSnippet = `<EuiDatePickerRange
+const rangeSnippet = `<WuiDatePickerRange
   startDateControl={
-    <EuiDatePicker
+    <WuiDatePicker
       selected={startDate}
       onChange={handleChange}
       startDate={startDate}
@@ -120,7 +120,7 @@ const rangeSnippet = `<EuiDatePickerRange
     />
   }
   endDateControl={
-    <EuiDatePicker
+    <WuiDatePicker
       selected={endDate}
       onChange={handleChange}
       startDate={startDate}
@@ -132,7 +132,7 @@ const rangeSnippet = `<EuiDatePickerRange
 />`;
 
 const minMaxSnippet = [
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
@@ -142,7 +142,7 @@ const minMaxSnippet = [
   maxTime={maxTime}
 />
 `,
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -151,7 +151,7 @@ const minMaxSnippet = [
   excludeTimes={[excludeTimes]}
 />
 `,
-  `<EuiDatePicker
+  `<WuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -161,25 +161,25 @@ const minMaxSnippet = [
 `,
 ];
 
-const openToDateSnippet = `<EuiDatePicker
+const openToDateSnippet = `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   openToDate={openToDate}
 />`;
 
-const customInputSnippet = `<EuiDatePicker
+const customInputSnippet = `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   customInput={customInput}
 />`;
 
-const utcSnippet = `<EuiDatePicker
+const utcSnippet = `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   customInput={customInput}
 />`;
 
-const inlineSnippet = `<EuiDatePicker
+const inlineSnippet = `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   showTimeSelect
@@ -187,7 +187,7 @@ const inlineSnippet = `<EuiDatePicker
   shadow={false}
 />`;
 
-const classesSnippet = `<EuiDatePicker
+const classesSnippet = `<WuiDatePicker
   selected={startDate}
   onChange={handleChange}
   className="customClassName"
@@ -209,17 +209,17 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          At its most bare the <strong>EuiDatePicker</strong> only requires
-          props for <EuiCode>selected</EuiCode> and <EuiCode>onChange</EuiCode>.
+          At its most bare the <strong>WuiDatePicker</strong> only requires
+          props for <WuiCode>selected</WuiCode> and <WuiCode>onChange</WuiCode>.
           It depends on{' '}
-          <EuiLink href="https://momentjs.com/docs/">moment</EuiLink> for all of
+          <WuiLink href="https://momentjs.com/docs/">moment</WuiLink> for all of
           its formatting.
         </p>
       ),
-      components: { EuiDatePicker },
+      components: { WuiDatePicker },
       snippet: datePickerSnippet,
       demo: <DatePicker />,
-      props: { EuiDatePicker },
+      props: { WuiDatePicker },
     },
     {
       title: 'Date picker states',
@@ -256,11 +256,11 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Two props control time selection. <EuiCode>showTimeSelect</EuiCode>{' '}
+          Two props control time selection. <WuiCode>showTimeSelect</WuiCode>{' '}
           will make time selection appear next to the calendar and{' '}
-          <EuiCode>showTimeSelectOnly</EuiCode> will exclude the calendar and
+          <WuiCode>showTimeSelectOnly</WuiCode> will exclude the calendar and
           make the time selection the only thing you see. Make sure to adjust
-          your <EuiCode>dateFormat</EuiCode> and <EuiCode>timeFormat</EuiCode>{' '}
+          your <WuiCode>dateFormat</WuiCode> and <WuiCode>timeFormat</WuiCode>{' '}
           values to match.
         </p>
       ),
@@ -281,9 +281,9 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Locale formatting is achieved by using the <EuiCode>locale</EuiCode>,
-          <EuiCode>timeFormat</EuiCode>, and <EuiCode>dateFormat</EuiCode>{' '}
-          props. The latter will take any <EuiCode>moment()</EuiCode> notation.
+          Locale formatting is achieved by using the <WuiCode>locale</WuiCode>,
+          <WuiCode>timeFormat</WuiCode>, and <WuiCode>dateFormat</WuiCode>{' '}
+          props. The latter will take any <WuiCode>moment()</WuiCode> notation.
           Check{' '}
           <a href="https://en.wikipedia.org/wiki/Date_format_by_country">
             Date format by country
@@ -308,17 +308,17 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          By passing <EuiCode>startDate</EuiCode> and <EuiCode>endDate</EuiCode>{' '}
+          By passing <WuiCode>startDate</WuiCode> and <WuiCode>endDate</WuiCode>{' '}
           props you can provide styling the range in between two dates. To
           further style the group as a single control, use{' '}
-          <strong>EuiDatePickerRange</strong> and pass the date picker controls
-          into the <EuiCode>startDateControl</EuiCode> and{' '}
-          <EuiCode>endDateControl</EuiCode> props.
+          <strong>WuiDatePickerRange</strong> and pass the date picker controls
+          into the <WuiCode>startDateControl</WuiCode> and{' '}
+          <WuiCode>endDateControl</WuiCode> props.
         </p>
       ),
       demo: <Range />,
       snippet: rangeSnippet,
-      props: { EuiDatePickerRange },
+      props: { WuiDatePickerRange },
     },
     {
       title: 'Only allow specific dates and times',
@@ -334,12 +334,12 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>minDate</EuiCode>,<EuiCode>maxDate</EuiCode>,
-          <EuiCode>minTime</EuiCode>, and <EuiCode>maxTime</EuiCode>
-          props to specify specific ranges the <EuiCode>selected</EuiCode> code
+          Use the <WuiCode>minDate</WuiCode>,<WuiCode>maxDate</WuiCode>,
+          <WuiCode>minTime</WuiCode>, and <WuiCode>maxTime</WuiCode>
+          props to specify specific ranges the <WuiCode>selected</WuiCode> code
           must must fall into. You can also use the{' '}
-          <EuiCode>excludeDates</EuiCode> and
-          <EuiCode>excludeTimes</EuiCode> property to disallow a specific array
+          <WuiCode>excludeDates</WuiCode> and
+          <WuiCode>excludeTimes</WuiCode> property to disallow a specific array
           of items from selection.
         </p>
       ),
@@ -360,7 +360,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>openToDate</EuiCode> to default selection to a specific
+          Use <WuiCode>openToDate</WuiCode> to default selection to a specific
           date.
         </p>
       ),
@@ -381,7 +381,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>customInput</EuiCode> to pass a custom input to trigger
+          Use <WuiCode>customInput</WuiCode> to pass a custom input to trigger
           your calendar.
         </p>
       ),
@@ -402,7 +402,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>utcOffset</EuiCode> to apply an offset to the datetime.
+          Use <WuiCode>utcOffset</WuiCode> to apply an offset to the datetime.
         </p>
       ),
       snippet: utcSnippet,
@@ -422,10 +422,10 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>inline</EuiCode> prop to display the date picker
+          Use the <WuiCode>inline</WuiCode> prop to display the date picker
           directly in the page. If you do not need the shadows / popover effect
           to the date picker then also apply the{' '}
-          <EuiCode language="js">shadow=false</EuiCode> prop as shown in the
+          <WuiCode language="js">shadow=false</WuiCode> prop as shown in the
           second example.
         </p>
       ),
@@ -452,17 +452,17 @@ export const DatePickerExample = {
           </p>
           <ul>
             <li>
-              <EuiCode>className</EuiCode> will pass onto the input.
+              <WuiCode>className</WuiCode> will pass onto the input.
             </li>
             <li>
-              <EuiCode>calendarClassName</EuiCode> will pass onto the calendar
+              <WuiCode>calendarClassName</WuiCode> will pass onto the calendar
               itself.
             </li>
             <li>
-              <EuiCode>dayClassName</EuiCode> will pass onto specificed days.
+              <WuiCode>dayClassName</WuiCode> will pass onto specificed days.
             </li>
             <li>
-              <EuiCode>popperClassName</EuiCode> will pass onto the popover.
+              <WuiCode>popperClassName</WuiCode> will pass onto the popover.
             </li>
           </ul>
         </div>

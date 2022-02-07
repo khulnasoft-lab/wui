@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,19 +39,19 @@ import {
   ResponderProvided,
 } from 'react-beautiful-dnd';
 
-// export interface EuiDragDropContextProps extends DragDropContextProps {}
+// export interface WuiDragDropContextProps extends DragDropContextProps {}
 
-type EuiDraggingType = string | null;
+type WuiDraggingType = string | null;
 
-interface EuiDraggingContext {
-  isDraggingType: EuiDraggingType;
+interface WuiDraggingContext {
+  isDraggingType: WuiDraggingType;
 }
 
-export const EuiDragDropContextContext = createContext<EuiDraggingContext>({
+export const WuiDragDropContextContext = createContext<WuiDraggingContext>({
   isDraggingType: null,
 });
 
-export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
+export const WuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   onBeforeDragStart,
   onDragStart,
   onDragUpdate,
@@ -46,8 +59,8 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   children,
   ...rest
 }) => {
-  const [isDraggingType, setIsDraggingType] = useState<EuiDraggingType>(null);
-  const euiOnDragStart = (
+  const [isDraggingType, setIsDraggingType] = useState<WuiDraggingType>(null);
+  const wuiOnDragStart = (
     start: DragStart,
     provided: ResponderProvided
   ): void => {
@@ -56,7 +69,7 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
       onDragStart(start, provided);
     }
   };
-  const euiOnDragEnd = (
+  const wuiOnDragEnd = (
     result: DropResult,
     provided: ResponderProvided
   ): void => {
@@ -68,16 +81,16 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   return (
     <DragDropContext
       onBeforeDragStart={onBeforeDragStart}
-      onDragStart={euiOnDragStart}
+      onDragStart={wuiOnDragStart}
       onDragUpdate={onDragUpdate}
-      onDragEnd={euiOnDragEnd}
+      onDragEnd={wuiOnDragEnd}
       {...rest}>
-      <EuiDragDropContextContext.Provider
+      <WuiDragDropContextContext.Provider
         value={{
           isDraggingType,
         }}>
         {children}
-      </EuiDragDropContextContext.Provider>
+      </WuiDragDropContextContext.Provider>
     </DragDropContext>
   );
 };

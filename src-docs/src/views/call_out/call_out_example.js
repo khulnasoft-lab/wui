@@ -5,10 +5,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiText,
-  EuiSpacer,
-  EuiCode,
+  WuiCallOut,
+  WuiText,
+  WuiSpacer,
+  WuiCode,
 } from '../../../../src/components';
 import callOutConfig from './playground';
 
@@ -16,14 +16,14 @@ import Info from './info';
 const infoSource = require('!!raw-loader!./info');
 const infoHtml = renderToHtml(Info);
 const infoSnippet = [
-  `<EuiCallOut size="m" title="Just a title. No content." iconType="gear" />
+  `<WuiCallOut size="m" title="Just a title. No content." iconType="gear" />
 `,
-  `<EuiCallOut
+  `<WuiCallOut
   size="s"
   title="A beautiful title"
   iconType="search">
   <p><!-- Content --></p>
-</EuiCallOut>
+</WuiCallOut>
 `,
 ];
 
@@ -31,9 +31,9 @@ import Success from './success';
 const successSource = require('!!raw-loader!./success');
 const successHtml = renderToHtml(Success);
 const successSnippet = [
-  `<EuiCallOut title="Good news, everyone!" color="success" iconType="user">
+  `<WuiCallOut title="Good news, everyone!" color="success" iconType="user">
   <p><!-- Content --></p>
-</EuiCallOut>
+</WuiCallOut>
 `,
 ];
 
@@ -41,9 +41,9 @@ import Warning from './warning';
 const warningSource = require('!!raw-loader!./warning');
 const warningHtml = renderToHtml(Warning);
 const warningSnippet = [
-  `<EuiCallOut title="Proceed with caution!" color="warning" iconType="help">
+  `<WuiCallOut title="Proceed with caution!" color="warning" iconType="help">
   <p><!-- Content --></p>
-</EuiCallOut>
+</WuiCallOut>
 `,
 ];
 
@@ -51,9 +51,9 @@ import Danger from './danger';
 const dangerSource = require('!!raw-loader!./danger');
 const dangerHtml = renderToHtml(Danger);
 const dangerSnippet = [
-  `<EuiCallOut title="Sorry, there was an error" color="danger" iconType="alert">
+  `<WuiCallOut title="Sorry, there was an error" color="danger" iconType="alert">
   <p><!-- Content --></p>
-</EuiCallOut>
+</WuiCallOut>
 `,
 ];
 
@@ -61,9 +61,9 @@ export const CallOutExample = {
   title: 'Callout',
   intro: (
     <Fragment>
-      <EuiText>
+      <WuiText>
         <p>
-          <strong>EuiCallOut</strong> contains a message directly related to
+          <strong>WuiCallOut</strong> contains a message directly related to
           content on the page. This includes general information, success,
           warning, and error messages.
         </p>
@@ -82,15 +82,15 @@ export const CallOutExample = {
           </li>
           <li>
             If the callout has a permanent spot in the UI, but needs to be less
-            obstructive, set the <EuiCode>size</EuiCode> property to{' '}
-            <EuiCode>s</EuiCode> (small).
+            obstructive, set the <WuiCode>size</WuiCode> property to{' '}
+            <WuiCode>s</WuiCode> (small).
           </li>
           <li>
-            Use an <EuiCode>icon</EuiCode> prop if it adds context.
+            Use an <WuiCode>icon</WuiCode> prop if it adds context.
           </li>
         </ul>
-      </EuiText>
-      <EuiSpacer size="l" />
+      </WuiText>
+      <WuiSpacer size="l" />
     </Fragment>
   ),
   sections: [
@@ -109,12 +109,12 @@ export const CallOutExample = {
       text: (
         <div>
           <p>
-            Use <strong>EuiCallOut</strong> to communicate general information
+            Use <strong>WuiCallOut</strong> to communicate general information
             to the user.
           </p>
         </div>
       ),
-      props: { EuiCallOut },
+      props: { WuiCallOut },
       snippet: infoSnippet,
       demo: <Info />,
     },

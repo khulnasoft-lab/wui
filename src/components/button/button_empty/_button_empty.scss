@@ -3,8 +3,8 @@
  *    These should act like normal links instead.
  * 2. Change the easing, quickness to not bounce so lighter backgrounds don't flash
  */
-.euiButtonEmpty {
-  @include euiButton;
+.wuiButtonEmpty {
+  @include wuiButton;
 
   border-color: transparent;
   background-color: transparent;
@@ -13,30 +13,30 @@
   transform: none !important; /* 1 */
   animation: none !important; /* 1 */
   transition-timing-function: ease-in; /* 2 */
-  transition-duration: $euiAnimSpeedFast; /* 2 */
+  transition-duration: $wuiAnimSpeedFast; /* 2 */
 
-  .euiButtonEmpty__content {
-    padding: 0 $euiSizeS;
+  .wuiButtonEmpty__content {
+    padding: 0 $wuiSizeS;
   }
 
-  .euiButtonEmpty__text {
+  .wuiButtonEmpty__text {
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  &.euiButtonEmpty--small {
-    height: $euiButtonHeightSmall;
+  &.wuiButtonEmpty--small {
+    height: $wuiButtonHeightSmall;
   }
 
-  &.euiButtonEmpty--xSmall {
-    height: $euiSizeL;
-    font-size: $euiFontSizeS;
+  &.wuiButtonEmpty--xSmall {
+    height: $wuiSizeL;
+    font-size: $wuiFontSizeS;
   }
 
   &:disabled {
-    @include euiButtonContentDisabled;
+    @include wuiButtonContentDisabled;
 
-    color: $euiButtonColorDisabledText;
+    color: $wuiButtonColorDisabledText;
 
     &:focus {
       background-color: transparent;
@@ -50,44 +50,44 @@
 }
 
 
-.euiButtonEmpty--flushLeft,
-.euiButtonEmpty--flushRight,
-.euiButtonEmpty--flushBoth {
-  .euiButtonEmpty__content {
+.wuiButtonEmpty--flushLeft,
+.wuiButtonEmpty--flushRight,
+.wuiButtonEmpty--flushBoth {
+  .wuiButtonEmpty__content {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.euiButtonEmpty--flushLeft {
-  margin-right: $euiSizeS;
+.wuiButtonEmpty--flushLeft {
+  margin-right: $wuiSizeS;
 }
 
-.euiButtonEmpty--flushRight {
-  margin-left: $euiSizeS;
+.wuiButtonEmpty--flushRight {
+  margin-left: $wuiSizeS;
 }
 
 // Modifier naming and colors.
-$euiButtonEmptyTypes: (
-  primary: $euiColorPrimary,
-  danger: $euiColorDanger,
-  disabled: $euiButtonColorDisabledText,
-  ghost: $euiColorGhost,
-  text: $euiTextColor,
+$wuiButtonEmptyTypes: (
+  primary: $wuiColorPrimary,
+  danger: $wuiColorDanger,
+  disabled: $wuiButtonColorDisabledText,
+  ghost: $wuiColorGhost,
+  text: $wuiTextColor,
 );
 
 // Create button modifiers based upon the map.
-@each $name, $color in $euiButtonEmptyTypes {
-  .euiButtonEmpty--#{$name} {
+@each $name, $color in $wuiButtonEmptyTypes {
+  .wuiButtonEmpty--#{$name} {
     @if ($name == 'ghost') {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
     } @else if ($name == 'text') {
       // The default color is lighter than the normal text color, make the it the text color
-      color: $euiTextColor;
+      color: $wuiTextColor;
     } @else {
       // Other colors need to check their contrast against the page background color.
-      color: makeHighContrastColor($color, $euiColorEmptyShade);
+      color: makeHighContrastColor($color, $wuiColorEmptyShade);
     }
 
     &:focus {

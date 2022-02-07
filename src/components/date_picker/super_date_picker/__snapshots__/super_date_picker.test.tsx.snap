@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuperDatePicker is rendered 1`] = `
-<EuiFlexGroup
-  className="euiSuperDatePicker__flexWrapper"
+exports[`WuiSuperDatePicker is rendered 1`] = `
+<WuiFlexGroup
+  className="wuiSuperDatePicker__flexWrapper"
   gutterSize="s"
   responsive={false}
 >
-  <EuiFlexItem>
-    <EuiFormControlLayout
-      className="euiSuperDatePicker"
+  <WuiFlexItem>
+    <WuiFormControlLayout
+      className="wuiSuperDatePicker"
       isDisabled={false}
       prepend={
-        <EuiQuickSelectPopover
+        <WuiQuickSelectPopover
           applyTime={[Function]}
           commonlyUsedRanges={
             Array [
@@ -68,36 +68,36 @@ exports[`EuiSuperDatePicker is rendered 1`] = `
         />
       }
     >
-      <EuiDatePickerRange
-        className="euiDatePickerRange--inGroup"
+      <WuiDatePickerRange
+        className="wuiDatePickerRange--inGroup"
         endDateControl={<div />}
         iconType={false}
         isCustom={true}
         startDateControl={<div />}
       >
         <button
-          className="euiSuperDatePicker__prettyFormat"
+          className="wuiSuperDatePicker__prettyFormat"
           data-test-subj="superDatePickerShowDatesButton"
           disabled={false}
           onClick={[Function]}
         >
           Last 15 minutes
           <span
-            className="euiSuperDatePicker__prettyFormatLink"
+            className="wuiSuperDatePicker__prettyFormatLink"
           >
-            <EuiI18n
+            <WuiI18n
               default="Show dates"
-              token="euiSuperDatePicker.showDatesButtonLabel"
+              token="wuiSuperDatePicker.showDatesButtonLabel"
             />
           </span>
         </button>
-      </EuiDatePickerRange>
-    </EuiFormControlLayout>
-  </EuiFlexItem>
-  <EuiFlexItem
+      </WuiDatePickerRange>
+    </WuiFormControlLayout>
+  </WuiFlexItem>
+  <WuiFlexItem
     grow={false}
   >
-    <EuiSuperUpdateButton
+    <WuiSuperUpdateButton
       data-test-subj="superDatePickerApplyTimeButton"
       isDisabled={false}
       isLoading={false}
@@ -105,6 +105,6 @@ exports[`EuiSuperDatePicker is rendered 1`] = `
       onClick={[Function]}
       showTooltip={true}
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </WuiFlexItem>
+</WuiFlexGroup>
 `;

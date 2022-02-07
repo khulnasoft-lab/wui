@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,9 +49,9 @@ export interface I18nShape {
 }
 
 const I18nContext: React.Context<I18nShape> = createContext({});
-const { Provider: EuiI18nProvider, Consumer: EuiI18nConsumer } = I18nContext;
+const { Provider: WuiI18nProvider, Consumer: WuiI18nConsumer } = I18nContext;
 
-interface EuiContextProps {
+interface WuiContextProps {
   i18n: I18nShape;
   /**
    * ReactNode to render as this component's content
@@ -46,9 +59,9 @@ interface EuiContextProps {
   children: ReactNode;
 }
 
-const EuiContext: React.FunctionComponent<EuiContextProps> = ({
+const WuiContext: React.FunctionComponent<WuiContextProps> = ({
   i18n = {},
   children,
-}) => <EuiI18nProvider value={i18n}>{children}</EuiI18nProvider>;
+}) => <WuiI18nProvider value={i18n}>{children}</WuiI18nProvider>;
 
-export { EuiContext, EuiI18nConsumer, I18nContext };
+export { WuiContext, WuiI18nConsumer, I18nContext };

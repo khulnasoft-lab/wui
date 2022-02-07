@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiErrorBoundary is rendered without an error 1`] = `
+exports[`WuiErrorBoundary is rendered without an error 1`] = `
 <div>
   No error
 </div>

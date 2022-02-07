@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>Content grid item</EuiFlexItem>
-    <EuiFlexItem>
+  <WuiFlexGroup>
+    <WuiFlexItem>Content grid item</WuiFlexItem>
+    <WuiFlexItem>
       <p>Another content grid item</p>
-      <EuiSpacer />
+      <WuiSpacer />
       <p>
         Note how both of these are the same width and height despite having
         different content?
       </p>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

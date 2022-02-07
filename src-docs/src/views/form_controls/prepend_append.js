@@ -1,16 +1,16 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFieldText,
-  EuiIcon,
-  EuiIconTip,
-  EuiPopover,
-  EuiSpacer,
-  EuiSwitch,
-  EuiText,
-  EuiToolTip,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiFieldText,
+  WuiIcon,
+  WuiIconTip,
+  WuiPopover,
+  WuiSpacer,
+  WuiSwitch,
+  WuiText,
+  WuiToolTip,
 } from '../../../../src/components';
 
 export default () => {
@@ -20,156 +20,156 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiSwitch
+      <WuiSwitch
         label="compressed"
         checked={isCompressed}
         onChange={e => setCompressed(e.target.checked)}
       />
       &emsp;
-      <EuiSwitch
+      <WuiSwitch
         label="disabled"
         checked={isDisabled}
         onChange={e => setDisabled(e.target.checked)}
       />
       &emsp;
-      <EuiSwitch
+      <WuiSwitch
         label="readOnly"
         checked={isReadOnly}
         onChange={e => setReadOnly(e.target.checked)}
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="String & text in a tooltip"
         prepend="String"
         append={
-          <EuiToolTip content="content">
-            <EuiText size="s">Tooltip</EuiText>
-          </EuiToolTip>
+          <WuiToolTip content="content">
+            <WuiText size="s">Tooltip</WuiText>
+          </WuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="XS empty button in a popover & tooltip"
         prepend={
-          <EuiPopover
+          <WuiPopover
             button={
-              <EuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
+              <WuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
                 Popover
-              </EuiButtonEmpty>
+              </WuiButtonEmpty>
             }
             closePopover={() => {}}
           />
         }
         append={
-          <EuiToolTip content="content">
-            <EuiButtonEmpty size="xs">Tooltip</EuiButtonEmpty>
-          </EuiToolTip>
+          <WuiToolTip content="content">
+            <WuiButtonEmpty size="xs">Tooltip</WuiButtonEmpty>
+          </WuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="XS empty buttons with icons"
         prepend={
-          <EuiButtonEmpty
+          <WuiButtonEmpty
             role="button"
             size="xs"
             iconType="arrowDown"
             iconSide="right"
             aria-label="Calendar dropdown">
-            <EuiIcon type="calendar" />
-          </EuiButtonEmpty>
+            <WuiIcon type="calendar" />
+          </WuiButtonEmpty>
         }
         append={
-          <EuiButtonEmpty size="xs" iconType="gear">
+          <WuiButtonEmpty size="xs" iconType="gear">
             Tooltip
-          </EuiButtonEmpty>
+          </WuiButtonEmpty>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="Icon & button icon"
-        prepend={<EuiIcon type="vector" />}
-        append={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+        prepend={<WuiIcon type="vector" />}
+        append={<WuiButtonIcon iconType="gear" aria-label="Gear this" />}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="Icons in buttons and popovers and tooltips"
         prepend={[
-          <EuiIcon type="vector" />,
-          <EuiButtonIcon iconType="gear" aria-label="Gear this" />,
+          <WuiIcon type="vector" />,
+          <WuiButtonIcon iconType="gear" aria-label="Gear this" />,
         ]}
         append={[
-          <EuiPopover
-            button={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+          <WuiPopover
+            button={<WuiButtonIcon iconType="gear" aria-label="Gear this" />}
             closePopover={() => {}}
           />,
-          <EuiIconTip content="content" />,
+          <WuiIconTip content="content" />,
         ]}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="Icon button in popover & tooltip"
         append={
-          <EuiPopover
-            button={<EuiButtonIcon iconType="arrowDown" aria-label="Popover" />}
+          <WuiPopover
+            button={<WuiButtonIcon iconType="arrowDown" aria-label="Popover" />}
             closePopover={() => {}}
           />
         }
         prepend={
-          <EuiToolTip content="content">
-            <EuiButtonIcon iconType="gear" aria-label="Gear this" />
-          </EuiToolTip>
+          <WuiToolTip content="content">
+            <WuiButtonIcon iconType="gear" aria-label="Gear this" />
+          </WuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="Icon and string & string and icon button"
-        prepend={[<EuiIcon type="vector" />, 'String']}
+        prepend={[<WuiIcon type="vector" />, 'String']}
         append={[
           'String',
-          <EuiButtonIcon iconType="gear" aria-label="Gear this" />,
+          <WuiButtonIcon iconType="gear" aria-label="Gear this" />,
         ]}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <WuiSpacer />
+      <WuiFieldText
         placeholder="String and button icon in tooltip & button icon in popover and string "
         prepend={[
           'String',
-          <EuiToolTip content="content">
-            <EuiButtonIcon iconType="gear" aria-label="Gear this" />
-          </EuiToolTip>,
+          <WuiToolTip content="content">
+            <WuiButtonIcon iconType="gear" aria-label="Gear this" />
+          </WuiToolTip>,
         ]}
         append={[
-          <EuiPopover
-            button={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+          <WuiPopover
+            button={<WuiButtonIcon iconType="gear" aria-label="Gear this" />}
             closePopover={() => {}}
           />,
           'String',

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,25 +41,25 @@ import classnames from 'classnames';
 import tabbable from 'tabbable';
 
 import { CommonProps } from '../common';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiPopover, EuiPopoverProps } from './popover';
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { WuiFocusTrap } from '../focus_trap';
+import { WuiPopover, WuiPopoverProps } from './popover';
+import { WuiResizeObserver } from '../observer/resize_observer';
 import { cascadingMenuKeys } from '../../services';
 
-interface EuiInputPopoverProps
-  extends Omit<EuiPopoverProps, 'button' | 'buttonRef'> {
+interface WuiInputPopoverProps
+  extends Omit<WuiPopoverProps, 'button' | 'buttonRef'> {
   disableFocusTrap?: boolean;
   fullWidth?: boolean;
-  input: EuiPopoverProps['button'];
-  inputRef?: EuiPopoverProps['buttonRef'];
+  input: WuiPopoverProps['button'];
+  inputRef?: WuiPopoverProps['buttonRef'];
   onPanelResize?: (width?: number) => void;
 }
 
 type Props = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiInputPopoverProps;
+  WuiInputPopoverProps;
 
-export const EuiInputPopover: FunctionComponent<Props> = ({
+export const WuiInputPopover: FunctionComponent<Props> = ({
   children,
   className,
   disableFocusTrap = false,
@@ -108,33 +121,33 @@ export const EuiInputPopover: FunctionComponent<Props> = ({
   };
 
   const classes = classnames(
-    'euiInputPopover',
+    'wuiInputPopover',
     {
-      'euiInputPopover--fullWidth': fullWidth,
+      'wuiInputPopover--fullWidth': fullWidth,
     },
     className
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       ownFocus={false}
       button={
-        <EuiResizeObserver onResize={onResize}>
+        <WuiResizeObserver onResize={onResize}>
           {resizeRef => <div ref={resizeRef}>{input}</div>}
-        </EuiResizeObserver>
+        </WuiResizeObserver>
       }
       buttonRef={inputRef}
       panelRef={panelRef}
       className={classes}
       {...props}>
-      <EuiFocusTrap clickOutsideDisables={true} disabled={disableFocusTrap}>
+      <WuiFocusTrap clickOutsideDisables={true} disabled={disableFocusTrap}>
         <div onKeyDown={onKeyDown}>{children}</div>
-      </EuiFocusTrap>
-    </EuiPopover>
+      </WuiFocusTrap>
+    </WuiPopover>
   );
 };
 
-EuiInputPopover.defaultProps = {
+WuiInputPopover.defaultProps = {
   anchorPosition: 'downLeft',
   attachToAnchor: true,
   display: 'block',

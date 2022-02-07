@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,13 +34,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiComment } from './comment';
-import { EuiAvatar } from '../avatar';
+import { WuiComment } from './comment';
+import { WuiAvatar } from '../avatar';
 
-describe('EuiComment', () => {
+describe('WuiComment', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiComment username="someuser" {...requiredProps} />
+      <WuiComment username="someuser" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +50,7 @@ describe('EuiComment', () => {
     describe('type', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment username="someuser" type="update" />
+          <WuiComment username="someuser" type="update" />
         );
 
         expect(component).toMatchSnapshot();
@@ -47,9 +60,9 @@ describe('EuiComment', () => {
     describe('timelineIcon', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment
+          <WuiComment
             username="someuser"
-            timelineIcon={<EuiAvatar size="l" name="Mario" />}
+            timelineIcon={<WuiAvatar size="l" name="Mario" />}
           />
         );
 
@@ -60,7 +73,7 @@ describe('EuiComment', () => {
     describe('timestamp', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment timestamp="21 days ago" username="someuser" />
+          <WuiComment timestamp="21 days ago" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -70,7 +83,7 @@ describe('EuiComment', () => {
     describe('event', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiComment event="commented" username="someuser" />
+          <WuiComment event="commented" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -80,9 +93,9 @@ describe('EuiComment', () => {
 
   test('renders a body', () => {
     const component = render(
-      <EuiComment username="someuser">
+      <WuiComment username="someuser">
         <p>This is the body.</p>
-      </EuiComment>
+      </WuiComment>
     );
 
     expect(component).toMatchSnapshot();

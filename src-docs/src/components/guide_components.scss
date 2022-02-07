@@ -1,32 +1,32 @@
 @import '../../../src/global_styling/mixins/helpers';
 
 $guideSideNavWidth: 240px;
-$guideZLevelHighest: $euiZLevel9 + 1000;
+$guideZLevelHighest: $wuiZLevel9 + 1000;
 
 .guideBody {
-  background: linear-gradient(90deg, $euiPageBackgroundColor 50%, $euiColorEmptyShade 50%);
+  background: linear-gradient(90deg, $wuiPageBackgroundColor 50%, $wuiColorEmptyShade 50%);
 
   &--overflowHidden {
     overflow: hidden;
   }
 }
 
-@include euiHeaderAffordForFixed;
+@include wuiHeaderAffordForFixed;
 
-.euiBody--headerIsFixed {
+.wuiBody--headerIsFixed {
   .guideSideNav {
-    top: $euiHeaderHeightCompensation;
+    top: $wuiHeaderHeightCompensation;
   }
 }
 
-.euiBody--headerIsFixed--double {
-  @include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);
+.wuiBody--headerIsFixed--double {
+  @include wuiHeaderAffordForFixed($wuiHeaderHeightCompensation * 2);
 
   .guideSideNav {
-    top: $euiHeaderHeightCompensation * 2;
+    top: $wuiHeaderHeightCompensation * 2;
   }
 
-  .euiHeader:not(.euiHeader--fixed) {
+  .wuiHeader:not(.wuiHeader--fixed) {
     // Force headers below the full screen.
     // This shouldn't be necessary in consuming applications because headers should always be at the top of the page
     z-index: 0;
@@ -44,20 +44,20 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
   bottom: 0;
 
   .guideSideNav__identity {
-    border-bottom: $euiBorderThin;
-    padding: $euiSize;
+    border-bottom: $wuiBorderThin;
+    padding: $wuiSize;
   }
 
   .guideSideNav__theme {
-    font-size: $euiFontSizeS;
-    color: $euiColorDarkShade;
+    font-size: $wuiFontSizeS;
+    color: $wuiColorDarkShade;
   }
 
   .guideSideNav__content {
-    @include euiScrollBar;
+    @include wuiScrollBar;
 
     width: $guideSideNavWidth;
-    padding: $euiSize;
+    padding: $wuiSize;
     position: absolute;
     bottom: 0;
     top: 132px;
@@ -67,8 +67,8 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
 .guideSideNav__item {
   // Hate to do this, but it's the only way to get the badge to display correctly
-  .euiSideNavItemButton__label {
-    // By using the `icon` display of EuiSideNavItem, it will continue to:
+  .wuiSideNavItemButton__label {
+    // By using the `icon` display of WuiSideNavItem, it will continue to:
     // a) truncate properly
     // b) not underline the badge when selected
     // But it shows to the left of the label instead of right, so we have to shift the order of the label
@@ -76,90 +76,90 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
   }
 
   .guideSideNav__newBadge {
-    margin-left: $euiSizeXS;
-    margin-right: $euiSizeXS;
+    margin-left: $wuiSizeXS;
+    margin-right: $wuiSizeXS;
   }
 
   // Shift the margin on the badge when selected and the dropdown arrow no longer shows
-  .euiSideNavItemButton-isSelected .guideSideNav__newBadge {
+  .wuiSideNavItemButton-isSelected .guideSideNav__newBadge {
     margin-right: 0;
   }
 }
 
 .guideSideNav__item--inSearch {
-  color: $euiColorDarkShade;
+  color: $wuiColorDarkShade;
 }
 
 .guidePageContent {
   flex: 1 1 auto;
-  padding: $euiSize $euiSizeXL;
+  padding: $wuiSize $wuiSizeXL;
   min-height: 100vh;
-  background-color: $euiColorEmptyShade;
-  border-left: $euiBorderThin;
+  background-color: $wuiColorEmptyShade;
+  border-left: $wuiBorderThin;
   max-width: 1000px;
   margin-left: 240px;
 }
 
 .guideDemo__highlightLayout {
-  .euiPageBody {
+  .wuiPageBody {
     min-height: 460px;
   }
 
   div {
-    background: transparentize($euiColorPrimary, .9);
+    background: transparentize($wuiColorPrimary, .9);
   }
 }
 
 .guideDemo__highlightSpacer {
-  .euiSpacer {
-    background: transparentize($euiColorPrimary, .9);
+  .wuiSpacer {
+    background: transparentize($wuiColorPrimary, .9);
   }
 }
 
 .guideDemo__highlightGrid {
-  .euiFlexItem {
-    background: transparentize($euiColorPrimary, .9);
+  .wuiFlexItem {
+    background: transparentize($wuiColorPrimary, .9);
     padding: 16px;
   }
 }
 
 .guideDemo__highlightGridWrap {
-  .euiFlexItem div {
-    background: transparentize($euiColorPrimary, .9);
+  .wuiFlexItem div {
+    background: transparentize($wuiColorPrimary, .9);
     padding: 16px;
   }
 }
 
 // sass-lint:disable no-important
 .guideDemo__textLines {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($wuiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 8px !important;
   background-position-y: 2px;
 }
 
 // sass-lint:disable no-important
 .guideDemo__textLines--s {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($wuiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 7px !important;
   background-position-y: -2px;
 }
 
 .guideDemo__color {
-  padding: $euiSizeS;
-  color: $euiColorEmptyShade;
-  font-size: $euiFontSizeS;
-  margin-top: $euiSizeS;
+  padding: $wuiSizeS;
+  color: $wuiColorEmptyShade;
+  font-size: $wuiFontSizeS;
+  margin-top: $wuiSizeS;
   line-height: 1.5;
   height: 64px;
 
   .guideDemo__colorHex {
-    font-size: $euiFontSize;
+    font-size: $wuiFontSize;
   }
 }
 
 
 .guideDemo__size {
-  background: $euiTextColor;
+  background: $wuiTextColor;
   display: inline-block;
 }
 
@@ -168,12 +168,12 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 }
 
 .guideDemo__sizeGrid {
-  font-size: $euiFontSizeS;
+  font-size: $wuiFontSizeS;
 }
 
 .guideDemo__ghostBackground {
-  @if (lightness($euiTextColor) < 50) {
-    background: $euiColorDarkestShade;
+  @if (lightness($wuiTextColor) < 50) {
+    background: $wuiColorDarkestShade;
   }
 }
 
@@ -182,46 +182,46 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
 
   svg,
   img {
-    margin-bottom: $euiSizeS;
+    margin-bottom: $wuiSizeS;
   }
 }
 
 .dpTest__purpleCal {
-  background: $euiColorVis3;
+  background: $wuiColorVis3;
 }
 
 .dpTest__purpleInput {
-  outline: solid 2px $euiColorVis3;
+  outline: solid 2px $wuiColorVis3;
 }
 
 .dpTest__purpleDay {
-  background: $euiColorVis3;
+  background: $wuiColorVis3;
 }
 
 .dpTest__purplePopper {
-  outline: solid 2px $euiColorVis3;
+  outline: solid 2px $wuiColorVis3;
 }
 
 .guideOptionsPopover {
-  width: $euiSize * 16;
+  width: $wuiSize * 16;
 }
 
 .guideCharts__customLegend {
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   position: absolute;
   width: 93px;
   right: 0;
   bottom: 0;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
 }
 
 .guideCharts__customLegendLine {
   display: inline-block;
-  width: $euiSize;
-  height: $euiSizeM / 2;
+  width: $wuiSize;
+  height: $wuiSizeM / 2;
   background-color: currentColor;
   vertical-align: middle;
-  margin-right: $euiSizeS;
+  margin-right: $wuiSizeS;
 }
 
 .guideCharts__customLegendLine--thin {
@@ -236,29 +236,29 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
   top: 0;
 }
 
-.euiDataGridRowCell--favoriteFranchise {
+.wuiDataGridRowCell--favoriteFranchise {
   background: transparentize($color: #800080, $amount: .95) !important;
 }
 
-.euiDataGridHeaderCell--favoriteFranchise {
+.wuiDataGridHeaderCell--favoriteFranchise {
   background: transparentize($color: #800080, $amount: .9) !important;
 }
 
-.euiTreeView__nodeInnerExample {
-  color: $euiColorDanger;
-  font-weight: $euiFontWeightBold;
+.wuiTreeView__nodeInnerExample {
+  color: $wuiColorDanger;
+  font-weight: $wuiFontWeightBold;
 }
 
-.euiSelectableTemplateSitewide__optionMeta--PINK {
-  font-weight: $euiFontWeightMedium;
-  color: $euiColorAccentText;
+.wuiSelectableTemplateSitewide__optionMeta--PINK {
+  font-weight: $wuiFontWeightMedium;
+  color: $wuiColorAccentText;
 }
 
 @import '../views/guidelines/index';
 @import 'guide_section/index';
 @import 'guide_rule/index';
 
-@include euiBreakpoint('xs', 's') {
+@include wuiBreakpoint('xs', 's') {
   .guidePage {
     display: block; // Fixes IE
   }
@@ -272,7 +272,7 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
     width: auto;
 
     // This is a temporary hack till we fix how classes pass into form controls
-    .euiFormControlLayout,
+    .wuiFormControlLayout,
     input[type='search'] {
       max-width: 100%;
     }
@@ -292,8 +292,8 @@ $guideZLevelHighest: $euiZLevel9 + 1000;
     }
 
     .guideSideNav__mobileToggle {
-      background: $euiColorPrimary;
-      color: $euiColorEmptyShade !important;
+      background: $wuiColorPrimary;
+      color: $wuiColorEmptyShade !important;
     }
   }
 

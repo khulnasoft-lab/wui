@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,13 +34,13 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiFlexGroup } from '../flex';
+import { WuiFlexGroup } from '../flex';
 
 type FacetGroupLayout = 'vertical' | 'horizontal';
 
 const layoutToClassNameMap: { [layout in FacetGroupLayout]: string } = {
-  vertical: 'euiFacetGroup--vertical',
-  horizontal: 'euiFacetGroup--horizontal',
+  vertical: 'wuiFacetGroup--vertical',
+  horizontal: 'wuiFacetGroup--horizontal',
 };
 
 export const LAYOUTS = keysOf(layoutToClassNameMap);
@@ -37,15 +50,15 @@ type FacetGroupGutterSize = 'none' | 's' | 'm' | 'l';
 const gutterSizeToClassNameMap: {
   [gutterSize in FacetGroupGutterSize]: string;
 } = {
-  none: 'euiFacetGroup--gutterNone',
-  s: 'euiFacetGroup--gutterSmall',
-  m: 'euiFacetGroup--gutterMedium',
-  l: 'euiFacetGroup--gutterLarge',
+  none: 'wuiFacetGroup--gutterNone',
+  s: 'wuiFacetGroup--gutterSmall',
+  m: 'wuiFacetGroup--gutterMedium',
+  l: 'wuiFacetGroup--gutterLarge',
 };
 
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
 
-export type EuiFacetGroupProps = CommonProps &
+export type WuiFacetGroupProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Vertically in a column, or horizontally in one wrapping line
@@ -58,7 +71,7 @@ export type EuiFacetGroupProps = CommonProps &
     gutterSize?: FacetGroupGutterSize;
   };
 
-export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
+export const WuiFacetGroup: FunctionComponent<WuiFacetGroupProps> = ({
   children,
   className,
   layout = 'vertical',
@@ -66,7 +79,7 @@ export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiFacetGroup',
+    'wuiFacetGroup',
     layoutToClassNameMap[layout],
     gutterSizeToClassNameMap[gutterSize],
     className
@@ -75,13 +88,13 @@ export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
   const wrap = layout === 'vertical' ? false : true;
 
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       className={classes}
       direction={direction}
       wrap={wrap}
       gutterSize="none"
       {...rest}>
       {children}
-    </EuiFlexGroup>
+    </WuiFlexGroup>
   );
 };

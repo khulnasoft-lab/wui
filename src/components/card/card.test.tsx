@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +34,18 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiCard, SIZES } from './card';
+import { WuiCard, SIZES } from './card';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
 jest.mock('./../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
-describe('EuiCard', () => {
+describe('WuiCard', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCard
+      <WuiCard
         title="Card title"
         description="Card description"
         {...requiredProps}
@@ -45,10 +58,10 @@ describe('EuiCard', () => {
   describe('props', () => {
     test('icon', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
-          icon={<EuiIcon className="myIconClass" type="apmApp" />}
+          icon={<WuiIcon className="myIconClass" type="apmApp" />}
         />
       );
 
@@ -57,7 +70,7 @@ describe('EuiCard', () => {
 
     test('a null icon', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           icon={null}
@@ -69,7 +82,7 @@ describe('EuiCard', () => {
 
     test('horizontal', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           layout="horizontal"
@@ -82,7 +95,7 @@ describe('EuiCard', () => {
     describe('href', () => {
       it('supports href as a link', () => {
         const component = mount(
-          <EuiCard title="Hoi" description="There" href="#" />
+          <WuiCard title="Hoi" description="There" href="#" />
         );
 
         expect(component).toMatchSnapshot();
@@ -93,7 +106,7 @@ describe('EuiCard', () => {
       it('supports onClick as a link', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiCard title="Hoi" description="There" href="#" onClick={handler} />
+          <WuiCard title="Hoi" description="There" href="#" onClick={handler} />
         );
         component.find('a').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
@@ -102,7 +115,7 @@ describe('EuiCard', () => {
       it('supports onClick as a button', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiCard title="Hoi" description="There" onClick={handler} />
+          <WuiCard title="Hoi" description="There" onClick={handler} />
         );
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
@@ -111,7 +124,7 @@ describe('EuiCard', () => {
 
     test('titleElement', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           titleElement="h4"
@@ -123,7 +136,7 @@ describe('EuiCard', () => {
 
     test('titleSize', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           titleSize="xs"
@@ -135,7 +148,7 @@ describe('EuiCard', () => {
 
     test('footer', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           footer={<span>Footer</span>}
@@ -147,9 +160,9 @@ describe('EuiCard', () => {
 
     test('children', () => {
       const component = render(
-        <EuiCard title="Card title" description="Card description">
+        <WuiCard title="Card title" description="Card description">
           Child
-        </EuiCard>
+        </WuiCard>
       );
 
       expect(component).toMatchSnapshot();
@@ -157,7 +170,7 @@ describe('EuiCard', () => {
 
     test('textAlign', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           textAlign="right"
@@ -169,7 +182,7 @@ describe('EuiCard', () => {
 
     test('display', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           display="plain"
@@ -181,7 +194,7 @@ describe('EuiCard', () => {
 
     test('selectable', () => {
       const component = render(
-        <EuiCard
+        <WuiCard
           title="Card title"
           description="Card description"
           selectable={{
@@ -197,7 +210,7 @@ describe('EuiCard', () => {
       SIZES.forEach(size => {
         test(`${size} is applied`, () => {
           const component = render(
-            <EuiCard
+            <WuiCard
               title="Card title"
               description="Card description"
               paddingSize={size}

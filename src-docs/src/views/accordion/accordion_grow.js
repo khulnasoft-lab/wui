@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiButton,
-  EuiSpacer,
-  EuiText,
-  EuiScreenReaderOnly,
+  WuiAccordion,
+  WuiButton,
+  WuiSpacer,
+  WuiText,
+  WuiScreenReaderOnly,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -18,39 +18,39 @@ const Rows = () => {
   const growingAccordianDescriptionId = htmlIdGenerator()();
   const listId = htmlIdGenerator()();
   return (
-    <EuiText>
-      <EuiScreenReaderOnly>
+    <WuiText>
+      <WuiScreenReaderOnly>
         <p id={growingAccordianDescriptionId}>
           Currently height is set to {counter} items
         </p>
-      </EuiScreenReaderOnly>
-      <EuiSpacer size="s" />
+      </WuiScreenReaderOnly>
+      <WuiSpacer size="s" />
       <p>
-        <EuiButton
+        <WuiButton
           onClick={() => setCounter(counter + 1)}
           aria-controls={listId}
           aria-describedby={growingAccordianDescriptionId}>
           Increase height to {counter + 1} items
-        </EuiButton>{' '}
-        <EuiButton
+        </WuiButton>{' '}
+        <WuiButton
           aria-controls={listId}
           aria-describedby={growingAccordianDescriptionId}
           onClick={() => setCounter(Math.max(0, counter - 1))}
           isDisabled={counter === 1}>
           Decrease height to {counter - 1} item{counter > 2 && 's'}
-        </EuiButton>
+        </WuiButton>
       </p>
       <ul id={listId}>{rows}</ul>
-    </EuiText>
+    </WuiText>
   );
 };
 
 export default () => (
-  <EuiAccordion
+  <WuiAccordion
     id="accordian7"
     buttonContent="Click me to toggle close / open"
     initialIsOpen={true}
     paddingSize="l">
     <Rows />
-  </EuiAccordion>
+  </WuiAccordion>
 );

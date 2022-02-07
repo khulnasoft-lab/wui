@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiButton,
-  EuiText,
-  EuiTitle,
+  WuiFlyout,
+  WuiFlyoutHeader,
+  WuiFlyoutBody,
+  WuiButton,
+  WuiText,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,27 +19,27 @@ export default () => {
   let flyout;
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         ownFocus
         onClose={closeFlyout}
         size="l"
         aria-labelledby="flyoutLargeTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="m">
             <h2 id="flyoutLargeTitle">A large flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </WuiTitle>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody>
+          <WuiText>
             <p>The large flyout is very wide.</p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </WuiText>
+        </WuiFlyoutBody>
+      </WuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show large flyout</EuiButton>
+      <WuiButton onClick={showFlyout}>Show large flyout</WuiButton>
       {flyout}
     </div>
   );

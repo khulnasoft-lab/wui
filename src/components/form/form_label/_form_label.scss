@@ -1,20 +1,20 @@
 /**
  * 1. Focused state overrides invalid state.
  */
-.euiFormLabel {
-  @include euiFormLabel;
+.wuiFormLabel {
+  @include wuiFormLabel;
   display: inline-block;
-  transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+  transition: all $wuiAnimSpeedFast $wuiAnimSlightResistance;
 
-  &.euiFormLabel-isInvalid {
-    color: $euiColorDanger; /* 1 */
+  &.wuiFormLabel-isInvalid {
+    color: $wuiColorDanger; /* 1 */
   }
 
-  &.euiFormLabel-isFocused {
-    color: $euiColorPrimary; /* 1 */
+  &.wuiFormLabel-isFocused {
+    color: $wuiColorPrimary; /* 1 */
   }
 }
 
-.euiFormLabel[for] {
+.wuiFormLabel[for] {
   cursor: pointer;
 }

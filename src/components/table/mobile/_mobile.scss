@@ -1,18 +1,18 @@
 // Hide mobile-only elements by default
-.euiTableHeaderMobile,
-.euiTableHeaderCell--hideForDesktop {
+.wuiTableHeaderMobile,
+.wuiTableHeaderCell--hideForDesktop {
   display: none;
 }
 
-@include euiBreakpoint('xs', 's') {
+@include wuiBreakpoint('xs', 's') {
 
-  .euiTableHeaderMobile {
+  .wuiTableHeaderMobile {
     display: flex;
     justify-content: flex-end;
-    padding: $euiTableCellContentPadding 0;
+    padding: $wuiTableCellContentPadding 0;
   }
 
-  .euiTableSortMobile {
+  .wuiTableSortMobile {
     display: block;
   }
 

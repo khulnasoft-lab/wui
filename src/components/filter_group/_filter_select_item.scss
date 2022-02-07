@@ -1,13 +1,13 @@
-.euiFilterSelectItem {
-  @include euiFontSizeS;
+.wuiFilterSelectItem {
+  @include wuiFontSizeS;
 
-  padding: $euiSizeXS $euiSizeM;
+  padding: $wuiSizeXS $wuiSizeM;
   display: block; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
-  border-bottom: $euiBorderThin;
-  border-color: darken($euiColorLightestShade, 2%);
+  color: $wuiTextColor;
+  border-bottom: $wuiBorderThin;
+  border-color: darken($wuiColorLightestShade, 2%);
 
   &:hover,
   &:focus {
@@ -17,12 +17,12 @@
   &:focus,
   &-isFocused {
     cursor: pointer;
-    color: $euiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    color: $wuiColorPrimary;
+    background-color: $wuiFocusBackgroundColor;
   }
 
   &[disabled] {
-    color: $euiColorMediumShade;
+    color: $wuiColorMediumShade;
     cursor: not-allowed;
 
     &:hover {
@@ -31,27 +31,27 @@
   }
 }
 
-.euiFilterSelectItem__content {
-  @include euiTextTruncate;
+.wuiFilterSelectItem__content {
+  @include wuiTextTruncate;
 }
 
 
-.euiFilterSelect__items {
-  @include euiScrollBar;
+.wuiFilterSelect__items {
+  @include wuiScrollBar;
 
   overflow-y: auto;
-  max-height: $euiSize * 30;
+  max-height: $wuiSize * 30;
 }
 
-.euiFilterSelect__note {
-  height: $euiSize * 4;
+.wuiFilterSelect__note {
+  height: $wuiSize * 4;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.euiFilterSelect__noteContent {
-  color: $euiColorDarkShade;
-  font-size: $euiFontSizeS;
+.wuiFilterSelect__noteContent {
+  color: $wuiColorDarkShade;
+  font-size: $wuiFontSizeS;
 }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiProgress,
-  EuiText,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiProgress,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -41,20 +41,20 @@ export default () => {
   }, [timer]);
 
   return (
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" onClick={toggleProgress}>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton size="s" onClick={toggleProgress}>
           Toggle progress
-        </EuiButton>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiText>
+        </WuiButton>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
+        <WuiText>
           <p>{value}</p>
-        </EuiText>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiProgress value={value} max={100} size="xs" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiProgress value={value} max={100} size="xs" />
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

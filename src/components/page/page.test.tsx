@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +34,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPage } from './page';
+import { WuiPage } from './page';
 
-describe('EuiPage', () => {
+describe('WuiPage', () => {
   test('is rendered', () => {
-    const component = render(<EuiPage {...requiredProps} />);
+    const component = render(<WuiPage {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +46,7 @@ describe('EuiPage', () => {
   describe('restrict width', () => {
     test('can be set to a default', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth={true} />
+        <WuiPage {...requiredProps} restrictWidth={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -41,7 +54,7 @@ describe('EuiPage', () => {
 
     test('can be set to a custom number', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth={1024} />
+        <WuiPage {...requiredProps} restrictWidth={1024} />
       );
 
       expect(component).toMatchSnapshot();
@@ -49,7 +62,7 @@ describe('EuiPage', () => {
 
     test('can be set to a custom value and measurement', () => {
       const component = render(
-        <EuiPage {...requiredProps} restrictWidth="24rem" />
+        <WuiPage {...requiredProps} restrictWidth="24rem" />
       );
 
       expect(component).toMatchSnapshot();

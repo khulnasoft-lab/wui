@@ -1,44 +1,44 @@
-.euiSuperDatePicker__flexWrapper {
+.wuiSuperDatePicker__flexWrapper {
   // Need to offset 8px because of negative margins added by small size gutter
-  max-width: calc(100% + #{$euiSizeS});
-  width: $euiSuperDatePickerWidth + $euiSuperDatePickerButtonWidth + $euiSizeS;
+  max-width: calc(100% + #{$wuiSizeS});
+  width: $wuiSuperDatePickerWidth + $wuiSuperDatePickerButtonWidth + $wuiSizeS;
 }
 
-.euiSuperDatePicker__flexWrapper--isAutoRefreshOnly {
-  width: $euiFormMaxWidth;
+.wuiSuperDatePicker__flexWrapper--isAutoRefreshOnly {
+  width: $wuiFormMaxWidth;
   max-width: 100%
 }
 
-.euiSuperDatePicker__flexWrapper--noUpdateButton {
-  width: $euiSuperDatePickerWidth;
+.wuiSuperDatePicker__flexWrapper--noUpdateButton {
+  width: $wuiSuperDatePickerWidth;
   max-width: 100%
 }
 
-.euiSuperDatePicker {
+.wuiSuperDatePicker {
   // sass-lint:disable-block no-important
   // Allow it to always grow to fit the container since the default form max width is too small
   max-width: 100% !important;
 
-  > .euiFormControlLayout__childrenWrapper {
+  > .wuiFormControlLayout__childrenWrapper {
     flex: 1 1 100%;
     overflow: hidden;
 
-    > .euiDatePickerRange {
+    > .wuiDatePickerRange {
       max-width: none;
       width: auto;
-      border-radius: 0 $euiFormControlBorderRadius $euiFormControlBorderRadius 0;
+      border-radius: 0 $wuiFormControlBorderRadius $wuiFormControlBorderRadius 0;
     }
   }
 }
 
-.euiSuperDatePicker__startPopoverButton {
+.wuiSuperDatePicker__startPopoverButton {
   // Fixes margin around delimiter
-  // Only needed on first popover since basic .euiFormControlLayout takes care of the last one
-  margin-right: -$euiSizeM;
+  // Only needed on first popover since basic .wuiFormControlLayout takes care of the last one
+  margin-right: -$wuiSizeM;
 }
 
-.euiSuperDatePicker__prettyFormat {
-  @include euiSuperDatePickerText;
+.wuiSuperDatePicker__prettyFormat {
+  @include wuiSuperDatePickerText;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -47,36 +47,36 @@
   &:focus {
     text-decoration: none;
 
-    .euiSuperDatePicker__prettyFormatLink {
+    .wuiSuperDatePicker__prettyFormatLink {
       text-decoration: underline;
     }
   }
 
   &:disabled {
-    background-color: $euiFormBackgroundDisabledColor;
-    color: $euiColorDarkShade;
+    background-color: $wuiFormBackgroundDisabledColor;
+    color: $wuiColorDarkShade;
     cursor: not-allowed;
 
-    .euiSuperDatePicker__prettyFormatLink {
+    .wuiSuperDatePicker__prettyFormatLink {
       display: none;
     }
   }
 }
 
-.euiSuperDatePicker__prettyFormatLink {
-  color: $euiLinkColor;
-  padding-left: $euiSizeXS; // Adds some separation between date text and link
+.wuiSuperDatePicker__prettyFormatLink {
+  color: $wuiLinkColor;
+  padding-left: $wuiSizeXS; // Adds some separation between date text and link
   flex-shrink: 0;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiSuperDatePicker__flexWrapper,
-  .euiSuperDatePicker__flexWrapper--isAutoRefreshOnly,
-  .euiSuperDatePicker__flexWrapper--noUpdateButton {
+@include wuiBreakpoint('xs', 's') {
+  .wuiSuperDatePicker__flexWrapper,
+  .wuiSuperDatePicker__flexWrapper--isAutoRefreshOnly,
+  .wuiSuperDatePicker__flexWrapper--noUpdateButton {
     width: 100%;
   }
 
-  .euiSuperDatePicker__prettyFormatLink {
+  .wuiSuperDatePicker__prettyFormatLink {
     flex-shrink: 1;
     min-width: 3em; // Ensures at least "Show" is always visible
   }

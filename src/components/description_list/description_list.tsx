@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,16 +33,16 @@
 import React, { HTMLAttributes, ReactNode, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiDescriptionListTitle } from './description_list_title';
+import { WuiDescriptionListTitle } from './description_list_title';
 
-import { EuiDescriptionListDescription } from './description_list_description';
+import { WuiDescriptionListDescription } from './description_list_description';
 import { CommonProps, keysOf } from '../common';
 
-export type EuiDescriptionListType = keyof typeof typesToClassNameMap;
-export type EuiDescriptionListAlignment = keyof typeof alignmentsToClassNameMap;
-export type EuiDescriptionListTextStyle = keyof typeof textStylesToClassNameMap;
+export type WuiDescriptionListType = keyof typeof typesToClassNameMap;
+export type WuiDescriptionListAlignment = keyof typeof alignmentsToClassNameMap;
+export type WuiDescriptionListTextStyle = keyof typeof textStylesToClassNameMap;
 
-export interface EuiDescriptionListProps {
+export interface WuiDescriptionListProps {
   listItems?: Array<{
     title: NonNullable<ReactNode>;
     description: NonNullable<ReactNode>;
@@ -37,7 +50,7 @@ export interface EuiDescriptionListProps {
   /**
    * Text alignment
    */
-  align?: EuiDescriptionListAlignment;
+  align?: WuiDescriptionListAlignment;
   /**
    * Smaller text and condensed spacing
    */
@@ -46,32 +59,32 @@ export interface EuiDescriptionListProps {
    * How should the content be styled, by default
    * this will emphasize the title
    */
-  textStyle?: EuiDescriptionListTextStyle;
+  textStyle?: WuiDescriptionListTextStyle;
   /**
    * How each item should be laid out
    */
-  type?: EuiDescriptionListType;
+  type?: WuiDescriptionListType;
   /**
-   * Props object to be passed to `EuiDescriptionListTitle`
+   * Props object to be passed to `WuiDescriptionListTitle`
    */
   titleProps?: HTMLAttributes<HTMLElement>;
   /**
-   * Props object to be passed to `EuiDescriptionListDescription`
+   * Props object to be passed to `WuiDescriptionListDescription`
    */
   descriptionProps?: HTMLAttributes<HTMLElement>;
 }
 
 const typesToClassNameMap = {
-  row: 'euiDescriptionList--row',
-  inline: 'euiDescriptionList--inline',
-  column: 'euiDescriptionList--column',
-  responsiveColumn: 'euiDescriptionList--responsiveColumn',
+  row: 'wuiDescriptionList--row',
+  inline: 'wuiDescriptionList--inline',
+  column: 'wuiDescriptionList--column',
+  responsiveColumn: 'wuiDescriptionList--responsiveColumn',
 };
 
 export const TYPES = keysOf(typesToClassNameMap);
 
 const alignmentsToClassNameMap = {
-  center: 'euiDescriptionList--center',
+  center: 'wuiDescriptionList--center',
   left: '',
 };
 
@@ -79,14 +92,14 @@ export const ALIGNMENTS = keysOf(alignmentsToClassNameMap);
 
 const textStylesToClassNameMap = {
   normal: '',
-  reverse: 'euiDescriptionList--reverse',
+  reverse: 'wuiDescriptionList--reverse',
 };
 
 export const TEXT_STYLES = keysOf(textStylesToClassNameMap);
 
-export const EuiDescriptionList: FunctionComponent<CommonProps &
+export const WuiDescriptionList: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDListElement> &
-  EuiDescriptionListProps> = ({
+  WuiDescriptionListProps> = ({
   align = 'left',
   children,
   className,
@@ -99,12 +112,12 @@ export const EuiDescriptionList: FunctionComponent<CommonProps &
   ...rest
 }) => {
   const classes = classNames(
-    'euiDescriptionList',
+    'wuiDescriptionList',
     type ? typesToClassNameMap[type] : undefined,
     align ? alignmentsToClassNameMap[align] : undefined,
     textStyle ? textStylesToClassNameMap[textStyle] : undefined,
     {
-      'euiDescriptionList--compressed': compressed,
+      'wuiDescriptionList--compressed': compressed,
     },
     className
   );
@@ -113,15 +126,15 @@ export const EuiDescriptionList: FunctionComponent<CommonProps &
   if (listItems) {
     childrenOrListItems = listItems.map((item, index) => {
       return [
-        <EuiDescriptionListTitle key={`title-${index}`} {...titleProps}>
+        <WuiDescriptionListTitle key={`title-${index}`} {...titleProps}>
           {item.title}
-        </EuiDescriptionListTitle>,
+        </WuiDescriptionListTitle>,
 
-        <EuiDescriptionListDescription
+        <WuiDescriptionListDescription
           key={`description-${index}`}
           {...descriptionProps}>
           {item.description}
-        </EuiDescriptionListDescription>,
+        </WuiDescriptionListDescription>,
       ];
     });
   } else {

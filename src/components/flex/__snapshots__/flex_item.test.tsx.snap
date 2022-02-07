@@ -1,81 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFlexItem grow 1 is rendered 1`] = `
+exports[`WuiFlexItem grow 1 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow1"
+  class="wuiFlexItem wuiFlexItem--flexGrow1"
 />
 `;
 
-exports[`EuiFlexItem grow 2 is rendered 1`] = `
+exports[`WuiFlexItem grow 2 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow2"
+  class="wuiFlexItem wuiFlexItem--flexGrow2"
 />
 `;
 
-exports[`EuiFlexItem grow 3 is rendered 1`] = `
+exports[`WuiFlexItem grow 3 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow3"
+  class="wuiFlexItem wuiFlexItem--flexGrow3"
 />
 `;
 
-exports[`EuiFlexItem grow 4 is rendered 1`] = `
+exports[`WuiFlexItem grow 4 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow4"
+  class="wuiFlexItem wuiFlexItem--flexGrow4"
 />
 `;
 
-exports[`EuiFlexItem grow 5 is rendered 1`] = `
+exports[`WuiFlexItem grow 5 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow5"
+  class="wuiFlexItem wuiFlexItem--flexGrow5"
 />
 `;
 
-exports[`EuiFlexItem grow 6 is rendered 1`] = `
+exports[`WuiFlexItem grow 6 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow6"
+  class="wuiFlexItem wuiFlexItem--flexGrow6"
 />
 `;
 
-exports[`EuiFlexItem grow 7 is rendered 1`] = `
+exports[`WuiFlexItem grow 7 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow7"
+  class="wuiFlexItem wuiFlexItem--flexGrow7"
 />
 `;
 
-exports[`EuiFlexItem grow 8 is rendered 1`] = `
+exports[`WuiFlexItem grow 8 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow8"
+  class="wuiFlexItem wuiFlexItem--flexGrow8"
 />
 `;
 
-exports[`EuiFlexItem grow 9 is rendered 1`] = `
+exports[`WuiFlexItem grow 9 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow9"
+  class="wuiFlexItem wuiFlexItem--flexGrow9"
 />
 `;
 
-exports[`EuiFlexItem grow 10 is rendered 1`] = `
+exports[`WuiFlexItem grow 10 is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrow10"
+  class="wuiFlexItem wuiFlexItem--flexGrow10"
 />
 `;
 
-exports[`EuiFlexItem grow false is rendered 1`] = `
+exports[`WuiFlexItem grow false is rendered 1`] = `
 <div
-  class="euiFlexItem euiFlexItem--flexGrowZero"
+  class="wuiFlexItem wuiFlexItem--flexGrowZero"
 />
 `;
 
-exports[`EuiFlexItem grow true is rendered 1`] = `
+exports[`WuiFlexItem grow true is rendered 1`] = `
 <div
-  class="euiFlexItem"
+  class="wuiFlexItem"
 />
 `;
 
-exports[`EuiFlexItem is rendered 1`] = `
+exports[`WuiFlexItem is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiFlexItem testClass1 testClass2"
+  class="wuiFlexItem testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;

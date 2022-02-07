@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,27 +33,27 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { useDropzone } from 'react-dropzone';
-import { EuiMarkdownEditorFooter } from './markdown_editor_footer';
+import { WuiMarkdownEditorFooter } from './markdown_editor_footer';
 import {
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
-  EuiMarkdownDropHandler,
-  EuiMarkdownStringTagConfig,
-  EuiMarkdownDragAndDropResult,
+  WuiMarkdownEditorUiPlugin,
+  WuiMarkdownParseError,
+  WuiMarkdownDropHandler,
+  WuiMarkdownStringTagConfig,
+  WuiMarkdownDragAndDropResult,
 } from './markdown_types';
 
-interface EuiMarkdownEditorDropZoneProps {
-  uiPlugins: EuiMarkdownEditorUiPlugin[];
-  errors: EuiMarkdownParseError[];
-  dropHandlers: EuiMarkdownDropHandler[];
-  insertText: (text: string, config: EuiMarkdownStringTagConfig) => void;
+interface WuiMarkdownEditorDropZoneProps {
+  uiPlugins: WuiMarkdownEditorUiPlugin[];
+  errors: WuiMarkdownParseError[];
+  dropHandlers: WuiMarkdownDropHandler[];
+  insertText: (text: string, config: WuiMarkdownStringTagConfig) => void;
   hasUnacceptedItems: boolean;
   setHasUnacceptedItems: (hasUnacceptedItems: boolean) => void;
 }
 
 const getUnacceptedItems = (
   items: DataTransferItemList,
-  dropHandlers: EuiMarkdownDropHandler[]
+  dropHandlers: WuiMarkdownDropHandler[]
 ) => {
   const unacceptedItems: DataTransferItem[] = [];
 
@@ -63,7 +76,7 @@ const getUnacceptedItems = (
   return unacceptedItems;
 };
 
-export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZoneProps> = props => {
+export const WuiMarkdownEditorDropZone: FunctionComponent<WuiMarkdownEditorDropZoneProps> = props => {
   const [isDragging, toggleDragging] = React.useState(false);
   const [isUploadingFiles, toggleUploadingFiles] = React.useState(false);
   const [isDraggingError, toggleDraggingError] = React.useState(false);
@@ -78,10 +91,10 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
     setHasUnacceptedItems,
   } = props;
 
-  const classes = classNames('euiMarkdownEditorDropZone', {
-    'euiMarkdownEditorDropZone--isDragging': isDragging,
-    'euiMarkdownEditorDropZone--hasError': hasUnacceptedItems,
-    'euiMarkdownEditorDropZone--isDraggingError': isDraggingError,
+  const classes = classNames('wuiMarkdownEditorDropZone', {
+    'wuiMarkdownEditorDropZone--isDragging': isDragging,
+    'wuiMarkdownEditorDropZone--hasError': hasUnacceptedItems,
+    'wuiMarkdownEditorDropZone--isDraggingError': isDraggingError,
   });
 
   const { getRootProps, getInputProps, open } = useDropzone({
@@ -140,7 +153,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
       toggleDragging(false);
     },
     onDrop: acceptedFiles => {
-      const fileHandlers: EuiMarkdownDropHandler[] = [];
+      const fileHandlers: WuiMarkdownDropHandler[] = [];
 
       // verify all files being dropped are supported
       preparation: for (let i = 0; i < acceptedFiles.length; i++) {
@@ -163,7 +176,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
       toggleUploadingFiles(true);
 
       const resolved: Array<
-        EuiMarkdownDragAndDropResult | Promise<EuiMarkdownDragAndDropResult>
+        WuiMarkdownDragAndDropResult | Promise<WuiMarkdownDragAndDropResult>
       > = [];
       for (let i = 0; i < acceptedFiles.length; i++) {
         const file = acceptedFiles[i];
@@ -187,7 +200,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
   return (
     <div {...getRootProps()} className={classes}>
       {children}
-      <EuiMarkdownEditorFooter
+      <WuiMarkdownEditorFooter
         uiPlugins={uiPlugins}
         openFiles={() => {
           setHasUnacceptedItems(false);

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import { ReactElement, ReactNode, MouseEventHandler } from 'react';
 
 import { RenderItem } from './side_nav_item';
 
-export interface EuiSideNavItemType<T> {
+export interface WuiSideNavItemType<T> {
   /**
    * A value that is passed to React as the `key` for this item
    */
@@ -47,7 +60,7 @@ export interface EuiSideNavItemType<T> {
   /**
    * Array containing additional item objects, representing nested children of this navigation item.
    */
-  items?: Array<EuiSideNavItemType<T>>;
+  items?: Array<WuiSideNavItemType<T>>;
   /**
    * React node representing the text to render for this item (usually a string will suffice).
    */

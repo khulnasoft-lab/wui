@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconLogoAwsMono = ({ title, titleId, ...props }) => (
+const WuiIconLogoAwsMono = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -20,4 +20,4 @@ const EuiIconLogoAwsMono = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoAwsMono;
+export const icon = WuiIconLogoAwsMono;

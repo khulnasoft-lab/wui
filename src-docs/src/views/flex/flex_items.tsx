@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>One</EuiFlexItem>
-    <EuiFlexItem>Two</EuiFlexItem>
-    <EuiFlexItem>Three</EuiFlexItem>
-    <EuiFlexItem>Four</EuiFlexItem>
-    <EuiFlexItem>Five</EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup>
+    <WuiFlexItem>One</WuiFlexItem>
+    <WuiFlexItem>Two</WuiFlexItem>
+    <WuiFlexItem>Three</WuiFlexItem>
+    <WuiFlexItem>Four</WuiFlexItem>
+    <WuiFlexItem>Five</WuiFlexItem>
+  </WuiFlexGroup>
 );

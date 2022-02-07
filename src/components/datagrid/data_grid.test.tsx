@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,13 +32,13 @@
 
 import React, { useEffect, useState } from 'react';
 import { mount, ReactWrapper, render } from 'enzyme';
-import { EuiDataGrid } from './';
+import { WuiDataGrid } from './';
 import {
   findTestSubject,
   requiredProps,
   takeMountedSnapshot,
 } from '../../test';
-import { EuiDataGridColumnResizer } from './data_grid_column_resizer';
+import { WuiDataGridColumnResizer } from './data_grid_column_resizer';
 import { keys } from '../../services';
 import { act } from 'react-dom/test-utils';
 import cheerio from 'cheerio';
@@ -45,7 +58,7 @@ function extractGridData(datagrid: ReactWrapper) {
   const headerRow: string[] = [];
   headerCells.forEach((cell: any) =>
     headerRow.push(
-      cell.find('[className="euiDataGridHeaderCell__content"]').text()
+      cell.find('[className="wuiDataGridHeaderCell__content"]').text()
     )
   );
   rows.push(headerRow);
@@ -84,8 +97,8 @@ function resizeColumn(
   const originalWidth = widths[columnId];
 
   const firstResizer = datagrid
-    .find(`EuiDataGridColumnResizer[columnId="${columnId}"]`)
-    .instance() as EuiDataGridColumnResizer;
+    .find(`WuiDataGridColumnResizer[columnId="${columnId}"]`)
+    .instance() as WuiDataGridColumnResizer;
   firstResizer.onMouseDown({
     pageX: originalWidth,
     stopPropagation: () => {},
@@ -99,11 +112,11 @@ function resizeColumn(
 
 function openColumnSorterSelection(datagrid: ReactWrapper) {
   let columnSelectionPopover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
   );
-  expect(columnSelectionPopover).not.euiPopoverToBeOpen();
+  expect(columnSelectionPopover).not.wuiPopoverToBeOpen();
   const popoverButton = columnSelectionPopover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -112,23 +125,23 @@ function openColumnSorterSelection(datagrid: ReactWrapper) {
   datagrid.update();
 
   columnSelectionPopover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
   );
-  expect(columnSelectionPopover).euiPopoverToBeOpen();
+  expect(columnSelectionPopover).wuiPopoverToBeOpen();
 
   return columnSelectionPopover;
 }
 
 function closeColumnSorterSelection(datagrid: ReactWrapper) {
   let columnSelectionPopover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
   );
   // popover will go away if all of the columns are selected
   if (columnSelectionPopover.length > 0) {
-    expect(columnSelectionPopover).euiPopoverToBeOpen();
+    expect(columnSelectionPopover).wuiPopoverToBeOpen();
 
     const popoverButton = columnSelectionPopover
-      .find('div[className="euiPopover__anchor"]')
+      .find('div[className="wuiPopover__anchor"]')
       .find('[onClick]')
       .first();
     // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -137,9 +150,9 @@ function closeColumnSorterSelection(datagrid: ReactWrapper) {
     datagrid.update();
 
     columnSelectionPopover = datagrid.find(
-      'EuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
+      'WuiPopover[data-test-subj="dataGridColumnSortingPopoverColumnSelection"]'
     );
-    expect(columnSelectionPopover).not.euiPopoverToBeOpen();
+    expect(columnSelectionPopover).not.wuiPopoverToBeOpen();
   }
 
   return columnSelectionPopover;
@@ -151,7 +164,7 @@ function getColumnSortDirection(
 ): [ReactWrapper, string] {
   // get the button that sorts by this column
   let columnSorter = datagrid.find(
-    `div[data-test-subj="euiDataGridColumnSorting-sortColumn-${columnId}"]`
+    `div[data-test-subj="wuiDataGridColumnSorting-sortColumn-${columnId}"]`
   );
   if (columnSorter.length === 0) {
     // need to enable this column
@@ -170,18 +183,18 @@ function getColumnSortDirection(
 
     // find the column sorter
     const columnSelectionPopover = datagrid.find(
-      'EuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
+      'WuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
     );
     columnSorter = columnSelectionPopover.find(
-      `div[data-test-subj="euiDataGridColumnSorting-sortColumn-${columnId}"]`
+      `div[data-test-subj="wuiDataGridColumnSorting-sortColumn-${columnId}"]`
     );
   }
 
   expect(columnSorter.length).toBe(1);
   const activeSort = columnSorter
-    .find('button[className*="euiButtonGroup__button--selected"]')
-    .closest('EuiToggle')
-    .find('input[className*="euiButtonToggle__input"]');
+    .find('button[className*="wuiButtonGroup__button--selected"]')
+    .closest('WuiToggle')
+    .find('input[className*="wuiButtonToggle__input"]');
 
   const sortDirection = (activeSort.props() as {
     'data-test-subj': string;
@@ -192,12 +205,12 @@ function getColumnSortDirection(
 
 function openColumnSorter(datagrid: ReactWrapper) {
   let popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 
   const popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -206,21 +219,21 @@ function openColumnSorter(datagrid: ReactWrapper) {
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   return popover;
 }
 
 function closeColumnSorter(datagrid: ReactWrapper) {
   let popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   const popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -229,9 +242,9 @@ function closeColumnSorter(datagrid: ReactWrapper) {
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSortingPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 
   return popover;
 }
@@ -252,7 +265,7 @@ function sortByColumn(
   if (currentSortDirection === 'off') {
     act(() => {
       // @ts-ignore does not require an argument in this usage
-      columnSorter.find('EuiSwitch').props().onChange!();
+      columnSorter.find('WuiSwitch').props().onChange!();
     });
 
     datagrid.update();
@@ -266,7 +279,7 @@ function sortByColumn(
 
   if (currentSortDirection !== direction) {
     const sortButton = columnSorter.find(
-      `input[data-test-subj="euiDataGridColumnSorting-sortColumn-${columnId}-${direction}"]`
+      `input[data-test-subj="wuiDataGridColumnSorting-sortColumn-${columnId}-${direction}"]`
     );
     expect(sortButton.length).toBe(1);
     sortButton.simulate('change', [undefined, direction]);
@@ -276,34 +289,34 @@ function sortByColumn(
 }
 
 expect.extend({
-  toBeEuiPopover(received: ReactWrapper) {
-    const pass = received.name() === 'EuiPopover';
+  toBeWuiPopover(received: ReactWrapper) {
+    const pass = received.name() === 'WuiPopover';
     if (pass) {
       return {
         pass: true,
         message: () =>
-          `expected component "${received.name}" to not be EuiPopover`,
+          `expected component "${received.name}" to not be WuiPopover`,
       };
     } else {
       return {
         pass: false,
-        message: () => `expected component "${received.name}" to be EuiPopover`,
+        message: () => `expected component "${received.name}" to be WuiPopover`,
       };
     }
   },
-  euiPopoverToBeOpen(received) {
-    expect(received).toBeEuiPopover();
+  wuiPopoverToBeOpen(received) {
+    expect(received).toBeWuiPopover();
     const { isOpen } = received.props();
     const pass = isOpen === true;
     if (pass) {
       return {
         pass: true,
-        message: () => 'expected EuiPopover to be closed',
+        message: () => 'expected WuiPopover to be closed',
       };
     } else {
       return {
         pass: false,
-        message: () => 'expected EuiPopover to be open',
+        message: () => 'expected WuiPopover to be open',
       };
     }
   },
@@ -312,20 +325,20 @@ declare global {
   /* eslint-disable-next-line @typescript-eslint/no-namespace,no-redeclare */
   namespace jest {
     interface Matchers<R> {
-      toBeEuiPopover(): R;
-      euiPopoverToBeOpen(): R;
+      toBeWuiPopover(): R;
+      wuiPopoverToBeOpen(): R;
     }
   }
 }
 
 function openColumnSelector(datagrid: ReactWrapper) {
   let popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 
   const popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -334,21 +347,21 @@ function openColumnSelector(datagrid: ReactWrapper) {
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   return popover;
 }
 
 function closeColumnSelector(datagrid: ReactWrapper) {
   let popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   const popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -357,9 +370,9 @@ function closeColumnSelector(datagrid: ReactWrapper) {
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 
   return popover;
 }
@@ -372,9 +385,9 @@ function setColumnVisibility(
   const popover = openColumnSelector(datagrid);
 
   // toggle column's visibility switch
-  const portal = popover.find('EuiPortal');
+  const portal = popover.find('WuiPortal');
 
-  const columnSwitch = portal.find(`EuiSwitch[name="${columnId}"]`);
+  const columnSwitch = portal.find(`WuiSwitch[name="${columnId}"]`);
   const switchInput = columnSwitch.find('button');
   switchInput.getDOMNode().setAttribute('aria-checked', `${isVisible}`);
   switchInput.simulate('click');
@@ -389,12 +402,12 @@ function moveColumnToIndex(
 ) {
   // open datagrid column options
   let popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 
   let popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -403,17 +416,17 @@ function moveColumnToIndex(
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   const [initialColumnOrder] = extractGridData(datagrid);
   const initialColumnIndex = initialColumnOrder.indexOf(columnId);
 
   // "drag" column into new location
-  const portal = popover.find('EuiPortal');
+  const portal = popover.find('WuiPortal');
   act(() =>
-    portal.find('EuiDragDropContext').props().onDragEnd!({
+    portal.find('WuiDragDropContext').props().onDragEnd!({
       // @ts-ignore - only `index` is used from `source`, don't need to mock rest of the event
       source: { index: initialColumnIndex },
       destination: { index: nextIndex },
@@ -424,12 +437,12 @@ function moveColumnToIndex(
 
   // close popover
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).euiPopoverToBeOpen();
+  expect(popover).wuiPopoverToBeOpen();
 
   popoverButton = popover
-    .find('div[className="euiPopover__anchor"]')
+    .find('div[className="wuiPopover__anchor"]')
     .find('[onClick]')
     .first();
   // @ts-ignore onClick is known to exist, and does not require an argument in this usage
@@ -438,16 +451,16 @@ function moveColumnToIndex(
   datagrid.update();
 
   popover = datagrid.find(
-    'EuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
+    'WuiPopover[data-test-subj="dataGridColumnSelectorPopover"]'
   );
-  expect(popover).not.euiPopoverToBeOpen();
+  expect(popover).not.wuiPopoverToBeOpen();
 }
 
-describe('EuiDataGrid', () => {
+describe('WuiDataGrid', () => {
   describe('rendering', () => {
     it('renders with common and div attributes', () => {
       const component = render(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -466,7 +479,7 @@ describe('EuiDataGrid', () => {
 
     it('renders custom column headers', () => {
       const component = render(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[
             { id: 'A', display: 'Column A' },
@@ -488,7 +501,7 @@ describe('EuiDataGrid', () => {
 
     it('renders with appropriate role structure', () => {
       const component = render(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -520,7 +533,7 @@ describe('EuiDataGrid', () => {
 
     it('renders and applies custom props', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -543,7 +556,7 @@ describe('EuiDataGrid', () => {
       );
 
       expect(
-        component.find('.euiDataGridRowCell').map(cell => {
+        component.find('.wuiDataGridRowCell').map(cell => {
           const props = cell.props();
           delete props.children;
           return props;
@@ -551,7 +564,7 @@ describe('EuiDataGrid', () => {
       ).toMatchInlineSnapshot(`
 Array [
   Object {
-    "className": "euiDataGridRowCell customClass",
+    "className": "wuiDataGridRowCell customClass",
     "data-test-subj": "dataGridRowCell",
     "onBlur": [Function],
     "onFocus": [Function],
@@ -564,7 +577,7 @@ Array [
     "tabIndex": -1,
   },
   Object {
-    "className": "euiDataGridRowCell customClass",
+    "className": "wuiDataGridRowCell customClass",
     "data-test-subj": "dataGridRowCell",
     "onBlur": [Function],
     "onFocus": [Function],
@@ -577,7 +590,7 @@ Array [
     "tabIndex": -1,
   },
   Object {
-    "className": "euiDataGridRowCell customClass",
+    "className": "wuiDataGridRowCell customClass",
     "data-test-subj": "dataGridRowCell",
     "onBlur": [Function],
     "onFocus": [Function],
@@ -590,7 +603,7 @@ Array [
     "tabIndex": -1,
   },
   Object {
-    "className": "euiDataGridRowCell customClass",
+    "className": "wuiDataGridRowCell customClass",
     "data-test-subj": "dataGridRowCell",
     "onBlur": [Function],
     "onFocus": [Function],
@@ -608,7 +621,7 @@ Array [
 
     it('renders correct aria attributes on column headers', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -666,7 +679,7 @@ Array [
 
     it('renders additional toolbar controls', () => {
       const component = render(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -686,7 +699,7 @@ Array [
 
     it('renders control columns', () => {
       const component = render(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -722,7 +735,7 @@ Array [
 
     it('can hide the toolbar', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -771,7 +784,7 @@ Array [
     describe('schema schema classnames', () => {
       it('applies classnames from explicit schemas', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             {...requiredProps}
             columns={[
               { id: 'A', schema: 'numeric' },
@@ -789,23 +802,23 @@ Array [
         );
 
         const gridCellClassNames = component
-          .find('[className*="euiDataGridRowCell--"]')
+          .find('[className*="wuiDataGridRowCell--"]')
           .map(x => x.props().className);
         expect(gridCellClassNames).toMatchInlineSnapshot(`
 Array [
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--customFormatName",
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--customFormatName",
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--customFormatName",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--customFormatName",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--customFormatName",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--customFormatName",
 ]
 `);
       });
 
       it('automatically detects column types and applies classnames', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             {...requiredProps}
             columns={[{ id: 'A' }, { id: 'B' }, { id: 'C' }]}
             columnVisibility={{
@@ -827,23 +840,23 @@ Array [
         );
 
         const gridCellClassNames = component
-          .find('[className~="euiDataGridRowCell"]')
+          .find('[className~="wuiDataGridRowCell"]')
           .map(x => x.props().className);
         expect(gridCellClassNames).toMatchInlineSnapshot(`
 Array [
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--boolean",
-  "euiDataGridRowCell",
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--boolean",
-  "euiDataGridRowCell",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--boolean",
+  "wuiDataGridRowCell",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--boolean",
+  "wuiDataGridRowCell",
 ]
 `);
       });
 
       it('overrides automatically detected column types with supplied schema', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             {...requiredProps}
             columns={[{ id: 'A' }, { id: 'B', schema: 'alphanumeric' }]}
             columnVisibility={{
@@ -859,14 +872,14 @@ Array [
         );
 
         const gridCellClassNames = component
-          .find('[className~="euiDataGridRowCell"]')
+          .find('[className~="wuiDataGridRowCell"]')
           .map(x => x.props().className);
         expect(gridCellClassNames).toMatchInlineSnapshot(`
 Array [
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--alphanumeric",
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--alphanumeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--alphanumeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--alphanumeric",
 ]
 `);
       });
@@ -882,7 +895,7 @@ Array [
           H: '2019-09-18T12:31:28.234+0300',
         };
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             {...requiredProps}
             columns={Object.keys(values).map(id => ({ id }))}
             columnVisibility={{
@@ -896,17 +909,17 @@ Array [
         );
 
         const gridCellClassNames = component
-          .find('[className~="euiDataGridRowCell"]')
+          .find('[className~="wuiDataGridRowCell"]')
           .map(x => x.props().className);
         expect(gridCellClassNames).toMatchInlineSnapshot(`
 Array [
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--boolean",
-  "euiDataGridRowCell euiDataGridRowCell--currency",
-  "euiDataGridRowCell euiDataGridRowCell--datetime",
-  "euiDataGridRowCell euiDataGridRowCell--datetime",
-  "euiDataGridRowCell euiDataGridRowCell--datetime",
-  "euiDataGridRowCell euiDataGridRowCell--datetime",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--boolean",
+  "wuiDataGridRowCell wuiDataGridRowCell--currency",
+  "wuiDataGridRowCell wuiDataGridRowCell--datetime",
+  "wuiDataGridRowCell wuiDataGridRowCell--datetime",
+  "wuiDataGridRowCell wuiDataGridRowCell--datetime",
+  "wuiDataGridRowCell wuiDataGridRowCell--datetime",
 ]
 `);
       });
@@ -917,7 +930,7 @@ Array [
           B: '127.0.0.1',
         };
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             {...requiredProps}
             columns={Object.keys(values).map(id => ({ id }))}
             columnVisibility={{
@@ -945,12 +958,12 @@ Array [
         );
 
         const gridCellClassNames = component
-          .find('[className~="euiDataGridRowCell"]')
+          .find('[className~="wuiDataGridRowCell"]')
           .map(x => x.props().className);
         expect(gridCellClassNames).toMatchInlineSnapshot(`
 Array [
-  "euiDataGridRowCell euiDataGridRowCell--numeric",
-  "euiDataGridRowCell euiDataGridRowCell--ipaddress",
+  "wuiDataGridRowCell wuiDataGridRowCell--numeric",
+  "wuiDataGridRowCell wuiDataGridRowCell--ipaddress",
 ]
 `);
       });
@@ -960,7 +973,7 @@ Array [
   describe('cell rendering', () => {
     it('supports hooks', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-label="test"
           columns={[{ id: 'Column 1' }, { id: 'Column 2' }]}
           columnVisibility={{
@@ -996,7 +1009,7 @@ Array [
   describe('pagination', () => {
     it('renders', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-label="test grid"
           columns={[{ id: 'Column' }]}
           columnVisibility={{
@@ -1016,14 +1029,14 @@ Array [
       );
 
       expect(
-        takeMountedSnapshot(component.find('EuiTablePagination'))
+        takeMountedSnapshot(component.find('WuiTablePagination'))
       ).toMatchSnapshot();
     });
 
     describe('page navigation', () => {
       it('next button pages through content', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-label="test grid"
             columns={[{ id: 'Column' }]}
             columnVisibility={{
@@ -1084,7 +1097,7 @@ Array [
 
       it('pages are navigable through page links', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-label="test grid"
             columns={[{ id: 'Column' }]}
             columnVisibility={{
@@ -1148,7 +1161,7 @@ Array [
 
     it('changes the page size', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-label="test grid"
           columns={[{ id: 'Column' }]}
           columnVisibility={{
@@ -1183,7 +1196,7 @@ Array [
         'click'
       );
       const rowButtons: NodeListOf<HTMLButtonElement> = document.body.querySelectorAll(
-        '.euiContextMenuItem'
+        '.wuiContextMenuItem'
       );
       expect(
         Array.prototype.map.call(
@@ -1215,7 +1228,7 @@ Array [
   describe('column sizing', () => {
     it('uses a columns initialWidth', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'Column 1', initialWidth: 400 }, { id: 'Column 2' }]}
           columnVisibility={{
@@ -1237,7 +1250,7 @@ Array [
     describe('resizing', () => {
       it('resizes a column by grab handles', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-labelledby="#test"
             columns={[{ id: 'Column 1' }, { id: 'Column 2' }]}
             columnVisibility={{
@@ -1267,7 +1280,7 @@ Array [
       it('should listen for column resize', () => {
         const onColumnResizeCallback = jest.fn();
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-labelledby="#test"
             columns={[{ id: 'Column 1' }, { id: 'Column 2', initialWidth: 75 }]}
             columnVisibility={{
@@ -1296,7 +1309,7 @@ Array [
 
       it('is prevented by isResizable:false', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-labelledby="#test"
             columns={[
               { id: 'Column 1', isResizable: false },
@@ -1319,10 +1332,10 @@ Array [
 
         // verify there is no resizer on Column 1 but that there is on Column 2
         expect(
-          component.find('EuiDataGridColumnResizer[columnId="Column 1"]').length
+          component.find('WuiDataGridColumnResizer[columnId="Column 1"]').length
         ).toBe(0);
         expect(
-          component.find('EuiDataGridColumnResizer[columnId="Column 2"]').length
+          component.find('WuiDataGridColumnResizer[columnId="Column 2"]').length
         ).toBe(1);
       });
 
@@ -1330,7 +1343,7 @@ Array [
         const renderCellValue = jest.fn(() => 'value');
 
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-labelledby="#test"
             columns={[{ id: 'ColumnA' }]}
             columnVisibility={{
@@ -1364,7 +1377,7 @@ Array [
       };
 
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'ColumnA' }, { id: 'ColumnB' }]}
           columnVisibility={columnVisibility}
@@ -1406,7 +1419,7 @@ Array [
       };
 
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'ColumnA' }, { id: 'ColumnB' }]}
           columnVisibility={columnVisibility}
@@ -1441,7 +1454,7 @@ Array [
       });
 
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'ColumnA' }]}
           columnVisibility={{
@@ -1474,7 +1487,7 @@ Array [
     describe('in-memory sorting', () => {
       it('sorts on initial render', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-label="test"
             columns={[{ id: 'A' }, { id: 'B' }]}
             columnVisibility={{
@@ -1506,7 +1519,7 @@ Array [
 
       it('sorts on multiple columns', () => {
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-label="test"
             columns={[{ id: 'A' }, { id: 'B' }]}
             columnVisibility={{
@@ -1546,7 +1559,7 @@ Array [
         });
 
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-labelledby="#test"
             columns={[{ id: 'A' }, { id: 'B' }]}
             columnVisibility={{
@@ -1603,7 +1616,7 @@ Array [
         });
 
         const component = mount(
-          <EuiDataGrid
+          <WuiDataGrid
             aria-label="test"
             columns={[{ id: 'version' }]}
             columnVisibility={{
@@ -1647,7 +1660,7 @@ Array [
 
     it('uses schema information to sort', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-label="test"
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -1681,7 +1694,7 @@ Array [
   describe('updating column definitions', () => {
     it('renders the new set', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -1718,7 +1731,7 @@ Array [
 
     it('"Hide fields" updates', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -1736,7 +1749,7 @@ Array [
       let popover = openColumnSelector(component);
       expect(
         popover
-          .find('.euiDataGridColumnSelector__item')
+          .find('.wuiDataGridColumnSelector__item')
           .map(item => item.text())
       ).toEqual(['A', 'B']);
       closeColumnSelector(component);
@@ -1754,7 +1767,7 @@ Array [
       popover = openColumnSelector(component);
       expect(
         popover
-          .find('.euiDataGridColumnSelector__item')
+          .find('.wuiDataGridColumnSelector__item')
           .map(item => item.text())
       ).toEqual(['A', 'C']);
       closeColumnSelector(component);
@@ -1762,7 +1775,7 @@ Array [
 
     it('"Sort fields" updates', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{
@@ -1785,7 +1798,7 @@ Array [
       let popover = openColumnSorterSelection(component);
       expect(
         popover
-          .find('.euiDataGridColumnSorting__field')
+          .find('.wuiDataGridColumnSorting__field')
           .map(item => item.text())
       ).toEqual(['A', 'B']);
       closeColumnSorterSelection(component);
@@ -1805,7 +1818,7 @@ Array [
       popover = openColumnSorterSelection(component);
       expect(
         popover
-          .find('.euiDataGridColumnSorting__field')
+          .find('.wuiDataGridColumnSorting__field')
           .map(item => item.text())
       ).toEqual(['A', 'C']);
       closeColumnSorterSelection(component);
@@ -1816,7 +1829,7 @@ Array [
   describe('render column actions', () => {
     it('renders various column actions configurations', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           aria-labelledby="#test"
           sorting={{
             columns: [{ id: 'A', direction: 'asc' }],
@@ -1910,7 +1923,7 @@ Array [
       };
 
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[
             { id: 'A', actions: false },
@@ -2110,7 +2123,7 @@ Array [
 
     it('does not break arrow key focus control behavior when also using a mouse', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[
             { id: 'A', actions: false },
@@ -2152,7 +2165,7 @@ Array [
     });
     it.skip('supports arrow navigation through grids with different interactive cells', () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }, { id: 'C' }, { id: 'D' }]}
           columnVisibility={{
@@ -2238,7 +2251,7 @@ Array [
     });
     it.skip('allows user to enter and exit grid navigation', async () => {
       const component = mount(
-        <EuiDataGrid
+        <WuiDataGrid
           {...requiredProps}
           columns={[{ id: 'A' }, { id: 'B' }]}
           columnVisibility={{

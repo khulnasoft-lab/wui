@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,41 +33,41 @@
 import React, { HTMLAttributes, forwardRef } from 'react';
 import classnames from 'classnames';
 import {
-  EuiDataGridColumnWidths,
-  EuiDataGridColumn,
-  EuiDataGridSorting,
-  EuiDataGridFocusedCell,
-  EuiDataGridControlColumn,
+  WuiDataGridColumnWidths,
+  WuiDataGridColumn,
+  WuiDataGridSorting,
+  WuiDataGridFocusedCell,
+  WuiDataGridControlColumn,
 } from './data_grid_types';
 import { CommonProps } from '../common';
-import { EuiDataGridSchema } from './data_grid_schema';
-import { EuiDataGridDataRowProps } from './data_grid_data_row';
-import { EuiDataGridHeaderCell } from './data_grid_header_cell';
-import { EuiDataGridControlHeaderCell } from './data_grid_control_header_cell';
+import { WuiDataGridSchema } from './data_grid_schema';
+import { WuiDataGridDataRowProps } from './data_grid_data_row';
+import { WuiDataGridHeaderCell } from './data_grid_header_cell';
+import { WuiDataGridControlHeaderCell } from './data_grid_control_header_cell';
 
-export interface EuiDataGridHeaderRowPropsSpecificProps {
-  leadingControlColumns?: EuiDataGridControlColumn[];
-  trailingControlColumns?: EuiDataGridControlColumn[];
-  columns: EuiDataGridColumn[];
-  columnWidths: EuiDataGridColumnWidths;
-  schema: EuiDataGridSchema;
+export interface WuiDataGridHeaderRowPropsSpecificProps {
+  leadingControlColumns?: WuiDataGridControlColumn[];
+  trailingControlColumns?: WuiDataGridControlColumn[];
+  columns: WuiDataGridColumn[];
+  columnWidths: WuiDataGridColumnWidths;
+  schema: WuiDataGridSchema;
   defaultColumnWidth?: number | null;
   setColumnWidth: (columnId: string, width: number) => void;
   setVisibleColumns: (columnId: string[]) => void;
   switchColumnPos: (colFromId: string, colToId: string) => void;
-  sorting?: EuiDataGridSorting;
-  focusedCell?: EuiDataGridFocusedCell;
-  onCellFocus: EuiDataGridDataRowProps['onCellFocus'];
+  sorting?: WuiDataGridSorting;
+  focusedCell?: WuiDataGridFocusedCell;
+  onCellFocus: WuiDataGridDataRowProps['onCellFocus'];
   headerIsInteractive: boolean;
 }
 
-export type EuiDataGridHeaderRowProps = CommonProps &
+export type WuiDataGridHeaderRowProps = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiDataGridHeaderRowPropsSpecificProps;
+  WuiDataGridHeaderRowPropsSpecificProps;
 
-const EuiDataGridHeaderRow = forwardRef<
+const WuiDataGridHeaderRow = forwardRef<
   HTMLDivElement,
-  EuiDataGridHeaderRowProps
+  WuiDataGridHeaderRowProps
 >((props, ref) => {
   const {
     leadingControlColumns = [],
@@ -75,7 +88,7 @@ const EuiDataGridHeaderRow = forwardRef<
     ...rest
   } = props;
 
-  const classes = classnames('euiDataGridHeader', className);
+  const classes = classnames('wuiDataGridHeader', className);
   const dataTestSubj = classnames('dataGridHeader', _dataTestSubj);
 
   return (
@@ -86,18 +99,18 @@ const EuiDataGridHeaderRow = forwardRef<
       data-test-subj={dataTestSubj}
       {...rest}>
       {leadingControlColumns.map((controlColumn, index) => (
-        <EuiDataGridControlHeaderCell
+        <WuiDataGridControlHeaderCell
           key={controlColumn.id}
           index={index}
           controlColumn={controlColumn}
           focusedCell={focusedCell}
           setFocusedCell={setFocusedCell}
           headerIsInteractive={headerIsInteractive}
-          className="euiDataGridHeaderCell--controlColumn"
+          className="wuiDataGridHeaderCell--controlColumn"
         />
       ))}
       {columns.map((column, index) => (
-        <EuiDataGridHeaderCell
+        <WuiDataGridHeaderCell
           key={column.id}
           column={column}
           columns={columns}
@@ -115,20 +128,20 @@ const EuiDataGridHeaderRow = forwardRef<
         />
       ))}
       {trailingControlColumns.map((controlColumn, index) => (
-        <EuiDataGridControlHeaderCell
+        <WuiDataGridControlHeaderCell
           key={controlColumn.id}
           index={index + leadingControlColumns.length + columns.length}
           controlColumn={controlColumn}
           focusedCell={focusedCell}
           setFocusedCell={setFocusedCell}
           headerIsInteractive={headerIsInteractive}
-          className="euiDataGridHeaderCell--controlColumn"
+          className="wuiDataGridHeaderCell--controlColumn"
         />
       ))}
     </div>
   );
 });
 
-EuiDataGridHeaderRow.displayName = 'EuiDataGridHeaderRow';
+WuiDataGridHeaderRow.displayName = 'WuiDataGridHeaderRow';
 
-export { EuiDataGridHeaderRow };
+export { WuiDataGridHeaderRow };

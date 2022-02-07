@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +33,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeLabelProps {
+export interface WuiRangeLabelProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -29,13 +42,13 @@ export interface EuiRangeLabelProps {
   side?: 'min' | 'max';
 }
 
-export const EuiRangeLabel: FunctionComponent<EuiRangeLabelProps> = ({
+export const WuiRangeLabel: FunctionComponent<WuiRangeLabelProps> = ({
   children,
   disabled,
   side = 'max',
 }) => {
-  const classes = classNames('euiRangeLabel', `euiRangeLabel--${side}`, {
-    'euiRangeLabel--isDisabled': disabled,
+  const classes = classNames('wuiRangeLabel', `wuiRangeLabel--${side}`, {
+    'wuiRangeLabel--isDisabled': disabled,
   });
   return <label className={classes}>{children}</label>;
 };

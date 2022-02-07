@@ -1,24 +1,24 @@
-.euiCodeEditorWrapper {
+.wuiCodeEditorWrapper {
   position: relative;
 
   .ace_hidden-cursors {
     opacity: 0;
   }
 
-  &.euiCodeEditorWrapper-isEditing {
+  &.wuiCodeEditorWrapper-isEditing {
     .ace_hidden-cursors {
       opacity: 1;
     }
   }
 }
 
-.euiCodeEditorKeyboardHint {
+.wuiCodeEditorKeyboardHint {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: transparentize($euiColorGhost, .3);
+  background: transparentize($wuiColorGhost, .3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +29,11 @@
 
   &:focus {
     opacity: 1;
-    border: 2px solid $euiColorPrimary;
-    z-index: $euiZLevel1;
+    border: 2px solid $wuiColorPrimary;
+    z-index: $wuiZLevel1;
   }
 
-  &.euiCodeEditorKeyboardHint-isInactive {
+  &.wuiCodeEditorKeyboardHint-isInactive {
     display: none;
   }
 }

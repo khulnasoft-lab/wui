@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconUnfold = ({ title, titleId, ...props }) => (
+const WuiIconUnfold = ({ title, titleId, ...props }) => (
   <svg
     viewBox="0 0 16 16"
     xmlns="http://www.w3.org/2000/svg"
@@ -11,4 +11,4 @@ const EuiIconUnfold = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconUnfold;
+export const icon = WuiIconUnfold;

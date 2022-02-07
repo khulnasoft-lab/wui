@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,29 +35,29 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
 import { Timer } from '../../services/time';
-import { EuiGlobalToastListItem } from './global_toast_list_item';
-import { EuiToast, EuiToastProps } from './toast';
+import { WuiGlobalToastListItem } from './global_toast_list_item';
+import { WuiToast, WuiToastProps } from './toast';
 
 type ToastSide = 'right' | 'left';
 
 const sideToClassNameMap: { [side in ToastSide]: string } = {
-  left: 'euiGlobalToastList--left',
-  right: 'euiGlobalToastList--right',
+  left: 'wuiGlobalToastList--left',
+  right: 'wuiGlobalToastList--right',
 };
 
 export const SIDES = keysOf(sideToClassNameMap);
 
 export const TOAST_FADE_OUT_MS = 250;
 
-export interface Toast extends EuiToastProps {
+export interface Toast extends WuiToastProps {
   id: string;
   text?: ReactChild;
   toastLifeTimeMs?: number;
 }
 
-export interface EuiGlobalToastListProps extends CommonProps {
+export interface WuiGlobalToastListProps extends CommonProps {
   toasts: Toast[];
-  dismissToast: (this: EuiGlobalToastList, toast: Toast) => void;
+  dismissToast: (this: WuiGlobalToastList, toast: Toast) => void;
   toastLifeTimeMs: number;
   /**
    * Determines which side of the browser window the toasts should appear
@@ -58,8 +71,8 @@ interface State {
   };
 }
 
-export class EuiGlobalToastList extends Component<
-  EuiGlobalToastListProps,
+export class WuiGlobalToastList extends Component<
+  WuiGlobalToastListProps,
   State
 > {
   state: State = {
@@ -220,7 +233,7 @@ export class EuiGlobalToastList extends Component<
     this.scheduleAllToastsForDismissal();
   }
 
-  componentDidUpdate(prevProps: EuiGlobalToastListProps) {
+  componentDidUpdate(prevProps: WuiGlobalToastListProps) {
     this.scheduleAllToastsForDismissal();
 
     if (!this.isUserInteracting) {
@@ -269,21 +282,21 @@ export class EuiGlobalToastList extends Component<
       const { text, toastLifeTimeMs, ...rest } = toast;
 
       return (
-        <EuiGlobalToastListItem
+        <WuiGlobalToastListItem
           key={toast.id}
           isDismissed={this.state.toastIdToDismissedMap[toast.id]}>
-          <EuiToast
+          <WuiToast
             onClose={this.dismissToast.bind(this, toast)}
             onFocus={this.onMouseEnter}
             onBlur={this.onMouseLeave}
             {...rest}>
             {text}
-          </EuiToast>
-        </EuiGlobalToastListItem>
+          </WuiToast>
+        </WuiGlobalToastListItem>
       );
     });
     const classes = classNames(
-      'euiGlobalToastList',
+      'wuiGlobalToastList',
       side ? sideToClassNameMap[side] : null,
       className
     );

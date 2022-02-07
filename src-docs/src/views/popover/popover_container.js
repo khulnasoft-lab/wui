@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiCode,
-  EuiPanel,
-  EuiPopover,
-  EuiSpacer,
+  WuiButton,
+  WuiCode,
+  WuiPanel,
+  WuiPopover,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,32 +17,32 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton
+    <WuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}
       style={{ position: 'relative', left: 50 }}>
       Show constrained popover
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
-    <EuiPanel panelRef={setPanelRef}>
-      <EuiPopover
+    <WuiPanel panelRef={setPanelRef}>
+      <WuiPopover
         ownFocus
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         container={panelRef}>
         <div>
-          Popover is positioned <EuiCode>downCenter</EuiCode> but constrained to
+          Popover is positioned <WuiCode>downCenter</WuiCode> but constrained to
           fit within the panel.
         </div>
-      </EuiPopover>
+      </WuiPopover>
 
       {/* create adequate room for the popover */}
-      <EuiSpacer size="xxl" />
-      <EuiSpacer size="xxl" />
-    </EuiPanel>
+      <WuiSpacer size="xxl" />
+      <WuiSpacer size="xxl" />
+    </WuiPanel>
   );
 };

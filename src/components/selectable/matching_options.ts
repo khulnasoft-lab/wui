@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,10 +30,10 @@
  * under the License.
  */
 
-import { EuiSelectableOption } from './selectable_option';
+import { WuiSelectableOption } from './selectable_option';
 
 const getSearchableLabel = <T>(
-  option: EuiSelectableOption<T>,
+  option: WuiSelectableOption<T>,
   normalize: boolean = true
 ): string => {
   const searchableLabel = option.searchableLabel || option.label;
@@ -29,7 +42,7 @@ const getSearchableLabel = <T>(
 
 const getSelectedOptionForSearchValue = <T>(
   searchValue: string,
-  selectedOptions: Array<EuiSelectableOption<T>>
+  selectedOptions: Array<WuiSelectableOption<T>>
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
   return selectedOptions.find(
@@ -38,11 +51,11 @@ const getSelectedOptionForSearchValue = <T>(
 };
 
 const collectMatchingOption = <T>(
-  accumulator: Array<EuiSelectableOption<T>>,
-  option: EuiSelectableOption<T>,
+  accumulator: Array<WuiSelectableOption<T>>,
+  option: WuiSelectableOption<T>,
   normalizedSearchValue: string,
   isPreFiltered?: boolean,
-  selectedOptions?: Array<EuiSelectableOption<T>>
+  selectedOptions?: Array<WuiSelectableOption<T>>
 ) => {
   // Don't show options that have already been requested if
   // the selectedOptions list exists
@@ -78,7 +91,7 @@ export const getMatchingOptions = <T>(
   /**
    * All available options to match against
    */
-  options: Array<EuiSelectableOption<T>>,
+  options: Array<WuiSelectableOption<T>>,
   /**
    * String to match option.label || option.searchableLabel against
    */
@@ -91,10 +104,10 @@ export const getMatchingOptions = <T>(
    * To exclude selected options from the search list,
    * pass the array of selected options
    */
-  selectedOptions?: Array<EuiSelectableOption<T>>
+  selectedOptions?: Array<WuiSelectableOption<T>>
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
-  const matchingOptions: Array<EuiSelectableOption<T>> = [];
+  const matchingOptions: Array<WuiSelectableOption<T>> = [];
 
   options.forEach(option => {
     collectMatchingOption<T>(

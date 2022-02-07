@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiRangeTrack is rendered 1`] = `
+exports[`WuiRangeTrack is rendered 1`] = `
 <div
   aria-label="aria-label"
   class="testClass1 testClass2"
@@ -8,11 +8,11 @@ exports[`EuiRangeTrack is rendered 1`] = `
   style="margin-right:0.6em"
 >
   <div
-    class="euiRangeTicks"
+    class="wuiRangeTicks"
     style="margin:0 -4.545454545454546%;left:0;right:0"
   >
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -21,7 +21,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       0
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -30,7 +30,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       10
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -39,7 +39,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       20
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -48,7 +48,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       30
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -57,7 +57,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       40
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -66,7 +66,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       50
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -75,7 +75,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       60
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -84,7 +84,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       70
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -93,7 +93,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       80
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -102,7 +102,7 @@ exports[`EuiRangeTrack is rendered 1`] = `
       90
     </button>
     <button
-      class="euiRangeTick"
+      class="wuiRangeTick"
       style="width:9.090909090909092%"
       tabindex="-1"
       type="button"
@@ -114,14 +114,14 @@ exports[`EuiRangeTrack is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRangeTrack should throw error if \`max\` does not line up with \`step\` interval 1`] = `"The value of 105 is not included in the possible sequence provided by the step of 10."`;
+exports[`WuiRangeTrack should throw error if \`max\` does not line up with \`step\` interval 1`] = `"The value of 105 is not included in the possible sequence provided by the step of 10."`;
 
-exports[`EuiRangeTrack should throw error if \`tickInterval\` is off sequence from \`step\` 1`] = `"The value of 3 is not included in the possible sequence provided by the step of 10."`;
+exports[`WuiRangeTrack should throw error if \`tickInterval\` is off sequence from \`step\` 1`] = `"The value of 3 is not included in the possible sequence provided by the step of 10."`;
 
-exports[`EuiRangeTrack should throw error if custom tick value is higher than \`max\` 1`] = `"The value of 200 is higher than the max value of 100."`;
+exports[`WuiRangeTrack should throw error if custom tick value is higher than \`max\` 1`] = `"The value of 200 is higher than the max value of 100."`;
 
-exports[`EuiRangeTrack should throw error if custom tick value is lower than \`min\` 1`] = `"The value of -100 is lower than the min value of 0."`;
+exports[`WuiRangeTrack should throw error if custom tick value is lower than \`min\` 1`] = `"The value of -100 is lower than the min value of 0."`;
 
-exports[`EuiRangeTrack should throw error if custom tick value is off sequence from \`step\` 1`] = `"The value of 10 is not included in the possible sequence provided by the step of 50."`;
+exports[`WuiRangeTrack should throw error if custom tick value is off sequence from \`step\` 1`] = `"The value of 10 is not included in the possible sequence provided by the step of 50."`;
 
-exports[`EuiRangeTrack should throw error if there are too many ticks to render 1`] = `"The number of ticks to render is too high (22), reduce the interval."`;
+exports[`WuiRangeTrack should throw error if there are too many ticks to render 1`] = `"The number of ticks to render is too high (22), reduce the interval."`;

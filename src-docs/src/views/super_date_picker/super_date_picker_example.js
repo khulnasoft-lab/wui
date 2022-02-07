@@ -5,11 +5,11 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiCodeBlock,
-  EuiIcon,
-  EuiLink,
-  EuiSuperDatePicker,
+  WuiCode,
+  WuiCodeBlock,
+  WuiIcon,
+  WuiLink,
+  WuiSuperDatePicker,
 } from '../../../../src/components';
 
 import SuperDatePicker from './super_date_picker';
@@ -24,7 +24,7 @@ import SuperDatePickerCustomQuickSelect from './super_date_picker_custom_quick_s
 const superDatePickerCustomQuickSelectSource = require('!!raw-loader!./super_date_picker_custom_quick_select');
 const superDatePickerCustomQuickSelectHtml = renderToHtml(SuperDatePicker);
 
-const superDatePickerSnippet = `<EuiSuperDatePicker
+const superDatePickerSnippet = `<WuiSuperDatePicker
   onTimeChange={this.onTimeChange}
 />
 `;
@@ -36,7 +36,7 @@ const superDatePickerCustomQuickSelectSnippet = `customQuickSelectPanels = [
   },
 ];
 
-<EuiSuperDatePicker
+<WuiSuperDatePicker
   onTimeChange={this.onTimeChange}
   customQuickSelectPanels={customQuickSelectPanels}
 />
@@ -59,26 +59,26 @@ export const SuperDatePickerExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSuperDatePicker</strong> is a date picker that supports
+            <strong>WuiSuperDatePicker</strong> is a date picker that supports
             relative and absolute dates. It offers a convenient{' '}
             <strong>Quick select menu</strong>{' '}
-            <EuiIcon type="calendar" color="primary" /> which includes{' '}
+            <WuiIcon type="calendar" color="primary" /> which includes{' '}
             <strong>Commonly used dates</strong>,{' '}
             <strong>Recently used date ranges</strong> and{' '}
             <strong>Set refresh</strong> features.
           </p>
           <p>
-            Pass <EuiCode>start</EuiCode> and <EuiCode>end</EuiCode> date times
-            as strings in either datemath format (e.g.: <EuiCode>now</EuiCode>,{' '}
-            <EuiCode>now-15m</EuiCode>, <EuiCode>now-15m/m</EuiCode>) or as
+            Pass <WuiCode>start</WuiCode> and <WuiCode>end</WuiCode> date times
+            as strings in either datemath format (e.g.: <WuiCode>now</WuiCode>,{' '}
+            <WuiCode>now-15m</WuiCode>, <WuiCode>now-15m/m</WuiCode>) or as
             absolute date in the format{' '}
-            <EuiCode>YYYY-MM-DDTHH:mm:ss.SSSZ</EuiCode>. Use{' '}
-            <EuiLink href="https://github.com/elastic/datemath-js">
+            <WuiCode>YYYY-MM-DDTHH:mm:ss.SSSZ</WuiCode>. Use{' '}
+            <WuiLink href="https://github.com/elastic/datemath-js">
               datemath
-            </EuiLink>{' '}
+            </WuiLink>{' '}
             to convert start and end strings into moment objects.
           </p>
-          <EuiCodeBlock language="js" paddingSize="none" isCopyable>
+          <WuiCodeBlock language="js" paddingSize="none" isCopyable>
             {`import dateMath from '@elastic/datemath';
 
 const startMoment = dateMath.parse(start);
@@ -93,10 +93,10 @@ const endMoment = dateMath.parse(end, { roundUp: true });
 if (!endMoment || !endMoment.isValid()) {
   throw new Error('Unable to parse end string');
 }`}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </div>
       ),
-      props: { EuiSuperDatePicker },
+      props: { WuiSuperDatePicker },
       snippet: superDatePickerSnippet,
       demo: <SuperDatePicker />,
     },
@@ -115,30 +115,30 @@ if (!endMoment || !endMoment.isValid()) {
       text: (
         <div>
           <p>
-            When <EuiCode>start</EuiCode> and <EuiCode>end</EuiCode> change from
+            When <WuiCode>start</WuiCode> and <WuiCode>end</WuiCode> change from
             interactions with <strong> Quick select</strong>,{' '}
             <strong>Commonly used</strong>, or{' '}
             <strong>Recently used date ranges</strong>,
-            <EuiCode>onTimeChange</EuiCode> will be immediately invoked. This is
-            because these interactions set both <EuiCode>start</EuiCode> and{' '}
-            <EuiCode>end</EuiCode> in a single event.
+            <WuiCode>onTimeChange</WuiCode> will be immediately invoked. This is
+            because these interactions set both <WuiCode>start</WuiCode> and{' '}
+            <WuiCode>end</WuiCode> in a single event.
           </p>
           <p>
-            When <EuiCode>start</EuiCode> and <EuiCode>end</EuiCode> change from
+            When <WuiCode>start</WuiCode> and <WuiCode>end</WuiCode> change from
             interactions with <strong>Absolute</strong>,{' '}
             <strong>Relative</strong>, and <strong>Now</strong> tabs,
-            <EuiCode>onTimeChange</EuiCode> will <strong>not</strong> be
-            invoked. In these cases,<EuiCode>onTimeChange</EuiCode> will be
+            <WuiCode>onTimeChange</WuiCode> will <strong>not</strong> be
+            invoked. In these cases,<WuiCode>onTimeChange</WuiCode> will be
             invoked when the user clicks the <strong>Update</strong> button.
-            This gives users the ability to set both <EuiCode>start</EuiCode>{' '}
-            and <EuiCode>end</EuiCode> before triggering{' '}
-            <EuiCode>onTimeChange</EuiCode>. Set{' '}
-            <EuiCode>showUpdateButton</EuiCode> to <EuiCode>false</EuiCode> to
-            immediately invoke <EuiCode>onTimeChange</EuiCode> for all{' '}
-            <EuiCode>start</EuiCode> and <EuiCode>end</EuiCode> changes.
+            This gives users the ability to set both <WuiCode>start</WuiCode>{' '}
+            and <WuiCode>end</WuiCode> before triggering{' '}
+            <WuiCode>onTimeChange</WuiCode>. Set{' '}
+            <WuiCode>showUpdateButton</WuiCode> to <WuiCode>false</WuiCode> to
+            immediately invoke <WuiCode>onTimeChange</WuiCode> for all{' '}
+            <WuiCode>start</WuiCode> and <WuiCode>end</WuiCode> changes.
           </p>
           <p>
-            Set <EuiCode>isAutoRefreshOnly</EuiCode> to <EuiCode>true </EuiCode>{' '}
+            Set <WuiCode>isAutoRefreshOnly</WuiCode> to <WuiCode>true </WuiCode>{' '}
             to limit the component to only display auto refresh content. This is
             useful in cases where there is no time data but auto-refresh
             configuration is still desired.
@@ -162,7 +162,7 @@ if (!endMoment || !endMoment.isValid()) {
       text: (
         <div>
           <p>
-            <strong>EuiSuperDatePicker</strong>&apos;s quick select menu also
+            <strong>WuiSuperDatePicker</strong>&apos;s quick select menu also
             supports <strong>custom panels</strong>. These panels can have their
             own title and perform custom actions on the date picker.
           </p>

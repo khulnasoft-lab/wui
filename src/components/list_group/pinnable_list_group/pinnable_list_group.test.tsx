@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,11 +35,11 @@ import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  WuiPinnableListGroup,
+  WuiPinnableListGroupItemProps,
 } from './pinnable_list_group';
 
-const someListItems: EuiPinnableListGroupItemProps[] = [
+const someListItems: WuiPinnableListGroupItemProps[] = [
   {
     label: 'Label with iconType',
     iconType: 'stop',
@@ -62,10 +75,10 @@ const someListItems: EuiPinnableListGroupItemProps[] = [
   },
 ];
 
-describe('EuiPinnableListGroup', () => {
+describe('WuiPinnableListGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <WuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
@@ -77,14 +90,14 @@ describe('EuiPinnableListGroup', () => {
 
   test('can have custom pin icon titles', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <WuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
-        pinTitle={(item: EuiPinnableListGroupItemProps) =>
+        pinTitle={(item: WuiPinnableListGroupItemProps) =>
           `Pin ${item.label} to the top`
         }
-        unpinTitle={(item: EuiPinnableListGroupItemProps) =>
+        unpinTitle={(item: WuiPinnableListGroupItemProps) =>
           `Unpin ${item.label} to the top`
         }
       />

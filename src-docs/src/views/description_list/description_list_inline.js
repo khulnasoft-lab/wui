@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiDescriptionList } from '../../../../src/components';
+import { WuiDescriptionList } from '../../../../src/components';
 
 const favoriteVideoGames = [
   {
@@ -18,7 +18,7 @@ const favoriteVideoGames = [
   },
 ];
 export default () => (
-  <EuiDescriptionList
+  <WuiDescriptionList
     type="inline"
     listItems={favoriteVideoGames}
     style={{ maxWidth: '400px' }}

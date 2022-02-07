@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,31 +40,31 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../common';
-import { EuiSelectableSearch } from './selectable_search';
-import { EuiSelectableMessage } from './selectable_message';
-import { EuiSelectableList } from './selectable_list';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiSpacer } from '../spacer';
+import { WuiSelectableSearch } from './selectable_search';
+import { WuiSelectableMessage } from './selectable_message';
+import { WuiSelectableList } from './selectable_list';
+import { WuiLoadingSpinner } from '../loading';
+import { WuiSpacer } from '../spacer';
 import { getMatchingOptions } from './matching_options';
 import { keys, htmlIdGenerator } from '../../services';
-import { EuiI18n } from '../i18n';
-import { EuiSelectableOption } from './selectable_option';
-import { EuiSelectableOptionsListProps } from './selectable_list/selectable_list';
-import { EuiSelectableSearchProps } from './selectable_search/selectable_search';
+import { WuiI18n } from '../i18n';
+import { WuiSelectableOption } from './selectable_option';
+import { WuiSelectableOptionsListProps } from './selectable_list/selectable_list';
+import { WuiSelectableSearchProps } from './selectable_search/selectable_search';
 
-type RequiredEuiSelectableOptionsListProps = Omit<
-  EuiSelectableOptionsListProps,
-  keyof typeof EuiSelectableList['defaultProps']
+type RequiredWuiSelectableOptionsListProps = Omit<
+  WuiSelectableOptionsListProps,
+  keyof typeof WuiSelectableList['defaultProps']
 >;
-type OptionalEuiSelectableOptionsListProps = Omit<
-  EuiSelectableOptionsListProps,
-  keyof RequiredEuiSelectableOptionsListProps
+type OptionalWuiSelectableOptionsListProps = Omit<
+  WuiSelectableOptionsListProps,
+  keyof RequiredWuiSelectableOptionsListProps
 >;
-type EuiSelectableOptionsListPropsWithDefaults = RequiredEuiSelectableOptionsListProps &
-  Partial<OptionalEuiSelectableOptionsListProps>;
+type WuiSelectableOptionsListPropsWithDefaults = RequiredWuiSelectableOptionsListProps &
+  Partial<OptionalWuiSelectableOptionsListProps>;
 
 // `searchProps` can only be specified when `searchable` is true
-type EuiSelectableSearchableProps<T> = ExclusiveUnion<
+type WuiSelectableSearchableProps<T> = ExclusiveUnion<
   {
     searchable: false;
   },
@@ -61,40 +74,40 @@ type EuiSelectableSearchableProps<T> = ExclusiveUnion<
      */
     searchable: true;
     /**
-     * Passes props down to the `EuiFieldSearch`
+     * Passes props down to the `WuiFieldSearch`
      */
-    searchProps?: Partial<EuiSelectableSearchProps<T>>;
+    searchProps?: Partial<WuiSelectableSearchProps<T>>;
   }
 >;
 
-export type EuiSelectableProps<T = {}> = CommonProps &
+export type WuiSelectableProps<T = {}> = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'onChange'> &
-  EuiSelectableSearchableProps<T> & {
+  WuiSelectableSearchableProps<T> & {
     /**
      * Function that takes the `list` node and then
      * the `search` node (if `searchable` is applied)
      */
     children?: (
       list: ReactElement<
-        typeof EuiSelectableMessage | typeof EuiSelectableList
+        typeof WuiSelectableMessage | typeof WuiSelectableList
       >,
-      search: ReactElement<EuiSelectableSearch<T>> | undefined
+      search: ReactElement<WuiSelectableSearch<T>> | undefined
     ) => ReactNode;
     /**
-     * Array of EuiSelectableOption objects. See #EuiSelectableOptionProps
+     * Array of WuiSelectableOption objects. See #WuiSelectableOptionProps
      */
-    options: Array<EuiSelectableOption<T>>;
+    options: Array<WuiSelectableOption<T>>;
     /**
      * Passes back the altered `options` array with selected options as
      */
-    onChange?: (options: Array<EuiSelectableOption<T>>) => void;
+    onChange?: (options: Array<WuiSelectableOption<T>>) => void;
     /**
      * Sets the single selection policy of
      * `false`: allows multiple selection
      * `true`: only allows one selection
      * `always`: can and must have only one selection
      */
-    singleSelection?: EuiSelectableOptionsListProps['singleSelection'];
+    singleSelection?: WuiSelectableOptionsListProps['singleSelection'];
     /**
      * Allows marking options as `checked='off'` as well as `'on'`
      */
@@ -110,15 +123,15 @@ export type EuiSelectableProps<T = {}> = CommonProps &
      */
     height?: number | 'full';
     /**
-     * See #EuiSelectableOptionsList
+     * See #WuiSelectableOptionsList
      */
-    listProps?: EuiSelectableOptionsListPropsWithDefaults;
+    listProps?: WuiSelectableOptionsListPropsWithDefaults;
     /**
      * Custom render function for each option.
      * Returns `(option, searchValue)`
      */
     renderOption?: (
-      option: EuiSelectableOption<T>,
+      option: WuiSelectableOption<T>,
       searchValue: string
     ) => ReactNode;
     /**
@@ -138,16 +151,16 @@ export type EuiSelectableProps<T = {}> = CommonProps &
     emptyMessage?: ReactElement | string;
   };
 
-export interface EuiSelectableState<T> {
+export interface WuiSelectableState<T> {
   activeOptionIndex?: number;
   searchValue: string;
-  visibleOptions: Array<EuiSelectableOption<T>>;
+  visibleOptions: Array<WuiSelectableOption<T>>;
   isFocused: boolean;
 }
 
-export class EuiSelectable<T = {}> extends Component<
-  EuiSelectableProps<T>,
-  EuiSelectableState<T>
+export class WuiSelectable<T = {}> extends Component<
+  WuiSelectableProps<T>,
+  WuiSelectableState<T>
 > {
   static defaultProps = {
     options: [],
@@ -155,9 +168,9 @@ export class EuiSelectable<T = {}> extends Component<
     searchable: false,
   };
   private containerRef = createRef<HTMLDivElement>();
-  private optionsListRef = createRef<EuiSelectableList<T>>();
+  private optionsListRef = createRef<WuiSelectableList<T>>();
   rootId = htmlIdGenerator();
-  constructor(props: EuiSelectableProps<T>) {
+  constructor(props: WuiSelectableProps<T>) {
     super(props);
 
     const { options, singleSelection } = props;
@@ -184,8 +197,8 @@ export class EuiSelectable<T = {}> extends Component<
   }
 
   static getDerivedStateFromProps<T>(
-    nextProps: EuiSelectableProps<T>,
-    prevState: EuiSelectableState<T>
+    nextProps: WuiSelectableProps<T>,
+    prevState: WuiSelectableState<T>
   ) {
     const { options } = nextProps;
     const { activeOptionIndex, searchValue } = prevState;
@@ -318,7 +331,7 @@ export class EuiSelectable<T = {}> extends Component<
   };
 
   onSearchChange = (
-    visibleOptions: Array<EuiSelectableOption<T>>,
+    visibleOptions: Array<WuiSelectableOption<T>>,
     searchValue: string
   ) => {
     this.setState(
@@ -345,7 +358,7 @@ export class EuiSelectable<T = {}> extends Component<
     });
   };
 
-  onOptionClick = (options: Array<EuiSelectableOption<T>>) => {
+  onOptionClick = (options: Array<WuiSelectableOption<T>>) => {
     this.setState(state => ({
       visibleOptions: getMatchingOptions<T>(options, state.searchValue),
       activeOptionIndex: this.state.activeOptionIndex,
@@ -399,9 +412,9 @@ export class EuiSelectable<T = {}> extends Component<
     } = listProps || unknownAccessibleName;
 
     const classes = classNames(
-      'euiSelectable',
+      'wuiSelectable',
       {
-        'euiSelectable-fullHeight': height === 'full',
+        'wuiSelectable-fullHeight': height === 'full',
       },
       className
     );
@@ -423,12 +436,12 @@ export class EuiSelectable<T = {}> extends Component<
       if (loadingMessage === undefined || typeof loadingMessage === 'string') {
         messageContent = (
           <>
-            <EuiLoadingSpinner size="m" />
-            <EuiSpacer size="xs" />
+            <WuiLoadingSpinner size="m" />
+            <WuiSpacer size="xs" />
             <p>
               {loadingMessage || (
-                <EuiI18n
-                  token="euiSelectable.loadingOptions"
+                <WuiI18n
+                  token="wuiSelectable.loadingOptions"
                   default="Loading options"
                 />
               )}
@@ -449,8 +462,8 @@ export class EuiSelectable<T = {}> extends Component<
         messageContent = (
           <p>
             {noMatchesMessage || (
-              <EuiI18n
-                token="euiSelectable.noMatchingOptions"
+              <WuiI18n
+                token="wuiSelectable.noMatchingOptions"
                 default="{searchValue} doesn't match any options"
                 values={{ searchValue: <strong>{searchValue}</strong> }}
               />
@@ -468,8 +481,8 @@ export class EuiSelectable<T = {}> extends Component<
         messageContent = (
           <p>
             {emptyMessage || (
-              <EuiI18n
-                token="euiSelectable.noAvailableOptions"
+              <WuiI18n
+                token="wuiSelectable.noAvailableOptions"
                 default="No options available"
               />
             )}
@@ -495,8 +508,8 @@ export class EuiSelectable<T = {}> extends Component<
      */
     const getAccessibleName = (
       props:
-        | Partial<EuiSelectableSearchProps<T>>
-        | EuiSelectableOptionsListPropsWithDefaults
+        | Partial<WuiSelectableSearchProps<T>>
+        | WuiSelectableOptionsListPropsWithDefaults
         | undefined,
       messageContentId?: string
     ) => {
@@ -535,9 +548,9 @@ export class EuiSelectable<T = {}> extends Component<
       Object.keys(searchAccessibleName).length
     );
     const search = searchable ? (
-      <EuiI18n token="euiSelectable.placeholderName" default="Filter options">
+      <WuiI18n token="wuiSelectable.placeholderName" default="Filter options">
         {(placeholderName: string) => (
-          <EuiSelectableSearch<T>
+          <WuiSelectableSearch<T>
             key="listSearch"
             options={options}
             onChange={this.onSearchChange}
@@ -550,7 +563,7 @@ export class EuiSelectable<T = {}> extends Component<
             {...cleanedSearchProps}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     ) : (
       undefined
     );
@@ -560,15 +573,15 @@ export class EuiSelectable<T = {}> extends Component<
       Object.keys(listAccessibleName).length
     );
     const list = messageContent ? (
-      <EuiSelectableMessage
+      <WuiSelectableMessage
         id={messageContentId}
         bordered={listProps && listProps.bordered}>
         {messageContent}
-      </EuiSelectableMessage>
+      </WuiSelectableMessage>
     ) : (
-      <EuiI18n token="euiSelectable.placeholderName" default="Filter options">
+      <WuiI18n token="wuiSelectable.placeholderName" default="Filter options">
         {(placeholderName: string) => (
-          <EuiSelectableList<T>
+          <WuiSelectableList<T>
             key="list"
             options={options}
             visibleOptions={visibleOptions}
@@ -592,7 +605,7 @@ export class EuiSelectable<T = {}> extends Component<
             {...cleanedListProps}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
 
     return (

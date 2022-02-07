@@ -1,9 +1,9 @@
-.euiFieldNumber {
-  @include euiFormControlStyle;
-  @include euiFormControlWithIcon($isIconOptional: true);
-  @include euiFormControlIsLoading;
+.wuiFieldNumber {
+  @include wuiFormControlStyle;
+  @include wuiFormControlWithIcon($isIconOptional: true);
+  @include wuiFormControlIsLoading;
 }
 
-.euiFieldNumber--withIcon.euiFieldNumber--compressed {
-  @include euiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
+.wuiFieldNumber--withIcon.wuiFieldNumber--compressed {
+  @include wuiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
 }

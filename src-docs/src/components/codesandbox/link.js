@@ -1,12 +1,12 @@
 import React from 'react';
 import { getParameters } from 'codesandbox/lib/api/define';
 import {
-  cleanEuiImports,
+  cleanWuiImports,
   hasDisplayToggles,
   listExtraDeps,
 } from '../../services';
 
-import { EuiSpacer } from '../../../../src/components';
+import { WuiSpacer } from '../../../../src/components';
 
 /* HOW THE CODE SANDBOX REGEX WORKS
  * Given the prop `content` we manipulate the provided source string to format
@@ -14,7 +14,7 @@ import { EuiSpacer } from '../../../../src/components';
  * regex and magic happens:
  *
  * 1. A `content` prop is passed containing the src-doc example code we need to manipulate for CS.
- * 2. If no content exists (like the homepage link), we'll make a hello world file bundled with EUI and call it a day.
+ * 2. If no content exists (like the homepage link), we'll make a hello world file bundled with WUI and call it a day.
  * 3. If content exists, we build an `index.js` file with a <Demo> component based on the original content.
  * 4. If content contains `DisplayToggles`, we also generate a `display_toggles.js` file alongside the `index.js` file to import.
  * 5. Through regex we read the dependencies of both `content` and `display_toggles` and pass that to CS.
@@ -31,15 +31,15 @@ export const CodeSandboxLink = ({ children, content }) => {
   if (!content) {
     /* 2 */
     indexContent = `import ReactDOM from 'react-dom';
-import '@elastic/eui/dist/eui_theme_light.css'
-// import '@elastic/eui/dist/eui_theme_dark.css'
+import '@wazuh/wui/dist/wui_theme_light.css'
+// import '@wazuh/wui/dist/wui_theme_dark.css'
 import React from 'react';
 
 import {
-  EuiButton,
-} from '@elastic/eui';
+  WuiButton,
+} from '@wazuh/wui';
 
-const Demo = () => (<EuiButton>Hello world!</EuiButton>);
+const Demo = () => (<WuiButton>Hello world!</WuiButton>);
 
 ReactDOM.render(
   <Demo />,
@@ -48,10 +48,10 @@ ReactDOM.render(
 `;
   } else {
     /** This cleans the Demo JS example for Code Sanbox.
-    - Replaces relative imports with pure @elastic/eui ones
+    - Replaces relative imports with pure @wazuh/wui ones
     - Changes the JS example from a default export to a component const named Demo
     **/
-    const exampleCleaned = cleanEuiImports(content)
+    const exampleCleaned = cleanWuiImports(content)
       .replace('export default', 'const Demo =')
       .replace(
         /(from )'(..\/)+display_toggles(\/?';)/,
@@ -74,8 +74,8 @@ ReactDOM.render(
     // The Code Sanbbox demo needs to import CSS at the top of the document. CS has trouble
     // with our dynamic imports so we need to warn the user for now
     const exampleStart = `import ReactDOM from 'react-dom';
-// import '@elastic/eui/dist/eui_theme_dark.css';
-import '@elastic/eui/dist/eui_theme_light.css'`;
+// import '@wazuh/wui/dist/wui_theme_dark.css';
+import '@wazuh/wui/dist/wui_theme_light.css'`;
 
     // Concat the three pieces of the example into a single string to use for index.js
     const cleanedContent = `${exampleStart}
@@ -93,7 +93,7 @@ ${exampleClose}
 
   /* 4 */
   if (hasDisplayToggles(indexContent)) {
-    const cleanedDisplayToggles = cleanEuiImports(displayTogglesRawCode);
+    const cleanedDisplayToggles = cleanWuiImports(displayTogglesRawCode);
     const displayToggleDeps = listExtraDeps(cleanedDisplayToggles);
 
     /* 5 */
@@ -109,7 +109,7 @@ ${exampleClose}
             'react-dom': 'latest',
             'react-scripts': 'latest',
             moment: 'latest',
-            '@elastic/eui': 'latest',
+            '@wazuh/wui': 'latest',
             '@elastic/datemath': 'latest',
             ...mergedDeps,
           },
@@ -124,7 +124,7 @@ ${exampleClose}
 
   /* 4 */
   if (hasDisplayToggles(indexContent)) {
-    const cleanedDisplayToggles = cleanEuiImports(displayTogglesRawCode);
+    const cleanedDisplayToggles = cleanWuiImports(displayTogglesRawCode);
 
     config.files['display_toggles.js'] = {
       content: cleanedDisplayToggles,
@@ -142,13 +142,13 @@ ${exampleClose}
       action="https://codesandbox.io/api/v1/sandboxes/define"
       method="POST"
       target="_blank"
-      className="eui-textRight">
+      className="wui-textRight">
       {/* 6 */}
       <input type="hidden" name="parameters" value={params} />
 
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
       {childWithSubmit}
-      <EuiSpacer size="s" />
+      <WuiSpacer size="s" />
     </form>
   );
 };

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,18 +41,18 @@ import React, {
 import { Draggable, DraggableProps } from 'react-beautiful-dnd';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiDroppableContext } from './droppable';
+import { WuiDroppableContext } from './droppable';
 
 const spacingToClassNameMap = {
   none: null,
-  s: 'euiDraggable--s',
-  m: 'euiDraggable--m',
-  l: 'euiDraggable--l',
+  s: 'wuiDraggable--s',
+  m: 'wuiDraggable--m',
+  l: 'wuiDraggable--l',
 };
 
-export type EuiDraggableSpacing = keyof typeof spacingToClassNameMap;
+export type WuiDraggableSpacing = keyof typeof spacingToClassNameMap;
 
-export interface EuiDraggableProps
+export interface WuiDraggableProps
   extends CommonProps,
     Omit<DraggableProps, 'children'> {
   /**
@@ -58,11 +71,11 @@ export interface EuiDraggableProps
   /**
    * Adds padding to the draggable item
    */
-  spacing?: EuiDraggableSpacing;
+  spacing?: WuiDraggableSpacing;
   style?: CSSProperties;
 }
 
-export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
+export const WuiDraggable: FunctionComponent<WuiDraggableProps> = ({
   customDragHandle = false,
   draggableId,
   isDragDisabled = false,
@@ -75,7 +88,7 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
   'data-test-subj': dataTestSubj = 'draggable',
   ...rest
 }) => {
-  const { cloneItems } = useContext(EuiDroppableContext);
+  const { cloneItems } = useContext(WuiDroppableContext);
 
   return (
     <Draggable
@@ -85,21 +98,21 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
       {...rest}>
       {(provided, snapshot, rubric) => {
         const classes = classNames(
-          'euiDraggable',
+          'wuiDraggable',
           {
-            'euiDraggable--hasClone': cloneItems,
-            'euiDraggable--hasCustomDragHandle': customDragHandle,
-            'euiDraggable--isDragging': snapshot.isDragging,
-            'euiDraggable--withoutDropAnimation': isRemovable,
+            'wuiDraggable--hasClone': cloneItems,
+            'wuiDraggable--hasCustomDragHandle': customDragHandle,
+            'wuiDraggable--isDragging': snapshot.isDragging,
+            'wuiDraggable--withoutDropAnimation': isRemovable,
           },
           spacingToClassNameMap[spacing],
           className
         );
-        const childClasses = classNames('euiDraggable__item', {
-          'euiDraggable__item--hasCustomDragHandle': customDragHandle,
-          'euiDraggable__item--isDisabled': isDragDisabled,
-          'euiDraggable__item--isDragging': snapshot.isDragging,
-          'euiDraggable__item--isDropAnimating': snapshot.isDropAnimating,
+        const childClasses = classNames('wuiDraggable__item', {
+          'wuiDraggable__item--hasCustomDragHandle': customDragHandle,
+          'wuiDraggable__item--isDisabled': isDragDisabled,
+          'wuiDraggable__item--isDragging': snapshot.isDragging,
+          'wuiDraggable__item--isDropAnimating': snapshot.isDropAnimating,
         });
         const DraggableElement =
           typeof children === 'function'
@@ -122,7 +135,7 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
               })}
             </div>
             {cloneItems && snapshot.isDragging && (
-              <div className={classNames(classes, 'euiDraggable--clone')}>
+              <div className={classNames(classes, 'wuiDraggable--clone')}>
                 {DraggableElement}
               </div>
             )}

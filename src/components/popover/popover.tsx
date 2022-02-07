@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,7 +42,7 @@ import classNames from 'classnames';
 import tabbable from 'tabbable';
 
 import { CommonProps, NoArgCallback } from '../common';
-import { FocusTarget, EuiFocusTrap } from '../focus_trap';
+import { FocusTarget, WuiFocusTrap } from '../focus_trap';
 import { ReactFocusOnProps } from 'react-focus-on/dist/es5/types';
 
 import {
@@ -40,23 +53,23 @@ import {
   htmlIdGenerator,
 } from '../../services';
 
-import { EuiOutsideClickDetector } from '../outside_click_detector';
+import { WuiOutsideClickDetector } from '../outside_click_detector';
 
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiScreenReaderOnly } from '../accessibility';
 
-import { EuiPanel, PanelPaddingSize } from '../panel';
+import { WuiPanel, PanelPaddingSize } from '../panel';
 
-import { EuiPortal } from '../portal';
+import { WuiPortal } from '../portal';
 
-import { EuiMutationObserver } from '../observer/mutation_observer';
+import { WuiMutationObserver } from '../observer/mutation_observer';
 
 import {
   findPopoverPosition,
   getElementZIndex,
-  EuiPopoverPosition,
+  WuiPopoverPosition,
 } from '../../services/popover';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
 export type PopoverAnchorPosition =
   | 'upCenter'
@@ -74,14 +87,14 @@ export type PopoverAnchorPosition =
 
 const generateId = htmlIdGenerator();
 
-export interface EuiPopoverProps {
+export interface WuiPopoverProps {
   anchorClassName?: string;
 
   anchorPosition?: PopoverAnchorPosition;
 
   /** Style and position alteration for arrow-less, left-aligned
    * attachment. Intended for use with inputs as anchors, à la
-   * EuiColorPicker */
+   * WuiColorPicker */
   attachToAnchor?: boolean;
 
   button: NonNullable<ReactNode>;
@@ -103,7 +116,7 @@ export interface EuiPopoverProps {
    * returns a DOM node. */
   initialFocus?: FocusTarget;
 
-  /** Passed directly to EuiPortal for DOM positioning. Both properties are
+  /** Passed directly to WuiPortal for DOM positioning. Both properties are
    * required if prop is specified **/
   insert?: {
     sibling: HTMLElement;
@@ -121,7 +134,7 @@ export interface EuiPopoverProps {
   panelRef?: RefCallback<HTMLElement | null>;
 
   /**
-   * Optional, standard DOM `style` attribute. Passed to the EuiPanel.
+   * Optional, standard DOM `style` attribute. Passed to the WuiPanel.
    */
   panelStyle?: CSSProperties;
 
@@ -154,7 +167,7 @@ export interface EuiPopoverProps {
   buffer?: number;
 
   /**
-   * Element to pass as the child element of the arrow. Use case is typically limited to an accompanying `EuiBeacon`
+   * Element to pass as the child element of the arrow. Use case is typically limited to an accompanying `WuiBeacon`
    */
   arrowChildren?: ReactNode;
 }
@@ -162,7 +175,7 @@ export interface EuiPopoverProps {
 type AnchorPosition = 'up' | 'right' | 'down' | 'left';
 
 const anchorPositionToPopoverPositionMap: {
-  [position in AnchorPosition]: EuiPopoverPosition;
+  [position in AnchorPosition]: WuiPopoverPosition;
 } = {
   up: 'top',
   right: 'right',
@@ -204,25 +217,25 @@ export function getPopoverAlignFromAnchorPosition(
 }
 
 const anchorPositionToClassNameMap = {
-  upCenter: 'euiPopover--anchorUpCenter',
-  upLeft: 'euiPopover--anchorUpLeft',
-  upRight: 'euiPopover--anchorUpRight',
-  downCenter: 'euiPopover--anchorDownCenter',
-  downLeft: 'euiPopover--anchorDownLeft',
-  downRight: 'euiPopover--anchorDownRight',
-  leftCenter: 'euiPopover--anchorLeftCenter',
-  leftUp: 'euiPopover--anchorLeftUp',
-  leftDown: 'euiPopover--anchorLeftDown',
-  rightCenter: 'euiPopover--anchorRightCenter',
-  rightUp: 'euiPopover--anchorRightUp',
-  rightDown: 'euiPopover--anchorRightDown',
+  upCenter: 'wuiPopover--anchorUpCenter',
+  upLeft: 'wuiPopover--anchorUpLeft',
+  upRight: 'wuiPopover--anchorUpRight',
+  downCenter: 'wuiPopover--anchorDownCenter',
+  downLeft: 'wuiPopover--anchorDownLeft',
+  downRight: 'wuiPopover--anchorDownRight',
+  leftCenter: 'wuiPopover--anchorLeftCenter',
+  leftUp: 'wuiPopover--anchorLeftUp',
+  leftDown: 'wuiPopover--anchorLeftDown',
+  rightCenter: 'wuiPopover--anchorRightCenter',
+  rightUp: 'wuiPopover--anchorRightUp',
+  rightDown: 'wuiPopover--anchorRightDown',
 };
 
 export const ANCHOR_POSITIONS = Object.keys(anchorPositionToClassNameMap);
 
 const displayToClassNameMap = {
   inlineBlock: undefined,
-  block: 'euiPopover--displayBlock',
+  block: 'wuiPopover--displayBlock',
 };
 
 export const DISPLAY = Object.keys(displayToClassNameMap);
@@ -250,7 +263,7 @@ function getElementFromInitialFocus(
 
 export type Props = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiPopoverProps;
+  WuiPopoverProps;
 
 interface State {
   prevProps: {
@@ -276,7 +289,7 @@ type PropsWithDefaults = Props & {
   panelPaddingSize: PanelPaddingSize;
 };
 
-export class EuiPopover extends Component<Props, State> {
+export class WuiPopover extends Component<Props, State> {
   static defaultProps: Partial<PropsWithDefaults> = {
     isOpen: false,
     ownFocus: false,
@@ -628,25 +641,25 @@ export class EuiPopover extends Component<Props, State> {
     const descriptionId = generateId();
 
     const classes = classNames(
-      'euiPopover',
+      'wuiPopover',
       anchorPosition ? anchorPositionToClassNameMap[anchorPosition] : null,
       display ? displayToClassNameMap[display] : null,
       {
-        'euiPopover-isOpen': this.state.isOpening,
-        'euiPopover--withTitle': withTitle,
+        'wuiPopover-isOpen': this.state.isOpening,
+        'wuiPopover--withTitle': withTitle,
       },
       className
     );
 
-    const anchorClasses = classNames('euiPopover__anchor', anchorClassName);
+    const anchorClasses = classNames('wuiPopover__anchor', anchorClassName);
 
     const panelClasses = classNames(
-      'euiPopover__panel',
-      `euiPopover__panel--${this.state.arrowPosition}`,
-      { 'euiPopover__panel-isOpen': this.state.isOpening },
-      { 'euiPopover__panel-withTitle': withTitle },
-      { 'euiPopover__panel-noArrow': !hasArrow || attachToAnchor },
-      { 'euiPopover__panel-isAttached': attachToAnchor },
+      'wuiPopover__panel',
+      `wuiPopover__panel--${this.state.arrowPosition}`,
+      { 'wuiPopover__panel-isOpen': this.state.isOpening },
+      { 'wuiPopover__panel-withTitle': withTitle },
+      { 'wuiPopover__panel-noArrow': !hasArrow || attachToAnchor },
+      { 'wuiPopover__panel-isAttached': attachToAnchor },
       panelClassName
     );
 
@@ -671,31 +684,31 @@ export class EuiPopover extends Component<Props, State> {
       if (ownFocus) {
         ariaDescribedby = descriptionId;
         focusTrapScreenReaderText = (
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <p id={descriptionId}>
-              <EuiI18n
-                token="euiPopover.screenReaderAnnouncement"
+              <WuiI18n
+                token="wuiPopover.screenReaderAnnouncement"
                 default="You are in a dialog. To close this dialog, hit escape."
               />
             </p>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
         );
       }
 
       const arrowClassNames = classNames(
-        'euiPopover__panelArrow',
-        `euiPopover__panelArrow--${this.state.arrowPosition}`
+        'wuiPopover__panelArrow',
+        `wuiPopover__panelArrow--${this.state.arrowPosition}`
       );
 
       panel = (
-        <EuiPortal insert={insert}>
-          <EuiFocusTrap
+        <WuiPortal insert={insert}>
+          <WuiFocusTrap
             returnFocus={!this.state.isOpening} // Ignore temporary state of indecisive focus
             clickOutsideDisables={true}
             initialFocus={initialFocus}
             onDeactivation={onTrapDeactivation}
             disabled={!ownFocus}>
-            <EuiPanel
+            <WuiPanel
               panelRef={this.panelRef}
               className={panelClasses}
               paddingSize={panelPaddingSize}
@@ -709,7 +722,7 @@ export class EuiPopover extends Component<Props, State> {
                 {arrowChildren}
               </div>
               {focusTrapScreenReaderText}
-              <EuiMutationObserver
+              <WuiMutationObserver
                 observerOptions={{
                   attributes: true, // element attribute changes
                   childList: true, // added/removed elements
@@ -718,15 +731,15 @@ export class EuiPopover extends Component<Props, State> {
                 }}
                 onMutation={this.onMutation}>
                 {mutationRef => <div ref={mutationRef}>{children}</div>}
-              </EuiMutationObserver>
-            </EuiPanel>
-          </EuiFocusTrap>
-        </EuiPortal>
+              </WuiMutationObserver>
+            </WuiPanel>
+          </WuiFocusTrap>
+        </WuiPortal>
       );
     }
 
     return (
-      <EuiOutsideClickDetector
+      <WuiOutsideClickDetector
         isDisabled={!isOpen}
         onOutsideClick={closePopover}>
         <div
@@ -739,7 +752,7 @@ export class EuiPopover extends Component<Props, State> {
           </div>
           {panel}
         </div>
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
     );
   }
 }

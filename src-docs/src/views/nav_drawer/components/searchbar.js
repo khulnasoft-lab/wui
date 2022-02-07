@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSuggest,
-  EuiSuperDatePicker,
-  EuiFormRow,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSuggest,
+  WuiSuperDatePicker,
+  WuiFormRow,
 } from '../../../../../src/components';
 
 import HashtagPopover from '../../suggest/hashtag_popover';
@@ -15,22 +15,22 @@ const shortDescription = 'This is the description';
 
 const sampleItems = [
   {
-    type: { iconType: 'kqlField', color: 'tint4' },
+    type: { iconType: 'qryField', color: 'tint4' },
     label: 'Field sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlValue', color: 'tint0' },
+    type: { iconType: 'qryValue', color: 'tint0' },
     label: 'Value sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlSelector', color: 'tint2' },
+    type: { iconType: 'qrySelector', color: 'tint2' },
     label: 'Conjunction sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlOperand', color: 'tint1' },
+    type: { iconType: 'qryOperand', color: 'tint1' },
     label: 'Operator sample',
     description: shortDescription,
   },
@@ -60,12 +60,12 @@ export default () => {
     alert('Time changed');
   };
 
-  const append = <EuiButtonEmpty size={'s'}>KQL</EuiButtonEmpty>;
+  const append = <WuiButtonEmpty size={'s'}>QRY</WuiButtonEmpty>;
 
   return (
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem>
-        <EuiSuggest
+    <WuiFlexGroup gutterSize="s">
+      <WuiFlexItem>
+        <WuiSuggest
           status={status}
           prepend={<HashtagPopover value={value} />}
           append={append}
@@ -74,15 +74,15 @@ export default () => {
           onInputChange={getInputValue}
           compressed={true}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} className="savedQueriesInput__datepicker">
-        <EuiFormRow display="rowCompressed">
-          <EuiSuperDatePicker
+      </WuiFlexItem>
+      <WuiFlexItem grow={false} className="savedQueriesInput__datepicker">
+        <WuiFormRow display="rowCompressed">
+          <WuiSuperDatePicker
             showUpdateButton={false}
             onTimeChange={onTimeChange}
           />
-        </EuiFormRow>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiFormRow>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

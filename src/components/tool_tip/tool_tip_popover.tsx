@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,7 +42,7 @@ type Props = CommonProps &
     popoverRef?: (ref: HTMLDivElement) => void;
   };
 
-export class EuiToolTipPopover extends Component<Props> {
+export class WuiToolTipPopover extends Component<Props> {
   private popover: HTMLDivElement | undefined;
 
   updateDimensions = () => {
@@ -49,12 +62,12 @@ export class EuiToolTipPopover extends Component<Props> {
   };
 
   componentDidMount() {
-    document.body.classList.add('euiBody-hasPortalContent');
+    document.body.classList.add('wuiBody-hasPortalContent');
     window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('euiBody-hasPortalContent');
+    document.body.classList.remove('wuiBody-hasPortalContent');
     window.removeEventListener('resize', this.updateDimensions);
   }
 
@@ -68,11 +81,11 @@ export class EuiToolTipPopover extends Component<Props> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiToolTipPopover', className);
+    const classes = classNames('wuiToolTipPopover', className);
 
     let optionalTitle;
     if (title) {
-      optionalTitle = <div className="euiToolTip__title">{title}</div>;
+      optionalTitle = <div className="wuiToolTip__title">{title}</div>;
     }
 
     return (

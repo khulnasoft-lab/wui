@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,7 +43,7 @@ import { keys } from '../../services';
 import {
   CANCEL_BUTTON,
   CONFIRM_BUTTON,
-  EuiConfirmModal,
+  WuiConfirmModal,
 } from './confirm_modal';
 
 let onConfirm: jest.Mock;
@@ -41,10 +54,10 @@ beforeEach(() => {
   onCancel = jest.fn();
 });
 
-describe('EuiConfirmModal', () => {
-  test('renders EuiConfirmModal', () => {
+describe('WuiConfirmModal', () => {
+  test('renders WuiConfirmModal', () => {
     const component = mount(
-      <EuiConfirmModal
+      <WuiConfirmModal
         title="A confirmation modal"
         onCancel={() => {}}
         onConfirm={onConfirm}
@@ -52,16 +65,16 @@ describe('EuiConfirmModal', () => {
         confirmButtonText="Confirm Button Text"
         {...requiredProps}>
         This is a confirmation modal example
-      </EuiConfirmModal>
+      </WuiConfirmModal>
     );
     expect(
       takeMountedSnapshot(component, { hasArrayOutput: true })
     ).toMatchSnapshot();
   });
 
-  test('renders EuiConfirmModal without EuiModalBody, if empty', () => {
+  test('renders WuiConfirmModal without WuiModalBody, if empty', () => {
     const component = mount(
-      <EuiConfirmModal
+      <WuiConfirmModal
         title="A confirmation modal"
         onCancel={() => {}}
         onConfirm={onConfirm}
@@ -77,7 +90,7 @@ describe('EuiConfirmModal', () => {
 
   test('onConfirm', () => {
     const component = mount(
-      <EuiConfirmModal
+      <WuiConfirmModal
         onCancel={onCancel}
         onConfirm={onConfirm}
         cancelButtonText="Cancel Button Text"
@@ -92,7 +105,7 @@ describe('EuiConfirmModal', () => {
 
   test('onConfirm can be disabled', () => {
     const component = mount(
-      <EuiConfirmModal
+      <WuiConfirmModal
         onCancel={onCancel}
         onConfirm={onConfirm}
         cancelButtonText="Cancel Button Text"
@@ -109,7 +122,7 @@ describe('EuiConfirmModal', () => {
   describe('onCancel', () => {
     test('triggerd by click', () => {
       const component = mount(
-        <EuiConfirmModal
+        <WuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -124,7 +137,7 @@ describe('EuiConfirmModal', () => {
 
     test('triggered by esc key', () => {
       const component = mount(
-        <EuiConfirmModal
+        <WuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -144,7 +157,7 @@ describe('EuiConfirmModal', () => {
   describe('defaultFocusedButton', () => {
     test('is cancel', done => {
       const component = mount(
-        <EuiConfirmModal
+        <WuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -166,7 +179,7 @@ describe('EuiConfirmModal', () => {
 
     test('is confirm', done => {
       const component = mount(
-        <EuiConfirmModal
+        <WuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"

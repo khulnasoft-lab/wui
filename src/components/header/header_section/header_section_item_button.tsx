@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,29 +35,29 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 import {
-  EuiNotificationBadgeProps,
-  EuiNotificationBadge,
+  WuiNotificationBadgeProps,
+  WuiNotificationBadge,
 } from '../../badge/notification_badge/badge_notification';
-import { EuiIcon } from '../../icon';
+import { WuiIcon } from '../../icon';
 
-export type EuiHeaderSectionItemButtonProps = CommonProps &
+export type WuiHeaderSectionItemButtonProps = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     /**
-     * Inserts the node into a EuiBadgeNotification and places it appropriately against the button.
+     * Inserts the node into a WuiBadgeNotification and places it appropriately against the button.
      * Or pass `true` to render a simple dot
      */
-    notification?: EuiNotificationBadgeProps['children'] | boolean;
+    notification?: WuiNotificationBadgeProps['children'] | boolean;
     /**
      * Changes the color of the notification background
      */
-    notificationColor?: EuiNotificationBadgeProps['color'];
+    notificationColor?: WuiNotificationBadgeProps['color'];
   };
 
-export type EuiHeaderSectionItemButtonRef = HTMLButtonElement;
+export type WuiHeaderSectionItemButtonRef = HTMLButtonElement;
 
-export const EuiHeaderSectionItemButton = React.forwardRef<
-  EuiHeaderSectionItemButtonRef,
-  PropsWithChildren<EuiHeaderSectionItemButtonProps>
+export const WuiHeaderSectionItemButton = React.forwardRef<
+  WuiHeaderSectionItemButtonRef,
+  PropsWithChildren<WuiHeaderSectionItemButtonProps>
 >(
   (
     {
@@ -57,14 +70,14 @@ export const EuiHeaderSectionItemButton = React.forwardRef<
     },
     ref
   ) => {
-    const classes = classNames('euiHeaderSectionItem__button', className);
+    const classes = classNames('wuiHeaderSectionItem__button', className);
 
     let notificationBadge;
     if (notification) {
       if (notification === true) {
         notificationBadge = (
-          <EuiIcon
-            className="euiHeaderSectionItemButton__notification euiHeaderSectionItemButton__notification--dot"
+          <WuiIcon
+            className="wuiHeaderSectionItemButton__notification wuiHeaderSectionItemButton__notification--dot"
             color={notificationColor}
             type="dot"
             size="l"
@@ -72,11 +85,11 @@ export const EuiHeaderSectionItemButton = React.forwardRef<
         );
       } else {
         notificationBadge = (
-          <EuiNotificationBadge
-            className="euiHeaderSectionItemButton__notification euiHeaderSectionItemButton__notification--badge"
+          <WuiNotificationBadge
+            className="wuiHeaderSectionItemButton__notification wuiHeaderSectionItemButton__notification--badge"
             color={notificationColor}>
             {notification}
-          </EuiNotificationBadge>
+          </WuiNotificationBadge>
         );
       }
     }
@@ -95,4 +108,4 @@ export const EuiHeaderSectionItemButton = React.forwardRef<
   }
 );
 
-EuiHeaderSectionItemButton.displayName = 'EuiHeaderSectionItemButton';
+WuiHeaderSectionItemButton.displayName = 'WuiHeaderSectionItemButton';

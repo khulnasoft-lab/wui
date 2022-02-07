@@ -2,25 +2,25 @@
 
 exports[`CollapsedItemActions render 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftCenter"
+  class="wuiPopover wuiPopover--anchorLeftCenter"
   id="id-actions"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <span
-      class="euiToolTipAnchor"
+      class="wuiToolTipAnchor"
     >
       <button
         aria-label="All actions"
-        class="euiButtonIcon euiButtonIcon--text"
-        data-test-subj="euiCollapsedItemActionsButton"
+        class="wuiButtonIcon wuiButtonIcon--text"
+        data-test-subj="wuiCollapsedItemActionsButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="boxesHorizontal"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="boxesHorizontal"
         />
       </button>
     </span>
@@ -29,15 +29,15 @@ exports[`CollapsedItemActions render 1`] = `
 `;
 
 exports[`CollapsedItemActions render with href and _target provided 1`] = `
-<EuiPopover
+<WuiPopover
   anchorPosition="leftCenter"
   button={
-    <EuiI18n
+    <WuiI18n
       default="All actions"
-      token="euiCollapsedItemActions.allActions"
+      token="wuiCollapsedItemActions.allActions"
     >
       [Function]
-    </EuiI18n>
+    </WuiI18n>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -48,31 +48,31 @@ exports[`CollapsedItemActions render with href and _target provided 1`] = `
   panelPaddingSize="none"
   popoverRef={[Function]}
 >
-  <EuiContextMenuPanel
+  <WuiContextMenuPanel
     hasFocus={true}
     items={
       Array [
-        <EuiContextMenuItem
+        <WuiContextMenuItem
           disabled={false}
           onClick={[Function]}
         >
           default1
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem
+        </WuiContextMenuItem>,
+        <WuiContextMenuItem
           onClick={[Function]}
         >
           <div />
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem
+        </WuiContextMenuItem>,
+        <WuiContextMenuItem
           disabled={false}
-          href="https://www.elastic.co/"
+          href="https://www.wazuh.com/"
           onClick={[Function]}
           target="_blank"
         >
           default2
-        </EuiContextMenuItem>,
+        </WuiContextMenuItem>,
       ]
     }
   />
-</EuiPopover>
+</WuiPopover>
 `;

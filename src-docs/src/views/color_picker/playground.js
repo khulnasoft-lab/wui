@@ -4,13 +4,13 @@ import {
   simulateFunction,
   createOptionalEnum,
 } from '../../services/playground';
-import { EuiColorPicker } from '../../../../src/components/';
+import { WuiColorPicker } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 const colorPickerConfig = () => {
-  const docgenInfo = Array.isArray(EuiColorPicker.__docgenInfo)
-    ? EuiColorPicker.__docgenInfo[0]
-    : EuiColorPicker.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiColorPicker.__docgenInfo)
+    ? WuiColorPicker.__docgenInfo[0]
+    : WuiColorPicker.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -50,14 +50,14 @@ const colorPickerConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiColorPicker',
+      componentName: 'WuiColorPicker',
       props: propsToUse,
       scope: {
-        EuiColorPicker,
+        WuiColorPicker,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiColorPicker'],
+        '@wazuh/wui': {
+          named: ['WuiColorPicker'],
         },
       },
       customProps: {

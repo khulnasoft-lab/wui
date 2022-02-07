@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPageHeader is rendered 1`] = `
+exports[`WuiPageHeader is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPageHeader euiPageHeader--responsive testClass1 testClass2"
+  class="wuiPageHeader wuiPageHeader--responsive testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;

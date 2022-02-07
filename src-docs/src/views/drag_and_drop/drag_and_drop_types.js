@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiDraggable,
-  EuiDroppable,
-  EuiPanel,
-  euiDragDropMove,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiDraggable,
+  WuiDroppable,
+  WuiPanel,
+  wuiDragDropMove,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -38,7 +38,7 @@ export default () => {
     };
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = wuiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -48,7 +48,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropMove(
+        const result = wuiDragDropMove(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -61,66 +61,66 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiDroppable
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiFlexGroup>
+        <WuiFlexItem>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_1"
             type="TYPE_ONE"
             spacing="m"
             withPanel
             grow={false}>
             {list1.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <WuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <WuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </WuiPanel>
                 )}
-              </EuiDraggable>
+              </WuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </WuiDroppable>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_2"
             type="TYPE_ONE"
             spacing="m"
             withPanel
             grow={false}>
             {list2.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <WuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <WuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </WuiPanel>
                 )}
-              </EuiDraggable>
+              </WuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </WuiDroppable>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_3"
             type="TYPE_TWO"
             spacing="m"
             withPanel
             grow={true}>
             {list3.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <WuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <WuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </WuiPanel>
                 )}
-              </EuiDraggable>
+              </WuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiDragDropContext>
+          </WuiDroppable>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiDragDropContext>
   );
 };

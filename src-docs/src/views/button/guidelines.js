@@ -3,22 +3,22 @@ import React from 'react';
 import { GuideRule, GuideRuleTitle, GuideRuleExample } from '../../components';
 
 import {
-  EuiText,
-  EuiButton,
-  EuiButtonIcon,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonEmpty,
-  EuiIcon,
-  EuiImage,
-  EuiTable,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableBody,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTitle,
+  WuiText,
+  WuiButton,
+  WuiButtonIcon,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiButtonEmpty,
+  WuiIcon,
+  WuiImage,
+  WuiTable,
+  WuiTableHeader,
+  WuiTableHeaderCell,
+  WuiTableBody,
+  WuiTableRow,
+  WuiTableRowCell,
+  WuiTitle,
 } from '../../../../src/components';
 
 import ContextMenu from '../context_menu/context_menu';
@@ -27,78 +27,78 @@ import imageButtonPlacement from '../../images/button_placement.png';
 
 export default () => (
   <>
-    <EuiText className="guideSection__text" grow={false}>
+    <WuiText className="guideSection__text" grow={false}>
       <p>
         This page documents patterns for button design, including types,
         placement, color, and size.
       </p>
-    </EuiText>
-    <EuiSpacer size="xl" />
+    </WuiText>
+    <WuiSpacer size="xl" />
 
-    <EuiTitle>
+    <WuiTitle>
       <h1>Button types</h1>
-    </EuiTitle>
+    </WuiTitle>
 
-    <EuiSpacer size="xl" />
+    <WuiSpacer size="xl" />
 
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-        <EuiButton fill>Filled</EuiButton>
-      </EuiFlexItem>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false} style={{ minWidth: 120 }}>
+        <WuiButton fill>Filled</WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiText className="guideSection__text">
           <h3>Filled buttons are for the primary action</h3>
           <p>
             This button has the heaviest visual weight to draw users&apos;
             attention.
           </p>
-        </EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-        <EuiButton>Standard</EuiButton>
-      </EuiFlexItem>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false} style={{ minWidth: 120 }}>
+        <WuiButton>Standard</WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiText className="guideSection__text">
           <h3>Standard buttons are for secondary actions</h3>
           <p>
             Such actions include Add and Apply. This button type works well for
             multiple actions of equal weight.
           </p>
-        </EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-        <EuiButtonEmpty>Empty</EuiButtonEmpty>
-      </EuiFlexItem>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false} style={{ minWidth: 120 }}>
+        <WuiButtonEmpty>Empty</WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiText className="guideSection__text">
           <h3>Empty buttons are for complementary, UI-specific actions</h3>
           <p>
             Close, cancel, filter, refresh, and other actions that reconfigure
             the UI are appropriate for empty buttons.
           </p>
-        </EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false} style={{ minWidth: 120 }}>
         <div style={{ textAlign: 'center' }}>
-          <EuiButtonIcon
+          <WuiButtonIcon
             size="s"
             color="danger"
             onClick={() => window.alert('Button clicked')}
@@ -106,24 +106,24 @@ export default () => (
             aria-label="Next"
           />
         </div>
-      </EuiFlexItem>
+      </WuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiText className="guideSection__text">
+      <WuiFlexItem>
+        <WuiText className="guideSection__text">
           <h3>Icon buttons are for saving space</h3>
           <p>
             The icon must be immediately understood, for example, a trash can
             for delete. Use these buttons sparingly, and never for the primary
             action.
           </p>
-        </EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiText>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
     <GuideRuleTitle>Placement and order</GuideRuleTitle>
-    <EuiText className="guideSection__text">
+    <WuiText className="guideSection__text">
       <p>Button placement and order should follow the user path.</p>
-    </EuiText>
+    </WuiText>
 
     <GuideRule
       heading="Put buttons on the right in containers with a restricted width"
@@ -137,7 +137,7 @@ export default () => (
           secondary action on its left."
         frame="frame">
         <div style={{ textAlign: 'center' }}>
-          <EuiImage
+          <WuiImage
             alt="button placement in an input modal"
             url={imageButtonPlacement}
           />
@@ -150,7 +150,7 @@ export default () => (
         text="Do. Popovers should always use buttons positioned to the right."
         frame="frame">
         <div style={{ textAlign: 'center' }}>
-          <EuiImage
+          <WuiImage
             alt="button placement in confirmation modal"
             url="https://i.imgur.com/Jp3ln5t.png"
           />
@@ -169,7 +169,7 @@ export default () => (
         type="do"
         text="Do. Because the user's eye never leaves the left side,
           the buttons are on the bottom left. The primary action is in the leftmost position.">
-        <EuiImage
+        <WuiImage
           alt="button placement in form"
           url="https://i.imgur.com/2nvcgEU.png"
         />
@@ -180,7 +180,7 @@ export default () => (
         frame="frame"
         type="dont"
         text="Don't put the actions far away from the content.">
-        <EuiImage
+        <WuiImage
           alt="form buttons go on the left, not right"
           url="https://i.imgur.com/Y1rOaoN.png"
         />
@@ -198,7 +198,7 @@ export default () => (
         text="Do. If the action is against the page title, place the primary button in the upper right.
           A common pattern is a create button that adds an item to a list. Creation starts
           at the top and ends at the bottom. Think of it as adding to a pile.">
-        <EuiImage
+        <WuiImage
           alt="button placement in upper right"
           url="https://i.imgur.com/fJhWvK9.png"
         />
@@ -212,14 +212,14 @@ export default () => (
           Empty states are unique because they focus first on information and then try to sell
           the user on creation. In these special cases, where the container is constrained
           and the content is fairly short, the title and the button should be center aligned.">
-        <EuiImage
+        <WuiImage
           alt="center-aligned button"
           url="https://i.imgur.com/H2yzAEB.png"
         />
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
 
     <GuideRuleTitle>One primary button per layout</GuideRuleTitle>
 
@@ -232,7 +232,7 @@ export default () => (
         type="do"
         text="Do. Use only one filled button per layout. The primary action is
           the one you want the user to eventually complete.">
-        <EuiImage
+        <WuiImage
           alt="one primary button per page"
           url="https://i.imgur.com/QdTkIt6.png"
         />
@@ -242,11 +242,11 @@ export default () => (
         frame="frame"
         type="dont"
         text="Don't. Using too many primary buttons confuses the user.">
-        <EuiImage
+        <WuiImage
           alt="page without primary button"
           url="https://i.imgur.com/rmVFU1C.png"
         />
-        <EuiSpacer />
+        <WuiSpacer />
       </GuideRuleExample>
     </GuideRule>
 
@@ -263,9 +263,9 @@ export default () => (
         panel={false}
         frame="frame">
         <div>
-          <EuiButtonIcon size="s" iconType="pencil" aria-label="Edit" />
+          <WuiButtonIcon size="s" iconType="pencil" aria-label="Edit" />
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <EuiButtonIcon size="s" iconType="expand" aria-label="Expand" />
+          <WuiButtonIcon size="s" iconType="expand" aria-label="Expand" />
         </div>
       </GuideRuleExample>
       <GuideRuleExample
@@ -274,13 +274,13 @@ export default () => (
         panel={false}
         frame="frame">
         <div>
-          <EuiButton>
-            <EuiIcon type="pencil" aria-label="Edit" />
-          </EuiButton>
+          <WuiButton>
+            <WuiIcon type="pencil" aria-label="Edit" />
+          </WuiButton>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <EuiButton>
-            <EuiIcon type="expand" aria-label="Expand" />
-          </EuiButton>
+          <WuiButton>
+            <WuiIcon type="expand" aria-label="Expand" />
+          </WuiButton>
         </div>
       </GuideRuleExample>
     </GuideRule>
@@ -296,12 +296,12 @@ export default () => (
           final action.'
         panel={false}
         frame="frame">
-        <EuiButton iconType="arrowRight" iconSide="right" fill>
+        <WuiButton iconType="arrowRight" iconSide="right" fill>
           Continue
-        </EuiButton>
-        <EuiButton iconType="check" color="secondary" fill>
+        </WuiButton>
+        <WuiButton iconType="check" color="secondary" fill>
           Save and complete
-        </EuiButton>
+        </WuiButton>
       </GuideRuleExample>
       <GuideRuleExample
         panel={false}
@@ -310,13 +310,13 @@ export default () => (
         text="Don't. Icons often distract from the text.
           This is especially true when the icon is positioned on the right,
           with a hard to grok icon.">
-        <EuiButton iconType="indexOpen" iconSide="right" fill>
+        <WuiButton iconType="indexOpen" iconSide="right" fill>
           Create index pattern
-        </EuiButton>
+        </WuiButton>
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
 
     <GuideRuleTitle>
       Minimize the mixing of color, size, and type
@@ -332,14 +332,14 @@ export default () => (
         panel={false}
         frame="frame">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton fill>Save</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty>Cancel</EuiButtonEmpty>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+          <WuiFlexGroup>
+            <WuiFlexItem grow={false}>
+              <WuiButton fill>Save</WuiButton>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButtonEmpty>Cancel</WuiButtonEmpty>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         </div>
       </GuideRuleExample>
       <GuideRuleExample
@@ -348,19 +348,19 @@ export default () => (
         panel={false}
         frame="frame">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton fill>Save</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton>Cancel</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton color="danger" fill size="s">
+          <WuiFlexGroup>
+            <WuiFlexItem grow={false}>
+              <WuiButton fill>Save</WuiButton>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButton>Cancel</WuiButton>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButton color="danger" fill size="s">
                 Delete
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+              </WuiButton>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         </div>
       </GuideRuleExample>
     </GuideRule>
@@ -384,24 +384,24 @@ export default () => (
         panel={false}
         frame="frame">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton>Show fullscreen</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton>Display options</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton>Edit / add panels</EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+          <WuiFlexGroup>
+            <WuiFlexItem grow={false}>
+              <WuiButton>Show fullscreen</WuiButton>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButton>Display options</WuiButton>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButton>Edit / add panels</WuiButton>
+            </WuiFlexItem>
+          </WuiFlexGroup>
         </div>
       </GuideRuleExample>
     </GuideRule>
 
     <GuideRuleTitle>Labels that say what the button does</GuideRuleTitle>
 
-    <EuiText grow={false} className="guideSection__text">
+    <WuiText grow={false} className="guideSection__text">
       <p>
         Labels should provide a clear indication of that action that occurs when
         the user clicks the button. Prefer action words, and include an object
@@ -411,159 +411,159 @@ export default () => (
       </p>
 
       <h3>Preferred words in buttons</h3>
-    </EuiText>
+    </WuiText>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiTable>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Text</EuiTableHeaderCell>
+    <WuiTable>
+      <WuiTableHeader>
+        <WuiTableHeaderCell>Text</WuiTableHeaderCell>
 
-        <EuiTableHeaderCell>Description</EuiTableHeaderCell>
-      </EuiTableHeader>
+        <WuiTableHeaderCell>Description</WuiTableHeaderCell>
+      </WuiTableHeader>
 
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton>Add thing</EuiButton>
-          </EuiTableRowCell>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButton>Add thing</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>
+          <WuiTableRowCell>
             Establishes a new relationship. Often used in a create-then-add
             scenario. You create a dashboard, then add a visualization. Always
             followed by an object. Do not use &quot;Add new.&quot; Remove is the
             correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButtonEmpty size="s">Cancel</EuiButtonEmpty>
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButtonEmpty size="s">Cancel</WuiButtonEmpty>
+          </WuiTableRowCell>
+          <WuiTableRowCell>
             Stops an action without saving pending changes. Never make Cancel
             red&mdash;it&apos;s not a destructive action. Cancel is always an
             empty button.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton fill>Create thing</EuiButton>
-          </EuiTableRowCell>
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButton fill>Create thing</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>
+          <WuiTableRowCell>
             Creates a new object from scratch. Always followed by an object, for
             example, “Create pipeline.” Do not use &quot;Create new.&quot;
             Exception: “Add user” is more intuitive than “Create user.” Delete
             is the correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton color="danger" fill>
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButton color="danger" fill>
               Delete
-            </EuiButton>
+            </WuiButton>
             &nbsp;&nbsp;
-            <EuiButton color="danger" fill>
+            <WuiButton color="danger" fill>
               Delete 6 things
-            </EuiButton>
+            </WuiButton>
             &nbsp;&nbsp;
-            <EuiButtonIcon
+            <WuiButtonIcon
               size="s"
               color="danger"
               iconType="trash"
               aria-label="delete"
             />
-          </EuiTableRowCell>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>
+          <WuiTableRowCell>
             Deletes data so users can longer retrieve it. Create is the correct
             opposite. Do not confuse with Remove.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton color="danger">Remove</EuiButton>&nbsp;&nbsp;
-            <EuiButtonIcon
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButton color="danger">Remove</WuiButton>&nbsp;&nbsp;
+            <WuiButtonIcon
               size="s"
               color="danger"
               iconType="cross"
               aria-label="Remove"
             />
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+          </WuiTableRowCell>
+          <WuiTableRowCell>
             Removes a relationship, but doesn&apos;t permanently delete data.
             For example, you remove a visualization from a dashboard. Add is the
             correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton fill>Save</EuiButton>&nbsp;&nbsp;
-            <EuiButton fill color="secondary" iconType="check">
+        <WuiTableRow>
+          <WuiTableRowCell isMobileFullWidth>
+            <WuiButton fill>Save</WuiButton>&nbsp;&nbsp;
+            <WuiButton fill color="secondary" iconType="check">
               Save and complete
-            </EuiButton>
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+            </WuiButton>
+          </WuiTableRowCell>
+          <WuiTableRowCell>
             Carries out pending changes, for example, Save edits. Do not confuse
             with Add. Can use green if this button is the final save action.
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
 
-    <EuiSpacer size="xl" />
+    <WuiSpacer size="xl" />
 
-    <EuiText className="guideSection__text">
+    <WuiText className="guideSection__text">
       <h3>Avoid these words in buttons</h3>
-    </EuiText>
+    </WuiText>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiTable responsive={false}>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Text</EuiTableHeaderCell>
+    <WuiTable responsive={false}>
+      <WuiTableHeader>
+        <WuiTableHeaderCell>Text</WuiTableHeaderCell>
 
-        <EuiTableHeaderCell>Use this instead</EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton color="danger">Discard</EuiButton>
-          </EuiTableRowCell>
+        <WuiTableHeaderCell>Use this instead</WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell>
+            <WuiButton color="danger">Discard</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>Remove or Delete</EuiTableRowCell>
-        </EuiTableRow>
+          <WuiTableRowCell>Remove or Delete</WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>New</EuiButton>
-          </EuiTableRowCell>
+        <WuiTableRow>
+          <WuiTableRowCell>
+            <WuiButton>New</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>Add or Create</EuiTableRowCell>
-        </EuiTableRow>
+          <WuiTableRowCell>Add or Create</WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>OK</EuiButton>
-          </EuiTableRowCell>
+        <WuiTableRow>
+          <WuiTableRowCell>
+            <WuiButton>OK</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>Words that explain the action</EuiTableRowCell>
-        </EuiTableRow>
+          <WuiTableRowCell>Words that explain the action</WuiTableRowCell>
+        </WuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>Yes?</EuiButton>&nbsp;&nbsp;
-            <EuiButton color="danger">No?</EuiButton>
-          </EuiTableRowCell>
+        <WuiTableRow>
+          <WuiTableRowCell>
+            <WuiButton>Yes?</WuiButton>&nbsp;&nbsp;
+            <WuiButton color="danger">No?</WuiButton>
+          </WuiTableRowCell>
 
-          <EuiTableRowCell>Words that explain the action</EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          <WuiTableRowCell>Words that explain the action</WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </>
 );

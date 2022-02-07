@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,13 +32,13 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { EuiDelayHide } from './index';
+import { WuiDelayHide } from './index';
 
-describe('when EuiDelayHide is visible initially', () => {
+describe('when WuiDelayHide is visible initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
     return mount(
-      <EuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+      <WuiDelayHide hide={false} render={() => <div>Hello World</div>} />
     );
   }
 
@@ -70,11 +83,11 @@ describe('when EuiDelayHide is visible initially', () => {
   });
 });
 
-describe('when EuiDelayHide parent updates', () => {
+describe('when WuiDelayHide parent updates', () => {
   it('should still hide correctly', () => {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <WuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
     wrapper.setProps({ hide: false });
@@ -87,11 +100,11 @@ describe('when EuiDelayHide parent updates', () => {
   });
 });
 
-describe('when EuiDelayHide is hidden initially', () => {
+describe('when WuiDelayHide is hidden initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
     return mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <WuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
   }
 
@@ -120,11 +133,11 @@ describe('when EuiDelayHide is hidden initially', () => {
   });
 });
 
-describe('when EuiDelayHide is visible initially and has a minimumDuration of 2000ms ', () => {
+describe('when WuiDelayHide is visible initially and has a minimumDuration of 2000ms ', () => {
   function getWrapper() {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide
+      <WuiDelayHide
         hide={false}
         minimumDuration={2000}
         render={() => <div>Hello World</div>}
@@ -153,11 +166,11 @@ describe('when EuiDelayHide is visible initially and has a minimumDuration of 20
   });
 });
 
-describe('when EuiDelayHide has been visible and become hidden', () => {
+describe('when WuiDelayHide has been visible and become hidden', () => {
   it('should still be visible for the minimum duration the second time', () => {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <WuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
     wrapper.setProps({ hide: false });

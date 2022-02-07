@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EuiText } from '../../../../src/components';
+import { WuiText } from '../../../../src/components';
 
 export const GuideRuleDescription = ({
   children,
@@ -20,10 +20,10 @@ export const GuideRuleDescription = ({
 
   return (
     <div className={classes} {...rest}>
-      <EuiText grow={false}>
+      <WuiText grow={false}>
         {headingNode}
         <p>{description}</p>
-      </EuiText>
+      </WuiText>
 
       {children}
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { EuiCode, EuiControlBar } from '../../../../src/components';
+import { WuiCode, WuiControlBar } from '../../../../src/components';
 
 import {
   BreadcrumbControlProps,
@@ -28,7 +28,7 @@ const controlsHtml = renderToHtml(Controls);
 
 const controlBarSource = require('!!raw-loader!./control_bar');
 const controlBarHtml = renderToHtml(ControlBar);
-const controlBarSnippet = `<EuiControlBar
+const controlBarSnippet = `<WuiControlBar
   showContent={false}
   controls={
     [{
@@ -75,11 +75,11 @@ const controlBarSnippet = `<EuiControlBar
 
 const tabsBarSource = require('!!raw-loader!./tabs');
 const tabsBarHtml = renderToHtml(ControlBarWithTabs);
-const tabsBarSnippet = '<EuiControlBar controls={items} size="m"/>';
+const tabsBarSnippet = '<WuiControlBar controls={items} size="m"/>';
 
 const mobileBarSource = require('!!raw-loader!./mobile');
 const mobileBarHtml = renderToHtml(ControlBarMobile);
-const mobileBarSnippet = `<EuiControlBar
+const mobileBarSnippet = `<WuiControlBar
   showOnMobile
   controls={[
     {
@@ -87,12 +87,12 @@ const mobileBarSnippet = `<EuiControlBar
       id: 'icon',
       iconType: 'folderClosed',
       'aria-label': 'folder',
-      className: 'eui-hideFor--m eui-hideFor--l eui-hideFor--xl',
+      className: 'wui-hideFor--m wui-hideFor--l wui-hideFor--xl',
     },
     {
       controlType: 'breadcrumbs',
       id: 'current_file_path',
-      className: 'eui-hideFor--s eui-hideFor--xs',
+      className: 'wui-hideFor--s wui-hideFor--xs',
       responsive: true,
       breadcrumbs: [
         {
@@ -135,14 +135,14 @@ export const ControlBarExample = {
       text: (
         <div>
           <p>
-            <strong>EuiControlBar</strong> is a bottom positioned container and
+            <strong>WuiControlBar</strong> is a bottom positioned container and
             content well intended to provide additional view controls and
             actions.
           </p>
           <p>
             The control bar provides an easy way to extend the navigation or
             views of the current page by allowing you to place tabs, buttons,
-            text, or <EuiCode>children</EuiCode> within it. It can operate
+            text, or <WuiCode>children</WuiCode> within it. It can operate
             similarly to a flyout, but (at full height) it covers most of the
             current page; making it a fitting solution for verbose text or
             additional controls. It can also be used without allowing it to
@@ -151,7 +151,7 @@ export const ControlBarExample = {
           </p>
         </div>
       ),
-      props: { EuiControlBar },
+      props: { WuiControlBar },
       snippet: controlBarSnippet,
       demo: <ControlBar />,
     },
@@ -171,18 +171,18 @@ export const ControlBarExample = {
         <div>
           <p>
             This example demonstrates the use of tabs and reduces the size of
-            the content with <EuiCode language="js">size=&quot;m&quot;</EuiCode>
+            the content with <WuiCode language="js">size=&quot;m&quot;</WuiCode>
             .
           </p>
           <p>
-            Optional children of the <strong>EuiControlBar</strong> are rendered
+            Optional children of the <strong>WuiControlBar</strong> are rendered
             in the control bar drawer. You can toggle the visibility of the
-            content with the <EuiCode>showContent</EuiCode> prop. When you want
+            content with the <WuiCode>showContent</WuiCode> prop. When you want
             to display tab content, this is where you&apos;ll do it.
           </p>
         </div>
       ),
-      props: { EuiControlBar },
+      props: { WuiControlBar },
       snippet: tabsBarSnippet,
       demo: <ControlBarWithTabs />,
     },
@@ -201,24 +201,24 @@ export const ControlBarExample = {
       text: (
         <div>
           <p>
-            The <strong>EuiControlBar</strong> is responsive in the sense that
+            The <strong>WuiControlBar</strong> is responsive in the sense that
             it utilizes flexbox and overflow scrolls. However, it makes no
             attempts to reorganize the controls you provide. By default the{' '}
-            <strong>EuiControlBar</strong> is hidden on mobile devices, but this
-            can be overridden with the <EuiCode>showOnMobile</EuiCode> prop.
+            <strong>WuiControlBar</strong> is hidden on mobile devices, but this
+            can be overridden with the <WuiCode>showOnMobile</WuiCode> prop.
             You&apos;ll need to take the layout of your{' '}
-            <EuiCode>controlTypes</EuiCode> into consideration when choosing to
+            <WuiCode>controlTypes</WuiCode> into consideration when choosing to
             display on smaller screens.
           </p>
           <p>
-            A simple way of doing this is to pass in EUI responsive utility
-            classes into the <EuiCode>className</EuiCode> prop on any of the{' '}
-            <EuiCode>controlTypes</EuiCode>. View the snippet tab to see an
+            A simple way of doing this is to pass in WUI responsive utility
+            classes into the <WuiCode>className</WuiCode> prop on any of the{' '}
+            <WuiCode>controlTypes</WuiCode>. View the snippet tab to see an
             example.
           </p>
         </div>
       ),
-      props: { EuiControlBar },
+      props: { WuiControlBar },
       snippet: mobileBarSnippet,
       demo: <ControlBarMobile />,
     },
@@ -237,53 +237,53 @@ export const ControlBarExample = {
       text: (
         <div>
           <p>
-            The <strong>EuiControlBar</strong> accepts an array of{' '}
-            <EuiCode>controlTypes</EuiCode> that will be arranged in the order
+            The <strong>WuiControlBar</strong> accepts an array of{' '}
+            <WuiCode>controlTypes</WuiCode> that will be arranged in the order
             in which they are provided. All controls <strong>must</strong> be
-            provide a unique <EuiCode>id</EuiCode> to be used as the key.
+            provide a unique <WuiCode>id</WuiCode> to be used as the key.
           </p>
           <ul>
             <li>
-              <EuiCode>button</EuiCode>: Extends{' '}
+              <WuiCode>button</WuiCode>: Extends{' '}
               <Link to="/navigation/button">
-                <strong>EuiButton</strong>
+                <strong>WuiButton</strong>
               </Link>{' '}
-              but always forces to size small. Requires <EuiCode>label</EuiCode>{' '}
+              but always forces to size small. Requires <WuiCode>label</WuiCode>{' '}
               as the children.
             </li>
             <li>
-              <EuiCode>icon</EuiCode>: Extends{' '}
+              <WuiCode>icon</WuiCode>: Extends{' '}
               <Link to="/display/icons">
-                <strong>EuiIcon</strong>
+                <strong>WuiIcon</strong>
               </Link>{' '}
-              unless provided an <EuiCode>onClick</EuiCode> or{' '}
-              <EuiCode>href</EuiCode>, then it will render an{' '}
+              unless provided an <WuiCode>onClick</WuiCode> or{' '}
+              <WuiCode>href</WuiCode>, then it will render an{' '}
               <Link to="/navigation/button">
-                <strong>EuiButtonIcon</strong>
+                <strong>WuiButtonIcon</strong>
               </Link>
               .
             </li>
             <li>
-              <EuiCode>text</EuiCode>: Simple ghost colored text.
+              <WuiCode>text</WuiCode>: Simple ghost colored text.
             </li>
             <li>
-              <EuiCode>tab</EuiCode>: Renders a button visually as a tab. You
+              <WuiCode>tab</WuiCode>: Renders a button visually as a tab. You
               must provide your own callback to swap the control bar contents
-              with <EuiCode>onClick</EuiCode>.
+              with <WuiCode>onClick</WuiCode>.
             </li>
             <li>
-              <EuiCode>breadcrumbs</EuiCode>: Extends{' '}
+              <WuiCode>breadcrumbs</WuiCode>: Extends{' '}
               <Link to="/navigation/breadcrumbs">
-                <strong>EuiBreadcrumbs</strong>
+                <strong>WuiBreadcrumbs</strong>
               </Link>
               .
             </li>
             <li>
-              <EuiCode>spacer</EuiCode>: Provides a horizontal space between
+              <WuiCode>spacer</WuiCode>: Provides a horizontal space between
               controls. <strong>Id is optional.</strong>
             </li>
             <li>
-              <EuiCode>divider</EuiCode>: Provides a <EuiCode>1px</EuiCode>{' '}
+              <WuiCode>divider</WuiCode>: Provides a <WuiCode>1px</WuiCode>{' '}
               border between controls. Useful when additional visual separation
               is needed. <strong>Id is optional.</strong>
             </li>
@@ -291,20 +291,20 @@ export const ControlBarExample = {
           <p>
             Typically, a control bar is fixed positioned against the browser
             window and therefore rendered within a portal. To change the parent
-            element of the control bar, change the <EuiCode>position</EuiCode>{' '}
-            prop to <EuiCode language="js">{'"absolute"'}</EuiCode> or{' '}
-            <EuiCode language="js">{'"relative"'}</EuiCode>.
+            element of the control bar, change the <WuiCode>position</WuiCode>{' '}
+            prop to <WuiCode language="js">{'"absolute"'}</WuiCode> or{' '}
+            <WuiCode language="js">{'"relative"'}</WuiCode>.
           </p>
           <p>
             To offest the left and right position of the control bar, for
             example, to adjust for side navigation, use the{' '}
-            <EuiCode>leftOffset</EuiCode> or <EuiCode>rightOffset</EuiCode>{' '}
+            <WuiCode>leftOffset</WuiCode> or <WuiCode>rightOffset</WuiCode>{' '}
             props.
           </p>
         </div>
       ),
       props: {
-        EuiControlBar,
+        WuiControlBar,
         BreadcrumbControlProps,
         ButtonControlProps,
         DividerControlProps,

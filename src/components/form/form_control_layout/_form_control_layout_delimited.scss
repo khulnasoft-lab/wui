@@ -1,71 +1,71 @@
-.euiFormControlLayoutDelimited {
+.wuiFormControlLayoutDelimited {
   // Match just the regular drop shadow of inputs
-  @include euiFormControlDefaultShadow;
+  @include wuiFormControlDefaultShadow;
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
 
-  > .euiFormControlLayout__childrenWrapper {
+  > .wuiFormControlLayout__childrenWrapper {
     display: flex;
     align-items: center;
     width: 100%;
   }
 
-  // Target when the euiFormControlLayout is compressed without specifying the full class name in case it ever changes
+  // Target when the wuiFormControlLayout is compressed without specifying the full class name in case it ever changes
   &[class*='--compressed'] {
-    @include euiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $euiBorderRadius / 2;
+    @include wuiFormControlDefaultShadow($borderOnly: true);
+    border-radius: $wuiBorderRadius / 2;
 
-    .euiFormControlLayoutDelimited__input {
+    .wuiFormControlLayoutDelimited__input {
       height: 100%;
       padding-top: 0; // Fixes IE
       padding-bottom: 0; // Fixes IE
-      padding-left: $euiFormControlCompressedPadding;
-      padding-right: $euiFormControlCompressedPadding;
+      padding-left: $wuiFormControlCompressedPadding;
+      padding-right: $wuiFormControlCompressedPadding;
     }
 
-    .euiFormControlLayoutIcons {
-      padding-left: $euiFormControlCompressedPadding;
-      padding-right: $euiFormControlCompressedPadding;
+    .wuiFormControlLayoutIcons {
+      padding-left: $wuiFormControlCompressedPadding;
+      padding-right: $wuiFormControlCompressedPadding;
     }
   }
 
-  // Target when the euiFormControlLayout is fullWidth without specifying the full class name in case it ever changes
-  &[class*='--fullWidth'] .euiFormControlLayout__childrenWrapper,
+  // Target when the wuiFormControlLayout is fullWidth without specifying the full class name in case it ever changes
+  &[class*='--fullWidth'] .wuiFormControlLayout__childrenWrapper,
   &[class*='--fullWidth'] input {
     width: 100%;
     max-width: none;
   }
 
-  // Target when the euiFormControlLayout is disabled without specifying the full class name in case it ever changes
+  // Target when the wuiFormControlLayout is disabled without specifying the full class name in case it ever changes
   &[class*='-isDisabled'] {
-    @include euiFormControlDisabledStyle;
+    @include wuiFormControlDisabledStyle;
   }
 
-  // Target when the euiFormControlLayout is readOnly without specifying the full class name in case it ever changes
+  // Target when the wuiFormControlLayout is readOnly without specifying the full class name in case it ever changes
   &[class*='--readOnly'] {
-    @include euiFormControlReadOnlyStyle;
+    @include wuiFormControlReadOnlyStyle;
 
     input {
       background-color: transparent; // Ensures the input and layout don't double up on background color
     }
   }
 
-  .euiFormControlLayoutIcons {
+  .wuiFormControlLayoutIcons {
     // Absolutely positioning the icons doesn't work because they
     // overlay only one of controls making the layout unbalanced
     position: static; // Overrider absolute
-    padding-left: $euiFormControlPadding;
-    padding-right: $euiFormControlPadding;
+    padding-left: $wuiFormControlPadding;
+    padding-right: $wuiFormControlPadding;
     flex-shrink: 0; // Fixes IE
 
-    &:not(.euiFormControlLayoutIcons--right) {
+    &:not(.wuiFormControlLayoutIcons--right) {
       order: -1;
     }
   }
 }
 
-.euiFormControlLayoutDelimited__input {
+.wuiFormControlLayoutDelimited__input {
   // sass-lint:disable-block no-important
   box-shadow: none !important;
   border-radius: 0 !important;
@@ -73,16 +73,16 @@
   height: 100%;
   min-width: 0; // Fixes FF
 
-  .euiFormControlLayoutDelimited[class*='--compressed'] & {
+  .wuiFormControlLayoutDelimited[class*='--compressed'] & {
     max-width: none;
   }
 }
 
-.euiFormControlLayoutDelimited__delimeter {
+.wuiFormControlLayoutDelimited__delimeter {
   // sass-lint:disable-block no-important
-  background-color: transparent !important; // Override .euiFormControlLayout--group > .euiFormLabel
-  line-height: 1 !important; // Override EuiText line-height
+  background-color: transparent !important; // Override .wuiFormControlLayout--group > .wuiFormLabel
+  line-height: 1 !important; // Override WuiText line-height
   flex: 0 0 auto;
-  padding-left: $euiFormControlPadding / 2;
-  padding-right: $euiFormControlPadding / 2;
+  padding-left: $wuiFormControlPadding / 2;
+  padding-right: $wuiFormControlPadding / 2;
 }

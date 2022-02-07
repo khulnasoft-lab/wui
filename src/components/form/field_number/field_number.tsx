@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,15 +35,15 @@ import { CommonProps } from '../../common';
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { WuiValidatableControl } from '../validatable_control';
 
 import { IconType } from '../../icon';
 
-export type EuiFieldNumberProps = Omit<
+export type WuiFieldNumberProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'min' | 'max' | 'readOnly' | 'step'
 > &
@@ -54,17 +67,17 @@ export type EuiFieldNumberProps = Omit<
      * Creates an input group with element(s) coming before input.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: WuiFormControlLayoutProps['prepend'];
 
     /**
      * Creates an input group with element(s) coming after input.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: WuiFormControlLayoutProps['append'];
 
     /**
      * Completely removes form control layout wrapper and ignores
-     * icon, prepend, and append. Best used inside EuiFormControlLayoutDelimited.
+     * icon, prepend, and append. Best used inside WuiFormControlLayoutDelimited.
      */
     controlOnly?: boolean;
 
@@ -74,7 +87,7 @@ export type EuiFieldNumberProps = Omit<
     compressed?: boolean;
   };
 
-export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
+export const WuiFieldNumber: FunctionComponent<WuiFieldNumberProps> = ({
   className,
   icon,
   id,
@@ -94,16 +107,16 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
   controlOnly,
   ...rest
 }) => {
-  const classes = classNames('euiFieldNumber', className, {
-    'euiFieldNumber--withIcon': icon,
-    'euiFieldNumber--fullWidth': fullWidth,
-    'euiFieldNumber--compressed': compressed,
-    'euiFieldNumber--inGroup': prepend || append,
-    'euiFieldNumber-isLoading': isLoading,
+  const classes = classNames('wuiFieldNumber', className, {
+    'wuiFieldNumber--withIcon': icon,
+    'wuiFieldNumber--fullWidth': fullWidth,
+    'wuiFieldNumber--compressed': compressed,
+    'wuiFieldNumber--inGroup': prepend || append,
+    'wuiFieldNumber-isLoading': isLoading,
   });
 
   const control = (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <WuiValidatableControl isInvalid={isInvalid}>
       <input
         type="number"
         id={id}
@@ -117,7 +130,7 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
         ref={inputRef}
         {...rest}
       />
-    </EuiValidatableControl>
+    </WuiValidatableControl>
   );
 
   if (controlOnly) {
@@ -125,7 +138,7 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
   }
 
   return (
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       icon={icon}
       fullWidth={fullWidth}
       isLoading={isLoading}
@@ -135,6 +148,6 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
       append={append}
       inputId={id}>
       {control}
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
   );
 };

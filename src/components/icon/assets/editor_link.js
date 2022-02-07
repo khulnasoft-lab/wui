@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconEditorLink = ({ title, titleId, ...props }) => (
+const WuiIconEditorLink = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconEditorLink = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconEditorLink;
+export const icon = WuiIconEditorLink;

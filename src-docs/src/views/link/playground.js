@@ -1,17 +1,17 @@
 import { PropTypes } from 'react-view';
-import { EuiLink } from '../../../../src/components/';
+import { WuiLink } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 import * as t from '@babel/types';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiLink.__docgenInfo)
-    ? EuiLink.__docgenInfo[0]
-    : EuiLink.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiLink.__docgenInfo)
+    ? WuiLink.__docgenInfo[0]
+    : WuiLink.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.href = {
     type: PropTypes.String,
-    value: 'http://www.elastic.co',
+    value: 'http://www.wazuh.com',
   };
   propsToUse.target = {
     type: PropTypes.String,
@@ -42,14 +42,14 @@ export default () => {
   return {
     setGhostBackground,
     config: {
-      componentName: 'EuiLink',
+      componentName: 'WuiLink',
       props: propsToUse,
       scope: {
-        EuiLink,
+        WuiLink,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLink'],
+        '@wazuh/wui': {
+          named: ['WuiLink'],
         },
       },
       customProps: {

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -31,16 +44,16 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 import {
-  EuiResizablePanelContextProvider,
-  EuiResizablePanelRegistry,
+  WuiResizablePanelContextProvider,
+  WuiResizablePanelRegistry,
 } from './context';
 import {
-  EuiResizableButtonProps,
-  euiResizableButtonWithControls,
+  WuiResizableButtonProps,
+  wuiResizableButtonWithControls,
 } from './resizable_button';
 import {
-  EuiResizablePanelProps,
-  euiResizablePanelWithControls,
+  WuiResizablePanelProps,
+  wuiResizablePanelWithControls,
 } from './resizable_panel';
 import { useContainerCallbacks } from './helpers';
 
@@ -49,7 +62,7 @@ const containerDirections = {
   horizontal: 'horizontal',
 };
 
-export interface EuiResizableContainerProps
+export interface WuiResizableContainerProps
   extends HTMLAttributes<HTMLDivElement>,
     CommonProps {
   /**
@@ -61,8 +74,8 @@ export interface EuiResizableContainerProps
    * and returns a component tree
    */
   children: (
-    Panel: ComponentType<EuiResizablePanelProps>,
-    Resizer: ComponentType<EuiResizableButtonProps>
+    Panel: ComponentType<WuiResizablePanelProps>,
+    Resizer: ComponentType<WuiResizableButtonProps>
   ) => ReactNode;
   /**
    * Pure function which accepts an object where keys are IDs of panels, which sizes were changed,
@@ -72,7 +85,7 @@ export interface EuiResizableContainerProps
   style?: CSSProperties;
 }
 
-export interface EuiResizableContainerState {
+export interface WuiResizableContainerState {
   isDragging: boolean;
   currentResizerPos: number;
   previousPanelId: string | null;
@@ -80,7 +93,7 @@ export interface EuiResizableContainerState {
   resizersSize: number;
 }
 
-const initialState: EuiResizableContainerState = {
+const initialState: WuiResizableContainerState = {
   isDragging: false,
   currentResizerPos: -1,
   previousPanelId: null,
@@ -88,23 +101,23 @@ const initialState: EuiResizableContainerState = {
   resizersSize: 0,
 };
 
-export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps> = ({
+export const WuiResizableContainer: FunctionComponent<WuiResizableContainerProps> = ({
   direction = 'horizontal',
   children,
   className,
   onPanelWidthChange,
   ...rest
 }) => {
-  const registryRef = useRef(new EuiResizablePanelRegistry());
+  const registryRef = useRef(new WuiResizablePanelRegistry());
   const containerRef = useRef<HTMLDivElement>(null);
-  const [state, setState] = useState<EuiResizableContainerState>(initialState);
+  const [state, setState] = useState<WuiResizableContainerState>(initialState);
   const isHorizontal = direction === containerDirections.horizontal;
 
   const classes = classNames(
-    'euiResizableContainer',
+    'wuiResizableContainer',
     {
-      'euiResizableContainer--vertical': !isHorizontal,
-      'euiResizableContainer--horizontal': isHorizontal,
+      'wuiResizableContainer--vertical': !isHorizontal,
+      'wuiResizableContainer--horizontal': isHorizontal,
     },
     className
   );
@@ -118,8 +131,8 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
     onPanelWidthChange,
   });
 
-  const EuiResizableButton = useCallback(
-    euiResizableButtonWithControls({
+  const WuiResizableButton = useCallback(
+    wuiResizableButtonWithControls({
       onKeyDown,
       onMouseDown,
       onTouchStart: onMouseDown,
@@ -129,8 +142,8 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
     [onKeyDown, onMouseDown, isHorizontal, registryRef]
   );
 
-  const EuiResizablePanel = useCallback(
-    euiResizablePanelWithControls({
+  const WuiResizablePanel = useCallback(
+    wuiResizablePanelWithControls({
       isHorizontal,
     }),
     [isHorizontal]
@@ -141,7 +154,7 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   }, []);
 
   return (
-    <EuiResizablePanelContextProvider registry={registryRef.current}>
+    <WuiResizablePanelContextProvider registry={registryRef.current}>
       <div
         className={classes}
         ref={containerRef}
@@ -151,8 +164,8 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
         onTouchMove={onMouseMove}
         onTouchEnd={onMouseUp}
         {...rest}>
-        {children(EuiResizablePanel, EuiResizableButton)}
+        {children(WuiResizablePanel, WuiResizableButton)}
       </div>
-    </EuiResizablePanelContextProvider>
+    </WuiResizablePanelContextProvider>
   );
 };

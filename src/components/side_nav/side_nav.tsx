@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,12 +35,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
-import { EuiSideNavItem, RenderItem } from './side_nav_item';
-import { EuiSideNavItemType } from './side_nav_types';
+import { WuiSideNavItem, RenderItem } from './side_nav_item';
+import { WuiSideNavItemType } from './side_nav_types';
 
-export type EuiSideNavProps<T> = T &
+export type WuiSideNavProps<T> = T &
   CommonProps & {
     /**
      * `children` are not rendered. Use `items` to specify navigation items instead.
@@ -50,21 +63,21 @@ export type EuiSideNavProps<T> = T &
      */
     mobileTitle?: ReactNode;
     /**
-     *  An array of #EuiSideNavItem objects. Lists navigation menu items.
+     *  An array of #WuiSideNavItem objects. Lists navigation menu items.
      */
-    items: Array<EuiSideNavItemType<T>>;
+    items: Array<WuiSideNavItemType<T>>;
     /**
      * Overrides default navigation menu item rendering. When called, it should return a React node representing a replacement navigation item.
      */
     renderItem?: RenderItem<T>;
   };
 
-export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
+export class WuiSideNav<T> extends Component<WuiSideNavProps<T>> {
   static defaultProps = {
     items: [],
   };
 
-  isItemOpen = (item: EuiSideNavItemType<T>) => {
+  isItemOpen = (item: WuiSideNavItemType<T>) => {
     // The developer can force the item to be open.
     if (item.forceOpen) {
       return true;
@@ -83,7 +96,7 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
     return false;
   };
 
-  renderTree = (items: Array<EuiSideNavItemType<T>>, depth = 0) => {
+  renderTree = (items: Array<WuiSideNavItemType<T>>, depth = 0) => {
     const { renderItem } = this.props;
 
     return items.map(item => {
@@ -109,7 +122,7 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
       }
 
       return (
-        <EuiSideNavItem
+        <WuiSideNavItem
           isOpen={isOpen}
           isSelected={isSelected}
           isParent={!!childItems}
@@ -122,7 +135,7 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
           renderItem={renderItem}
           {...rest}>
           {name}
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
     });
   };
@@ -139,8 +152,8 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiSideNav', className, {
-      'euiSideNav-isOpenMobile': isOpenOnMobile,
+    const classes = classNames('wuiSideNav', className, {
+      'wuiSideNav-isOpenMobile': isOpenOnMobile,
     });
 
     const nav = this.renderTree(items);
@@ -150,13 +163,13 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
         {/* Hidden from view, except in mobile */}
         <button
           type="button"
-          className="euiSideNav__mobileToggle euiLink"
+          className="wuiSideNav__mobileToggle wuiLink"
           onClick={toggleOpenOnMobile}>
-          <span className="euiSideNav__mobileWrap">
-            <span className="euiSideNav__mobileTitle">{mobileTitle}</span>
+          <span className="wuiSideNav__mobileWrap">
+            <span className="wuiSideNav__mobileTitle">{mobileTitle}</span>
 
-            <EuiIcon
-              className="euiSideNav__mobileIcon"
+            <WuiIcon
+              className="wuiSideNav__mobileIcon"
               type="apps"
               size="m"
               aria-hidden="true"
@@ -165,7 +178,7 @@ export class EuiSideNav<T> extends Component<EuiSideNavProps<T>> {
         </button>
 
         {/* Hidden from view in mobile, but toggled from the button above */}
-        <div className="euiSideNav__content">{nav}</div>
+        <div className="wuiSideNav__content">{nav}</div>
       </nav>
     );
   }

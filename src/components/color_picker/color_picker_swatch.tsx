@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,16 +37,16 @@ import { CommonProps } from '../common';
 
 import { getChromaColor } from './utils';
 
-export type EuiColorPickerSwatchProps = CommonProps &
+export type WuiColorPickerSwatchProps = CommonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> & {
     color?: string;
   };
 
-export const EuiColorPickerSwatch = forwardRef<
+export const WuiColorPickerSwatch = forwardRef<
   HTMLButtonElement,
-  EuiColorPickerSwatchProps
+  WuiColorPickerSwatchProps
 >(({ className, color, style, ...rest }, ref) => {
-  const classes = classNames('euiColorPickerSwatch', className);
+  const classes = classNames('wuiColorPickerSwatch', className);
   const chromaColor = useMemo(() => getChromaColor(color, true), [color]);
   const background = useMemo(
     () => (chromaColor ? chromaColor.css() : 'transparent'),
@@ -54,4 +67,4 @@ export const EuiColorPickerSwatch = forwardRef<
   );
 });
 
-EuiColorPickerSwatch.displayName = 'EuiColorPickerSwatch';
+WuiColorPickerSwatch.displayName = 'WuiColorPickerSwatch';

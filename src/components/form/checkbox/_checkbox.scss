@@ -1,37 +1,37 @@
-.euiCheckbox {
+.wuiCheckbox {
   position: relative;
 
-  .euiCheckbox__input {
-    @include euiScreenReaderOnly;
+  .wuiCheckbox__input {
+    @include wuiScreenReaderOnly;
 
-    ~ .euiCheckbox__label {
+    ~ .wuiCheckbox__label {
       display: inline-block;
-      padding-left: ($euiCheckBoxSize * 1.5);
-      line-height: $euiSizeL;
-      font-size: $euiFontSizeS;
+      padding-left: ($wuiCheckBoxSize * 1.5);
+      line-height: $wuiSizeL;
+      font-size: $wuiFontSizeS;
       position: relative;
       z-index: 2;
       cursor: pointer;
     }
 
-    + .euiCheckbox__square {
-      @include euiCustomControl($type: 'square', $size: $euiCheckBoxSize);
+    + .wuiCheckbox__square {
+      @include wuiCustomControl($type: 'square', $size: $wuiCheckBoxSize);
 
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($euiSizeL - $euiCheckBoxSize) / 2) - 1px;
+      top: (($wuiSizeL - $wuiCheckBoxSize) / 2) - 1px;
     }
 
     &:checked {
-      + .euiCheckbox__square {
-        @include euiCustomControlSelected($type: 'check');
+      + .wuiCheckbox__square {
+        @include wuiCustomControlSelected($type: 'check');
       }
     }
 
     &:indeterminate {
-      + .euiCheckbox__square {
-        @include euiCustomControlSelected($type: 'square');
+      + .wuiCheckbox__square {
+        @include wuiCustomControlSelected($type: 'square');
       }
     }
 
@@ -39,32 +39,32 @@
       // sass-lint:disable-block no-important
       cursor: not-allowed !important;
 
-      ~ .euiCheckbox__label {
-        color: $euiFormControlDisabledColor;
+      ~ .wuiCheckbox__label {
+        color: $wuiFormControlDisabledColor;
         cursor: not-allowed !important;
       }
 
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled;
+      + .wuiCheckbox__square {
+        @include wuiCustomControlDisabled;
       }
     }
 
     &:checked[disabled] {
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled($type: 'check');
+      + .wuiCheckbox__square {
+        @include wuiCustomControlDisabled($type: 'check');
       }
     }
 
     &:indeterminate[disabled] {
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled($type: 'dot');
+      + .wuiCheckbox__square {
+        @include wuiCustomControlDisabled($type: 'dot');
       }
     }
 
     &:focus,
     &:active:not(:disabled) {
-      + .euiCheckbox__square {
-        @include euiCustomControlFocused;
+      + .wuiCheckbox__square {
+        @include wuiCustomControlFocused;
       }
     }
   }
@@ -74,17 +74,17 @@
    *    they actually click this input.
    */
 
-  &.euiCheckbox--inList,
-  &.euiCheckbox--noLabel {
-    min-height: $euiCheckBoxSize;
-    min-width: $euiCheckBoxSize;
+  &.wuiCheckbox--inList,
+  &.wuiCheckbox--noLabel {
+    min-height: $wuiCheckBoxSize;
+    min-width: $wuiCheckBoxSize;
 
-    .euiCheckbox__square {
+    .wuiCheckbox__square {
       top: 0;
     }
 
-    .euiCheckbox__input {
-      @include size($euiCheckBoxSize); /* 1 */
+    .wuiCheckbox__input {
+      @include size($wuiCheckBoxSize); /* 1 */
 
       position: absolute; /* 1 */
       opacity: 0; /* 1 */

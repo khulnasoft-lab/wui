@@ -1,60 +1,60 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="none">
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="none">
+      <WuiFlexItem>None</WuiFlexItem>
+      <WuiFlexItem>None</WuiFlexItem>
+      <WuiFlexItem>None</WuiFlexItem>
+      <WuiFlexItem>None</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup gutterSize="xs">
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="xs">
+      <WuiFlexItem>Extra small</WuiFlexItem>
+      <WuiFlexItem>Extra small</WuiFlexItem>
+      <WuiFlexItem>Extra small</WuiFlexItem>
+      <WuiFlexItem>Extra small</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="s">
+      <WuiFlexItem>Small</WuiFlexItem>
+      <WuiFlexItem>Small</WuiFlexItem>
+      <WuiFlexItem>Small</WuiFlexItem>
+      <WuiFlexItem>Small</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup gutterSize="m">
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="m">
+      <WuiFlexItem>Medium</WuiFlexItem>
+      <WuiFlexItem>Medium</WuiFlexItem>
+      <WuiFlexItem>Medium</WuiFlexItem>
+      <WuiFlexItem>Medium</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="l">
+      <WuiFlexItem>Large (default)</WuiFlexItem>
+      <WuiFlexItem>Large (default)</WuiFlexItem>
+      <WuiFlexItem>Large (default)</WuiFlexItem>
+      <WuiFlexItem>Large (default)</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup gutterSize="xl">
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup gutterSize="xl">
+      <WuiFlexItem>Extra Large</WuiFlexItem>
+      <WuiFlexItem>Extra Large</WuiFlexItem>
+      <WuiFlexItem>Extra Large</WuiFlexItem>
+      <WuiFlexItem>Extra Large</WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

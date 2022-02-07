@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,16 +32,16 @@
 
 import React, { Component, ReactNode } from 'react';
 import {
-  EuiBasicTable,
+  WuiBasicTable,
   Criteria,
-  EuiBasicTableProps,
-  EuiBasicTableColumn,
+  WuiBasicTableProps,
+  WuiBasicTableColumn,
   CriteriaWithPagination,
 } from './basic_table';
 import {
-  EuiTableFieldDataColumnType,
-  EuiTableDataType,
-  EuiTableSortingType,
+  WuiTableFieldDataColumnType,
+  WuiTableDataType,
+  WuiTableSortingType,
 } from './table_types';
 import { PropertySort } from '../../services';
 import {
@@ -37,10 +50,10 @@ import {
 } from './pagination_bar';
 import { isString } from '../../services/predicate';
 import { Comparators, Direction } from '../../services/sort';
-import { EuiSearchBar, Query } from '../search_bar';
-import { EuiSpacer } from '../spacer';
+import { WuiSearchBar, Query } from '../search_bar';
+import { WuiSpacer } from '../spacer';
 import { CommonProps } from '../common';
-import { EuiSearchBarProps } from '../search_bar/search_bar';
+import { WuiSearchBarProps } from '../search_bar/search_bar';
 import { SchemaType } from '../search_bar/search_box';
 
 interface onChangeArgument {
@@ -49,13 +62,13 @@ interface onChangeArgument {
   error: Error | null;
 }
 
-function isEuiSearchBarProps<T>(
-  x: EuiInMemoryTableProps<T>['search']
-): x is EuiSearchBarProps {
+function isWuiSearchBarProps<T>(
+  x: WuiInMemoryTableProps<T>['search']
+): x is WuiSearchBarProps {
   return typeof x !== 'boolean';
 }
 
-type Search = boolean | EuiSearchBarProps;
+type Search = boolean | WuiSearchBarProps;
 
 interface PaginationOptions {
   pageSizeOptions?: number[];
@@ -75,7 +88,7 @@ interface SortingOptions {
 type Sorting = boolean | SortingOptions;
 
 type InMemoryTableProps<T> = Omit<
-  EuiBasicTableProps<T>,
+  WuiBasicTableProps<T>,
   'pagination' | 'sorting' | 'noItemsMessage'
 > & {
   message?: ReactNode;
@@ -102,7 +115,7 @@ type InMemoryTablePropsWithPagination<T> = Omit<
   onTableChange?: (nextValues: CriteriaWithPagination<T>) => void;
 };
 
-export type EuiInMemoryTableProps<T> = CommonProps &
+export type WuiInMemoryTableProps<T> = CommonProps &
   (InMemoryTableProps<T> | InMemoryTablePropsWithPagination<T>);
 
 interface State<T> {
@@ -133,13 +146,13 @@ const getQueryFromSearch = (
   } else {
     query =
       (defaultQuery
-        ? (search as EuiSearchBarProps).defaultQuery ||
-          (search as EuiSearchBarProps).query ||
+        ? (search as WuiSearchBarProps).defaultQuery ||
+          (search as WuiSearchBarProps).query ||
           ''
-        : (search as EuiSearchBarProps).query) || '';
+        : (search as WuiSearchBarProps).query) || '';
   }
 
-  return isString(query) ? EuiSearchBar.Query.parse(query) : query;
+  return isString(query) ? WuiSearchBar.Query.parse(query) : query;
 };
 
 const getInitialPagination = (pagination: Pagination | undefined) => {
@@ -174,7 +187,7 @@ const getInitialPagination = (pagination: Pagination | undefined) => {
     (!pageSizeOptions || !pageSizeOptions.includes(initialPageSize))
   ) {
     throw new Error(
-      `EuiInMemoryTable received initialPageSize ${initialPageSize}, which wasn't provided within pageSizeOptions.`
+      `WuiInMemoryTable received initialPageSize ${initialPageSize}, which wasn't provided within pageSizeOptions.`
     );
   }
 
@@ -187,7 +200,7 @@ const getInitialPagination = (pagination: Pagination | undefined) => {
 };
 
 function findColumnByProp<T>(
-  columns: Array<EuiBasicTableColumn<T>>,
+  columns: Array<WuiBasicTableColumn<T>>,
   prop: 'field' | 'name',
   value: string
 ) {
@@ -204,7 +217,7 @@ function findColumnByProp<T>(
 }
 
 function getInitialSorting<T>(
-  columns: Array<EuiBasicTableColumn<T>>,
+  columns: Array<WuiBasicTableColumn<T>>,
   sorting: Sorting | undefined
 ) {
   if (!sorting || !(sorting as SortingOptions).sort) {
@@ -241,18 +254,18 @@ function getInitialSorting<T>(
   };
 }
 
-export class EuiInMemoryTable<T> extends Component<
-  EuiInMemoryTableProps<T>,
+export class WuiInMemoryTable<T> extends Component<
+  WuiInMemoryTableProps<T>,
   State<T>
 > {
   static defaultProps = {
     responsive: true,
     tableLayout: 'fixed',
   };
-  tableRef: React.RefObject<EuiBasicTable>;
+  tableRef: React.RefObject<WuiBasicTable>;
 
   static getDerivedStateFromProps<T>(
-    nextProps: EuiInMemoryTableProps<T>,
+    nextProps: WuiInMemoryTableProps<T>,
     prevState: State<T>
   ) {
     let updatedPrevState = prevState;
@@ -318,10 +331,10 @@ export class EuiInMemoryTable<T> extends Component<
     }
 
     const nextQuery = nextProps.search
-      ? (nextProps.search as EuiSearchBarProps).query
+      ? (nextProps.search as WuiSearchBarProps).query
       : '';
     const prevQuery = prevState.prevProps.search
-      ? (prevState.prevProps.search as EuiSearchBarProps).query
+      ? (prevState.prevProps.search as WuiSearchBarProps).query
       : '';
 
     if (nextQuery !== prevQuery) {
@@ -340,7 +353,7 @@ export class EuiInMemoryTable<T> extends Component<
     return null;
   }
 
-  constructor(props: EuiInMemoryTableProps<T>) {
+  constructor(props: WuiInMemoryTableProps<T>) {
     super(props);
 
     const { columns, search, pagination, sorting, allowNeutralSort } = props;
@@ -370,7 +383,7 @@ export class EuiInMemoryTable<T> extends Component<
       hidePerPageOptions,
     };
 
-    this.tableRef = React.createRef<EuiBasicTable>();
+    this.tableRef = React.createRef<WuiBasicTable>();
   }
 
   setSelection(newSelection: T[]) {
@@ -402,11 +415,11 @@ export class EuiInMemoryTable<T> extends Component<
     // from sortName; sortName gets stored internally while reportedSortName is sent to the callback
     let reportedSortName = sortName;
 
-    // EuiBasicTable returns the column's `field` if it exists instead of `name`,
+    // WuiBasicTable returns the column's `field` if it exists instead of `name`,
     // map back to `name` if this is the case
     for (let i = 0; i < this.props.columns.length; i++) {
       const column = this.props.columns[i];
-      if ((column as EuiTableFieldDataColumnType<T>).field === sortName) {
+      if ((column as WuiTableFieldDataColumnType<T>).field === sortName) {
         sortName = column.name as keyof T;
         break;
       }
@@ -445,7 +458,7 @@ export class EuiInMemoryTable<T> extends Component<
 
   onQueryChange = ({ query, queryText, error }: onChangeArgument) => {
     const { search } = this.props;
-    if (isEuiSearchBarProps(search)) {
+    if (isWuiSearchBarProps(search)) {
       if (search.onChange) {
         const shouldQueryInMemory =
           error == null
@@ -479,9 +492,9 @@ export class EuiInMemoryTable<T> extends Component<
   renderSearchBar() {
     const { search } = this.props;
     if (search) {
-      let searchBarProps: Omit<EuiSearchBarProps, 'onChange'> = {};
+      let searchBarProps: Omit<WuiSearchBarProps, 'onChange'> = {};
 
-      if (isEuiSearchBarProps(search)) {
+      if (isWuiSearchBarProps(search)) {
         const { onChange, ..._searchBarProps } = search;
         searchBarProps = _searchBarProps;
 
@@ -493,7 +506,7 @@ export class EuiInMemoryTable<T> extends Component<
         }
       }
 
-      return <EuiSearchBar onChange={this.onQueryChange} {...searchBarProps} />;
+      return <WuiSearchBar onChange={this.onQueryChange} {...searchBarProps} />;
     }
   }
 
@@ -501,10 +514,10 @@ export class EuiInMemoryTable<T> extends Component<
     const { columns } = this.props;
     return columns.reduce<{
       strict: boolean;
-      fields: Record<string, { type: EuiTableDataType }>;
+      fields: Record<string, { type: WuiTableDataType }>;
     }>(
       (schema, column) => {
-        const { field, dataType } = column as EuiTableFieldDataColumnType<T>;
+        const { field, dataType } = column as WuiTableFieldDataColumnType<T>;
         if (field) {
           const type = dataType || 'string';
           schema.fields[field as string] = { type };
@@ -522,7 +535,7 @@ export class EuiInMemoryTable<T> extends Component<
 
     const sortColumn = columns.find(
       ({ name }) => name === sortName
-    ) as EuiTableFieldDataColumnType<T>;
+    ) as WuiTableFieldDataColumnType<T>;
 
     if (sortColumn == null) {
       // can't return a non-function so return a function that says everything is the same
@@ -557,7 +570,7 @@ export class EuiInMemoryTable<T> extends Component<
     const { query, sortName, pageIndex, pageSize } = this.state;
 
     const matchingItems = query
-      ? EuiSearchBar.Query.execute(query, items, executeQueryOptions)
+      ? WuiSearchBar.Query.execute(query, items, executeQueryOptions)
       : items;
 
     const sortedItems = sortName
@@ -631,7 +644,7 @@ export class EuiInMemoryTable<T> extends Component<
     // Data loaded from a server can have a default sort order which is meaningful to the
     // user, but can't be reproduced with client-side sort logic. So we allow the table to display
     // rows in the order in which they're initially loaded by providing an undefined sorting prop.
-    const sorting: EuiTableSortingType<T> | undefined = !hasSorting
+    const sorting: WuiTableSortingType<T> | undefined = !hasSorting
       ? undefined
       : {
           sort:
@@ -648,7 +661,7 @@ export class EuiInMemoryTable<T> extends Component<
 
     const table = (
       // @ts-ignore complex relationship between pagination's existence and criteria, the code logic ensures this is correctly maintained
-      <EuiBasicTable
+      <WuiBasicTable
         ref={this.tableRef}
         items={items}
         itemId={itemId}
@@ -678,7 +691,7 @@ export class EuiInMemoryTable<T> extends Component<
     return (
       <div>
         {searchBar}
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
         {table}
       </div>
     );

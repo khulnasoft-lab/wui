@@ -6,12 +6,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiForm,
-  EuiFormRow,
-  EuiText,
-  EuiSpacer,
-  EuiDescribedFormGroup,
+  WuiCode,
+  WuiForm,
+  WuiFormRow,
+  WuiText,
+  WuiSpacer,
+  WuiDescribedFormGroup,
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 import FormRows from './form_rows';
@@ -41,13 +41,13 @@ const inlinePopoverHtml = renderToHtml(InlinePopover);
 export const FormLayoutsExample = {
   title: 'Form layouts',
   intro: (
-    <EuiText>
+    <WuiText>
       <p>
         Be sure to read the full{' '}
         <Link to="/guidelines/form-layouts">forms usage guidelines</Link>.
       </p>
-      <EuiSpacer />
-    </EuiText>
+      <WuiSpacer />
+    </WuiText>
   ),
   sections: [
     {
@@ -64,25 +64,25 @@ export const FormLayoutsExample = {
       ],
       text: (
         <p>
-          Use the <strong>EuiFormRow</strong> component to easily associate form
+          Use the <strong>WuiFormRow</strong> component to easily associate form
           components with labels, help text, and error text. Use the{' '}
-          <strong>EuiForm</strong> component to group{' '}
-          <strong>EuiFormRows</strong>. By default EuiForm will render as a
+          <strong>WuiForm</strong> component to group{' '}
+          <strong>WuiFormRows</strong>. By default WuiForm will render as a
           simple div unless you pass{' '}
-          <EuiCode language="js">component=&quot;form&quot;</EuiCode>.
+          <WuiCode language="js">component=&quot;form&quot;</WuiCode>.
         </p>
       ),
       props: {
-        EuiForm,
-        EuiFormRow,
+        WuiForm,
+        WuiFormRow,
       },
       demo: <FormRows />,
-      snippet: `<EuiFormRow
+      snippet: `<WuiFormRow
   label="Text field"
   helpText="I am some friendly help text."
 >
-  <EuiFieldText />
-</EuiFormRow>`,
+  <WuiFieldText />
+</WuiFormRow>`,
     },
     {
       title: 'Full-width',
@@ -99,23 +99,23 @@ export const FormLayoutsExample = {
       text: (
         <p>
           Form elements will automatically flex to a max-width of{' '}
-          <EuiCode>400px</EuiCode>. You can optionally pass the{' '}
-          <EuiCode>fullWidth</EuiCode> prop to the row and form control to
+          <WuiCode>400px</WuiCode>. You can optionally pass the{' '}
+          <WuiCode>fullWidth</WuiCode> prop to the row and form control to
           expand to their container. This should be done rarely and usually you
           will only need it for isolated controls like search bars and sliders.
         </p>
       ),
       props: {
-        EuiFormRow,
+        WuiFormRow,
       },
       demo: <FullWidth />,
-      snippet: `<EuiFormRow
+      snippet: `<WuiFormRow
   fullWidth
   label="Works on form rows too"
   helpText="Note that the fullWidth prop is not passed to the form row's child"
 >
-  <EuiRange fullWidth />
-</EuiFormRow>`,
+  <WuiRange fullWidth />
+</WuiFormRow>`,
     },
     {
       title: 'Described form groups',
@@ -131,30 +131,30 @@ export const FormLayoutsExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiDescribedFormGroup</strong> component to associate
-          multiple <strong>EuiFormRows</strong>. It can also simply be used with
-          one <strong>EuiFormRow</strong> as a way to display additional text
+          Use <strong>WuiDescribedFormGroup</strong> component to associate
+          multiple <strong>WuiFormRows</strong>. It can also simply be used with
+          one <strong>WuiFormRow</strong> as a way to display additional text
           next to the field (on mobile, it will revert to being stacked).
         </p>
       ),
       props: {
-        EuiDescribedFormGroup,
+        WuiDescribedFormGroup,
       },
       demo: <DescribedFormGroup />,
-      snippet: `<EuiDescribedFormGroup
+      snippet: `<WuiDescribedFormGroup
   title={<h3>Set heading level based on context</h3>}
   description={
     <Fragment>
-      Will be wrapped in a small, subdued EuiText block.
+      Will be wrapped in a small, subdued WuiText block.
     </Fragment>
   }
 >
-  <EuiFormRow
+  <WuiFormRow
     label="Text field"
   >
-    <EuiFieldText />
-  </EuiFormRow>
-</EuiDescribedFormGroup>`,
+    <WuiFieldText />
+  </WuiFormRow>
+</WuiDescribedFormGroup>`,
     },
     {
       title: 'Inline',
@@ -162,9 +162,9 @@ export const FormLayoutsExample = {
         <p>
           Inline forms can be made with{' '}
           <Link to="/layout/flex">
-            <strong>EuiFlexGroup</strong>
+            <strong>WuiFlexGroup</strong>
           </Link>
-          . Apply <EuiCode language="js">grow=false</EuiCode> on any of the
+          . Apply <WuiCode language="js">grow=false</WuiCode> on any of the
           items you want to collapse (like this button). Note that the button
           FormRow component also requires an additional prop because it&rsquo;s
           missing a label.
@@ -202,18 +202,18 @@ export const FormLayoutsExample = {
             FlexItem, not the input. The input inside will resize as needed.
           </p>
           <p>
-            When supplying children to an EuiFormRow that is{' '}
+            When supplying children to an WuiFormRow that is{' '}
             <strong>not</strong> a form control, and you need to the content to
             vertically center with the other form controls, change the{' '}
-            <EuiCode>display</EuiCode> prop to <EuiCode>center</EuiCode> or{' '}
-            <EuiCode>centerCompressed</EuiCode>.
+            <WuiCode>display</WuiCode> prop to <WuiCode>center</WuiCode> or{' '}
+            <WuiCode>centerCompressed</WuiCode>.
           </p>
         </Fragment>
       ),
       demo: <InlineSizing />,
-      snippet: `<EuiFormRow label="Avatar" display="centerCompressed">
-  <EuiAvatar name="John Doe" size="s" />
-</EuiFormRow>`,
+      snippet: `<WuiFormRow label="Avatar" display="centerCompressed">
+  <WuiAvatar name="John Doe" size="s" />
+</WuiFormRow>`,
     },
     {
       title: 'In a popover',

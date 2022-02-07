@@ -1,20 +1,20 @@
 @import '../link/mixins';
 
-.euiHeaderLogo {
-  @include euiLink;
+.wuiHeaderLogo {
+  @include wuiLink;
 
   position: relative;
-  height: $euiHeaderChildSize;
-  line-height: $euiHeaderChildSize;
-  min-width: $euiHeaderChildSize + 1px;
-  padding: 0 ($euiSizeM + 1px) 0 $euiSizeM;
+  height: $wuiHeaderChildSize;
+  line-height: $wuiHeaderChildSize;
+  min-width: $wuiHeaderChildSize + 1px;
+  padding: 0 ($wuiSizeM + 1px) 0 $wuiSizeM;
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover {
-    background: $euiColorLightestShade;
+    background: $wuiColorLightestShade;
   }
 
   &:focus,
@@ -23,24 +23,24 @@
   }
 }
 
-.euiHeaderLogo__text {
-  @include euiTitle('s');
-  padding-left: $euiSize;
-  font-weight: $euiFontWeightLight;
+.wuiHeaderLogo__text {
+  @include wuiTitle('s');
+  padding-left: $wuiSize;
+  font-weight: $wuiFontWeightLight;
 }
 
-@include euiBreakpoint('xs') {
-  .euiHeaderLogo {
-    padding: 0 $euiSizeM;
+@include wuiBreakpoint('xs') {
+  .wuiHeaderLogo {
+    padding: 0 $wuiSizeM;
   }
 
-  .euiHeaderLogo__icon.euiIcon--xLarge {
-    width: $euiSizeL;
-    height: $euiSizeL;
+  .wuiHeaderLogo__icon.wuiIcon--xLarge {
+    width: $wuiSizeL;
+    height: $wuiSizeL;
   }
 
-  .euiHeaderLogo__text {
-    @include euiTitle('xs');
-    font-weight: $euiFontWeightRegular;
+  .wuiHeaderLogo__text {
+    @include wuiTitle('xs');
+    font-weight: $wuiFontWeightRegular;
   }
 }

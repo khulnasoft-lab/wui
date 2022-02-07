@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import { getEventPosition, getChromaColor } from '../utils';
 import { DEFAULT_VISUALIZATION_COLOR } from '../../../services';
 import { ColorStop } from './color_stop_thumb';
 
-const EUI_THUMB_SIZE = 16; // Same as $euiRangeThumbHeight & $euiRangeThumbWidth
+const WUI_THUMB_SIZE = 16; // Same as $wuiRangeThumbHeight & $wuiRangeThumbWidth
 
 export const removeStop = (colorStops: ColorStop[], index: number) => {
   if (colorStops.length === 1) {
@@ -100,7 +113,7 @@ export const isInvalid = (
 };
 
 export const calculateScale = (trackWidth: number) => {
-  const thumbToTrackRatio = EUI_THUMB_SIZE / trackWidth;
+  const thumbToTrackRatio = WUI_THUMB_SIZE / trackWidth;
   return (1 - thumbToTrackRatio) * 100;
 };
 

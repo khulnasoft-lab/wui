@@ -1,27 +1,27 @@
-.euiRangeTicks {
+.wuiRangeTicks {
   position: absolute;
-  left: ($euiRangeThumbWidth / 2);
-  right: ($euiRangeThumbWidth / 2);
-  top: $euiSizeS;
+  left: ($wuiRangeThumbWidth / 2);
+  right: ($wuiRangeThumbWidth / 2);
+  top: $wuiSizeS;
   display: flex;
 }
 
-.euiRangeTick {
+.wuiRangeTick {
   overflow-x: hidden;
   text-overflow: ellipsis;
-  font-size: $euiFontSizeXS;
+  font-size: $wuiFontSizeXS;
   position: relative;
-  padding-top: $euiSize;
+  padding-top: $wuiSize;
 
   &::before {
-    @include size($euiSizeXS);
+    @include size($wuiSizeXS);
 
     content: '';
-    background-color: $euiColorDarkShade;
+    background-color: $wuiColorDarkShade;
     border-radius: 100%;
     position: absolute;
     top: 0;
-    left: calc(50% - #{($euiSizeXS/2)});
+    left: calc(50% - #{($wuiSizeXS/2)});
   }
 
   &--isCustom {
@@ -32,11 +32,11 @@
   &:enabled:hover,
   &:focus,
   &--selected {
-    color: $euiColorPrimary;
+    color: $wuiColorPrimary;
   }
 
   &--selected {
-    font-weight: $euiFontWeightMedium;
+    font-weight: $wuiFontWeightMedium;
   }
 
   &:disabled {
@@ -44,10 +44,10 @@
   }
 }
 
-.euiRangeTicks--compressed {
-  top: $euiSizeS - 2px;
+.wuiRangeTicks--compressed {
+  top: $wuiSizeS - 2px;
 
-  .euiRangeTick {
-    padding-top: $euiSize - 2px;
+  .wuiRangeTick {
+    padding-top: $wuiSize - 2px;
   }
 }

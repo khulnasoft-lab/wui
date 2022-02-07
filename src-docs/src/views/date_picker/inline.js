@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import moment from 'moment';
 
-import { EuiDatePicker } from '../../../../src/components';
+import { WuiDatePicker } from '../../../../src/components';
 
 export default () => {
   const [startDate, setStartDate] = useState(moment());
@@ -13,13 +13,13 @@ export default () => {
 
   return (
     <div>
-      <EuiDatePicker
+      <WuiDatePicker
         selected={startDate}
         onChange={handleChange}
         inline
         showTimeSelect
       />
-      <EuiDatePicker
+      <WuiDatePicker
         selected={startDate}
         onChange={handleChange}
         inline

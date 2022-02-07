@@ -1,41 +1,41 @@
 import React from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { WuiComment } from '../../../../src/components/comment_list';
+import { WuiText } from '../../../../src/components/text';
+import { WuiCode } from '../../../../src/components/code';
 
 const body = (
-  <EuiText size="s">
+  <WuiText size="s">
     <p>
-      This is the body of a comment of type <EuiCode>regular</EuiCode>
+      This is the body of a comment of type <WuiCode>regular</WuiCode>
     </p>
-  </EuiText>
+  </WuiText>
 );
 
 const bodyUpdate = (
-  <EuiText size="s">
+  <WuiText size="s">
     <p>
-      Comments of type <EuiCode>update</EuiCode> can also have a body
+      Comments of type <WuiCode>update</WuiCode> can also have a body
     </p>
-  </EuiText>
+  </WuiText>
 );
 
 export default () => (
   <div>
-    <EuiComment username="andred" event="added a comment" timestamp="yesterday">
+    <WuiComment username="andred" event="added a comment" timestamp="yesterday">
       {body}
-    </EuiComment>
-    <EuiComment
+    </WuiComment>
+    <WuiComment
       username="luisg"
       type="update"
       event="edited case"
       timestamp="22 hours ago"
     />
-    <EuiComment
+    <WuiComment
       username="milal"
       type="update"
       event="edited case"
       timestamp="6 hours ago">
       {bodyUpdate}
-    </EuiComment>
+    </WuiComment>
   </div>
 );

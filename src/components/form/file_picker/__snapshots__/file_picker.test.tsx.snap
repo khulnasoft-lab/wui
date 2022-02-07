@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFilePicker is rendered 1`] = `
+exports[`WuiFilePicker is rendered 1`] = `
 <div
-  class="euiFilePicker euiFilePicker--large testClass1 testClass2"
+  class="wuiFilePicker wuiFilePicker--large testClass1 testClass2"
 >
   <div
-    class="euiFilePicker__wrap"
+    class="wuiFilePicker__wrap"
   >
     <input
       aria-describedby="htmlId"
       aria-label="aria-label"
-      class="euiFilePicker__input"
+      class="wuiFilePicker__input"
       data-test-subj="test subject string"
       type="file"
     />
     <div
-      class="euiFilePicker__prompt"
+      class="wuiFilePicker__prompt"
       id="htmlId"
     >
       <div
         aria-hidden="true"
-        class="euiFilePicker__icon"
-        data-euiicon-type="importAction"
+        class="wuiFilePicker__icon"
+        data-wuiicon-type="importAction"
       />
       <div
-        class="euiFilePicker__promptText"
+        class="wuiFilePicker__promptText"
       >
         Select or drag and drop a file
       </div>

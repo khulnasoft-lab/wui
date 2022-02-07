@@ -1,33 +1,33 @@
-.euiRangeTooltip {
+.wuiRangeTooltip {
   // Keeps tooltip (value) aligned to percentage of actual slider
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: calc(100% - #{$euiRangeThumbWidth});
-  margin-left: $euiRangeThumbWidth / 2;
+  width: calc(100% - #{$wuiRangeThumbWidth});
+  margin-left: $wuiRangeThumbWidth / 2;
   pointer-events: none;
 }
 
-.euiRangeTooltip__value {
+.wuiRangeTooltip__value {
   // Indentation for legibility in transition
   // sass-lint:disable-block indentation
-  @include euiFontSizeS;
-  border: 1px solid $euiTooltipBackgroundColor;
+  @include wuiFontSizeS;
+  border: 1px solid $wuiTooltipBackgroundColor;
   position: absolute;
-  border-radius: $euiBorderRadius;
-  padding: ($euiSizeXS / 2) $euiSizeS;
-  background-color: $euiTooltipBackgroundColor;
-  color: $euiColorGhost;
+  border-radius: $wuiBorderRadius;
+  padding: ($wuiSizeXS / 2) $wuiSizeS;
+  background-color: $wuiTooltipBackgroundColor;
+  color: $wuiColorGhost;
   max-width: 256px;
   top: 50%;
   transition:
-    box-shadow $euiAnimSpeedNormal $euiAnimSlightResistance,
-    transform $euiAnimSpeedNormal $euiAnimSlightResistance;
+    box-shadow $wuiAnimSpeedNormal $wuiAnimSlightResistance,
+    transform $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 
   // Custom sizing
-  $arrowSize: $euiSizeM;
+  $arrowSize: $wuiSizeM;
   $arrowMinusSize: (($arrowSize / 2) - 1px) * -1;
 
   &::after,
@@ -37,19 +37,19 @@
     bottom: -$arrowSize / 2;
     left: 50%;
     transform-origin: center;
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $wuiTooltipBackgroundColor;
     width: $arrowSize;
     height: $arrowSize;
     border-radius: 2px;
   }
 
   &::before {
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $wuiTooltipBackgroundColor;
   }
 
   // Positions the arrow
-  &.euiRangeTooltip__value--right {
-    margin-left: $euiSizeL;
+  &.wuiRangeTooltip__value--right {
+    margin-left: $wuiSizeL;
 
     &:before,
     &:after {
@@ -61,8 +61,8 @@
     }
   }
 
-  &.euiRangeTooltip__value--left {
-    margin-right: $euiSizeL;
+  &.wuiRangeTooltip__value--left {
+    margin-right: $wuiSizeL;
 
     &:before,
     &:after {
@@ -75,8 +75,8 @@
     }
   }
 
-  &.euiRangeTooltip__value--right,
-  &.euiRangeTooltip__value--left {
+  &.wuiRangeTooltip__value--right,
+  &.wuiRangeTooltip__value--left {
     transform: translateX(0) translateY(-50%);
 
     &:before,
@@ -87,10 +87,10 @@
   }
 
   &--hasTicks {
-    top: ($euiFormControlHeight / 4);
+    top: ($wuiFormControlHeight / 4);
 
-    .euiRangeTooltip--compressed & {
-      top: ($euiFormControlCompressedHeight / 4);
+    .wuiRangeTooltip--compressed & {
+      top: ($wuiFormControlCompressedHeight / 4);
     }
   }
 }

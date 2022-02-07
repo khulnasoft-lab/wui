@@ -2,15 +2,15 @@ import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiTitle,
-  EuiBasicTable,
-  EuiSearchBar,
+  WuiHealth,
+  WuiCallOut,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiCodeBlock,
+  WuiTitle,
+  WuiBasicTable,
+  WuiSearchBar,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -28,10 +28,8 @@ const tags = [
   { name: 'earlybirds', color: 'success' },
   { name: 'people-ops', color: 'danger' },
   { name: 'solutions', color: 'success' },
-  { name: 'elasticsearch', color: 'success' },
-  { name: 'kibana', color: 'success' },
   { name: 'cloud', color: 'danger' },
-  { name: 'logstash', color: 'warning' },
+  { name: 'wazuh', color: 'warning' },
   { name: 'beats', color: 'warning' },
   { name: 'legal', color: 'danger' },
   { name: 'revenue', color: 'success' },
@@ -60,7 +58,7 @@ const items = times(10, id => {
   };
 });
 
-const initialQuery = EuiSearchBar.Query.MATCH_ALL;
+const initialQuery = WuiSearchBar.Query.MATCH_ALL;
 
 export const SearchBarFilters = () => {
   const [query, setQuery] = useState(initialQuery);
@@ -84,7 +82,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map(tag => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <WuiHealth color={tag.color}>{tag.name}</WuiHealth>,
         })),
       },
       {
@@ -95,7 +93,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map(tag => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <WuiHealth color={tag.color}>{tag.name}</WuiHealth>,
         })),
       },
       {
@@ -106,7 +104,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map(tag => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <WuiHealth color={tag.color}>{tag.name}</WuiHealth>,
         })),
       },
     ];
@@ -154,7 +152,7 @@ export const SearchBarFilters = () => {
     };
 
     return (
-      <EuiSearchBar
+      <WuiSearchBar
         defaultQuery={initialQuery}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -173,12 +171,12 @@ export const SearchBarFilters = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <WuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -222,54 +220,54 @@ export const SearchBarFilters = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = WuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <WuiBasicTable items={queriedItems} columns={columns} />;
   };
 
-  const esQueryDsl = EuiSearchBar.Query.toESQuery(query);
-  const esQueryString = EuiSearchBar.Query.toESQueryString(query);
+  const esQueryDsl = WuiSearchBar.Query.toESQuery(query);
+  const esQueryString = WuiSearchBar.Query.toESQueryString(query);
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={4}>
-        <EuiTitle size="s">
-          <h3>Elasticsearch Query String</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+    <WuiFlexGroup>
+      <WuiFlexItem grow={4}>
+        <WuiTitle size="s">
+          <h3>Query String</h3>
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiCodeBlock language="js">
           {esQueryString ? esQueryString : ''}
-        </EuiCodeBlock>
+        </WuiCodeBlock>
 
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
 
-        <EuiTitle size="s">
-          <h3>Elasticsearch Query DSL</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        <WuiTitle size="s">
+          <h3>Query DSL</h3>
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiCodeBlock language="js">
           {esQueryDsl ? JSON.stringify(esQueryDsl, null, 2) : ''}
-        </EuiCodeBlock>
-      </EuiFlexItem>
+        </WuiCodeBlock>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={6}>
-        <EuiTitle size="s">
+      <WuiFlexItem grow={6}>
+        <WuiTitle size="s">
           <h3>JS execution</h3>
-        </EuiTitle>
+        </WuiTitle>
 
-        <EuiSpacer size="s" />
+        <WuiSpacer size="s" />
 
         {renderTable()}
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 
   return (
     <Fragment>
       {renderSearch()}
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
       {content}
     </Fragment>
   );

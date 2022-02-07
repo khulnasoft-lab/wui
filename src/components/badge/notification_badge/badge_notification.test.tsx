@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiNotificationBadge, COLORS, SIZES } from './badge_notification';
+import { WuiNotificationBadge, COLORS, SIZES } from './badge_notification';
 
-describe('EuiNotificationBadge', () => {
+describe('WuiNotificationBadge', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationBadge {...requiredProps}>5</EuiNotificationBadge>
+      <WuiNotificationBadge {...requiredProps}>5</WuiNotificationBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +50,7 @@ describe('EuiNotificationBadge', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiNotificationBadge color={color}>5</EuiNotificationBadge>
+            <WuiNotificationBadge color={color}>5</WuiNotificationBadge>
           );
 
           expect(component).toMatchSnapshot();
@@ -49,7 +62,7 @@ describe('EuiNotificationBadge', () => {
       SIZES.forEach(size => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiNotificationBadge size={size}>5</EuiNotificationBadge>
+            <WuiNotificationBadge size={size}>5</WuiNotificationBadge>
           );
 
           expect(component).toMatchSnapshot();

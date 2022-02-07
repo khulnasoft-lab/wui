@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,33 +33,33 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
-import { EuiIcon, IconType } from '../icon';
+import { WuiIcon, IconType } from '../icon';
 
-export interface EuiCommentTimelineProps extends CommonProps {
+export interface WuiCommentTimelineProps extends CommonProps {
   /**
-   * Main icon that accompanies the comment. The default is `user` for regular comments and `dot` for update comments. To customize, pass a `string` as an `EuiIcon['type']` or any `ReactNode`.
+   * Main icon that accompanies the comment. The default is `user` for regular comments and `dot` for update comments. To customize, pass a `string` as an `WuiIcon['type']` or any `ReactNode`.
    */
   timelineIcon?: ReactNode | IconType;
-  type?: EuiCommentType;
+  type?: WuiCommentType;
 }
 
 const typeToClassNameMap = {
-  regular: 'euiCommentTimeline__icon--regular',
-  update: 'euiCommentTimeline__icon--update',
+  regular: 'wuiCommentTimeline__icon--regular',
+  update: 'wuiCommentTimeline__icon--update',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiCommentType = keyof typeof typeToClassNameMap;
+export type WuiCommentType = keyof typeof typeToClassNameMap;
 
-export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
+export const WuiCommentTimeline: FunctionComponent<WuiCommentTimelineProps> = ({
   className,
   timelineIcon,
   type = 'regular',
 }) => {
-  const classes = classNames('euiCommentTimeline', className);
+  const classes = classNames('wuiCommentTimeline', className);
   const iconClasses = classNames(
     {
-      'euiCommentTimeline__icon--default':
+      'wuiCommentTimeline__icon--default':
         !timelineIcon || typeof timelineIcon === 'string',
     },
     typeToClassNameMap[type]
@@ -55,13 +68,13 @@ export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
   let iconRender;
   if (typeof timelineIcon === 'string') {
     iconRender = (
-      <EuiIcon size={type === 'update' ? 'm' : 'l'} type={timelineIcon} />
+      <WuiIcon size={type === 'update' ? 'm' : 'l'} type={timelineIcon} />
     );
   } else if (timelineIcon) {
     iconRender = timelineIcon;
   } else {
     iconRender = (
-      <EuiIcon
+      <WuiIcon
         type={type === 'update' ? 'dot' : 'user'}
         size={type === 'update' ? 's' : 'l'}
       />
@@ -70,7 +83,7 @@ export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
 
   return (
     <div className={classes}>
-      <div className="euiCommentTimeline__content">
+      <div className="wuiCommentTimeline__content">
         <div className={iconClasses}>{iconRender}</div>
       </div>
     </div>

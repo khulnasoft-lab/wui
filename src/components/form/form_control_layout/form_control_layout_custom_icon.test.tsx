@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +32,9 @@
 
 import React from 'react';
 import { render } from 'enzyme';
-import { EuiFormControlLayoutCustomIcon } from './form_control_layout_custom_icon';
+import { WuiFormControlLayoutCustomIcon } from './form_control_layout_custom_icon';
 
-describe('EuiFormControlLayoutCustomIcon', () => {
+describe('WuiFormControlLayoutCustomIcon', () => {
   test('is rendered as button', () => {
     const props = {
       onClick: () => null,
@@ -30,7 +43,7 @@ describe('EuiFormControlLayoutCustomIcon', () => {
       type: 'alert',
       iconRef: 'icon',
     };
-    const component = render(<EuiFormControlLayoutCustomIcon {...props} />);
+    const component = render(<WuiFormControlLayoutCustomIcon {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -42,7 +55,7 @@ describe('EuiFormControlLayoutCustomIcon', () => {
       type: 'alert',
       iconRef: 'icon',
     };
-    const component = render(<EuiFormControlLayoutCustomIcon {...props} />);
+    const component = render(<WuiFormControlLayoutCustomIcon {...props} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiRange } from './range';
+import { WuiRange } from './range';
 
 jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
@@ -31,10 +44,10 @@ const props = {
   value: '8',
 };
 
-describe('EuiRange', () => {
+describe('WuiRange', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRange
+      <WuiRange
         name="name"
         id="id"
         onChange={() => {}}
@@ -48,32 +61,32 @@ describe('EuiRange', () => {
 
   describe('props', () => {
     test('disabled should render', () => {
-      const component = render(<EuiRange {...props} disabled />);
+      const component = render(<WuiRange {...props} disabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth should render', () => {
-      const component = render(<EuiRange {...props} fullWidth />);
+      const component = render(<WuiRange {...props} fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('compressed should render', () => {
-      const component = render(<EuiRange {...props} compressed />);
+      const component = render(<WuiRange {...props} compressed />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('labels should render', () => {
-      const component = render(<EuiRange {...props} showLabels />);
+      const component = render(<WuiRange {...props} showLabels />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('ticks should render', () => {
       const component = render(
-        <EuiRange {...props} showTicks tickInterval={20} />
+        <WuiRange {...props} showTicks tickInterval={20} />
       );
 
       expect(component).toMatchSnapshot();
@@ -81,7 +94,7 @@ describe('EuiRange', () => {
 
     test('custom ticks should render', () => {
       const component = render(
-        <EuiRange
+        <WuiRange
           {...props}
           showTicks
           ticks={[
@@ -95,7 +108,7 @@ describe('EuiRange', () => {
     });
 
     test('range should render', () => {
-      const component = render(<EuiRange {...props} showRange />);
+      const component = render(<WuiRange {...props} showRange />);
 
       expect(component).toMatchSnapshot();
     });
@@ -103,7 +116,7 @@ describe('EuiRange', () => {
     test('value should render', () => {
       const { value, ...localProps } = props;
       const component = render(
-        <EuiRange
+        <WuiRange
           value="200"
           showValue
           valuePrepend="before"
@@ -117,7 +130,7 @@ describe('EuiRange', () => {
 
     test('input should render', () => {
       const component = render(
-        <EuiRange
+        <WuiRange
           name="name"
           id="id"
           onChange={() => {}}
@@ -132,7 +145,7 @@ describe('EuiRange', () => {
 
     test('slider should display in popover', () => {
       const component = render(
-        <EuiRange
+        <WuiRange
           name="name"
           id="id"
           onChange={() => {}}
@@ -147,7 +160,7 @@ describe('EuiRange', () => {
 
     test('levels should render', () => {
       const component = render(
-        <EuiRange
+        <WuiRange
           levels={[
             {
               min: 0,
@@ -171,7 +184,7 @@ describe('EuiRange', () => {
   test('allows value prop to accept a number', () => {
     const { value, ...localProps } = props;
     const component = render(
-      <EuiRange value={8} onChange={() => {}} showValue {...localProps} />
+      <WuiRange value={8} onChange={() => {}} showValue {...localProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -180,7 +193,7 @@ describe('EuiRange', () => {
   test('allows value prop to accept empty string', () => {
     const { value, ...localProps } = props;
     const component = render(
-      <EuiRange value={''} onChange={() => {}} {...localProps} />
+      <WuiRange value={''} onChange={() => {}} {...localProps} />
     );
 
     expect(component).toMatchSnapshot();

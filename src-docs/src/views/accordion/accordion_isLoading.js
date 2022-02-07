@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiButton,
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiTitle,
+  WuiAccordion,
+  WuiButton,
+  WuiButtonGroup,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiTitle,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -54,32 +54,32 @@ export default () => {
 
   return (
     <>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiTitle size="xs">
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiTitle size="xs">
             <h3>isLoadingMessage: </h3>
-          </EuiTitle>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButtonGroup
+          </WuiTitle>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiButtonGroup
             legend="Accordion loading message group"
             options={toggleButtons}
             idSelected={toggleIdSelected}
             onChange={onChange}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="m" />
-      <EuiAccordion
+      <WuiSpacer size="m" />
+      <WuiAccordion
         id="accordionLoading"
         initialIsOpen={true}
         buttonContent="Click to open"
-        extraAction={<EuiButton size="s">Extra action!</EuiButton>}
+        extraAction={<WuiButton size="s">Extra action!</WuiButton>}
         isLoading
         isLoadingMessage={isLoadingMessage}>
         <div>Opened content.</div>
-      </EuiAccordion>
+      </WuiAccordion>
     </>
   );
 };

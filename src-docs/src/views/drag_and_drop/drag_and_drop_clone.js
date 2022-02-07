@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
-  EuiButtonIcon,
-  EuiDragDropContext,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiDraggable,
-  EuiDroppable,
-  EuiIcon,
-  EuiPanel,
-  euiDragDropCopy,
-  euiDragDropReorder,
+  WuiButtonIcon,
+  WuiDragDropContext,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiDraggable,
+  WuiDroppable,
+  WuiIcon,
+  WuiPanel,
+  wuiDragDropCopy,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -46,7 +46,7 @@ export default () => {
   const onDragEnd = ({ source, destination }) => {
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = wuiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -56,7 +56,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropCopy(
+        const result = wuiDragDropCopy(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -75,61 +75,61 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
-      <EuiFlexGroup>
-        <EuiFlexItem style={{ width: '50%' }}>
-          <EuiDroppable
+    <WuiDragDropContext onDragEnd={onDragEnd} onDragUpdate={onDragUpdate}>
+      <WuiFlexGroup>
+        <WuiFlexItem style={{ width: '50%' }}>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_COPY_1"
             cloneDraggables={true}
             spacing="l"
             grow>
             {list1.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="l">
-                <EuiPanel>{content}</EuiPanel>
-              </EuiDraggable>
+              <WuiDraggable key={id} index={idx} draggableId={id} spacing="l">
+                <WuiPanel>{content}</WuiPanel>
+              </WuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem style={{ width: '50%' }}>
-          <EuiDroppable droppableId="DROPPABLE_AREA_COPY_2" withPanel grow>
+          </WuiDroppable>
+        </WuiFlexItem>
+        <WuiFlexItem style={{ width: '50%' }}>
+          <WuiDroppable droppableId="DROPPABLE_AREA_COPY_2" withPanel grow>
             {list2.length ? (
               list2.map(({ content, id }, idx) => (
-                <EuiDraggable
+                <WuiDraggable
                   key={id}
                   index={idx}
                   draggableId={id}
                   spacing="l"
                   isRemovable={isItemRemovable}>
-                  <EuiPanel>
-                    <EuiFlexGroup gutterSize="none" alignItems="center">
-                      <EuiFlexItem>{content}</EuiFlexItem>
-                      <EuiFlexItem grow={false}>
+                  <WuiPanel>
+                    <WuiFlexGroup gutterSize="none" alignItems="center">
+                      <WuiFlexItem>{content}</WuiFlexItem>
+                      <WuiFlexItem grow={false}>
                         {isItemRemovable ? (
-                          <EuiIcon type="trash" color="danger" />
+                          <WuiIcon type="trash" color="danger" />
                         ) : (
-                          <EuiButtonIcon
+                          <WuiButtonIcon
                             iconType="cross"
                             aria-label="Remove"
                             onClick={() => remove('DROPPABLE_AREA_COPY_2', idx)}
                           />
                         )}
-                      </EuiFlexItem>
-                    </EuiFlexGroup>
-                  </EuiPanel>
-                </EuiDraggable>
+                      </WuiFlexItem>
+                    </WuiFlexGroup>
+                  </WuiPanel>
+                </WuiDraggable>
               ))
             ) : (
-              <EuiFlexGroup
+              <WuiFlexGroup
                 alignItems="center"
                 justifyContent="spaceAround"
                 gutterSize="none"
                 style={{ height: '100%' }}>
-                <EuiFlexItem grow={false}>Drop Items Here</EuiFlexItem>
-              </EuiFlexGroup>
+                <WuiFlexItem grow={false}>Drop Items Here</WuiFlexItem>
+              </WuiFlexGroup>
             )}
-          </EuiDroppable>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiDragDropContext>
+          </WuiDroppable>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiDragDropContext>
   );
 };

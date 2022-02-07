@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import { translateUsingPseudoLocale } from '../../../src/services/string/pseudo_locale_translator';
 
-// For testing/demoing EuiDatePicker, process moment's `en` locale config into a babelfished version
+// For testing/demoing WuiDatePicker, process moment's `en` locale config into a babelfished version
 const enConfig = moment.localeData('en')._config;
 moment.defineLocale('en-xa', {
   ...enConfig,
@@ -17,19 +17,19 @@ moment.defineLocale('en-xa', {
 // Reset default moment locale after using `defineLocale`
 moment.locale('en');
 
-import { EuiSwitch, EuiFormRow } from '../../../../src/components';
+import { WuiSwitch, WuiFormRow } from '../../../../src/components';
 
 export const GuideLocaleSelector = ({ selectedLocale, onToggleLocale }) => {
   return (
-    <EuiFormRow label="Translations for development" hasChildLabel={false}>
-      <EuiSwitch
+    <WuiFormRow label="Translations for development" hasChildLabel={false}>
+      <WuiSwitch
         label="Activate babelfish"
         checked={selectedLocale === 'en-xa'}
         onChange={() =>
           onToggleLocale(selectedLocale === 'en' ? 'en-xa' : 'en')
         }
       />
-    </EuiFormRow>
+    </WuiFormRow>
   );
 };
 

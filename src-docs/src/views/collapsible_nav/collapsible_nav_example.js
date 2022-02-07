@@ -6,12 +6,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiCollapsibleNav,
-  EuiText,
-  EuiSpacer,
-  EuiCallOut,
-  EuiCollapsibleNavGroup,
+  WuiCode,
+  WuiCollapsibleNav,
+  WuiText,
+  WuiSpacer,
+  WuiCallOut,
+  WuiCollapsibleNavGroup,
 } from '../../../../src/components';
 
 import CollapsibleNav from './collapsible_nav';
@@ -32,19 +32,18 @@ const collapsibleNavAllHtml = renderToHtml(CollapsibleNavAll);
 
 export const CollapsibleNavExample = {
   title: 'Collapsible nav',
-  isNew: true,
   intro: (
-    <EuiText>
+    <WuiText>
       <p>
         This is a high level component that creates a flyout-style navigational
         pane. It is the next evolution of{' '}
         <Link to="/layout/nav-drawer">
-          <strong>EuiNavDrawer</strong>
+          <strong>WuiNavDrawer</strong>
         </Link>{' '}
         which will be deprecated soon.
       </p>
-      <EuiSpacer size="m" />
-    </EuiText>
+      <WuiSpacer size="m" />
+    </WuiText>
   ),
   sections: [
     {
@@ -61,25 +60,25 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiCollapsibleNav</strong> is a similar implementation to{' '}
+            <strong>WuiCollapsibleNav</strong> is a similar implementation to{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>WuiFlyout</strong>
             </Link>
             ; the visibility of which must be maintained by the consuming
             application. An extra feature that it provides is the ability to{' '}
-            <EuiCode>dock</EuiCode> the flyout. This affixes the flyout to the
+            <WuiCode>dock</WuiCode> the flyout. This affixes the flyout to the
             window and pushes the body content by adding left side padding.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             iconType="tableOfContents"
             title="Docking is not possible on small screens because it would force less real estate for the page content."
           />
         </>
       ),
-      props: { EuiCollapsibleNav },
+      props: { WuiCollapsibleNav },
       demo: <CollapsibleNav />,
-      snippet: `<EuiCollapsibleNav
-  button={<EuiButton onClick={() => setNavIsOpen(!navIsOpen)}>Toggle nav</EuiButton>}
+      snippet: `<WuiCollapsibleNav
+  button={<WuiButton onClick={() => setNavIsOpen(!navIsOpen)}>Toggle nav</WuiButton>}
   isOpen={navIsOpen}
   isDocked={navIsDocked}
   onClose={() => setNavIsOpen(false)}
@@ -100,26 +99,26 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            An <strong>EuiCollapsibleNavGroup</strong> adds some basic borders
-            and <EuiCode>background</EuiCode> color of <EuiCode>none</EuiCode>,{' '}
-            <EuiCode>light</EuiCode>, or <EuiCode>dark</EuiCode>. Give each
-            section a heading by providing an optional <EuiCode>title</EuiCode>{' '}
-            and <EuiCode>iconType</EuiCode>. Make the section collapsible (
+            An <strong>WuiCollapsibleNavGroup</strong> adds some basic borders
+            and <WuiCode>background</WuiCode> color of <WuiCode>none</WuiCode>,{' '}
+            <WuiCode>light</WuiCode>, or <WuiCode>dark</WuiCode>. Give each
+            section a heading by providing an optional <WuiCode>title</WuiCode>{' '}
+            and <WuiCode>iconType</WuiCode>. Make the section collapsible (
             <Link to="/layout/accordion">accordion style</Link>) with{' '}
-            <EuiCode language="js">isCollapsible=true</EuiCode>.
+            <WuiCode language="js">isCollapsible=true</WuiCode>.
           </p>
           <p>
-            When in <EuiCode>isCollapsible</EuiCode> mode, a{' '}
-            <EuiCode>title</EuiCode> and{' '}
-            <EuiCode language="ts">initialIsOpen:boolean</EuiCode> is required.
+            When in <WuiCode>isCollapsible</WuiCode> mode, a{' '}
+            <WuiCode>title</WuiCode> and{' '}
+            <WuiCode language="ts">initialIsOpen:boolean</WuiCode> is required.
           </p>
         </>
       ),
       props: {
-        EuiCollapsibleNavGroup,
+        WuiCollapsibleNavGroup,
       },
       demo: <CollapsibleNavGroup />,
-      snippet: `<EuiCollapsibleNavGroup
+      snippet: `<WuiCollapsibleNavGroup
   title="Nav group"
   iconType="logo"
   isCollapsible={true}
@@ -142,14 +141,14 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiCollapsibleNavGroups</strong> can contain any children.
+            <strong>WuiCollapsibleNavGroups</strong> can contain any children.
             They work well with{' '}
             <Link to="/display/list-group">
-              <strong>EuiListGroup, EuiPinnableListGroup</strong>
+              <strong>WuiListGroup, WuiPinnableListGroup</strong>
             </Link>{' '}
             and simple{' '}
             <Link to="/navigation/link">
-              <strong>EuiText</strong>
+              <strong>WuiText</strong>
             </Link>
             .
           </p>
@@ -157,13 +156,13 @@ export const CollapsibleNavExample = {
         </>
       ),
       demo: <CollapsibleNavList />,
-      snippet: `<EuiCollapsibleNavGroup
-  title="Kibana"
-  iconType="logoKibana"
+      snippet: `<WuiCollapsibleNavGroup
+  title="Wazuh"
+  iconType="logoWazuh"
   isCollapsible={true}
   initialIsOpen={true}>
-  <EuiPinnableListGroup
-    aria-label="Kibana"
+  <WuiPinnableListGroup
+    aria-label="Wazuh"
     listItems={[
       { label: 'Discover' },
       { label: 'Visualize' }
@@ -174,7 +173,7 @@ export const CollapsibleNavExample = {
     gutterSize="none"
     size="s"
   />
-</EuiCollapsibleNavGroup>`,
+</WuiCollapsibleNavGroup>`,
     },
     {
       title: 'Full pattern with header and saved pins',
@@ -194,11 +193,11 @@ export const CollapsibleNavExample = {
           <p>
             The button below will launch a full screen example that includes{' '}
             <Link to="/layout/header">
-              <strong>EuiHeader</strong>
+              <strong>WuiHeader</strong>
             </Link>{' '}
-            with a toggle button to open an <strong>EuiCollapsibleNav</strong>.
+            with a toggle button to open an <strong>WuiCollapsibleNav</strong>.
             The contents of which are multiple{' '}
-            <strong>EuiCollapsibleNavGroups</strong> and saves the
+            <strong>WuiCollapsibleNavGroups</strong> and saves the
             open/closed/pinned state for each section and item in local store.
           </p>
           <p>

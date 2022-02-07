@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,66 +34,66 @@ import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-import { EuiI18n } from '../../i18n';
-import { EuiListGroup, EuiListGroupProps } from '../list_group';
-import { EuiListGroupItemProps } from '../list_group_item';
+import { WuiI18n } from '../../i18n';
+import { WuiListGroup, WuiListGroupProps } from '../list_group';
+import { WuiListGroupItemProps } from '../list_group_item';
 
-const pinExtraAction: EuiListGroupItemProps['extraAction'] = {
+const pinExtraAction: WuiListGroupItemProps['extraAction'] = {
   color: 'primary',
   iconType: 'pinFilled',
   iconSize: 's',
-  className: 'euiPinnableListGroup__itemExtraAction',
+  className: 'wuiPinnableListGroup__itemExtraAction',
 };
 
-const pinnedExtraAction: EuiListGroupItemProps['extraAction'] = {
+const pinnedExtraAction: WuiListGroupItemProps['extraAction'] = {
   color: 'primary',
   iconType: 'pinFilled',
   iconSize: 's',
   className:
-    'euiPinnableListGroup__itemExtraAction euiPinnableListGroup__itemExtraAction-pinned',
+    'wuiPinnableListGroup__itemExtraAction wuiPinnableListGroup__itemExtraAction-pinned',
   alwaysShow: true,
 };
 
-export type EuiPinnableListGroupItemProps = EuiListGroupItemProps & {
+export type WuiPinnableListGroupItemProps = WuiListGroupItemProps & {
   /**
    * Saves the pinned status and changes the visibility of the pin icon
    */
   pinned?: boolean;
   /**
-   * Passing `onPinClick` to the full EuiPinnableListGroup, will make every item pinnable.
+   * Passing `onPinClick` to the full WuiPinnableListGroup, will make every item pinnable.
    * Set this property to `false` to turn off individual item pinnability
    */
   pinnable?: boolean;
 };
 
-export interface EuiPinnableListGroupProps
+export interface WuiPinnableListGroupProps
   extends CommonProps,
-    EuiListGroupProps {
+    WuiListGroupProps {
   /**
-   * Extends `EuiListGroupItemProps`, at the very least, expecting a `label`.
-   * See #EuiPinnableListGroupItem
+   * Extends `WuiListGroupItemProps`, at the very least, expecting a `label`.
+   * See #WuiPinnableListGroupItem
    */
-  listItems: EuiPinnableListGroupItemProps[];
+  listItems: WuiPinnableListGroupItemProps[];
   /**
    * Shows the pin icon and calls this function on click.
-   * Returns `item: EuiPinnableListGroupItemProps`
+   * Returns `item: WuiPinnableListGroupItemProps`
    */
-  onPinClick: (item: EuiPinnableListGroupItemProps) => void;
+  onPinClick: (item: WuiPinnableListGroupItemProps) => void;
   /**
    * The pin icon needs a title/aria-label for accessibility.
    * It is a function that passes the item back and must return a string `(item) => string`.
    * Default is `"Pin item"`
    */
-  pinTitle?: (item: EuiPinnableListGroupItemProps) => string;
+  pinTitle?: (item: WuiPinnableListGroupItemProps) => string;
   /**
    * The unpin icon needs a title/aria-label for accessibility.
    * It is a function that passes the item back and must return a string `(item) => string`.
    * Default is `"Unpin item"`
    */
-  unpinTitle?: (item: EuiPinnableListGroupItemProps) => string;
+  unpinTitle?: (item: WuiPinnableListGroupItemProps) => string;
 }
 
-export const EuiPinnableListGroup: FunctionComponent<EuiPinnableListGroupProps> = ({
+export const WuiPinnableListGroup: FunctionComponent<WuiPinnableListGroupProps> = ({
   className,
   listItems,
   pinTitle,
@@ -88,7 +101,7 @@ export const EuiPinnableListGroup: FunctionComponent<EuiPinnableListGroupProps> 
   onPinClick,
   ...rest
 }) => {
-  const classes = classNames('euiPinnableListGroup', className);
+  const classes = classNames('wuiPinnableListGroup', className);
 
   // Alter listItems object with extra props
   const getNewListItems = (
@@ -99,7 +112,7 @@ export const EuiPinnableListGroup: FunctionComponent<EuiPinnableListGroupProps> 
       const { pinned, pinnable = true, ...itemProps } = item;
       // Make some declarations of props for the nav implementation
       itemProps.className = classNames(
-        'euiPinnableListGroup__item',
+        'wuiPinnableListGroup__item',
         item.className
       );
 
@@ -129,10 +142,10 @@ export const EuiPinnableListGroup: FunctionComponent<EuiPinnableListGroupProps> 
     });
 
   return (
-    <EuiI18n
+    <WuiI18n
       tokens={[
-        'euiPinnableListGroup.pinExtraActionLabel',
-        'euiPinnableListGroup.pinnedExtraActionLabel',
+        'wuiPinnableListGroup.pinExtraActionLabel',
+        'wuiPinnableListGroup.pinnedExtraActionLabel',
       ]}
       defaults={['Pin item', 'Unpin item']}>
       {([pinExtraActionLabel, pinnedExtraActionLabel]: string[]) => {
@@ -141,13 +154,13 @@ export const EuiPinnableListGroup: FunctionComponent<EuiPinnableListGroupProps> 
           pinnedExtraActionLabel
         );
         return (
-          <EuiListGroup
+          <WuiListGroup
             className={classes}
             listItems={newListItems}
             {...rest}
           />
         );
       }}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

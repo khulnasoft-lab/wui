@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import format from 'html-format';
 
 import { useView, Compiler, Placeholder } from 'react-view';
-import { EuiSpacer, EuiTitle, EuiCodeBlock } from '../../../../src/components';
+import { WuiSpacer, WuiTitle, WuiCodeBlock } from '../../../../src/components';
 import Knobs from './knobs';
 
 export default ({ config, setGhostBackground, playgroundClassName }) => {
@@ -55,9 +55,9 @@ export default ({ config, setGhostBackground, playgroundClassName }) => {
 
     return (
       <React.Fragment>
-        <EuiTitle>
+        <WuiTitle>
           <h3>{config.componentName}</h3>
-        </EuiTitle>
+        </WuiTitle>
         <div className={compilerClasses}>
           <Compiler
             {...params.compilerProps}
@@ -65,15 +65,15 @@ export default ({ config, setGhostBackground, playgroundClassName }) => {
             placeholder={Placeholder}
           />
         </div>
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
+        <WuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
           {getSnippet(params.editorProps.code)}
-        </EuiCodeBlock>
-        <EuiSpacer />
+        </WuiCodeBlock>
+        <WuiSpacer />
 
         <Knobs {...params.knobProps} />
-        <EuiSpacer />
+        <WuiSpacer />
       </React.Fragment>
     );
   };

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiTitle,
-  EuiSpacer,
+  WuiBreadcrumbs,
+  WuiTitle,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -43,22 +43,22 @@ export default () => {
 
   return (
     <>
-      <EuiTitle size="xs">
+      <WuiTitle size="xs">
         <span>Turning responsive completely off</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiBreadcrumbs
         responsive={false}
         breadcrumbs={breadcrumbs}
         max={null}
-        aria-label="An example of non-responsive EuiBreadcrumbs"
+        aria-label="An example of non-responsive WuiBreadcrumbs"
       />
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      <WuiSpacer />
+      <WuiTitle size="xs">
         <span>Customizing number of items to display</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiBreadcrumbs
         responsive={{
           xs: 1,
           s: 3,
@@ -67,7 +67,7 @@ export default () => {
         }}
         breadcrumbs={breadcrumbs}
         max={null}
-        aria-label="An example of custom responsive EuiBreadcrumbs"
+        aria-label="An example of custom responsive WuiBreadcrumbs"
       />
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiFilterGroup, EuiFilterButton } from '../../../../src/components';
+import { WuiFilterGroup, WuiFilterButton } from '../../../../src/components';
 
 export default () => {
   const [isFilterOn, setIsFilterOn] = useState(false);
@@ -22,21 +22,21 @@ export default () => {
   };
 
   return (
-    <EuiFilterGroup>
-      <EuiFilterButton hasActiveFilters={isFilterOn} onClick={toggleFilter}>
+    <WuiFilterGroup>
+      <WuiFilterButton hasActiveFilters={isFilterOn} onClick={toggleFilter}>
         Single filter
-      </EuiFilterButton>
-      <EuiFilterButton
+      </WuiFilterButton>
+      <WuiFilterButton
         withNext
         hasActiveFilters={isOnFilterOn}
         onClick={toggleOnFilter}>
         On
-      </EuiFilterButton>
-      <EuiFilterButton
+      </WuiFilterButton>
+      <WuiFilterButton
         hasActiveFilters={isOffFilterOn}
         onClick={toggleOffFilter}>
         Off
-      </EuiFilterButton>
-    </EuiFilterGroup>
+      </WuiFilterButton>
+    </WuiFilterGroup>
   );
 };

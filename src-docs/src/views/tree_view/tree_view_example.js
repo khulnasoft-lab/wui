@@ -5,8 +5,8 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiTreeView } from '../../../../src/components';
-import { EuiTreeViewNode } from './tree_view_props';
+import { WuiCode, WuiTreeView } from '../../../../src/components';
+import { WuiTreeViewNode } from './tree_view_props';
 import TreeView from './tree_view';
 import TreeViewCompressed from './compressed';
 
@@ -17,24 +17,24 @@ const treeViewCompressedSource = require('!!raw-loader!./compressed');
 const treeViewCompressedHtml = renderToHtml(TreeViewCompressed);
 
 const treeViewSnippet = [
-  `<EuiTreeView
+  `<WuiTreeView
   items={[
     {
       label: 'Item One',
       id: 'item_one',
-      icon: <EuiIcon type="arrowRight" />,
-      iconWhenExpanded: <EuiIcon type="arrowDown" />,
+      icon: <WuiIcon type="arrowRight" />,
+      iconWhenExpanded: <WuiIcon type="arrowDown" />,
       isExpanded: true,
       children: [
         {
           label: 'Item A',
           id: 'item_a',
-          icon: <EuiIcon type="document" />,
+          icon: <WuiIcon type="document" />,
         },
         {
           label: 'Item B',
           id: 'item_b',
-          icon: <EuiIcon type="document" />,
+          icon: <WuiIcon type="document" />,
         },
       ],
     },
@@ -64,26 +64,26 @@ export const TreeViewExample = {
       text: (
         <div>
           <p>
-            <strong>EuiTreeView</strong> allows you to render recursive objects,
-            such as a file directory. The <EuiCode>children</EuiCode> prop takes
-            an array of <EuiCode>nodes</EuiCode>.
+            <strong>WuiTreeView</strong> allows you to render recursive objects,
+            such as a file directory. The <WuiCode>children</WuiCode> prop takes
+            an array of <WuiCode>nodes</WuiCode>.
           </p>
           <p>
             Keyboard navigation allows users to navigate and interact with the
             tree using the arrow keys, spacebar, and return.
           </p>
           <p>
-            The <EuiCode>icon</EuiCode> prop accepts any{' '}
+            The <WuiCode>icon</WuiCode> prop accepts any{' '}
             <Link to="/display/icons">icon or token</Link>. You can also
             specifiy a different icon for the open state with the{' '}
-            <EuiCode>iconWhenExpanded</EuiCode> prop.
+            <WuiCode>iconWhenExpanded</WuiCode> prop.
           </p>
         </div>
       ),
-      components: { EuiTreeView },
+      components: { WuiTreeView },
       demo: <TreeView />,
       snippet: treeViewSnippet,
-      props: { EuiTreeView, EuiTreeViewNode },
+      props: { WuiTreeView, WuiTreeViewNode },
     },
     {
       title: 'Optional styling',
@@ -100,16 +100,16 @@ export const TreeViewExample = {
       text: (
         <div>
           <p>
-            <strong>EuiTreeView</strong> supports a compressed mode with the{' '}
-            <EuiCode language="js">{'display="compressed"'}</EuiCode> setting.
+            <strong>WuiTreeView</strong> supports a compressed mode with the{' '}
+            <WuiCode language="js">{'display="compressed"'}</WuiCode> setting.
             When using the compressed version it&apos;s highly recommended to
-            use the small size of <strong>EuiIcon</strong> and the extra small
-            size of <strong>EuiToken</strong>. This will help prevent awkard
+            use the small size of <strong>WuiIcon</strong> and the extra small
+            size of <strong>WuiToken</strong>. This will help prevent awkard
             alignment issues when used alongside the{' '}
-            <EuiCode>showExpansionArrows</EuiCode> prop.
+            <WuiCode>showExpansionArrows</WuiCode> prop.
           </p>
           <p>
-            The <EuiCode>showExpansionArrows</EuiCode> prop provides an
+            The <WuiCode>showExpansionArrows</WuiCode> prop provides an
             additional visual indicator. Ideal for when a tree&apos;s items use
             icons that don&apos;t immediately let a user know that there are
             nested nodes that may not be visible.
@@ -117,19 +117,19 @@ export const TreeViewExample = {
           <p>
             In some cases, you may want to automatically expand all the items
             with children. In those instances, you can use the{' '}
-            <EuiCode>expandByDefault</EuiCode> prop, as seen in the example
+            <WuiCode>expandByDefault</WuiCode> prop, as seen in the example
             below.
           </p>
           <p>
             Lastly, each node can also accept a custom{' '}
-            <EuiCode>className</EuiCode> should you need to style them
+            <WuiCode>className</WuiCode> should you need to style them
             individually.
           </p>
         </div>
       ),
-      components: { EuiTreeView },
+      components: { WuiTreeView },
       demo: <TreeViewCompressed />,
-      props: { EuiTreeView, EuiTreeViewNode },
+      props: { WuiTreeView, WuiTreeViewNode },
     },
   ],
 };

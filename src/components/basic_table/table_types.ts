@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,24 +40,24 @@ import { CommonProps } from '../common';
 export type ItemId<T> = string | number | ((item: T) => string);
 export type ItemIdResolved = string | number;
 
-export type EuiTableDataType =
+export type WuiTableDataType =
   | 'auto'
   | 'string'
   | 'number'
   | 'boolean'
   | 'date';
 
-export interface EuiTableFooterProps<T> {
+export interface WuiTableFooterProps<T> {
   items: T[];
   pagination?: Pagination;
 }
-export interface EuiTableFieldDataColumnType<T>
+export interface WuiTableFieldDataColumnType<T>
   extends CommonProps,
     TdHTMLAttributes<HTMLTableDataCellElement> {
   field: keyof T | string; // supports outer.inner key paths
   name: ReactNode;
   description?: string;
-  dataType?: EuiTableDataType;
+  dataType?: WuiTableDataType;
   width?: string;
   sortable?: boolean | ((item: T) => Primitive);
   isExpander?: boolean;
@@ -63,10 +76,10 @@ export interface EuiTableFieldDataColumnType<T>
   footer?:
     | string
     | ReactElement
-    | ((props: EuiTableFooterProps<T>) => ReactNode);
+    | ((props: WuiTableFooterProps<T>) => ReactNode);
 }
 
-export interface EuiTableComputedColumnType<T>
+export interface WuiTableComputedColumnType<T>
   extends CommonProps,
     TdHTMLAttributes<HTMLTableDataCellElement> {
   render: (record: T) => ReactNode;
@@ -79,14 +92,14 @@ export interface EuiTableComputedColumnType<T>
   align?: HorizontalAlignment;
 }
 
-export interface EuiTableActionsColumnType<T> {
+export interface WuiTableActionsColumnType<T> {
   actions: Array<Action<T>>;
   name?: ReactNode;
   description?: string;
   width?: string;
 }
 
-export interface EuiTableSortingType<T> {
+export interface WuiTableSortingType<T> {
   sort?: {
     field: keyof T;
     direction: Direction;
@@ -95,7 +108,7 @@ export interface EuiTableSortingType<T> {
   enableAllColumns?: boolean;
 }
 
-export interface EuiTableSelectionType<T> {
+export interface WuiTableSelectionType<T> {
   onSelectionChange?: (selection: T[]) => void;
   selectable?: (item: T) => boolean;
   selectableMessage?: (selectable: boolean, item: T) => string;

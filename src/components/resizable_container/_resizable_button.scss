@@ -1,6 +1,6 @@
 // Mimics the "grab" icon with CSS psuedo-elements.
 // The "grab" icon transforms into a 2px straight line on :hover and :focus.
-.euiResizableButton {
+.wuiResizableButton {
   position: relative;
   flex-shrink: 0;
 
@@ -11,16 +11,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: $euiColorDarkestShade;
+    background-color: $wuiColorDarkestShade;
     transition: (
-      width $euiResizableButtonTransitionSpeed ease,
-      height $euiResizableButtonTransitionSpeed ease,
-      transform $euiResizableButtonTransitionSpeed ease,
-      background-color $euiResizableButtonTransitionSpeed ease
+      width $wuiResizableButtonTransitionSpeed ease,
+      height $wuiResizableButtonTransitionSpeed ease,
+      transform $wuiResizableButtonTransitionSpeed ease,
+      background-color $wuiResizableButtonTransitionSpeed ease
     );
   }
 
-  &.euiResizableButton--horizontal {
+  &.wuiResizableButton--horizontal {
     cursor: col-resize;
 
     &:before,
@@ -38,7 +38,7 @@
     }
   }
 
-  &.euiResizableButton--vertical {
+  &.wuiResizableButton--vertical {
     cursor: row-resize;
 
     &:before,
@@ -60,32 +60,32 @@
   &:hover {
     &:before,
     &:after {
-      background-color: $euiColorMediumShade;
-      transition-delay: $euiResizableButtonTransitionSpeed; //Delay transition on hover so animation is not accidentally triggered on mouse over
+      background-color: $wuiColorMediumShade;
+      transition-delay: $wuiResizableButtonTransitionSpeed; //Delay transition on hover so animation is not accidentally triggered on mouse over
     }
   }
 
   //Add a transparent background to the container and emphasis the "grab" icon with primary color on :focus
   &:focus {
-    background-color: transparentize($euiColorPrimary, .9);
+    background-color: transparentize($wuiColorPrimary, .9);
 
     &:before,
     &:after {
-      background-color: $euiColorPrimary;
+      background-color: $wuiColorPrimary;
       // Overrides default transition so that "grab" icon background-color doesn't animate
       transition: (
-        width $euiResizableButtonTransitionSpeed ease,
-        height $euiResizableButtonTransitionSpeed ease,
-        transform $euiResizableButtonTransitionSpeed ease
+        width $wuiResizableButtonTransitionSpeed ease,
+        height $wuiResizableButtonTransitionSpeed ease,
+        transform $wuiResizableButtonTransitionSpeed ease
       );
-      transition-delay: $euiResizableButtonTransitionSpeed / 2;
+      transition-delay: $wuiResizableButtonTransitionSpeed / 2;
     }
   }
 
   //Morph the "grab" icon into a fluid 2px straight line on :hover and :focus
   &:hover,
   &:focus {
-    &.euiResizableButton--horizontal {
+    &.wuiResizableButton--horizontal {
       &:before,
       &:after {
         height: 100%;
@@ -100,7 +100,7 @@
       }
     }
 
-    &.euiResizableButton--vertical {
+    &.wuiResizableButton--vertical {
       &:before,
       &:after {
         width: 100%;
@@ -118,13 +118,13 @@
 }
 
 //Generate modifier classes that control the size of the resizer
-@each $modifier, $amount in $euiResizableButtonSizeModifiers {
-  .euiResizableButton--#{$modifier} {
-    &.euiResizableButton--vertical {
+@each $modifier, $amount in $wuiResizableButtonSizeModifiers {
+  .wuiResizableButton--#{$modifier} {
+    &.wuiResizableButton--vertical {
       height: $amount;
     }
 
-    &.euiResizableButton--horizontal {
+    &.wuiResizableButton--horizontal {
       width: $amount;
     }
   }

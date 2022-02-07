@@ -1,46 +1,46 @@
-.euiListGroupItem {
+.wuiListGroupItem {
   padding: 0;
-  border-radius: $euiBorderRadius;
+  border-radius: $wuiBorderRadius;
   overflow: hidden;
   display: flex;
   align-items: center;
-  transition: background-color $euiAnimSpeedFast;
+  transition: background-color $wuiAnimSpeedFast;
   position: relative;
 
-  &.euiListGroupItem-isActive,
-  &.euiListGroupItem-isClickable:hover {
-    background-color: $euiListGroupItemHoverBackground;
+  &.wuiListGroupItem-isActive,
+  &.wuiListGroupItem-isClickable:hover {
+    background-color: $wuiListGroupItemHoverBackground;
   }
 
   // Can't be grouped with above or else IE will ignore the whole group
-  &.euiListGroupItem-isClickable:focus-within {
-    background-color: $euiListGroupItemHoverBackground;
+  &.wuiListGroupItem-isClickable:focus-within {
+    background-color: $wuiListGroupItemHoverBackground;
   }
 
-  &.euiListGroupItem--ghost {
-    &.euiListGroupItem-isClickable:hover {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+  &.wuiListGroupItem--ghost {
+    &.wuiListGroupItem-isClickable:hover {
+      background-color: $wuiListGroupItemHoverBackgroundGhost;
     }
 
     // Can't be grouped with above or else IE will ignore the whole group
-    &.euiListGroupItem-isClickable:focus-within {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+    &.wuiListGroupItem-isClickable:focus-within {
+      background-color: $wuiListGroupItemHoverBackgroundGhost;
     }
   }
 
-  &.euiListGroupItem-isClickable:hover .euiListGroupItem__button,
-  .euiListGroupItem__button:hover,
-  .euiListGroupItem__button:focus {
+  &.wuiListGroupItem-isClickable:hover .wuiListGroupItem__button,
+  .wuiListGroupItem__button:hover,
+  .wuiListGroupItem__button:focus {
     text-decoration: underline;
   }
 
   // Style all disabled list items whether or not they are links or buttons
-  &.euiListGroupItem-isDisabled,
-  &.euiListGroupItem-isDisabled:hover,
-  &.euiListGroupItem-isDisabled:focus,
-  &.euiListGroupItem-isDisabled .euiListGroupItem__button:hover,
-  &.euiListGroupItem-isDisabled .euiListGroupItem__button:focus {
-    color: $euiButtonColorDisabled;
+  &.wuiListGroupItem-isDisabled,
+  &.wuiListGroupItem-isDisabled:hover,
+  &.wuiListGroupItem-isDisabled:focus,
+  &.wuiListGroupItem-isDisabled .wuiListGroupItem__button:hover,
+  &.wuiListGroupItem-isDisabled .wuiListGroupItem__button:focus {
+    color: $wuiButtonColorDisabled;
     cursor: not-allowed;
     background-color: transparent;
     text-decoration: none;
@@ -49,22 +49,22 @@
 
 // IE doesn't support :focus-within
 @include internetExplorerOnly {
-  .euiListGroupItem__button:hover,
-  .euiListGroupItem__button:focus {
-    background-color: $euiListGroupItemHoverBackground;
-    border-radius: $euiBorderRadius;
+  .wuiListGroupItem__button:hover,
+  .wuiListGroupItem__button:focus {
+    background-color: $wuiListGroupItemHoverBackground;
+    border-radius: $wuiBorderRadius;
 
-    .euiListGroupItem--ghost .euiListGroupItem__button:hover,
-    .euiListGroupItem--ghost .euiListGroupItem__button:focus {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+    .wuiListGroupItem--ghost .wuiListGroupItem__button:hover,
+    .wuiListGroupItem--ghost .wuiListGroupItem__button:focus {
+      background-color: $wuiListGroupItemHoverBackgroundGhost;
     }
   }
 }
 
-.euiListGroupItem__text,
-.euiListGroupItem__button {
-  line-height: $euiSizeL;
-  padding: $euiSizeXS $euiSizeS;
+.wuiListGroupItem__text,
+.wuiListGroupItem__button {
+  line-height: $wuiSizeL;
+  padding: $wuiSizeXS $wuiSizeS;
   display: flex;
   align-items: center;
   flex: 1 0 auto; // The flex-shrink and flex-basis values are needed for IE11
@@ -72,103 +72,103 @@
   max-width: 100%;
   font-weight: inherit;
 
-  .euiListGroupItem-hasExtraAction & {
-    max-width: calc(100% - #{$euiSizeXL});
+  .wuiListGroupItem-hasExtraAction & {
+    max-width: calc(100% - #{$wuiSizeXL});
   }
 
-  @each $colorName, $color in $euiListGroupItemColorTypes {
-    .euiListGroupItem--#{$colorName} &:not(:disabled) {
+  @each $colorName, $color in $wuiListGroupItemColorTypes {
+    .wuiListGroupItem--#{$colorName} &:not(:disabled) {
       color: $color;
     }
   }
 
-  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) & {
-    color: $euiTextColor;
+  .wuiListGroupItem-isActive:not(.wuiListGroupItem--ghost) & {
+    color: $wuiTextColor;
   }
 }
 
-.euiListGroupItem__label {
+.wuiListGroupItem__label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.euiListGroupItem__extraAction {
+.wuiListGroupItem__extraAction {
   opacity: 0;
-  margin-right: $euiSizeS;
-  transition: opacity $euiAnimSpeedFast;
+  margin-right: $wuiSizeS;
+  transition: opacity $wuiAnimSpeedFast;
 
-  .euiListGroupItem:not(.euiListGroupItem-isDisabled):focus &,
-  .euiListGroupItem:not(.euiListGroupItem-isDisabled):hover &,
-  &.euiListGroupItem__extraAction-alwaysShow,
+  .wuiListGroupItem:not(.wuiListGroupItem-isDisabled):focus &,
+  .wuiListGroupItem:not(.wuiListGroupItem-isDisabled):hover &,
+  &.wuiListGroupItem__extraAction-alwaysShow,
   &:focus {
     opacity: 1;
   }
 }
 
-.euiListGroupItem__icon {
-  margin-right: $euiSizeM;
+.wuiListGroupItem__icon {
+  margin-right: $wuiSizeM;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
 // Font sizes
-@each $sizeName, $fontSize in $euiListGroupItemSizeTypes {
-  .euiListGroupItem--#{$sizeName} {
+@each $sizeName, $fontSize in $wuiListGroupItemSizeTypes {
+  .wuiListGroupItem--#{$sizeName} {
     font-size: $fontSize;
   }
 }
 
-.euiListGroupItem--xSmall,
-.euiListGroupItem--small {
-  font-weight: $euiFontWeightMedium;
+.wuiListGroupItem--xSmall,
+.wuiListGroupItem--small {
+  font-weight: $wuiFontWeightMedium;
   letter-spacing: 0;
 }
 
-.euiListGroupItem--xSmall {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
-    line-height: $euiSize;
+.wuiListGroupItem--xSmall {
+  .wuiListGroupItem__button,
+  .wuiListGroupItem__text {
+    line-height: $wuiSize;
   }
 }
 
-.euiListGroupItem--large {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
-    line-height: $euiSizeXL;
+.wuiListGroupItem--large {
+  .wuiListGroupItem__button,
+  .wuiListGroupItem__text {
+    line-height: $wuiSizeXL;
   }
 }
 
-.euiListGroupItem--wrapText {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
+.wuiListGroupItem--wrapText {
+  .wuiListGroupItem__button,
+  .wuiListGroupItem__text {
     width: 100%;
     word-break: break-word;
   }
 
-  .euiListGroupItem__label {
+  .wuiListGroupItem__label {
     white-space: inherit;
   }
 }
 
-// Layout alts from euiListGroup
+// Layout alts from wuiListGroup
 
-.euiListGroup-flush .euiListGroupItem {
+.wuiListGroup-flush .wuiListGroupItem {
   border-radius: 0;
 }
 
-.euiListGroup-bordered .euiListGroupItem {
+.wuiListGroup-bordered .wuiListGroupItem {
   &:first-child {
-    border-top-left-radius: $euiBorderRadius;
-    border-top-right-radius: $euiBorderRadius;
+    border-top-left-radius: $wuiBorderRadius;
+    border-top-right-radius: $wuiBorderRadius;
   }
 
   &:last-child {
-    border-bottom-left-radius: $euiBorderRadius;
-    border-bottom-right-radius: $euiBorderRadius;
+    border-bottom-left-radius: $wuiBorderRadius;
+    border-bottom-right-radius: $wuiBorderRadius;
   }
 }
 
-.euiListGroupItem__tooltip {
+.wuiListGroupItem__tooltip {
   width: 100%;
 }

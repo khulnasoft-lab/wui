@@ -2,34 +2,34 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 
 import {
-  EuiCollapsibleNav,
-  EuiCollapsibleNavGroup,
+  WuiCollapsibleNav,
+  WuiCollapsibleNavGroup,
 } from '../../../../src/components/collapsible_nav';
 import {
-  EuiHeaderSectionItemButton,
-  EuiHeaderLogo,
-  EuiHeader,
+  WuiHeaderSectionItemButton,
+  WuiHeaderLogo,
+  WuiHeader,
 } from '../../../../src/components/header';
-import { EuiIcon } from '../../../../src/components/icon';
-import { EuiButtonEmpty } from '../../../../src/components/button';
-import { EuiPage } from '../../../../src/components/page';
+import { WuiIcon } from '../../../../src/components/icon';
+import { WuiButtonEmpty } from '../../../../src/components/button';
+import { WuiPage } from '../../../../src/components/page';
 import {
-  EuiPinnableListGroup,
-  EuiListGroupItem,
-  EuiPinnableListGroupItemProps,
+  WuiPinnableListGroup,
+  WuiListGroupItem,
+  WuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
-import { EuiFlexItem } from '../../../../src/components/flex';
-import { EuiHorizontalRule } from '../../../../src/components/horizontal_rule';
+import { WuiFlexItem } from '../../../../src/components/flex';
+import { WuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 import { GuideFullScreen } from '../../services/full_screen/full_screen';
 
 import {
   DeploymentsGroup,
-  KibanaNavLinks,
+  WazuhNavLinks,
   SecurityGroup,
 } from './collapsible_nav_list';
-import { EuiShowFor } from '../../../../src/components/responsive';
+import { WuiShowFor } from '../../../../src/components/responsive';
 
-const TopLinks: EuiPinnableListGroupItemProps[] = [
+const TopLinks: WuiPinnableListGroupItemProps[] = [
   {
     label: 'Home',
     iconType: 'home',
@@ -39,19 +39,17 @@ const TopLinks: EuiPinnableListGroupItemProps[] = [
     pinnable: false,
   },
 ];
-const KibanaLinks: EuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
-  link => {
-    return {
-      ...link,
-      href: '#/navigation/collapsible-nav',
-    };
-  }
-);
-const LearnLinks: EuiPinnableListGroupItemProps[] = [
+const WazuhLinks: WuiPinnableListGroupItemProps[] = WazuhNavLinks.map(link => {
+  return {
+    ...link,
+    href: '#/navigation/collapsible-nav',
+  };
+});
+const LearnLinks: WuiPinnableListGroupItemProps[] = [
   { label: 'Docs', href: '#/navigation/collapsible-nav' },
   { label: 'Blogs', href: '#/navigation/collapsible-nav' },
   { label: 'Webinars', href: '#/navigation/collapsible-nav' },
-  { label: 'Elastic.co', href: 'https://elastic.co' },
+  { label: 'Wazuh.com', href: 'https://www.wazuh.com' },
 ];
 
 export default () => {
@@ -67,7 +65,7 @@ export default () => {
    */
   const [openGroups, setOpenGroups] = useState(
     JSON.parse(String(localStorage.getItem('openNavGroups'))) || [
-      'Kibana',
+      'Wazuh',
       'Learn',
     ]
   );
@@ -93,7 +91,7 @@ export default () => {
    * Pinning
    */
   const [pinnedItems, setPinnedItems] = useState<
-    EuiPinnableListGroupItemProps[]
+    WuiPinnableListGroupItemProps[]
   >(JSON.parse(String(localStorage.getItem('pinnedItems'))) || []);
 
   const addPin = (item: any) => {
@@ -118,9 +116,9 @@ export default () => {
   };
 
   function alterLinksWithCurrentState(
-    links: EuiPinnableListGroupItemProps[],
+    links: WuiPinnableListGroupItemProps[],
     showPinned = false
-  ): EuiPinnableListGroupItemProps[] {
+  ): WuiPinnableListGroupItemProps[] {
     return links.map(link => {
       const { pinned, ...rest } = link;
       return {
@@ -130,40 +128,40 @@ export default () => {
     });
   }
 
-  function addLinkNameToPinTitle(listItem: EuiPinnableListGroupItemProps) {
+  function addLinkNameToPinTitle(listItem: WuiPinnableListGroupItemProps) {
     return `Pin ${listItem.label} to top`;
   }
 
-  function addLinkNameToUnpinTitle(listItem: EuiPinnableListGroupItemProps) {
+  function addLinkNameToUnpinTitle(listItem: WuiPinnableListGroupItemProps) {
     return `Unpin ${listItem.label}`;
   }
 
   const collapsibleNav = (
-    <EuiCollapsibleNav
+    <WuiCollapsibleNav
       id="guideCollapsibleNavAllExampleNav"
       aria-label="Main navigation"
       isOpen={navIsOpen}
       isDocked={navIsDocked}
       button={
-        <EuiHeaderSectionItemButton
+        <WuiHeaderSectionItemButton
           aria-label="Toggle main navigation"
           onClick={() => setNavIsOpen(!navIsOpen)}>
-          <EuiIcon type={'menu'} size="m" aria-hidden="true" />
-        </EuiHeaderSectionItemButton>
+          <WuiIcon type={'menu'} size="m" aria-hidden="true" />
+        </WuiHeaderSectionItemButton>
       }
       onClose={() => setNavIsOpen(false)}>
       {/* Dark deployments section */}
-      <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
+      <WuiFlexItem grow={false} style={{ flexShrink: 0 }}>
         {DeploymentsGroup}
-      </EuiFlexItem>
+      </WuiFlexItem>
 
       {/* Shaded pinned section always with a home item */}
-      <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
-        <EuiCollapsibleNavGroup
+      <WuiFlexItem grow={false} style={{ flexShrink: 0 }}>
+        <WuiCollapsibleNavGroup
           background="light"
-          className="eui-yScroll"
+          className="wui-yScroll"
           style={{ maxHeight: '40vh' }}>
-          <EuiPinnableListGroup
+          <WuiPinnableListGroup
             aria-label="Pinned links" // A11y : Since this group doesn't have a visible `title` it should be provided an accessible description
             listItems={alterLinksWithCurrentState(TopLinks).concat(
               alterLinksWithCurrentState(pinnedItems, true)
@@ -175,23 +173,23 @@ export default () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
-      </EuiFlexItem>
+        </WuiCollapsibleNavGroup>
+      </WuiFlexItem>
 
-      <EuiHorizontalRule margin="none" />
+      <WuiHorizontalRule margin="none" />
 
       {/* BOTTOM */}
-      <EuiFlexItem className="eui-yScroll">
-        {/* Kibana section */}
-        <EuiCollapsibleNavGroup
-          title="Kibana"
-          iconType="logoKibana"
+      <WuiFlexItem className="wui-yScroll">
+        {/* Wazuh section */}
+        <WuiCollapsibleNavGroup
+          title="Wazuh"
+          iconType="logoWazuh"
           isCollapsible={true}
-          initialIsOpen={openGroups.includes('Kibana')}
-          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Kibana')}>
-          <EuiPinnableListGroup
-            aria-label="Kibana" // A11y : EuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
-            listItems={alterLinksWithCurrentState(KibanaLinks)}
+          initialIsOpen={openGroups.includes('Wazuh')}
+          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Wazuh')}>
+          <WuiPinnableListGroup
+            aria-label="Wazuh" // A11y : WuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+            listItems={alterLinksWithCurrentState(WazuhLinks)}
             pinTitle={addLinkNameToPinTitle}
             onPinClick={addPin}
             maxWidth="none"
@@ -199,20 +197,20 @@ export default () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
+        </WuiCollapsibleNavGroup>
 
         {/* Security callout */}
         {SecurityGroup}
 
         {/* Learn section */}
-        <EuiCollapsibleNavGroup
+        <WuiCollapsibleNavGroup
           title="Learn"
           iconType="training"
           isCollapsible={true}
           initialIsOpen={openGroups.includes('Learn')}
           onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Learn')}>
-          <EuiPinnableListGroup
-            aria-label="Learn" // A11y : EuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+          <WuiPinnableListGroup
+            aria-label="Learn" // A11y : WuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
             listItems={alterLinksWithCurrentState(LearnLinks)}
             pinTitle={addLinkNameToPinTitle}
             onPinClick={addPin}
@@ -221,12 +219,12 @@ export default () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
+        </WuiCollapsibleNavGroup>
 
         {/* Docking button only for larger screens that can support it*/}
-        <EuiShowFor sizes={['l', 'xl']}>
-          <EuiCollapsibleNavGroup>
-            <EuiListGroupItem
+        <WuiShowFor sizes={['l', 'xl']}>
+          <WuiCollapsibleNavGroup>
+            <WuiListGroupItem
               size="xs"
               color="subdued"
               label={`${navIsDocked ? 'Undock' : 'Dock'} navigation`}
@@ -239,22 +237,22 @@ export default () => {
               }}
               iconType={navIsDocked ? 'lock' : 'lockOpen'}
             />
-          </EuiCollapsibleNavGroup>
-        </EuiShowFor>
-      </EuiFlexItem>
-    </EuiCollapsibleNav>
+          </WuiCollapsibleNavGroup>
+        </WuiShowFor>
+      </WuiFlexItem>
+    </WuiCollapsibleNav>
   );
 
   const leftSectionItems = [
     collapsibleNav,
-    <EuiHeaderLogo iconType="logoElastic">Elastic</EuiHeaderLogo>,
+    <WuiHeaderLogo iconType="logoWazuh">Wazuh</WuiHeaderLogo>,
   ];
 
   return (
     <GuideFullScreen>
       {setIsFullScreen => (
         <React.Fragment>
-          <EuiHeader
+          <WuiHeader
             position="fixed"
             sections={[
               {
@@ -263,17 +261,17 @@ export default () => {
               },
               {
                 items: [
-                  <EuiButtonEmpty
+                  <WuiButtonEmpty
                     iconType="minimize"
                     onClick={() => setIsFullScreen(false)}>
                     Exit full screen
-                  </EuiButtonEmpty>,
+                  </WuiButtonEmpty>,
                 ],
               },
             ]}
           />
 
-          <EuiPage className="guideFullScreenOverlay" />
+          <WuiPage className="guideFullScreenOverlay" />
         </React.Fragment>
       )}
     </GuideFullScreen>

@@ -23,7 +23,7 @@ export const searchCallbackSection = {
   text: (
     <Fragment>
       <p>
-        The example shows how to configure <strong>EuiInMemoryTable</strong> to
+        The example shows how to configure <strong>WuiInMemoryTable</strong> to
         display a search bar and intercept the search value when it changes so
         you can perform your own search logic.
       </p>

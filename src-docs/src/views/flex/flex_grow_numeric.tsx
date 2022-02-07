@@ -1,31 +1,31 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem grow={1}>1</EuiFlexItem>
-      <EuiFlexItem grow={2}>
+    <WuiFlexGroup>
+      <WuiFlexItem grow={1}>1</WuiFlexItem>
+      <WuiFlexItem grow={2}>
         2<br />
         wraps content if necessary
-      </EuiFlexItem>
-      <EuiFlexItem grow={3}>
+      </WuiFlexItem>
+      <WuiFlexItem grow={3}>
         3<br />
         expands_to_fit_if_content_cannot_wrap
-      </EuiFlexItem>
-      <EuiFlexItem grow={4}>4</EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+      <WuiFlexItem grow={4}>4</WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup>
-      <EuiFlexItem grow={6}>6</EuiFlexItem>
-      <EuiFlexItem grow={3}>3</EuiFlexItem>
-      <EuiFlexItem grow={1}>1</EuiFlexItem>
-      <EuiFlexItem grow={3}>3</EuiFlexItem>
-      <EuiFlexItem grow={6}>6</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup>
+      <WuiFlexItem grow={6}>6</WuiFlexItem>
+      <WuiFlexItem grow={3}>3</WuiFlexItem>
+      <WuiFlexItem grow={1}>1</WuiFlexItem>
+      <WuiFlexItem grow={3}>3</WuiFlexItem>
+      <WuiFlexItem grow={6}>6</WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

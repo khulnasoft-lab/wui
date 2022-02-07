@@ -1,8 +1,8 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiBadge,
-  EuiNotificationBadge,
-  EuiBetaBadge,
+  WuiBadge,
+  WuiNotificationBadge,
+  WuiBetaBadge,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -11,9 +11,9 @@ import {
 } from '../../services/playground';
 
 export const badgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiBadge.__docgenInfo)
-    ? EuiBadge.__docgenInfo[0]
-    : EuiBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiBadge.__docgenInfo)
+    ? WuiBadge.__docgenInfo[0]
+    : WuiBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -55,7 +55,7 @@ export const badgeConfig = () => {
       ...propsToUse.onClickAriaLabel.custom,
       checkDep: (val, state) => {
         if (state.onClick.value && !val) {
-          return 'When passing onClick to EuiBadge, you must also provide onClickAriaLabel';
+          return 'When passing onClick to WuiBadge, you must also provide onClickAriaLabel';
         }
         return undefined;
       },
@@ -77,14 +77,14 @@ export const badgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBadge',
+      componentName: 'WuiBadge',
       props: propsToUse,
       scope: {
-        EuiBadge,
+        WuiBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBadge'],
+        '@wazuh/wui': {
+          named: ['WuiBadge'],
         },
       },
       customProps: {
@@ -95,9 +95,9 @@ export const badgeConfig = () => {
 };
 
 export const betaBadgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiBetaBadge.__docgenInfo)
-    ? EuiBetaBadge.__docgenInfo[0]
-    : EuiBetaBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiBetaBadge.__docgenInfo)
+    ? WuiBetaBadge.__docgenInfo[0]
+    : WuiBetaBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.label = {
@@ -115,14 +115,14 @@ export const betaBadgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBetaBadge',
+      componentName: 'WuiBetaBadge',
       props: propsToUse,
       scope: {
-        EuiBetaBadge,
+        WuiBetaBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBetaBadge'],
+        '@wazuh/wui': {
+          named: ['WuiBetaBadge'],
         },
       },
     },
@@ -130,9 +130,9 @@ export const betaBadgeConfig = () => {
 };
 
 export const notificationBadgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiNotificationBadge.__docgenInfo)
-    ? EuiNotificationBadge.__docgenInfo[0]
-    : EuiNotificationBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiNotificationBadge.__docgenInfo)
+    ? WuiNotificationBadge.__docgenInfo[0]
+    : WuiNotificationBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -143,14 +143,14 @@ export const notificationBadgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiNotificationBadge',
+      componentName: 'WuiNotificationBadge',
       props: propsToUse,
       scope: {
-        EuiNotificationBadge,
+        WuiNotificationBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiNotificationBadge'],
+        '@wazuh/wui': {
+          named: ['WuiNotificationBadge'],
         },
       },
     },

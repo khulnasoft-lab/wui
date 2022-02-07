@@ -1,118 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiQuickSelect is rendered 1`] = `
+exports[`WuiQuickSelect is rendered 1`] = `
 <fieldset>
-  <EuiI18n
+  <WuiI18n
     default="Quick select a time range"
-    token="euiQuickSelect.legendText"
+    token="wuiQuickSelect.legendText"
   >
     <Component />
-  </EuiI18n>
-  <EuiFlexGroup
+  </WuiI18n>
+  <WuiFlexGroup
     alignItems="center"
     gutterSize="s"
     justifyContent="spaceBetween"
     responsive={false}
   >
-    <EuiFlexItem
+    <WuiFlexItem
       grow={false}
     >
-      <EuiI18n
+      <WuiI18n
         default="Quick select"
-        token="euiQuickSelect.quickSelectTitle"
+        token="wuiQuickSelect.quickSelectTitle"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem
       grow={false}
     >
-      <EuiFlexGroup
+      <WuiFlexGroup
         alignItems="center"
         gutterSize="s"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Previous time window"
-            token="euiQuickSelect.previousLabel"
+            token="wuiQuickSelect.previousLabel"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Next time window"
-            token="euiQuickSelect.nextLabel"
+            token="wuiQuickSelect.nextLabel"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiFlexItem>
-  </EuiFlexGroup>
-  <EuiSpacer
+          </WuiI18n>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiFlexItem>
+  </WuiFlexGroup>
+  <WuiSpacer
     size="s"
   />
-  <EuiFlexGroup
+  <WuiFlexGroup
     gutterSize="s"
     responsive={false}
   >
-    <EuiFlexItem>
-      <EuiI18n
+    <WuiFlexItem>
+      <WuiI18n
         default="Time tense"
-        token="euiQuickSelect.tenseLabel"
+        token="wuiQuickSelect.tenseLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiI18n
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiI18n
         default="Time value"
-        token="euiQuickSelect.valueLabel"
+        token="wuiQuickSelect.valueLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiI18n
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiI18n
         default="Time unit"
-        token="euiQuickSelect.unitLabel"
+        token="wuiQuickSelect.unitLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem
       grow={false}
     >
-      <EuiButton
+      <WuiButton
         aria-describedby="htmlId htmlId"
-        className="euiQuickSelect__applyButton"
+        className="wuiQuickSelect__applyButton"
         disabled={false}
         onClick={[Function]}
         size="s"
       >
-        <EuiI18n
+        <WuiI18n
           default="Apply"
-          token="euiQuickSelect.applyButton"
+          token="wuiQuickSelect.applyButton"
         />
-      </EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
-  <EuiHorizontalRule
+      </WuiButton>
+    </WuiFlexItem>
+  </WuiFlexGroup>
+  <WuiHorizontalRule
     margin="s"
   />
-  <EuiScreenReaderOnly>
+  <WuiScreenReaderOnly>
     <p
       id="htmlId"
     >
-      <EuiI18n
+      <WuiI18n
         default="Currently set to {timeTense} {timeValue} {timeUnit}."
-        token="euiQuickSelect.fullDescription"
+        token="wuiQuickSelect.fullDescription"
         values={
           Object {
             "timeTense": "last",
@@ -122,123 +122,123 @@ exports[`EuiQuickSelect is rendered 1`] = `
         }
       />
     </p>
-  </EuiScreenReaderOnly>
+  </WuiScreenReaderOnly>
 </fieldset>
 `;
 
-exports[`EuiQuickSelect prevQuickSelect 1`] = `
+exports[`WuiQuickSelect prevQuickSelect 1`] = `
 <fieldset>
-  <EuiI18n
+  <WuiI18n
     default="Quick select a time range"
-    token="euiQuickSelect.legendText"
+    token="wuiQuickSelect.legendText"
   >
     <Component />
-  </EuiI18n>
-  <EuiFlexGroup
+  </WuiI18n>
+  <WuiFlexGroup
     alignItems="center"
     gutterSize="s"
     justifyContent="spaceBetween"
     responsive={false}
   >
-    <EuiFlexItem
+    <WuiFlexItem
       grow={false}
     >
-      <EuiI18n
+      <WuiI18n
         default="Quick select"
-        token="euiQuickSelect.quickSelectTitle"
+        token="wuiQuickSelect.quickSelectTitle"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem
       grow={false}
     >
-      <EuiFlexGroup
+      <WuiFlexGroup
         alignItems="center"
         gutterSize="s"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Previous time window"
-            token="euiQuickSelect.previousLabel"
+            token="wuiQuickSelect.previousLabel"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Next time window"
-            token="euiQuickSelect.nextLabel"
+            token="wuiQuickSelect.nextLabel"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiFlexItem>
-  </EuiFlexGroup>
-  <EuiSpacer
+          </WuiI18n>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiFlexItem>
+  </WuiFlexGroup>
+  <WuiSpacer
     size="s"
   />
-  <EuiFlexGroup
+  <WuiFlexGroup
     gutterSize="s"
     responsive={false}
   >
-    <EuiFlexItem>
-      <EuiI18n
+    <WuiFlexItem>
+      <WuiI18n
         default="Time tense"
-        token="euiQuickSelect.tenseLabel"
+        token="wuiQuickSelect.tenseLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiI18n
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiI18n
         default="Time value"
-        token="euiQuickSelect.valueLabel"
+        token="wuiQuickSelect.valueLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiI18n
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiI18n
         default="Time unit"
-        token="euiQuickSelect.unitLabel"
+        token="wuiQuickSelect.unitLabel"
       >
         <Component />
-      </EuiI18n>
-    </EuiFlexItem>
-    <EuiFlexItem
+      </WuiI18n>
+    </WuiFlexItem>
+    <WuiFlexItem
       grow={false}
     >
-      <EuiButton
+      <WuiButton
         aria-describedby="htmlId htmlId"
-        className="euiQuickSelect__applyButton"
+        className="wuiQuickSelect__applyButton"
         disabled={false}
         onClick={[Function]}
         size="s"
       >
-        <EuiI18n
+        <WuiI18n
           default="Apply"
-          token="euiQuickSelect.applyButton"
+          token="wuiQuickSelect.applyButton"
         />
-      </EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
-  <EuiHorizontalRule
+      </WuiButton>
+    </WuiFlexItem>
+  </WuiFlexGroup>
+  <WuiHorizontalRule
     margin="s"
   />
-  <EuiScreenReaderOnly>
+  <WuiScreenReaderOnly>
     <p
       id="htmlId"
     >
-      <EuiI18n
+      <WuiI18n
         default="Currently set to {timeTense} {timeValue} {timeUnit}."
-        token="euiQuickSelect.fullDescription"
+        token="wuiQuickSelect.fullDescription"
         values={
           Object {
             "timeTense": "Next",
@@ -248,6 +248,6 @@ exports[`EuiQuickSelect prevQuickSelect 1`] = `
         }
       />
     </p>
-  </EuiScreenReaderOnly>
+  </WuiScreenReaderOnly>
 </fieldset>
 `;

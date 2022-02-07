@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiCallOut, EuiText } from '../../../../src/components/';
+import { WuiCallOut, WuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiCallOut.__docgenInfo)
-    ? EuiCallOut.__docgenInfo[0]
-    : EuiCallOut.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiCallOut.__docgenInfo)
+    ? WuiCallOut.__docgenInfo[0]
+    : WuiCallOut.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -22,7 +22,7 @@ export default () => {
   propsToUse.children = {
     ...propsToUse.children,
     value: `<p>
-   Any content inside of <strong>EuiCallOut</strong> will appear here.
+   Any content inside of <strong>WuiCallOut</strong> will appear here.
   </p>`,
     type: PropTypes.ReactNode,
     description: 'Content to display inside the callout below the title',
@@ -31,15 +31,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiCallOut',
+      componentName: 'WuiCallOut',
       props: propsToUse,
       scope: {
-        EuiCallOut,
-        EuiText,
+        WuiCallOut,
+        WuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCallOut', 'EuiText'],
+        '@wazuh/wui': {
+          named: ['WuiCallOut', 'WuiText'],
         },
       },
     },

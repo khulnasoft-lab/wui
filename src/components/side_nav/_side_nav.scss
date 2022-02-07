@@ -1,13 +1,13 @@
 // These mobile children are hidden in everything but mobile view.
-.euiSideNav__mobileToggle {
+.wuiSideNav__mobileToggle {
   display: none;
-  border-bottom: $euiBorderThin;
-  padding: $euiSize $euiSizeL;
+  border-bottom: $wuiBorderThin;
+  padding: $wuiSize $wuiSizeL;
   width: 100%;
   text-align: left;
 
   /**
-   * 1. This toggle also works with EUI link, but we need the outline
+   * 1. This toggle also works with WUI link, but we need the outline
    *    that comes with the focus state.
    */
   &:focus {
@@ -15,57 +15,57 @@
   }
 }
 
-.euiSideNav__mobileIcon {
-  fill: $euiColorPrimary;
+.wuiSideNav__mobileIcon {
+  fill: $wuiColorPrimary;
 }
 
-.euiSideNav__mobileWrap {
+.wuiSideNav__mobileWrap {
   display: flex;
 }
 
-.euiSideNav__mobileTitle {
+.wuiSideNav__mobileTitle {
   flex-grow: 1;
-  color: $euiColorPrimary;
+  color: $wuiColorPrimary;
 }
 
-.euiSideNav__hideButton {
-  width: $euiSizeL;
-  height: $euiSizeL;
-  border-radius: $euiBorderRadius;
-  border: $euiBorderThin;
-  background: $euiColorEmptyShade;
+.wuiSideNav__hideButton {
+  width: $wuiSizeL;
+  height: $wuiSizeL;
+  border-radius: $wuiBorderRadius;
+  border: $wuiBorderThin;
+  background: $wuiColorEmptyShade;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  right: -$euiSizeXXL;
-  top: $euiSizeXL;
+  right: -$wuiSizeXXL;
+  top: $wuiSizeXL;
 }
 
-@include euiBreakpoint('xs', 's') {
+@include wuiBreakpoint('xs', 's') {
   /**
    * 1. Animation doesn't work against height. Need max-height instead.
    *    We set a value larger than what is needed to fake "auto".
    */
-  .euiSideNav-isOpenMobile {
-    .euiSideNav__content {
+  .wuiSideNav-isOpenMobile {
+    .wuiSideNav__content {
       visibility: visible;
       opacity: 1;
-      margin: $euiSizeL;
+      margin: $wuiSizeL;
       max-height: 5000px; /* 1 */
-      transition: all $euiAnimSpeedNormal $euiAnimSlightResistance;
+      transition: all $wuiAnimSpeedNormal $wuiAnimSlightResistance;
     }
   }
 
-  .euiSideNav__mobileToggle {
+  .wuiSideNav__mobileToggle {
     display: block;
   }
 
-  .euiSideNav__content {
+  .wuiSideNav__content {
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    margin: 0 $euiSizeL;
+    margin: 0 $wuiSizeL;
   }
 }

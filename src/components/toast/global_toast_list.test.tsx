@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,17 +35,17 @@ import { render, mount } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../test';
 
 import {
-  EuiGlobalToastList,
+  WuiGlobalToastList,
   Toast,
   TOAST_FADE_OUT_MS,
 } from './global_toast_list';
 
 jest.useFakeTimers();
 
-describe('EuiGlobalToastList', () => {
+describe('WuiGlobalToastList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiGlobalToastList
+      <WuiGlobalToastList
         {...requiredProps}
         dismissToast={() => {}}
         toastLifeTimeMs={5}
@@ -65,7 +78,7 @@ describe('EuiGlobalToastList', () => {
         ];
 
         const component = render(
-          <EuiGlobalToastList
+          <WuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
             toastLifeTimeMs={5}
@@ -98,7 +111,7 @@ describe('EuiGlobalToastList', () => {
         ];
 
         const component = render(
-          <EuiGlobalToastList
+          <WuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
             toastLifeTimeMs={5}
@@ -113,7 +126,7 @@ describe('EuiGlobalToastList', () => {
       test('is called when a toast is clicked', () => {
         const dismissToastSpy = jest.fn();
         const component = mount(
-          <EuiGlobalToastList
+          <WuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',
@@ -139,7 +152,7 @@ describe('EuiGlobalToastList', () => {
         const TOAST_LIFE_TIME_MS = 5;
         const dismissToastSpy = jest.fn();
         mount(
-          <EuiGlobalToastList
+          <WuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',
@@ -162,7 +175,7 @@ describe('EuiGlobalToastList', () => {
         const TOAST_LIFE_TIME_MS_OVERRIDE = 100;
         const dismissToastSpy = jest.fn();
         mount(
-          <EuiGlobalToastList
+          <WuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',

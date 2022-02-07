@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,38 +34,38 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiRadio,
-  EuiRadioProps,
-  EuiCheckbox,
-  EuiCheckboxProps,
+  WuiRadio,
+  WuiRadioProps,
+  WuiCheckbox,
+  WuiCheckboxProps,
 } from '../../form';
 
-interface EuiCheckableCardBaseProps {
+interface WuiCheckableCardBaseProps {
   id: string;
   label: ReactNode;
 }
 
-// if `checkableType` is left out or set to 'radio', use EuiRadioProps
-interface EuiCheckableCardAsRadioProps
-  extends Omit<EuiRadioProps, 'compressed'> {
+// if `checkableType` is left out or set to 'radio', use WuiRadioProps
+interface WuiCheckableCardAsRadioProps
+  extends Omit<WuiRadioProps, 'compressed'> {
   /**
    * Whether the control is a radio button or checkbox
    */
   checkableType?: 'radio';
 }
 
-// if `checkableType` is set to 'checkbox', use EuiCheckboxProps
-interface EuiCheckableCardAsCheckboxProps
-  extends Omit<EuiCheckboxProps, 'compressed'> {
+// if `checkableType` is set to 'checkbox', use WuiCheckboxProps
+interface WuiCheckableCardAsCheckboxProps
+  extends Omit<WuiCheckboxProps, 'compressed'> {
   checkableType: 'checkbox';
 }
 
-export type EuiCheckableCardProps = Omit<
-  EuiCheckableCardAsCheckboxProps | EuiCheckableCardAsRadioProps,
+export type WuiCheckableCardProps = Omit<
+  WuiCheckableCardAsCheckboxProps | WuiCheckableCardAsRadioProps,
   'label' | 'id'
 > &
-  EuiCheckableCardBaseProps;
-export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
+  WuiCheckableCardBaseProps;
+export const WuiCheckableCard: FunctionComponent<WuiCheckableCardProps> = ({
   children,
   className,
   checkableType = 'radio',
@@ -63,10 +76,10 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
 }) => {
   const { id } = rest;
   const classes = classNames(
-    'euiCheckableCard',
+    'wuiCheckableCard',
     {
-      'euiCheckableCard-isChecked': checked,
-      'euiCheckableCard-isDisabled': disabled,
+      'wuiCheckableCard-isChecked': checked,
+      'wuiCheckableCard-isDisabled': disabled,
     },
     className
   );
@@ -74,26 +87,26 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
   let checkableElement;
   if (checkableType === 'radio') {
     checkableElement = (
-      <EuiRadio
+      <WuiRadio
         checked={checked}
         disabled={disabled}
-        {...(rest as EuiRadioProps)}
+        {...(rest as WuiRadioProps)}
       />
     );
   } else {
     checkableElement = (
-      <EuiCheckbox checked={checked} disabled={disabled} {...rest} />
+      <WuiCheckbox checked={checked} disabled={disabled} {...rest} />
     );
   }
 
-  const labelClasses = classNames('euiCheckableCard__label', {
-    'euiCheckableCard__label-isDisabled': disabled,
+  const labelClasses = classNames('wuiCheckableCard__label', {
+    'wuiCheckableCard__label-isDisabled': disabled,
   });
 
   return (
     <div className={classes}>
-      <div className="euiCheckableCard__row">
-        <div className="euiCheckableCard__control">{checkableElement}</div>
+      <div className="wuiCheckableCard__row">
+        <div className="wuiCheckableCard__control">{checkableElement}</div>
         <label
           className={labelClasses}
           htmlFor={id}
@@ -102,10 +115,10 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
         </label>
       </div>
       {children && (
-        <div className="euiCheckableCard__row">
+        <div className="wuiCheckableCard__row">
           {/* Empty div for left side background color only */}
-          <div className="euiCheckableCard__control" />
-          <div id={`${id}-details`} className="euiCheckableCard__children">
+          <div className="wuiCheckableCard__control" />
+          <div id={`${id}-details`} className="wuiCheckableCard__children">
             {children}
           </div>
         </div>

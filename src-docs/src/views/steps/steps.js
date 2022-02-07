@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiSpacer,
-  EuiSteps,
-  EuiText,
+  WuiCode,
+  WuiSpacer,
+  WuiSteps,
+  WuiText,
 } from '../../../../src/components';
 
 const firstSetOfSteps = [
@@ -32,18 +32,18 @@ const nextSetOfSteps = [
 
 export default () => (
   <div>
-    <EuiSteps steps={firstSetOfSteps} />
+    <WuiSteps steps={firstSetOfSteps} />
 
-    <EuiText>
-      <EuiSpacer size="m" />
+    <WuiText>
+      <WuiSpacer size="m" />
       <p>
-        Set <EuiCode>firstStepNumber</EuiCode> to continue step numbering after
+        Set <WuiCode>firstStepNumber</WuiCode> to continue step numbering after
         any type of break in the content
       </p>
-      <EuiSpacer size="m" />
-    </EuiText>
+      <WuiSpacer size="m" />
+    </WuiText>
 
-    <EuiSteps
+    <WuiSteps
       firstStepNumber={firstSetOfSteps.length + 1}
       steps={nextSetOfSteps}
     />

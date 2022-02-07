@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,19 +33,19 @@
 import React, { Component, Fragment, ReactElement } from 'react';
 import { createFilter, SearchFilterConfig } from './filters';
 import { Query } from './query';
-import { EuiFilterGroup } from '../filter_group';
+import { WuiFilterGroup } from '../filter_group';
 
 export { SearchFilterConfig } from './filters';
 
-interface EuiSearchFiltersProps {
+interface WuiSearchFiltersProps {
   query: Query;
   onChange: (query: Query) => void;
   filters: SearchFilterConfig[];
 }
 
-type DefaultProps = Pick<EuiSearchFiltersProps, 'filters'>;
+type DefaultProps = Pick<WuiSearchFiltersProps, 'filters'>;
 
-export class EuiSearchFilters extends Component<EuiSearchFiltersProps> {
+export class WuiSearchFilters extends Component<WuiSearchFiltersProps> {
   static defaultProps: DefaultProps = {
     filters: [],
   };
@@ -51,6 +64,6 @@ export class EuiSearchFilters extends Component<EuiSearchFiltersProps> {
       items.push(<Fragment key={key}>{control}</Fragment>);
     });
 
-    return <EuiFilterGroup>{items}</EuiFilterGroup>;
+    return <WuiFilterGroup>{items}</WuiFilterGroup>;
   }
 }

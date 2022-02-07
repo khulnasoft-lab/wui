@@ -1,28 +1,28 @@
 import React from 'react';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiIcon } from '../../../../src/components/icon';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
+import { WuiSpacer } from '../../../../src/components/spacer';
+import { WuiIcon } from '../../../../src/components/icon';
 
 export default () => (
   <div>
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiIcon type="faceSad" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
+    <WuiFlexGroup alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiIcon type="faceSad" />
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
         On mobile, the icon will show above this text.
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup responsive={false} alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiIcon type="faceHappy" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
+    <WuiFlexGroup responsive={false} alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiIcon type="faceHappy" />
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
         On mobile, the icon will stay to the left of this text.
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

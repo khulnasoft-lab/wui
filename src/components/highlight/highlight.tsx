@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +32,9 @@
 
 import React, { Fragment, HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
-import { EuiMark } from '../mark';
+import { WuiMark } from '../mark';
 
-interface EuiHighlightChunk {
+interface WuiHighlightChunk {
   /**
    * Start of the chunk
    */
@@ -36,7 +49,7 @@ interface EuiHighlightChunk {
   highlight?: boolean;
 }
 
-export type EuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
+export type WuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
   CommonProps & {
     /**
      * string to highlight as this component's content
@@ -81,7 +94,7 @@ const highlight = (
           const { end, highlight, start } = chunk;
           const value = searchSubject.substr(start, end - start);
           if (highlight) {
-            return <EuiMark key={start}>{value}</EuiMark>;
+            return <WuiMark key={start}>{value}</WuiMark>;
           }
           return value;
         })}
@@ -112,7 +125,7 @@ const highlight = (
   return (
     <Fragment>
       {preMatch}
-      <EuiMark>{match}</EuiMark>
+      <WuiMark>{match}</WuiMark>
       {postMatch}
     </Fragment>
   );
@@ -136,10 +149,10 @@ const getHightlightWords = (
 };
 
 const fillInChunks = (
-  chunksToHighlight: EuiHighlightChunk[],
+  chunksToHighlight: WuiHighlightChunk[],
   totalLength: number
 ) => {
-  const allChunks: EuiHighlightChunk[] = [];
+  const allChunks: WuiHighlightChunk[] = [];
   const append = (start: number, end: number, highlight: boolean) => {
     if (end - start > 0) {
       allChunks.push({
@@ -163,7 +176,7 @@ const fillInChunks = (
   return allChunks;
 };
 
-export const EuiHighlight: FunctionComponent<EuiHighlightProps> = ({
+export const WuiHighlight: FunctionComponent<WuiHighlightProps> = ({
   children,
   className,
   search,

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +34,20 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiCollapsibleNav } from './collapsible_nav';
+import { WuiCollapsibleNav } from './collapsible_nav';
 
 jest.mock('../overlay_mask', () => ({
-  EuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
+  WuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
     <div {...props} />
   ),
 }));
 
 const propsNeededToRender = { id: 'id', isOpen: true };
 
-describe('EuiCollapsibleNav', () => {
+describe('WuiCollapsibleNav', () => {
   test('is rendered', () => {
     const component = mount(
-      <EuiCollapsibleNav {...propsNeededToRender} {...requiredProps} />
+      <WuiCollapsibleNav {...propsNeededToRender} {...requiredProps} />
     );
 
     expect(
@@ -47,7 +60,7 @@ describe('EuiCollapsibleNav', () => {
   describe('props', () => {
     test('onClose', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} onClose={() => {}} />
+        <WuiCollapsibleNav {...propsNeededToRender} onClose={() => {}} />
       );
 
       expect(
@@ -59,7 +72,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('isDocked', () => {
       const component = render(
-        <EuiCollapsibleNav {...propsNeededToRender} isDocked={true} />
+        <WuiCollapsibleNav {...propsNeededToRender} isDocked={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -67,7 +80,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('dockedBreakpoint', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} dockedBreakpoint={500} />
+        <WuiCollapsibleNav {...propsNeededToRender} dockedBreakpoint={500} />
       );
 
       expect(
@@ -79,7 +92,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('button', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} button={<button />} />
+        <WuiCollapsibleNav {...propsNeededToRender} button={<button />} />
       );
 
       expect(
@@ -91,7 +104,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('showButtonIfDocked', () => {
       const component = mount(
-        <EuiCollapsibleNav
+        <WuiCollapsibleNav
           {...propsNeededToRender}
           button={<button />}
           isDocked={true}
@@ -108,7 +121,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('can alter mask props with maskProps without throwing error', () => {
       const component = mount(
-        <EuiCollapsibleNav
+        <WuiCollapsibleNav
           {...propsNeededToRender}
           maskProps={{ headerZindexLocation: 'above' }}
         />
@@ -125,7 +138,7 @@ describe('EuiCollapsibleNav', () => {
   describe('close button', () => {
     test('can be hidden', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} showCloseButton={false} />
+        <WuiCollapsibleNav {...propsNeededToRender} showCloseButton={false} />
       );
 
       expect(
@@ -135,9 +148,9 @@ describe('EuiCollapsibleNav', () => {
       ).toMatchSnapshot();
     });
 
-    test('extends EuiButtonEmpty', () => {
+    test('extends WuiButtonEmpty', () => {
       const component = mount(
-        <EuiCollapsibleNav
+        <WuiCollapsibleNav
           {...propsNeededToRender}
           closeButtonProps={{ className: 'class', 'data-test-subj': 'test' }}
         />
@@ -152,7 +165,7 @@ describe('EuiCollapsibleNav', () => {
   });
 
   test('does not render if isOpen is false', () => {
-    const component = render(<EuiCollapsibleNav id="id" />);
+    const component = render(<WuiCollapsibleNav id="id" />);
 
     expect(component).toMatchSnapshot();
   });

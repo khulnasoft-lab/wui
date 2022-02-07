@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiStat is rendered 1`] = `
+exports[`WuiStat is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiStat euiStat--leftAligned testClass1 testClass2"
+  class="wuiStat wuiStat--leftAligned testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -17,24 +17,24 @@ exports[`EuiStat is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props accent is rendered 1`] = `
+exports[`WuiStat props accent is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -44,24 +44,24 @@ exports[`EuiStat props accent is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title--accent"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title--accent"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props center is rendered 1`] = `
+exports[`WuiStat props center is rendered 1`] = `
 <div
-  class="euiStat euiStat--centerAligned"
+  class="wuiStat wuiStat--centerAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -71,24 +71,24 @@ exports[`EuiStat props center is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props danger is rendered 1`] = `
+exports[`WuiStat props danger is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -98,24 +98,24 @@ exports[`EuiStat props danger is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title--danger"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title--danger"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props default is rendered 1`] = `
+exports[`WuiStat props default is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -125,24 +125,24 @@ exports[`EuiStat props default is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props hexcode colors are rendered 1`] = `
+exports[`WuiStat props hexcode colors are rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -152,25 +152,25 @@ exports[`EuiStat props hexcode colors are rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
     style="color:#EB1919"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props l is rendered 1`] = `
+exports[`WuiStat props l is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -180,24 +180,24 @@ exports[`EuiStat props l is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props left is rendered 1`] = `
+exports[`WuiStat props left is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -207,26 +207,26 @@ exports[`EuiStat props left is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props loading is rendered 1`] = `
+exports[`WuiStat props loading is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiStat euiStat--leftAligned testClass1 testClass2"
+  class="wuiStat wuiStat--leftAligned testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -236,24 +236,24 @@ exports[`EuiStat props loading is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title-isLoading"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title-isLoading"
   >
     --
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     Statistic is loading
   </p>
 </div>
 `;
 
-exports[`EuiStat props m is rendered 1`] = `
+exports[`WuiStat props m is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -263,24 +263,24 @@ exports[`EuiStat props m is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--medium euiStat__title"
+    class="wuiTitle wuiTitle--medium wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props primary is rendered 1`] = `
+exports[`WuiStat props primary is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -290,24 +290,24 @@ exports[`EuiStat props primary is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title--primary"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title--primary"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props render with custom description element 1`] = `
+exports[`WuiStat props render with custom description element 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <div
       aria-hidden="true"
@@ -319,7 +319,7 @@ exports[`EuiStat props render with custom description element 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
     style="color:#EB1919"
   >
     title
@@ -327,12 +327,12 @@ exports[`EuiStat props render with custom description element 1`] = `
 </div>
 `;
 
-exports[`EuiStat props render with custom title element 1`] = `
+exports[`WuiStat props render with custom title element 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -342,7 +342,7 @@ exports[`EuiStat props render with custom title element 1`] = `
   </div>
   <div
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     <div>
       title
@@ -351,12 +351,12 @@ exports[`EuiStat props render with custom title element 1`] = `
 </div>
 `;
 
-exports[`EuiStat props right is rendered 1`] = `
+exports[`WuiStat props right is rendered 1`] = `
 <div
-  class="euiStat euiStat--rightAligned"
+  class="wuiStat wuiStat--rightAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -366,24 +366,24 @@ exports[`EuiStat props right is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props s is rendered 1`] = `
+exports[`WuiStat props s is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -393,24 +393,24 @@ exports[`EuiStat props s is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--small euiStat__title"
+    class="wuiTitle wuiTitle--small wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props secondary is rendered 1`] = `
+exports[`WuiStat props secondary is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -420,24 +420,24 @@ exports[`EuiStat props secondary is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title--secondary"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title--secondary"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props subdued is rendered 1`] = `
+exports[`WuiStat props subdued is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -447,30 +447,30 @@ exports[`EuiStat props subdued is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title euiStat__title--subdued"
+    class="wuiTitle wuiTitle--large wuiStat__title wuiStat__title--subdued"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props title and description are reversed 1`] = `
+exports[`WuiStat props title and description are reversed 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--large euiStat__title"
+    class="wuiTitle wuiTitle--large wuiStat__title"
   >
     title
   </p>
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -479,19 +479,19 @@ exports[`EuiStat props title and description are reversed 1`] = `
     </p>
   </div>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     title description
   </p>
 </div>
 `;
 
-exports[`EuiStat props xs is rendered 1`] = `
+exports[`WuiStat props xs is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -501,24 +501,24 @@ exports[`EuiStat props xs is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--xsmall euiStat__title"
+    class="wuiTitle wuiTitle--xsmall wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props xxs is rendered 1`] = `
+exports[`WuiStat props xxs is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -528,24 +528,24 @@ exports[`EuiStat props xxs is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--xxsmall euiStat__title"
+    class="wuiTitle wuiTitle--xxsmall wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>
 </div>
 `;
 
-exports[`EuiStat props xxxs is rendered 1`] = `
+exports[`WuiStat props xxxs is rendered 1`] = `
 <div
-  class="euiStat euiStat--leftAligned"
+  class="wuiStat wuiStat--leftAligned"
 >
   <div
-    class="euiText euiText--small euiStat__description"
+    class="wuiText wuiText--small wuiStat__description"
   >
     <p
       aria-hidden="true"
@@ -555,12 +555,12 @@ exports[`EuiStat props xxxs is rendered 1`] = `
   </div>
   <p
     aria-hidden="true"
-    class="euiTitle euiTitle--xxxsmall euiStat__title"
+    class="wuiTitle wuiTitle--xxxsmall wuiStat__title"
   >
     title
   </p>
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     description title
   </p>

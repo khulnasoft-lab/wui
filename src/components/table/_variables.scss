@@ -1,17 +1,17 @@
 // Spacing
 
-$euiTableCellContentPadding: $euiSizeS;
-$euiTableCellContentPaddingCompressed: $euiSizeXS;
+$wuiTableCellContentPadding: $wuiSizeS;
+$wuiTableCellContentPaddingCompressed: $wuiSizeXS;
 
-$euiTableCellCheckboxWidth: $euiSizeXL;
+$wuiTableCellCheckboxWidth: $wuiSizeXL;
 
-$euiTableActionsAreaWidth: $euiSizeXXL;
+$wuiTableActionsAreaWidth: $wuiSizeXXL;
 
 // Colors
 
-$euiTableHoverColor: tintOrShade($euiColorLightestShade, 50%, 20%);
-$euiTableSelectedColor: tintOrShade($euiFocusBackgroundColor, 30%, 0%);
-$euiTableHoverSelectedColor: tintOrShade($euiFocusBackgroundColor, 0, 10%);
-$euiTableActionsBorderColor: transparentize($euiColorMediumShade, .9);
-$euiTableHoverClickableColor: transparentize($euiColorPrimary, .95);
-$euiTableFocusClickableColor: transparentize($euiColorPrimary, .9);
+$wuiTableHoverColor: tintOrShade($wuiColorLightestShade, 50%, 20%);
+$wuiTableSelectedColor: tintOrShade($wuiFocusBackgroundColor, 30%, 0%);
+$wuiTableHoverSelectedColor: tintOrShade($wuiFocusBackgroundColor, 0, 10%);
+$wuiTableActionsBorderColor: transparentize($wuiColorMediumShade, .9);
+$wuiTableHoverClickableColor: transparentize($wuiColorPrimary, .95);
+$wuiTableFocusClickableColor: transparentize($wuiColorPrimary, .9);

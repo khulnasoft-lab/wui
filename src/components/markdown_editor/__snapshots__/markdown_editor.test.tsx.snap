@@ -1,174 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiMarkdownEditor is rendered 1`] = `
+exports[`WuiMarkdownEditor is rendered 1`] = `
 <div
-  class="euiMarkdownEditor testClass1 testClass2"
+  class="wuiMarkdownEditor testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="wuiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="wuiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorBold"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorItalic"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="wuiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorUnorderedList"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorOrderedList"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="MarkdownCheckmark"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="wuiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="quote"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorCodeBlock"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorLink"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="wuiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="wuiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text"
+          class="wuiButtonIcon wuiButtonIcon--text"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="editorComment"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="wuiButtonContent wuiButtonEmpty__content"
       >
         <div
-          class="euiButtonContent__icon"
-          data-euiicon-type="eye"
+          class="wuiButtonContent__icon"
+          data-wuiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="wuiButtonEmpty__text"
         >
           Preview
         </span>
@@ -179,30 +179,30 @@ exports[`EuiMarkdownEditor is rendered 1`] = `
     style="display:block"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="wuiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="wuiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:calc(116px"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="wuiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="wuiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiMarkdownEditorFooter__help"
+          class="wuiButtonIcon wuiButtonIcon--text wuiMarkdownEditorFooter__help"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="MarkdownLogo"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="MarkdownLogo"
           />
         </button>
       </div>

@@ -3,13 +3,13 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiSpacer,
+  WuiBasicTable,
+  WuiLink,
+  WuiHealth,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -135,9 +135,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -162,7 +162,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
       sortable: true,
     },
@@ -195,27 +195,27 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center" responsive={false}>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <WuiFlexGroup alignItems="center" responsive={false}>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Responsive"
             checked={isResponsive}
             onChange={toggleResponsive}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Custom header"
             disabled={!isResponsive}
             checked={isResponsive && customHeader}
             onChange={toggleHeader}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiBasicTable
+      <WuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

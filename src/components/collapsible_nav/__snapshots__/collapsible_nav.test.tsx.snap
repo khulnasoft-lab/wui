@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCollapsibleNav close button can be hidden 1`] = `
+exports[`WuiCollapsibleNav close button can be hidden 1`] = `
 Array [
   <div />,
   <div>
@@ -18,7 +18,7 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       />
     </div>
@@ -31,7 +31,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav close button extends EuiButtonEmpty 1`] = `
+exports[`WuiCollapsibleNav close button extends WuiButtonEmpty 1`] = `
 Array [
   <div />,
   <div>
@@ -49,23 +49,23 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton class"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton class"
           data-test-subj="test"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -82,9 +82,9 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav does not render if isOpen is false 1`] = `null`;
+exports[`WuiCollapsibleNav does not render if isOpen is false 1`] = `null`;
 
-exports[`EuiCollapsibleNav is rendered 1`] = `
+exports[`WuiCollapsibleNav is rendered 1`] = `
 Array [
   <div />,
   <div>
@@ -103,23 +103,23 @@ Array [
     >
       <nav
         aria-label="aria-label"
-        class="euiCollapsibleNav testClass1 testClass2"
+        class="wuiCollapsibleNav testClass1 testClass2"
         data-test-subj="test subject string"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -136,13 +136,13 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props button 1`] = `
+exports[`WuiCollapsibleNav props button 1`] = `
 Array [
   <button
     aria-controls="id"
     aria-expanded="true"
     aria-pressed="true"
-    class="euiCollapsibleNav__toggle"
+    class="wuiCollapsibleNav__toggle"
   />,
   <div />,
   <div>
@@ -160,22 +160,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -192,7 +192,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props can alter mask props with maskProps without throwing error 1`] = `
+exports[`WuiCollapsibleNav props can alter mask props with maskProps without throwing error 1`] = `
 Array [
   <div />,
   <div>
@@ -210,22 +210,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -242,7 +242,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props dockedBreakpoint 1`] = `
+exports[`WuiCollapsibleNav props dockedBreakpoint 1`] = `
 Array [
   <div />,
   <div>
@@ -260,22 +260,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -292,7 +292,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props isDocked 1`] = `
+exports[`WuiCollapsibleNav props isDocked 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -308,22 +308,22 @@ exports[`EuiCollapsibleNav props isDocked 1`] = `
     data-focus-lock-disabled="disabled"
   >
     <nav
-      class="euiCollapsibleNav euiCollapsibleNav--isDocked"
+      class="wuiCollapsibleNav wuiCollapsibleNav--isDocked"
       id="id"
     >
       <button
-        class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+        class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="wuiButtonContent wuiButtonEmpty__content"
         >
           <div
-            class="euiButtonContent__icon"
-            data-euiicon-type="cross"
+            class="wuiButtonContent__icon"
+            data-wuiicon-type="cross"
           />
           <span
-            class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+            class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
           >
             close
           </span>
@@ -339,7 +339,7 @@ exports[`EuiCollapsibleNav props isDocked 1`] = `
 </div>
 `;
 
-exports[`EuiCollapsibleNav props onClose 1`] = `
+exports[`WuiCollapsibleNav props onClose 1`] = `
 Array [
   <div />,
   <div>
@@ -357,22 +357,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiCollapsibleNav"
+        class="wuiCollapsibleNav"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>
@@ -389,13 +389,13 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props showButtonIfDocked 1`] = `
+exports[`WuiCollapsibleNav props showButtonIfDocked 1`] = `
 Array [
   <button
     aria-controls="id"
     aria-expanded="true"
     aria-pressed="true"
-    class="euiCollapsibleNav__toggle"
+    class="wuiCollapsibleNav__toggle"
   />,
   <div>
     <div
@@ -412,22 +412,22 @@ Array [
       data-focus-lock-disabled="disabled"
     >
       <nav
-        class="euiCollapsibleNav euiCollapsibleNav--isDocked"
+        class="wuiCollapsibleNav wuiCollapsibleNav--isDocked"
         id="id"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiScreenReaderOnly--showOnFocus euiCollapsibleNav__closeButton"
+          class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiScreenReaderOnly--showOnFocus wuiCollapsibleNav__closeButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="wuiButtonContent wuiButtonEmpty__content"
           >
             <div
-              class="euiButtonContent__icon"
-              data-euiicon-type="cross"
+              class="wuiButtonContent__icon"
+              data-wuiicon-type="cross"
             />
             <span
-              class="euiButtonEmpty__text euiCollapsibleNav__closeButtonText"
+              class="wuiButtonEmpty__text wuiCollapsibleNav__closeButtonText"
             >
               close
             </span>

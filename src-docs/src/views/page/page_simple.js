@@ -1,37 +1,37 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiPageHeader,
-  EuiPageHeaderSection,
-  EuiTitle,
+  WuiPage,
+  WuiPageBody,
+  WuiPageContent,
+  WuiPageContentBody,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiPageHeader,
+  WuiPageHeaderSection,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiPage>
-    <EuiPageBody component="div">
-      <EuiPageHeader>
-        <EuiPageHeaderSection>
-          <EuiTitle size="l">
+  <WuiPage>
+    <WuiPageBody component="div">
+      <WuiPageHeader>
+        <WuiPageHeaderSection>
+          <WuiTitle size="l">
             <h1>Page title</h1>
-          </EuiTitle>
-        </EuiPageHeaderSection>
-      </EuiPageHeader>
-      <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-            <EuiTitle>
+          </WuiTitle>
+        </WuiPageHeaderSection>
+      </WuiPageHeader>
+      <WuiPageContent>
+        <WuiPageContentHeader>
+          <WuiPageContentHeaderSection>
+            <WuiTitle>
               <h2>Content title</h2>
-            </EuiTitle>
-          </EuiPageContentHeaderSection>
-        </EuiPageContentHeader>
-        <EuiPageContentBody>Content body</EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+            </WuiTitle>
+          </WuiPageContentHeaderSection>
+        </WuiPageContentHeader>
+        <WuiPageContentBody>Content body</WuiPageContentBody>
+      </WuiPageContent>
+    </WuiPageBody>
+  </WuiPage>
 );

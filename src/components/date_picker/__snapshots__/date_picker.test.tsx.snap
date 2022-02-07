@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDatePicker is rendered 1`] = `
+exports[`WuiDatePicker is rendered 1`] = `
 <span>
   <span
-    className="euiDatePicker euiDatePicker--shadow"
+    className="wuiDatePicker wuiDatePicker--shadow"
   >
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       fullWidth={false}
       icon="calendar"
       isLoading={false}
     >
-      <EuiValidatableControl>
+      <WuiValidatableControl>
         <ContextConsumer>
           <Component />
         </ContextConsumer>
-      </EuiValidatableControl>
-    </EuiFormControlLayout>
+      </WuiValidatableControl>
+    </WuiFormControlLayout>
   </span>
 </span>
 `;
 
-exports[`EuiDatePicker is rendered 2`] = `
+exports[`WuiDatePicker is rendered 2`] = `
 <DatePicker
   accessibleMode={true}
   adjustDateOnChange={true}
   allowSameDay={false}
   aria-label="aria-label"
-  className="euiDatePicker euiFieldText euiFieldText--withIcon testClass1 testClass2"
+  className="wuiDatePicker wuiFieldText wuiFieldText--withIcon testClass1 testClass2"
   data-test-subj="test subject string"
   dateFormat="MM/DD/YYYY"
   dateFormatCalendar="MMMM YYYY"
@@ -62,16 +62,16 @@ exports[`EuiDatePicker is rendered 2`] = `
 />
 `;
 
-exports[`EuiDatePicker localization accepts the locale prop 1`] = `
+exports[`WuiDatePicker localization accepts the locale prop 1`] = `
 <span>
   <span
-    class="euiDatePicker euiDatePicker--shadow euiDatePicker--inline"
+    class="wuiDatePicker wuiDatePicker--shadow wuiDatePicker--inline"
   >
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <div
           class="react-datepicker"
@@ -432,16 +432,16 @@ exports[`EuiDatePicker localization accepts the locale prop 1`] = `
 </span>
 `;
 
-exports[`EuiDatePicker localization inherits locale from context 1`] = `
+exports[`WuiDatePicker localization inherits locale from context 1`] = `
 <span>
   <span
-    class="euiDatePicker euiDatePicker--shadow euiDatePicker--inline"
+    class="wuiDatePicker wuiDatePicker--shadow wuiDatePicker--inline"
   >
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <div
           class="react-datepicker"
@@ -802,8 +802,8 @@ exports[`EuiDatePicker localization inherits locale from context 1`] = `
 </span>
 `;
 
-exports[`EuiDatePicker popoverPlacement top-end is rendered 1`] = `
-<EuiDatePicker
+exports[`WuiDatePicker popoverPlacement top-end is rendered 1`] = `
+<WuiDatePicker
   adjustDateOnChange={true}
   aria-label="aria-label"
   className="testClass1 testClass2"
@@ -821,26 +821,26 @@ exports[`EuiDatePicker popoverPlacement top-end is rendered 1`] = `
 >
   <span>
     <span
-      className="euiDatePicker euiDatePicker--shadow"
+      className="wuiDatePicker wuiDatePicker--shadow"
     >
-      <EuiFormControlLayout
+      <WuiFormControlLayout
         fullWidth={false}
         icon="calendar"
         isLoading={false}
       >
         <div
-          className="euiFormControlLayout"
+          className="wuiFormControlLayout"
         >
           <div
-            className="euiFormControlLayout__childrenWrapper"
+            className="wuiFormControlLayout__childrenWrapper"
           >
-            <EuiValidatableControl>
+            <WuiValidatableControl>
               <DatePicker
                 accessibleMode={true}
                 adjustDateOnChange={true}
                 allowSameDay={false}
                 aria-label="aria-label"
-                className="euiDatePicker euiFieldText euiFieldText--withIcon testClass1 testClass2"
+                className="wuiDatePicker wuiFieldText wuiFieldText--withIcon testClass1 testClass2"
                 data-test-subj="test subject string"
                 dateFormat="MM/DD/YYYY"
                 dateFormatCalendar="MMMM YYYY"
@@ -894,7 +894,7 @@ exports[`EuiDatePicker popoverPlacement top-end is rendered 1`] = `
                     >
                       <input
                         aria-label=""
-                        className="euiDatePicker euiFieldText euiFieldText--withIcon testClass1 testClass2"
+                        className="wuiDatePicker wuiFieldText wuiFieldText--withIcon testClass1 testClass2"
                         disabled={false}
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -921,7 +921,7 @@ exports[`EuiDatePicker popoverPlacement top-end is rendered 1`] = `
                           >
                             <input
                               aria-label=""
-                              className="euiDatePicker euiFieldText euiFieldText--withIcon testClass1 testClass2"
+                              className="wuiDatePicker wuiFieldText wuiFieldText--withIcon testClass1 testClass2"
                               disabled={false}
                               onBlur={[Function]}
                               onChange={[Function]}
@@ -939,39 +939,39 @@ exports[`EuiDatePicker popoverPlacement top-end is rendered 1`] = `
                   </Manager>
                 </PopperComponent>
               </DatePicker>
-            </EuiValidatableControl>
-            <EuiFormControlLayoutIcons
+            </WuiValidatableControl>
+            <WuiFormControlLayoutIcons
               icon="calendar"
               isLoading={false}
             >
               <div
-                className="euiFormControlLayoutIcons"
+                className="wuiFormControlLayoutIcons"
               >
-                <EuiFormControlLayoutCustomIcon
+                <WuiFormControlLayoutCustomIcon
                   type="calendar"
                 >
                   <span
-                    className="euiFormControlLayoutCustomIcon"
+                    className="wuiFormControlLayoutCustomIcon"
                   >
-                    <EuiIcon
+                    <WuiIcon
                       aria-hidden="true"
-                      className="euiFormControlLayoutCustomIcon__icon"
+                      className="wuiFormControlLayoutCustomIcon__icon"
                       type="calendar"
                     >
                       <div
                         aria-hidden="true"
-                        className="euiFormControlLayoutCustomIcon__icon"
-                        data-euiicon-type="calendar"
+                        className="wuiFormControlLayoutCustomIcon__icon"
+                        data-wuiicon-type="calendar"
                       />
-                    </EuiIcon>
+                    </WuiIcon>
                   </span>
-                </EuiFormControlLayoutCustomIcon>
+                </WuiFormControlLayoutCustomIcon>
               </div>
-            </EuiFormControlLayoutIcons>
+            </WuiFormControlLayoutIcons>
           </div>
         </div>
-      </EuiFormControlLayout>
+      </WuiFormControlLayout>
     </span>
   </span>
-</EuiDatePicker>
+</WuiDatePicker>
 `;

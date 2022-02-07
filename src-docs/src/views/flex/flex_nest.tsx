@@ -1,33 +1,33 @@
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiFlexGrid,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
+    <WuiFlexGroup>
+      <WuiFlexItem grow={false}>
         <div>Flex Group</div>
-        <EuiSpacer />
-        <EuiFlexGroup>
-          <EuiFlexItem>Nested Grid One</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Two</EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
+        <WuiSpacer />
+        <WuiFlexGroup>
+          <WuiFlexItem>Nested Grid One</WuiFlexItem>
+          <WuiFlexItem>Nested Grid Two</WuiFlexItem>
+        </WuiFlexGroup>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
         <div>Flex Grid</div>
-        <EuiSpacer />
-        <EuiFlexGrid columns={3}>
-          <EuiFlexItem>Nested Grid One</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Two</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Three</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Four</EuiFlexItem>
-        </EuiFlexGrid>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        <WuiSpacer />
+        <WuiFlexGrid columns={3}>
+          <WuiFlexItem>Nested Grid One</WuiFlexItem>
+          <WuiFlexItem>Nested Grid Two</WuiFlexItem>
+          <WuiFlexItem>Nested Grid Three</WuiFlexItem>
+          <WuiFlexItem>Nested Grid Four</WuiFlexItem>
+        </WuiFlexGrid>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

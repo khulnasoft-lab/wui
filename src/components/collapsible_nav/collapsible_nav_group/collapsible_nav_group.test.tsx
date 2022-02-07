@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,16 +34,16 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiCollapsibleNavGroup, BACKGROUNDS } from './collapsible_nav_group';
+import { WuiCollapsibleNavGroup, BACKGROUNDS } from './collapsible_nav_group';
 
 jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
-describe('EuiCollapsibleNavGroup', () => {
+describe('WuiCollapsibleNavGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCollapsibleNavGroup id="id" {...requiredProps} />
+      <WuiCollapsibleNavGroup id="id" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -39,7 +52,7 @@ describe('EuiCollapsibleNavGroup', () => {
   describe('props', () => {
     test('title is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" id="id" />
+        <WuiCollapsibleNavGroup title="Title" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -47,7 +60,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconType is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" iconType="bolt" id="id" />
+        <WuiCollapsibleNavGroup title="Title" iconType="bolt" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +68,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconSize is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <WuiCollapsibleNavGroup
           title="Title"
           iconSize="s"
           iconType="bolt"
@@ -68,7 +81,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconProps renders data-test-subj', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <WuiCollapsibleNavGroup
           title="Title"
           iconProps={{
             'data-test-subj': 'DTS',
@@ -85,7 +98,7 @@ describe('EuiCollapsibleNavGroup', () => {
       BACKGROUNDS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiCollapsibleNavGroup id="id" background={color} />
+            <WuiCollapsibleNavGroup id="id" background={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -95,7 +108,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('titleElement can change the rendered element to h2', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" titleElement="h2" id="id" />
+        <WuiCollapsibleNavGroup title="Title" titleElement="h2" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -103,7 +116,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('titleSize can be larger', () => {
       const component = render(
-        <EuiCollapsibleNavGroup id="id" titleSize="s" />
+        <WuiCollapsibleNavGroup id="id" titleSize="s" />
       );
 
       expect(component).toMatchSnapshot();
@@ -113,7 +126,7 @@ describe('EuiCollapsibleNavGroup', () => {
   describe('when isCollapsible is true', () => {
     test('will render an accordion', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <WuiCollapsibleNavGroup
           isCollapsible={true}
           initialIsOpen={false}
           title="Title"
@@ -130,7 +143,7 @@ describe('EuiCollapsibleNavGroup', () => {
     let consoleStub: jest.Mock;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because WUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
       console.warn = consoleStub = jest.fn();
@@ -142,7 +155,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('if iconType is passed without a title', () => {
       const component = render(
-        <EuiCollapsibleNavGroup iconType="bolt" id="id" />
+        <WuiCollapsibleNavGroup iconType="bolt" id="id" />
       );
 
       expect(consoleStub).toBeCalled();

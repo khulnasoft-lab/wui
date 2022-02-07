@@ -1,36 +1,36 @@
-.euiNavDrawerFlyout {
-  @include euiScrollBar;
+.wuiNavDrawerFlyout {
+  @include wuiScrollBar;
   width: 0;
   height: 100%;
-  padding: $euiSizeM 0;
+  padding: $wuiSizeM 0;
   overflow-y: auto;
-  background-color: $euiNavDrawerBackgroundColor;
-  border-left: $euiBorderThin;
-  box-shadow: $euiNavDrawerSideShadow;
+  background-color: $wuiNavDrawerBackgroundColor;
+  border-left: $wuiBorderThin;
+  box-shadow: $wuiNavDrawerSideShadow;
   visibility: hidden;
   opacity: 0;
 
-  &.euiNavDrawerFlyout-isExpanded {
+  &.wuiNavDrawerFlyout-isExpanded {
     visibility: visible;
     opacity: 1;
-    width: $euiNavDrawerWidthExpanded;
-    transition: opacity $euiAnimSpeedFast $euiNavDrawerContractingDelay, width $euiAnimSpeedNormal;
+    width: $wuiNavDrawerWidthExpanded;
+    transition: opacity $wuiAnimSpeedFast $wuiNavDrawerContractingDelay, width $wuiAnimSpeedNormal;
   }
 
-  &.euiNavDrawerFlyout-isCollapsed {
-    transition: opacity $euiAnimSpeedFast, width $euiAnimSpeedFast;
+  &.wuiNavDrawerFlyout-isCollapsed {
+    transition: opacity $wuiAnimSpeedFast, width $wuiAnimSpeedFast;
   }
 
-  .euiNavDrawerFlyout__title {
-    margin: 0 $euiSizeS $euiSizeXS;
+  .wuiNavDrawerFlyout__title {
+    margin: 0 $wuiSizeS $wuiSizeXS;
   }
 
-  .euiNavDrawerFlyout__listGroup {
+  .wuiNavDrawerFlyout__listGroup {
     padding-left: 0;
     padding-right: 0;
 
-    .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button {
-      box-shadow: 3px 0 0 inset $euiColorPrimary;
+    .wuiListGroupItem-isActive:not(.wuiListGroupItem--ghost) .wuiListGroupItem__button {
+      box-shadow: 3px 0 0 inset $wuiColorPrimary;
     }
   }
 }

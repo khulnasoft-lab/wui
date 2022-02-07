@@ -2,15 +2,15 @@
 
 exports[`align defaults to left 1`] = `
 <td
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
 >
   <div
-    class="euiTableCellContent"
+    class="wuiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     />
   </div>
 </td>
@@ -18,15 +18,15 @@ exports[`align defaults to left 1`] = `
 
 exports[`align renders center when specified 1`] = `
 <td
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
 >
   <div
-    class="euiTableCellContent euiTableCellContent--alignCenter"
+    class="wuiTableCellContent wuiTableCellContent--alignCenter"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     />
   </div>
 </td>
@@ -34,33 +34,33 @@ exports[`align renders center when specified 1`] = `
 
 exports[`align renders right when specified 1`] = `
 <td
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
 >
   <div
-    class="euiTableCellContent euiTableCellContent--alignRight"
+    class="wuiTableCellContent wuiTableCellContent--alignRight"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     />
   </div>
 </td>
 `;
 
-exports[`renders EuiTableHeaderCell 1`] = `
+exports[`renders WuiTableHeaderCell 1`] = `
 <th
   aria-label="aria-label"
-  class="euiTableHeaderCell testClass1 testClass2"
+  class="wuiTableHeaderCell testClass1 testClass2"
   data-test-subj="test subject string"
   role="columnheader"
   scope="col"
 >
   <div
-    class="euiTableCellContent testClass1 testClass2"
+    class="wuiTableCellContent testClass1 testClass2"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     >
       children
     </span>
@@ -71,16 +71,16 @@ exports[`renders EuiTableHeaderCell 1`] = `
 exports[`renders td when children is null/undefined 1`] = `
 <td
   aria-label="aria-label"
-  class="euiTableHeaderCell testClass1 testClass2"
+  class="wuiTableHeaderCell testClass1 testClass2"
   data-test-subj="test subject string"
   role="columnheader"
   scope="col"
 >
   <div
-    class="euiTableCellContent testClass1 testClass2"
+    class="wuiTableCellContent testClass1 testClass2"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     />
   </div>
 </td>
@@ -88,16 +88,16 @@ exports[`renders td when children is null/undefined 1`] = `
 
 exports[`width and style accepts style attribute 1`] = `
 <th
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
   style="width:20%"
 >
   <div
-    class="euiTableCellContent"
+    class="wuiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     >
       Test
     </span>
@@ -107,16 +107,16 @@ exports[`width and style accepts style attribute 1`] = `
 
 exports[`width and style accepts width attribute 1`] = `
 <th
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
   style="width:10%"
 >
   <div
-    class="euiTableCellContent"
+    class="wuiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     >
       Test
     </span>
@@ -126,16 +126,16 @@ exports[`width and style accepts width attribute 1`] = `
 
 exports[`width and style accepts width attribute as number 1`] = `
 <th
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
   style="width:100px"
 >
   <div
-    class="euiTableCellContent"
+    class="wuiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     >
       Test
     </span>
@@ -145,16 +145,16 @@ exports[`width and style accepts width attribute as number 1`] = `
 
 exports[`width and style resolves style and width attribute 1`] = `
 <th
-  class="euiTableHeaderCell"
+  class="wuiTableHeaderCell"
   role="columnheader"
   scope="col"
   style="width:10%"
 >
   <div
-    class="euiTableCellContent"
+    class="wuiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="wuiTableCellContent__text"
     >
       Test
     </span>

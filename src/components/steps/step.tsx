@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,13 +35,13 @@ import { CommonProps } from '../common';
 
 import classNames from 'classnames';
 
-import { EuiTitle, EuiTitleProps, EuiTitleSize } from '../title';
+import { WuiTitle, WuiTitleProps, WuiTitleSize } from '../title';
 
-import { EuiStepStatus, EuiStepNumber } from './step_number';
+import { WuiStepStatus, WuiStepNumber } from './step_number';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
-export interface EuiStepInterface {
+export interface WuiStepInterface {
   /**
    * ReactNode to render as this component's content
    */
@@ -45,18 +58,18 @@ export interface EuiStepInterface {
   /**
    * May replace the number provided in props.step with alternate styling.
    */
-  status?: EuiStepStatus;
+  status?: WuiStepStatus;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to WuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: Exclude<EuiTitleProps['size'], 'xxxs' | 'xxs' | 'l'>;
+  titleSize?: Exclude<WuiTitleProps['size'], 'xxxs' | 'xxs' | 'l'>;
 }
 
-export type EuiStepProps = CommonProps &
+export type WuiStepProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> &
-  EuiStepInterface;
+  WuiStepInterface;
 
-export const EuiStep: FunctionComponent<EuiStepProps> = ({
+export const WuiStep: FunctionComponent<WuiStepProps> = ({
   className,
   children,
   headingElement = 'p',
@@ -67,28 +80,28 @@ export const EuiStep: FunctionComponent<EuiStepProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiStep',
+    'wuiStep',
     {
-      'euiStep--small': titleSize === 'xs',
+      'wuiStep--small': titleSize === 'xs',
     },
     className
   );
-  const numberClasses = classNames('euiStep__circle', {
-    'euiStepNumber--small': titleSize === 'xs',
+  const numberClasses = classNames('wuiStep__circle', {
+    'wuiStepNumber--small': titleSize === 'xs',
   });
 
   return (
     <div className={classes} {...rest}>
-      <div className="euiStep__titleWrapper">
-        <EuiI18n
-          token="euiStep.ariaLabel"
-          default={({ status }: { status?: EuiStepStatus }) => {
+      <div className="wuiStep__titleWrapper">
+        <WuiI18n
+          token="wuiStep.ariaLabel"
+          default={({ status }: { status?: WuiStepStatus }) => {
             if (status === 'incomplete') return 'Incomplete Step';
             return 'Step';
           }}
           values={{ status }}>
           {(ariaLabel: string) => (
-            <EuiStepNumber
+            <WuiStepNumber
               className={numberClasses}
               aria-label={`${ariaLabel} ${step}`}
               number={step}
@@ -97,14 +110,14 @@ export const EuiStep: FunctionComponent<EuiStepProps> = ({
               isHollow={status === 'incomplete'}
             />
           )}
-        </EuiI18n>
+        </WuiI18n>
 
-        <EuiTitle size={titleSize as EuiTitleSize} className="euiStep__title">
+        <WuiTitle size={titleSize as WuiTitleSize} className="wuiStep__title">
           {React.createElement(headingElement, null, title)}
-        </EuiTitle>
+        </WuiTitle>
       </div>
 
-      <div className="euiStep__content">{children}</div>
+      <div className="wuiStep__content">{children}</div>
     </div>
   );
 };

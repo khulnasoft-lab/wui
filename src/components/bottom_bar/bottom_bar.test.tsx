@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,16 +36,16 @@ import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 import { keysOf } from '../common';
 
-import { EuiBottomBar, paddingSizeToClassNameMap } from './bottom_bar';
+import { WuiBottomBar, paddingSizeToClassNameMap } from './bottom_bar';
 
 // @ts-ignore TODO: Temporary hack which we can remove once react-test-renderer supports portals.
 // More info at https://github.com/facebook/react/issues/11565.
 ReactDOM.createPortal = node => node;
 
-describe('EuiBottomBar', () => {
+describe('WuiBottomBar', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiBottomBar {...requiredProps}>Content</EuiBottomBar>
+      <WuiBottomBar {...requiredProps}>Content</WuiBottomBar>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +55,7 @@ describe('EuiBottomBar', () => {
     describe('paddingSize', () => {
       keysOf(paddingSizeToClassNameMap).forEach(paddingSize => {
         test(`${paddingSize} is rendered`, () => {
-          const component = render(<EuiBottomBar paddingSize={paddingSize} />);
+          const component = render(<WuiBottomBar paddingSize={paddingSize} />);
 
           expect(component).toMatchSnapshot();
         });

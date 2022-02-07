@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuggest is rendered 1`] = `
+exports[`WuiSuggest is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiInputPopover--fullWidth euiSuggestInput testClass1 testClass2"
+    class="wuiPopover wuiPopover--anchorDownLeft wuiPopover--displayBlock wuiInputPopover wuiInputPopover--fullWidth wuiSuggestInput testClass1 testClass2"
   >
     <div
-      class="euiPopover__anchor"
+      class="wuiPopover__anchor"
     >
       <div>
         <div
-          class="euiFormControlLayout euiFormControlLayout--fullWidth"
+          class="wuiFormControlLayout wuiFormControlLayout--fullWidth"
         >
           <div
-            class="euiFormControlLayout__childrenWrapper"
+            class="wuiFormControlLayout__childrenWrapper"
           >
             <input
               aria-label="aria-label"
-              class="euiFieldText euiFieldText--fullWidth"
+              class="wuiFieldText wuiFieldText--fullWidth"
               data-test-subj="test subject string"
               type="text"
               value=""

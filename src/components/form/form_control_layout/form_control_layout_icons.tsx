@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,14 +32,14 @@
 
 import React, { Fragment, Component } from 'react';
 
-import { EuiLoadingSpinner } from '../../loading';
+import { WuiLoadingSpinner } from '../../loading';
 import {
-  EuiFormControlLayoutClearButton,
-  EuiFormControlLayoutClearButtonProps,
+  WuiFormControlLayoutClearButton,
+  WuiFormControlLayoutClearButtonProps,
 } from './form_control_layout_clear_button';
 import {
-  EuiFormControlLayoutCustomIcon,
-  EuiFormControlLayoutCustomIconProps,
+  WuiFormControlLayoutCustomIcon,
+  WuiFormControlLayoutCustomIconProps,
 } from './form_control_layout_custom_icon';
 import { IconType } from '../../icon';
 import { DistributiveOmit } from '../../common';
@@ -34,28 +47,28 @@ import { DistributiveOmit } from '../../common';
 export const ICON_SIDES: ['left', 'right'] = ['left', 'right'];
 
 type IconShape = DistributiveOmit<
-  EuiFormControlLayoutCustomIconProps,
+  WuiFormControlLayoutCustomIconProps,
   'type' | 'iconRef'
 > & {
   type: IconType;
   side?: typeof ICON_SIDES[number];
-  ref?: EuiFormControlLayoutCustomIconProps['iconRef'];
+  ref?: WuiFormControlLayoutCustomIconProps['iconRef'];
 };
 
 function isIconShape(
-  icon: EuiFormControlLayoutIconsProps['icon']
+  icon: WuiFormControlLayoutIconsProps['icon']
 ): icon is IconShape {
   return !!icon && icon.hasOwnProperty('type');
 }
 
-export interface EuiFormControlLayoutIconsProps {
+export interface WuiFormControlLayoutIconsProps {
   icon?: IconType | IconShape;
-  clear?: EuiFormControlLayoutClearButtonProps;
+  clear?: WuiFormControlLayoutClearButtonProps;
   isLoading?: boolean;
 }
 
-export class EuiFormControlLayoutIcons extends Component<
-  EuiFormControlLayoutIconsProps
+export class WuiFormControlLayoutIcons extends Component<
+  WuiFormControlLayoutIconsProps
 > {
   render() {
     const { icon } = this.props;
@@ -68,7 +81,7 @@ export class EuiFormControlLayoutIcons extends Component<
     let leftIcons;
 
     if (customIcon && iconSide === 'left') {
-      leftIcons = <div className="euiFormControlLayoutIcons">{customIcon}</div>;
+      leftIcons = <div className="wuiFormControlLayoutIcons">{customIcon}</div>;
     }
 
     let rightIcons;
@@ -76,7 +89,7 @@ export class EuiFormControlLayoutIcons extends Component<
     // If the icon is on the right, it should be placed after the clear button in the DOM.
     if (clearButton || loadingSpinner || (customIcon && iconSide === 'right')) {
       rightIcons = (
-        <div className="euiFormControlLayoutIcons euiFormControlLayoutIcons--right">
+        <div className="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right">
           {clearButton}
           {loadingSpinner}
           {iconSide === 'right' ? customIcon : undefined}
@@ -108,7 +121,7 @@ export class EuiFormControlLayoutIcons extends Component<
 
     const { ref: iconRef, side, ...iconRest } = iconProps;
 
-    return <EuiFormControlLayoutCustomIcon iconRef={iconRef} {...iconRest} />;
+    return <WuiFormControlLayoutCustomIcon iconRef={iconRef} {...iconRest} />;
   }
 
   renderLoadingSpinner() {
@@ -118,7 +131,7 @@ export class EuiFormControlLayoutIcons extends Component<
       return null;
     }
 
-    return <EuiLoadingSpinner size="m" />;
+    return <WuiLoadingSpinner size="m" />;
   }
 
   renderClearButton() {
@@ -127,6 +140,6 @@ export class EuiFormControlLayoutIcons extends Component<
       return null;
     }
 
-    return <EuiFormControlLayoutClearButton {...clear} />;
+    return <WuiFormControlLayoutClearButton {...clear} />;
   }
 }

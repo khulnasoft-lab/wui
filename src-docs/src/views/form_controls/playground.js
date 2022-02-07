@@ -5,21 +5,21 @@ import {
   iconValidator,
 } from '../../services/playground';
 import {
-  EuiFieldText,
-  EuiFieldSearch,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiTextArea,
-  EuiCheckbox,
-  EuiRadio,
-  EuiSwitch,
+  WuiFieldText,
+  WuiFieldSearch,
+  WuiFieldNumber,
+  WuiFieldPassword,
+  WuiTextArea,
+  WuiCheckbox,
+  WuiRadio,
+  WuiSwitch,
 } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 const fieldTextConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldText.__docgenInfo)
-    ? EuiFieldText.__docgenInfo[0]
-    : EuiFieldText.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFieldText.__docgenInfo)
+    ? WuiFieldText.__docgenInfo[0]
+    : WuiFieldText.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -43,14 +43,14 @@ const fieldTextConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldText',
+      componentName: 'WuiFieldText',
       props: propsToUse,
       scope: {
-        EuiFieldText,
+        WuiFieldText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldText'],
+        '@wazuh/wui': {
+          named: ['WuiFieldText'],
         },
       },
       customProps: {
@@ -61,9 +61,9 @@ const fieldTextConfig = () => {
 };
 
 export const fieldSearchConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldSearch.__docgenInfo)
-    ? EuiFieldSearch.__docgenInfo[0]
-    : EuiFieldSearch.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFieldSearch.__docgenInfo)
+    ? WuiFieldSearch.__docgenInfo[0]
+    : WuiFieldSearch.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -87,14 +87,14 @@ export const fieldSearchConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldSearch',
+      componentName: 'WuiFieldSearch',
       props: propsToUse,
       scope: {
-        EuiFieldSearch,
+        WuiFieldSearch,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldSearch'],
+        '@wazuh/wui': {
+          named: ['WuiFieldSearch'],
         },
       },
       customProps: {
@@ -105,9 +105,9 @@ export const fieldSearchConfig = () => {
 };
 
 export const fieldNumberConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldNumber.__docgenInfo)
-    ? EuiFieldNumber.__docgenInfo[0]
-    : EuiFieldNumber.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFieldNumber.__docgenInfo)
+    ? WuiFieldNumber.__docgenInfo[0]
+    : WuiFieldNumber.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -134,14 +134,14 @@ export const fieldNumberConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldNumber',
+      componentName: 'WuiFieldNumber',
       props: propsToUse,
       scope: {
-        EuiFieldNumber,
+        WuiFieldNumber,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldNumber'],
+        '@wazuh/wui': {
+          named: ['WuiFieldNumber'],
         },
       },
       customProps: {
@@ -152,9 +152,9 @@ export const fieldNumberConfig = () => {
 };
 
 export const fieldPasswordConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldPassword.__docgenInfo)
-    ? EuiFieldPassword.__docgenInfo[0]
-    : EuiFieldPassword.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiFieldPassword.__docgenInfo)
+    ? WuiFieldPassword.__docgenInfo[0]
+    : WuiFieldPassword.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -183,14 +183,14 @@ export const fieldPasswordConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldPassword',
+      componentName: 'WuiFieldPassword',
       props: propsToUse,
       scope: {
-        EuiFieldPassword,
+        WuiFieldPassword,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldPassword'],
+        '@wazuh/wui': {
+          named: ['WuiFieldPassword'],
         },
       },
       customProps: {
@@ -201,9 +201,9 @@ export const fieldPasswordConfig = () => {
 };
 
 export const textAreaConfig = () => {
-  const docgenInfo = Array.isArray(EuiTextArea.__docgenInfo)
-    ? EuiTextArea.__docgenInfo[0]
-    : EuiTextArea.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiTextArea.__docgenInfo)
+    ? WuiTextArea.__docgenInfo[0]
+    : WuiTextArea.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -226,14 +226,14 @@ export const textAreaConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTextArea',
+      componentName: 'WuiTextArea',
       props: propsToUse,
       scope: {
-        EuiTextArea,
+        WuiTextArea,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTextArea'],
+        '@wazuh/wui': {
+          named: ['WuiTextArea'],
         },
       },
       customProps: {
@@ -244,9 +244,9 @@ export const textAreaConfig = () => {
 };
 
 export const checkboxConfig = () => {
-  const docgenInfo = Array.isArray(EuiCheckbox.__docgenInfo)
-    ? EuiCheckbox.__docgenInfo[0]
-    : EuiCheckbox.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiCheckbox.__docgenInfo)
+    ? WuiCheckbox.__docgenInfo[0]
+    : WuiCheckbox.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.id = {
@@ -263,14 +263,14 @@ export const checkboxConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCheckbox',
+      componentName: 'WuiCheckbox',
       props: propsToUse,
       scope: {
-        EuiCheckbox,
+        WuiCheckbox,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCheckbox'],
+        '@wazuh/wui': {
+          named: ['WuiCheckbox'],
         },
       },
       customProps: {
@@ -281,9 +281,9 @@ export const checkboxConfig = () => {
 };
 
 export const radioConfig = () => {
-  const docgenInfo = Array.isArray(EuiRadio.__docgenInfo)
-    ? EuiRadio.__docgenInfo[0]
-    : EuiRadio.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiRadio.__docgenInfo)
+    ? WuiRadio.__docgenInfo[0]
+    : WuiRadio.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.id = {
@@ -302,14 +302,14 @@ export const radioConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiRadio',
+      componentName: 'WuiRadio',
       props: propsToUse,
       scope: {
-        EuiRadio,
+        WuiRadio,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiRadio'],
+        '@wazuh/wui': {
+          named: ['WuiRadio'],
         },
       },
       customProps: {
@@ -320,9 +320,9 @@ export const radioConfig = () => {
 };
 
 const switchConfig = () => {
-  const docgenInfo = Array.isArray(EuiSwitch.__docgenInfo)
-    ? EuiSwitch.__docgenInfo[0]
-    : EuiSwitch.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiSwitch.__docgenInfo)
+    ? WuiSwitch.__docgenInfo[0]
+    : WuiSwitch.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.label = {
@@ -340,14 +340,14 @@ const switchConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiSwitch',
+      componentName: 'WuiSwitch',
       props: propsToUse,
       scope: {
-        EuiSwitch,
+        WuiSwitch,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiSwitch'],
+        '@wazuh/wui': {
+          named: ['WuiSwitch'],
         },
       },
       customProps: {

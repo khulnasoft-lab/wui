@@ -7,19 +7,19 @@ import { GuideSectionTypes } from '../../components';
 import lightColors from '!!sass-vars-to-js-loader!../../../../src/global_styling/variables/_colors.scss';
 
 import {
-  EuiHeader,
-  EuiHeaderAlert,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiHeaderLogo,
-  EuiCode,
-  EuiHeaderLinks,
-  EuiHeaderLink,
+  WuiHeader,
+  WuiHeaderAlert,
+  WuiHeaderBreadcrumbs,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemButton,
+  WuiHeaderLogo,
+  WuiCode,
+  WuiHeaderLinks,
+  WuiHeaderLink,
 } from '../../../../src/components';
 
-import { EuiHeaderSectionsProp } from './props';
+import { WuiHeaderSectionsProp } from './props';
 
 import Header from './header';
 const headerSource = require('!!raw-loader!./header');
@@ -49,27 +49,27 @@ import HeaderStacked from './header_stacked';
 const headerStackedSource = require('!!raw-loader!./header_stacked');
 const headerStackedHtml = renderToHtml(HeaderStacked);
 
-import HeaderElasticPattern from './header_elastic_pattern';
-const headerElasticPatternSource = require('!!raw-loader!./header_elastic_pattern');
-const headerElasticPatternHtml = renderToHtml(HeaderElasticPattern);
+import HeaderWazuhPattern from './header_pattern';
+const headerWazuhPatternSource = require('!!raw-loader!./header_pattern');
+const headerWazuhPatternHtml = renderToHtml(HeaderWazuhPattern);
 
-const headerSnippet = `<EuiHeader>
-  <EuiHeaderSection grow={false}>
-    <EuiHeaderSectionItem border="right">
+const headerSnippet = `<WuiHeader>
+  <WuiHeaderSection grow={false}>
+    <WuiHeaderSectionItem border="right">
       <!-- HeaderSectionItem content -->
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
+    </WuiHeaderSectionItem>
+  </WuiHeaderSection>
 
-  <!-- You can render breadcrumbs here using EuiHeaderBreadcrumbs -->
+  <!-- You can render breadcrumbs here using WuiHeaderBreadcrumbs -->
 
-  <EuiHeaderSection side="right">
-    <EuiHeaderSectionItem>
+  <WuiHeaderSection side="right">
+    <WuiHeaderSectionItem>
       <!-- HeaderSectionItem content -->
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
-</EuiHeader>`;
+    </WuiHeaderSectionItem>
+  </WuiHeaderSection>
+</WuiHeader>`;
 
-const headerSectionsSnippet = `<EuiHeader
+const headerSectionsSnippet = `<WuiHeader
   sections={[
     {
       items: [...],
@@ -86,24 +86,24 @@ const headerSectionsSnippet = `<EuiHeader
   ]}
 />`;
 
-const headerLinksSnippet = `<EuiHeader>
-  <EuiHeaderSectionItem border="right">
-    <EuiHeaderLogo
+const headerLinksSnippet = `<WuiHeader>
+  <WuiHeaderSectionItem border="right">
+    <WuiHeaderLogo
       iconType="iconName"
       href=""
     />
-  </EuiHeaderSectionItem>
+  </WuiHeaderSectionItem>
 
-  <EuiHeaderLinks>
-    <EuiHeaderLink href="" isActive>
+  <WuiHeaderLinks>
+    <WuiHeaderLink href="" isActive>
       <!-- First link -->
-    </EuiHeaderLink>
+    </WuiHeaderLink>
 
-    <EuiHeaderLink href="">
+    <WuiHeaderLink href="">
       <!-- Second link -->
-    </EuiHeaderLink>
-  </EuiHeaderLinks>
-</EuiHeader>`;
+    </WuiHeaderLink>
+  </WuiHeaderLinks>
+</WuiHeader>`;
 
 export const HeaderExample = {
   title: 'Header',
@@ -125,13 +125,13 @@ export const HeaderExample = {
         </p>
       ),
       props: {
-        EuiHeader,
-        EuiHeaderBreadcrumbs,
-        EuiHeaderSection,
-        EuiHeaderSectionItem,
-        EuiHeaderSectionItemButton,
-        EuiHeaderLogo,
-        EuiHeaderSectionsProp,
+        WuiHeader,
+        WuiHeaderBreadcrumbs,
+        WuiHeaderSection,
+        WuiHeaderSectionItem,
+        WuiHeaderSectionItemButton,
+        WuiHeaderLogo,
+        WuiHeaderSectionsProp,
       },
       snippet: headerSnippet,
       demo: <Header />,
@@ -152,27 +152,27 @@ export const HeaderExample = {
         <>
           <p>
             Alternatively, you can pass an array objects to the{' '}
-            <EuiCode>sections</EuiCode> props that takes a key of{' '}
-            <EuiCode>items</EuiCode> (array of children to wrap in an{' '}
-            <strong>EuiHeaderSectionItem</strong>) and/or{' '}
-            <EuiCode>breadcrumbs</EuiCode> (array of{' '}
+            <WuiCode>sections</WuiCode> props that takes a key of{' '}
+            <WuiCode>items</WuiCode> (array of children to wrap in an{' '}
+            <strong>WuiHeaderSectionItem</strong>) and/or{' '}
+            <WuiCode>breadcrumbs</WuiCode> (array of{' '}
             <Link to="/navigation/breadcrumbs">breadcrumb</Link> objects). Each
             item in the array will be wrapped in an{' '}
-            <strong>EuiHeaderSection</strong>.
+            <strong>WuiHeaderSection</strong>.
           </p>
           <p>
-            <strong>Note:</strong> Passing <EuiCode>sections</EuiCode> and{' '}
-            <EuiCode>children</EuiCode> will disregard the{' '}
-            <EuiCode>children</EuiCode> as it is not easily interpreted at what
+            <strong>Note:</strong> Passing <WuiCode>sections</WuiCode> and{' '}
+            <WuiCode>children</WuiCode> will disregard the{' '}
+            <WuiCode>children</WuiCode> as it is not easily interpreted at what
             location the children should be placed.
           </p>
         </>
       ),
       props: {
-        EuiHeader,
-        EuiHeaderSectionsProp,
-        EuiHeaderSection,
-        EuiHeaderSectionItem,
+        WuiHeader,
+        WuiHeaderSectionsProp,
+        WuiHeaderSection,
+        WuiHeaderSectionItem,
       },
       snippet: headerSectionsSnippet,
       demo: <HeaderSections />,
@@ -194,23 +194,23 @@ export const HeaderExample = {
           <p>
             Most consumers need a header that does not scroll away with the page
             contents. You can apply this display by applying the property{' '}
-            <EuiCode language="ts">{'position="fixed"'}</EuiCode>. This will
-            also add a class of <EuiCode>.euiBody--headerIsFixed</EuiCode> to
+            <WuiCode language="ts">{'position="fixed"'}</WuiCode>. This will
+            also add a class of <WuiCode>.wuiBody--headerIsFixed</WuiCode> to
             the window body.
           </p>
           <p>
             You will then need to apply your own padding to this body class to
-            afford for the header height. EUI supplies a helper mixin that also
+            afford for the header height. WUI supplies a helper mixin that also
             accounts for this height in flyouts and the collapsible nav. Simply
             add{' '}
-            <EuiCode language="scss">@include euiHeaderAffordForFixed;</EuiCode>{' '}
+            <WuiCode language="scss">@include wuiHeaderAffordForFixed;</WuiCode>{' '}
             anywhere in your SASS.
           </p>
         </>
       ),
       snippet: [
-        '<EuiHeader position="fixed" />',
-        '@include euiHeaderAffordForFixed;',
+        '<WuiHeader position="fixed" />',
+        '@include wuiHeaderAffordForFixed;',
       ],
       demo: <HeaderPosition />,
     },
@@ -229,23 +229,23 @@ export const HeaderExample = {
       text: (
         <>
           <p>
-            <strong>EuiHeaderLinks</strong> and <strong>EuiHeaderLink</strong>{' '}
+            <strong>WuiHeaderLinks</strong> and <strong>WuiHeaderLink</strong>{' '}
             supply the ability to inline a list of navigational or menu style
             links.
           </p>
           <p>
-            <strong>EuiHeaderLinks</strong> comes with responsive functionality
+            <strong>WuiHeaderLinks</strong> comes with responsive functionality
             built-in which will convert the inline list of links to a popover
-            list triggered by a <strong>EuiHeaderSectionItemButton</strong>. You
+            list triggered by a <strong>WuiHeaderSectionItemButton</strong>. You
             can adjust at which breakpoints to switch to the popover display by
             passing your own array of named breakpoints to{' '}
-            <EuiCode>popoverBreakpoints</EuiCode>.
+            <WuiCode>popoverBreakpoints</WuiCode>.
           </p>
         </>
       ),
       props: {
-        EuiHeaderLinks,
-        EuiHeaderLink,
+        WuiHeaderLinks,
+        WuiHeaderLink,
       },
       snippet: headerLinksSnippet,
       demo: <HeaderLinks />,
@@ -265,17 +265,17 @@ export const HeaderExample = {
       text: (
         <p>
           To make site-wide navigation more prominent,{' '}
-          <strong>EuiHeader</strong> supports reversing the colors to dark theme
-          with <EuiCode language="js">{'theme="dark"'}</EuiCode>. However, it
+          <strong>WuiHeader</strong> supports reversing the colors to dark theme
+          with <WuiCode language="js">{'theme="dark"'}</WuiCode>. However, it
           only supports a <strong>limited set of children</strong> that will
           also shift their theme. These components include{' '}
-          <strong>EuiHeaderLogo, EuiHeaderLink(s),</strong>{' '}
-          <strong>EuiHeaderSectionItemButton</strong> and{' '}
-          <strong>EuiSelectableTemplateSitewide</strong>. Any other content may
+          <strong>WuiHeaderLogo, WuiHeaderLink(s),</strong>{' '}
+          <strong>WuiHeaderSectionItemButton</strong> and{' '}
+          <strong>WuiSelectableTemplateSitewide</strong>. Any other content may
           not render correctly without custom configurations.
         </p>
       ),
-      snippet: '<EuiHeader theme="dark" />',
+      snippet: '<WuiHeader theme="dark" />',
       demo: <HeaderDark theme={lightColors} />,
     },
     {
@@ -293,33 +293,33 @@ export const HeaderExample = {
       text: (
         <>
           <p>
-            Use an <strong>EuiHeaderSectionItemButton</strong> to display
+            Use an <strong>WuiHeaderSectionItemButton</strong> to display
             additional information in <Link to="/layout/popover">popovers</Link>{' '}
             or <Link to="/layout/flyout">flyouts</Link>, such as a user profile
             or news feed. When using{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>WuiFlyout</strong>
             </Link>
             , be sure to wrap it in a{' '}
             <Link to="/utilities/portal">
-              <strong>EuiPortal</strong>
+              <strong>WuiPortal</strong>
             </Link>
             . When using an{' '}
             <Link to="/layout/popover">
-              <strong>EuiPopover</strong>
+              <strong>WuiPopover</strong>
             </Link>{' '}
             in conjunction with a <strong>fixed</strong> header, be sure to add
-            the <EuiCode>repositionOnScroll</EuiCode> prop to the popover.
+            the <WuiCode>repositionOnScroll</WuiCode> prop to the popover.
           </p>
           <p>
             The example below shows how to incorporate{' '}
-            <strong>EuiHeaderAlert</strong> components to show a list of
+            <strong>WuiHeaderAlert</strong> components to show a list of
             updates.
           </p>
         </>
       ),
       props: {
-        EuiHeaderAlert,
+        WuiHeaderAlert,
       },
       demo: <HeaderAlert />,
     },
@@ -339,29 +339,29 @@ export const HeaderExample = {
         <p>
           Stacking multiple headers provides a great way to separate global
           navigation concerns. However, the{' '}
-          <EuiCode language="ts">{'position="fixed"'}</EuiCode> option will not
+          <WuiCode language="ts">{'position="fixed"'}</WuiCode> option will not
           be aware of the number of headers. If you do need fixed{' '}
           <strong>and</strong> stacked headers, you will need to apply the SASS
           helper mixin and pass in the correct height to afford for.
         </p>
       ),
       snippet: [
-        `<EuiHeader theme="dark" position="fixed" />
-<EuiHeader position="fixed" />`,
-        '@include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);',
+        `<WuiHeader theme="dark" position="fixed" />
+<WuiHeader position="fixed" />`,
+        '@include wuiHeaderAffordForFixed($wuiHeaderHeightCompensation * 2);',
       ],
       demo: <HeaderStacked />,
     },
     {
-      title: 'The Elastic navigation pattern',
+      title: 'The Wazuh navigation pattern',
       source: [
         {
           type: GuideSectionTypes.JS,
-          code: headerElasticPatternSource,
+          code: headerWazuhPatternSource,
         },
         {
           type: GuideSectionTypes.HTML,
-          code: headerElasticPatternHtml,
+          code: headerWazuhPatternHtml,
         },
       ],
       text: (
@@ -369,14 +369,14 @@ export const HeaderExample = {
           <h3>Putting it all together</h3>
           <p>
             The button below will launch a full screen example that includes two{' '}
-            <strong>EuiHeaders</strong> with all the appropriate navigation
+            <strong>WuiHeaders</strong> with all the appropriate navigation
             pieces including{' '}
             <Link to="/navigation/collapsible-nav">
-              <strong>EuiCollapsibleNav</strong>,
+              <strong>WuiCollapsibleNav</strong>,
             </Link>{' '}
-            <strong>EuiHeaderAlerts</strong>, user menu, deployment switcher,
-            space selector, <strong>EuiHeaderBreadcrumbs</strong> and{' '}
-            <strong>EuiHeaderLinks</strong> for app menu items.
+            <strong>WuiHeaderAlerts</strong>, user menu, deployment switcher,
+            space selector, <strong>WuiHeaderBreadcrumbs</strong> and{' '}
+            <strong>WuiHeaderLinks</strong> for app menu items.
           </p>
           <p>
             This is just a pattern and should be treated as such. Consuming
@@ -385,7 +385,7 @@ export const HeaderExample = {
           </p>
         </>
       ),
-      demo: <HeaderElasticPattern theme={lightColors} />,
+      demo: <HeaderWazuhPattern theme={lightColors} />,
     },
   ],
 };

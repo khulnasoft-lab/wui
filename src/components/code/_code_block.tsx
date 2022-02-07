@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,33 +42,33 @@ import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import hljs from 'highlight.js';
 
-import { EuiCopy } from '../copy';
+import { WuiCopy } from '../copy';
 
-import { EuiButtonIcon } from '../button';
+import { WuiButtonIcon } from '../button';
 
-import { EuiOverlayMask } from '../overlay_mask';
+import { WuiOverlayMask } from '../overlay_mask';
 
-import { EuiFocusTrap } from '../focus_trap';
+import { WuiFocusTrap } from '../focus_trap';
 
 import { keys } from '../../services';
-import { EuiI18n } from '../i18n';
-import { EuiInnerText } from '../inner_text';
+import { WuiI18n } from '../i18n';
+import { WuiInnerText } from '../inner_text';
 import { keysOf } from '../common';
 import { FontSize, PaddingSize } from './code_block';
 
 const fontSizeToClassNameMap = {
-  s: 'euiCodeBlock--fontSmall',
-  m: 'euiCodeBlock--fontMedium',
-  l: 'euiCodeBlock--fontLarge',
+  s: 'wuiCodeBlock--fontSmall',
+  m: 'wuiCodeBlock--fontMedium',
+  l: 'wuiCodeBlock--fontLarge',
 };
 
 export const FONT_SIZES = keysOf(fontSizeToClassNameMap);
 
 const paddingSizeToClassNameMap: { [paddingSize in PaddingSize]: string } = {
   none: '',
-  s: 'euiCodeBlock--paddingSmall',
-  m: 'euiCodeBlock--paddingMedium',
-  l: 'euiCodeBlock--paddingLarge',
+  s: 'wuiCodeBlock--paddingSmall',
+  m: 'wuiCodeBlock--paddingMedium',
+  l: 'wuiCodeBlock--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
@@ -90,10 +103,10 @@ interface Props {
 }
 
 /**
- * This is the base component extended by EuiCode and EuiCodeBlock.
- * These components share the same propTypes definition with EuiCodeBlockImpl.
+ * This is the base component extended by WuiCode and WuiCodeBlock.
+ * These components share the same propTypes definition with WuiCodeBlockImpl.
  */
-export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
+export const WuiCodeBlockImpl: FunctionComponent<Props> = ({
   transparentBackground = false,
   paddingSize = 'l',
   fontSize = 's',
@@ -125,7 +138,7 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
      * DOM elements (including text nodes), and hljs modifies the DOM structure which leads
      * to React updating detached nodes, we render to a document fragment and
      * copy from that fragment into the target elements
-     * (https://github.com/elastic/eui/issues/2322)
+     * (https://github.com/wazuh/wui/issues/2322)
      */
     const html = isPortalTargetReady ? codeTarget.current!.innerHTML : '';
 
@@ -167,22 +180,22 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
   };
 
   const classes = classNames(
-    'euiCodeBlock',
+    'wuiCodeBlock',
     fontSizeToClassNameMap[fontSize],
     paddingSizeToClassNameMap[paddingSize],
     {
-      'euiCodeBlock--transparentBackground': transparentBackground,
-      'euiCodeBlock--inline': inline,
-      'euiCodeBlock--hasControls': isCopyable || overflowHeight,
+      'wuiCodeBlock--transparentBackground': transparentBackground,
+      'wuiCodeBlock--inline': inline,
+      'wuiCodeBlock--hasControls': isCopyable || overflowHeight,
     },
     className
   );
 
-  const codeClasses = classNames('euiCodeBlock__code', language);
+  const codeClasses = classNames('wuiCodeBlock__code', language);
 
-  const preClasses = classNames('euiCodeBlock__pre', {
-    'euiCodeBlock__pre--whiteSpacePre': whiteSpace === 'pre',
-    'euiCodeBlock__pre--whiteSpacePreWrap': whiteSpace === 'pre-wrap',
+  const preClasses = classNames('wuiCodeBlock__pre', {
+    'wuiCodeBlock__pre--whiteSpacePre': whiteSpace === 'pre',
+    'wuiCodeBlock__pre--whiteSpacePreWrap': whiteSpace === 'pre-wrap',
   });
 
   const optionalStyles: CSSProperties = {};
@@ -212,12 +225,12 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
 
     if (isCopyable && textToCopy) {
       copyButton = (
-        <div className="euiCodeBlock__copyButton">
-          <EuiI18n token="euiCodeBlock.copyButton" default="Copy">
+        <div className="wuiCodeBlock__copyButton">
+          <WuiI18n token="wuiCodeBlock.copyButton" default="Copy">
             {(copyButton: string) => (
-              <EuiCopy textToCopy={textToCopy}>
+              <WuiCopy textToCopy={textToCopy}>
                 {copy => (
-                  <EuiButtonIcon
+                  <WuiButtonIcon
                     size="s"
                     onClick={copy}
                     iconType="copy"
@@ -225,9 +238,9 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
                     aria-label={copyButton}
                   />
                 )}
-              </EuiCopy>
+              </WuiCopy>
             )}
-          </EuiI18n>
+          </WuiI18n>
         </div>
       );
     }
@@ -239,15 +252,15 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
 
   if (!inline && overflowHeight) {
     fullScreenButton = (
-      <EuiI18n
+      <WuiI18n
         tokens={[
-          'euiCodeBlock.fullscreenCollapse',
-          'euiCodeBlock.fullscreenExpand',
+          'wuiCodeBlock.fullscreenCollapse',
+          'wuiCodeBlock.fullscreenExpand',
         ]}
         defaults={['Collapse', 'Expand']}>
         {([fullscreenCollapse, fullscreenExpand]: string[]) => (
-          <EuiButtonIcon
-            className="euiCodeBlock__fullScreenButton"
+          <WuiButtonIcon
+            className="wuiCodeBlock__fullScreenButton"
             size="s"
             onClick={toggleFullScreen}
             iconType={isFullScreen ? 'cross' : 'fullScreen'}
@@ -255,7 +268,7 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
             aria-label={isFullScreen ? fullscreenCollapse : fullscreenExpand}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 
@@ -265,7 +278,7 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
 
     if (copyButton || fullScreenButton) {
       codeBlockControls = (
-        <div className="euiCodeBlock__controls">
+        <div className="wuiCodeBlock__controls">
           {fullScreenButton}
           {copyButton}
         </div>
@@ -281,16 +294,16 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
     if (isFullScreen) {
       // Force fullscreen to use large font and padding.
       const fullScreenClasses = classNames(
-        'euiCodeBlock',
+        'wuiCodeBlock',
         fontSizeToClassNameMap[fontSize],
-        'euiCodeBlock-paddingLarge',
-        'euiCodeBlock-isFullScreen',
+        'wuiCodeBlock-paddingLarge',
+        'wuiCodeBlock-isFullScreen',
         className
       );
 
       fullScreenDisplay = (
-        <EuiOverlayMask>
-          <EuiFocusTrap clickOutsideDisables={true}>
+        <WuiOverlayMask>
+          <WuiFocusTrap clickOutsideDisables={true}>
             <div className={fullScreenClasses}>
               <pre className={preClasses}>
                 <code
@@ -303,8 +316,8 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
 
               {codeBlockControls}
             </div>
-          </EuiFocusTrap>
-        </EuiOverlayMask>
+          </WuiFocusTrap>
+        </WuiOverlayMask>
       );
     }
 
@@ -314,7 +327,7 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
   return isPortalTargetReady ? (
     <>
       {createPortal(children, codeTarget.current!)}
-      <EuiInnerText fallback="">
+      <WuiInnerText fallback="">
         {(innerTextRef, innerText) => {
           const codeBlockControls = getCodeBlockControls(innerText);
           return (
@@ -328,14 +341,14 @@ export const EuiCodeBlockImpl: FunctionComponent<Props> = ({
 
               {/*
                 If the below fullScreen code renders, it actually attaches to the body because of
-                EuiOverlayMask's React portal usage.
+                WuiOverlayMask's React portal usage.
               */}
               {codeBlockControls}
               {getFullScreenDisplay(codeBlockControls)}
             </div>
           );
         }}
-      </EuiInnerText>
+      </WuiInnerText>
     </>
   ) : null;
 };

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,24 +34,24 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldText } from './field_text';
+import { WuiFieldText } from './field_text';
 
 jest.mock('../form_control_layout', () => {
   const formControlLayout = require.requireActual('../form_control_layout');
   return {
     ...formControlLayout,
-    EuiFormControlLayout: 'eui-form-control-layout',
+    WuiFormControlLayout: 'wui-form-control-layout',
   };
 });
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  WuiValidatableControl: 'wui-validatable-control',
 }));
 
-describe('EuiFieldText', () => {
+describe('WuiFieldText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldText
-        name="elastic"
+      <WuiFieldText
+        name="wazuh"
         id="1"
         placeholder="Placeholder"
         value="1"
@@ -54,31 +67,31 @@ describe('EuiFieldText', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldText isInvalid />);
+      const component = render(<WuiFieldText isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldText fullWidth />);
+      const component = render(<WuiFieldText fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('readOnly is rendered', () => {
-      const component = render(<EuiFieldText readOnly />);
+      const component = render(<WuiFieldText readOnly />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldText isLoading />);
+      const component = render(<WuiFieldText isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('controlOnly is rendered', () => {
-      const component = render(<EuiFieldText controlOnly />);
+      const component = render(<WuiFieldText controlOnly />);
 
       expect(component).toMatchSnapshot();
     });

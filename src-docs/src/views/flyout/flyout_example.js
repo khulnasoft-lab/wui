@@ -5,12 +5,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiFlyoutFooter,
-  EuiCallOut,
+  WuiCode,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutHeader,
+  WuiFlyoutFooter,
+  WuiCallOut,
 } from '../../../../src/components';
 
 import Flyout from './flyout';
@@ -37,82 +37,82 @@ import FlyoutWithBanner from './flyout_banner';
 const flyoutWithBannerSource = require('!!raw-loader!./flyout_banner');
 const flyoutWithBannerHtml = renderToHtml(FlyoutWithBanner);
 
-const flyOutSnippet = `<EuiFlyout ownFocus onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyOutSnippet = `<WuiFlyout ownFocus onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     <!-- Flyout body content -->
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
-const flyoutComplicatedSnippet = `<EuiFlyout ownFocus onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyoutComplicatedSnippet = `<WuiFlyout ownFocus onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     <!-- Long content can be placed here -->
-  </EuiFlyoutBody>
-  <EuiFlyoutFooter>
-    <EuiFlexGroup justifyContent="spaceBetween">
-      <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-      <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiFlyoutFooter>
-</EuiFlyout>
+  </WuiFlyoutBody>
+  <WuiFlyoutFooter>
+    <WuiFlexGroup justifyContent="spaceBetween">
+      <WuiFlexItem grow={false}><!-- FlexItem content --></WuiFlexItem>
+      <WuiFlexItem grow={false}><!-- FlexItem content --></WuiFlexItem>
+    </WuiFlexGroup>
+  </WuiFlyoutFooter>
+</WuiFlyout>
 `;
 
-const flyoutSmallSnippet = `<EuiFlyout size="s" onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyoutSmallSnippet = `<WuiFlyout size="s" onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     <!-- Flyout body content -->
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
-const flyoutMaxWidthSnippet = `<EuiFlyout ownFocus maxWidth={448} onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyoutMaxWidthSnippet = `<WuiFlyout ownFocus maxWidth={448} onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     <!-- Flyout body content -->
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
-const flyoutLargeSnippet = `<EuiFlyout ownFocus size="l" onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyoutLargeSnippet = `<WuiFlyout ownFocus size="l" onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     <!-- Flyout body content -->
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
-const flyoutWithBannerSnippet = `<EuiFlyout ownFocus onClose={closeFlyout}>
-  <EuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
-    <EuiTitle>
+const flyoutWithBannerSnippet = `<WuiFlyout ownFocus onClose={closeFlyout}>
+  <WuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>
+    <WuiTitle>
       <h2 id={flyoutHeadingId}><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody banner={callOut}>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody banner={callOut}>
     <!-- Flyout body content -->
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
 export const FlyoutExample = {
@@ -132,24 +132,24 @@ export const FlyoutExample = {
       text: (
         <>
           <p>
-            <strong>EuiFlyout</strong> is a fixed position panel that pops in
+            <strong>WuiFlyout</strong> is a fixed position panel that pops in
             from the right side of the screen. It should be used any time you
             need to perform quick, individual actions to a larger page or list.
           </p>
 
-          <EuiCallOut
+          <WuiCallOut
             iconType="accessibility"
             title={
               <>
-                Use <EuiCode>{'aria-labelledby={headingId}'}</EuiCode> and{' '}
-                <EuiCode>ownFocus</EuiCode> to announce the flyout to screen
+                Use <WuiCode>{'aria-labelledby={headingId}'}</WuiCode> and{' '}
+                <WuiCode>ownFocus</WuiCode> to announce the flyout to screen
                 readers when the user opens it.
               </>
             }
           />
         </>
       ),
-      props: { EuiFlyout, EuiFlyoutHeader, EuiFlyoutBody },
+      props: { WuiFlyout, WuiFlyoutHeader, WuiFlyoutBody },
       snippet: flyOutSnippet,
       demo: <Flyout />,
     },
@@ -167,13 +167,13 @@ export const FlyoutExample = {
       ],
       text: (
         <p>
-          In this example we use <strong>EuiFlyoutHeader</strong> and{' '}
-          <strong>EuiFlyoutFooter</strong> to allow for fixed position
+          In this example we use <strong>WuiFlyoutHeader</strong> and{' '}
+          <strong>WuiFlyoutFooter</strong> to allow for fixed position
           navigation and actions within a flyout. Note that any content within{' '}
-          <strong>EuiFlyoutBody</strong> will automatically overflow.
+          <strong>WuiFlyoutBody</strong> will automatically overflow.
         </p>
       ),
-      props: { EuiFlyoutFooter },
+      props: { WuiFlyoutFooter },
       snippet: flyoutComplicatedSnippet,
       demo: <FlyoutComplicated />,
     },
@@ -192,8 +192,8 @@ export const FlyoutExample = {
       text: (
         <p>
           To highlight some information at the top of a flyout, you can use the{' '}
-          <EuiCode>banner</EuiCode> prop available in{' '}
-          <strong>EuiFlyoutBody</strong>.
+          <WuiCode>banner</WuiCode> prop available in{' '}
+          <strong>WuiFlyoutBody</strong>.
         </p>
       ),
       snippet: flyoutWithBannerSnippet,
@@ -214,18 +214,18 @@ export const FlyoutExample = {
       text: (
         <>
           <p>
-            In this example, we set <EuiCode>size</EuiCode> to{' '}
-            <EuiCode>s</EuiCode> and remove the <EuiCode>ownFocus</EuiCode>{' '}
+            In this example, we set <WuiCode>size</WuiCode> to{' '}
+            <WuiCode>s</WuiCode> and remove the <WuiCode>ownFocus</WuiCode>{' '}
             prop. The latter not only removes the focus trap around the flyout,
             but also removes the background overlay that reinforces your
             boundaries.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             iconType="accessibility"
             color="warning"
             title={
               <>
-                Removing <EuiCode>ownFocus</EuiCode> makes it difficult for
+                Removing <WuiCode>ownFocus</WuiCode> makes it difficult for
                 keyboard-only and screen reader users to navigate to and from
                 your flyout.
               </>
@@ -250,8 +250,8 @@ export const FlyoutExample = {
       ],
       text: (
         <p>
-          In this example, we set <EuiCode>size</EuiCode> to{' '}
-          <EuiCode>l</EuiCode>.
+          In this example, we set <WuiCode>size</WuiCode> to{' '}
+          <WuiCode>l</WuiCode>.
         </p>
       ),
       snippet: flyoutLargeSnippet,
@@ -274,10 +274,10 @@ export const FlyoutExample = {
           <p>
             By default, flyouts will continue to grow with the width of the
             window. To stop this growth at an ideal width, set{' '}
-            <EuiCode>maxWidth</EuiCode> to <EuiCode>true</EuiCode>, or pass your
+            <WuiCode>maxWidth</WuiCode> to <WuiCode>true</WuiCode>, or pass your
             own custom size.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             color="warning"
             title="Note that there are some caveats to providing a maxWidth that is smaller than the minWidth."
           />
@@ -285,7 +285,7 @@ export const FlyoutExample = {
       ),
       snippet: flyoutMaxWidthSnippet,
       demo: <FlyoutMaxWidth />,
-      props: { EuiFlyout },
+      props: { WuiFlyout },
     },
   ],
 };

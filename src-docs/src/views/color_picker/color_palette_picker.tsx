@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import {
-  euiPaletteColorBlind,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
+  wuiPaletteColorBlind,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
 } from '../../../../src/services';
-import { EuiSwitch } from '../../../../src/components/form';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiCode } from '../../../../src/components/code';
+import { WuiSwitch } from '../../../../src/components/form';
+import { WuiSpacer } from '../../../../src/components/spacer';
+import { WuiCode } from '../../../../src/components/code';
 import {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerPaletteProps,
+  WuiColorPalettePicker,
+  WuiColorPalettePickerPaletteProps,
 } from '../../../../src/components/color_picker/color_palette_picker';
 // @ts-ignore importing from a JS file
 import { DisplayToggles } from '../form_controls/display_toggles';
 
-const palettes: EuiColorPalettePickerPaletteProps[] = [
+const palettes: WuiColorPalettePickerPaletteProps[] = [
   {
     value: 'pallette_1',
-    title: 'EUI color blind (fixed)',
-    palette: euiPaletteColorBlind(),
+    title: 'WUI color blind (fixed)',
+    palette: wuiPaletteColorBlind(),
     type: 'fixed',
   },
   {
     value: 'pallette_2',
-    title: 'EUI palette for temperature (fixed)',
-    palette: euiPaletteForTemperature(5),
+    title: 'WUI palette for temperature (fixed)',
+    palette: wuiPaletteForTemperature(5),
     type: 'fixed',
   },
   {
@@ -52,8 +52,8 @@ const palettes: EuiColorPalettePickerPaletteProps[] = [
   },
   {
     value: 'pallette_4',
-    title: 'EUI palette for status (gradient)',
-    palette: euiPaletteForStatus(5),
+    title: 'WUI palette for status (gradient)',
+    palette: wuiPaletteForStatus(5),
     type: 'gradient',
   },
   {
@@ -69,18 +69,18 @@ export const ColorPalettePicker = () => {
 
   return (
     <>
-      <EuiSwitch
+      <WuiSwitch
         label={
           <span>
-            Display selected item as a <EuiCode>title</EuiCode>
+            Display selected item as a <WuiCode>title</WuiCode>
           </span>
         }
         checked={selectionDisplay}
         onChange={() => setSelectionDisplay(!selectionDisplay)}
       />
-      <EuiSpacer />
+      <WuiSpacer />
       <DisplayToggles canPrepend={true} canAppend={true} canReadOnly={false}>
-        <EuiColorPalettePicker
+        <WuiColorPalettePicker
           palettes={palettes}
           onChange={setPallette}
           valueOfSelected={pallette}

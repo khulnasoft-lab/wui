@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,15 +41,15 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { throttle } from '../color_picker/utils';
-import { EuiWindowEvent, htmlIdGenerator, keys } from '../../services';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiOverlayMask, EuiOverlayMaskProps } from '../overlay_mask';
+import { WuiWindowEvent, htmlIdGenerator, keys } from '../../services';
+import { WuiFocusTrap } from '../focus_trap';
+import { WuiOverlayMask, WuiOverlayMaskProps } from '../overlay_mask';
 import { CommonProps } from '../common';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button';
-import { EuiI18n } from '../i18n';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiButtonEmpty, WuiButtonEmptyProps } from '../button';
+import { WuiI18n } from '../i18n';
+import { WuiScreenReaderOnly } from '../accessibility';
 
-export type EuiCollapsibleNavProps = CommonProps &
+export type WuiCollapsibleNavProps = CommonProps &
   HTMLAttributes<HTMLElement> & {
     /**
      * ReactNode to render as this component's content
@@ -68,17 +81,17 @@ export type EuiCollapsibleNavProps = CommonProps &
      */
     showCloseButton?: boolean;
     /**
-     * Extend the props of the close button, an EuiButtonEmpty
+     * Extend the props of the close button, an WuiButtonEmpty
      */
-    closeButtonProps?: EuiButtonEmptyProps;
+    closeButtonProps?: WuiButtonEmptyProps;
     onClose?: () => void;
     /**
-     * Adjustments to the EuiOverlayMask
+     * Adjustments to the WuiOverlayMask
      */
-    maskProps?: EuiOverlayMaskProps;
+    maskProps?: WuiOverlayMaskProps;
   };
 
-export const EuiCollapsibleNav: FunctionComponent<EuiCollapsibleNavProps> = ({
+export const WuiCollapsibleNav: FunctionComponent<WuiCollapsibleNavProps> = ({
   children,
   className,
   isDocked = false,
@@ -93,7 +106,7 @@ export const EuiCollapsibleNav: FunctionComponent<EuiCollapsibleNavProps> = ({
   maskProps,
   ...rest
 }) => {
-  const [flyoutID] = useState(id || htmlIdGenerator()('euiCollapsibleNav'));
+  const [flyoutID] = useState(id || htmlIdGenerator()('wuiCollapsibleNav'));
   const [windowIsLargeEnoughToDock, setWindowIsLargeEnoughToDock] = useState(
     (typeof window === 'undefined' ? Infinity : window.innerWidth) >=
       dockedBreakpoint
@@ -114,14 +127,14 @@ export const EuiCollapsibleNav: FunctionComponent<EuiCollapsibleNavProps> = ({
     window.addEventListener('resize', functionToCallOnWindowResize);
 
     if (navIsDocked) {
-      document.body.classList.add('euiBody--collapsibleNavIsDocked');
+      document.body.classList.add('wuiBody--collapsibleNavIsDocked');
     } else if (isOpen) {
-      document.body.classList.add('euiBody--collapsibleNavIsOpen');
+      document.body.classList.add('wuiBody--collapsibleNavIsOpen');
     }
 
     return () => {
-      document.body.classList.remove('euiBody--collapsibleNavIsDocked');
-      document.body.classList.remove('euiBody--collapsibleNavIsOpen');
+      document.body.classList.remove('wuiBody--collapsibleNavIsDocked');
+      document.body.classList.remove('wuiBody--collapsibleNavIsOpen');
       window.removeEventListener('resize', functionToCallOnWindowResize);
     };
   }, [navIsDocked, functionToCallOnWindowResize, isOpen]);
@@ -143,15 +156,15 @@ export const EuiCollapsibleNav: FunctionComponent<EuiCollapsibleNavProps> = ({
   };
 
   const classes = classNames(
-    'euiCollapsibleNav',
-    { 'euiCollapsibleNav--isDocked': navIsDocked },
+    'wuiCollapsibleNav',
+    { 'wuiCollapsibleNav--isDocked': navIsDocked },
     className
   );
 
   let optionalOverlay;
   if (!navIsDocked) {
     optionalOverlay = (
-      <EuiOverlayMask
+      <WuiOverlayMask
         onClick={collapse}
         headerZindexLocation="below"
         {...maskProps}
@@ -171,38 +184,38 @@ export const EuiCollapsibleNav: FunctionComponent<EuiCollapsibleNavProps> = ({
           'aria-pressed': isOpen,
           className: classNames(
             button.props.className,
-            'euiCollapsibleNav__toggle'
+            'wuiCollapsibleNav__toggle'
           ),
         });
 
   const closeButton = showCloseButton && (
-    <EuiScreenReaderOnly showOnFocus>
-      <EuiButtonEmpty
+    <WuiScreenReaderOnly showOnFocus>
+      <WuiButtonEmpty
         onClick={collapse}
         size="xs"
-        textProps={{ className: 'euiCollapsibleNav__closeButtonText' }}
+        textProps={{ className: 'wuiCollapsibleNav__closeButtonText' }}
         iconType="cross"
         {...closeButtonProps}
         className={classNames(
-          'euiCollapsibleNav__closeButton',
+          'wuiCollapsibleNav__closeButton',
           closeButtonProps && closeButtonProps.className
         )}>
-        <EuiI18n token="euiCollapsibleNav.closeButtonLabel" default="close" />
-      </EuiButtonEmpty>
-    </EuiScreenReaderOnly>
+        <WuiI18n token="wuiCollapsibleNav.closeButtonLabel" default="close" />
+      </WuiButtonEmpty>
+    </WuiScreenReaderOnly>
   );
 
   const flyout = (
     <>
-      <EuiWindowEvent event="keydown" handler={onKeyDown} />
+      <WuiWindowEvent event="keydown" handler={onKeyDown} />
       {optionalOverlay}
       {/* Trap focus only when docked={false} */}
-      <EuiFocusTrap disabled={navIsDocked} clickOutsideDisables={true}>
+      <WuiFocusTrap disabled={navIsDocked} clickOutsideDisables={true}>
         <nav id={flyoutID} className={classes} {...rest}>
           {children}
           {closeButton}
         </nav>
-      </EuiFocusTrap>
+      </WuiFocusTrap>
     </>
   );
 

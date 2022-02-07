@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiRange,
-  EuiSpacer,
-  EuiFormHelpText,
-  EuiDualRange,
+  WuiRange,
+  WuiSpacer,
+  WuiFormHelpText,
+  WuiDualRange,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -36,22 +36,22 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <WuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={e => onChange(e)}
         showTicks
         tickInterval={20}
         levels={levels}
-        aria-label="An example of EuiRange with levels prop"
+        aria-label="An example of WuiRange with levels prop"
         aria-describedby="levelsHelp2"
       />
-      <EuiFormHelpText id="levelsHelp2">
+      <WuiFormHelpText id="levelsHelp2">
         Recommended levels are {levels[1].min} and above.
-      </EuiFormHelpText>
+      </WuiFormHelpText>
 
-      <EuiSpacer size="xl" />
-      <EuiDualRange
+      <WuiSpacer size="xl" />
+      <WuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={value => onDualChange(value)}
@@ -62,12 +62,12 @@ export default () => {
         ]}
         showInput
         levels={levels}
-        aria-label="An example of EuiDualRange with levels prop"
+        aria-label="An example of WuiDualRange with levels prop"
         aria-describedby="levelsHelp3"
       />
-      <EuiFormHelpText id="levelsHelp3">
+      <WuiFormHelpText id="levelsHelp3">
         Recommended size is {levels[1].min}kb and above.
-      </EuiFormHelpText>
+      </WuiFormHelpText>
     </Fragment>
   );
 };

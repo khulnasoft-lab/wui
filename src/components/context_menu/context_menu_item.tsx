@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,18 +42,18 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiIcon } from '../icon';
-import { EuiToolTip, ToolTipPositions } from '../tool_tip';
+import { WuiIcon } from '../icon';
+import { WuiToolTip, ToolTipPositions } from '../tool_tip';
 
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiContextMenuItemIcon = ReactElement<any> | string | HTMLElement;
+export type WuiContextMenuItemIcon = ReactElement<any> | string | HTMLElement;
 
-export type EuiContextMenuItemLayoutAlignment = 'center' | 'top' | 'bottom';
+export type WuiContextMenuItemLayoutAlignment = 'center' | 'top' | 'bottom';
 
-export interface EuiContextMenuItemProps extends CommonProps {
-  icon?: EuiContextMenuItemIcon;
+export interface WuiContextMenuItemProps extends CommonProps {
+  icon?: WuiContextMenuItemIcon;
   hasPanel?: boolean;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent) => void;
@@ -63,7 +76,7 @@ export interface EuiContextMenuItemProps extends CommonProps {
   /**
    * How to align icon with content of button
    */
-  layoutAlign?: EuiContextMenuItemLayoutAlignment;
+  layoutAlign?: WuiContextMenuItemLayoutAlignment;
 }
 
 type Props = CommonProps &
@@ -71,19 +84,19 @@ type Props = CommonProps &
     ButtonHTMLAttributes<HTMLButtonElement>,
     'type' | 'onClick' | 'disabled'
   > &
-  EuiContextMenuItemProps;
+  WuiContextMenuItemProps;
 
 const layoutAlignToClassNames: {
-  [align in EuiContextMenuItemLayoutAlignment]: string | null;
+  [align in WuiContextMenuItemLayoutAlignment]: string | null;
 } = {
   center: null,
-  top: 'euiContextMenu__itemLayout--top',
-  bottom: 'euiContextMenu__itemLayout--bottom',
+  top: 'wuiContextMenu__itemLayout--top',
+  bottom: 'wuiContextMenu__itemLayout--bottom',
 };
 
 export const LAYOUT_ALIGN = keysOf(layoutAlignToClassNames);
 
-export class EuiContextMenuItem extends Component<Props> {
+export class WuiContextMenuItem extends Component<Props> {
   render() {
     const {
       children,
@@ -110,14 +123,14 @@ export class EuiContextMenuItem extends Component<Props> {
       switch (typeof icon) {
         case 'string':
           iconInstance = (
-            <EuiIcon type={icon} size="m" className="euiContextMenu__icon" />
+            <WuiIcon type={icon} size="m" className="wuiContextMenu__icon" />
           );
           break;
 
         default:
           // Assume it's already an instance of an icon.
           iconInstance = cloneElement(icon as ReactElement, {
-            className: 'euiContextMenu__icon',
+            className: 'wuiContextMenu__icon',
           });
       }
     }
@@ -126,23 +139,23 @@ export class EuiContextMenuItem extends Component<Props> {
 
     if (hasPanel) {
       arrow = (
-        <EuiIcon type="arrowRight" size="m" className="euiContextMenu__arrow" />
+        <WuiIcon type="arrowRight" size="m" className="wuiContextMenu__arrow" />
       );
     }
 
-    const classes = classNames('euiContextMenuItem', className, {
-      'euiContextMenuItem-isDisabled': disabled,
+    const classes = classNames('wuiContextMenuItem', className, {
+      'wuiContextMenuItem-isDisabled': disabled,
     });
 
     const layoutClasses = classNames(
-      'euiContextMenu__itemLayout',
+      'wuiContextMenu__itemLayout',
       layoutAlignToClassNames[layoutAlign]
     );
 
     const buttonInner = (
       <span className={layoutClasses}>
         {iconInstance}
-        <span className="euiContextMenuItem__text">{children}</span>
+        <span className="wuiContextMenuItem__text">{children}</span>
         {arrow}
       </span>
     );
@@ -179,13 +192,13 @@ export class EuiContextMenuItem extends Component<Props> {
 
     if (toolTipContent) {
       return (
-        <EuiToolTip
+        <WuiToolTip
           title={toolTipTitle ? toolTipTitle : null}
           content={toolTipContent}
-          anchorClassName="eui-displayBlock"
+          anchorClassName="wui-displayBlock"
           position={toolTipPosition}>
           {button}
-        </EuiToolTip>
+        </WuiToolTip>
       );
     } else {
       return button;

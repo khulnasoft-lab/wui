@@ -1,64 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiBasicTable cellProps renders cells with custom props from a callback 1`] = `
+exports[`WuiBasicTable cellProps renders cells with custom props from a callback 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-1-name"
@@ -74,12 +74,12 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-2-name"
@@ -95,12 +95,12 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-3-name"
@@ -116,73 +116,73 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable cellProps renders rows with custom props from an object 1`] = `
+exports[`WuiBasicTable cellProps renders rows with custom props from an object 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -198,12 +198,12 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -219,12 +219,12 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -240,139 +240,139 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty is rendered 1`] = `
+exports[`WuiBasicTable empty is rendered 1`] = `
 <div
   aria-label="aria-label"
-  className="euiBasicTable testClass1 testClass2"
+  className="wuiBasicTable testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
             No items found
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty renders a node as a custom message 1`] = `
+exports[`WuiBasicTable empty renders a node as a custom message 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
@@ -386,155 +386,155 @@ exports[`EuiBasicTable empty renders a node as a custom message 1`] = `
               </a>
                to make some
             </p>
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty renders a string as a custom message 1`] = `
+exports[`WuiBasicTable empty renders a string as a custom message 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
             where my items at?
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable footers do not render without a column footer definition 1`] = `
+exports[`WuiBasicTable footers do not render without a column footer definition 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_id_1"
           key="_data_h_id_1"
         >
           ID
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_age_2"
           key="_data_h_age_2"
         >
           Age
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -547,8 +547,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
@@ -561,8 +561,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
@@ -575,12 +575,12 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             20
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -593,8 +593,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
@@ -607,8 +607,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
@@ -621,12 +621,12 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             21
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -639,8 +639,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
@@ -653,8 +653,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
@@ -667,39 +667,39 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             22
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable footers render with pagination, selection, sorting, and footer 1`] = `
+exports[`WuiBasicTable footers render with pagination, selection, sorting, and footer 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -712,24 +712,24 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -739,21 +739,21 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -762,40 +762,40 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_id_1"
           key="_data_h_id_1"
         >
           ID
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_age_2"
           key="_data_h_age_2"
         >
           Age
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -808,8 +808,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
@@ -822,8 +822,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
@@ -836,23 +836,23 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             20
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -865,8 +865,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
@@ -879,8 +879,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
@@ -893,23 +893,23 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             21
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -922,8 +922,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
@@ -936,8 +936,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
@@ -950,26 +950,26 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             22
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-      <EuiTableFooter>
-        <EuiTableFooterCell
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+      <WuiTableFooter>
+        <WuiTableFooterCell
           key="_selection_column_f"
         />
-        <EuiTableFooterCell
+        <WuiTableFooterCell
           key="footer_name_0"
         >
           <strong>
             Name
           </strong>
-        </EuiTableFooterCell>
-        <EuiTableFooterCell
+        </WuiTableFooterCell>
+        <WuiTableFooterCell
           key="footer_id_1"
         >
           ID
-        </EuiTableFooterCell>
-        <EuiTableFooterCell
+        </WuiTableFooterCell>
+        <WuiTableFooterCell
           key="footer_age_2"
         >
           <strong>
@@ -979,9 +979,9 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             total items:
             5
           </strong>
-        </EuiTableFooterCell>
-      </EuiTableFooter>
-    </EuiTable>
+        </WuiTableFooterCell>
+      </WuiTableFooter>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -998,66 +998,66 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
 </div>
 `;
 
-exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
+exports[`WuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           aria-owns="row_1_expansion"
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -1070,25 +1070,25 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           id="row_1_expansion"
           isExpandedRow={true}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             colSpan={1}
             textOnly={false}
           >
             <div>
               Expanded row
             </div>
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -1101,12 +1101,12 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -1119,77 +1119,77 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1`] = `
+exports[`WuiBasicTable rowProps renders rows with custom props from a callback 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customRowClass"
             data-test-subj="row-1"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
@@ -1202,17 +1202,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name1
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customRowClass"
             data-test-subj="row-2"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
@@ -1225,17 +1225,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name2
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customRowClass"
             data-test-subj="row-3"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
@@ -1248,78 +1248,78 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name3
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-      </EuiTableBody>
-    </EuiTable>
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`] = `
+exports[`WuiBasicTable rowProps renders rows with custom props from an object 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
@@ -1332,17 +1332,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name1
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
@@ -1355,17 +1355,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name2
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+        <WuiKeyboardAccessible>
+          <WuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <WuiTableRowCell
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
@@ -1378,17 +1378,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name3
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-      </EuiTableBody>
-    </EuiTable>
+            </WuiTableRowCell>
+          </WuiTableRow>
+        </WuiKeyboardAccessible>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with initial selection 1`] = `
-<EuiBasicTable
+exports[`WuiBasicTable with initial selection 1`] = `
+<WuiBasicTable
   columns={
     Array [
       Object {
@@ -1431,32 +1431,32 @@ exports[`EuiBasicTable with initial selection 1`] = `
   tableLayout="fixed"
 >
   <div
-    className="euiBasicTable"
+    className="wuiBasicTable"
   >
     <div>
-      <EuiTableHeaderMobile>
+      <WuiTableHeaderMobile>
         <div
-          className="euiTableHeaderMobile"
+          className="wuiTableHeaderMobile"
         >
-          <EuiFlexGroup
+          <WuiFlexGroup
             alignItems="baseline"
             justifyContent="spaceBetween"
             responsive={false}
           >
             <div
-              className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsBaseline euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+              className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--alignItemsBaseline wuiFlexGroup--justifyContentSpaceBetween wuiFlexGroup--directionRow"
             >
-              <EuiFlexItem
+              <WuiFlexItem
                 grow={false}
               >
                 <div
-                  className="euiFlexItem euiFlexItem--flexGrowZero"
+                  className="wuiFlexItem wuiFlexItem--flexGrowZero"
                 >
-                  <EuiI18n
+                  <WuiI18n
                     default="Select all rows"
-                    token="euiBasicTable.selectAllRows"
+                    token="wuiBasicTable.selectAllRows"
                   >
-                    <EuiCheckbox
+                    <WuiCheckbox
                       aria-label="Select all rows"
                       checked={false}
                       compressed={false}
@@ -1467,69 +1467,69 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       onChange={[Function]}
                     >
                       <div
-                        className="euiCheckbox"
+                        className="wuiCheckbox"
                       >
                         <input
                           aria-label="Select all rows"
                           checked={false}
-                          className="euiCheckbox__input"
+                          className="wuiCheckbox__input"
                           disabled={false}
                           id="_selection_column-checkbox_generated-id"
                           onChange={[Function]}
                           type="checkbox"
                         />
                         <div
-                          className="euiCheckbox__square"
+                          className="wuiCheckbox__square"
                         />
                         <label
-                          className="euiCheckbox__label"
+                          className="wuiCheckbox__label"
                           htmlFor="_selection_column-checkbox_generated-id"
                         >
                           Select all rows
                         </label>
                       </div>
-                    </EuiCheckbox>
-                  </EuiI18n>
+                    </WuiCheckbox>
+                  </WuiI18n>
                 </div>
-              </EuiFlexItem>
-              <EuiFlexItem
+              </WuiFlexItem>
+              <WuiFlexItem
                 grow={false}
               >
                 <div
-                  className="euiFlexItem euiFlexItem--flexGrowZero"
+                  className="wuiFlexItem wuiFlexItem--flexGrowZero"
                 />
-              </EuiFlexItem>
+              </WuiFlexItem>
             </div>
-          </EuiFlexGroup>
+          </WuiFlexGroup>
         </div>
-      </EuiTableHeaderMobile>
-      <EuiTable
+      </WuiTableHeaderMobile>
+      <WuiTable
         id="generated-id"
         responsive={true}
         tableLayout="fixed"
       >
         <table
-          className="euiTable euiTable--responsive"
+          className="wuiTable wuiTable--responsive"
           id="generated-id"
           tabIndex={-1}
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <caption
-              className="euiScreenReaderOnly euiTableCaption"
+              className="wuiScreenReaderOnly wuiTableCaption"
             >
-              <EuiDelayRender
+              <WuiDelayRender
                 delay={500}
               />
             </caption>
-          </EuiScreenReaderOnly>
-          <EuiTableHeader>
+          </WuiScreenReaderOnly>
+          <WuiTableHeader>
             <thead>
               <tr>
-                <EuiTableHeaderCellCheckbox
+                <WuiTableHeaderCellCheckbox
                   key="_selection_column_h"
                 >
                   <th
-                    className="euiTableHeaderCellCheckbox"
+                    className="wuiTableHeaderCellCheckbox"
                     scope="col"
                     style={
                       Object {
@@ -1538,13 +1538,13 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     }
                   >
                     <div
-                      className="euiTableCellContent"
+                      className="wuiTableCellContent"
                     >
-                      <EuiI18n
+                      <WuiI18n
                         default="Select all rows"
-                        token="euiBasicTable.selectAllRows"
+                        token="wuiBasicTable.selectAllRows"
                       >
-                        <EuiCheckbox
+                        <WuiCheckbox
                           aria-label="Select all rows"
                           checked={false}
                           compressed={false}
@@ -1557,12 +1557,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                           type="inList"
                         >
                           <div
-                            className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                            className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                           >
                             <input
                               aria-label="Select all rows"
                               checked={false}
-                              className="euiCheckbox__input"
+                              className="wuiCheckbox__input"
                               data-test-subj="checkboxSelectAll"
                               disabled={false}
                               id="_selection_column-checkbox_generated-id"
@@ -1570,21 +1570,21 @@ exports[`EuiBasicTable with initial selection 1`] = `
                               type="checkbox"
                             />
                             <div
-                              className="euiCheckbox__square"
+                              className="wuiCheckbox__square"
                             />
                           </div>
-                        </EuiCheckbox>
-                      </EuiI18n>
+                        </WuiCheckbox>
+                      </WuiI18n>
                     </div>
                   </th>
-                </EuiTableHeaderCellCheckbox>
-                <EuiTableHeaderCell
+                </WuiTableHeaderCellCheckbox>
+                <WuiTableHeaderCell
                   align="left"
                   data-test-subj="tableHeaderCell_name_0"
                   key="_data_h_name_0"
                 >
                   <th
-                    className="euiTableHeaderCell"
+                    className="wuiTableHeaderCell"
                     data-test-subj="tableHeaderCell_name_0"
                     role="columnheader"
                     scope="col"
@@ -1595,47 +1595,47 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     }
                   >
                     <div
-                      className="euiTableCellContent"
+                      className="wuiTableCellContent"
                     >
-                      <EuiInnerText>
+                      <WuiInnerText>
                         <span
-                          className="euiTableCellContent__text"
+                          className="wuiTableCellContent__text"
                           title="Name"
                         >
                           Name
                         </span>
-                      </EuiInnerText>
+                      </WuiInnerText>
                     </div>
                   </th>
-                </EuiTableHeaderCell>
+                </WuiTableHeaderCell>
               </tr>
             </thead>
-          </EuiTableHeader>
-          <EuiTableBody
+          </WuiTableHeader>
+          <WuiTableBody
             bodyRef={[Function]}
           >
             <tbody>
-              <EuiTableRow
+              <WuiTableRow
                 isSelectable={true}
                 isSelected={true}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable euiTableRow-isSelected"
+                  className="wuiTableRow wuiTableRow-isSelectable wuiTableRow-isSelected"
                 >
-                  <EuiTableRowCellCheckbox
+                  <WuiTableRowCellCheckbox
                     key="_selection_column_1"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="wuiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiI18n
+                        <WuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="wuiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <WuiCheckbox
                             aria-label="Select this row"
                             checked={true}
                             compressed={false}
@@ -1648,12 +1648,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={true}
-                                className="euiCheckbox__input"
+                                className="wuiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-1"
                                 disabled={false}
                                 id="_selection_column_1-checkbox"
@@ -1662,15 +1662,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="wuiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </WuiCheckbox>
+                        </WuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </WuiTableRowCellCheckbox>
+                  <WuiTableRowCell
                     align="left"
                     key="_data_column_name_1_0"
                     mobileOptions={
@@ -1683,7 +1683,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="wuiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1691,44 +1691,44 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="wuiTableCellContent__text"
                         >
                           name1
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </WuiTableRowCell>
                 </tr>
-              </EuiTableRow>
-              <EuiTableRow
+              </WuiTableRow>
+              <WuiTableRow
                 isSelectable={true}
                 isSelected={false}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable"
+                  className="wuiTableRow wuiTableRow-isSelectable"
                 >
-                  <EuiTableRowCellCheckbox
+                  <WuiTableRowCellCheckbox
                     key="_selection_column_2"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="wuiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiI18n
+                        <WuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="wuiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <WuiCheckbox
                             aria-label="Select this row"
                             checked={false}
                             compressed={false}
@@ -1741,12 +1741,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={false}
-                                className="euiCheckbox__input"
+                                className="wuiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-2"
                                 disabled={false}
                                 id="_selection_column_2-checkbox"
@@ -1755,15 +1755,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="wuiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </WuiCheckbox>
+                        </WuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </WuiTableRowCellCheckbox>
+                  <WuiTableRowCell
                     align="left"
                     key="_data_column_name_2_0"
                     mobileOptions={
@@ -1776,7 +1776,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="wuiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1784,44 +1784,44 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="wuiTableCellContent__text"
                         >
                           name2
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </WuiTableRowCell>
                 </tr>
-              </EuiTableRow>
-              <EuiTableRow
+              </WuiTableRow>
+              <WuiTableRow
                 isSelectable={true}
                 isSelected={false}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable"
+                  className="wuiTableRow wuiTableRow-isSelectable"
                 >
-                  <EuiTableRowCellCheckbox
+                  <WuiTableRowCellCheckbox
                     key="_selection_column_3"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="wuiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiI18n
+                        <WuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="wuiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <WuiCheckbox
                             aria-label="Select this row"
                             checked={false}
                             compressed={false}
@@ -1834,12 +1834,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={false}
-                                className="euiCheckbox__input"
+                                className="wuiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-3"
                                 disabled={false}
                                 id="_selection_column_3-checkbox"
@@ -1848,15 +1848,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="wuiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </WuiCheckbox>
+                        </WuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </WuiTableRowCellCheckbox>
+                  <WuiTableRowCell
                     align="left"
                     key="_data_column_name_3_0"
                     mobileOptions={
@@ -1869,7 +1869,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="wuiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1877,98 +1877,98 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="wuiTableCellContent__text"
                         >
                           name3
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </WuiTableRowCell>
                 </tr>
-              </EuiTableRow>
+              </WuiTableRow>
             </tbody>
-          </EuiTableBody>
+          </WuiTableBody>
         </table>
-      </EuiTable>
+      </WuiTable>
     </div>
   </div>
-</EuiBasicTable>
+</WuiBasicTable>
 `;
 
-exports[`EuiBasicTable with multiple record actions with custom availability 1`] = `
+exports[`WuiBasicTable with multiple record actions with custom availability 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 4,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -1981,8 +1981,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -2023,13 +2023,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2042,8 +2042,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -2085,13 +2085,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2104,8 +2104,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -2142,13 +2142,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
@@ -2161,8 +2161,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_4_1"
@@ -2204,48 +2204,48 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="4"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with pagination - 2nd page 1`] = `
+exports[`WuiBasicTable with pagination - 2nd page 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 2,
@@ -2255,25 +2255,25 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2286,12 +2286,12 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
@@ -2304,10 +2304,10 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -2324,40 +2324,40 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination 1`] = `
+exports[`WuiBasicTable with pagination 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2367,25 +2367,25 @@ exports[`EuiBasicTable with pagination 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -2398,12 +2398,12 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2416,12 +2416,12 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2434,10 +2434,10 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -2454,40 +2454,40 @@ exports[`EuiBasicTable with pagination 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination and error 1`] = `
+exports[`WuiBasicTable with pagination and error 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2497,80 +2497,80 @@ exports[`EuiBasicTable with pagination and error 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody>
+        <WuiTableRow>
+          <WuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
-            <EuiIcon
+            <WuiIcon
               color="danger"
               type="minusInCircle"
             />
              
             no can do
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with pagination and selection 1`] = `
+exports[`WuiBasicTable with pagination and selection 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2580,46 +2580,46 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2632,23 +2632,23 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2661,23 +2661,23 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2690,10 +2690,10 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -2710,40 +2710,40 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
+exports[`WuiBasicTable with pagination, hiding the per page options 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2753,25 +2753,25 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -2784,12 +2784,12 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2802,12 +2802,12 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2820,10 +2820,10 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -2841,31 +2841,31 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
+exports[`WuiBasicTable with pagination, selection and sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -2878,24 +2878,24 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2905,21 +2905,21 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -2928,26 +2928,26 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2960,23 +2960,23 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2989,23 +2989,23 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3018,10 +3018,10 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -3038,31 +3038,31 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and a single record action 1`] = `
+exports[`WuiBasicTable with pagination, selection, sorting and a single record action 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3075,24 +3075,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3102,21 +3102,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -3125,33 +3125,33 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3164,8 +3164,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -3192,24 +3192,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3222,8 +3222,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -3250,24 +3250,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3280,8 +3280,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -3308,10 +3308,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -3328,31 +3328,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1`] = `
+exports[`WuiBasicTable with pagination, selection, sorting and column dataType 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3365,24 +3365,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3392,21 +3392,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="right"
           data-test-subj="tableHeaderCell_count_0"
           isSortAscending={true}
@@ -3415,26 +3415,26 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
           onSort={[Function]}
         >
           Count
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
@@ -3447,23 +3447,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
@@ -3476,23 +3476,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
@@ -3505,10 +3505,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -3525,31 +3525,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1`] = `
+exports[`WuiBasicTable with pagination, selection, sorting and column renderer 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3562,24 +3562,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3589,21 +3589,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -3612,26 +3612,26 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3644,23 +3644,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3673,23 +3673,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3702,10 +3702,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -3722,31 +3722,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and multiple record actions 1`] = `
+exports[`WuiBasicTable with pagination, selection, sorting and multiple record actions 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3759,24 +3759,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3786,21 +3786,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -3809,33 +3809,33 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </WuiTableHeaderCell>
+        <WuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3848,8 +3848,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -3882,24 +3882,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3912,8 +3912,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -3946,24 +3946,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3976,8 +3976,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </WuiTableRowCell>
+          <WuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -4010,10 +4010,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -4030,31 +4030,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting, column renderer and column dataType 1`] = `
+exports[`WuiBasicTable with pagination, selection, sorting, column renderer and column dataType 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </WuiI18n>
+        </WuiFlexItem>
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4067,24 +4067,24 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="wuiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -4094,21 +4094,21 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <WuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="wuiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </WuiI18n>
+        </WuiTableHeaderCellCheckbox>
+        <WuiTableHeaderCell
           align="right"
           data-test-subj="tableHeaderCell_count_0"
           isSortAscending={true}
@@ -4117,26 +4117,26 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
           onSort={[Function]}
         >
           Count
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
@@ -4149,23 +4149,23 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             x
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
@@ -4178,23 +4178,23 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             xx
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <WuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <WuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="wuiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </WuiI18n>
+          </WuiTableRowCellCheckbox>
+          <WuiTableRowCell
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
@@ -4207,10 +4207,10 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             xxx
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
   <PaginationBar
     aria-controls="generated-id"
@@ -4227,65 +4227,65 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
 </div>
 `;
 
-exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
+exports[`WuiBasicTable with sortable columns and sorting disabled 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4298,12 +4298,12 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4316,12 +4316,12 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4334,32 +4334,32 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with sorting 1`] = `
+exports[`WuiBasicTable with sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4372,35 +4372,35 @@ exports[`EuiBasicTable with sorting 1`] = `
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -4409,15 +4409,15 @@ exports[`EuiBasicTable with sorting 1`] = `
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4430,12 +4430,12 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4448,12 +4448,12 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4466,32 +4466,32 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1`] = `
+exports[`WuiBasicTable with sorting enabled and enable all columns for sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="wuiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <WuiTableHeaderMobile>
+      <WuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <WuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <WuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4504,35 +4504,35 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiTableHeaderMobile>
+    <WuiTable
       id="generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="wuiTableCaption"
         >
-          <EuiDelayRender
+          <WuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <WuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="wuiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </WuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </WuiScreenReaderOnly>
+      <WuiTableHeader>
+        <WuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           isSortAscending={true}
@@ -4541,15 +4541,15 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </WuiTableHeaderCell>
+      </WuiTableHeader>
+      <WuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4562,12 +4562,12 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4580,12 +4580,12 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </WuiTableRowCell>
+        </WuiTableRow>
+        <WuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <WuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4598,10 +4598,10 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </WuiTableRowCell>
+        </WuiTableRow>
+      </WuiTableBody>
+    </WuiTable>
   </div>
 </div>
 `;

@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useRef, useEffect } from 'react';
 import {
-  EuiButton,
-  EuiFocusTrap,
-  EuiHorizontalRule,
-  EuiNavDrawer,
-  EuiNavDrawerGroup,
+  WuiButton,
+  WuiFocusTrap,
+  WuiHorizontalRule,
+  WuiNavDrawer,
+  WuiNavDrawerGroup,
 } from '../../../../src/components';
 import { Headers, MainBody } from './components';
 import {
@@ -21,7 +21,7 @@ export default () => {
   const [isNavDrawerLocked, setIsNavDrawerLocked] = useState(false);
 
   useEffect(() => {
-    document.body.classList.add('euiBody--headerIsFixed--triple');
+    document.body.classList.add('wuiBody--headerIsFixed--triple');
   }, []);
 
   const toggleFullScreen = () => setIsFullScreen(isFullScreen => !isFullScreen);
@@ -34,7 +34,7 @@ export default () => {
 
   if (isFullScreen) {
     fullScreenDisplay = (
-      <EuiFocusTrap>
+      <WuiFocusTrap>
         <div
           style={{
             position: 'fixed',
@@ -48,33 +48,33 @@ export default () => {
             navDrawerRef={navDrawerRef}
           />
           {/**** Navigation Side Panel ****/}
-          <EuiNavDrawer ref={navDrawerRef} onIsLockedUpdate={onNavDrawerLocked}>
-            <EuiNavDrawerGroup listItems={topLinks} />
-            <EuiHorizontalRule margin="none" />
-            <EuiNavDrawerGroup listItems={analyzeLinks} />
-            <EuiNavDrawerGroup listItems={securityLinks} />
-            <EuiNavDrawerGroup listItems={searchLinks} />
-            <EuiNavDrawerGroup listItems={observabilityLinks} />
-            <EuiHorizontalRule margin="none" />
-            <EuiNavDrawerGroup listItems={adminLinks} />
-          </EuiNavDrawer>
+          <WuiNavDrawer ref={navDrawerRef} onIsLockedUpdate={onNavDrawerLocked}>
+            <WuiNavDrawerGroup listItems={topLinks} />
+            <WuiHorizontalRule margin="none" />
+            <WuiNavDrawerGroup listItems={analyzeLinks} />
+            <WuiNavDrawerGroup listItems={securityLinks} />
+            <WuiNavDrawerGroup listItems={searchLinks} />
+            <WuiNavDrawerGroup listItems={observabilityLinks} />
+            <WuiHorizontalRule margin="none" />
+            <WuiNavDrawerGroup listItems={adminLinks} />
+          </WuiNavDrawer>
           <MainBody toggleFullScreen={toggleFullScreen} />
         </div>
-      </EuiFocusTrap>
+      </WuiFocusTrap>
     );
   }
   return (
     <Fragment>
-      <EuiButton
+      <WuiButton
         onClick={toggleFullScreen}
         iconType="fullScreen"
         aria-label="Show fullscreen demo">
         Show fullscreen demo
-      </EuiButton>
+      </WuiButton>
 
       {/*
          If the below fullScreen code renders, it actually attaches to the body because of
-         EuiOverlayMask's React portal usage.
+         WuiOverlayMask's React portal usage.
        */}
 
       {fullScreenDisplay}

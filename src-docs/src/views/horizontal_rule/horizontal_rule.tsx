@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { EuiHorizontalRule } from '../../../../src/components/horizontal_rule';
+import { WuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 
 export default () => (
   <div>
-    <EuiHorizontalRule size="quarter" />
-    <EuiHorizontalRule size="half" />
-    <EuiHorizontalRule />
+    <WuiHorizontalRule size="quarter" />
+    <WuiHorizontalRule size="half" />
+    <WuiHorizontalRule />
   </div>
 );

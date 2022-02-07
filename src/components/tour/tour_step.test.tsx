@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTourStep } from './tour_step';
+import { WuiTourStep } from './tour_step';
 
 const steps = [
   {
@@ -37,12 +50,12 @@ const config = {
   title: 'A demo',
 };
 
-describe('EuiTourStep', () => {
+describe('WuiTourStep', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTourStep {...config} {...steps[0]} {...requiredProps}>
+      <WuiTourStep {...config} {...steps[0]} {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </WuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -50,13 +63,13 @@ describe('EuiTourStep', () => {
 
   test('can be closed', () => {
     const component = render(
-      <EuiTourStep
+      <WuiTourStep
         {...config}
         {...steps[0]}
         isStepOpen={false}
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </WuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -64,9 +77,9 @@ describe('EuiTourStep', () => {
 
   test('can set a minWidth', () => {
     const component = render(
-      <EuiTourStep {...config} {...steps[0]} minWidth={240} {...requiredProps}>
+      <WuiTourStep {...config} {...steps[0]} minWidth={240} {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </WuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -74,13 +87,13 @@ describe('EuiTourStep', () => {
 
   test('can override the footer action', () => {
     const component = render(
-      <EuiTourStep
+      <WuiTourStep
         {...config}
         {...steps[0]}
         footerAction={<button onClick={() => {}}>Test</button>}
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </WuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -88,13 +101,13 @@ describe('EuiTourStep', () => {
 
   test('can turn off the beacon', () => {
     const component = render(
-      <EuiTourStep
+      <WuiTourStep
         {...config}
         {...steps[0]}
         decoration="none"
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </WuiTourStep>
     );
 
     expect(component).toMatchSnapshot();

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,10 +34,10 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiSelectable } from './selectable';
-import { EuiSelectableOption } from './selectable_option';
+import { WuiSelectable } from './selectable';
+import { WuiSelectableOption } from './selectable_option';
 
-const options: EuiSelectableOption[] = [
+const options: WuiSelectableOption[] = [
   {
     label: 'Titan',
     'data-test-subj': 'titanOption',
@@ -43,10 +56,10 @@ jest.mock('../../services/accessibility/html_id_generator', () => ({
   htmlIdGenerator: () => () => 'htmlId',
 }));
 
-describe('EuiSelectable', () => {
+describe('WuiSelectable', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelectable options={options} {...requiredProps} />
+      <WuiSelectable options={options} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -54,14 +67,14 @@ describe('EuiSelectable', () => {
 
   describe('props', () => {
     test('searchable', () => {
-      const component = render(<EuiSelectable options={options} searchable />);
+      const component = render(<WuiSelectable options={options} searchable />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('singleSelection', () => {
       const component = render(
-        <EuiSelectable options={options} singleSelection />
+        <WuiSelectable options={options} singleSelection />
       );
 
       expect(component).toMatchSnapshot();
@@ -69,21 +82,21 @@ describe('EuiSelectable', () => {
 
     test('allowExclusions', () => {
       const component = render(
-        <EuiSelectable options={options} allowExclusions />
+        <WuiSelectable options={options} allowExclusions />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading', () => {
-      const component = render(<EuiSelectable options={options} isLoading />);
+      const component = render(<WuiSelectable options={options} isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('height can be forced', () => {
       const component = render(
-        <EuiSelectable options={options} height={200} />
+        <WuiSelectable options={options} height={200} />
       );
 
       expect(component).toMatchSnapshot();
@@ -91,7 +104,7 @@ describe('EuiSelectable', () => {
 
     test('height can be full', () => {
       const component = render(
-        <EuiSelectable options={options} height="full" />
+        <WuiSelectable options={options} height="full" />
       );
 
       expect(component).toMatchSnapshot();
@@ -99,9 +112,9 @@ describe('EuiSelectable', () => {
 
     test('renderOption', () => {
       const component = render(
-        <EuiSelectable
+        <WuiSelectable
           options={options}
-          renderOption={(option: EuiSelectableOption, searchValue?: string) => {
+          renderOption={(option: WuiSelectableOption, searchValue?: string) => {
             return (
               <span>
                 {searchValue} =&gt; {option.label}
@@ -116,7 +129,7 @@ describe('EuiSelectable', () => {
 
     test('listProps', () => {
       const component = render(
-        <EuiSelectable
+        <WuiSelectable
           options={options}
           listProps={{
             windowProps: {
@@ -132,7 +145,7 @@ describe('EuiSelectable', () => {
 
   describe('custom options', () => {
     test('optional properties', () => {
-      type OptionalOption = EuiSelectableOption<{ value?: string }>;
+      type OptionalOption = WuiSelectableOption<{ value?: string }>;
       const options: OptionalOption[] = [
         {
           label: 'Titan',
@@ -154,18 +167,18 @@ describe('EuiSelectable', () => {
       };
 
       const component = mount(
-        <EuiSelectable<OptionalOption> options={options} onChange={onChange}>
+        <WuiSelectable<OptionalOption> options={options} onChange={onChange}>
           {list => list}
-        </EuiSelectable>
+        </WuiSelectable>
       );
 
       expect(
-        (component.find('EuiSelectableList').props() as any).visibleOptions
+        (component.find('WuiSelectableList').props() as any).visibleOptions
       ).toEqual(options);
     });
 
     test('required properties', () => {
-      type ExtendedOption = EuiSelectableOption<{ value: string }>;
+      type ExtendedOption = WuiSelectableOption<{ value: string }>;
       const options: ExtendedOption[] = [
         {
           label: 'Titan',
@@ -188,15 +201,15 @@ describe('EuiSelectable', () => {
       };
 
       const component = mount(
-        <EuiSelectable<ExtendedOption> options={options} onChange={onChange}>
+        <WuiSelectable<ExtendedOption> options={options} onChange={onChange}>
           {list => list}
-        </EuiSelectable>
+        </WuiSelectable>
       );
 
       component.update();
 
       expect(
-        (component.find('EuiSelectableList').props() as any).visibleOptions
+        (component.find('WuiSelectableList').props() as any).visibleOptions
       ).toEqual(options);
     });
   });

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,14 +41,14 @@ import classNames from 'classnames';
 import { keysOf, CommonProps } from '../../common';
 
 const typeToClassNameMap = {
-  inList: 'euiCheckbox--inList',
+  inList: 'wuiCheckbox--inList',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
 
-export type EuiCheckboxType = keyof typeof typeToClassNameMap;
+export type WuiCheckboxType = keyof typeof typeToClassNameMap;
 
-export interface EuiCheckboxProps
+export interface WuiCheckboxProps
   extends CommonProps,
     InputHTMLAttributes<HTMLInputElement> {
   id: string;
@@ -43,7 +56,7 @@ export interface EuiCheckboxProps
   onChange: ChangeEventHandler<HTMLInputElement>; // overriding to make it required
   inputRef?: (element: HTMLInputElement) => void;
   label?: ReactNode;
-  type?: EuiCheckboxType;
+  type?: WuiCheckboxType;
   disabled?: boolean;
   /**
    * when `true` creates a shorter height checkbox row
@@ -52,7 +65,7 @@ export interface EuiCheckboxProps
   indeterminate?: boolean;
 }
 
-export class EuiCheckbox extends Component<EuiCheckboxProps> {
+export class WuiCheckbox extends Component<WuiCheckboxProps> {
   static defaultProps = {
     checked: false,
     disabled: false,
@@ -86,11 +99,11 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
     const { indeterminate, ...inputProps } = rest; // `indeterminate` is set dynamically later
 
     const classes = classNames(
-      'euiCheckbox',
+      'wuiCheckbox',
       type && typeToClassNameMap[type],
       {
-        'euiCheckbox--noLabel': !label,
-        'euiCheckbox--compressed': compressed,
+        'wuiCheckbox--noLabel': !label,
+        'wuiCheckbox--compressed': compressed,
       },
       className
     );
@@ -99,7 +112,7 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
 
     if (label) {
       optionalLabel = (
-        <label className="euiCheckbox__label" htmlFor={id}>
+        <label className="wuiCheckbox__label" htmlFor={id}>
           {label}
         </label>
       );
@@ -108,7 +121,7 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
     return (
       <div className={classes}>
         <input
-          className="euiCheckbox__input"
+          className="wuiCheckbox__input"
           type="checkbox"
           id={id}
           checked={checked}
@@ -118,7 +131,7 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
           {...inputProps}
         />
 
-        <div className="euiCheckbox__square" />
+        <div className="wuiCheckbox__square" />
 
         {optionalLabel}
       </div>

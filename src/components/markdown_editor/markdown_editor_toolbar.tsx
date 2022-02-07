@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,23 +37,23 @@ import React, {
   useContext,
 } from 'react';
 import { CommonProps } from '../common';
-import { EuiButtonEmpty, EuiButtonIcon } from '../button';
-import { EuiI18n } from '../i18n';
-import { EuiToolTip } from '../tool_tip';
+import { WuiButtonEmpty, WuiButtonIcon } from '../button';
+import { WuiI18n } from '../i18n';
+import { WuiToolTip } from '../tool_tip';
 import { MARKDOWN_MODE, MODE_VIEWING } from './markdown_modes';
-import { EuiMarkdownEditorUiPlugin } from './markdown_types';
-import { EuiMarkdownContext } from './markdown_context';
+import { WuiMarkdownEditorUiPlugin } from './markdown_types';
+import { WuiMarkdownContext } from './markdown_context';
 import MarkdownActions from './markdown_actions';
 // @ts-ignore a react svg
 import MarkdownCheckmarkIcon from './icons/markdown_checkmark';
 
-export type EuiMarkdownEditorToolbarProps = HTMLAttributes<HTMLDivElement> &
+export type WuiMarkdownEditorToolbarProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     selectedNode?: null | any;
     markdownActions: MarkdownActions;
     viewMode: MARKDOWN_MODE;
     onClickPreview: MouseEventHandler<HTMLButtonElement>;
-    uiPlugins: EuiMarkdownEditorUiPlugin[];
+    uiPlugins: WuiMarkdownEditorUiPlugin[];
   };
 
 const boldItalicButtons = [
@@ -100,14 +113,14 @@ const quoteCodeLinkButtons = [
   },
 ];
 
-export const EuiMarkdownEditorToolbar: FunctionComponent<EuiMarkdownEditorToolbarProps> = ({
+export const WuiMarkdownEditorToolbar: FunctionComponent<WuiMarkdownEditorToolbarProps> = ({
   markdownActions,
   viewMode,
   onClickPreview,
   uiPlugins,
   selectedNode,
 }) => {
-  const { openPluginEditor } = useContext(EuiMarkdownContext);
+  const { openPluginEditor } = useContext(WuiMarkdownContext);
 
   const handleMdButtonClick = (mdButtonId: string) => {
     const actionResult = markdownActions.do(mdButtonId);
@@ -117,53 +130,53 @@ export const EuiMarkdownEditorToolbar: FunctionComponent<EuiMarkdownEditorToolba
   const isPreviewing = viewMode === MODE_VIEWING;
 
   return (
-    <div className="euiMarkdownEditorToolbar">
-      <div className="euiMarkdownEditorToolbar__buttons">
+    <div className="wuiMarkdownEditorToolbar">
+      <div className="wuiMarkdownEditorToolbar__buttons">
         {boldItalicButtons.map(item => (
-          <EuiToolTip key={item.id} content={item.label} delay="long">
-            <EuiButtonIcon
+          <WuiToolTip key={item.id} content={item.label} delay="long">
+            <WuiButtonIcon
               color="text"
               onClick={() => handleMdButtonClick(item.id)}
               iconType={item.iconType}
               aria-label={item.label}
               isDisabled={isPreviewing}
             />
-          </EuiToolTip>
+          </WuiToolTip>
         ))}
-        <span className="euiMarkdownEditorToolbar__divider" />
+        <span className="wuiMarkdownEditorToolbar__divider" />
         {listButtons.map(item => (
-          <EuiToolTip key={item.id} content={item.label} delay="long">
-            <EuiButtonIcon
+          <WuiToolTip key={item.id} content={item.label} delay="long">
+            <WuiButtonIcon
               color="text"
               onClick={() => handleMdButtonClick(item.id)}
               iconType={item.iconType}
               aria-label={item.label}
               isDisabled={isPreviewing}
             />
-          </EuiToolTip>
+          </WuiToolTip>
         ))}
-        <span className="euiMarkdownEditorToolbar__divider" />
+        <span className="wuiMarkdownEditorToolbar__divider" />
         {quoteCodeLinkButtons.map(item => (
-          <EuiToolTip key={item.id} content={item.label} delay="long">
-            <EuiButtonIcon
+          <WuiToolTip key={item.id} content={item.label} delay="long">
+            <WuiButtonIcon
               color="text"
               onClick={() => handleMdButtonClick(item.id)}
               iconType={item.iconType}
               aria-label={item.label}
               isDisabled={isPreviewing}
             />
-          </EuiToolTip>
+          </WuiToolTip>
         ))}
 
         {uiPlugins.length > 0 ? (
           <>
-            <span className="euiMarkdownEditorToolbar__divider" />
+            <span className="wuiMarkdownEditorToolbar__divider" />
             {uiPlugins.map(({ name, button }) => {
               const isSelectedNodeType =
                 selectedNode && selectedNode.type === name;
               return (
-                <EuiToolTip key={name} content={button.label} delay="long">
-                  <EuiButtonIcon
+                <WuiToolTip key={name} content={button.label} delay="long">
+                  <WuiButtonIcon
                     color="text"
                     {...(isSelectedNodeType
                       ? {
@@ -175,7 +188,7 @@ export const EuiMarkdownEditorToolbar: FunctionComponent<EuiMarkdownEditorToolba
                     aria-label={button.label}
                     isDisabled={isPreviewing}
                   />
-                </EuiToolTip>
+                </WuiToolTip>
               );
             })}
           </>
@@ -183,24 +196,24 @@ export const EuiMarkdownEditorToolbar: FunctionComponent<EuiMarkdownEditorToolba
       </div>
 
       {isPreviewing ? (
-        <EuiButtonEmpty
+        <WuiButtonEmpty
           iconType="editorCodeBlock"
           color="text"
           size="s"
           onClick={onClickPreview}>
-          <EuiI18n token="euiMarkdownEditorToolbar.editor" default="Editor" />
-        </EuiButtonEmpty>
+          <WuiI18n token="wuiMarkdownEditorToolbar.editor" default="Editor" />
+        </WuiButtonEmpty>
       ) : (
-        <EuiButtonEmpty
+        <WuiButtonEmpty
           iconType="eye"
           color="text"
           size="s"
           onClick={onClickPreview}>
-          <EuiI18n
-            token="euiMarkdownEditorToolbar.previewMarkdown"
+          <WuiI18n
+            token="wuiMarkdownEditorToolbar.previewMarkdown"
             default="Preview"
           />
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       )}
     </div>
   );

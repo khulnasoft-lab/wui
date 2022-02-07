@@ -1,38 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormControlLayout is rendered 1`] = `
+exports[`WuiFormControlLayout is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiFormControlLayout testClass1 testClass2"
+  class="wuiFormControlLayout testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <input />
   </div>
 </div>
 `;
 
-exports[`EuiFormControlLayout props clear onClick is rendered 1`] = `
+exports[`WuiFormControlLayout props clear onClick is rendered 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+      class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
     >
       <button
         aria-label="Clear input"
-        class="euiFormControlLayoutClearButton customClass"
+        class="wuiFormControlLayoutClearButton customClass"
         data-test-subj="clearButton"
         type="button"
       >
         <div
-          class="euiFormControlLayoutClearButton__icon"
-          data-euiicon-type="cross"
+          class="wuiFormControlLayoutClearButton__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -40,33 +40,33 @@ exports[`EuiFormControlLayout props clear onClick is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFormControlLayout props fullWidth is rendered 1`] = `
+exports[`WuiFormControlLayout props fullWidth is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--fullWidth"
+  class="wuiFormControlLayout wuiFormControlLayout--fullWidth"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;
 
-exports[`EuiFormControlLayout props icon is rendered as a string 1`] = `
+exports[`WuiFormControlLayout props icon is rendered as a string 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons"
+      class="wuiFormControlLayoutIcons"
     >
       <span
-        class="euiFormControlLayoutCustomIcon"
+        class="wuiFormControlLayoutCustomIcon"
       >
         <div
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="alert"
+          class="wuiFormControlLayoutCustomIcon__icon"
+          data-wuiicon-type="alert"
         />
       </span>
     </div>
@@ -74,24 +74,24 @@ exports[`EuiFormControlLayout props icon is rendered as a string 1`] = `
 </div>
 `;
 
-exports[`EuiFormControlLayout props icon is rendered as an object 1`] = `
+exports[`WuiFormControlLayout props icon is rendered as an object 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons"
+      class="wuiFormControlLayoutIcons"
     >
       <span
-        class="euiFormControlLayoutCustomIcon customClass"
+        class="wuiFormControlLayoutCustomIcon customClass"
         data-test-subj="myIcon"
       >
         <div
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="alert"
+          class="wuiFormControlLayoutCustomIcon__icon"
+          data-wuiicon-type="alert"
         />
       </span>
     </div>
@@ -99,23 +99,23 @@ exports[`EuiFormControlLayout props icon is rendered as an object 1`] = `
 </div>
 `;
 
-exports[`EuiFormControlLayout props icon side left is rendered 1`] = `
+exports[`WuiFormControlLayout props icon side left is rendered 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons"
+      class="wuiFormControlLayoutIcons"
     >
       <span
-        class="euiFormControlLayoutCustomIcon"
+        class="wuiFormControlLayoutCustomIcon"
       >
         <div
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="alert"
+          class="wuiFormControlLayoutCustomIcon__icon"
+          data-wuiicon-type="alert"
         />
       </span>
     </div>
@@ -123,23 +123,23 @@ exports[`EuiFormControlLayout props icon side left is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFormControlLayout props icon side right is rendered 1`] = `
+exports[`WuiFormControlLayout props icon side right is rendered 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+      class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
     >
       <span
-        class="euiFormControlLayoutCustomIcon"
+        class="wuiFormControlLayoutCustomIcon"
       >
         <div
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="alert"
+          class="wuiFormControlLayoutCustomIcon__icon"
+          data-wuiicon-type="alert"
         />
       </span>
     </div>
@@ -147,145 +147,145 @@ exports[`EuiFormControlLayout props icon side right is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFormControlLayout props isLoading is rendered 1`] = `
+exports[`WuiFormControlLayout props isLoading is rendered 1`] = `
 <div
-  class="euiFormControlLayout"
+  class="wuiFormControlLayout"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   >
     <div
-      class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+      class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
     >
       <span
-        class="euiLoadingSpinner euiLoadingSpinner--medium"
+        class="wuiLoadingSpinner wuiLoadingSpinner--medium"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiFormControlLayout props multiple appends are rendered 1`] = `
+exports[`WuiFormControlLayout props multiple appends are rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
   <span
-    class="euiFormControlLayout__append"
+    class="wuiFormControlLayout__append"
   >
     1
   </span>
   <span
-    class="euiFormControlLayout__append"
+    class="wuiFormControlLayout__append"
   >
     2
   </span>
 </div>
 `;
 
-exports[`EuiFormControlLayout props multiple prepends are rendered 1`] = `
+exports[`WuiFormControlLayout props multiple prepends are rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <span
-    class="euiFormControlLayout__prepend"
+    class="wuiFormControlLayout__prepend"
   >
     1
   </span>
   <span
-    class="euiFormControlLayout__prepend"
+    class="wuiFormControlLayout__prepend"
   >
     2
   </span>
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;
 
-exports[`EuiFormControlLayout props one append node is rendered 1`] = `
+exports[`WuiFormControlLayout props one append node is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
   <span
-    class="euiFormControlLayout__append"
+    class="wuiFormControlLayout__append"
   >
     1
   </span>
 </div>
 `;
 
-exports[`EuiFormControlLayout props one append string is rendered 1`] = `
+exports[`WuiFormControlLayout props one append string is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
   <label
-    class="euiFormLabel euiFormControlLayout__append"
+    class="wuiFormLabel wuiFormControlLayout__append"
   >
     1
   </label>
 </div>
 `;
 
-exports[`EuiFormControlLayout props one prepend node is rendered 1`] = `
+exports[`WuiFormControlLayout props one prepend node is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <span
-    class="euiFormControlLayout__prepend"
+    class="wuiFormControlLayout__prepend"
   >
     1
   </span>
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;
 
-exports[`EuiFormControlLayout props one prepend node is rendered with className 1`] = `
+exports[`WuiFormControlLayout props one prepend node is rendered with className 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <span
-    class="euiFormControlLayout__prepend myClass"
+    class="wuiFormControlLayout__prepend myClass"
   >
     1
   </span>
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;
 
-exports[`EuiFormControlLayout props one prepend string is rendered 1`] = `
+exports[`WuiFormControlLayout props one prepend string is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--group"
+  class="wuiFormControlLayout wuiFormControlLayout--group"
 >
   <label
-    class="euiFormLabel euiFormControlLayout__prepend"
+    class="wuiFormLabel wuiFormControlLayout__prepend"
   >
     1
   </label>
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;
 
-exports[`EuiFormControlLayout props readOnly is rendered 1`] = `
+exports[`WuiFormControlLayout props readOnly is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--readOnly"
+  class="wuiFormControlLayout wuiFormControlLayout--readOnly"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="wuiFormControlLayout__childrenWrapper"
   />
 </div>
 `;

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,22 +40,22 @@ import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 import { htmlIdGenerator } from '../../../services';
 
-import { EuiAccordion, EuiAccordionProps } from '../../accordion';
-import { EuiIcon, IconType, IconSize, EuiIconProps } from '../../icon';
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiTitle, EuiTitleProps, EuiTitleSize } from '../../title';
+import { WuiAccordion, WuiAccordionProps } from '../../accordion';
+import { WuiIcon, IconType, IconSize, WuiIconProps } from '../../icon';
+import { WuiFlexGroup, WuiFlexItem } from '../../flex';
+import { WuiTitle, WuiTitleProps, WuiTitleSize } from '../../title';
 
 type Background = 'none' | 'light' | 'dark';
 const backgroundToClassNameMap: { [color in Background]: string } = {
   none: '',
-  light: 'euiCollapsibleNavGroup--light',
-  dark: 'euiCollapsibleNavGroup--dark',
+  light: 'wuiCollapsibleNavGroup--light',
+  dark: 'wuiCollapsibleNavGroup--dark',
 };
 export const BACKGROUNDS = Object.keys(
   backgroundToClassNameMap
 ) as Background[];
 
-export interface EuiCollapsibleNavGroupInterface extends CommonProps {
+export interface WuiCollapsibleNavGroupInterface extends CommonProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -56,9 +69,9 @@ export interface EuiCollapsibleNavGroupInterface extends CommonProps {
    */
   iconSize?: IconSize;
   /**
-   * Further extend the props applied to EuiIcon
+   * Further extend the props applied to WuiIcon
    */
-  iconProps?: Omit<EuiIconProps, 'type' | 'size'>;
+  iconProps?: Omit<WuiIconProps, 'type' | 'size'>;
   /**
    * Optionally provide an id, otherwise one will be created
    */
@@ -73,14 +86,14 @@ export interface EuiCollapsibleNavGroupInterface extends CommonProps {
    */
   titleElement?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   /**
-   * Title sizing equivalent to EuiTitle, but only `s` and smaller
+   * Title sizing equivalent to WuiTitle, but only `s` and smaller
    */
-  titleSize?: Exclude<EuiTitleProps['size'], 'l' | 'm'>;
+  titleSize?: Exclude<WuiTitleProps['size'], 'l' | 'm'>;
 }
 
-type GroupAsAccordion = EuiCollapsibleNavGroupInterface &
+type GroupAsAccordion = WuiCollapsibleNavGroupInterface &
   // The HTML `title` prop conflicts in type with our `title` prop
-  Omit<EuiAccordionProps, 'id' | 'title'> & {
+  Omit<WuiAccordionProps, 'id' | 'title'> & {
     /**
      * If `true`, wraps children in the body of an accordion,
      * requiring the prop `title` to be used as the button.
@@ -94,7 +107,7 @@ type GroupAsAccordion = EuiCollapsibleNavGroupInterface &
     title: ReactNode;
   };
 
-type GroupAsDiv = EuiCollapsibleNavGroupInterface & {
+type GroupAsDiv = WuiCollapsibleNavGroupInterface & {
   /**
    * If `true`, wraps children in the body of an accordion,
    * requiring the prop `title` to be used as the button.
@@ -108,12 +121,12 @@ type GroupAsDiv = EuiCollapsibleNavGroupInterface & {
   title?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
-export type EuiCollapsibleNavGroupProps = ExclusiveUnion<
+export type WuiCollapsibleNavGroupProps = ExclusiveUnion<
   GroupAsAccordion,
   GroupAsDiv
 >;
 
-export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupProps> = ({
+export const WuiCollapsibleNavGroup: FunctionComponent<WuiCollapsibleNavGroupProps> = ({
   className,
   children,
   id,
@@ -131,10 +144,10 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
   const titleID = `${groupID}__title`;
 
   const classes = classNames(
-    'euiCollapsibleNavGroup',
+    'wuiCollapsibleNavGroup',
     backgroundToClassNameMap[background],
     {
-      'euiCollapsibleNavGroup--withHeading': title,
+      'wuiCollapsibleNavGroup--withHeading': title,
     },
     className
   );
@@ -142,40 +155,40 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
   // Warn if consumer passes an iconType without a title
   if (iconType && !title) {
     console.warn(
-      'EuiCollapsibleNavGroup will not render an icon without `title`.'
+      'WuiCollapsibleNavGroup will not render an icon without `title`.'
     );
   }
 
   const content = (
-    <div className="euiCollapsibleNavGroup__children">{children}</div>
+    <div className="wuiCollapsibleNavGroup__children">{children}</div>
   );
 
-  const headingClasses = 'euiCollapsibleNavGroup__heading';
+  const headingClasses = 'wuiCollapsibleNavGroup__heading';
 
   const TitleElement = titleElement;
   const titleContent = title ? (
-    <EuiFlexGroup gutterSize="m" alignItems="center" responsive={false}>
+    <WuiFlexGroup gutterSize="m" alignItems="center" responsive={false}>
       {iconType && (
-        <EuiFlexItem grow={false}>
-          <EuiIcon {...iconProps} type={iconType} size={iconSize} />
-        </EuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiIcon {...iconProps} type={iconType} size={iconSize} />
+        </WuiFlexItem>
       )}
 
-      <EuiFlexItem>
-        <EuiTitle size={titleSize as EuiTitleSize}>
-          <TitleElement id={titleID} className="euiCollapsibleNavGroup__title">
+      <WuiFlexItem>
+        <WuiTitle size={titleSize as WuiTitleSize}>
+          <TitleElement id={titleID} className="wuiCollapsibleNavGroup__title">
             {title}
           </TitleElement>
-        </EuiTitle>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiTitle>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   ) : (
     undefined
   );
 
   if (isCollapsible && title) {
     return (
-      <EuiAccordion
+      <WuiAccordion
         id={groupID}
         className={classes}
         buttonClassName={headingClasses}
@@ -184,7 +197,7 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
         arrowDisplay="right"
         {...rest}>
         {content}
-      </EuiAccordion>
+      </WuiAccordion>
     );
   } else {
     return (

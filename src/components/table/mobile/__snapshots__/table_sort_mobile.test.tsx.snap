@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTableSortMobile is rendered 1`] = `
+exports[`WuiTableSortMobile is rendered 1`] = `
 <div
-  class="euiTableSortMobile testClass1 testClass2"
+  class="wuiTableSortMobile testClass1 testClass2"
 >
   <div
     aria-label="aria-label"
-    class="euiPopover euiPopover--anchorDownRight"
+    class="wuiPopover wuiPopover--anchorDownRight"
     data-test-subj="test subject string"
   >
     <div
-      class="euiPopover__anchor"
+      class="wuiPopover__anchor"
     >
       <button
-        class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--xSmall euiButtonEmpty--flushRight"
+        class="wuiButtonEmpty wuiButtonEmpty--primary wuiButtonEmpty--xSmall wuiButtonEmpty--flushRight"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+          class="wuiButtonContent wuiButtonContent--iconRight wuiButtonEmpty__content"
         >
           <div
-            class="euiButtonContent__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiButtonContent__icon"
+            data-wuiicon-type="arrowDown"
           />
           <span
-            class="euiButtonEmpty__text"
+            class="wuiButtonEmpty__text"
           >
             Sorting
           </span>

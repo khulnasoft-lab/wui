@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiFormRow,
-  EuiPopover,
-  EuiSpacer,
-  EuiSwitch,
+  WuiButton,
+  WuiFormRow,
+  WuiPopover,
+  WuiSpacer,
+  WuiSwitch,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,41 +15,41 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       initialFocus="[id=asdf2]">
-      <EuiFormRow
+      <WuiFormRow
         label="Generate a public snapshot?"
         id="asdf"
         hasChildLabel={false}>
-        <EuiSwitch
+        <WuiSwitch
           name="switch"
           label="Snapshot data"
           checked={true}
           onChange={() => {}}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Include the following in the embed" id="asdf2">
-        <EuiSwitch
+      <WuiFormRow label="Include the following in the embed" id="asdf2">
+        <WuiSwitch
           name="switch"
           label="Current time range"
           checked={true}
           onChange={() => {}}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiButton fill>Copy IFRAME code</EuiButton>
-    </EuiPopover>
+      <WuiButton fill>Copy IFRAME code</WuiButton>
+    </WuiPopover>
   );
 };

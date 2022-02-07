@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,12 +36,12 @@ import classNames from 'classnames';
 import range from 'lodash/range';
 
 import { isEvenlyDivisibleBy } from '../../../services';
-import { EuiRangeLevels, EuiRangeLevel, LEVEL_COLORS } from './range_levels';
-import { EuiRangeTicks, EuiRangeTick } from './range_ticks';
+import { WuiRangeLevels, WuiRangeLevel, LEVEL_COLORS } from './range_levels';
+import { WuiRangeTicks, WuiRangeTick } from './range_ticks';
 
 export { LEVEL_COLORS };
 
-export interface EuiRangeTrackProps
+export interface WuiRangeTrackProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   min: number;
   max: number;
@@ -38,12 +51,12 @@ export interface EuiRangeTrackProps
   disabled?: boolean;
   showTicks?: boolean;
   tickInterval?: number;
-  ticks?: EuiRangeTick[];
+  ticks?: WuiRangeTick[];
   onChange?: MouseEventHandler<HTMLButtonElement>;
-  levels?: EuiRangeLevel[];
+  levels?: WuiRangeLevel[];
 }
 
-export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
+export class WuiRangeTrack extends Component<WuiRangeTrackProps> {
   validateValueIsInStep = (value: number) => {
     if (value < this.props.min) {
       throw new Error(
@@ -71,9 +84,9 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
   };
 
   calculateSequence = (
-    min: EuiRangeTrackProps['min'],
-    max: EuiRangeTrackProps['max'],
-    interval?: EuiRangeTrackProps['tickInterval']
+    min: WuiRangeTrackProps['min'],
+    max: WuiRangeTrackProps['max'],
+    interval?: WuiRangeTrackProps['tickInterval']
   ) => {
     // Loop from min to max, creating adding values at each interval
     // (adds a very small number to the max since `range` is not inclusive of the max value)
@@ -82,11 +95,11 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
   };
 
   calculateTicks = (
-    min: EuiRangeTrackProps['min'],
-    max: EuiRangeTrackProps['max'],
-    step?: EuiRangeTrackProps['step'],
-    tickInterval?: EuiRangeTrackProps['tickInterval'],
-    customTicks?: EuiRangeTick[]
+    min: WuiRangeTrackProps['min'],
+    max: WuiRangeTrackProps['max'],
+    step?: WuiRangeTrackProps['step'],
+    tickInterval?: WuiRangeTrackProps['tickInterval'],
+    customTicks?: WuiRangeTick[]
   ) => {
     let ticks;
 
@@ -156,14 +169,14 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
       }
     }
 
-    const trackClasses = classNames('euiRangeTrack', {
-      'euiRangeTrack--disabled': disabled,
+    const trackClasses = classNames('wuiRangeTrack', {
+      'wuiRangeTrack--disabled': disabled,
     });
 
     return (
       <div className={trackClasses} style={inputWrapperStyle} {...rest}>
         {levels && !!levels.length && (
-          <EuiRangeLevels
+          <WuiRangeLevels
             compressed={compressed}
             levels={levels}
             max={max}
@@ -172,7 +185,7 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
           />
         )}
         {tickSequence && (
-          <EuiRangeTicks
+          <WuiRangeTicks
             disabled={disabled}
             compressed={compressed}
             onChange={onChange}

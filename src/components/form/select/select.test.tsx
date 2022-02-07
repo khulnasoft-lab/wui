@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,19 +34,19 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelect } from './select';
+import { WuiSelect } from './select';
 
 jest.mock('../form_control_layout', () => ({
-  EuiFormControlLayout: 'eui-form-control-layout',
+  WuiFormControlLayout: 'wui-form-control-layout',
 }));
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  WuiValidatableControl: 'wui-validatable-control',
 }));
 
-describe('EuiSelect', () => {
+describe('WuiSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelect id="id" name="name" {...requiredProps} />
+      <WuiSelect id="id" name="name" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +55,7 @@ describe('EuiSelect', () => {
   describe('props', () => {
     test('options are rendered', () => {
       const component = render(
-        <EuiSelect
+        <WuiSelect
           options={[
             { value: '1', text: 'Option #1' },
             { value: '2', text: 'Option #2' },
@@ -54,26 +67,26 @@ describe('EuiSelect', () => {
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiSelect isInvalid />);
+      const component = render(<WuiSelect isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiSelect fullWidth />);
+      const component = render(<WuiSelect fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiSelect isLoading />);
+      const component = render(<WuiSelect isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('disabled options are rendered', () => {
       const component = render(
-        <EuiSelect
+        <WuiSelect
           options={[
             { value: '1', text: 'Option #1', disabled: false },
             { value: '2', text: 'Option #2', disabled: true },
@@ -86,7 +99,7 @@ describe('EuiSelect', () => {
 
     test('value option is rendered', () => {
       const component = render(
-        <EuiSelect
+        <WuiSelect
           options={[
             { value: '1', text: 'Option #1' },
             { value: '2', text: 'Option #2' },

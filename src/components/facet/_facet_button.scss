@@ -1,40 +1,40 @@
 /**
  * 1. Make sure the quantity doesn't get an underline on hover
  */
-.euiFacetButton {
-  @include euiButtonBase;
-  @include euiFont;
-  @include euiFontSizeS;
+.wuiFacetButton {
+  @include wuiButtonBase;
+  @include wuiFont;
+  @include wuiFontSizeS;
 
-  height: $euiButtonHeightSmall;
+  height: $wuiButtonHeightSmall;
   text-align: left;
   text-decoration: none;
-  transition: all $euiAnimSpeedFast ease-in;
+  transition: all $wuiAnimSpeedFast ease-in;
 
   &:hover,
   &:focus {
-    &:not(:disabled) .euiFacetButton__text {
+    &:not(:disabled) .wuiFacetButton__text {
       text-decoration: underline; /* 1 */
     }
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
     // use box-shadow as a "faux outline" to apply left/right padding only
-    box-shadow: -$euiSizeXS 0 $euiFocusBackgroundColor, $euiSizeXS 0 $euiFocusBackgroundColor;
+    box-shadow: -$wuiSizeXS 0 $wuiFocusBackgroundColor, $wuiSizeXS 0 $wuiFocusBackgroundColor;
   }
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $wuiButtonColorDisabledText;
     pointer-events: none;
 
-    .euiFacetButton__content {
+    .wuiFacetButton__content {
       pointer-events: auto;
       cursor: not-allowed;
     }
 
-    .euiFacetButton__icon,
-    .euiFacetButton__quantity {
+    .wuiFacetButton__icon,
+    .wuiFacetButton__quantity {
       opacity: .5;
     }
 
@@ -49,21 +49,21 @@
   }
 }
 
-.euiFacetButton__content {
-  @include euiButtonContent;
+.wuiFacetButton__content {
+  @include wuiButtonContent;
 }
 
-.euiFacetButton__text {
-  @include euiTextShift;
-  @include euiTextTruncate;
+.wuiFacetButton__text {
+  @include wuiTextShift;
+  @include wuiTextTruncate;
   flex-grow: 1;
   vertical-align: middle;
 
-  .euiFacetButton--isSelected & {
-    font-weight: $euiFontWeightBold;
+  .wuiFacetButton--isSelected & {
+    font-weight: $wuiFontWeightBold;
   }
 }
 
-.euiFacetButton__icon {
-  transition: all $euiAnimSpeedFast ease-in;
+.wuiFacetButton__icon {
+  transition: all $wuiAnimSpeedFast ease-in;
 }

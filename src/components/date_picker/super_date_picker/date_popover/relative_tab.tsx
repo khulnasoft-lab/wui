@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +34,18 @@ import React, { Component, ChangeEventHandler } from 'react';
 import dateMath from '@elastic/datemath';
 import { toSentenceCase } from '../../../../services/string/to_case';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../flex';
 import {
-  EuiForm,
-  EuiFormRow,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiFieldText,
-  EuiSwitch,
-  EuiFormLabel,
-  EuiSwitchEvent,
+  WuiForm,
+  WuiFormRow,
+  WuiSelect,
+  WuiFieldNumber,
+  WuiFieldText,
+  WuiSwitch,
+  WuiFormLabel,
+  WuiSwitchEvent,
 } from '../../../form';
-import { EuiSpacer } from '../../../spacer';
+import { WuiSpacer } from '../../../spacer';
 
 import { timeUnits } from '../time_units';
 import { relativeOptions } from '../relative_options';
@@ -40,32 +53,32 @@ import {
   parseRelativeParts,
   toRelativeStringFromParts,
 } from '../relative_utils';
-import { EuiScreenReaderOnly } from '../../../accessibility';
-import { EuiI18n } from '../../../i18n';
+import { WuiScreenReaderOnly } from '../../../accessibility';
+import { WuiI18n } from '../../../i18n';
 import { RelativeParts, TimeUnitId } from '../../types';
 import { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
-import { EuiDatePopoverContentProps } from './date_popover_content';
+import { WuiDatePopoverContentProps } from './date_popover_content';
 
-export interface EuiRelativeTabProps {
+export interface WuiRelativeTabProps {
   dateFormat: string;
   locale?: LocaleSpecifier;
   value: string;
-  onChange: EuiDatePopoverContentProps['onChange'];
+  onChange: WuiDatePopoverContentProps['onChange'];
   roundUp?: boolean;
   position: 'start' | 'end';
 }
 
-interface EuiRelativeTabState
+interface WuiRelativeTabState
   extends Pick<RelativeParts, 'unit' | 'round' | 'roundUnit'> {
   count: number | undefined;
   sentenceCasedPosition: string;
 }
 
-export class EuiRelativeTab extends Component<
-  EuiRelativeTabProps,
-  EuiRelativeTabState
+export class WuiRelativeTab extends Component<
+  WuiRelativeTabProps,
+  WuiRelativeTabState
 > {
-  state: EuiRelativeTabState = {
+  state: WuiRelativeTabState = {
     ...parseRelativeParts(this.props.value),
     sentenceCasedPosition: toSentenceCase(this.props.position),
   };
@@ -91,7 +104,7 @@ export class EuiRelativeTab extends Component<
     );
   };
 
-  onRoundChange = (event: EuiSwitchEvent) => {
+  onRoundChange = (event: WuiSwitchEvent) => {
     this.setState(
       {
         round: event.target.checked,
@@ -129,20 +142,20 @@ export class EuiRelativeTab extends Component<
             .locale(this.props.locale || 'en')
             .format(this.props.dateFormat);
     return (
-      <EuiForm className="euiDatePopoverContent__padded">
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiI18n
+      <WuiForm className="wuiDatePopoverContent__padded">
+        <WuiFlexGroup gutterSize="s" responsive={false}>
+          <WuiFlexItem>
+            <WuiI18n
               tokens={[
-                'euiRelativeTab.numberInputError',
-                'euiRelativeTab.numberInputLabel',
+                'wuiRelativeTab.numberInputError',
+                'wuiRelativeTab.numberInputLabel',
               ]}
               defaults={['Must be >= 0', 'Time span amount']}>
               {([numberInputError, numberInputLabel]: string[]) => (
-                <EuiFormRow
+                <WuiFormRow
                   isInvalid={isInvalid}
                   error={isInvalid ? numberInputError : null}>
-                  <EuiFieldNumber
+                  <WuiFieldNumber
                     compressed
                     aria-label={numberInputLabel}
                     aria-describedby={relativeDateInputNumberDescriptionId}
@@ -151,16 +164,16 @@ export class EuiRelativeTab extends Component<
                     onChange={this.onCountChange}
                     isInvalid={isInvalid}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n
-              token="euiRelativeTab.unitInputLabel"
+            </WuiI18n>
+          </WuiFlexItem>
+          <WuiFlexItem>
+            <WuiI18n
+              token="wuiRelativeTab.unitInputLabel"
               default="Relative time span">
               {(unitInputLabel: string) => (
-                <EuiSelect
+                <WuiSelect
                   compressed
                   aria-label={unitInputLabel}
                   data-test-subj={
@@ -171,49 +184,49 @@ export class EuiRelativeTab extends Component<
                   onChange={this.onUnitChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="m" />
-        <EuiI18n
-          token="euiRelativeTab.roundingLabel"
+            </WuiI18n>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiSpacer size="m" />
+        <WuiI18n
+          token="wuiRelativeTab.roundingLabel"
           default="Round to the {unit}"
           values={{ unit: timeUnits[unit.substring(0, 1) as TimeUnitId] }}>
           {(roundingLabel: string) => (
-            <EuiSwitch
+            <WuiSwitch
               data-test-subj={'superDatePickerRelativeDateRoundSwitch'}
               label={roundingLabel}
               checked={this.state.round}
               onChange={this.onRoundChange}
             />
           )}
-        </EuiI18n>
+        </WuiI18n>
 
-        <EuiSpacer size="m" />
-        <EuiFieldText
+        <WuiSpacer size="m" />
+        <WuiFieldText
           compressed
           value={formatedValue}
           readOnly
           prepend={
-            <EuiFormLabel>
-              <EuiI18n
-                token="euiRelativeTab.relativeDate"
+            <WuiFormLabel>
+              <WuiI18n
+                token="wuiRelativeTab.relativeDate"
                 default="{position} date"
                 values={{ position: this.state.sentenceCasedPosition }}
               />
-            </EuiFormLabel>
+            </WuiFormLabel>
           }
         />
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <p id={relativeDateInputNumberDescriptionId}>
-            <EuiI18n
-              token="euiRelativeTab.fullDescription"
+            <WuiI18n
+              token="wuiRelativeTab.fullDescription"
               default="The unit is changeable. Currently set to {unit}."
               values={{ unit }}
             />
           </p>
-        </EuiScreenReaderOnly>
-      </EuiForm>
+        </WuiScreenReaderOnly>
+      </WuiForm>
     );
   }
 }

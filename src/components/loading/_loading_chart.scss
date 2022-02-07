@@ -1,29 +1,29 @@
-.euiLoadingChart {
-  height: $euiSizeXL;
+.wuiLoadingChart {
+  height: $wuiSizeXL;
   z-index: 500;
   overflow: hidden;
   display: inline-block;
 }
 
-.euiLoadingChart__bar {
+.wuiLoadingChart__bar {
   height: 100%;
-  width: $euiSizeS;
+  width: $wuiSizeS;
   display: inline-block;
 }
 
-.euiLoadingChart--mono {
+.wuiLoadingChart--mono {
   filter: grayscale(1);
 }
 
-.euiLoadingChart--medium {
-  height: $euiSize;
+.wuiLoadingChart--medium {
+  height: $wuiSize;
 
 }
 
-.euiLoadingChart--large {
-  height: $euiSizeL;
+.wuiLoadingChart--large {
+  height: $wuiSizeL;
 }
 
-.euiLoadingChart--xLarge {
-  height: $euiSizeXL;
+.wuiLoadingChart--xLarge {
+  height: $wuiSizeXL;
 }

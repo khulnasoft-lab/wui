@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiListGroup, EuiListGroupItem } from '../../../../src/components';
+import { WuiListGroup, WuiListGroupItem } from '../../../../src/components';
 
 export default () => {
   const [favorite1, setFavorite1] = useState(undefined);
@@ -29,11 +29,11 @@ export default () => {
   };
 
   return (
-    <EuiListGroup maxWidth={288}>
-      <EuiListGroupItem
+    <WuiListGroup maxWidth={288}>
+      <WuiListGroupItem
         id="link1"
         iconType="bullseye"
-        label="EUI button link"
+        label="WUI button link"
         onClick={() => window.alert('Button clicked')}
         isActive
         extraAction={{
@@ -46,11 +46,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <WuiListGroupItem
         id="link2"
         iconType="beaker"
         onClick={() => window.alert('Button clicked')}
-        label="EUI button link"
+        label="WUI button link"
         extraAction={{
           color: 'subdued',
           onClick: link2Clicked,
@@ -61,11 +61,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <WuiListGroupItem
         id="link3"
         onClick={() => window.alert('Button clicked')}
         iconType="broom"
-        label="EUI button link"
+        label="WUI button link"
         extraAction={{
           color: 'subdued',
           onClick: link3Clicked,
@@ -77,11 +77,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <WuiListGroupItem
         id="link4"
         iconType="brush"
         isDisabled
-        label="EUI button link"
+        label="WUI button link"
         extraAction={{
           color: 'subdued',
           onClick: () => window.alert('Action clicked'),
@@ -90,6 +90,6 @@ export default () => {
           'aria-label': 'Favorite link4',
         }}
       />
-    </EuiListGroup>
+    </WuiListGroup>
   );
 };

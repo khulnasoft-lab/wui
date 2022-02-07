@@ -1,11 +1,11 @@
-.euiMarkdownEditorToolbar {
+.wuiMarkdownEditorToolbar {
   display: flex;
   flex-wrap: wrap;
-  background: $euiColorLightestShade;
-  border: $euiBorderThin;
-  border-color: $euiColorLightShade;
+  background: $wuiColorLightestShade;
+  border: $wuiBorderThin;
+  border-color: $wuiColorLightShade;
   border-bottom: none;
-  padding: $euiSizeXS;
+  padding: $wuiSizeXS;
 
   &__buttons {
     display: flex;
@@ -14,16 +14,16 @@
     align-items: center;
 
     > * {
-      margin-right: $euiSizeXS;
+      margin-right: $wuiSizeXS;
     }
   }
 
   &__divider {
     content: '';
-    height: $euiSizeL;
+    height: $wuiSizeL;
     display: block;
-    margin-left: $euiSizeXS;
-    padding-right: $euiSizeXS;
-    border-left: 1px solid $euiColorLightShade;
+    margin-left: $wuiSizeXS;
+    padding-right: $wuiSizeXS;
+    border-left: 1px solid $wuiColorLightShade;
   }
 }

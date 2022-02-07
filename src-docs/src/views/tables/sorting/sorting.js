@@ -3,11 +3,11 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiHealth,
-  EuiIcon,
-  EuiLink,
-  EuiToolTip,
+  WuiBasicTable,
+  WuiHealth,
+  WuiIcon,
+  WuiLink,
+  WuiToolTip,
 } from '../../../../../src/components';
 
 /*
@@ -88,39 +88,39 @@ export const Table = () => {
     {
       field: 'github',
       name: (
-        <EuiToolTip content="Their mascot is the Octokitty">
+        <WuiToolTip content="Their mascot is the Octokitty">
           <span>
             Github{' '}
-            <EuiIcon
+            <WuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="wui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </WuiToolTip>
       ),
       sortable: true,
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
       field: 'dateOfBirth',
       name: (
-        <EuiToolTip content="Colloquially known as a 'birthday'">
+        <WuiToolTip content="Colloquially known as a 'birthday'">
           <span>
             Date of Birth{' '}
-            <EuiIcon
+            <WuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="wui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </WuiToolTip>
       ),
       schema: 'date',
       render: date => formatDate(date, 'dobLong'),
@@ -129,17 +129,17 @@ export const Table = () => {
     {
       field: 'nationality',
       name: (
-        <EuiToolTip content="The nation in which this person resides">
+        <WuiToolTip content="The nation in which this person resides">
           <span>
             Nationality{' '}
-            <EuiIcon
+            <WuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="wui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </WuiToolTip>
       ),
       sortable: true,
       render: countryCode => {
@@ -150,24 +150,24 @@ export const Table = () => {
     {
       field: 'online',
       name: (
-        <EuiToolTip content="Free to talk or busy with business">
+        <WuiToolTip content="Free to talk or busy with business">
           <span>
             Online{' '}
-            <EuiIcon
+            <WuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="wui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </WuiToolTip>
       ),
       schema: 'boolean',
       sortable: true,
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
     },
   ];
@@ -188,7 +188,7 @@ export const Table = () => {
 
   return (
     <div>
-      <EuiBasicTable
+      <WuiBasicTable
         items={pageOfItems}
         columns={columns}
         pagination={pagination}

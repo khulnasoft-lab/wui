@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconTokenAlias = ({ title, titleId, ...props }) => (
+const WuiIconTokenAlias = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconTokenAlias = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenAlias;
+export const icon = WuiIconTokenAlias;

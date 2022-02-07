@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFlyoutBody is rendered 1`] = `
+exports[`WuiFlyoutBody is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiFlyoutBody testClass1 testClass2"
+  class="wuiFlyoutBody testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlyoutBody__overflow"
+    class="wuiFlyoutBody__overflow"
   >
     <div
-      class="euiFlyoutBody__overflowContent"
+      class="wuiFlyoutBody__overflowContent"
     />
   </div>
 </div>

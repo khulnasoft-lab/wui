@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,7 +39,7 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-export type EuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
+export type WuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
   CommonProps & {
     id?: string;
     name?: string;
@@ -42,7 +55,7 @@ export type EuiRangeSliderProps = InputHTMLAttributes<HTMLInputElement> &
     onChange?: ChangeEventHandler<HTMLInputElement>;
   };
 
-export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
+export const WuiRangeSlider = forwardRef<HTMLInputElement, WuiRangeSliderProps>(
   (
     {
       className,
@@ -65,12 +78,12 @@ export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
     ref
   ) => {
     const classes = classNames(
-      'euiRangeSlider',
+      'wuiRangeSlider',
       {
-        'euiRangeSlider--hasTicks': showTicks,
-        'euiRangeSlider--hasFocus': hasFocus,
-        'euiRangeSlider--hasRange': showRange,
-        'euiRangeSlider--compressed': compressed,
+        'wuiRangeSlider--hasTicks': showTicks,
+        'wuiRangeSlider--hasFocus': hasFocus,
+        'wuiRangeSlider--hasRange': showRange,
+        'wuiRangeSlider--compressed': compressed,
       },
       className
     );
@@ -95,4 +108,4 @@ export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
   }
 );
 
-EuiRangeSlider.displayName = 'EuiRangeSlider';
+WuiRangeSlider.displayName = 'WuiRangeSlider';

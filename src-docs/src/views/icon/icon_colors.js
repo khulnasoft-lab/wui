@@ -14,13 +14,13 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiText,
-  EuiCallOut,
-  EuiSpacer,
+  WuiFlexGrid,
+  WuiFlexItem,
+  WuiIcon,
+  WuiPanel,
+  WuiText,
+  WuiCallOut, // eslint-disable-line @typescript-eslint/no-unused-vars
+  WuiSpacer, // eslint-disable-line @typescript-eslint/no-unused-vars
 } from '../../../../src/components';
 
 const iconColors = [
@@ -40,70 +40,73 @@ const iconColors = [
 
 export default () => (
   <div>
-    <EuiFlexGrid columns={4}>
+    <WuiFlexGrid columns={4}>
       {iconColors.map(iconColor => (
-        <EuiFlexItem
+        <WuiFlexItem
           className="guideDemo__icon"
           key={iconColor}
           style={{ width: '340px' }}>
-          <EuiPanel
+          <WuiPanel
             className={classNames({
               guideDemo__ghostBackground: iconColor === 'ghost',
             })}>
-            <EuiIcon type="brush" color={iconColor} />
-            <EuiText
+            <WuiIcon type="brush" color={iconColor} />
+            <WuiText
               size="s"
               color={iconColor === 'ghost' ? 'ghost' : 'default'}>
               <p>{iconColor}</p>
-            </EuiText>
-          </EuiPanel>
-        </EuiFlexItem>
+            </WuiText>
+          </WuiPanel>
+        </WuiFlexItem>
       ))}
-    </EuiFlexGrid>
+    </WuiFlexGrid>
 
-    <EuiSpacer />
+    {/* By the moment, this section has been disabled because
+     there are not apps icons. This shows how to colorize them.
+    */}
+    {/* <WuiSpacer />
 
-    <EuiCallOut
+    <WuiCallOut
       color="warning"
       title="App icons have special, restricted coloring considerations"
       size="s"
     />
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGrid columns={4}>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
-        <EuiPanel>
-          <EuiIcon type="gisApp" size="xl" />
-          <EuiText size="s">
+    <WuiFlexGrid columns={4}>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
+        <WuiPanel>
+          <WuiIcon type="sampleApp" size="xl" />
+          <WuiText size="s">
             <p>
               Default coloring of <strong>App</strong> icons is two-toned
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
-        <EuiPanel>
-          <EuiIcon type="gisApp" color="text" size="xl" />
-          <EuiText size="s">
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
+        <WuiPanel>
+          <WuiIcon type="sampleApp" color="text" size="xl" />
+          <WuiText size="s">
             <p>
               <strong>Special:</strong> the text color makes{' '}
               <strong>App</strong> icons fully that color
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
-        <EuiPanel>
-          <EuiIcon type="createAdvancedJob" color="primary" size="xl" />
-          <EuiText size="s">
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '340px' }}>
+        <WuiPanel>
+          <WuiIcon type="sampleApp" color="primary" size="xl" />
+          <WuiText size="s">
             <p>
               <strong>Special:</strong> the primary color makes{' '}
               <strong>App</strong> icons fully that color
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+    </WuiFlexGrid> */}
   </div>
 );

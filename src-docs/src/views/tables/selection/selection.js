@@ -3,13 +3,13 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
+  WuiBasicTable,
+  WuiLink,
+  WuiHealth,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -71,16 +71,16 @@ export const Table = () => {
     }
 
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <WuiButton color="danger" iconType="trash" onClick={onClickDelete}>
         Delete {selectedItems.length} Users
-      </EuiButton>
+      </WuiButton>
     );
   };
 
   const renderStatus = online => {
     const color = online ? 'success' : 'danger';
     const label = online ? 'Online' : 'Offline';
-    return <EuiHealth color={color}>{label}</EuiHealth>;
+    return <WuiHealth color={color}>{label}</WuiHealth>;
   };
 
   const { pageOfItems, totalItemCount } = store.findUsers(
@@ -120,21 +120,21 @@ export const Table = () => {
         fullWidth: true,
       },
       render: (name, item) => (
-        <EuiFlexGroup responsive={false} alignItems="center">
-          <EuiFlexItem>
+        <WuiFlexGroup responsive={false} alignItems="center">
+          <WuiFlexItem>
             {item.firstName} {item.lastName}
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>{renderStatus(item.online)}</EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>{renderStatus(item.online)}</WuiFlexItem>
+        </WuiFlexGroup>
       ),
     },
     {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -194,17 +194,17 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={onSelection}>Select online users</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem />
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={onSelection}>Select online users</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem />
         {deleteButton}
-      </EuiFlexGroup>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiBasicTable
+      <WuiBasicTable
         ref={tableRef}
         items={pageOfItems}
         itemId="id"

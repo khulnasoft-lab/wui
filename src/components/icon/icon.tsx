@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -38,22 +51,16 @@ import { htmlIdGenerator } from '../../services';
 
 const typeToPathMap = {
   accessibility: 'accessibility',
-  addDataApp: 'app_add_data',
-  advancedSettingsApp: 'app_advanced_settings',
   aggregate: 'aggregate',
   alert: 'alert',
   analyzeEvent: 'analyze_event',
   annotation: 'annotation',
-  apmApp: 'app_apm',
-  apmTrace: 'apm_trace',
   apps: 'apps',
-  appSearchApp: 'app_app_search',
   arrowDown: 'arrow_down',
   arrowLeft: 'arrow_left',
   arrowRight: 'arrow_right',
   arrowUp: 'arrow_up',
   asterisk: 'asterisk',
-  auditbeatApp: 'app_auditbeat',
   beaker: 'beaker',
   bell: 'bell',
   bellSlash: 'bellSlash',
@@ -66,38 +73,25 @@ const typeToPathMap = {
   bug: 'bug',
   bullseye: 'bullseye',
   calendar: 'calendar',
-  canvasApp: 'app_canvas',
-  codeApp: 'app_code',
   check: 'check',
   checkInCircleFilled: 'checkInCircleFilled',
   cheer: 'cheer',
-  classificationJob: 'ml_classification_job',
   clock: 'clock',
   cloudDrizzle: 'cloudDrizzle',
   cloudStormy: 'cloudStormy',
   cloudSunny: 'cloudSunny',
   compute: 'compute',
   console: 'console',
-  consoleApp: 'app_console',
   controlsHorizontal: 'controls_horizontal',
   controlsVertical: 'controls_vertical',
   copy: 'copy',
   copyClipboard: 'copy_clipboard',
-  createAdvancedJob: 'ml_create_advanced_job',
-  createMultiMetricJob: 'ml_create_multi_metric_job',
-  createPopulationJob: 'ml_create_population_job',
-  createSingleMetricJob: 'ml_create_single_metric_job',
   cross: 'cross',
-  crossClusterReplicationApp: 'app_cross_cluster_replication',
   crosshairs: 'crosshairs',
   crossInACircleFilled: 'crossInACircleFilled',
   currency: 'currency',
   cut: 'cut',
-  dashboardApp: 'app_dashboard',
   database: 'database',
-  dataVisualizer: 'ml_data_visualizer',
-  devToolsApp: 'app_devtools',
-  discoverApp: 'app_discover',
   document: 'document',
   documentEdit: 'documentEdit',
   documents: 'documents',
@@ -133,7 +127,6 @@ const typeToPathMap = {
   editorUnorderedList: 'editor_unordered_list',
   email: 'email',
   empty: 'empty',
-  emsApp: 'app_ems',
   exit: 'exit',
   expand: 'expand',
   expandMini: 'expandMini',
@@ -143,7 +136,6 @@ const typeToPathMap = {
   faceHappy: 'face_happy',
   faceNeutral: 'faceNeutral',
   faceSad: 'face_sad',
-  filebeatApp: 'app_filebeat',
   filter: 'filter',
   flag: 'flag',
   fold: 'fold',
@@ -153,16 +145,12 @@ const typeToPathMap = {
   folderOpen: 'folder_open',
   fullScreen: 'full_screen',
   gear: 'gear',
-  gisApp: 'app_gis',
   glasses: 'glasses',
   globe: 'globe',
   grab: 'grab',
   grabHorizontal: 'grab_horizontal',
-  graphApp: 'app_graph',
   grid: 'grid',
-  grokApp: 'app_grok',
   heart: 'heart',
-  heartbeatApp: 'app_heartbeat',
   heatmap: 'heatmap',
   help: 'help',
   home: 'home',
@@ -172,51 +160,36 @@ const typeToPathMap = {
   indexClose: 'index_close',
   indexEdit: 'index_edit',
   indexFlush: 'index_flush',
-  indexManagementApp: 'app_index_management',
   indexMapping: 'index_mapping',
   indexOpen: 'index_open',
-  indexPatternApp: 'app_index_pattern',
-  indexRollupApp: 'app_index_rollup',
   indexSettings: 'index_settings',
   inputOutput: 'inputOutput',
   inspect: 'inspect',
   invert: 'invert',
   ip: 'ip',
   keyboardShortcut: 'keyboard_shortcut',
-  kqlField: 'kql_field',
-  kqlFunction: 'kql_function',
-  kqlOperand: 'kql_operand',
-  kqlSelector: 'kql_selector',
-  kqlValue: 'kql_value',
-  lensApp: 'app_lens',
+  qryField: 'qry_field',
+  qryFunction: 'qry_function',
+  qryOperand: 'qry_operand',
+  qrySelector: 'qry_selector',
+  qryValue: 'qry_value',
   link: 'link',
   list: 'list',
   listAdd: 'list_add',
   lock: 'lock',
   lockOpen: 'lockOpen',
-  logsApp: 'app_logs',
   logoAerospike: 'logo_aerospike',
   logoApache: 'logo_apache',
-  logoAPM: 'logo_apm',
-  logoAppSearch: 'logo_app_search',
   logoAWS: 'logo_aws',
   logoAWSMono: 'logo_aws_mono',
   logoAzure: 'logo_azure',
   logoAzureMono: 'logo_azure_mono',
-  logoBeats: 'logo_beats',
-  logoBusinessAnalytics: 'logo_business_analytics',
   logoCeph: 'logo_ceph',
-  logoCloud: 'logo_cloud',
-  logoCloudEnterprise: 'logo_cloud_ece',
-  logoCode: 'logo_code',
   logoCodesandbox: 'logo_codesandbox',
   logoCouchbase: 'logo_couchbase',
   logoDocker: 'logo_docker',
   logoDropwizard: 'logo_dropwizard',
-  logoElastic: 'logo_elastic',
-  logoElasticsearch: 'logo_elasticsearch',
-  logoElasticStack: 'logo_elastic_stack',
-  logoEnterpriseSearch: 'logo_enterprise_search',
+  logoWazuh: 'logo_wazuh',
   logoEtcd: 'logo_etcd',
   logoGCP: 'logo_gcp',
   logoGCPMono: 'logo_gcp_mono',
@@ -228,64 +201,46 @@ const typeToPathMap = {
   logoIBM: 'logo_ibm',
   logoIBMMono: 'logo_ibm_mono',
   logoKafka: 'logo_kafka',
-  logoKibana: 'logo_kibana',
   logoKubernetes: 'logo_kubernetes',
-  logoLogging: 'logo_logging',
-  logoLogstash: 'logo_logstash',
-  logoMaps: 'logo_maps',
   logoMemcached: 'logo_memcached',
-  logoMetrics: 'logo_metrics',
   logoMongodb: 'logo_mongodb',
   logoMySQL: 'logo_mysql',
   logoNginx: 'logo_nginx',
-  logoObservability: 'logo_observability',
   logoOsquery: 'logo_osquery',
   logoPhp: 'logo_php',
   logoPostgres: 'logo_postgres',
   logoPrometheus: 'logo_prometheus',
   logoRabbitmq: 'logo_rabbitmq',
   logoRedis: 'logo_redis',
-  logoSecurity: 'logo_security',
-  logoSiteSearch: 'logo_site_search',
   logoSketch: 'logo_sketch',
   logoSlack: 'logo_slack',
   logoUptime: 'logo_uptime',
-  logoWazuh: 'logo_wazuh',
   logoWebhook: 'logo_webhook',
   logoWindows: 'logo_windows',
-  logoWorkplaceSearch: 'logo_workplace_search',
   logstashFilter: 'logstash_filter',
   logstashIf: 'logstash_if',
   logstashInput: 'logstash_input',
   logstashOutput: 'logstash_output',
   logstashQueue: 'logstash_queue',
-  machineLearningApp: 'app_ml',
   magnet: 'magnet',
   magnifyWithMinus: 'magnifyWithMinus',
   magnifyWithPlus: 'magnifyWithPlus',
-  managementApp: 'app_management',
   mapMarker: 'map_marker',
   memory: 'memory',
   menu: 'menu',
   menuLeft: 'menuLeft',
   menuRight: 'menuRight',
   merge: 'merge',
-  metricbeatApp: 'app_metricbeat',
-  metricsApp: 'app_metrics',
   minimize: 'minimize',
   minusInCircle: 'minus_in_circle',
   minusInCircleFilled: 'minus_in_circle_filled',
-  monitoringApp: 'app_monitoring',
   moon: 'moon',
   nested: 'nested',
   node: 'node',
-  notebookApp: 'app_notebook',
   number: 'number',
   offline: 'offline',
   online: 'online',
-  outlierDetectionJob: 'ml_outlier_detection_job',
   package: 'package',
-  packetbeatApp: 'app_packetbeat',
   pageSelect: 'pageSelect',
   pagesSelect: 'pagesSelect',
   partial: 'partial',
@@ -294,7 +249,6 @@ const typeToPathMap = {
   pencil: 'pencil',
   pin: 'pin',
   pinFilled: 'pin_filled',
-  pipelineApp: 'app_pipeline',
   play: 'play',
   plusInCircle: 'plus_in_circle',
   plusInCircleFilled: 'plus_in_circle_filled',
@@ -302,19 +256,12 @@ const typeToPathMap = {
   push: 'push',
   questionInCircle: 'question_in_circle',
   quote: 'quote',
-  recentlyViewedApp: 'app_recently_viewed',
   refresh: 'refresh',
-  regressionJob: 'ml_regression_job',
   reporter: 'reporter',
-  reportingApp: 'app_reporting',
   returnKey: 'return_key',
   save: 'save',
-  savedObjectsApp: 'app_saved_objects',
   scale: 'scale',
   search: 'search',
-  searchProfilerApp: 'app_search_profiler',
-  securityAnalyticsApp: 'app_security_analytics',
-  securityApp: 'app_security',
   securitySignal: 'securitySignal',
   securitySignalDetected: 'securitySignalDetected',
   securitySignalResolved: 'securitySignalResolved',
@@ -326,8 +273,6 @@ const typeToPathMap = {
   sortLeft: 'sortLeft',
   sortRight: 'sortRight',
   sortUp: 'sort_up',
-  spacesApp: 'app_spaces',
-  sqlApp: 'app_sql',
   starEmpty: 'star_empty',
   starEmptySpace: 'star_empty_space',
   starFilled: 'star_filled',
@@ -343,7 +288,7 @@ const typeToPathMap = {
   storage: 'storage',
   string: 'string',
   submodule: 'submodule',
-  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for EuiColorPicker
+  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for WuiColorPicker
   symlink: 'symlink',
   tableOfContents: 'tableOfContents',
   tableDensityExpanded: 'table_density_expanded',
@@ -353,16 +298,12 @@ const typeToPathMap = {
   tear: 'tear',
   temperature: 'temperature',
   timeline: 'timeline',
-  timelionApp: 'app_timelion',
   training: 'training',
   trash: 'trash',
-  upgradeAssistantApp: 'app_upgrade_assistant',
-  uptimeApp: 'app_uptime',
   unfold: 'unfold',
   unlink: 'unlink',
   user: 'user',
   users: 'users',
-  usersRolesApp: 'app_users_roles',
   vector: 'vector',
   videoPlayer: 'videoPlayer',
   visArea: 'vis_area',
@@ -381,12 +322,6 @@ const typeToPathMap = {
   visTable: 'vis_table',
   visTagCloud: 'vis_tag_cloud',
   visText: 'vis_text',
-  visTimelion: 'vis_timelion',
-  visualizeApp: 'app_visualize',
-  visVega: 'vis_vega',
-  visVisualBuilder: 'vis_visual_builder',
-  watchesApp: 'app_watches',
-  workplaceSearchApp: 'app_workplace_search',
   wrench: 'wrench',
   // Token Icon Imports
   tokenClass: 'tokens/tokenClass',
@@ -443,21 +378,21 @@ const typeToPathMap = {
 
 export const TYPES = keysOf(typeToPathMap);
 
-export type EuiIconType = keyof typeof typeToPathMap;
+export type WuiIconType = keyof typeof typeToPathMap;
 
-export type IconType = EuiIconType | string | ComponentType;
+export type IconType = WuiIconType | string | ComponentType;
 
 const colorToClassMap = {
   default: null,
-  primary: 'euiIcon--primary',
-  secondary: 'euiIcon--secondary',
-  success: 'euiIcon--success',
-  accent: 'euiIcon--accent',
-  warning: 'euiIcon--warning',
-  danger: 'euiIcon--danger',
-  text: 'euiIcon--text',
-  subdued: 'euiIcon--subdued',
-  ghost: 'euiIcon--ghost',
+  primary: 'wuiIcon--primary',
+  secondary: 'wuiIcon--secondary',
+  success: 'wuiIcon--success',
+  accent: 'wuiIcon--accent',
+  warning: 'wuiIcon--warning',
+  danger: 'wuiIcon--danger',
+  text: 'wuiIcon--text',
+  subdued: 'wuiIcon--subdued',
+  ghost: 'wuiIcon--ghost',
 };
 
 export const COLORS: NamedColor[] = keysOf(colorToClassMap);
@@ -473,25 +408,25 @@ export type IconColor = string | NamedColor;
 
 const sizeToClassNameMap = {
   original: null,
-  s: 'euiIcon--small',
-  m: 'euiIcon--medium',
-  l: 'euiIcon--large',
-  xl: 'euiIcon--xLarge',
-  xxl: 'euiIcon--xxLarge',
+  s: 'wuiIcon--small',
+  m: 'wuiIcon--medium',
+  l: 'wuiIcon--large',
+  xl: 'wuiIcon--xLarge',
+  xxl: 'wuiIcon--xxLarge',
 };
 
 export const SIZES: IconSize[] = keysOf(sizeToClassNameMap);
 
 export type IconSize = keyof typeof sizeToClassNameMap;
 
-export type EuiIconProps = CommonProps &
+export type WuiIconProps = CommonProps &
   Omit<SVGAttributes<SVGElement>, 'type' | 'color' | 'size'> & {
     /**
      * `Enum` is any of the named icons listed in the docs, `string` is usually a URL to an SVG file, and `elementType` is any React SVG component
      */
     type: IconType;
     /**
-     * One of EUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
+     * One of WUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
      * Note that coloring only works if your SVG is removed of fill attributes.
      */
     color?: IconColor;
@@ -524,15 +459,15 @@ interface State {
   neededLoading: boolean; // controls the fade-in animation, cached icons are immediately rendered
 }
 
-function isEuiIconType(x: EuiIconProps['type']): x is EuiIconType {
+function isWuiIconType(x: WuiIconProps['type']): x is WuiIconType {
   return typeof x === 'string' && typeToPathMap.hasOwnProperty(x);
 }
 
-function getInitialIcon(icon: EuiIconProps['type']) {
+function getInitialIcon(icon: WuiIconProps['type']) {
   if (icon == null) {
     return undefined;
   }
-  if (isEuiIconType(icon)) {
+  if (isWuiIconType(icon)) {
     if (iconComponentCache.hasOwnProperty(icon)) {
       return iconComponentCache[icon];
     }
@@ -546,7 +481,7 @@ const generateId = htmlIdGenerator();
 
 let iconComponentCache: { [iconType: string]: ComponentType } = {};
 
-export const clearIconComponentCache = (iconType?: EuiIconType) => {
+export const clearIconComponentCache = (iconType?: WuiIconType) => {
   if (iconType != null) {
     delete iconComponentCache[iconType];
   } else {
@@ -564,16 +499,16 @@ export const appendIconComponentCache = (iconTypeToIconComponentMap: {
   }
 };
 
-export class EuiIcon extends PureComponent<EuiIconProps, State> {
+export class WuiIcon extends PureComponent<WuiIconProps, State> {
   isMounted = true;
-  constructor(props: EuiIconProps) {
+  constructor(props: WuiIconProps) {
     super(props);
 
     const { type } = props;
     const initialIcon = getInitialIcon(type);
     let isLoading = false;
 
-    if (isEuiIconType(type) && initialIcon == null) {
+    if (isWuiIconType(type) && initialIcon == null) {
       isLoading = true;
       this.loadIconComponent(type);
     } else {
@@ -588,10 +523,10 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     };
   }
 
-  componentDidUpdate(prevProps: EuiIconProps) {
+  componentDidUpdate(prevProps: WuiIconProps) {
     const { type } = this.props;
     if (type !== prevProps.type) {
-      if (isEuiIconType(type)) {
+      if (isWuiIconType(type)) {
         // eslint-disable-next-line react/no-did-update-set-state
         this.setState({
           neededLoading: iconComponentCache.hasOwnProperty(type),
@@ -613,7 +548,7 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     this.isMounted = false;
   }
 
-  loadIconComponent = (iconType: EuiIconType) => {
+  loadIconComponent = (iconType: WuiIconType) => {
     if (iconComponentCache.hasOwnProperty(iconType)) {
       // exists in cache
       this.setState({
@@ -687,13 +622,13 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
       (/.+App$/.test(type) || /.+Job$/.test(type) || type === 'dataVisualizer');
 
     const classes = classNames(
-      'euiIcon',
+      'wuiIcon',
       sizeToClassNameMap[size],
       optionalColorClass,
       {
-        'euiIcon--app': isAppIcon,
-        'euiIcon-isLoading': isLoading,
-        'euiIcon-isLoaded': !isLoading && neededLoading,
+        'wuiIcon--app': isAppIcon,
+        'wuiIcon-isLoading': isLoading,
+        'wuiIcon-isLoaded': !isLoading && neededLoading,
       },
       className
     );

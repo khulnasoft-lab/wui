@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { EuiLoadingSpinner } from '../../../../src/components/loading';
+import { WuiLoadingSpinner } from '../../../../src/components/loading';
 
 export default () => (
   <div>
-    <EuiLoadingSpinner size="s" />
+    <WuiLoadingSpinner size="s" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="m" />
+    <WuiLoadingSpinner size="m" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="l" />
+    <WuiLoadingSpinner size="l" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="xl" />
+    <WuiLoadingSpinner size="xl" />
   </div>
 );

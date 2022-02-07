@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +33,7 @@
 import React, { TextareaHTMLAttributes, forwardRef } from 'react';
 import { CommonProps } from '../common';
 
-export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
+export type WuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
   HTMLTextAreaElement
 > &
   CommonProps & {
@@ -37,17 +50,17 @@ export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
   };
 
 const resizeToClassNameMap = {
-  vertical: 'euiTextArea--resizeVertical',
-  horizontal: 'euiTextArea--resizeHorizontal',
-  both: 'euiTextArea--resizeBoth',
-  none: 'euiTextArea--resizeNone',
+  vertical: 'wuiTextArea--resizeVertical',
+  horizontal: 'wuiTextArea--resizeHorizontal',
+  both: 'wuiTextArea--resizeBoth',
+  none: 'wuiTextArea--resizeNone',
 };
 
 export const RESIZE = Object.keys(resizeToClassNameMap);
 
-export const EuiMarkdownEditorTextArea = forwardRef<
+export const WuiMarkdownEditorTextArea = forwardRef<
   HTMLTextAreaElement,
-  EuiMarkdownEditorTextAreaProps
+  WuiMarkdownEditorTextAreaProps
 >(
   (
     {
@@ -70,7 +83,7 @@ export const EuiMarkdownEditorTextArea = forwardRef<
       <textarea
         ref={ref}
         style={{ height: `calc(${height - markdownFooterHeight}px` }}
-        className="euiMarkdownEditorTextArea"
+        className="wuiMarkdownEditorTextArea"
         {...rest}
         rows={6}
         name={name}
@@ -82,4 +95,4 @@ export const EuiMarkdownEditorTextArea = forwardRef<
   }
 );
 
-EuiMarkdownEditorTextArea.displayName = 'EuiMarkdownEditorTextArea';
+WuiMarkdownEditorTextArea.displayName = 'WuiMarkdownEditorTextArea';

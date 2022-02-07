@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiComboBox is rendered 1`] = `
+exports[`WuiComboBox is rendered 1`] = `
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-label="aria-label"
-  class="euiComboBox testClass1 testClass2"
+  class="wuiComboBox testClass1 testClass2"
   data-test-subj="test subject string"
   role="combobox"
 >
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <div
-        class="euiComboBox__inputWrap euiComboBox__inputWrap-isClearable"
+        class="wuiComboBox__inputWrap wuiComboBox__inputWrap-isClearable"
         data-test-subj="comboBoxInput"
         tabindex="-1"
       >
         <div
-          class="euiComboBox__input"
+          class="wuiComboBox__input"
           style="font-size:14px;display:inline-block"
         >
           <input
@@ -37,18 +37,18 @@ exports[`EuiComboBox is rendered 1`] = `
         </div>
       </div>
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <button
           aria-label="Open list of options"
-          class="euiFormControlLayoutCustomIcon euiFormControlLayoutCustomIcon--clickable"
+          class="wuiFormControlLayoutCustomIcon wuiFormControlLayoutCustomIcon--clickable"
           data-test-subj="comboBoxToggleListButton"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </button>
       </div>
@@ -61,11 +61,11 @@ exports[`props delimiter is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="wuiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -104,11 +104,11 @@ exports[`props full width is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox--fullWidth"
+  className="wuiComboBox wuiComboBox--fullWidth"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={true}
@@ -144,11 +144,11 @@ exports[`props isClearable=false disallows user from clearing input when no opti
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="wuiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -177,11 +177,11 @@ exports[`props isClearable=false disallows user from clearing input when options
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="wuiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -219,11 +219,11 @@ exports[`props isDisabled is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isDisabled"
+  className="wuiComboBox wuiComboBox-isDisabled"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -259,23 +259,23 @@ exports[`props options list is rendered 1`] = `
 <div
   aria-expanded="true"
   aria-haspopup="listbox"
-  class="euiComboBox euiComboBox-isOpen"
+  class="wuiComboBox wuiComboBox-isOpen"
   data-test-subj="alsoGetsAppliedToOptionsList"
   role="combobox"
 >
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <div
-        class="euiComboBox__inputWrap euiComboBox__inputWrap-isClearable"
+        class="wuiComboBox__inputWrap wuiComboBox__inputWrap-isClearable"
         data-test-subj="comboBoxInput"
         tabindex="-1"
       >
         <div
-          class="euiComboBox__input"
+          class="wuiComboBox__input"
           style="font-size: 14px; display: inline-block;"
         >
           <input
@@ -291,30 +291,30 @@ exports[`props options list is rendered 1`] = `
         </div>
       </div>
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <button
           aria-label="Close list of options"
-          class="euiFormControlLayoutCustomIcon euiFormControlLayoutCustomIcon--clickable"
+          class="wuiFormControlLayoutCustomIcon wuiFormControlLayoutCustomIcon--clickable"
           data-test-subj="comboBoxToggleListButton"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </button>
       </div>
     </div>
   </div>
   <div
-    class="euiPanel euiComboBoxOptionsList euiComboBoxOptionsList--bottom"
+    class="wuiPanel wuiComboBoxOptionsList wuiComboBoxOptionsList--bottom"
     data-test-subj="comboBoxOptionsList alsoGetsAppliedToOptionsList-optionsList"
     style="z-index: 100;"
   >
     <div
-      class="euiComboBoxOptionsList__rowWrap"
+      class="wuiComboBoxOptionsList__rowWrap"
     >
       <div
         style="position: relative; height: 203px; width: 0px; overflow: auto; direction: ltr;"
@@ -327,7 +327,7 @@ exports[`props options list is rendered 1`] = `
         >
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             data-test-subj="titanOption"
             id="htmlid__option-0"
             role="option"
@@ -336,16 +336,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Titan
                   </span>
@@ -355,7 +355,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-1"
             role="option"
             style="position: absolute; left: 0px; top: 29px; height: 29px; width: 100%;"
@@ -363,16 +363,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Enceladus
                   </span>
@@ -382,7 +382,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-2"
             role="option"
             style="position: absolute; left: 0px; top: 58px; height: 29px; width: 100%;"
@@ -390,16 +390,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Mimas
                   </span>
@@ -409,7 +409,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-3"
             role="option"
             style="position: absolute; left: 0px; top: 87px; height: 29px; width: 100%;"
@@ -417,16 +417,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Dione
                   </span>
@@ -436,7 +436,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-4"
             role="option"
             style="position: absolute; left: 0px; top: 116px; height: 29px; width: 100%;"
@@ -444,16 +444,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Iapetus
                   </span>
@@ -463,7 +463,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-5"
             role="option"
             style="position: absolute; left: 0px; top: 145px; height: 29px; width: 100%;"
@@ -471,16 +471,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Phoebe
                   </span>
@@ -490,7 +490,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-6"
             role="option"
             style="position: absolute; left: 0px; top: 174px; height: 29px; width: 100%;"
@@ -498,16 +498,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Rhea
                   </span>
@@ -517,7 +517,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-7"
             role="option"
             style="position: absolute; left: 0px; top: 203px; height: 29px; width: 100%;"
@@ -525,16 +525,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Pandora is one of Saturn's moons, named for a Titaness of Greek mythology
                   </span>
@@ -544,7 +544,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="wuiFilterSelectItem"
             id="htmlid__option-8"
             role="option"
             style="position: absolute; left: 0px; top: 232px; height: 29px; width: 100%;"
@@ -552,16 +552,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="wuiFlexGroup wuiFlexGroup--gutterSmall wuiFlexGroup--alignItemsCenter wuiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="wuiFlexItem wuiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="wuiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="wuiComboBoxOption__content"
                   >
                     Tethys
                   </span>
@@ -580,11 +580,11 @@ exports[`props selectedOptions are rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="wuiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -623,11 +623,11 @@ exports[`props singleSelection is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="wuiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -663,11 +663,11 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
 <div
   aria-expanded={true}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isOpen"
+  className="wuiComboBox wuiComboBox-isOpen"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     append="String"
     autoSizeInputRef={[Function]}
     compressed={false}
@@ -692,8 +692,8 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
     updatePosition={[Function]}
     value=""
   />
-  <EuiPortal>
-    <EuiComboBoxOptionsList
+  <WuiPortal>
+    <WuiComboBoxOptionsList
       activeOptionIndex={-1}
       areAllOptionsSelected={false}
       data-test-subj=""
@@ -785,7 +785,7 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
       updatePosition={[Function]}
       width={0}
     />
-  </EuiPortal>
+  </WuiPortal>
 </div>
 `;
 
@@ -793,11 +793,11 @@ exports[`props singleSelection selects existing option when opened 1`] = `
 <div
   aria-expanded={true}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isOpen"
+  className="wuiComboBox wuiComboBox-isOpen"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <WuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -826,8 +826,8 @@ exports[`props singleSelection selects existing option when opened 1`] = `
     updatePosition={[Function]}
     value="Mimas"
   />
-  <EuiPortal>
-    <EuiComboBoxOptionsList
+  <WuiPortal>
+    <WuiComboBoxOptionsList
       activeOptionIndex={-1}
       areAllOptionsSelected={false}
       data-test-subj=""
@@ -925,6 +925,6 @@ exports[`props singleSelection selects existing option when opened 1`] = `
       updatePosition={[Function]}
       width={0}
     />
-  </EuiPortal>
+  </WuiPortal>
 </div>
 `;

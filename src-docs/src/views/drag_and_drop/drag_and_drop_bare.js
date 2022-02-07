@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -22,14 +22,14 @@ export default () => {
     console.log(source, destination);
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiDroppable droppableId="DROPPABLE_AREA_BARE">
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiDroppable droppableId="DROPPABLE_AREA_BARE">
         {list.map(({ content, id }, idx) => (
-          <EuiDraggable key={id} index={idx} draggableId={id}>
+          <WuiDraggable key={id} index={idx} draggableId={id}>
             {() => <div>{content}</div>}
-          </EuiDraggable>
+          </WuiDraggable>
         ))}
-      </EuiDroppable>
-    </EuiDragDropContext>
+      </WuiDroppable>
+    </WuiDragDropContext>
   );
 };

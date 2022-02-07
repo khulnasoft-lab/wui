@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,17 +34,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiBeacon } from './beacon';
+import { WuiBeacon } from './beacon';
 
-describe('EuiBeacon', () => {
+describe('WuiBeacon', () => {
   test('is rendered', () => {
-    const component = render(<EuiBeacon {...requiredProps} />);
+    const component = render(<WuiBeacon {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('accepts size', () => {
-    const component = render(<EuiBeacon size={14} {...requiredProps} />);
+    const component = render(<WuiBeacon size={14} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,19 +39,19 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiText } from '../text';
+import { WuiText } from '../text';
 import { IconType } from '../icon';
 import { CommonProps } from '../common';
-import { EuiDatePickerProps } from './date_picker';
+import { WuiDatePickerProps } from './date_picker';
 
-export type EuiDatePickerRangeProps = CommonProps & {
+export type WuiDatePickerRangeProps = CommonProps & {
   /**
    * Including any children will replace all innards with the provided children
    */
   children?: ReactNode;
 
   /**
-   * The end date `EuiDatePicker` element
+   * The end date `WuiDatePicker` element
    */
   endDateControl: ReactNode;
   fullWidth?: boolean;
@@ -55,12 +68,12 @@ export type EuiDatePickerRangeProps = CommonProps & {
   readOnly?: boolean;
 
   /**
-   * The start date `EuiDatePicker` element
+   * The start date `WuiDatePicker` element
    */
   startDateControl: ReactNode;
 };
 
-export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
+export const WuiDatePickerRange: FunctionComponent<WuiDatePickerRangeProps> = ({
   children,
   className,
   startDateControl,
@@ -72,10 +85,10 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiDatePickerRange',
+    'wuiDatePickerRange',
     {
-      'euiDatePickerRange--fullWidth': fullWidth,
-      'euiDatePickerRange--readOnly': readOnly,
+      'wuiDatePickerRange--fullWidth': fullWidth,
+      'wuiDatePickerRange--readOnly': readOnly,
     },
     className
   );
@@ -85,7 +98,7 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
 
   if (!isCustom) {
     startControl = cloneElement(
-      startDateControl as ReactElement<EuiDatePickerProps>,
+      startDateControl as ReactElement<WuiDatePickerProps>,
       {
         fullWidth: fullWidth,
         readOnly: readOnly,
@@ -95,7 +108,7 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
     );
 
     endControl = cloneElement(
-      endDateControl as ReactElement<EuiDatePickerProps>,
+      endDateControl as ReactElement<WuiDatePickerProps>,
       {
         showIcon: false,
         fullWidth: fullWidth,
@@ -112,12 +125,12 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
       ) : (
         <Fragment>
           {startControl}
-          <EuiText
-            className="euiDatePickerRange__delimeter"
+          <WuiText
+            className="wuiDatePickerRange__delimeter"
             size="s"
             color="subdued">
             →
-          </EuiText>
+          </WuiText>
           {endControl}
         </Fragment>
       )}

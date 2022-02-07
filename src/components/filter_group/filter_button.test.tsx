@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +34,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFilterButton } from './filter_button';
+import { WuiFilterButton } from './filter_button';
 
-describe('EuiFilterButton', () => {
+describe('WuiFilterButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiFilterButton {...requiredProps} />);
+    const component = render(<WuiFilterButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders zero properly', () => {
     const component = render(
-      <EuiFilterButton {...requiredProps} numFilters={0} />
+      <WuiFilterButton {...requiredProps} numFilters={0} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +55,7 @@ describe('EuiFilterButton', () => {
     describe('iconType and iconSide', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFilterButton iconType="user" iconSide="right" />
+          <WuiFilterButton iconType="user" iconSide="right" />
         );
 
         expect(component).toMatchSnapshot();
@@ -51,7 +64,7 @@ describe('EuiFilterButton', () => {
 
     describe('numFilters', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton numFilters={5} />);
+        const component = render(<WuiFilterButton numFilters={5} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -60,7 +73,7 @@ describe('EuiFilterButton', () => {
     describe('numActiveFilters and hasActiveFilters', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFilterButton numActiveFilters={5} hasActiveFilters />
+          <WuiFilterButton numActiveFilters={5} hasActiveFilters />
         );
 
         expect(component).toMatchSnapshot();
@@ -69,7 +82,7 @@ describe('EuiFilterButton', () => {
 
     describe('isSelected', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton isSelected />);
+        const component = render(<WuiFilterButton isSelected />);
 
         expect(component).toMatchSnapshot();
       });
@@ -77,7 +90,7 @@ describe('EuiFilterButton', () => {
 
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton isDisabled />);
+        const component = render(<WuiFilterButton isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -85,7 +98,7 @@ describe('EuiFilterButton', () => {
 
     describe('type', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton type="button" />);
+        const component = render(<WuiFilterButton type="button" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -93,7 +106,7 @@ describe('EuiFilterButton', () => {
 
     describe('grow', () => {
       it('can be turned off', () => {
-        const component = render(<EuiFilterButton grow={false} />);
+        const component = render(<WuiFilterButton grow={false} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -101,7 +114,7 @@ describe('EuiFilterButton', () => {
 
     describe('withNext', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton withNext />);
+        const component = render(<WuiFilterButton withNext />);
 
         expect(component).toMatchSnapshot();
       });

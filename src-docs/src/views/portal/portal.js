@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPortal, EuiButton, EuiBottomBar } from '../../../../src/components';
+import { WuiPortal, WuiButton, WuiBottomBar } from '../../../../src/components';
 
 export const Portal = () => {
   const [isPortalVisible, setIsPortalVisible] = useState(false);
@@ -13,16 +13,16 @@ export const Portal = () => {
 
   if (isPortalVisible) {
     portal = (
-      <EuiPortal>
-        <EuiBottomBar>
+      <WuiPortal>
+        <WuiBottomBar>
           <p>This element is appended to the body in the DOM if you inspect</p>
-        </EuiBottomBar>
-      </EuiPortal>
+        </WuiBottomBar>
+      </WuiPortal>
     );
   }
   return (
     <div>
-      <EuiButton onClick={togglePortal}>Toggle portal</EuiButton>
+      <WuiButton onClick={togglePortal}>Toggle portal</WuiButton>
 
       {portal}
     </div>

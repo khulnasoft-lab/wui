@@ -2,13 +2,13 @@ import React, { Fragment, useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
-  EuiSpacer,
-  EuiSwitch,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiInMemoryTable,
+  WuiLink,
+  WuiHealth,
+  WuiSpacer,
+  WuiSwitch,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../../src/components';
 
 /*
@@ -55,9 +55,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -82,7 +82,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
     },
   ];
@@ -117,24 +117,24 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={() => setIncremental(!incremental)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="With Filters"
             checked={filters}
             onChange={() => setFilters(!filters)}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
-      <EuiInMemoryTable
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiSpacer size="l" />
+      <WuiInMemoryTable
         items={store.users}
         columns={columns}
         search={search}

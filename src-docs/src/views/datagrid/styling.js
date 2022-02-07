@@ -2,16 +2,16 @@ import React, { Component, Fragment } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiFormRow,
-  EuiPopover,
-  EuiButton,
-  EuiAvatar,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCallOut,
+  WuiDataGrid,
+  WuiButtonGroup,
+  WuiSpacer,
+  WuiFormRow,
+  WuiPopover,
+  WuiButton,
+  WuiAvatar,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiCallOut,
 } from '../../../../src/components/';
 
 const columns = [
@@ -40,7 +40,7 @@ const data = [];
 for (let i = 1; i < 6; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <WuiAvatar
         size="s"
         imageUrl={fake('{{internet.avatar}}')}
         name={fake('{{name.lastName}}, {{name.firstName}}')}
@@ -403,23 +403,23 @@ export default class DataGrid extends Component {
     const { pagination } = this.state;
 
     const styleButton = (
-      <EuiButton
+      <WuiButton
         iconType="gear"
         iconSide="right"
         size="s"
         onClick={this.onPopoverButtonClick.bind(this)}>
         gridStyle options
-      </EuiButton>
+      </WuiButton>
     );
 
     const toolbarButton = (
-      <EuiButton
+      <WuiButton
         iconType="gear"
         iconSide="right"
         size="s"
         onClick={this.onToolbarPopoverButtonClick.bind(this)}>
         toolbarVisibility options
-      </EuiButton>
+      </WuiButton>
     );
 
     let showColumnSelector = this.state.showColumnSelector;
@@ -451,17 +451,17 @@ export default class DataGrid extends Component {
 
     return (
       <div>
-        <EuiFlexGroup gutterSize="s">
-          <EuiFlexItem grow={false}>
-            <EuiPopover
+        <WuiFlexGroup gutterSize="s">
+          <WuiFlexItem grow={false}>
+            <WuiPopover
               id="styleButton"
               button={styleButton}
               isOpen={this.state.isPopoverOpen}
               anchorPosition="rightUp"
               closePopover={this.closePopover.bind(this)}>
               <div style={{ width: 380 }}>
-                <EuiFormRow label="Border" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Border" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Border"
@@ -469,10 +469,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.borderSelected}
                     onChange={this.onBorderChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Cell padding" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Cell padding" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Cell padding"
@@ -480,10 +480,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.cellPaddingSelected}
                     onChange={this.onCellPaddingChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Font size" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Font size" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Fornt size"
@@ -491,10 +491,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.fontSizeSelected}
                     onChange={this.onFontSizeChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Stripes" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Stripes" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Stripes"
@@ -502,10 +502,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.stripesSelected.toString()}
                     onChange={this.onStripesChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Hover row" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Hover row" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Hover row"
@@ -513,10 +513,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.rowHoverSelected}
                     onChange={this.onRowHoverChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Header" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Header" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Header"
@@ -524,10 +524,10 @@ export default class DataGrid extends Component {
                     idSelected={this.state.headerSelected}
                     onChange={this.onHeaderChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
 
-                <EuiFormRow label="Footer" display="columnCompressed">
-                  <EuiButtonGroup
+                <WuiFormRow label="Footer" display="columnCompressed">
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Footer"
@@ -535,22 +535,22 @@ export default class DataGrid extends Component {
                     idSelected={this.state.footerSelected}
                     onChange={this.onFooterChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
               </div>
-            </EuiPopover>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiPopover
+            </WuiPopover>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiPopover
               id="toolbarVisibility"
               button={toolbarButton}
               isOpen={this.state.isToolbarPopoverOpen}
               anchorPosition="rightUp"
               closePopover={this.closeToolbarPopover.bind(this)}>
               <div style={{ width: 400 }}>
-                <EuiFormRow
+                <WuiFormRow
                   display="columnCompressed"
                   label="toolbarVisibility prop">
-                  <EuiButtonGroup
+                  <WuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Border"
@@ -558,13 +558,13 @@ export default class DataGrid extends Component {
                     idSelected={this.state.toolbarPropTypeIsBoolean.toString()}
                     onChange={this.onToolbarPropTypeIsBooleanChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
                 {this.state.toolbarPropTypeIsBoolean === false ? (
                   <Fragment>
-                    <EuiFormRow
+                    <WuiFormRow
                       display="columnCompressed"
                       label="Show style selector">
-                      <EuiButtonGroup
+                      <WuiButtonGroup
                         isFullWidth
                         buttonSize="compressed"
                         legend="Border"
@@ -572,12 +572,12 @@ export default class DataGrid extends Component {
                         idSelected={this.state.showStyleSelector.toString()}
                         onChange={this.onShowStyleSelectorChange}
                       />
-                    </EuiFormRow>
+                    </WuiFormRow>
 
-                    <EuiFormRow
+                    <WuiFormRow
                       display="columnCompressed"
                       label="Show sort selector">
-                      <EuiButtonGroup
+                      <WuiButtonGroup
                         isFullWidth
                         buttonSize="compressed"
                         legend="Border"
@@ -585,12 +585,12 @@ export default class DataGrid extends Component {
                         idSelected={this.state.showSortSelector.toString()}
                         onChange={this.onShowSortSelectorChange}
                       />
-                    </EuiFormRow>
+                    </WuiFormRow>
 
-                    <EuiFormRow
+                    <WuiFormRow
                       display="columnCompressed"
                       label="Show full screen selector">
-                      <EuiButtonGroup
+                      <WuiButtonGroup
                         isFullWidth
                         buttonSize="compressed"
                         legend="Border"
@@ -598,12 +598,12 @@ export default class DataGrid extends Component {
                         idSelected={this.state.showFullScreenSelector.toString()}
                         onChange={this.onShowFullScreenSelectorChange}
                       />
-                    </EuiFormRow>
+                    </WuiFormRow>
 
-                    <EuiFormRow
+                    <WuiFormRow
                       display="columnCompressed"
                       label="Show column selector">
-                      <EuiButtonGroup
+                      <WuiButtonGroup
                         isFullWidth
                         buttonSize="compressed"
                         legend="Border"
@@ -611,14 +611,14 @@ export default class DataGrid extends Component {
                         idSelected={this.state.showColumnSelector.toString()}
                         onChange={this.onShowColumnSelectorChange}
                       />
-                    </EuiFormRow>
+                    </WuiFormRow>
                     {this.state.showColumnSelector && (
                       <>
-                        <EuiFormRow
+                        <WuiFormRow
                           display="columnCompressed"
                           label="Allow hiding columns"
                           style={{ marginLeft: 32 }}>
-                          <EuiButtonGroup
+                          <WuiButtonGroup
                             isFullWidth
                             buttonSize="compressed"
                             legend="Border"
@@ -626,12 +626,12 @@ export default class DataGrid extends Component {
                             idSelected={this.state.allowHideColumns.toString()}
                             onChange={this.onAllowHideColumnsChange}
                           />
-                        </EuiFormRow>
-                        <EuiFormRow
+                        </WuiFormRow>
+                        <WuiFormRow
                           display="columnCompressed"
                           label="Allow ordering columns"
                           style={{ marginLeft: 32 }}>
-                          <EuiButtonGroup
+                          <WuiButtonGroup
                             isFullWidth
                             buttonSize="compressed"
                             legend="Border"
@@ -639,13 +639,13 @@ export default class DataGrid extends Component {
                             idSelected={this.state.allowOrderingColumns.toString()}
                             onChange={this.onAllowOrderingColumnsChange}
                           />
-                        </EuiFormRow>
+                        </WuiFormRow>
                       </>
                     )}
                   </Fragment>
                 ) : (
-                  <EuiFormRow display="columnCompressed" label="Show toolbar">
-                    <EuiButtonGroup
+                  <WuiFormRow display="columnCompressed" label="Show toolbar">
+                    <WuiButtonGroup
                       isFullWidth
                       buttonSize="compressed"
                       legend="Border"
@@ -653,28 +653,28 @@ export default class DataGrid extends Component {
                       idSelected={this.state.showToolbar.toString()}
                       onChange={this.onShowToolbarChange}
                     />
-                  </EuiFormRow>
+                  </WuiFormRow>
                 )}
               </div>
-            </EuiPopover>
-          </EuiFlexItem>
-        </EuiFlexGroup>
+            </WuiPopover>
+          </WuiFlexItem>
+        </WuiFlexGroup>
 
         {this.state.footerSelected === 'striped' ? (
           <>
-            <EuiSpacer />
+            <WuiSpacer />
 
-            <EuiCallOut
+            <WuiCallOut
               size="s"
               title="A striped footer will be shaded depending on whether it is an even or an odd row considering the rest of the rows in the datagrid. Needs to be used with stripes={true}."
             />
           </>
         ) : null}
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiDataGrid
-          aria-label="Top EUI contributors"
+        <WuiDataGrid
+          aria-label="Top WUI contributors"
           columns={columns}
           columnVisibility={{
             visibleColumns: this.state.visibleColumns,

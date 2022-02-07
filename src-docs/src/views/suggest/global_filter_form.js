@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonEmpty,
-  EuiFormRow,
-  EuiComboBox,
-  EuiButton,
-  EuiSpacer,
-  EuiSwitch,
-  EuiFieldText,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiButtonEmpty,
+  WuiFormRow,
+  WuiComboBox,
+  WuiButton,
+  WuiSpacer,
+  WuiSwitch,
+  WuiFieldText,
 } from '../../../../src/components';
 
 const fieldOption = [
@@ -143,10 +143,10 @@ const GlobalFilterForm = props => {
 
   return (
     <div {...rest}>
-      <EuiFlexGroup>
-        <EuiFlexItem style={{ maxWidth: '188px' }}>
-          <EuiFormRow label="Field">
-            <EuiComboBox
+      <WuiFlexGroup>
+        <WuiFlexItem style={{ maxWidth: '188px' }}>
+          <WuiFormRow label="Field">
+            <WuiComboBox
               placeholder={
                 selectedOperand.length < 1 ? 'Start here' : 'Select a field'
               }
@@ -157,11 +157,11 @@ const GlobalFilterForm = props => {
               singleSelection={{ asPlainText: true }}
               isClearable={false}
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem style={{ maxWidth: '188px' }}>
-          <EuiFormRow label="Operand">
-            <EuiComboBox
+          </WuiFormRow>
+        </WuiFlexItem>
+        <WuiFlexItem style={{ maxWidth: '188px' }}>
+          <WuiFormRow label="Operand">
+            <WuiComboBox
               placeholder={
                 selectedField.length < 1
                   ? 'Select a field first'
@@ -175,15 +175,15 @@ const GlobalFilterForm = props => {
               singleSelection={{ asPlainText: true }}
               isClearable={false}
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiFormRow>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
       <div>
-        <EuiFormRow label="Value(s)">
-          <EuiComboBox
+        <WuiFormRow label="Value(s)">
+          <WuiComboBox
             placeholder={
               selectedField.length < 1 && selectedOperand.length < 1
                 ? 'Waiting on previous selections'
@@ -195,12 +195,12 @@ const GlobalFilterForm = props => {
             onChange={onValuesChange}
             onSearchChange={onValuesSearchChange}
           />
-        </EuiFormRow>
+        </WuiFormRow>
       </div>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiSwitch
+      <WuiSwitch
         label="Create custom label?"
         checked={useCustomLabel}
         onChange={onCustomLabelSwitchChange}
@@ -208,40 +208,40 @@ const GlobalFilterForm = props => {
 
       {useCustomLabel && (
         <div>
-          <EuiSpacer size="m" />
-          <EuiFormRow label="Custom label">
-            <EuiFieldText value={customLabel} onChange={onCustomLabelChange} />
-          </EuiFormRow>
+          <WuiSpacer size="m" />
+          <WuiFormRow label="Custom label">
+            <WuiFieldText value={customLabel} onChange={onCustomLabelChange} />
+          </WuiFormRow>
         </div>
       )}
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFlexGroup direction="rowReverse" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton
+      <WuiFlexGroup direction="rowReverse" alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiButton
             isDisabled={selectedValues.length < 1}
             fill
             onClick={onAdd}>
             Add
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButtonEmpty
+          </WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiButtonEmpty
             flush="right"
             onClick={selectedObject ? onCancel : resetForm}>
             {selectedObject ? 'Cancel' : 'Reset form'}
-          </EuiButtonEmpty>
-        </EuiFlexItem>
-        <EuiFlexItem />
-        <EuiFlexItem grow={false}>
+          </WuiButtonEmpty>
+        </WuiFlexItem>
+        <WuiFlexItem />
+        <WuiFlexItem grow={false}>
           {selectedObject && (
-            <EuiButtonEmpty flush="left" color="danger">
+            <WuiButtonEmpty flush="left" color="danger">
               Delete
-            </EuiButtonEmpty>
+            </WuiButtonEmpty>
           )}
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

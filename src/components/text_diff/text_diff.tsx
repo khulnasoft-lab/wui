@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -52,11 +65,11 @@ interface Props {
   timeout?: number;
 }
 
-export type EuiTextDiffProps = CommonProps &
+export type WuiTextDiffProps = CommonProps &
   Props &
   HTMLAttributes<HTMLElement>;
 
-export const useEuiTextDiff = ({
+export const useWuiTextDiff = ({
   className,
   insertComponent = 'ins',
   deleteComponent = 'del',
@@ -65,14 +78,14 @@ export const useEuiTextDiff = ({
   afterText = '',
   timeout = 0.1,
   ...rest
-}: EuiTextDiffProps) => {
+}: WuiTextDiffProps) => {
   const textDiff = useMemo(() => {
     const diff = new Diff({ timeout }); // options may be passed to constructor
 
     return diff.main(beforeText, afterText);
   }, [beforeText, afterText, timeout]); // produces diff array
 
-  const classes = classNames('euiTextDiff', className);
+  const classes = classNames('wuiTextDiff', className);
 
   const rendereredHtml = useMemo(() => {
     const html = [];

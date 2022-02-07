@@ -1,95 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiLink accent is rendered 1`] = `
+exports[`WuiLink accent is rendered 1`] = `
 <button
-  class="euiLink euiLink--accent"
+  class="wuiLink wuiLink--accent"
   type="button"
 />
 `;
 
-exports[`EuiLink button respects the type property 1`] = `
+exports[`WuiLink button respects the type property 1`] = `
 <button
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   type="submit"
 />
 `;
 
-exports[`EuiLink danger is rendered 1`] = `
+exports[`WuiLink danger is rendered 1`] = `
 <button
-  class="euiLink euiLink--danger"
+  class="wuiLink wuiLink--danger"
   type="button"
 />
 `;
 
-exports[`EuiLink ghost is rendered 1`] = `
+exports[`WuiLink ghost is rendered 1`] = `
 <button
-  class="euiLink euiLink--ghost"
+  class="wuiLink wuiLink--ghost"
   type="button"
 />
 `;
 
-exports[`EuiLink if href is not specified, it renders a button of type=button 1`] = `
+exports[`WuiLink if href is not specified, it renders a button of type=button 1`] = `
 <button
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   type="button"
 />
 `;
 
-exports[`EuiLink it is an external link 1`] = `
+exports[`WuiLink it is an external link 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="/baz/bing"
   rel="noreferrer"
 >
   <div
     aria-label="External link"
-    class="euiLink__externalIcon"
-    data-euiicon-type="popout"
+    class="wuiLink__externalIcon"
+    data-wuiicon-type="popout"
   />
 </a>
 `;
 
-exports[`EuiLink it passes the default props through 1`] = `
+exports[`WuiLink it passes the default props through 1`] = `
 <button
   aria-label="aria-label"
-  class="euiLink euiLink--primary testClass1 testClass2"
+  class="wuiLink wuiLink--primary testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 />
 `;
 
-exports[`EuiLink it supports both href and onClick 1`] = `
+exports[`WuiLink it supports both href and onClick 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="/imalink"
   rel="noreferrer"
 />
 `;
 
-exports[`EuiLink primary is rendered 1`] = `
+exports[`WuiLink primary is rendered 1`] = `
 <button
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   type="button"
 />
 `;
 
-exports[`EuiLink secondary is rendered 1`] = `
+exports[`WuiLink secondary is rendered 1`] = `
 <button
-  class="euiLink euiLink--secondary"
+  class="wuiLink wuiLink--secondary"
   type="button"
 />
 `;
 
-exports[`EuiLink subdued is rendered 1`] = `
+exports[`WuiLink subdued is rendered 1`] = `
 <button
-  class="euiLink euiLink--subdued"
+  class="wuiLink wuiLink--subdued"
   type="button"
 />
 `;
 
-exports[`EuiLink supports children 1`] = `
+exports[`WuiLink supports children 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="#"
   rel="noreferrer"
 >
@@ -99,49 +99,49 @@ exports[`EuiLink supports children 1`] = `
 </a>
 `;
 
-exports[`EuiLink supports disabled 1`] = `
+exports[`WuiLink supports disabled 1`] = `
 <button
-  class="euiLink euiLink-disabled"
+  class="wuiLink wuiLink-disabled"
   disabled=""
   type="button"
 />
 `;
 
-exports[`EuiLink supports href 1`] = `
+exports[`WuiLink supports href 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="/baz/bing"
   rel="noreferrer"
 />
 `;
 
-exports[`EuiLink supports rel 1`] = `
+exports[`WuiLink supports rel 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="hoi"
   rel="noreferrer stylesheet"
 />
 `;
 
-exports[`EuiLink supports target 1`] = `
+exports[`WuiLink supports target 1`] = `
 <a
-  class="euiLink euiLink--primary"
+  class="wuiLink wuiLink--primary"
   href="#"
   rel="noreferrer"
   target="_parent"
 />
 `;
 
-exports[`EuiLink text is rendered 1`] = `
+exports[`WuiLink text is rendered 1`] = `
 <button
-  class="euiLink euiLink--text"
+  class="wuiLink wuiLink--text"
   type="button"
 />
 `;
 
-exports[`EuiLink warning is rendered 1`] = `
+exports[`WuiLink warning is rendered 1`] = `
 <button
-  class="euiLink euiLink--warning"
+  class="wuiLink wuiLink--warning"
   type="button"
 />
 `;

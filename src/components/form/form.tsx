@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,11 +37,11 @@ import React, {
   FormHTMLAttributes,
 } from 'react';
 import classNames from 'classnames';
-import { EuiCallOut } from '../call_out';
-import { EuiI18n } from '../i18n';
+import { WuiCallOut } from '../call_out';
+import { WuiI18n } from '../i18n';
 import { CommonProps, ExclusiveUnion } from '../common';
 
-export type EuiFormProps = CommonProps &
+export type WuiFormProps = CommonProps &
   ExclusiveUnion<
     { component: 'form' } & FormHTMLAttributes<HTMLFormElement>,
     { component?: 'div' } & HTMLAttributes<HTMLDivElement>
@@ -45,7 +58,7 @@ export type EuiFormProps = CommonProps &
     invalidCallout?: 'above' | 'none';
   };
 
-export const EuiForm: FunctionComponent<EuiFormProps> = ({
+export const WuiForm: FunctionComponent<WuiFormProps> = ({
   children,
   className,
   isInvalid,
@@ -54,7 +67,7 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
   invalidCallout = 'above',
   ...rest
 }) => {
-  const classes = classNames('euiForm', className);
+  const classes = classNames('wuiForm', className);
 
   let optionalErrors: JSX.Element | null = null;
 
@@ -63,7 +76,7 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
     optionalErrors = (
       <ul>
         {errorTexts.map((error, index) => (
-          <li className="euiForm__error" key={index}>
+          <li className="wuiForm__error" key={index}>
             {error}
           </li>
         ))}
@@ -75,18 +88,18 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
 
   if (isInvalid && invalidCallout === 'above') {
     optionalErrorAlert = (
-      <EuiI18n
-        token="euiForm.addressFormErrors"
+      <WuiI18n
+        token="wuiForm.addressFormErrors"
         default="Please address the highlighted errors.">
         {(addressFormErrors: string) => (
-          <EuiCallOut
-            className="euiForm__errors"
+          <WuiCallOut
+            className="wuiForm__errors"
             title={addressFormErrors}
             color="danger">
             {optionalErrors}
-          </EuiCallOut>
+          </WuiCallOut>
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 

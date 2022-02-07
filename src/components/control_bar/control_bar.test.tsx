@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiControlBar, Control } from './control_bar';
+import { WuiControlBar, Control } from './control_bar';
 
 const handleClick = () => {
   console.log('You clicked');
@@ -74,10 +87,10 @@ const controls: Control[] = [
   },
 ];
 
-describe('EuiControlBar', () => {
+describe('WuiControlBar', () => {
   test('is rendered', () => {
     const component = takeMountedSnapshot(
-      mount(<EuiControlBar controls={controls} {...requiredProps} />)
+      mount(<WuiControlBar controls={controls} {...requiredProps} />)
     );
 
     expect(component).toMatchSnapshot();
@@ -86,7 +99,7 @@ describe('EuiControlBar', () => {
   describe('props', () => {
     test('mobile is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} showOnMobile />
+        <WuiControlBar controls={controls} showOnMobile />
       );
 
       expect(component).toMatchSnapshot();
@@ -94,9 +107,9 @@ describe('EuiControlBar', () => {
 
     test('showContent is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} showContent>
+        <WuiControlBar controls={controls} showContent>
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -104,9 +117,9 @@ describe('EuiControlBar', () => {
 
     test('size is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} size="s">
+        <WuiControlBar controls={controls} size="s">
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -114,9 +127,9 @@ describe('EuiControlBar', () => {
 
     test('maxHeight is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} maxHeight="20rem">
+        <WuiControlBar controls={controls} maxHeight="20rem">
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -124,9 +137,9 @@ describe('EuiControlBar', () => {
 
     test('leftOffset is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} leftOffset={200}>
+        <WuiControlBar controls={controls} leftOffset={200}>
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -134,9 +147,9 @@ describe('EuiControlBar', () => {
 
     test('rightOffset is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} rightOffset={200}>
+        <WuiControlBar controls={controls} rightOffset={200}>
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -144,9 +157,9 @@ describe('EuiControlBar', () => {
 
     test('position is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} position="absolute">
+        <WuiControlBar controls={controls} position="absolute">
           Content
-        </EuiControlBar>
+        </WuiControlBar>
       );
 
       expect(component).toMatchSnapshot();

@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiTitle } from '../../../../src/components/';
+import { WuiTitle } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   createOptionalEnum,
 } from '../../services/playground';
 
 export const titleConfig = () => {
-  const docgenInfo = Array.isArray(EuiTitle.__docgenInfo)
-    ? EuiTitle.__docgenInfo[0]
-    : EuiTitle.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiTitle.__docgenInfo)
+    ? WuiTitle.__docgenInfo[0]
+    : WuiTitle.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -22,14 +22,14 @@ export const titleConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTitle',
+      componentName: 'WuiTitle',
       props: propsToUse,
       scope: {
-        EuiTitle,
+        WuiTitle,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTitle'],
+        '@wazuh/wui': {
+          named: ['WuiTitle'],
         },
       },
     },

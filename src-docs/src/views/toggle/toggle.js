@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiToggle } from '../../../../src/components';
+import { WuiToggle } from '../../../../src/components';
 
 export default function() {
   const [toggleOn, setToggleValue] = useState(false);
@@ -11,9 +11,9 @@ export default function() {
 
   return (
     <div>
-      <EuiToggle onChange={e => onToggleChange(e)} label="Is toggle on?">
+      <WuiToggle onChange={e => onToggleChange(e)} label="Is toggle on?">
         {toggleOn ? 'On' : 'Off'}
-      </EuiToggle>
+      </WuiToggle>
     </div>
   );
 }

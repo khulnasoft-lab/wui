@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,11 +33,11 @@
 import React, { Component, ReactNode, Key } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonEmpty } from '../../button/button_empty';
-import { EuiPopover, PopoverAnchorPosition } from '../../popover';
-import { EuiContextMenuPanel } from '../../context_menu';
-import { EuiI18n } from '../../i18n';
-import { EuiTableSortMobileItem } from './table_sort_mobile_item';
+import { WuiButtonEmpty } from '../../button/button_empty';
+import { WuiPopover, PopoverAnchorPosition } from '../../popover';
+import { WuiContextMenuPanel } from '../../context_menu';
+import { WuiI18n } from '../../i18n';
+import { WuiTableSortMobileItem } from './table_sort_mobile_item';
 
 interface ItemProps {
   name: ReactNode;
@@ -34,7 +47,7 @@ interface ItemProps {
   isSortAscending?: boolean;
 }
 
-export interface EuiTableSortMobileProps {
+export interface WuiTableSortMobileProps {
   className?: string;
   anchorPosition?: PopoverAnchorPosition;
   items?: ItemProps[];
@@ -44,8 +57,8 @@ interface State {
   isPopoverOpen: boolean;
 }
 
-export class EuiTableSortMobile extends Component<
-  EuiTableSortMobileProps,
+export class WuiTableSortMobile extends Component<
+  WuiTableSortMobileProps,
   State
 > {
   state = {
@@ -67,21 +80,21 @@ export class EuiTableSortMobile extends Component<
   render() {
     const { className, anchorPosition, items, ...rest } = this.props;
 
-    const classes = classNames('euiTableSortMobile', className);
+    const classes = classNames('wuiTableSortMobile', className);
 
     const mobileSortButton = (
-      <EuiButtonEmpty
+      <WuiButtonEmpty
         iconType="arrowDown"
         iconSide="right"
         onClick={this.onButtonClick.bind(this)}
         flush="right"
         size="xs">
-        <EuiI18n token="euiTableSortMobile.sorting" default="Sorting" />
-      </EuiButtonEmpty>
+        <WuiI18n token="wuiTableSortMobile.sorting" default="Sorting" />
+      </WuiButtonEmpty>
     );
 
     const mobileSortPopover = (
-      <EuiPopover
+      <WuiPopover
         ownFocus
         button={mobileSortButton}
         isOpen={this.state.isPopoverOpen}
@@ -89,26 +102,26 @@ export class EuiTableSortMobile extends Component<
         anchorPosition={anchorPosition || 'downRight'}
         panelPaddingSize="none"
         {...rest}>
-        <EuiContextMenuPanel
+        <WuiContextMenuPanel
           style={{ minWidth: 200 }}
           items={
             items && items.length
               ? items.map(item => {
                   return (
-                    <EuiTableSortMobileItem
+                    <WuiTableSortMobileItem
                       key={item.key}
                       onSort={item.onSort}
                       isSorted={item.isSorted}
                       isSortAscending={item.isSortAscending}>
                       {item.name}
-                    </EuiTableSortMobileItem>
+                    </WuiTableSortMobileItem>
                   );
                 })
               : undefined
           }
           watchedItemProps={['isSorted', 'isSortAscending']}
         />
-      </EuiPopover>
+      </WuiPopover>
     );
 
     return <div className={classes}>{mobileSortPopover}</div>;

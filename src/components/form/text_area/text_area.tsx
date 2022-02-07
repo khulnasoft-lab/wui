@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,9 +33,9 @@
 import React, { TextareaHTMLAttributes, Ref, FunctionComponent } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiValidatableControl } from '../validatable_control';
+import { WuiValidatableControl } from '../validatable_control';
 
-export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
+export type WuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   CommonProps & {
     isInvalid?: boolean;
     fullWidth?: boolean;
@@ -37,15 +50,15 @@ export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   };
 
 const resizeToClassNameMap = {
-  vertical: 'euiTextArea--resizeVertical',
-  horizontal: 'euiTextArea--resizeHorizontal',
-  both: 'euiTextArea--resizeBoth',
-  none: 'euiTextArea--resizeNone',
+  vertical: 'wuiTextArea--resizeVertical',
+  horizontal: 'wuiTextArea--resizeHorizontal',
+  both: 'wuiTextArea--resizeBoth',
+  none: 'wuiTextArea--resizeNone',
 };
 
 export const RESIZE = Object.keys(resizeToClassNameMap);
 
-export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
+export const WuiTextArea: FunctionComponent<WuiTextAreaProps> = ({
   children,
   className,
   compressed,
@@ -60,11 +73,11 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextArea',
+    'wuiTextArea',
     resizeToClassNameMap[resize],
     {
-      'euiTextArea--fullWidth': fullWidth,
-      'euiTextArea--compressed': compressed,
+      'wuiTextArea--fullWidth': fullWidth,
+      'wuiTextArea--compressed': compressed,
     },
     className
   );
@@ -80,7 +93,7 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   }
 
   return (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <WuiValidatableControl isInvalid={isInvalid}>
       <textarea
         className={classes}
         {...rest}
@@ -91,6 +104,6 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
         placeholder={placeholder}>
         {children}
       </textarea>
-    </EuiValidatableControl>
+    </WuiValidatableControl>
   );
 };

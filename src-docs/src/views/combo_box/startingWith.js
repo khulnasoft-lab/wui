@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { WuiComboBox } from '../../../../src/components';
 
 const optionsStatic = [
   {
@@ -71,7 +71,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <WuiComboBox
       sortMatchesBy="startsWith"
       placeholder="Select or create options"
       options={options}

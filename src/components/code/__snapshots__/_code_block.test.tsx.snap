@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCodeBlockImpl block highlights javascript code, adding "js" class 1`] = `
+exports[`WuiCodeBlockImpl block highlights javascript code, adding "js" class 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="wuiCodeBlock__pre wuiCodeBlock__pre--whiteSpacePreWrap"
   >
     <code
-      class="euiCodeBlock__code js hljs javascript"
+      class="wuiCodeBlock__code js hljs javascript"
     />
   </pre>
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders a pre block tag 1`] = `
+exports[`WuiCodeBlockImpl block renders a pre block tag 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge testClass1 testClass2"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge testClass1 testClass2"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="wuiCodeBlock__pre wuiCodeBlock__pre--whiteSpacePreWrap"
   >
     <code
       aria-label="aria-label"
-      class="euiCodeBlock__code"
+      class="wuiCodeBlock__code"
       data-test-subj="test subject string"
     >
       var some = 'code';
@@ -33,16 +33,16 @@ console.log(some);
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders a pre block tag with a css class modifier 1`] = `
+exports[`WuiCodeBlockImpl block renders a pre block tag with a css class modifier 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge testClass1 testClass2"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge testClass1 testClass2"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePre"
+    class="wuiCodeBlock__pre wuiCodeBlock__pre--whiteSpacePre"
   >
     <code
       aria-label="aria-label"
-      class="euiCodeBlock__code"
+      class="wuiCodeBlock__code"
       data-test-subj="test subject string"
     >
       var some = 'code';
@@ -52,37 +52,37 @@ console.log(some);
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders with transparent background 1`] = `
+exports[`WuiCodeBlockImpl block renders with transparent background 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--transparentBackground"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge wuiCodeBlock--transparentBackground"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="wuiCodeBlock__pre wuiCodeBlock__pre--whiteSpacePreWrap"
   >
     <code
-      class="euiCodeBlock__code"
+      class="wuiCodeBlock__code"
     />
   </pre>
 </div>
 `;
 
-exports[`EuiCodeBlockImpl inline highlights javascript code, adding "js" class 1`] = `
+exports[`WuiCodeBlockImpl inline highlights javascript code, adding "js" class 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--inline"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge wuiCodeBlock--inline"
 >
   <code
-    class="euiCodeBlock__code js hljs javascript"
+    class="wuiCodeBlock__code js hljs javascript"
   />
 </span>
 `;
 
-exports[`EuiCodeBlockImpl inline renders an inline code tag 1`] = `
+exports[`WuiCodeBlockImpl inline renders an inline code tag 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--inline testClass1 testClass2"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge wuiCodeBlock--inline testClass1 testClass2"
 >
   <code
     aria-label="aria-label"
-    class="euiCodeBlock__code"
+    class="wuiCodeBlock__code"
     data-test-subj="test subject string"
   >
     var some = 'code';
@@ -91,12 +91,12 @@ console.log(some);
 </span>
 `;
 
-exports[`EuiCodeBlockImpl inline renders with transparent background 1`] = `
+exports[`WuiCodeBlockImpl inline renders with transparent background 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--transparentBackground euiCodeBlock--inline"
+  class="wuiCodeBlock wuiCodeBlock--fontSmall wuiCodeBlock--paddingLarge wuiCodeBlock--transparentBackground wuiCodeBlock--inline"
 >
   <code
-    class="euiCodeBlock__code"
+    class="wuiCodeBlock__code"
   />
 </span>
 `;

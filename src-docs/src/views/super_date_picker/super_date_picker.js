@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiSuperDatePicker,
-  EuiSpacer,
-  EuiFormControlLayoutDelimited,
-  EuiFormLabel,
-  EuiPanel,
-  EuiText,
+  WuiSuperDatePicker,
+  WuiSpacer,
+  WuiFormControlLayoutDelimited,
+  WuiFormLabel,
+  WuiPanel,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -67,21 +67,21 @@ export default () => {
   const renderTimeRange = () => {
     return (
       <Fragment>
-        <EuiPanel paddingSize="m">
-          <EuiText size="s">
-            EuiSuperDatePicker should be resilient to invalid date values. You
+        <WuiPanel paddingSize="m">
+          <WuiText size="s">
+            WuiSuperDatePicker should be resilient to invalid date values. You
             can try to break it with unexpected values here.
-          </EuiText>
-          <EuiSpacer />
-          <EuiFormControlLayoutDelimited
-            prepend={<EuiFormLabel>Dates</EuiFormLabel>}
+          </WuiText>
+          <WuiSpacer />
+          <WuiFormControlLayoutDelimited
+            prepend={<WuiFormLabel>Dates</WuiFormLabel>}
             startControl={
               <input
                 onChange={onStartInputChange}
                 type="text"
                 value={start}
                 placeholder="start"
-                className="euiFieldText"
+                className="wuiFieldText"
               />
             }
             endControl={
@@ -90,18 +90,18 @@ export default () => {
                 type="text"
                 placeholder="end"
                 value={end}
-                className="euiFieldText"
+                className="wuiFieldText"
               />
             }
           />
-        </EuiPanel>
+        </WuiPanel>
       </Fragment>
     );
   };
 
   return (
     <Fragment>
-      <EuiSuperDatePicker
+      <WuiSuperDatePicker
         isLoading={isLoading}
         start={start}
         end={end}
@@ -112,7 +112,7 @@ export default () => {
         onRefreshChange={onRefreshChange}
         recentlyUsedRanges={recentlyUsedRanges}
       />
-      <EuiSpacer />
+      <WuiSpacer />
       {renderTimeRange()}
     </Fragment>
   );

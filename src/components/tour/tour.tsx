@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,25 +31,25 @@
  */
 
 import { FunctionComponent, ReactElement } from 'react';
-import { useEuiTour, EuiStatelessTourStep } from './useEuiTour';
-import { EuiTourStepProps } from './tour_step';
-import { EuiTourActions, EuiTourState } from './types';
+import { useWuiTour, WuiStatelessTourStep } from './useWuiTour';
+import { WuiTourStepProps } from './tour_step';
+import { WuiTourActions, WuiTourState } from './types';
 
-export interface EuiTourProps {
+export interface WuiTourProps {
   children: (
-    steps: EuiTourStepProps[],
-    actions: EuiTourActions,
-    state: EuiTourState
+    steps: WuiTourStepProps[],
+    actions: WuiTourActions,
+    state: WuiTourState
   ) => ReactElement;
-  steps: EuiStatelessTourStep[];
-  initialState: EuiTourState;
+  steps: WuiStatelessTourStep[];
+  initialState: WuiTourState;
 }
 
-export const EuiTour: FunctionComponent<EuiTourProps> = ({
+export const WuiTour: FunctionComponent<WuiTourProps> = ({
   children,
   steps,
   initialState,
 }) => {
-  const [stepProps, actions, state] = useEuiTour(steps, initialState);
+  const [stepProps, actions, state] = useWuiTour(steps, initialState);
   return children(stepProps, actions, state);
 };

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-import { EuiEmptyPrompt, EuiButton } from '../../../../src/components';
+import { WuiEmptyPrompt, WuiButton } from '../../../../src/components';
 
 export default () => (
-  <EuiEmptyPrompt
+  <WuiEmptyPrompt
     iconType="dataVisualizer"
     iconColor={null}
     title={<h2>You have no spice</h2>}
@@ -19,9 +19,9 @@ export default () => (
       </Fragment>
     }
     actions={
-      <EuiButton size="s" color="primary" fill>
+      <WuiButton size="s" color="primary" fill>
         Harvest spice
-      </EuiButton>
+      </WuiButton>
     }
   />
 );

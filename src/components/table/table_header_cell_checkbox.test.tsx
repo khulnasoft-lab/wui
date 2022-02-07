@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,10 +34,10 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiTableHeaderCellCheckbox } from './table_header_cell_checkbox';
+import { WuiTableHeaderCellCheckbox } from './table_header_cell_checkbox';
 import { WARNING_MESSAGE } from './utils';
 
-describe('EuiTableHeaderCellCheckbox', () => {
+describe('WuiTableHeaderCellCheckbox', () => {
   const _consoleWarn = console.warn;
   beforeAll(() => {
     console.warn = (...args: [any?, ...any[]]) => {
@@ -38,7 +51,7 @@ describe('EuiTableHeaderCellCheckbox', () => {
   });
 
   test('is rendered', () => {
-    const component = render(<EuiTableHeaderCellCheckbox {...requiredProps} />);
+    const component = render(<WuiTableHeaderCellCheckbox {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -46,9 +59,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
   describe('width and style', () => {
     test('accepts style attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox style={{ width: '20%' }}>
+        <WuiTableHeaderCellCheckbox style={{ width: '20%' }}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </WuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -56,9 +69,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('accepts width attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width="10%">
+        <WuiTableHeaderCellCheckbox width="10%">
           Test
-        </EuiTableHeaderCellCheckbox>
+        </WuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -66,9 +79,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('accepts width attribute as number', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width={100}>
+        <WuiTableHeaderCellCheckbox width={100}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </WuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -76,9 +89,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('resolves style and width attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width="10%" style={{ width: '20%' }}>
+        <WuiTableHeaderCellCheckbox width="10%" style={{ width: '20%' }}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </WuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();

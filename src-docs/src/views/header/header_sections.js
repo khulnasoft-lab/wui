@@ -6,17 +6,17 @@
 import React from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiAvatar,
+  WuiHeader,
+  WuiHeaderLogo,
+  WuiHeaderSectionItemButton,
+  WuiIcon,
+  WuiAvatar,
 } from '../../../../src/components';
 
 export default () => {
   const renderLogo = (
-    <EuiHeaderLogo
-      iconType="logoElastic"
+    <WuiHeaderLogo
+      iconType="logoWazuh"
       href="#"
       onClick={e => e.preventDefault()}
       aria-label="Go to home page"
@@ -24,9 +24,9 @@ export default () => {
   );
 
   const renderSpaces = (
-    <EuiHeaderSectionItemButton aria-label="Spaces menu">
-      <EuiAvatar type="space" name="Sales Team" size="s" />
-    </EuiHeaderSectionItemButton>
+    <WuiHeaderSectionItemButton aria-label="Spaces menu">
+      <WuiAvatar type="space" name="Sales Team" size="s" />
+    </WuiHeaderSectionItemButton>
   );
 
   const breadcrumbs = [
@@ -50,22 +50,22 @@ export default () => {
   ];
 
   const renderSearch = (
-    <EuiHeaderSectionItemButton aria-label="Sitewide search">
-      <EuiIcon type="search" size="m" />
-    </EuiHeaderSectionItemButton>
+    <WuiHeaderSectionItemButton aria-label="Sitewide search">
+      <WuiIcon type="search" size="m" />
+    </WuiHeaderSectionItemButton>
   );
   const renderUser = (
-    <EuiHeaderSectionItemButton aria-label="Account menu">
-      <EuiAvatar name="John Username" size="s" />
-    </EuiHeaderSectionItemButton>
+    <WuiHeaderSectionItemButton aria-label="Account menu">
+      <WuiAvatar name="John Username" size="s" />
+    </WuiHeaderSectionItemButton>
   );
 
   const renderApps = (
-    <EuiHeaderSectionItemButton
+    <WuiHeaderSectionItemButton
       aria-label="Apps menu with 1 new app"
       notification="1">
-      <EuiIcon type="apps" size="m" />
-    </EuiHeaderSectionItemButton>
+      <WuiIcon type="apps" size="m" />
+    </WuiHeaderSectionItemButton>
   );
 
   const sections = [
@@ -82,5 +82,5 @@ export default () => {
     },
   ];
 
-  return <EuiHeader sections={sections} />;
+  return <WuiHeader sections={sections} />;
 };

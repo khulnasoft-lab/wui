@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconLogoPostgres = ({ title, titleId, ...props }) => (
+const WuiIconLogoPostgres = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -30,4 +30,4 @@ const EuiIconLogoPostgres = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoPostgres;
+export const icon = WuiIconLogoPostgres;

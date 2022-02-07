@@ -1,9 +1,9 @@
-.euiContextMenuItem {
+.wuiContextMenuItem {
   display: block;
-  padding: $euiSizeM;
+  padding: $wuiSizeM;
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $wuiTextColor;
 
   &:hover,
   &:focus {
@@ -11,11 +11,11 @@
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
   }
 
-  &.euiContextMenuItem-isDisabled {
-    color: $euiButtonColorDisabledText;
+  &.wuiContextMenuItem-isDisabled {
+    color: $wuiButtonColorDisabledText;
     cursor: default;
 
     &:hover,
@@ -25,32 +25,32 @@
   }
 }
 
-.euiContextMenuItem__inner {
+.wuiContextMenuItem__inner {
   display: flex;
 }
 
-.euiContextMenuItem__text {
+.wuiContextMenuItem__text {
   flex-grow: 1;
   overflow: hidden; // allows for text truncation
 }
 
-.euiContextMenuItem__arrow {
+.wuiContextMenuItem__arrow {
   align-self: flex-end;
 }
 
-.euiContextMenu__itemLayout {
+.wuiContextMenu__itemLayout {
   display: flex;
   align-items: center;
 
-  &.euiContextMenu__itemLayout--bottom {
+  &.wuiContextMenu__itemLayout--bottom {
     align-items: flex-end;
   }
 
-  &.euiContextMenu__itemLayout--top {
+  &.wuiContextMenu__itemLayout--top {
     align-items: flex-start;
   }
 
-  .euiContextMenu__icon {
+  .wuiContextMenu__icon {
     flex-shrink: 0;
   }
 }

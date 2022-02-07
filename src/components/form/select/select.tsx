@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,23 +39,23 @@ import React, {
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
-import { EuiValidatableControl } from '../validatable_control';
-import { EuiFormControlLayoutIconsProps } from '../form_control_layout/form_control_layout_icons';
+import { WuiValidatableControl } from '../validatable_control';
+import { WuiFormControlLayoutIconsProps } from '../form_control_layout/form_control_layout_icons';
 
-export interface EuiSelectOption
+export interface WuiSelectOption
   extends OptionHTMLAttributes<HTMLOptionElement> {
   text: React.ReactNode;
 }
 
-export type EuiSelectProps = Omit<
+export type WuiSelectProps = Omit<
   SelectHTMLAttributes<HTMLSelectElement>,
   'value'
 > &
   CommonProps & {
-    options?: EuiSelectOption[];
+    options?: WuiSelectOption[];
     isInvalid?: boolean;
     fullWidth?: boolean;
     isLoading?: boolean;
@@ -63,15 +76,15 @@ export type EuiSelectProps = Omit<
      * Creates an input group with element(s) coming before select.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: WuiFormControlLayoutProps['prepend'];
     /**
      * Creates an input group with element(s) coming after select.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: WuiFormControlLayoutProps['append'];
   };
 
-export const EuiSelect: FunctionComponent<EuiSelectProps> = ({
+export const WuiSelect: FunctionComponent<WuiSelectProps> = ({
   className,
   options = [],
   id,
@@ -91,20 +104,20 @@ export const EuiSelect: FunctionComponent<EuiSelectProps> = ({
 }) => {
   const handleMouseUp = (e: React.MouseEvent<HTMLSelectElement>) => {
     // Normalizes cross-browser mouse eventing by preventing propagation,
-    // notably for use in conjunction with EuiOutsideClickDetector.
-    // See https://github.com/elastic/eui/pull/1926 for full discussion on
+    // notably for use in conjunction with WuiOutsideClickDetector.
+    // See https://github.com/wazuh/wui/pull/1926 for full discussion on
     // rationale and alternatives should this intervention become problematic.
     e.nativeEvent.stopImmediatePropagation();
     if (onMouseUp) onMouseUp(e);
   };
 
   const classes = classNames(
-    'euiSelect',
+    'wuiSelect',
     {
-      'euiSelect--fullWidth': fullWidth,
-      'euiSelect--compressed': compressed,
-      'euiSelect--inGroup': prepend || append,
-      'euiSelect-isLoading': isLoading,
+      'wuiSelect--fullWidth': fullWidth,
+      'wuiSelect--compressed': compressed,
+      'wuiSelect--inGroup': prepend || append,
+      'wuiSelect-isLoading': isLoading,
     },
     className
   );
@@ -125,13 +138,13 @@ export const EuiSelect: FunctionComponent<EuiSelectProps> = ({
     selectDefaultValue = defaultValue || '';
   }
 
-  const icon: EuiFormControlLayoutIconsProps['icon'] = {
+  const icon: WuiFormControlLayoutIconsProps['icon'] = {
     type: 'arrowDown',
     side: 'right',
   };
 
   return (
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       icon={icon}
       fullWidth={fullWidth}
       isLoading={isLoading}
@@ -139,7 +152,7 @@ export const EuiSelect: FunctionComponent<EuiSelectProps> = ({
       prepend={prepend}
       append={append}
       inputId={id}>
-      <EuiValidatableControl isInvalid={isInvalid}>
+      <WuiValidatableControl isInvalid={isInvalid}>
         <select
           id={id}
           name={name}
@@ -159,7 +172,7 @@ export const EuiSelect: FunctionComponent<EuiSelectProps> = ({
             );
           })}
         </select>
-      </EuiValidatableControl>
-    </EuiFormControlLayout>
+      </WuiValidatableControl>
+    </WuiFormControlLayout>
   );
 };

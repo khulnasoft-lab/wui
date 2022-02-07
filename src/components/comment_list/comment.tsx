@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,23 +33,23 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EuiCommentEvent, EuiCommentEventProps } from './comment_event';
+import { WuiCommentEvent, WuiCommentEventProps } from './comment_event';
 import {
-  EuiCommentTimeline,
-  EuiCommentTimelineProps,
+  WuiCommentTimeline,
+  WuiCommentTimelineProps,
 } from './comment_timeline';
 
-export interface EuiCommentProps
+export interface WuiCommentProps
   extends HTMLAttributes<HTMLDivElement>,
-    EuiCommentEventProps,
-    EuiCommentTimelineProps {}
+    WuiCommentEventProps,
+    WuiCommentTimelineProps {}
 
 const typeToClassNameMap = {
   regular: '',
-  update: 'euiComment--update',
+  update: 'wuiComment--update',
 };
 
-export const EuiComment: FunctionComponent<EuiCommentProps> = ({
+export const WuiComment: FunctionComponent<WuiCommentProps> = ({
   children,
   className,
   username,
@@ -48,23 +61,23 @@ export const EuiComment: FunctionComponent<EuiCommentProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiComment',
+    'wuiComment',
     typeToClassNameMap[type],
-    { 'euiComment--hasBody': children },
+    { 'wuiComment--hasBody': children },
     className
   );
 
   return (
     <div className={classes} {...rest}>
-      <EuiCommentTimeline type={type} timelineIcon={timelineIcon} />
-      <EuiCommentEvent
+      <WuiCommentTimeline type={type} timelineIcon={timelineIcon} />
+      <WuiCommentEvent
         username={username}
         actions={actions}
         event={event}
         timestamp={timestamp}
         type={type}>
         {children}
-      </EuiCommentEvent>
+      </WuiCommentEvent>
     </div>
   );
 };

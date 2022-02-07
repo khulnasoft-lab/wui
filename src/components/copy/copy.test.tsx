@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,15 +32,15 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { EuiCopy } from './copy';
+import { WuiCopy } from './copy';
 import { requiredProps } from '../../test';
 
-describe('EuiCopy', () => {
+describe('WuiCopy', () => {
   test('is rendered', () => {
     const component = shallow(
-      <EuiCopy textToCopy="some text" {...requiredProps}>
+      <WuiCopy textToCopy="some text" {...requiredProps}>
         {copy => <button onClick={copy}>Click to copy input text</button>}
-      </EuiCopy>
+      </WuiCopy>
     );
     expect(component).toMatchSnapshot();
   });
@@ -35,18 +48,18 @@ describe('EuiCopy', () => {
   describe('props', () => {
     test('beforeMessage', () => {
       const component = shallow(
-        <EuiCopy textToCopy="some text" beforeMessage="copy this">
+        <WuiCopy textToCopy="some text" beforeMessage="copy this">
           {copy => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </WuiCopy>
       );
       expect(component.state('tooltipText')).toBe('copy this');
     });
 
     test('afterMessage', () => {
-      const component = shallow<EuiCopy>(
-        <EuiCopy textToCopy="some text" afterMessage="successfuly copied">
+      const component = shallow<WuiCopy>(
+        <WuiCopy textToCopy="some text" afterMessage="successfuly copied">
           {copy => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </WuiCopy>
       );
       const instance = component.instance();
       expect(instance.props.afterMessage).toBe('successfuly copied');

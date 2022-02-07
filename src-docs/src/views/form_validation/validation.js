@@ -1,13 +1,13 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiForm,
-  EuiSelect,
-  EuiFormRow,
-  EuiTextArea,
-  EuiFieldText,
-  EuiSpacer,
+  WuiButton,
+  WuiForm,
+  WuiSelect,
+  WuiFormRow,
+  WuiTextArea,
+  WuiFieldText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -18,9 +18,9 @@ export default () => {
   };
 
   const button = (
-    <EuiButton fill color="danger" onClick={onButtonClick}>
+    <WuiButton fill color="danger" onClick={onButtonClick}>
       Toggle errors
-    </EuiButton>
+    </WuiButton>
   );
 
   let errors;
@@ -34,25 +34,25 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiForm isInvalid={showErrors} error={errors}>
-        <EuiFormRow label="Validation only" isInvalid={showErrors}>
-          <EuiFieldText name="first" isInvalid={showErrors} />
-        </EuiFormRow>
+      <WuiForm isInvalid={showErrors} error={errors}>
+        <WuiFormRow label="Validation only" isInvalid={showErrors}>
+          <WuiFieldText name="first" isInvalid={showErrors} />
+        </WuiFormRow>
 
-        <EuiFormRow
+        <WuiFormRow
           label="Validation with help text and errors"
           helpText="I am some friendly help text."
           isInvalid={showErrors}
           error={errors}>
-          <EuiFieldText name="text" isInvalid={showErrors} />
-        </EuiFormRow>
+          <WuiFieldText name="text" isInvalid={showErrors} />
+        </WuiFormRow>
 
-        <EuiFormRow label="Text area" isInvalid={showErrors}>
-          <EuiTextArea name="area" isInvalid={showErrors} />
-        </EuiFormRow>
+        <WuiFormRow label="Text area" isInvalid={showErrors}>
+          <WuiTextArea name="area" isInvalid={showErrors} />
+        </WuiFormRow>
 
-        <EuiFormRow label="Select" isInvalid={showErrors}>
-          <EuiSelect
+        <WuiFormRow label="Select" isInvalid={showErrors}>
+          <WuiSelect
             options={[
               { value: 'option_one', text: 'Option one' },
               { value: 'option_two', text: 'Option two' },
@@ -60,12 +60,12 @@ export default () => {
             ]}
             isInvalid={showErrors}
           />
-        </EuiFormRow>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
         {button}
-      </EuiForm>
+      </WuiForm>
     </Fragment>
   );
 };

@@ -1,76 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiControlBar is rendered 1`] = `
+exports[`WuiControlBar is rendered 1`] = `
 <section
   aria-label="aria-label"
-  class="euiControlBar testClass1 testClass2 euiControlBar--large euiControlBar--fixed"
+  class="wuiControlBar testClass1 testClass2 wuiControlBar--large wuiControlBar--fixed"
   data-test-subj="test subject string"
   style="left: 0px; right: 0px;"
 >
   <h2
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
   >
     Page level controls
   </h2>
   <div
-    class="euiControlBar__controls"
+    class="wuiControlBar__controls"
   >
     <nav
       aria-label="breadcrumb"
-      class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+      class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
     >
       <span
         aria-current="false"
-        class="euiBreadcrumb"
+        class="wuiBreadcrumb"
         title="src"
       >
         src
       </span>
       <div
-        class="euiBreadcrumbSeparator"
+        class="wuiBreadcrumbSeparator"
       />
       <span
         aria-current="page"
-        class="euiBreadcrumb euiBreadcrumb--last"
+        class="wuiBreadcrumb wuiBreadcrumb--last"
         title="components"
       >
         components
       </span>
     </nav>
     <button
-      class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+      class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
       data-test-subj="dts"
       type="button"
     >
       <span
-        class="euiButtonContent euiButton__content"
+        class="wuiButtonContent wuiButton__content"
       >
         <span
-          class="euiButton__text"
+          class="wuiButton__text"
         >
           Sound the Alarm
         </span>
       </span>
     </button>
     <div
-      class="euiControlBar__text"
+      class="wuiControlBar__text"
     >
       Close the Hatch
     </div>
     <div
-      class="euiControlBar__divider"
+      class="wuiControlBar__divider"
     />
     <div
       aria-label="Sample Icon"
-      class="euiControlBar__icon"
+      class="wuiControlBar__icon"
       color="danger"
-      data-euiicon-type="alert"
+      data-wuiicon-type="alert"
     />
     <div
-      class="euiControlBar__spacer"
+      class="wuiControlBar__spacer"
     />
     <button
-      class="euiControlBar__tab"
+      class="wuiControlBar__tab"
     >
       Flight 815
     </button>
@@ -78,8 +78,8 @@ exports[`EuiControlBar is rendered 1`] = `
 </section>
 `;
 
-exports[`EuiControlBar props leftOffset is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props leftOffset is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -135,79 +135,79 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
   showOnMobile={false}
   size="l"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar--large euiControlBar--fixed"
+            class="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
             style="left: 200px; right: 0px;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
@@ -215,20 +215,20 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar--large euiControlBar--fixed"
+          className="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
           style={
             Object {
               "left": 200,
@@ -237,17 +237,17 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -258,49 +258,49 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -311,64 +311,64 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -376,27 +376,27 @@ exports[`EuiControlBar props leftOffset is rendered 1`] = `
             </button>
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props maxHeight is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props maxHeight is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -453,79 +453,79 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
   showOnMobile={false}
   size="l"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar--large euiControlBar--fixed"
+            class="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
             style="left: 0px; right: 0px; max-height: 20rem;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
@@ -533,20 +533,20 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar--large euiControlBar--fixed"
+          className="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
           style={
             Object {
               "left": 0,
@@ -555,17 +555,17 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -576,49 +576,49 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -629,64 +629,64 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -694,27 +694,27 @@ exports[`EuiControlBar props maxHeight is rendered 1`] = `
             </button>
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props mobile is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props mobile is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -770,79 +770,79 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
   showOnMobile={true}
   size="l"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar--large euiControlBar--fixed euiControlBar--showOnMobile"
+            class="wuiControlBar wuiControlBar--large wuiControlBar--fixed wuiControlBar--showOnMobile"
             style="left: 0px; right: 0px;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
@@ -850,20 +850,20 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar--large euiControlBar--fixed euiControlBar--showOnMobile"
+          className="wuiControlBar wuiControlBar--large wuiControlBar--fixed wuiControlBar--showOnMobile"
           style={
             Object {
               "left": 0,
@@ -872,17 +872,17 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -893,49 +893,49 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -946,64 +946,64 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -1011,27 +1011,27 @@ exports[`EuiControlBar props mobile is rendered 1`] = `
             </button>
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props position is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props position is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -1087,13 +1087,13 @@ exports[`EuiControlBar props position is rendered 1`] = `
   showOnMobile={false}
   size="l"
 >
-  <EuiI18n
+  <WuiI18n
     default="Page level controls"
-    token="euiControlBar.screenReaderHeading"
+    token="wuiControlBar.screenReaderHeading"
   >
     <section
       aria-label="Page level controls"
-      className="euiControlBar euiControlBar--large euiControlBar--absolute"
+      className="wuiControlBar wuiControlBar--large wuiControlBar--absolute"
       style={
         Object {
           "left": 0,
@@ -1102,17 +1102,17 @@ exports[`EuiControlBar props position is rendered 1`] = `
         }
       }
     >
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <h2
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
           Page level controls
         </h2>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
       <div
-        className="euiControlBar__controls"
+        className="wuiControlBar__controls"
       >
-        <EuiBreadcrumbs
+        <WuiBreadcrumbs
           breadcrumbs={
             Array [
               Object {
@@ -1123,49 +1123,49 @@ exports[`EuiControlBar props position is rendered 1`] = `
               },
             ]
           }
-          className="euiControlBar__breadcrumbs"
+          className="wuiControlBar__breadcrumbs"
           key="current_file_path"
           responsive={false}
         >
           <nav
             aria-label="breadcrumb"
-            className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+            className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
           >
-            <EuiInnerText>
+            <WuiInnerText>
               <span
                 aria-current="false"
-                className="euiBreadcrumb"
+                className="wuiBreadcrumb"
                 title="src"
               >
                 src
               </span>
-            </EuiInnerText>
-            <EuiBreadcrumbSeparator>
+            </WuiInnerText>
+            <WuiBreadcrumbSeparator>
               <div
-                className="euiBreadcrumbSeparator"
+                className="wuiBreadcrumbSeparator"
               />
-            </EuiBreadcrumbSeparator>
-            <EuiInnerText>
+            </WuiBreadcrumbSeparator>
+            <WuiInnerText>
               <span
                 aria-current="page"
-                className="euiBreadcrumb euiBreadcrumb--last"
+                className="wuiBreadcrumb wuiBreadcrumb--last"
                 title="components"
               >
                 components
               </span>
-            </EuiInnerText>
+            </WuiInnerText>
           </nav>
-        </EuiBreadcrumbs>
-        <EuiButton
-          className="euiControlBar__button"
+        </WuiBreadcrumbs>
+        <WuiButton
+          className="wuiControlBar__button"
           color="ghost"
           data-test-subj="dts"
           key="sound_the_alarm1"
           onClick={[Function]}
           size="s"
         >
-          <EuiButtonDisplay
-            className="euiControlBar__button"
+          <WuiButtonDisplay
+            className="wuiControlBar__button"
             color="ghost"
             data-test-subj="dts"
             disabled={false}
@@ -1176,64 +1176,64 @@ exports[`EuiControlBar props position is rendered 1`] = `
             type="button"
           >
             <button
-              className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+              className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
               data-test-subj="dts"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
-              <EuiButtonContent
-                className="euiButton__content"
+              <WuiButtonContent
+                className="wuiButton__content"
                 iconSide="left"
                 textProps={
                   Object {
-                    "className": "euiButton__text",
+                    "className": "wuiButton__text",
                   }
                 }
               >
                 <span
-                  className="euiButtonContent euiButton__content"
+                  className="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    className="euiButton__text"
+                    className="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
-              </EuiButtonContent>
+              </WuiButtonContent>
             </button>
-          </EuiButtonDisplay>
-        </EuiButton>
+          </WuiButtonDisplay>
+        </WuiButton>
         <div
-          className="euiControlBar__text"
+          className="wuiControlBar__text"
           key="close_the_hatch"
         >
           Close the Hatch
         </div>
         <div
-          className="euiControlBar__divider"
+          className="wuiControlBar__divider"
           key="divider3"
         />
-        <EuiIcon
+        <WuiIcon
           aria-label="Sample Icon"
-          className="euiControlBar__icon"
+          className="wuiControlBar__icon"
           color="danger"
           key="sample_icon4"
           type="alert"
         >
           <div
             aria-label="Sample Icon"
-            className="euiControlBar__icon"
+            className="wuiControlBar__icon"
             color="danger"
-            data-euiicon-type="alert"
+            data-wuiicon-type="alert"
           />
-        </EuiIcon>
+        </WuiIcon>
         <div
-          className="euiControlBar__spacer"
+          className="wuiControlBar__spacer"
           key="spacer5"
         />
         <button
-          className="euiControlBar__tab"
+          className="wuiControlBar__tab"
           key="flight_8156"
           onClick={[Function]}
         >
@@ -1241,12 +1241,12 @@ exports[`EuiControlBar props position is rendered 1`] = `
         </button>
       </div>
     </section>
-  </EuiI18n>
-</EuiControlBar>
+  </WuiI18n>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props rightOffset is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props rightOffset is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -1302,79 +1302,79 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
   showOnMobile={false}
   size="l"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar--large euiControlBar--fixed"
+            class="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
             style="left: 0px; right: 200px;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
@@ -1382,20 +1382,20 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar--large euiControlBar--fixed"
+          className="wuiControlBar wuiControlBar--large wuiControlBar--fixed"
           style={
             Object {
               "left": 0,
@@ -1404,17 +1404,17 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -1425,49 +1425,49 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -1478,64 +1478,64 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -1543,27 +1543,27 @@ exports[`EuiControlBar props rightOffset is rendered 1`] = `
             </button>
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props showContent is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props showContent is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -1619,105 +1619,105 @@ exports[`EuiControlBar props showContent is rendered 1`] = `
   showOnMobile={false}
   size="l"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar-isOpen euiControlBar--large euiControlBar--fixed"
+            class="wuiControlBar wuiControlBar-isOpen wuiControlBar--large wuiControlBar--fixed"
             style="left: 0px; right: 0px;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
             </div>
             <div
-              class="euiControlBar__content"
+              class="wuiControlBar__content"
             >
               Content
             </div>
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar-isOpen euiControlBar--large euiControlBar--fixed"
+          className="wuiControlBar wuiControlBar-isOpen wuiControlBar--large wuiControlBar--fixed"
           style={
             Object {
               "left": 0,
@@ -1726,17 +1726,17 @@ exports[`EuiControlBar props showContent is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -1747,49 +1747,49 @@ exports[`EuiControlBar props showContent is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -1800,64 +1800,64 @@ exports[`EuiControlBar props showContent is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -1865,32 +1865,32 @@ exports[`EuiControlBar props showContent is rendered 1`] = `
             </button>
           </div>
           <div
-            className="euiControlBar__content"
+            className="wuiControlBar__content"
           >
             Content
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;
 
-exports[`EuiControlBar props size is rendered 1`] = `
-<EuiControlBar
+exports[`WuiControlBar props size is rendered 1`] = `
+<WuiControlBar
   controls={
     Array [
       Object {
@@ -1946,79 +1946,79 @@ exports[`EuiControlBar props size is rendered 1`] = `
   showOnMobile={false}
   size="s"
 >
-  <EuiPortal>
+  <WuiPortal>
     <Portal
       containerInfo={
         <div>
           <section
             aria-label="Page level controls"
-            class="euiControlBar euiControlBar--small euiControlBar--fixed"
+            class="wuiControlBar wuiControlBar--small wuiControlBar--fixed"
             style="left: 0px; right: 0px;"
           >
             <h2
-              class="euiScreenReaderOnly"
+              class="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
             <div
-              class="euiControlBar__controls"
+              class="wuiControlBar__controls"
             >
               <nav
                 aria-label="breadcrumb"
-                class="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                class="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
                 <span
                   aria-current="false"
-                  class="euiBreadcrumb"
+                  class="wuiBreadcrumb"
                   title="src"
                 >
                   src
                 </span>
                 <div
-                  class="euiBreadcrumbSeparator"
+                  class="wuiBreadcrumbSeparator"
                 />
                 <span
                   aria-current="page"
-                  class="euiBreadcrumb euiBreadcrumb--last"
+                  class="wuiBreadcrumb wuiBreadcrumb--last"
                   title="components"
                 >
                   components
                 </span>
               </nav>
               <button
-                class="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                class="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                 data-test-subj="dts"
                 type="button"
               >
                 <span
-                  class="euiButtonContent euiButton__content"
+                  class="wuiButtonContent wuiButton__content"
                 >
                   <span
-                    class="euiButton__text"
+                    class="wuiButton__text"
                   >
                     Sound the Alarm
                   </span>
                 </span>
               </button>
               <div
-                class="euiControlBar__text"
+                class="wuiControlBar__text"
               >
                 Close the Hatch
               </div>
               <div
-                class="euiControlBar__divider"
+                class="wuiControlBar__divider"
               />
               <div
                 aria-label="Sample Icon"
-                class="euiControlBar__icon"
+                class="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
               <div
-                class="euiControlBar__spacer"
+                class="wuiControlBar__spacer"
               />
               <button
-                class="euiControlBar__tab"
+                class="wuiControlBar__tab"
               >
                 Flight 815
               </button>
@@ -2026,20 +2026,20 @@ exports[`EuiControlBar props size is rendered 1`] = `
           </section>
           <p
             aria-live="assertive"
-            class="euiScreenReaderOnly"
+            class="wuiScreenReaderOnly"
           >
             There is a new region landmark with page level controls at the end of the document.
           </p>
         </div>
       }
     >
-      <EuiI18n
+      <WuiI18n
         default="Page level controls"
-        token="euiControlBar.screenReaderHeading"
+        token="wuiControlBar.screenReaderHeading"
       >
         <section
           aria-label="Page level controls"
-          className="euiControlBar euiControlBar--small euiControlBar--fixed"
+          className="wuiControlBar wuiControlBar--small wuiControlBar--fixed"
           style={
             Object {
               "left": 0,
@@ -2048,17 +2048,17 @@ exports[`EuiControlBar props size is rendered 1`] = `
             }
           }
         >
-          <EuiScreenReaderOnly>
+          <WuiScreenReaderOnly>
             <h2
-              className="euiScreenReaderOnly"
+              className="wuiScreenReaderOnly"
             >
               Page level controls
             </h2>
-          </EuiScreenReaderOnly>
+          </WuiScreenReaderOnly>
           <div
-            className="euiControlBar__controls"
+            className="wuiControlBar__controls"
           >
-            <EuiBreadcrumbs
+            <WuiBreadcrumbs
               breadcrumbs={
                 Array [
                   Object {
@@ -2069,49 +2069,49 @@ exports[`EuiControlBar props size is rendered 1`] = `
                   },
                 ]
               }
-              className="euiControlBar__breadcrumbs"
+              className="wuiControlBar__breadcrumbs"
               key="current_file_path"
               responsive={false}
             >
               <nav
                 aria-label="breadcrumb"
-                className="euiBreadcrumbs euiControlBar__breadcrumbs euiBreadcrumbs--truncate"
+                className="wuiBreadcrumbs wuiControlBar__breadcrumbs wuiBreadcrumbs--truncate"
               >
-                <EuiInnerText>
+                <WuiInnerText>
                   <span
                     aria-current="false"
-                    className="euiBreadcrumb"
+                    className="wuiBreadcrumb"
                     title="src"
                   >
                     src
                   </span>
-                </EuiInnerText>
-                <EuiBreadcrumbSeparator>
+                </WuiInnerText>
+                <WuiBreadcrumbSeparator>
                   <div
-                    className="euiBreadcrumbSeparator"
+                    className="wuiBreadcrumbSeparator"
                   />
-                </EuiBreadcrumbSeparator>
-                <EuiInnerText>
+                </WuiBreadcrumbSeparator>
+                <WuiInnerText>
                   <span
                     aria-current="page"
-                    className="euiBreadcrumb euiBreadcrumb--last"
+                    className="wuiBreadcrumb wuiBreadcrumb--last"
                     title="components"
                   >
                     components
                   </span>
-                </EuiInnerText>
+                </WuiInnerText>
               </nav>
-            </EuiBreadcrumbs>
-            <EuiButton
-              className="euiControlBar__button"
+            </WuiBreadcrumbs>
+            <WuiButton
+              className="wuiControlBar__button"
               color="ghost"
               data-test-subj="dts"
               key="sound_the_alarm1"
               onClick={[Function]}
               size="s"
             >
-              <EuiButtonDisplay
-                className="euiControlBar__button"
+              <WuiButtonDisplay
+                className="wuiControlBar__button"
                 color="ghost"
                 data-test-subj="dts"
                 disabled={false}
@@ -2122,64 +2122,64 @@ exports[`EuiControlBar props size is rendered 1`] = `
                 type="button"
               >
                 <button
-                  className="euiButton euiButton--ghost euiButton--small euiControlBar__button"
+                  className="wuiButton wuiButton--ghost wuiButton--small wuiControlBar__button"
                   data-test-subj="dts"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
-                  <EuiButtonContent
-                    className="euiButton__content"
+                  <WuiButtonContent
+                    className="wuiButton__content"
                     iconSide="left"
                     textProps={
                       Object {
-                        "className": "euiButton__text",
+                        "className": "wuiButton__text",
                       }
                     }
                   >
                     <span
-                      className="euiButtonContent euiButton__content"
+                      className="wuiButtonContent wuiButton__content"
                     >
                       <span
-                        className="euiButton__text"
+                        className="wuiButton__text"
                       >
                         Sound the Alarm
                       </span>
                     </span>
-                  </EuiButtonContent>
+                  </WuiButtonContent>
                 </button>
-              </EuiButtonDisplay>
-            </EuiButton>
+              </WuiButtonDisplay>
+            </WuiButton>
             <div
-              className="euiControlBar__text"
+              className="wuiControlBar__text"
               key="close_the_hatch"
             >
               Close the Hatch
             </div>
             <div
-              className="euiControlBar__divider"
+              className="wuiControlBar__divider"
               key="divider3"
             />
-            <EuiIcon
+            <WuiIcon
               aria-label="Sample Icon"
-              className="euiControlBar__icon"
+              className="wuiControlBar__icon"
               color="danger"
               key="sample_icon4"
               type="alert"
             >
               <div
                 aria-label="Sample Icon"
-                className="euiControlBar__icon"
+                className="wuiControlBar__icon"
                 color="danger"
-                data-euiicon-type="alert"
+                data-wuiicon-type="alert"
               />
-            </EuiIcon>
+            </WuiIcon>
             <div
-              className="euiControlBar__spacer"
+              className="wuiControlBar__spacer"
               key="spacer5"
             />
             <button
-              className="euiControlBar__tab"
+              className="wuiControlBar__tab"
               key="flight_8156"
               onClick={[Function]}
             >
@@ -2187,21 +2187,21 @@ exports[`EuiControlBar props size is rendered 1`] = `
             </button>
           </div>
         </section>
-      </EuiI18n>
-      <EuiScreenReaderOnly>
+      </WuiI18n>
+      <WuiScreenReaderOnly>
         <p
           aria-live="assertive"
-          className="euiScreenReaderOnly"
+          className="wuiScreenReaderOnly"
         >
-          <EuiI18n
+          <WuiI18n
             default="There is a new region landmark with page level controls at the end of the document."
-            token="euiControlBar.screenReaderAnnouncement"
+            token="wuiControlBar.screenReaderAnnouncement"
           >
             There is a new region landmark with page level controls at the end of the document.
-          </EuiI18n>
+          </WuiI18n>
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     </Portal>
-  </EuiPortal>
-</EuiControlBar>
+  </WuiPortal>
+</WuiControlBar>
 `;

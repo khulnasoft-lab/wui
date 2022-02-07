@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconTableDensityNormal = ({ title, titleId, ...props }) => (
+const WuiIconTableDensityNormal = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTableDensityNormal = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTableDensityNormal;
+export const icon = WuiIconTableDensityNormal;

@@ -1,26 +1,26 @@
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiCard,
+  WuiIcon,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
-const icons = ['Beats', 'Cloud', 'Logging', 'Kibana'];
+const icons = ['Wazuh', 'Wazuh', 'Wazuh', 'Wazuh'];
 
 const cardNodes = icons.map(function(item, index) {
   return (
-    <EuiFlexItem key={index}>
-      <EuiCard
-        icon={<EuiIcon size="xxl" type={`logo${item}`} />}
-        title={`Elastic ${item}`}
-        isDisabled={item === 'Kibana' ? true : false}
+    <WuiFlexItem key={index}>
+      <WuiCard
+        icon={<WuiIcon size="xxl" type={`logo${item}`} />}
+        title={`${item} example`}
+        isDisabled={!index}
         description="Example of a card's description. Stick to one or two sentences."
         onClick={() => window.alert('Card clicked')}
       />
-    </EuiFlexItem>
+    </WuiFlexItem>
   );
 });
 
-export default () => <EuiFlexGroup gutterSize="l">{cardNodes}</EuiFlexGroup>;
+export default () => <WuiFlexGroup gutterSize="l">{cardNodes}</WuiFlexGroup>;

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,32 +34,32 @@ import React from 'react';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTab } from './tab';
+import { WuiTab } from './tab';
 
-describe('EuiTab', () => {
+describe('WuiTab', () => {
   test('renders button', () => {
     const component = (
-      <EuiTab onClick={() => {}} {...requiredProps}>
+      <WuiTab onClick={() => {}} {...requiredProps}>
         children
-      </EuiTab>
+      </WuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders anchor', () => {
     const component = (
-      <EuiTab href="/baz/bing" {...requiredProps}>
+      <WuiTab href="/baz/bing" {...requiredProps}>
         children
-      </EuiTab>
+      </WuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders isSelected', () => {
     const component = (
-      <EuiTab onClick={() => {}} isSelected {...requiredProps}>
+      <WuiTab onClick={() => {}} isSelected {...requiredProps}>
         children
-      </EuiTab>
+      </WuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
@@ -56,7 +69,7 @@ describe('EuiTab', () => {
       test('is called when the button is clicked', () => {
         const onClickHandler = jest.fn();
 
-        const $button = shallow(<EuiTab onClick={onClickHandler} />);
+        const $button = shallow(<WuiTab onClick={onClickHandler} />);
 
         $button.simulate('click');
 
@@ -65,7 +78,7 @@ describe('EuiTab', () => {
     });
 
     test('is disabled', () => {
-      const component = render(<EuiTab disabled>Click Me</EuiTab>);
+      const component = render(<WuiTab disabled>Click Me</WuiTab>);
 
       expect(component).toMatchSnapshot();
     });

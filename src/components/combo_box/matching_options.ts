@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,15 +30,15 @@
  * under the License.
  */
 
-import { EuiComboBoxOptionOption } from './types';
+import { WuiComboBoxOptionOption } from './types';
 
 export const flattenOptionGroups = <T>(
-  optionsOrGroups: Array<EuiComboBoxOptionOption<T>>
+  optionsOrGroups: Array<WuiComboBoxOptionOption<T>>
 ) => {
   return optionsOrGroups.reduce(
     (
-      options: Array<EuiComboBoxOptionOption<T>>,
-      optionOrGroup: EuiComboBoxOptionOption<T>
+      options: Array<WuiComboBoxOptionOption<T>>,
+      optionOrGroup: WuiComboBoxOptionOption<T>
     ) => {
       if (optionOrGroup.options) {
         options.push(...optionOrGroup.options);
@@ -40,7 +53,7 @@ export const flattenOptionGroups = <T>(
 
 export const getSelectedOptionForSearchValue = <T>(
   searchValue: string,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>
+  selectedOptions: Array<WuiComboBoxOptionOption<T>>
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
   return selectedOptions.find(
@@ -49,9 +62,9 @@ export const getSelectedOptionForSearchValue = <T>(
 };
 
 const collectMatchingOption = <T>(
-  accumulator: Array<EuiComboBoxOptionOption<T>>,
-  option: EuiComboBoxOptionOption<T>,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>,
+  accumulator: Array<WuiComboBoxOptionOption<T>>,
+  option: WuiComboBoxOptionOption<T>,
+  selectedOptions: Array<WuiComboBoxOptionOption<T>>,
   normalizedSearchValue: string,
   isPreFiltered: boolean,
   showPrevSelected: boolean
@@ -83,20 +96,20 @@ const collectMatchingOption = <T>(
 };
 
 export const getMatchingOptions = <T>(
-  options: Array<EuiComboBoxOptionOption<T>>,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>,
+  options: Array<WuiComboBoxOptionOption<T>>,
+  selectedOptions: Array<WuiComboBoxOptionOption<T>>,
   searchValue: string,
   isPreFiltered: boolean,
   showPrevSelected: boolean,
   sortMatchesBy: string
 ) => {
   const normalizedSearchValue = searchValue.trim().toLowerCase();
-  const matchingOptions: Array<EuiComboBoxOptionOption<T>> = [];
+  const matchingOptions: Array<WuiComboBoxOptionOption<T>> = [];
 
   options.forEach(option => {
     if (option.options) {
-      const matchingOptionsForGroup: Array<EuiComboBoxOptionOption<T>> = [];
-      option.options.forEach((groupOption: EuiComboBoxOptionOption<T>) => {
+      const matchingOptionsForGroup: Array<WuiComboBoxOptionOption<T>> = [];
+      option.options.forEach((groupOption: WuiComboBoxOptionOption<T>) => {
         collectMatchingOption(
           matchingOptionsForGroup,
           groupOption,
@@ -126,8 +139,8 @@ export const getMatchingOptions = <T>(
 
   if (sortMatchesBy === 'startsWith') {
     const refObj: {
-      startWith: Array<EuiComboBoxOptionOption<T>>;
-      others: Array<EuiComboBoxOptionOption<T>>;
+      startWith: Array<WuiComboBoxOptionOption<T>>;
+      others: Array<WuiComboBoxOptionOption<T>>;
     } = { startWith: [], others: [] };
 
     matchingOptions.forEach(object => {

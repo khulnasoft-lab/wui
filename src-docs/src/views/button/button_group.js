@@ -1,13 +1,13 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiTitle,
+  WuiButtonGroup,
+  WuiSpacer,
+  WuiTitle,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
-import { EuiPanel } from '../../../../src/components/panel/panel';
+import { WuiPanel } from '../../../../src/components/panel/panel';
 
 const idPrefix = htmlIdGenerator()();
 const idPrefix2 = htmlIdGenerator()();
@@ -188,18 +188,18 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiButtonGroup
+      <WuiButtonGroup
         legend="This is a basic group"
         options={toggleButtons}
         idSelected={toggleIdSelected}
         onChange={id => onChange(id)}
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <WuiSpacer size="m" />
+      <WuiTitle size="xxs">
         <h3>Primary &amp; multi select</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonGroup
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiButtonGroup
         legend="This is a primary group"
         name="primary"
         options={toggleButtonsMulti}
@@ -208,12 +208,12 @@ export default () => {
         color="primary"
         type="multi"
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <WuiSpacer size="m" />
+      <WuiTitle size="xxs">
         <h3>Disabled &amp; full width</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonGroup
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiButtonGroup
         legend="This is a disabled group"
         name="disabledGroup"
         options={toggleButtonsDisabled}
@@ -223,12 +223,12 @@ export default () => {
         isDisabled
         isFullWidth
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <WuiSpacer size="m" />
+      <WuiTitle size="xxs">
         <h3>Icons only</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonGroup
+      </WuiTitle>
+      <WuiSpacer size="s" />
+      <WuiButtonGroup
         legend="Text align"
         name="textAlign"
         options={toggleButtonsIcons}
@@ -237,7 +237,7 @@ export default () => {
         isIconOnly
       />
       &nbsp;&nbsp;
-      <EuiButtonGroup
+      <WuiButtonGroup
         legend="Text style"
         options={toggleButtonsIconsMulti}
         idToSelectedMap={toggleIconIdToSelectedMap}
@@ -245,16 +245,16 @@ export default () => {
         type="multi"
         isIconOnly
       />
-      <EuiSpacer />
-      <EuiPanel style={{ maxWidth: 300 }}>
-        <EuiTitle size="xxxs">
+      <WuiSpacer />
+      <WuiPanel style={{ maxWidth: 300 }}>
+        <WuiTitle size="xxxs">
           <h3>
             Compressed groups should always be fullWidth so they line up nicely
             in their small container.
           </h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiButtonGroup
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiButtonGroup
           name="coarsness"
           legend="This is a basic group"
           options={toggleButtonsCompressed}
@@ -263,15 +263,15 @@ export default () => {
           buttonSize="compressed"
           isFullWidth
         />
-        <EuiSpacer />
-        <EuiTitle size="xxxs">
+        <WuiSpacer />
+        <WuiTitle size="xxxs">
           <h3>Unless they are icon only</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiButtonGroup
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiButtonGroup
           name="textStyleCompressed"
           legend="Text style"
-          className="eui-displayInlineBlock"
+          className="wui-displayInlineBlock"
           options={toggleButtonsIconsMulti}
           idToSelectedMap={toggleIconIdToSelectedMapIcon}
           onChange={id => onChangeIconsMultiIcons(id)}
@@ -279,7 +279,7 @@ export default () => {
           buttonSize="compressed"
           isIconOnly
         />
-      </EuiPanel>
+      </WuiPanel>
     </Fragment>
   );
 };

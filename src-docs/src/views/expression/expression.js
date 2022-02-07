@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopoverTitle,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiPopover,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiExpression,
+  WuiPopoverTitle,
+  WuiFlexItem,
+  WuiFlexGroup,
+  WuiPopover,
+  WuiSelect,
+  WuiFieldNumber,
+  WuiExpression,
 } from '../../../../src/components';
 
 // Rise the popovers above GuidePageSideNav
@@ -84,8 +84,8 @@ export default () => {
 
   const renderPopover1 = () => (
     <div style={POPOVER_STYLE}>
-      <EuiPopoverTitle>When</EuiPopoverTitle>
-      <EuiSelect
+      <WuiPopoverTitle>When</WuiPopoverTitle>
+      <WuiSelect
         compressed
         value={example1.value}
         onChange={changeExample1}
@@ -103,9 +103,9 @@ export default () => {
 
   const renderPopover2 = () => (
     <div style={POPOVER_STYLE}>
-      <EuiFlexGroup gutterSize="s">
-        <EuiFlexItem grow={false} style={{ width: 150 }}>
-          <EuiSelect
+      <WuiFlexGroup gutterSize="s">
+        <WuiFlexItem grow={false} style={{ width: 150 }}>
+          <WuiSelect
             compressed
             value={example2.description}
             onChange={changeExample2Description}
@@ -115,26 +115,26 @@ export default () => {
               { value: 'Is exactly', text: 'Is exactly' },
             ]}
           />
-        </EuiFlexItem>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false} style={{ width: 100 }}>
-          <EuiFieldNumber
+        <WuiFlexItem grow={false} style={{ width: 100 }}>
+          <WuiFieldNumber
             compressed
             value={example2.value}
             onChange={changeExample2Value}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 
   return (
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <WuiFlexGroup gutterSize="s">
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           id="popover1"
           button={
-            <EuiExpression
+            <WuiExpression
               description="when"
               value={example1.value}
               isActive={example1.isOpen}
@@ -147,15 +147,15 @@ export default () => {
           panelPaddingSize="s"
           anchorPosition="downLeft">
           {renderPopover1()}
-        </EuiPopover>
-      </EuiFlexItem>
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           id="popover2"
           panelPaddingSize="s"
           button={
-            <EuiExpression
+            <WuiExpression
               description={example2.description}
               value={example2.value}
               isActive={example2.isOpen}
@@ -167,8 +167,8 @@ export default () => {
           ownFocus
           anchorPosition="downLeft">
           {renderPopover2()}
-        </EuiPopover>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiPopover>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

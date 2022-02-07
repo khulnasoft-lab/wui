@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../../test';
 
-import { EuiSuperSelect } from './super_select';
+import { WuiSuperSelect } from './super_select';
 
 jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
 jest.mock('../../portal', () => ({
-  EuiPortal: ({ children }: any) => children,
+  WuiPortal: ({ children }: any) => children,
 }));
 
 const options = [
@@ -36,10 +49,10 @@ const options = [
   { value: '2', inputDisplay: 'Option #2' },
 ];
 
-describe('EuiSuperSelect', () => {
+describe('WuiSuperSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuperSelect
+      <WuiSuperSelect
         {...requiredProps}
         options={options}
         onChange={() => {}}
@@ -52,7 +65,7 @@ describe('EuiSuperSelect', () => {
   describe('props', () => {
     test('fullWidth is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <WuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -65,7 +78,7 @@ describe('EuiSuperSelect', () => {
 
     test('compressed is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <WuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -78,7 +91,7 @@ describe('EuiSuperSelect', () => {
 
     test('is rendered with a prepend and append', () => {
       const component = render(
-        <EuiSuperSelect
+        <WuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -92,7 +105,7 @@ describe('EuiSuperSelect', () => {
 
     test('select component is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <WuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },
@@ -106,7 +119,7 @@ describe('EuiSuperSelect', () => {
 
     test('options are rendered when select is open', () => {
       const component = mount(
-        <EuiSuperSelect
+        <WuiSuperSelect
           options={options}
           onChange={() => {}}
           data-test-subj="superSelect"
@@ -120,7 +133,7 @@ describe('EuiSuperSelect', () => {
 
     test('valueSelected is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <WuiSuperSelect
           options={options}
           valueOfSelected="2"
           onChange={() => {}}
@@ -132,7 +145,7 @@ describe('EuiSuperSelect', () => {
 
     test('custom display is propagated to dropdown', () => {
       const component = mount(
-        <EuiSuperSelect
+        <WuiSuperSelect
           options={[
             {
               value: '1',
@@ -157,7 +170,7 @@ describe('EuiSuperSelect', () => {
 
     test('more props are propogated to each option', () => {
       const component = mount(
-        <EuiSuperSelect
+        <WuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1', disabled: true },
             {

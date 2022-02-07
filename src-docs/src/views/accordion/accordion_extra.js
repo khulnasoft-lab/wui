@@ -1,26 +1,26 @@
 import React from 'react';
 
-import { EuiAccordion, EuiButton, EuiSpacer } from '../../../../src/components';
+import { WuiAccordion, WuiButton, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <>
-    <EuiAccordion
+    <WuiAccordion
       id="accordionExtraWithLeftArrow"
       buttonContent="Click to open (Arrow on the left)"
-      extraAction={<EuiButton size="s">Extra action!</EuiButton>}
+      extraAction={<WuiButton size="s">Extra action!</WuiButton>}
       paddingSize="l">
       <div>Opened content.</div>
-    </EuiAccordion>
+    </WuiAccordion>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiAccordion
+    <WuiAccordion
       id="accordionExtraWithRightArrow"
       arrowDisplay="right"
       buttonContent="Click to open (Arrow on the right)"
-      extraAction={<EuiButton size="s">Extra action!</EuiButton>}
+      extraAction={<WuiButton size="s">Extra action!</WuiButton>}
       paddingSize="l">
       <div>Opened content.</div>
-    </EuiAccordion>
+    </WuiAccordion>
   </>
 );

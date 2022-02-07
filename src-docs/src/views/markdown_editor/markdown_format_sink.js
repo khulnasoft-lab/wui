@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiMarkdownFormat } from '../../../../src';
+import { WuiMarkdownFormat } from '../../../../src';
 
 const markdownContent = `# h1 Heading
 ## h2 Heading
@@ -137,7 +137,7 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Kibana](https://user-images.githubusercontent.com/2750668/74490344-2f271800-4ec0-11ea-8614-8651cd47eab1.png)
+![Wazuh](https://user-images.githubusercontent.com/2750668/74490344-2f271800-4ec0-11ea-8614-8651cd47eab1.png)
 
 
 ### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
@@ -146,5 +146,5 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 `;
 
 export default () => {
-  return <EuiMarkdownFormat>{markdownContent}</EuiMarkdownFormat>;
+  return <WuiMarkdownFormat>{markdownContent}</WuiMarkdownFormat>;
 };

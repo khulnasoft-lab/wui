@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFlyout is rendered 1`] = `
+exports[`WuiFlyout is rendered 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -17,21 +17,21 @@ exports[`EuiFlyout is rendered 1`] = `
   >
     <div
       aria-label="aria-label"
-      class="euiFlyout euiFlyout--medium testClass1 testClass2"
+      class="wuiFlyout wuiFlyout--medium testClass1 testClass2"
       data-test-subj="test subject string"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -44,7 +44,7 @@ exports[`EuiFlyout is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props accepts div props 1`] = `
+exports[`WuiFlyout props accepts div props 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -60,21 +60,21 @@ exports[`EuiFlyout props accepts div props 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium"
+      class="wuiFlyout wuiFlyout--medium"
       id="imaflyout"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -87,7 +87,7 @@ exports[`EuiFlyout props accepts div props 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props close button is not rendered 1`] = `
+exports[`WuiFlyout props close button is not rendered 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -103,7 +103,7 @@ exports[`EuiFlyout props close button is not rendered 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium"
+      class="wuiFlyout wuiFlyout--medium"
       role="dialog"
       tabindex="0"
     />
@@ -116,7 +116,7 @@ exports[`EuiFlyout props close button is not rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props max width can be set to a custom number 1`] = `
+exports[`WuiFlyout props max width can be set to a custom number 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -132,21 +132,21 @@ exports[`EuiFlyout props max width can be set to a custom number 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium"
+      class="wuiFlyout wuiFlyout--medium"
       role="dialog"
       style="max-width: 1024px;"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -159,7 +159,7 @@ exports[`EuiFlyout props max width can be set to a custom number 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props max width can be set to a custom value and measurement 1`] = `
+exports[`WuiFlyout props max width can be set to a custom value and measurement 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -175,21 +175,21 @@ exports[`EuiFlyout props max width can be set to a custom value and measurement 
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium"
+      class="wuiFlyout wuiFlyout--medium"
       role="dialog"
       style="max-width: 24rem;"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -202,7 +202,7 @@ exports[`EuiFlyout props max width can be set to a custom value and measurement 
 </div>
 `;
 
-exports[`EuiFlyout props max width can be set to a default 1`] = `
+exports[`WuiFlyout props max width can be set to a default 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -218,20 +218,20 @@ exports[`EuiFlyout props max width can be set to a default 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium euiFlyout--maxWidth-default"
+      class="wuiFlyout wuiFlyout--medium wuiFlyout--maxWidth-default"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -244,7 +244,7 @@ exports[`EuiFlyout props max width can be set to a default 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props ownFocus can alter mask props with maskProps without throwing error 1`] = `
+exports[`WuiFlyout props ownFocus can alter mask props with maskProps without throwing error 1`] = `
 Array [
   <div />,
   <div>
@@ -262,20 +262,20 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium"
+        class="wuiFlyout wuiFlyout--medium"
         role="dialog"
         tabindex="0"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-          data-test-subj="euiFlyoutCloseButton"
+          class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+          data-test-subj="wuiFlyoutCloseButton"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="cross"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="cross"
           />
         </button>
       </div>
@@ -289,7 +289,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props ownFocus is rendered 1`] = `
+exports[`WuiFlyout props ownFocus is rendered 1`] = `
 Array [
   <div />,
   <div>
@@ -307,20 +307,20 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium"
+        class="wuiFlyout wuiFlyout--medium"
         role="dialog"
         tabindex="0"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-          data-test-subj="euiFlyoutCloseButton"
+          class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+          data-test-subj="wuiFlyoutCloseButton"
           type="button"
         >
           <div
             aria-hidden="true"
-            class="euiButtonIcon__icon"
-            data-euiicon-type="cross"
+            class="wuiButtonIcon__icon"
+            data-wuiicon-type="cross"
           />
         </button>
       </div>
@@ -334,7 +334,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props size l is rendered 1`] = `
+exports[`WuiFlyout props size l is rendered 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -350,20 +350,20 @@ exports[`EuiFlyout props size l is rendered 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--large"
+      class="wuiFlyout wuiFlyout--large"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -376,7 +376,7 @@ exports[`EuiFlyout props size l is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props size m is rendered 1`] = `
+exports[`WuiFlyout props size m is rendered 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -392,20 +392,20 @@ exports[`EuiFlyout props size m is rendered 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium"
+      class="wuiFlyout wuiFlyout--medium"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>
@@ -418,7 +418,7 @@ exports[`EuiFlyout props size m is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFlyout props size s is rendered 1`] = `
+exports[`WuiFlyout props size s is rendered 1`] = `
 <div>
   <div
     data-focus-guard="true"
@@ -434,20 +434,20 @@ exports[`EuiFlyout props size s is rendered 1`] = `
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--small"
+      class="wuiFlyout wuiFlyout--small"
       role="dialog"
       tabindex="0"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiFlyout__closeButton"
-        data-test-subj="euiFlyoutCloseButton"
+        class="wuiButtonIcon wuiButtonIcon--text wuiFlyout__closeButton"
+        data-test-subj="wuiFlyoutCloseButton"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
     </div>

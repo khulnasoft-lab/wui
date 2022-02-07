@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,7 +41,7 @@ import { FocusOn } from 'react-focus-on';
 import { ReactFocusOnProps } from 'react-focus-on/dist/es5/types';
 
 import { CommonProps } from '../common';
-import { EuiOutsideClickDetector } from '../outside_click_detector';
+import { WuiOutsideClickDetector } from '../outside_click_detector';
 
 interface DetectorProps {
   handleEvent: EventHandler<any>;
@@ -53,7 +66,7 @@ const OutsideEventDetector: FunctionComponent<DetectorProps> = ({
  */
 export type FocusTarget = HTMLElement | string | (() => HTMLElement);
 
-interface EuiFocusTrapInterface {
+interface WuiFocusTrapInterface {
   /**
    * Clicking outside the trap area will disable the trap
    */
@@ -66,16 +79,16 @@ interface EuiFocusTrapInterface {
   disabled?: boolean;
 }
 
-export interface EuiFocusTrapProps
+export interface WuiFocusTrapProps
   extends CommonProps,
     Omit<ReactFocusOnProps, 'enabled'>, // Inverted `disabled` prop used instead
-    EuiFocusTrapInterface {}
+    WuiFocusTrapInterface {}
 
 interface State {
   hasBeenDisabledByClick: boolean;
 }
 
-export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
+export class WuiFocusTrap extends Component<WuiFocusTrapProps, State> {
   state: State = {
     hasBeenDisabledByClick: false,
   };
@@ -87,7 +100,7 @@ export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
     this.setInitialFocus(this.props.initialFocus);
   }
 
-  componentDidUpdate(prevProps: EuiFocusTrapProps) {
+  componentDidUpdate(prevProps: WuiFocusTrapProps) {
     if (prevProps.disabled === true && this.props.disabled === false) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ hasBeenDisabledByClick: false });
@@ -166,13 +179,13 @@ export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
       ...rest,
     };
     return clickOutsideDisables ? (
-      <EuiOutsideClickDetector
+      <WuiOutsideClickDetector
         isDisabled={isDisabled}
         onOutsideClick={this.handleOutsideClick}>
         <OutsideEventDetector handleEvent={this.handleBubbledEvent}>
           <FocusOn {...focusOnProps}>{children}</FocusOn>
         </OutsideEventDetector>
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
     ) : (
       <FocusOn {...focusOnProps}>{children}</FocusOn>
     );
