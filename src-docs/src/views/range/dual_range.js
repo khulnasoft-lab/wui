@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiDualRange } from '../../../../src/components';
+import { WuiDualRange } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -12,7 +12,7 @@ export default () => {
   };
 
   return (
-    <EuiDualRange
+    <WuiDualRange
       id={htmlIdGenerator()()}
       min={-100}
       max={200}
@@ -20,7 +20,7 @@ export default () => {
       value={value}
       onChange={onChange}
       showLabels
-      aria-label="An example of EuiDualRange"
+      aria-label="An example of WuiDualRange"
     />
   );
 };

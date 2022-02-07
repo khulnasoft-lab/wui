@@ -5,10 +5,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiMarkdownEditor,
-  EuiText,
-  EuiSpacer,
-  EuiCode,
+  WuiMarkdownEditor,
+  WuiText,
+  WuiSpacer,
+  WuiCode,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -24,24 +24,23 @@ const markdownEditorErrorsHtml = renderToHtml(MarkdownEditorErrors);
 export const MarkdownEditorExample = {
   title: 'Markdown editor',
   beta: true,
-  isNew: true,
   intro: (
     <Fragment>
-      <EuiText>
+      <WuiText>
         <p>
-          <strong>EuiMarkdownEditor</strong> provides a markdown authoring
+          <strong>WuiMarkdownEditor</strong> provides a markdown authoring
           experience for the user. The component consists of a toolbar, text
           area, and a drag-and-drop zone to accept files (if configured to do
           so). There are two modes: a textarea that keeps track of cursor
           position, and a rendered preview mode that is powered by{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-format/">EuiMarkdownFormat</Link>
+            <Link to="/editors-syntax/markdown-format/">WuiMarkdownFormat</Link>
           </strong>
           . State is maintained between the two and it is possible to pass
           changes from the preview area to the textarea and vice versa.
         </p>
-      </EuiText>
-      <EuiSpacer size="xxl" />
+      </WuiText>
+      <WuiSpacer size="xxl" />
     </Fragment>
   ),
   sections: [
@@ -64,7 +63,7 @@ export const MarkdownEditorExample = {
         </p>
       ),
       props: {
-        EuiMarkdownEditor,
+        WuiMarkdownEditor,
       },
       demo: <MarkdownEditor />,
     },
@@ -82,7 +81,7 @@ export const MarkdownEditorExample = {
       title: 'Error handling and feedback',
       text: (
         <p>
-          The <EuiCode>errors</EuiCode> prop allows you to pass an array of
+          The <WuiCode>errors</WuiCode> prop allows you to pass an array of
           errors if syntax is malformed. The below example starts with an
           incomplete tooltip tag, showing this error message by default. These
           errors are meant to be ephemeral and part of the editing experience.
@@ -91,7 +90,7 @@ export const MarkdownEditorExample = {
         </p>
       ),
       props: {
-        EuiMarkdownEditor,
+        WuiMarkdownEditor,
       },
       demo: <MarkdownEditorErrors />,
     },

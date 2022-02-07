@@ -1,37 +1,37 @@
-.euiLoadingSpinner {
+.wuiLoadingSpinner {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+  width: $wuiSizeXL;
+  height: $wuiSizeXL;
   border-radius: 50%;
-  border: solid $euiSizeXS / 2 $euiColorLightShade;
-  border-color: euiLoadingSpinnerBorderColors();
-  animation: euiLoadingSpinner .6s infinite linear;
+  border: solid $wuiSizeXS / 2 $wuiColorLightShade;
+  border-color: wuiLoadingSpinnerBorderColors();
+  animation: wuiLoadingSpinner .6s infinite linear;
 }
 
-.euiLoadingSpinner--small {
-  width: $euiSizeS;
-  height: $euiSizeS;
+.wuiLoadingSpinner--small {
+  width: $wuiSizeS;
+  height: $wuiSizeS;
   border-width: 1px;
 }
 
-.euiLoadingSpinner--medium {
-  width: $euiSize;
-  height: $euiSize;
+.wuiLoadingSpinner--medium {
+  width: $wuiSize;
+  height: $wuiSize;
   border-width: 1px;
 }
 
-.euiLoadingSpinner--large {
-  width: $euiSizeL;
-  height: $euiSizeL;
+.wuiLoadingSpinner--large {
+  width: $wuiSizeL;
+  height: $wuiSizeL;
 }
 
-.euiLoadingSpinner--xLarge {
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+.wuiLoadingSpinner--xLarge {
+  width: $wuiSizeXL;
+  height: $wuiSizeXL;
 }
 
-@keyframes euiLoadingSpinner {
+@keyframes wuiLoadingSpinner {
   from {
     transform: rotate(0deg);
   }

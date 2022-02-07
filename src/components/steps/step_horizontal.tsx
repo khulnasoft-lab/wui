@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,12 +38,12 @@ import React, {
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-import { EuiI18n } from '../i18n';
-import { EuiScreenReaderOnly, EuiKeyboardAccessible } from '../accessibility';
+import { WuiI18n } from '../i18n';
+import { WuiScreenReaderOnly, WuiKeyboardAccessible } from '../accessibility';
 
-import { EuiStepStatus, EuiStepNumber } from './step_number';
+import { WuiStepStatus, WuiStepNumber } from './step_number';
 
-export interface EuiStepHorizontalProps
+export interface WuiStepHorizontalProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
@@ -52,10 +65,10 @@ export interface EuiStepHorizontalProps
    * May replace the number provided in props.step with alternate styling.
    * The `isSelected`, `isComplete`, and `disabled` props will override these.
    */
-  status?: EuiStepStatus;
+  status?: WuiStepStatus;
 }
 
-export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
+export const WuiStepHorizontal: FunctionComponent<WuiStepHorizontalProps> = ({
   className,
   step = 1,
   title,
@@ -66,11 +79,11 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
   status,
   ...rest
 }) => {
-  const classes = classNames('euiStepHorizontal', className, {
-    'euiStepHorizontal-isSelected': isSelected,
-    'euiStepHorizontal-isComplete': isComplete,
-    'euiStepHorizontal-isIncomplete': !isSelected && !isComplete,
-    'euiStepHorizontal-isDisabled': disabled,
+  const classes = classNames('wuiStepHorizontal', className, {
+    'wuiStepHorizontal-isSelected': isSelected,
+    'wuiStepHorizontal-isComplete': isComplete,
+    'wuiStepHorizontal-isIncomplete': !isSelected && !isComplete,
+    'wuiStepHorizontal-isDisabled': disabled,
   });
 
   if (disabled) {
@@ -89,15 +102,15 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
   };
 
   return (
-    <EuiI18n
-      token="euiStepHorizontal.buttonTitle"
+    <WuiI18n
+      token="wuiStepHorizontal.buttonTitle"
       default={({
         step,
         title,
         disabled,
         isComplete,
       }: Pick<
-        EuiStepHorizontalProps,
+        WuiStepHorizontalProps,
         'step' | 'title' | 'disabled' | 'isComplete'
       >) => {
         let titleAppendix = '';
@@ -111,7 +124,7 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
       }}
       values={{ step, title, disabled, isComplete }}>
       {(buttonTitle: string) => (
-        <EuiKeyboardAccessible>
+        <WuiKeyboardAccessible>
           <div
             role="tab"
             aria-selected={!!isSelected}
@@ -121,22 +134,22 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
             tabIndex={disabled ? -1 : 0}
             title={buttonTitle}
             {...rest}>
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <div>
-                <EuiI18n token="euiStepHorizontal.step" default="Step" />
+                <WuiI18n token="wuiStepHorizontal.step" default="Step" />
               </div>
-            </EuiScreenReaderOnly>
+            </WuiScreenReaderOnly>
 
-            <EuiStepNumber
-              className="euiStepHorizontal__number"
+            <WuiStepNumber
+              className="wuiStepHorizontal__number"
               status={status}
               number={step}
             />
 
-            <div className="euiStepHorizontal__title">{title}</div>
+            <div className="wuiStepHorizontal__title">{title}</div>
           </div>
-        </EuiKeyboardAccessible>
+        </WuiKeyboardAccessible>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

@@ -1,16 +1,16 @@
-.euiPageHeaderSection {
+.wuiPageHeaderSection {
   & + & {
-    margin-left: $euiSizeXL;
+    margin-left: $wuiSizeXL;
   }
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPageHeader--responsive .euiPageHeaderSection {
+@include wuiBreakpoint('xs', 's') {
+  .wuiPageHeader--responsive .wuiPageHeaderSection {
     width: 100%;
 
-    + .euiPageHeaderSection {
+    + .wuiPageHeaderSection {
       margin-left: 0;
-      margin-top: $euiSize;
+      margin-top: $wuiSize;
     }
   }
 }

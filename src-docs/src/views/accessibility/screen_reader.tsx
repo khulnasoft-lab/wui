@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { EuiScreenReaderOnly } from '../../../../src/components/accessibility/screen_reader';
-import { EuiCallOut } from '../../../../src/components/call_out';
-import { EuiText } from '../../../../src/components/text';
-import { EuiTitle } from '../../../../src/components/title';
-import { EuiLink } from '../../../../src/components/link';
+import { WuiScreenReaderOnly } from '../../../../src/components/accessibility/screen_reader';
+import { WuiCallOut } from '../../../../src/components/call_out';
+import { WuiText } from '../../../../src/components/text';
+import { WuiTitle } from '../../../../src/components/title';
+import { WuiLink } from '../../../../src/components/link';
 
 export default () => (
   <div>
-    <EuiText>
-      <EuiTitle size="xxs">
+    <WuiText>
+      <WuiTitle size="xxs">
         <h3>Visually hide content</h3>
-      </EuiTitle>
+      </WuiTitle>
       <p>
         <em>
           Use a screenreader to verify that there is a second paragraph in this
@@ -19,16 +19,16 @@ export default () => (
         </em>
       </p>
       <p>This is the first paragraph. It is visible to all.</p>
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <p>
           This is the second paragraph. It is hidden for sighted users but
           visible to screen readers.
         </p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
       <p>This is the third paragraph. It is visible to all.</p>
-      <EuiTitle size="xxs">
+      <WuiTitle size="xxs">
         <h4>Show on focus</h4>
-      </EuiTitle>
+      </WuiTitle>
       <p>
         <em>
           Tab through this section with your keyboard to display a &lsquo;Skip
@@ -37,15 +37,15 @@ export default () => (
       </p>
       <p>
         This link is visible to all on focus:{' '}
-        <EuiScreenReaderOnly showOnFocus>
-          <EuiLink href="#">Skip navigation</EuiLink>
-        </EuiScreenReaderOnly>
+        <WuiScreenReaderOnly showOnFocus>
+          <WuiLink href="#">Skip navigation</WuiLink>
+        </WuiScreenReaderOnly>
       </p>
-      <EuiCallOut
+      <WuiCallOut
         size="s"
-        title="For a fully styled &lsquo;Skip to main content&rsquo; solution, see the EuiSkipLink component in the next section."
+        title="For a fully styled &lsquo;Skip to main content&rsquo; solution, see the WuiSkipLink component in the next section."
         iconType="iInCircle"
       />
-    </EuiText>
+    </WuiText>
   </div>
 );

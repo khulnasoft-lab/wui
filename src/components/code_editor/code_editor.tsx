@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +36,7 @@ import AceEditor, { IAceEditorProps } from 'react-ace';
 
 import { keysOf } from '../common';
 import { htmlIdGenerator, keys } from '../../services';
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
 const DEFAULT_MODE = 'text';
 const DEFAULT_THEME = 'textmate';
@@ -46,7 +59,7 @@ type SupportedAriaAttribute =
   | 'aria-describedby';
 type SupportedAriaAttributes = Pick<AriaAttributes, SupportedAriaAttribute>;
 
-export interface EuiCodeEditorProps
+export interface WuiCodeEditorProps
   extends SupportedAriaAttributes,
     Omit<IAceEditorProps, 'mode'> {
   width?: string;
@@ -70,21 +83,21 @@ export interface EuiCodeEditorProps
   id?: string;
 }
 
-export interface EuiCodeEditorState {
+export interface WuiCodeEditorState {
   isHintActive: boolean;
   isEditing: boolean;
   name: string;
 }
 
-export class EuiCodeEditor extends Component<
-  EuiCodeEditorProps,
-  EuiCodeEditorState
+export class WuiCodeEditor extends Component<
+  WuiCodeEditorProps,
+  WuiCodeEditorState
 > {
   static defaultProps = {
     setOptions: {},
   };
 
-  state: EuiCodeEditorState = {
+  state: WuiCodeEditorState = {
     isHintActive: true,
     isEditing: false,
     name: htmlIdGenerator()(),
@@ -209,7 +222,7 @@ export class EuiCodeEditor extends Component<
     }
   }
 
-  componentDidUpdate(prevProps: EuiCodeEditorProps) {
+  componentDidUpdate(prevProps: WuiCodeEditorProps) {
     if (this.props.mode !== prevProps.mode && this.isCustomMode()) {
       this.setCustomMode();
     }
@@ -230,12 +243,12 @@ export class EuiCodeEditor extends Component<
       ...rest
     } = this.props;
 
-    const classes = classNames('euiCodeEditorWrapper', {
-      'euiCodeEditorWrapper-isEditing': this.state.isEditing,
+    const classes = classNames('wuiCodeEditorWrapper', {
+      'wuiCodeEditorWrapper-isEditing': this.state.isEditing,
     });
 
-    const promptClasses = classNames('euiCodeEditorKeyboardHint', {
-      'euiCodeEditorKeyboardHint-isInactive': !this.state.isHintActive,
+    const promptClasses = classNames('wuiCodeEditorKeyboardHint', {
+      'wuiCodeEditorKeyboardHint-isInactive': !this.state.isHintActive,
     });
 
     let filteredCursorStart;
@@ -256,7 +269,7 @@ export class EuiCodeEditor extends Component<
       filteredCursorStart = cursorStart;
     }
 
-    // Don't use EuiKeyboardAccessible here because it doesn't play nicely with onKeyDown.
+    // Don't use WuiKeyboardAccessible here because it doesn't play nicely with onKeyDown.
     const prompt = (
       <div
         className={promptClasses}
@@ -269,29 +282,29 @@ export class EuiCodeEditor extends Component<
         onClick={this.startEditing}
         onKeyDown={this.onKeyDownHint}
         data-test-subj="codeEditorHint">
-        <p className="euiText">
+        <p className="wuiText">
           {isReadOnly ? (
-            <EuiI18n
-              token="euiCodeEditor.startInteracting"
+            <WuiI18n
+              token="wuiCodeEditor.startInteracting"
               default="Press Enter to start interacting with the code."
             />
           ) : (
-            <EuiI18n
-              token="euiCodeEditor.startEditing"
+            <WuiI18n
+              token="wuiCodeEditor.startEditing"
               default="Press Enter to start editing."
             />
           )}
         </p>
 
-        <p className="euiText">
+        <p className="wuiText">
           {isReadOnly ? (
-            <EuiI18n
-              token="euiCodeEditor.stopInteracting"
+            <WuiI18n
+              token="wuiCodeEditor.stopInteracting"
               default="When you're done, press Escape to stop interacting with the code."
             />
           ) : (
-            <EuiI18n
-              token="euiCodeEditor.stopEditing"
+            <WuiI18n
+              token="wuiCodeEditor.stopEditing"
               default="When you're done, press Escape to stop editing."
             />
           )}
@@ -308,7 +321,7 @@ export class EuiCodeEditor extends Component<
 
         <AceEditor
           // Setting a default, existing `mode` is necessary to properly initialize the editor
-          // prior to dynamically setting a custom mode (https://github.com/elastic/eui/pull/2616)
+          // prior to dynamically setting a custom mode (https://github.com/wazuh/wui/pull/2616)
           mode={this.isCustomMode() ? DEFAULT_MODE : (mode as string)} // https://github.com/securingsincity/react-ace/pull/771
           name={this.state.name}
           theme={theme}

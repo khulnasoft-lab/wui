@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +32,9 @@
 
 import React, { ComponentType } from 'react';
 
-export const EuiIcon = ({ type, ...rest }: any) => (
+export const WuiIcon = ({ type, ...rest }: any) => (
   <div
-    data-euiicon-type={
+    data-wuiicon-type={
       typeof type === 'string' ? type : type.displayName || type.name
     }
     {...rest}
@@ -31,7 +44,7 @@ export const EuiIcon = ({ type, ...rest }: any) => (
 export const appendIconComponentCache = (_: {
   [iconType: string]: ComponentType;
 }) => {
-  // manually appending to the internal EuiIcon cache is out-of-scope of this test environment
+  // manually appending to the internal WuiIcon cache is out-of-scope of this test environment
 };
 
 export const TYPES = [];

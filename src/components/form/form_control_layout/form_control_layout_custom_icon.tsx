@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,10 +37,10 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiIcon, IconType } from '../../icon';
+import { WuiIcon, IconType } from '../../icon';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
-export type EuiFormControlLayoutCustomIconProps = CommonProps &
+export type WuiFormControlLayoutCustomIconProps = CommonProps &
   ExclusiveUnion<
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>,
     HTMLAttributes<HTMLSpanElement>
@@ -38,15 +51,15 @@ export type EuiFormControlLayoutCustomIconProps = CommonProps &
       | ((el: HTMLButtonElement | HTMLSpanElement | null) => void);
   };
 
-export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLayoutCustomIconProps> = ({
+export const WuiFormControlLayoutCustomIcon: FunctionComponent<WuiFormControlLayoutCustomIconProps> = ({
   className,
   onClick,
   type,
   iconRef,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutCustomIcon', className, {
-    'euiFormControlLayoutCustomIcon--clickable': onClick,
+  const classes = classNames('wuiFormControlLayoutCustomIcon', className, {
+    'wuiFormControlLayoutCustomIcon--clickable': onClick,
   });
 
   if (onClick) {
@@ -57,8 +70,8 @@ export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLay
         className={classes}
         ref={iconRef}
         {...rest}>
-        <EuiIcon
-          className="euiFormControlLayoutCustomIcon__icon"
+        <WuiIcon
+          className="wuiFormControlLayoutCustomIcon__icon"
           aria-hidden="true"
           type={type}
         />
@@ -68,8 +81,8 @@ export const EuiFormControlLayoutCustomIcon: FunctionComponent<EuiFormControlLay
 
   return (
     <span className={classes} ref={iconRef} {...rest}>
-      <EuiIcon
-        className="euiFormControlLayoutCustomIcon__icon"
+      <WuiIcon
+        className="wuiFormControlLayoutCustomIcon__icon"
         aria-hidden="true"
         type={type}
       />

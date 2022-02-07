@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { EuiButton } from '../../../../src/components';
+import { WuiButton } from '../../../../src/components';
 
-import { EuiWindowEvent } from '../../../../src/services';
+import { WuiWindowEvent } from '../../../../src/services';
 
 export const ModalExample = props => {
   const [open, setOpen] = useState(false);
@@ -23,11 +23,11 @@ export const ModalExample = props => {
   };
 
   const { modal: Modal, buttonText = 'Open Modal' } = props;
-  const button = <EuiButton onClick={openModal}>{buttonText}</EuiButton>;
+  const button = <WuiButton onClick={openModal}>{buttonText}</WuiButton>;
 
   return (
     <div>
-      <EuiWindowEvent event="keydown" handler={closeOnEscape} />
+      <WuiWindowEvent event="keydown" handler={closeOnEscape} />
       {open ? <Modal onClose={close} /> : button}
     </div>
   );

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,30 +33,30 @@
 import React, { ButtonHTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiInnerText } from '../inner_text';
+import { WuiInnerText } from '../inner_text';
 
-import { IconType, EuiIcon } from '../icon';
+import { IconType, WuiIcon } from '../icon';
 
 type Props = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     iconType?: IconType;
   };
 
-export const EuiTableHeaderButton: FunctionComponent<Props> = ({
+export const WuiTableHeaderButton: FunctionComponent<Props> = ({
   children,
   className,
   iconType,
   ...rest
 }) => {
-  const classes = classNames('euiTableHeaderButton', className);
+  const classes = classNames('wuiTableHeaderButton', className);
 
   // Add an icon to the button if one exists.
   let buttonIcon;
 
   if (iconType) {
     buttonIcon = (
-      <EuiIcon
-        className="euiTableHeaderButton__icon"
+      <WuiIcon
+        className="wuiTableHeaderButton__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -53,13 +66,13 @@ export const EuiTableHeaderButton: FunctionComponent<Props> = ({
 
   return (
     <button type="button" className={classes} {...rest}>
-      <EuiInnerText>
+      <WuiInnerText>
         {(ref, innerText) => (
           <span title={innerText} ref={ref}>
             {children}
           </span>
         )}
-      </EuiInnerText>
+      </WuiInnerText>
 
       {buttonIcon}
     </button>

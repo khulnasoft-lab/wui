@@ -1,24 +1,24 @@
 import React from 'react';
 
 import {
-  EuiBadge,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiBadge,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup wrap responsive={false} gutterSize="xs">
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="secondary">Healthy</EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="warning">Warning</EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="danger">Critical</EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="default">Unknown</EuiBadge>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup wrap responsive={false} gutterSize="xs">
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="secondary">Healthy</WuiBadge>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="warning">Warning</WuiBadge>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="danger">Critical</WuiBadge>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiBadge color="default">Unknown</WuiBadge>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  WuiDatePicker,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,18 +17,18 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="Time select on">
-        <EuiDatePicker
+      <WuiFormRow label="Time select on">
+        <WuiDatePicker
           showTimeSelect
           selected={startDate}
           onChange={handleChange}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFormRow label="Only time select, 24 hour clock">
-        <EuiDatePicker
+      <WuiFormRow label="Only time select, 24 hour clock">
+        <WuiDatePicker
           showTimeSelect
           showTimeSelectOnly
           selected={startDate}
@@ -36,12 +36,12 @@ export default () => {
           dateFormat="HH:mm"
           timeFormat="HH:mm"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFormRow label="Inject additional times into the list">
-        <EuiDatePicker
+      <WuiFormRow label="Inject additional times into the list">
+        <WuiDatePicker
           showTimeSelect
           showTimeSelectOnly
           selected={startDate}
@@ -60,7 +60,7 @@ export default () => {
               .minutes(59),
           ]}
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </div>
   );
 };

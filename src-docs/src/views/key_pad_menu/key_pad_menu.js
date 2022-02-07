@@ -1,27 +1,27 @@
 import React from 'react';
 
 import {
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
+  WuiIcon,
+  WuiKeyPadMenu,
+  WuiKeyPadMenuItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiKeyPadMenu>
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+  <WuiKeyPadMenu>
+    <WuiKeyPadMenuItem label="Dashboard" href="#">
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+    <WuiKeyPadMenuItem label="Dashboard" href="#">
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+    <WuiKeyPadMenuItem label="Dashboard" href="#">
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem isDisabled label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
-  </EuiKeyPadMenu>
+    <WuiKeyPadMenuItem isDisabled label="Dashboard" href="#">
+      <WuiIcon type="dashboardApp" size="l" />
+    </WuiKeyPadMenuItem>
+  </WuiKeyPadMenu>
 );

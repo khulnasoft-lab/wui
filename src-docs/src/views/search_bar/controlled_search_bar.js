@@ -2,15 +2,15 @@ import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiBasicTable,
-  EuiSearchBar,
-  EuiButton,
+  WuiHealth,
+  WuiCallOut,
+  WuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSwitch,
+  WuiBasicTable,
+  WuiSearchBar,
+  WuiButton,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -50,7 +50,7 @@ const loadTags = () => {
       resolve(
         tags.map(tag => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <WuiHealth color={tag.color}>{tag.name}</WuiHealth>,
         }))
       );
     }, 2000);
@@ -81,24 +81,24 @@ export const ControlledSearchBar = () => {
     return (
       <Fragment>
         <p>Enter a query, or select one from a bookmark</p>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+        <WuiSpacer size="s" />
+        <WuiFlexGroup>
+          <WuiFlexItem grow={false}>
+            <WuiButton
               size="s"
               onClick={() => setQuery('status:open owner:dewey')}>
               mine, open
-            </EuiButton>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+            </WuiButton>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiButton
               size="s"
               onClick={() => setQuery('status:closed owner:dewey')}>
               mine, closed
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="m" />
+            </WuiButton>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiSpacer size="m" />
       </Fragment>
     );
   };
@@ -184,7 +184,7 @@ export const ControlledSearchBar = () => {
     };
 
     return (
-      <EuiSearchBar
+      <WuiSearchBar
         query={query}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -203,12 +203,12 @@ export const ControlledSearchBar = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <WuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <WuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -252,36 +252,36 @@ export const ControlledSearchBar = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = WuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <WuiBasicTable items={queriedItems} columns={columns} />;
   };
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={6}>{renderTable()}</EuiFlexItem>
-    </EuiFlexGroup>
+    <WuiFlexGroup>
+      <WuiFlexItem grow={6}>{renderTable()}</WuiFlexItem>
+    </WuiFlexGroup>
   );
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem>{renderBookmarks()}</EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem>{renderSearch()}</EuiFlexItem>
+      <WuiFlexGroup>
+        <WuiFlexItem>{renderBookmarks()}</WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem>{renderSearch()}</WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={toggleIncremental}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiSpacer size="l" />
       {content}
     </Fragment>
   );

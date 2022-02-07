@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,36 +33,36 @@
 import React, { HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiText } from '../../text';
+import { WuiText } from '../../text';
 
-export type EuiSelectableMessageProps = Omit<
+export type WuiSelectableMessageProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   'color'
 > &
   CommonProps & {
     /**
-     * Match this to the `listProps.bordered` property of your `EuiSelectable` instance
+     * Match this to the `listProps.bordered` property of your `WuiSelectable` instance
      */
     bordered?: boolean;
   };
 
-export const EuiSelectableMessage: React.FunctionComponent<EuiSelectableMessageProps> = ({
+export const WuiSelectableMessage: React.FunctionComponent<WuiSelectableMessageProps> = ({
   children,
   className,
   bordered = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiSelectableMessage',
+    'wuiSelectableMessage',
     {
-      'euiSelectableMessage--bordered': bordered,
+      'wuiSelectableMessage--bordered': bordered,
     },
     className
   );
 
   return (
-    <EuiText color="subdued" size="xs" className={classes} {...rest}>
+    <WuiText color="subdued" size="xs" className={classes} {...rest}>
       {children}
-    </EuiText>
+    </WuiText>
   );
 };

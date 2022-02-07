@@ -1,34 +1,34 @@
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiRange,
-  EuiFormRow,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiRange,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 import {
-  euiPaletteComplimentary,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteGray,
+  wuiPaletteComplimentary,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteCool,
+  wuiPaletteWarm,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteGray,
 } from '../../../../src/services';
 const paletteData = {
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  wuiPaletteForStatus,
+  wuiPaletteForTemperature,
+  wuiPaletteComplimentary,
+  wuiPaletteNegative,
+  wuiPalettePositive,
+  wuiPaletteCool,
+  wuiPaletteWarm,
+  wuiPaletteGray,
 };
 const paletteNames = Object.keys(paletteData);
 
@@ -41,8 +41,8 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFormRow label="Number of steps" display="columnCompressed">
-        <EuiRange
+      <WuiFormRow label="Number of steps" display="columnCompressed">
+        <WuiRange
           value={length}
           onChange={onLengthChange}
           min={1}
@@ -50,29 +50,29 @@ export default () => {
           compressed
           showValue
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
       {paletteNames.map(paletteName => (
-        <EuiFlexGroup alignItems="center" key={paletteName}>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup
+        <WuiFlexGroup alignItems="center" key={paletteName}>
+          <WuiFlexItem grow={false}>
+            <WuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               responsive={false}>
               {paletteData[paletteName](Number(length)).map(hexCode => (
                 <ColorPaletteFlexItem hexCode={hexCode} key={hexCode} />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </WuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem>
             <ColorPaletteCopyCode
               textToCopy={`${paletteName}(${length});`}
               code={`${paletteName}(${length})`}
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
       ))}
     </Fragment>
   );

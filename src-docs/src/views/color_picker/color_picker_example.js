@@ -5,17 +5,17 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiColorPicker,
-  EuiColorPalettePicker,
-  EuiColorStops,
-  EuiSpacer,
-  EuiText,
+  WuiCode,
+  WuiColorPicker,
+  WuiColorPalettePicker,
+  WuiColorStops,
+  WuiSpacer,
+  WuiText,
 } from '../../../../src/components';
 import {
-  EuiColorPalettePickerPaletteTextProps,
-  EuiColorPalettePickerPaletteFixedProps,
-  EuiColorPalettePickerPaletteGradientProps,
+  WuiColorPalettePickerPaletteTextProps,
+  WuiColorPalettePickerPaletteFixedProps,
+  WuiColorPalettePickerPaletteGradientProps,
 } from '!!prop-loader!../../../../src/components/color_picker/color_palette_picker/color_palette_picker';
 
 import playgrounds from './playground';
@@ -23,7 +23,7 @@ import playgrounds from './playground';
 import ColorPicker from './color_picker';
 const colorPickerSource = require('!!raw-loader!./color_picker');
 const colorPickerHtml = renderToHtml(ColorPicker);
-const colorPickerSnippet = `<EuiColorPicker
+const colorPickerSnippet = `<WuiColorPicker
   id={colorPickerId}
   onChange={handleChange}
   color={chosenColor}
@@ -34,12 +34,12 @@ const colorPickerSnippet = `<EuiColorPicker
 import { ColorPalettePicker } from './color_palette_picker';
 const colorPalettePickerSource = require('!!raw-loader!./color_palette_picker');
 const colorPalettePickerHtml = renderToHtml(ColorPalettePicker);
-const colorPalettePickerSnippet = `<EuiColorPalettePicker
+const colorPalettePickerSnippet = `<WuiColorPalettePicker
   palettes={[
     {
       value: 'palette1',
       title: 'Palette 1',
-      palette: euiPaletteColorBlind(),
+      palette: wuiPaletteColorBlind(),
       type: 'fixed',
     },
   ]}
@@ -51,7 +51,7 @@ const colorPalettePickerSnippet = `<EuiColorPalettePicker
 import ColorStops from './color_stops';
 const colorStopsSource = require('!!raw-loader!./color_stops');
 const colorStopsHtml = renderToHtml(ColorStops);
-const colorStopsSnippetStandard = `<EuiColorStops
+const colorStopsSnippetStandard = `<WuiColorStops
   label="Standard"
   onChange={handleChange}
   colorStops={colorStops}
@@ -59,7 +59,7 @@ const colorStopsSnippetStandard = `<EuiColorStops
   max={100}
 />`;
 
-const colorStopsSnippetAdd = `<EuiColorStops
+const colorStopsSnippetAdd = `<WuiColorStops
   label="Custom add color"
   onChange={handleChange}
   colorStops={colorStops}
@@ -68,7 +68,7 @@ const colorStopsSnippetAdd = `<EuiColorStops
   addColor={colorToAddToNewStops}
 />`;
 
-const colorStopsSnippetFixed = `<EuiColorStops
+const colorStopsSnippetFixed = `<WuiColorStops
   label="Fixed color segments"
   onChange={handleChange}
   colorStops={colorStops}
@@ -81,7 +81,7 @@ const colorStopsSnippetFixed = `<EuiColorStops
 import ColorStopsRange from './color_stops_range';
 const colorStopsRangeSource = require('!!raw-loader!./color_stops_range');
 const colorStopsRangeHtml = renderToHtml(ColorStopsRange);
-const colorPickerRangeSnippet = `<EuiColorStops
+const colorPickerRangeSnippet = `<WuiColorStops
   label="Free-range color stops"
   onChange={handleChange}
   colorStops={colorStops}
@@ -91,7 +91,7 @@ const colorPickerRangeSnippet = `<EuiColorStops
 import Alpha from './alpha';
 const alphaSource = require('!!raw-loader!./alpha');
 const alphaHtml = renderToHtml(Alpha);
-const alphaSnippet = `<EuiColorPicker
+const alphaSnippet = `<WuiColorPicker
   id={colorPickerId}
   onChange={handleChange}
   color={chosenColor}
@@ -102,7 +102,7 @@ const alphaSnippet = `<EuiColorPicker
 import Formats from './formats';
 const formatsSource = require('!!raw-loader!./formats');
 const formatsHtml = renderToHtml(Formats);
-const formatsSnippet = `<EuiColorPicker
+const formatsSnippet = `<WuiColorPicker
   format="hex"
   id={colorPickerId}
   onChange={handleChange}
@@ -113,7 +113,7 @@ const formatsSnippet = `<EuiColorPicker
 import CustomSwatches from './custom_swatches';
 const customSwatchesSource = require('!!raw-loader!./custom_swatches');
 const customSwatchesHtml = renderToHtml(CustomSwatches);
-const customSwatchesSnippet = `<EuiColorPicker
+const customSwatchesSnippet = `<WuiColorPicker
   id={colorPickerId}
   onChange={handleChange}
   color={chosenColor}
@@ -126,7 +126,7 @@ const customSwatchesSnippet = `<EuiColorPicker
   ]}
 />`;
 
-const stopCustomSwatchesSnippet = `<EuiColorStops
+const stopCustomSwatchesSnippet = `<WuiColorStops
   label="Swatches"
   onChange={handleChange}
   colorStops={colorStops}
@@ -144,12 +144,12 @@ const stopCustomSwatchesSnippet = `<EuiColorStops
 import CustomButton from './custom_button';
 const customButtonSource = require('!!raw-loader!./custom_button');
 const customButtonHtml = renderToHtml(CustomButton);
-const customButtonSnippet = `<EuiColorPicker
+const customButtonSnippet = `<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   secondaryInputDisplay="top"
   button={
-    <EuiColorPickerSwatch
+    <WuiColorPickerSwatch
       color={chosenColor}
       aria-label="Select a new color"
     />
@@ -157,18 +157,18 @@ const customButtonSnippet = `<EuiColorPicker
 />
 `;
 const customBadgeSnippet = `// Be sure to provide relevant accessibility to unmanaged elements
-<EuiColorPicker
+<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   isInvalid={hasErrors}
   secondaryInputDisplay="bottom"
   button={
-    <EuiBadge
+    <WuiBadge
       color={chosenColor ? chosenColor : 'hollow'}
       onClickAriaLabel="Select a new color"
     >
       I'm a Badge
-    </EuiBadge>
+    </WuiBadge>
   }
 />
 `;
@@ -176,7 +176,7 @@ const customBadgeSnippet = `// Be sure to provide relevant accessibility to unma
 import Empty from './empty_state';
 const emptySource = require('!!raw-loader!./empty_state');
 const emptyHtml = renderToHtml(CustomButton);
-const emptySnippet = `<EuiColorPicker
+const emptySnippet = `<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   placeholder="Auto"
@@ -188,7 +188,7 @@ import Modes from './modes';
 const modesSource = require('!!raw-loader!./modes');
 const modesHtml = renderToHtml(Modes);
 const modesSwatchSnippet = `// Swatches only
-<EuiColorPicker
+<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   isInvalid={hasErrors}
@@ -196,7 +196,7 @@ const modesSwatchSnippet = `// Swatches only
 />
 `;
 const modesPickerSnippet = `// Gradient map only
-<EuiColorPicker
+<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   isInvalid={hasErrors}
@@ -204,7 +204,7 @@ const modesPickerSnippet = `// Gradient map only
 />
 `;
 const stopModesSwatchSnippet = `// Swatches only
-<EuiColorStops
+<WuiColorStops
   label="Swatch"
   onChange={handleChange}
   colorStops={colorStops}
@@ -214,7 +214,7 @@ const stopModesSwatchSnippet = `// Swatches only
 />
 `;
 const stopModesPickerSnippet = `// Gradient map only
-<EuiColorStops
+<WuiColorStops
   label="Picker"
   onChange={handleChange}
   colorStops={colorStops}
@@ -227,7 +227,7 @@ const stopModesPickerSnippet = `// Gradient map only
 import Inline from './inline';
 const inlineSource = require('!!raw-loader!./inline');
 const inlineHtml = renderToHtml(Inline);
-const inlineSnippet = `<EuiColorPicker
+const inlineSnippet = `<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   isInvalid={hasErrors}
@@ -242,7 +242,7 @@ const containersHtml = renderToHtml(Containers);
 import KitchenSink from './kitchen_sink';
 const kitchenSinkSource = require('!!raw-loader!./kitchen_sink');
 const kitchenSinkHtml = renderToHtml(KitchenSink);
-const kitchenSinkSnippet = `<EuiColorPicker
+const kitchenSinkSnippet = `<WuiColorPicker
   onChange={handleChange}
   color={chosenColor}
   isInvalid={hasErrors}
@@ -260,7 +260,7 @@ const kitchenSinkSnippet = `<EuiColorPicker
   ]}
 />
 `;
-const stopKitchenSinkSnippet = `<EuiColorStops
+const stopKitchenSinkSnippet = `<WuiColorStops
   label="All the things"
   onChange={handleChange}
   colorStops={colorStops}
@@ -282,15 +282,15 @@ export const ColorPickerExample = {
   title: 'Color selection',
   intro: (
     <React.Fragment>
-      <EuiText>
+      <WuiText>
         <p>
           Three components exist to aid color selection:{' '}
-          <strong>EuiColorPicker</strong>,{' '}
-          <strong>EuiColorPalettePicker</strong> and{' '}
-          <strong>EuiColorStops</strong>.
+          <strong>WuiColorPicker</strong>,{' '}
+          <strong>WuiColorPalettePicker</strong> and{' '}
+          <strong>WuiColorStops</strong>.
         </p>
-      </EuiText>
-      <EuiSpacer />
+      </WuiText>
+      <WuiSpacer />
     </React.Fragment>
   ),
   sections: [
@@ -298,7 +298,7 @@ export const ColorPickerExample = {
       title: 'Color picker',
       text: (
         <React.Fragment>
-          <EuiText>
+          <WuiText>
             <p>
               Color input component allowing for multiple methods of entry and
               selection.
@@ -312,7 +312,7 @@ export const ColorPickerExample = {
               Swatches allow consumers to predefine preferred or suggested
               choices. The swatches must also be entered in hex or RGBa format.
             </p>
-          </EuiText>
+          </WuiText>
         </React.Fragment>
       ),
       source: [
@@ -325,7 +325,7 @@ export const ColorPickerExample = {
           code: colorPickerHtml,
         },
       ],
-      props: { EuiColorPicker },
+      props: { WuiColorPicker },
       snippet: colorPickerSnippet,
       demo: <ColorPicker />,
     },
@@ -333,19 +333,19 @@ export const ColorPickerExample = {
       title: 'Color palette picker',
       text: (
         <React.Fragment>
-          <EuiText>
+          <WuiText>
             <p>
-              Use <strong>EuiColorPalettePicker</strong> to select palettes to
+              Use <strong>WuiColorPalettePicker</strong> to select palettes to
               apply colors to data visualization like maps and charts.
             </p>
             <p>
-              Use the <EuiCode>palettes</EuiCode> prop to pass your palettes as
+              Use the <WuiCode>palettes</WuiCode> prop to pass your palettes as
               an array of objects. For each object, you should pass a palette
-              (array of hex values) and specify the <EuiCode>type</EuiCode>. Use{' '}
-              <EuiCode>fixed</EuiCode> palettes for categorical data and{' '}
-              <EuiCode>gradient</EuiCode> palettes for continuous data.
+              (array of hex values) and specify the <WuiCode>type</WuiCode>. Use{' '}
+              <WuiCode>fixed</WuiCode> palettes for categorical data and{' '}
+              <WuiCode>gradient</WuiCode> palettes for continuous data.
             </p>
-          </EuiText>
+          </WuiText>
         </React.Fragment>
       ),
       source: [
@@ -359,10 +359,10 @@ export const ColorPickerExample = {
         },
       ],
       props: {
-        EuiColorPalettePicker,
-        EuiColorPalettePickerPaletteTextProps,
-        EuiColorPalettePickerPaletteFixedProps,
-        EuiColorPalettePickerPaletteGradientProps,
+        WuiColorPalettePicker,
+        WuiColorPalettePickerPaletteTextProps,
+        WuiColorPalettePickerPaletteFixedProps,
+        WuiColorPalettePickerPaletteGradientProps,
       },
       snippet: colorPalettePickerSnippet,
       demo: <ColorPalettePicker />,
@@ -371,14 +371,14 @@ export const ColorPickerExample = {
       title: 'Color stops',
       text: (
         <React.Fragment>
-          <EuiText>
+          <WuiText>
             <p>
-              Use <strong>EuiColorStops</strong> to define color stops for data
+              Use <strong>WuiColorStops</strong> to define color stops for data
               driven styling. Stops are numbers within the provided range. The
               color segment spans from the given stop number (inclusive) to the
               next stop number (exclusive).
             </p>
-          </EuiText>
+          </WuiText>
         </React.Fragment>
       ),
       source: [
@@ -391,7 +391,7 @@ export const ColorPickerExample = {
           code: colorStopsHtml,
         },
       ],
-      props: { EuiColorStops },
+      props: { WuiColorStops },
       snippet: [
         colorStopsSnippetStandard,
         colorStopsSnippetAdd,
@@ -403,17 +403,17 @@ export const ColorPickerExample = {
       title: 'Free-range color stops',
       text: (
         <React.Fragment>
-          <EuiText>
+          <WuiText>
             <p>
-              Typical use of <strong>EuiColorStops</strong> (as above) will have
-              defined <EuiCode>min</EuiCode> and <EuiCode>max</EuiCode> range
+              Typical use of <strong>WuiColorStops</strong> (as above) will have
+              defined <WuiCode>min</WuiCode> and <WuiCode>max</WuiCode> range
               values. It is also possible to leave the range open-ended for
               cases where the target data set is unknown or maleable. In this
-              case, a user{"'"}s added values will define <EuiCode>min</EuiCode>{' '}
-              and <EuiCode>max</EuiCode> and users will have more freedom over
+              case, a user{"'"}s added values will define <WuiCode>min</WuiCode>{' '}
+              and <WuiCode>max</WuiCode> and users will have more freedom over
               resetting the values on the fly.
             </p>
-          </EuiText>
+          </WuiText>
         </React.Fragment>
       ),
       source: [
@@ -452,7 +452,7 @@ export const ColorPickerExample = {
           </p>
           <p>
             Swatches will always show the &quot;as-authored&quot; color value,
-            as will the value provided via the <EuiCode>color</EuiCode> prop.
+            as will the value provided via the <WuiCode>color</WuiCode> prop.
           </p>
         </>
       ),
@@ -474,7 +474,7 @@ export const ColorPickerExample = {
       text: (
         <p>
           To allow color opacity via alpha channel, set{' '}
-          <EuiCode language="js">showAlpha=true</EuiCode>. This will also
+          <WuiCode language="js">showAlpha=true</WuiCode>. This will also
           display a range slider allowing manual opacity updates.
         </p>
       ),
@@ -497,7 +497,7 @@ export const ColorPickerExample = {
         <p>
           By default the colors provided are the ten color blind safe
           visualization colors. You can however pass in your own color set with
-          the <EuiCode>swatches</EuiCode> prop.
+          the <WuiCode>swatches</WuiCode> prop.
         </p>
       ),
       snippet: [customSwatchesSnippet, stopCustomSwatchesSnippet],
@@ -518,9 +518,9 @@ export const ColorPickerExample = {
       text: (
         <p>
           By default, both swatch selection and the gradient color map will be
-          rendered. Use the <EuiCode>mode</EuiCode> prop to pass{' '}
-          <EuiCode>swatch</EuiCode> for swatch-only selection, or pass{' '}
-          <EuiCode>picker</EuiCode> for gradient map and hue slider selection
+          rendered. Use the <WuiCode>mode</WuiCode> prop to pass{' '}
+          <WuiCode>swatch</WuiCode> for swatch-only selection, or pass{' '}
+          <WuiCode>picker</WuiCode> for gradient map and hue slider selection
           without swatches.
         </p>
       ),
@@ -547,16 +547,16 @@ export const ColorPickerExample = {
       text: (
         <>
           <p>
-            Available only in <strong>EuiColorPicker</strong>. You can
+            Available only in <strong>WuiColorPicker</strong>. You can
             optionally use a custom button as the trigger for selection using
-            the <EuiCode>button</EuiCode> prop. Please remember to add
+            the <WuiCode>button</WuiCode> prop. Please remember to add
             accessibility to this component, using proper button markup and aria
             labeling.
           </p>
           <p>
-            Additionally, use the <EuiCode>secondaryInputDisplay</EuiCode> prop
+            Additionally, use the <WuiCode>secondaryInputDisplay</WuiCode> prop
             to show a secondary or alternative color value input. Options
-            include <EuiCode>top</EuiCode> and <EuiCode>bottom</EuiCode>{' '}
+            include <WuiCode>top</WuiCode> and <WuiCode>bottom</WuiCode>{' '}
             placement.
           </p>
         </>
@@ -581,9 +581,9 @@ export const ColorPickerExample = {
           <p>
             For instances where an &quot;empty&quot; color picker has meaning
             other than transparent color value, use the{' '}
-            <EuiCode>placeholder</EuiCode> prop to provide context. Removing
+            <WuiCode>placeholder</WuiCode> prop to provide context. Removing
             color selection and returning to the default state can be made
-            easier by setting <EuiCode>isClearable=true</EuiCode>.
+            easier by setting <WuiCode>isClearable=true</WuiCode>.
           </p>
         </>
       ),
@@ -604,10 +604,10 @@ export const ColorPickerExample = {
       ],
       text: (
         <p>
-          Available only in <strong>EuiColorPicker</strong>. Set the{' '}
-          <EuiCode>display</EuiCode> prop to <EuiCode>inline</EuiCode> to
+          Available only in <strong>WuiColorPicker</strong>. Set the{' '}
+          <WuiCode>display</WuiCode> prop to <WuiCode>inline</WuiCode> to
           display the color picker without an input or popover. Note that the{' '}
-          <EuiCode>button</EuiCode> prop will be ignored in this case.
+          <WuiCode>button</WuiCode> prop will be ignored in this case.
         </p>
       ),
       snippet: inlineSnippet,

@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiCard } from '../../../../src/components/';
+import { WuiCard } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -7,9 +7,9 @@ import {
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiCard.__docgenInfo)
-    ? EuiCard.__docgenInfo[0]
-    : EuiCard.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiCard.__docgenInfo)
+    ? WuiCard.__docgenInfo[0]
+    : WuiCard.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title = {
@@ -33,14 +33,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiCard',
+      componentName: 'WuiCard',
       props: propsToUse,
       scope: {
-        EuiCard,
+        WuiCard,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCard'],
+        '@wazuh/wui': {
+          named: ['WuiCard'],
         },
       },
       customProps: {

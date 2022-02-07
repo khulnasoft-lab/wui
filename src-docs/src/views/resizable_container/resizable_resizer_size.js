@@ -1,69 +1,69 @@
 import React from 'react';
 
 import {
-  EuiText,
-  EuiCode,
-  EuiResizableContainer,
+  WuiText,
+  WuiCode,
+  WuiResizableContainer,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiResizableContainer style={{ height: '200px' }}>
-    {(EuiResizablePanel, EuiResizableButton) => (
+  <WuiResizableContainer style={{ height: '200px' }}>
+    {(WuiResizablePanel, WuiResizableButton) => (
       <>
-        <EuiResizablePanel initialSize={35} minSize="100px">
-          <EuiText size="s">
+        <WuiResizablePanel initialSize={35} minSize="100px">
+          <WuiText size="s">
             <p>
-              The <strong>EuiResizableButton</strong> to the right of this{' '}
-              <strong>EuiResizablePanel</strong> uses size <EuiCode>xl</EuiCode>
+              The <strong>WuiResizableButton</strong> to the right of this{' '}
+              <strong>WuiResizablePanel</strong> uses size <WuiCode>xl</WuiCode>
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="xl" />
+        <WuiResizableButton size="xl" />
 
-        <EuiResizablePanel initialSize={25}>
-          <EuiText size="s">
+        <WuiResizablePanel initialSize={25}>
+          <WuiText size="s">
             <p>
-              The <strong>EuiResizableButton</strong> to the right of this{' '}
-              <strong>EuiResizablePanel</strong> uses size <EuiCode>l</EuiCode>
+              The <strong>WuiResizableButton</strong> to the right of this{' '}
+              <strong>WuiResizablePanel</strong> uses size <WuiCode>l</WuiCode>
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="l" />
+        <WuiResizableButton size="l" />
 
-        <EuiResizablePanel initialSize={15}>
-          <EuiText size="s">
+        <WuiResizablePanel initialSize={15}>
+          <WuiText size="s">
             <p>
-              The <strong>EuiResizableButton</strong> to the right of this{' '}
-              <strong>EuiResizablePanel</strong> uses size <EuiCode>m</EuiCode>,
+              The <strong>WuiResizableButton</strong> to the right of this{' '}
+              <strong>WuiResizablePanel</strong> uses size <WuiCode>m</WuiCode>,
               which is the <strong>default</strong> size.
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="m" />
+        <WuiResizableButton size="m" />
 
-        <EuiResizablePanel initialSize={15}>
-          <EuiText size="s">
+        <WuiResizablePanel initialSize={15}>
+          <WuiText size="s">
             <p>
-              The <strong>EuiResizableButton</strong> to the right of this{' '}
-              <strong>EuiResizablePanel</strong> uses size <EuiCode>s</EuiCode>
+              The <strong>WuiResizableButton</strong> to the right of this{' '}
+              <strong>WuiResizablePanel</strong> uses size <WuiCode>s</WuiCode>
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="s" />
+        <WuiResizableButton size="s" />
 
-        <EuiResizablePanel initialSize={10} minSize="100px">
-          <EuiText size="s">
+        <WuiResizablePanel initialSize={10} minSize="100px">
+          <WuiText size="s">
             <p>
-              This is the last <strong>EuiResizablePanel</strong>, so it is not
-              followed by a <strong>EuiResizableButton</strong>
+              This is the last <strong>WuiResizablePanel</strong>, so it is not
+              followed by a <strong>WuiResizableButton</strong>
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
       </>
     )}
-  </EuiResizableContainer>
+  </WuiResizableContainer>
 );

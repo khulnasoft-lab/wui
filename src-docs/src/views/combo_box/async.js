@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { WuiComboBox } from '../../../../src/components';
 
 const allOptionsStatic = [
   {
@@ -97,7 +97,7 @@ export default () => {
   }, [onSearchChange]);
 
   return (
-    <EuiComboBox
+    <WuiComboBox
       placeholder="Search asynchronously"
       async
       options={options}

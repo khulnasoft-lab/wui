@@ -1,17 +1,17 @@
 import React from 'react';
 
 import {
-  EuiPanel,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiPanel,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 const badges = [null, 'Beta', 'Lab'];
 
 const panelNodes = badges.map(function(item, index) {
   return (
-    <EuiFlexItem key={index}>
-      <EuiPanel
+    <WuiFlexItem key={index}>
+      <WuiPanel
         betaBadgeLabel={badges[index]}
         betaBadgeTooltipContent={
           badges[index]
@@ -20,9 +20,9 @@ const panelNodes = badges.map(function(item, index) {
         }
         onClick={() => window.alert('Card clicked')}>
         I am some panel content
-      </EuiPanel>
-    </EuiFlexItem>
+      </WuiPanel>
+    </WuiFlexItem>
   );
 });
 
-export default () => <EuiFlexGroup gutterSize="l">{panelNodes}</EuiFlexGroup>;
+export default () => <WuiFlexGroup gutterSize="l">{panelNodes}</WuiFlexGroup>;

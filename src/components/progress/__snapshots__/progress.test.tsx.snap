@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiProgress has labelProps 1`] = `
+exports[`WuiProgress has labelProps 1`] = `
 Array [
   <div
-    class="euiProgress__data euiProgress__data--secondary"
+    class="wuiProgress__data wuiProgress__data--secondary"
   >
     <span
-      class="euiProgress__valueText"
+      class="wuiProgress__valueText"
     >
       150
     </span>
@@ -14,7 +14,7 @@ Array [
   <progress
     aria-hidden="false"
     aria-label="aria-label"
-    class="euiProgress euiProgress--native euiProgress--m euiProgress--secondary testClass1 testClass2"
+    class="wuiProgress wuiProgress--native wuiProgress--m wuiProgress--secondary testClass1 testClass2"
     data-test-subj="test subject string"
     max="100"
     value="50"
@@ -22,36 +22,36 @@ Array [
 ]
 `;
 
-exports[`EuiProgress has max 1`] = `
+exports[`WuiProgress has max 1`] = `
 <progress
   aria-hidden="false"
   aria-label="aria-label"
-  class="euiProgress euiProgress--native euiProgress--m euiProgress--secondary testClass1 testClass2"
+  class="wuiProgress wuiProgress--native wuiProgress--m wuiProgress--secondary testClass1 testClass2"
   data-test-subj="test subject string"
   max="100"
 />
 `;
 
-exports[`EuiProgress has value 1`] = `
+exports[`WuiProgress has value 1`] = `
 <div
   aria-label="aria-label"
-  class="euiProgress euiProgress--indeterminate euiProgress--m euiProgress--secondary testClass1 testClass2"
+  class="wuiProgress wuiProgress--indeterminate wuiProgress--m wuiProgress--secondary testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiProgress has valueText and label 1`] = `
+exports[`WuiProgress has valueText and label 1`] = `
 Array [
   <div
-    class="euiProgress__data euiProgress__data--secondary"
+    class="wuiProgress__data wuiProgress__data--secondary"
   >
     <span
-      class="euiProgress__label"
+      class="wuiProgress__label"
     >
       Label
     </span>
     <span
-      class="euiProgress__valueText"
+      class="wuiProgress__valueText"
     >
       150
     </span>
@@ -59,7 +59,7 @@ Array [
   <progress
     aria-hidden="true"
     aria-label="aria-label"
-    class="euiProgress euiProgress--native euiProgress--m euiProgress--secondary testClass1 testClass2"
+    class="wuiProgress wuiProgress--native wuiProgress--m wuiProgress--secondary testClass1 testClass2"
     data-test-subj="test subject string"
     max="100"
     value="50"
@@ -67,40 +67,40 @@ Array [
 ]
 `;
 
-exports[`EuiProgress is determinate 1`] = `
+exports[`WuiProgress is determinate 1`] = `
 <progress
   aria-hidden="false"
   aria-label="aria-label"
-  class="euiProgress euiProgress--native euiProgress--m euiProgress--secondary testClass1 testClass2"
+  class="wuiProgress wuiProgress--native wuiProgress--m wuiProgress--secondary testClass1 testClass2"
   data-test-subj="test subject string"
   max="100"
   value="50"
 />
 `;
 
-exports[`EuiProgress is indeterminate 1`] = `
+exports[`WuiProgress is indeterminate 1`] = `
 <div
   aria-label="aria-label"
-  class="euiProgress euiProgress--indeterminate euiProgress--m euiProgress--secondary testClass1 testClass2"
+  class="wuiProgress wuiProgress--indeterminate wuiProgress--m wuiProgress--secondary testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiProgress is rendered 1`] = `
+exports[`WuiProgress is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiProgress euiProgress--indeterminate euiProgress--m euiProgress--secondary testClass1 testClass2"
+  class="wuiProgress wuiProgress--indeterminate wuiProgress--m wuiProgress--secondary testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiProgress valueText is true 1`] = `
+exports[`WuiProgress valueText is true 1`] = `
 Array [
   <div
-    class="euiProgress__data euiProgress__data--secondary"
+    class="wuiProgress__data wuiProgress__data--secondary"
   >
     <span
-      class="euiProgress__valueText"
+      class="wuiProgress__valueText"
     >
       50%
     </span>
@@ -108,7 +108,7 @@ Array [
   <progress
     aria-hidden="false"
     aria-label="aria-label"
-    class="euiProgress euiProgress--native euiProgress--m euiProgress--secondary testClass1 testClass2"
+    class="wuiProgress wuiProgress--native wuiProgress--m wuiProgress--secondary testClass1 testClass2"
     data-test-subj="test subject string"
     max="100"
     value="50"

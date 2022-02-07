@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,22 +35,22 @@ import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
 const sizeToClassNameMap = {
-  s: 'euiLoadingSpinner--small',
-  m: 'euiLoadingSpinner--medium',
-  l: 'euiLoadingSpinner--large',
-  xl: 'euiLoadingSpinner--xLarge',
+  s: 'wuiLoadingSpinner--small',
+  m: 'wuiLoadingSpinner--medium',
+  l: 'wuiLoadingSpinner--large',
+  xl: 'wuiLoadingSpinner--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
+export type WuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
 
-export const EuiLoadingSpinner: FunctionComponent<CommonProps &
+export const WuiLoadingSpinner: FunctionComponent<CommonProps &
   HTMLAttributes<HTMLDivElement> & {
-    size?: EuiLoadingSpinnerSize;
+    size?: WuiLoadingSpinnerSize;
   }> = ({ size = 'm', className, ...rest }) => {
   const classes = classNames(
-    'euiLoadingSpinner',
+    'wuiLoadingSpinner',
     sizeToClassNameMap[size],
     className
   );

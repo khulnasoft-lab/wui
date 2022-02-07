@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 
 import moment from 'moment';
 
-import { EuiDatePicker, EuiButton } from '../../../../src/components';
+import { WuiDatePicker, WuiButton } from '../../../../src/components';
 
 // Should be a component because the date picker does some ref stuff behind the scenes
 // eslint-disable-next-line react/prefer-stateless-function
 class ExampleCustomInput extends React.Component {
   render() {
     return (
-      <EuiButton className="example-custom-input" onClick={this.props.onClick}>
+      <WuiButton className="example-custom-input" onClick={this.props.onClick}>
         {this.props.value}
-      </EuiButton>
+      </WuiButton>
     );
   }
 }
@@ -43,7 +43,7 @@ export default class extends Component {
 
   render() {
     return (
-      <EuiDatePicker
+      <WuiDatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
         customInput={<ExampleCustomInput />}

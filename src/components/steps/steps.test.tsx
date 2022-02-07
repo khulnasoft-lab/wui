@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,9 +34,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiContainedStepProps, EuiSteps } from './steps';
+import { WuiContainedStepProps, WuiSteps } from './steps';
 
-const steps: EuiContainedStepProps[] = [
+const steps: WuiContainedStepProps[] = [
   {
     title: 'first title',
     children: <p>Do this first</p>,
@@ -39,16 +52,16 @@ const steps: EuiContainedStepProps[] = [
   },
 ];
 
-describe('EuiSteps', () => {
+describe('WuiSteps', () => {
   test('renders steps', () => {
-    const component = render(<EuiSteps {...requiredProps} steps={steps} />);
+    const component = render(<WuiSteps {...requiredProps} steps={steps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders steps with firstStepNumber', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
+      <WuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
     );
 
     expect(component).toMatchSnapshot();
@@ -56,7 +69,7 @@ describe('EuiSteps', () => {
 
   test('renders steps with titleSize', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} titleSize="xs" />
+      <WuiSteps {...requiredProps} steps={steps} titleSize="xs" />
     );
 
     expect(component).toMatchSnapshot();
@@ -64,7 +77,7 @@ describe('EuiSteps', () => {
 
   test('renders step title inside "headingElement" element', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} headingElement="h2" />
+      <WuiSteps {...requiredProps} steps={steps} headingElement="h2" />
     );
 
     expect(component).toMatchSnapshot();

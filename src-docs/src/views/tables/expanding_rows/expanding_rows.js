@@ -3,11 +3,11 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiButtonIcon,
-  EuiHealth,
-  EuiButton,
-  EuiDescriptionList,
+  WuiBasicTable,
+  WuiButtonIcon,
+  WuiHealth,
+  WuiButton,
+  WuiDescriptionList,
 } from '../../../../../src/components';
 
 import { RIGHT_ALIGNMENT } from '../../../../../src/services';
@@ -70,9 +70,9 @@ export const Table = () => {
       return;
     }
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <WuiButton color="danger" iconType="trash" onClick={onClickDelete}>
         Delete {selectedItems.length} Users
-      </EuiButton>
+      </WuiButton>
     );
   };
 
@@ -92,11 +92,11 @@ export const Table = () => {
         },
         {
           title: 'Online',
-          description: <EuiHealth color={color}>{label}</EuiHealth>,
+          description: <WuiHealth color={color}>{label}</WuiHealth>,
         },
       ];
       itemIdToExpandedRowMapValues[item.id] = (
-        <EuiDescriptionList listItems={listItems} />
+        <WuiDescriptionList listItems={listItems} />
       );
     }
     setItemIdToExpandedRowMap(itemIdToExpandedRowMapValues);
@@ -161,7 +161,7 @@ export const Table = () => {
       width: '40px',
       isExpander: true,
       render: item => (
-        <EuiButtonIcon
+        <WuiButtonIcon
           onClick={() => toggleDetails(item)}
           aria-label={itemIdToExpandedRowMap[item.id] ? 'Collapse' : 'Expand'}
           iconType={itemIdToExpandedRowMap[item.id] ? 'arrowUp' : 'arrowDown'}
@@ -194,7 +194,7 @@ export const Table = () => {
   return (
     <Fragment>
       {deleteButton}
-      <EuiBasicTable
+      <WuiBasicTable
         items={pageOfItems}
         itemId="id"
         itemIdToExpandedRowMap={itemIdToExpandedRowMap}

@@ -1,16 +1,16 @@
 import React, { Fragment, useState } from 'react';
 import {
-  EuiButton,
-  EuiCode,
-  EuiFlyout,
-  EuiFlyoutFooter,
-  EuiFlyoutHeader,
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverTitle,
-  EuiSelectable,
-  EuiSpacer,
-  EuiTitle,
+  WuiButton,
+  WuiCode,
+  WuiFlyout,
+  WuiFlyoutFooter,
+  WuiFlyoutHeader,
+  WuiPopover,
+  WuiPopoverFooter,
+  WuiPopoverTitle,
+  WuiSelectable,
+  WuiSpacer,
+  WuiTitle,
 } from '../../../../src/components';
 import { Comparators } from '../../../../src/services/sort';
 
@@ -57,20 +57,20 @@ export default () => {
   };
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <WuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </WuiButton>
   );
 
   return (
     <Fragment>
-      <EuiPopover
+      <WuiPopover
         id="popover"
         panelPaddingSize="none"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
-        <EuiSelectable
+        <WuiSelectable
           searchable
           searchProps={{
             placeholder: 'Filter list',
@@ -80,25 +80,25 @@ export default () => {
           onChange={onChange}>
           {(list, search) => (
             <div style={{ width: 240 }}>
-              <EuiPopoverTitle>{search}</EuiPopoverTitle>
+              <WuiPopoverTitle>{search}</WuiPopoverTitle>
               {list}
-              <EuiPopoverFooter>
-                <EuiButton size="s" fullWidth>
+              <WuiPopoverFooter>
+                <WuiButton size="s" fullWidth>
                   Manage this list
-                </EuiButton>
-              </EuiPopoverFooter>
+                </WuiButton>
+              </WuiPopoverFooter>
             </div>
           )}
-        </EuiSelectable>
-      </EuiPopover>
+        </WuiSelectable>
+      </WuiPopover>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiButton onClick={showFlyout}>Show flyout</EuiButton>
+      <WuiButton onClick={showFlyout}>Show flyout</WuiButton>
 
       {isFlyoutVisible && (
-        <EuiFlyout ownFocus onClose={closeFlyout} aria-labelledby="flyoutTitle">
-          <EuiSelectable
+        <WuiFlyout ownFocus onClose={closeFlyout} aria-labelledby="flyoutTitle">
+          <WuiSelectable
             aria-label="Popover example"
             searchable
             options={countries}
@@ -106,43 +106,43 @@ export default () => {
             height="full">
             {(list, search) => (
               <Fragment>
-                <EuiFlyoutHeader hasBorder>
-                  <EuiTitle size="m">
+                <WuiFlyoutHeader hasBorder>
+                  <WuiTitle size="m">
                     <h2 id="flyoutTitle">Be mindful of the flexbox</h2>
-                  </EuiTitle>
-                  <EuiSpacer />
+                  </WuiTitle>
+                  <WuiSpacer />
                   {search}
-                </EuiFlyoutHeader>
-                <EuiSpacer size="xs" />
+                </WuiFlyoutHeader>
+                <WuiSpacer size="xs" />
                 {list}
               </Fragment>
             )}
-          </EuiSelectable>
-          <EuiSpacer size="xs" />
-          <EuiFlyoutFooter>
-            <EuiButton fill>Some extra action</EuiButton>
-          </EuiFlyoutFooter>
-        </EuiFlyout>
+          </WuiSelectable>
+          <WuiSpacer size="xs" />
+          <WuiFlyoutFooter>
+            <WuiButton fill>Some extra action</WuiButton>
+          </WuiFlyoutFooter>
+        </WuiFlyout>
       )}
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiTitle size="xxs">
+      <WuiTitle size="xxs">
         <h4>
-          Using <EuiCode language="js">listProps.bordered=true</EuiCode>
+          Using <WuiCode language="js">listProps.bordered=true</WuiCode>
         </h4>
-      </EuiTitle>
+      </WuiTitle>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiSelectable
+      <WuiSelectable
         aria-label="Bordered selectable example"
         options={options}
         onChange={() => {}}
         style={{ width: 300 }}
         listProps={{ bordered: true }}>
         {list => list}
-      </EuiSelectable>
+      </WuiSelectable>
     </Fragment>
   );
 };

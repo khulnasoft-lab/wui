@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiSuperDatePicker,
-  EuiSwitch,
-  EuiSpacer,
+  WuiSuperDatePicker,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -69,26 +69,26 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiSwitch
+      <WuiSwitch
         label="Show update button"
         onChange={toggleShowApplyButton}
         checked={!isAutoRefreshOnly && showUpdateButton}
         disabled={isAutoRefreshOnly}
       />
       &emsp;
-      <EuiSwitch
+      <WuiSwitch
         label="Is auto-refresh only"
         onChange={toggleShowRefreshOnly}
         checked={isAutoRefreshOnly}
       />
       &emsp;
-      <EuiSwitch
+      <WuiSwitch
         label="Is disabled"
         onChange={toggleDisabled}
         checked={isDisabled}
       />
-      <EuiSpacer />
-      <EuiSuperDatePicker
+      <WuiSpacer />
+      <WuiSuperDatePicker
         isDisabled={isDisabled}
         isLoading={isLoading}
         start={start}
@@ -102,7 +102,7 @@ export default () => {
         showUpdateButton={showUpdateButton}
         isAutoRefreshOnly={isAutoRefreshOnly}
       />
-      <EuiSpacer />
+      <WuiSpacer />
     </Fragment>
   );
 };

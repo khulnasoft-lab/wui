@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -37,22 +50,22 @@ import {
 import { useMouseMove, getChromaColor } from '../utils';
 import { keys } from '../../../services';
 
-import { EuiButtonIcon } from '../../button';
-import { EuiColorPicker, EuiColorPickerProps } from '../color_picker';
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiFieldNumber, EuiFormRow } from '../../form';
-import { EuiI18n } from '../../i18n';
-import { EuiPopover } from '../../popover';
-import { EuiScreenReaderOnly } from '../../accessibility';
-import { EuiSpacer } from '../../spacer';
-import { EuiRangeThumb } from '../../form/range/range_thumb';
+import { WuiButtonIcon } from '../../button';
+import { WuiColorPicker, WuiColorPickerProps } from '../color_picker';
+import { WuiFlexGroup, WuiFlexItem } from '../../flex';
+import { WuiFieldNumber, WuiFormRow } from '../../form';
+import { WuiI18n } from '../../i18n';
+import { WuiPopover } from '../../popover';
+import { WuiScreenReaderOnly } from '../../accessibility';
+import { WuiSpacer } from '../../spacer';
+import { WuiRangeThumb } from '../../form/range/range_thumb';
 
 export interface ColorStop {
   stop: number;
   color: string;
 }
 
-interface EuiColorStopThumbProps extends CommonProps, ColorStop {
+interface WuiColorStopThumbProps extends CommonProps, ColorStop {
   className?: string;
   onChange: (colorStop: ColorStop) => void;
   onFocus?: () => void;
@@ -66,9 +79,9 @@ interface EuiColorStopThumbProps extends CommonProps, ColorStop {
   isRangeMin?: boolean;
   isRangeMax?: boolean;
   parentRef?: HTMLDivElement | null;
-  colorPickerMode: EuiColorPickerProps['mode'];
-  colorPickerShowAlpha?: EuiColorPickerProps['showAlpha'];
-  colorPickerSwatches?: EuiColorPickerProps['swatches'];
+  colorPickerMode: WuiColorPickerProps['mode'];
+  colorPickerShowAlpha?: WuiColorPickerProps['showAlpha'];
+  colorPickerSwatches?: WuiColorPickerProps['swatches'];
   disabled?: boolean;
   readOnly?: boolean;
   isPopoverOpen: boolean;
@@ -78,7 +91,7 @@ interface EuiColorStopThumbProps extends CommonProps, ColorStop {
   'aria-valuetext'?: string;
 }
 
-export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
+export const WuiColorStopThumb: FunctionComponent<WuiColorStopThumbProps> = ({
   className,
   stop,
   color,
@@ -115,7 +128,7 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
   );
   const [stopIsInvalid, setStopIsInvalid] = useState(isStopInvalid(stop));
   const [numberInputRef, setNumberInputRef] = useState();
-  const popoverRef = useRef<EuiPopover>(null);
+  const popoverRef = useRef<WuiPopover>(null);
 
   useEffect(() => {
     if (isPopoverOpen && popoverRef && popoverRef.current) {
@@ -244,9 +257,9 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
   };
 
   const classes = classNames(
-    'euiColorStopPopover',
+    'wuiColorStopPopover',
     {
-      'euiColorStopPopover-hasFocus': hasFocus || isPopoverOpen,
+      'wuiColorStopPopover-hasFocus': hasFocus || isPopoverOpen,
     },
     className
   );
@@ -254,26 +267,26 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
   // console.log('render', stop);
 
   return (
-    <EuiPopover
+    <WuiPopover
       ref={popoverRef}
       className={classes}
-      anchorClassName="euiColorStopPopover__anchor"
+      anchorClassName="wuiColorStopPopover__anchor"
       panelPaddingSize="s"
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       ownFocus={isPopoverOpen}
       initialFocus={numberInputRef}
       panelClassName={
-        numberInputRef ? undefined : 'euiColorStopPopover-isLoadingPanel'
+        numberInputRef ? undefined : 'wuiColorStopPopover-isLoadingPanel'
       }
       style={{
         left: `${getPositionFromStopFn(stop)}%`,
       }}
       button={
-        <EuiI18n
+        <WuiI18n
           tokens={[
-            'euiColorStopThumb.buttonAriaLabel',
-            'euiColorStopThumb.buttonTitle',
+            'wuiColorStopThumb.buttonAriaLabel',
+            'wuiColorStopThumb.buttonTitle',
           ]}
           defaults={[
             'Press the Enter key to modify this stop. Press Escape to focus the group',
@@ -283,8 +296,8 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
             const ariaLabel = buttonAriaLabel as string;
             const title = buttonTitle as string;
             return (
-              <EuiRangeThumb
-                data-test-subj="euiColorStopThumb"
+              <WuiRangeThumb
+                data-test-subj="wuiColorStopThumb"
                 data-index={dataIndex}
                 min={localMin}
                 max={localMax}
@@ -300,7 +313,7 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
                 aria-valuetext={ariaValueText}
                 aria-label={ariaLabel}
                 title={title}
-                className="euiColorStopThumb"
+                className="wuiColorStopThumb"
                 tabIndex={-1}
                 style={{
                   background,
@@ -309,34 +322,34 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
               />
             );
           }}
-        </EuiI18n>
+        </WuiI18n>
       }>
-      <div className="euiColorStop" data-test-subj="euiColorStopPopover">
-        <EuiScreenReaderOnly>
+      <div className="wuiColorStop" data-test-subj="wuiColorStopPopover">
+        <WuiScreenReaderOnly>
           <p aria-live="polite">
-            <EuiI18n
-              token="euiColorStopThumb.screenReaderAnnouncement"
+            <WuiI18n
+              token="wuiColorStopThumb.screenReaderAnnouncement"
               default="A popup with a color stop edit form opened.
             Tab forward to cycle through form controls or press
             escape to close this popup."
             />
           </p>
-        </EuiScreenReaderOnly>
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiI18n
+        </WuiScreenReaderOnly>
+        <WuiFlexGroup gutterSize="s" responsive={false}>
+          <WuiFlexItem>
+            <WuiI18n
               tokens={[
-                'euiColorStopThumb.stopLabel',
-                'euiColorStopThumb.stopErrorMessage',
+                'wuiColorStopThumb.stopLabel',
+                'wuiColorStopThumb.stopErrorMessage',
               ]}
               defaults={['Stop value', 'Value is out of range']}>
               {([stopLabel, stopErrorMessage]: React.ReactChild[]) => (
-                <EuiFormRow
+                <WuiFormRow
                   label={stopLabel}
                   display="rowCompressed"
                   isInvalid={stopIsInvalid}
                   error={stopIsInvalid ? stopErrorMessage : null}>
-                  <EuiFieldNumber
+                  <WuiFieldNumber
                     inputRef={setNumberInputRef}
                     compressed={true}
                     readOnly={readOnly}
@@ -346,18 +359,18 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
                     isInvalid={stopIsInvalid}
                     onChange={handleStopInputChange}
                   />
-                </EuiFormRow>
+                </WuiFormRow>
               )}
-            </EuiI18n>
-          </EuiFlexItem>
+            </WuiI18n>
+          </WuiFlexItem>
           {!readOnly && (
-            <EuiFlexItem grow={false}>
-              <EuiFormRow display="rowCompressed" hasEmptyLabelSpace={true}>
-                <EuiI18n
-                  token="euiColorStopThumb.removeLabel"
+            <WuiFlexItem grow={false}>
+              <WuiFormRow display="rowCompressed" hasEmptyLabelSpace={true}>
+                <WuiI18n
+                  token="wuiColorStopThumb.removeLabel"
                   default="Remove this stop">
                   {(removeLabel: string) => (
-                    <EuiButtonIcon
+                    <WuiButtonIcon
                       iconType="trash"
                       color="danger"
                       aria-label={removeLabel}
@@ -366,13 +379,13 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
                       onClick={handleOnRemove}
                     />
                   )}
-                </EuiI18n>
-              </EuiFormRow>
-            </EuiFlexItem>
+                </WuiI18n>
+              </WuiFormRow>
+            </WuiFlexItem>
           )}
-        </EuiFlexGroup>
-        {!readOnly && <EuiSpacer size="s" />}
-        <EuiColorPicker
+        </WuiFlexGroup>
+        {!readOnly && <WuiSpacer size="s" />}
+        <WuiColorPicker
           readOnly={readOnly}
           onChange={handleColorChange}
           color={color}
@@ -386,6 +399,6 @@ export const EuiColorStopThumb: FunctionComponent<EuiColorStopThumbProps> = ({
           }
         />
       </div>
-    </EuiPopover>
+    </WuiPopover>
   );
 };

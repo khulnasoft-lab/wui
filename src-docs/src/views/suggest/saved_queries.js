@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSuggest,
-  EuiSuperDatePicker,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSuggest,
+  WuiSuperDatePicker,
 } from '../../../../src/components';
 
 import { GlobalFilterBar } from './global_filter_bar';
@@ -16,22 +16,22 @@ const shortDescription = 'This is the description';
 
 const sampleItems = [
   {
-    type: { iconType: 'kqlField', color: 'tint4' },
+    type: { iconType: 'qryField', color: 'tint4' },
     label: 'Field sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlValue', color: 'tint0' },
+    type: { iconType: 'qryValue', color: 'tint0' },
     label: 'Value sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlSelector', color: 'tint2' },
+    type: { iconType: 'qrySelector', color: 'tint2' },
     label: 'Conjunction sample',
     description: shortDescription,
   },
   {
-    type: { iconType: 'kqlOperand', color: 'tint1' },
+    type: { iconType: 'qryOperand', color: 'tint1' },
     label: 'Operator sample',
     description: shortDescription,
   },
@@ -109,15 +109,15 @@ export default () => {
     alert('Time changed');
   };
 
-  const append = <EuiButtonEmpty>KQL</EuiButtonEmpty>;
+  const append = <WuiButtonEmpty>QRY</WuiButtonEmpty>;
 
   return (
     <div className="savedQueriesInput">
-      <EuiFlexGroup
+      <WuiFlexGroup
         gutterSize="s"
         className={hideDatepicker ? 'savedQueriesInput__hideDatepicker' : ''}>
-        <EuiFlexItem>
-          <EuiSuggest
+        <WuiFlexItem>
+          <WuiSuggest
             status={status}
             onFocus={onFieldFocus}
             onBlur={onFieldBlur}
@@ -127,26 +127,26 @@ export default () => {
             onItemClick={onItemClick}
             onInputChange={getInputValue}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false} className="savedQueriesInput__datepicker">
-          <EuiSuperDatePicker onTimeChange={onTimeChange} />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiFlexGroup
+        </WuiFlexItem>
+        <WuiFlexItem grow={false} className="savedQueriesInput__datepicker">
+          <WuiSuperDatePicker onTimeChange={onTimeChange} />
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiFlexGroup
         className="globalFilterGroup"
         gutterSize="none"
         alignItems="flexStart"
         responsive={false}>
-        <EuiFlexItem className="globalFilterGroup__branch" grow={false}>
+        <WuiFlexItem className="globalFilterGroup__branch" grow={false}>
           <GlobalFilterOptions />
-        </EuiFlexItem>
-        <EuiFlexItem className="globalFilterGroup__filterFlexItem">
+        </WuiFlexItem>
+        <WuiFlexItem className="globalFilterGroup__filterFlexItem">
           <GlobalFilterBar
             className="globalFilterGroup__filterBar"
             filters={filters}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

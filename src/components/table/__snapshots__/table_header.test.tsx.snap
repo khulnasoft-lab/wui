@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTableHeader is rendered 1`] = `
+exports[`WuiTableHeader is rendered 1`] = `
 Array [
   <thead
     aria-label="aria-label"

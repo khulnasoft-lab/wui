@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiAccordion, EuiText } from '../../../../src/components/';
+import { WuiAccordion, WuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   createOptionalEnum,
@@ -8,9 +8,9 @@ import {
 } from '../../services/playground';
 
 export const accordionConfig = () => {
-  const docgenInfo = Array.isArray(EuiAccordion.__docgenInfo)
-    ? EuiAccordion.__docgenInfo[0]
-    : EuiAccordion.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiAccordion.__docgenInfo)
+    ? WuiAccordion.__docgenInfo[0]
+    : WuiAccordion.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.buttonContent = {
@@ -20,11 +20,11 @@ export const accordionConfig = () => {
   };
 
   propsToUse.children = {
-    value: `<EuiText>
+    value: `<WuiText>
     <p>
-      Any content inside of <strong>EuiAccordion</strong> will appear here.
+      Any content inside of <strong>WuiAccordion</strong> will appear here.
     </p>
-  </EuiText>`,
+  </WuiText>`,
     type: PropTypes.ReactNode,
     hidden: false,
   };
@@ -35,15 +35,15 @@ export const accordionConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiAccordion',
+      componentName: 'WuiAccordion',
       props: propsToUse,
       scope: {
-        EuiAccordion,
-        EuiText,
+        WuiAccordion,
+        WuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAccordion', 'EuiText'],
+        '@wazuh/wui': {
+          named: ['WuiAccordion', 'WuiText'],
         },
       },
       customProps: {

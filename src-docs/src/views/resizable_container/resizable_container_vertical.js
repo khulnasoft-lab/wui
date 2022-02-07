@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiText, EuiResizableContainer } from '../../../../src/components';
+import { WuiText, WuiResizableContainer } from '../../../../src/components';
 import { fake } from 'faker';
 
 const text = (
@@ -12,23 +12,23 @@ const text = (
 );
 
 export default () => (
-  <EuiResizableContainer style={{ height: '600px' }} direction="vertical">
-    {(EuiResizablePanel, EuiResizableButton) => (
+  <WuiResizableContainer style={{ height: '600px' }} direction="vertical">
+    {(WuiResizablePanel, WuiResizableButton) => (
       <>
-        <EuiResizablePanel initialSize={60} minSize="40%">
-          <EuiText>
+        <WuiResizablePanel initialSize={60} minSize="40%">
+          <WuiText>
             <p>{text}</p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="xl" />
+        <WuiResizableButton size="xl" />
 
-        <EuiResizablePanel initialSize={40} minSize="10%">
-          <EuiText>
+        <WuiResizablePanel initialSize={40} minSize="10%">
+          <WuiText>
             <p>{text}</p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
       </>
     )}
-  </EuiResizableContainer>
+  </WuiResizableContainer>
 );

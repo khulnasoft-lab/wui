@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,8 +34,8 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 
 import {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerPaletteProps,
+  WuiColorPalettePicker,
+  WuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';
 import { requiredProps, takeMountedSnapshot } from '../../../test';
 
@@ -30,7 +43,7 @@ jest.mock('./../../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'generated-id',
 }));
 
-const palettes: EuiColorPalettePickerPaletteProps[] = [
+const palettes: WuiColorPalettePickerPaletteProps[] = [
   {
     value: 'paletteFixed',
     title: 'Palette 1',
@@ -80,10 +93,10 @@ const palettes: EuiColorPalettePickerPaletteProps[] = [
   },
 ];
 
-describe('EuiColorPalettePicker', () => {
+describe('WuiColorPalettePicker', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -95,7 +108,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected fixed palette', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -108,7 +121,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected gradient palette', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -121,7 +134,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected gradient palette with stops', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -134,7 +147,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected custom text', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -147,7 +160,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with the prop selectionDisplay set as title ', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -161,7 +174,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('more props are propagated to each option', () => {
     const component = mount(
-      <EuiColorPalettePicker
+      <WuiColorPalettePicker
         palettes={palettes}
         valueOfSelected="paletteFixed"
         onChange={() => {}}

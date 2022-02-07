@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNavItem } from './side_nav_item';
+import { WuiSideNavItem } from './side_nav_item';
 
-describe('EuiSideNavItem', () => {
+describe('WuiSideNavItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSideNavItem>
+      <WuiSideNavItem>
         <button {...requiredProps} />
-      </EuiSideNavItem>
+      </WuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +49,9 @@ describe('EuiSideNavItem', () => {
 
   test("preserves child's classes", () => {
     const component = render(
-      <EuiSideNavItem>
+      <WuiSideNavItem>
         <button className="test" />
-      </EuiSideNavItem>
+      </WuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -47,9 +60,9 @@ describe('EuiSideNavItem', () => {
   describe('isSelected', () => {
     test('defaults to false', () => {
       const component = render(
-        <EuiSideNavItem>
+        <WuiSideNavItem>
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -57,9 +70,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered when specified as true', () => {
       const component = render(
-        <EuiSideNavItem isSelected>
+        <WuiSideNavItem isSelected>
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -69,9 +82,9 @@ describe('EuiSideNavItem', () => {
   describe('href', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSideNavItem href="#">
+        <WuiSideNavItem href="#">
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -79,9 +92,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered with rel', () => {
       const component = render(
-        <EuiSideNavItem href="#" rel="noopener">
+        <WuiSideNavItem href="#" rel="noopener">
           <button />
-        </EuiSideNavItem>
+        </WuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();

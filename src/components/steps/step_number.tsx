@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,49 +33,49 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
-import { EuiStepProps } from './step';
+import { WuiStepProps } from './step';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 import { CommonProps, keysOf } from '../common';
 
 const statusToClassNameMap = {
-  complete: 'euiStepNumber--complete',
-  incomplete: 'euiStepNumber--incomplete',
-  warning: 'euiStepNumber--warning',
-  danger: 'euiStepNumber--danger',
-  disabled: 'euiStepNumber--disabled',
+  complete: 'wuiStepNumber--complete',
+  incomplete: 'wuiStepNumber--incomplete',
+  warning: 'wuiStepNumber--warning',
+  danger: 'wuiStepNumber--danger',
+  disabled: 'wuiStepNumber--disabled',
 };
 
 export const STATUS = keysOf(statusToClassNameMap);
 
-export type EuiStepStatus =
+export type WuiStepStatus =
   | 'complete'
   | 'incomplete'
   | 'warning'
   | 'danger'
   | 'disabled';
 
-export interface EuiStepNumberProps
+export interface WuiStepNumberProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
    * May replace the number provided in props.number with alternate styling
    */
-  status?: EuiStepStatus;
+  status?: WuiStepStatus;
   number?: number;
   /**
    * Uses a border and removes the step number
    */
   isHollow?: boolean;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to WuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: EuiStepProps['titleSize'];
+  titleSize?: WuiStepProps['titleSize'];
 }
 
-export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
+export const WuiStepNumber: FunctionComponent<WuiStepNumberProps> = ({
   className,
   status,
   number,
@@ -71,10 +84,10 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiStepNumber',
+    'wuiStepNumber',
     status ? statusToClassNameMap[status] : undefined,
     {
-      'euiStepNumber-isHollow': isHollow,
+      'wuiStepNumber-isHollow': isHollow,
     },
     className
   );
@@ -84,42 +97,42 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
   let numberOrIcon;
   if (status === 'complete') {
     numberOrIcon = (
-      <EuiI18n token="euiStepNumber.isComplete" default="complete">
+      <WuiI18n token="wuiStepNumber.isComplete" default="complete">
         {(isComplete: string) => (
-          <EuiIcon
+          <WuiIcon
             type="check"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             size={iconSize}
             aria-label={isComplete}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   } else if (status === 'warning') {
     numberOrIcon = (
-      <EuiI18n token="euiStepNumber.hasWarnings" default="has warnings">
+      <WuiI18n token="wuiStepNumber.hasWarnings" default="has warnings">
         {(hasWarnings: string) => (
-          <EuiIcon
+          <WuiIcon
             type="alert"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             size={iconSize}
             aria-label={hasWarnings}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   } else if (status === 'danger') {
     numberOrIcon = (
-      <EuiI18n token="euiStepNumber.hasErrors" default="has errors">
+      <WuiI18n token="wuiStepNumber.hasErrors" default="has errors">
         {(hasErrors: string) => (
-          <EuiIcon
+          <WuiIcon
             type="cross"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             size={iconSize}
             aria-label={hasErrors}
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   } else if (!isHollow) {
     numberOrIcon = number;

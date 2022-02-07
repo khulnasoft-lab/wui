@@ -3,14 +3,14 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiSpacer,
+  WuiBasicTable,
+  WuiLink,
+  WuiHealth,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -73,11 +73,11 @@ export const Table = () => {
     }
 
     return (
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <WuiFlexItem grow={false}>
+        <WuiButton color="danger" iconType="trash" onClick={onClickDelete}>
           Delete {selectedItems.length} Users
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
     );
   };
 
@@ -116,18 +116,18 @@ export const Table = () => {
           {
             render: item => {
               return (
-                <EuiLink color="secondary" onClick={() => cloneUser(item)}>
+                <WuiLink color="secondary" onClick={() => cloneUser(item)}>
                   Clone
-                </EuiLink>
+                </WuiLink>
               );
             },
           },
           {
             render: item => {
               return (
-                <EuiLink color="danger" onClick={() => deleteUser(item)}>
+                <WuiLink color="danger" onClick={() => deleteUser(item)}>
                   Delete
-                </EuiLink>
+                </WuiLink>
               );
             },
           },
@@ -170,11 +170,11 @@ export const Table = () => {
             'data-test-subj': 'action-share',
           },
           {
-            name: 'Elastic.co',
-            description: 'Go to elastic.co',
-            icon: 'logoElastic',
+            name: 'Wazuh.co',
+            description: 'Go to wazuh.co',
+            icon: 'logoWazuh',
             type: 'icon',
-            href: 'https://elastic.co',
+            href: 'https://wazuh.com',
             target: '_blank',
             'data-test-subj': 'action-outboundlink',
           },
@@ -185,21 +185,21 @@ export const Table = () => {
           {
             render: item => {
               return (
-                <EuiLink onClick={() => deleteUser(item)} color="danger">
+                <WuiLink onClick={() => deleteUser(item)} color="danger">
                   Delete
-                </EuiLink>
+                </WuiLink>
               );
             },
           },
         ]
       : [
           {
-            name: 'Elastic.co',
-            description: 'Go to elastic.co',
+            name: 'Wazuh.co',
+            description: 'Go to wazuh.co',
             icon: 'editorLink',
             color: 'primary',
             type: 'icon',
-            href: 'https://elastic.co',
+            href: 'https://wazuh.co',
             target: '_blank',
             'data-test-subj': 'action-outboundlink',
           },
@@ -236,9 +236,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -263,7 +263,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
       sortable: true,
     },
@@ -296,28 +296,28 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Multiple Actions"
             checked={multiAction}
             onChange={toggleMultiAction}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label="Custom Actions"
             checked={customAction}
             onChange={toggleCustomAction}
           />
-        </EuiFlexItem>
-        <EuiFlexItem />
+        </WuiFlexItem>
+        <WuiFlexItem />
         {deleteButton}
-      </EuiFlexGroup>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiBasicTable
+      <WuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

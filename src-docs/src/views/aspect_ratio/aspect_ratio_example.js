@@ -4,10 +4,10 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiLink,
-  EuiCallOut,
-  EuiAspectRatio,
-  EuiSpacer,
+  WuiLink,
+  WuiCallOut,
+  WuiAspectRatio,
+  WuiSpacer,
 } from '../../../../src/components';
 import aspectRatioConfig from './playground';
 
@@ -15,9 +15,9 @@ import AspectRatio from './aspect_ratio';
 const aspectRatioSource = require('!!raw-loader!./aspect_ratio');
 const aspectRatioHtml = renderToHtml(AspectRatio);
 
-const aspectRatioSnippet = `<EuiAspectRatio width={16} height={9}>
+const aspectRatioSnippet = `<WuiAspectRatio width={16} height={9}>
   <!-- Embed goes here -->
-</EuiAspectRatio>`;
+</WuiAspectRatio>`;
 
 export const AspectRatioExample = {
   title: 'Aspect ratio',
@@ -35,26 +35,26 @@ export const AspectRatioExample = {
       ],
       text: (
         <Fragment>
-          <EuiCallOut
+          <WuiCallOut
             size="s"
             color="warning"
             title="In some cases, aspect ratio sizing may not be supported by the embed. This component will only work with ones that do, like YouTube."
           />
-          <EuiSpacer />
+          <WuiSpacer />
           <p>
-            <strong>EuiAspectRatio</strong> provides a way to responsively
+            <strong>WuiAspectRatio</strong> provides a way to responsively
             resize a single block level child element to a specificied ratio.
             This is useful for things like YouTube iframes or other embeds that
             initially have a fixed size. If you need something similar for
             images, take a look at CSS&apos;s{' '}
-            <EuiLink href="https://www.w3schools.com/css/css3_object-fit.asp">
+            <WuiLink href="https://www.w3schools.com/css/css3_object-fit.asp">
               object-fit property
-            </EuiLink>
+            </WuiLink>
             .
           </p>
         </Fragment>
       ),
-      props: { EuiAspectRatio },
+      props: { WuiAspectRatio },
       demo: <AspectRatio />,
       snippet: aspectRatioSnippet,
     },

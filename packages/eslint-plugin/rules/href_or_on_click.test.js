@@ -11,40 +11,40 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('@elastic/eui/href-or-on-click', rule, {
+ruleTester.run('@wazuh/wui/href-or-on-click', rule, {
   valid: [
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton />
+          <WuiButton />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href="/" />
+          <WuiButton href="/" />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href={'/' + 'home'} />
+          <WuiButton href={'/' + 'home'} />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton onClick={executeAction} />
+          <WuiButton onClick={executeAction} />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton onClick={() => executeAction()} />
+          <WuiButton onClick={() => executeAction()} />
         )
       `),
     },
@@ -54,40 +54,40 @@ ruleTester.run('@elastic/eui/href-or-on-click', rule, {
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href="/" onClick={fooBar} />
+          <WuiButton href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
-          message: '<EuiButton> accepts either `href` or `onClick`, not both.',
+          message: '<WuiButton> accepts either `href` or `onClick`, not both.',
         },
       ],
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButtonEmpty href="/" onClick={fooBar} />
+          <WuiButtonEmpty href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
           message:
-            '<EuiButtonEmpty> accepts either `href` or `onClick`, not both.',
+            '<WuiButtonEmpty> accepts either `href` or `onClick`, not both.',
         },
       ],
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiLink href="/" onClick={fooBar} />
+          <WuiLink href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
-          message: '<EuiLink> accepts either `href` or `onClick`, not both.',
+          message: '<WuiLink> accepts either `href` or `onClick`, not both.',
         },
       ],
     },

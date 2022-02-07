@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiShowFor,
-  EuiFormRow,
-  EuiButtonToggle,
-  EuiToolTip,
-  EuiButtonIcon,
-  EuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiHeader,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderBreadcrumbs,
+  WuiHeaderLogo,
+  WuiHeaderSectionItemButton,
+  WuiIcon,
+  WuiShowFor,
+  WuiFormRow,
+  WuiButtonToggle,
+  WuiToolTip,
+  WuiButtonIcon,
+  WuiButtonEmpty,
 } from '../../../../../src/components';
 import classNames from 'classnames';
 import DatePicker from './datepicker';
@@ -28,12 +28,12 @@ export default ({ isNavDrawerLocked, navDrawerRef }) => {
   const onToggleAdvancedChange = e => setToggleAdvanced(e.target.checked);
 
   const headerClasses = classNames(
-    { 'euiNavDrawer--expanded': isNavDrawerLocked },
-    { 'euiHeader--collapsed': !toggleAdvanced }
+    { 'wuiNavDrawer--expanded': isNavDrawerLocked },
+    { 'wuiHeader--collapsed': !toggleAdvanced }
   );
 
   const renderLogo = () => (
-    <EuiHeaderLogo
+    <WuiHeaderLogo
       iconType="logoWazuh"
       href="#/layout/nav-drawer"
       aria-label="Goes to home"
@@ -41,11 +41,11 @@ export default ({ isNavDrawerLocked, navDrawerRef }) => {
   );
 
   const renderMenuTrigger = () => (
-    <EuiHeaderSectionItemButton
+    <WuiHeaderSectionItemButton
       aria-label="Open nav"
       onClick={() => navDrawerRef.current.toggleOpen()}>
-      <EuiIcon type="apps" href="#" size="m" />
-    </EuiHeaderSectionItemButton>
+      <WuiIcon type="apps" href="#" size="m" />
+    </WuiHeaderSectionItemButton>
   );
 
   const renderBreadcrumbs = () => {
@@ -72,69 +72,69 @@ export default ({ isNavDrawerLocked, navDrawerRef }) => {
       },
     ];
 
-    return <EuiHeaderBreadcrumbs breadcrumbs={breadcrumbs} />;
+    return <WuiHeaderBreadcrumbs breadcrumbs={breadcrumbs} />;
   };
 
   return (
     <>
-      <EuiHeader position="fixed">
-        <EuiHeaderSection grow={false}>
-          <EuiShowFor sizes={['xs', 's']}>
-            <EuiHeaderSectionItem border="right">
+      <WuiHeader position="fixed">
+        <WuiHeaderSection grow={false}>
+          <WuiShowFor sizes={['xs', 's']}>
+            <WuiHeaderSectionItem border="right">
               {renderMenuTrigger()}
-            </EuiHeaderSectionItem>
-          </EuiShowFor>
-          <EuiHeaderSectionItem border="right">
+            </WuiHeaderSectionItem>
+          </WuiShowFor>
+          <WuiHeaderSectionItem border="right">
             {renderLogo()}
-          </EuiHeaderSectionItem>
-          <EuiHeaderSectionItem border="right">
+          </WuiHeaderSectionItem>
+          <WuiHeaderSectionItem border="right">
             {renderBreadcrumbs()}
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
         {/* Basic filters */}
-        <EuiHeaderSection grow={false}>
-          <EuiHeaderSectionItem>
+        <WuiHeaderSection grow={false}>
+          <WuiHeaderSectionItem>
             {!toggleAdvanced ? (
-              <EuiFlexGroup gutterSize="xs" justifyContent="spaceEvenly">
-                <EuiFlexItem grow={false}>
-                  <EuiFormRow display="rowCompressed">
+              <WuiFlexGroup gutterSize="xs" justifyContent="spaceEvenly">
+                <WuiFlexItem grow={false}>
+                  <WuiFormRow display="rowCompressed">
                     <MultiSelect />
-                  </EuiFormRow>
-                </EuiFlexItem>
-                <EuiFlexItem grow={false}>
-                  <EuiFormRow display="rowCompressed">
+                  </WuiFormRow>
+                </WuiFlexItem>
+                <WuiFlexItem grow={false}>
+                  <WuiFormRow display="rowCompressed">
                     <MultiSelect />
-                  </EuiFormRow>
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                  </WuiFormRow>
+                </WuiFlexItem>
+              </WuiFlexGroup>
             ) : (
               <></>
             )}
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-        <EuiHeaderSection grow={false}>
-          <EuiHeaderSectionItem>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
+        <WuiHeaderSection grow={false}>
+          <WuiHeaderSectionItem>
             {!toggleAdvanced ? (
-              <EuiFlexGroup gutterSize="l">
-                <EuiFlexItem grow={false}>
-                  <EuiFormRow display="rowCompressed">
+              <WuiFlexGroup gutterSize="l">
+                <WuiFlexItem grow={false}>
+                  <WuiFormRow display="rowCompressed">
                     <DatePicker />
-                  </EuiFormRow>
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                  </WuiFormRow>
+                </WuiFlexItem>
+              </WuiFlexGroup>
             ) : (
               <></>
             )}
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
         {/**** Notifications ****/}
-        <EuiHeaderSection grow={false}>
+        <WuiHeaderSection grow={false}>
           {/**** Advanced button ****/}
-          <EuiHeaderSectionItem>
-            <EuiFormRow display="rowCompressed">
-              <EuiToolTip content="Advanced search">
+          <WuiHeaderSectionItem>
+            <WuiFormRow display="rowCompressed">
+              <WuiToolTip content="Advanced search">
                 <Notice active={true} top={45} right={3}>
-                  <EuiButtonToggle
+                  <WuiButtonToggle
                     iconType="controlsHorizontal"
                     label={'Advanced'}
                     aria-label={'Advanced'}
@@ -144,14 +144,14 @@ export default ({ isNavDrawerLocked, navDrawerRef }) => {
                     size={'s'}
                   />
                 </Notice>
-              </EuiToolTip>
-            </EuiFormRow>
-          </EuiHeaderSectionItem>
-          <EuiHeaderSectionItem>
-            <EuiFormRow display="rowCompressed">
-              <EuiToolTip content="Notifications">
+              </WuiToolTip>
+            </WuiFormRow>
+          </WuiHeaderSectionItem>
+          <WuiHeaderSectionItem>
+            <WuiFormRow display="rowCompressed">
+              <WuiToolTip content="Notifications">
                 <Notice active={true} top={20} right={21}>
-                  <EuiButtonIcon
+                  <WuiButtonIcon
                     iconType="bell"
                     aria-label={'Notifications'}
                     label={'Notifications'}
@@ -160,45 +160,45 @@ export default ({ isNavDrawerLocked, navDrawerRef }) => {
                     iconSize={'s'}
                   />
                 </Notice>
-              </EuiToolTip>
-            </EuiFormRow>
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-      </EuiHeader>
+              </WuiToolTip>
+            </WuiFormRow>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
+      </WuiHeader>
       {/**** Advanced Filtering Navbar ****/}
-      <EuiHeader position="fixed" className={headerClasses}>
-        <EuiHeaderSection grow>
-          <EuiHeaderSectionItem grow>
+      <WuiHeader position="fixed" className={headerClasses}>
+        <WuiHeaderSection grow>
+          <WuiHeaderSectionItem grow>
             <Searchbar />
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-      </EuiHeader>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
+      </WuiHeader>
       {/**** Selected Items Navbar ****/}
-      <EuiHeader position="fixed" className={headerClasses}>
-        <EuiHeaderSection grow={false}>
-          <EuiHeaderSectionItem>
-            <EuiToolTip content="Add filter">
-              <EuiButtonIcon
+      <WuiHeader position="fixed" className={headerClasses}>
+        <WuiHeaderSection grow={false}>
+          <WuiHeaderSectionItem>
+            <WuiToolTip content="Add filter">
+              <WuiButtonIcon
                 size="s"
                 aria-label="Add filter"
                 iconType="plusInCircle"
               />
-            </EuiToolTip>
-            <EuiButtonEmpty>agent.name: Windows 3.11</EuiButtonEmpty>
-            <EuiButtonIcon
+            </WuiToolTip>
+            <WuiButtonEmpty>agent.name: Windows 3.11</WuiButtonEmpty>
+            <WuiButtonIcon
               size="s"
               aria-label="Remove filter"
               iconType="cross"
             />
-            <EuiButtonEmpty>rule.level: 14</EuiButtonEmpty>
-            <EuiButtonIcon
+            <WuiButtonEmpty>rule.level: 14</WuiButtonEmpty>
+            <WuiButtonIcon
               size="s"
               aria-label="Remove filter"
               iconType="cross"
             />
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-      </EuiHeader>
+          </WuiHeaderSectionItem>
+        </WuiHeaderSection>
+      </WuiHeader>
     </>
   );
 };

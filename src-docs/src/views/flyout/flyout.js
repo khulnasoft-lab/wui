@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiButton,
-  EuiText,
-  EuiTitle,
-  EuiCodeBlock,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutHeader,
+  WuiButton,
+  WuiText,
+  WuiTitle,
+  WuiCodeBlock,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,47 +15,47 @@ export default () => {
 
   let flyout;
 
-  const htmlCode = `<EuiFlyout ...>
-  <EuiFlyoutHeader hasBorder>
-    <EuiTitle size="m">
+  const htmlCode = `<WuiFlyout ...>
+  <WuiFlyoutHeader hasBorder>
+    <WuiTitle size="m">
       <h2></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </WuiTitle>
+  </WuiFlyoutHeader>
+  <WuiFlyoutBody>
     ...
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </WuiFlyoutBody>
+</WuiFlyout>
 `;
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         ownFocus
         onClose={() => setIsFlyoutVisible(false)}
         aria-labelledby="flyoutTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="m">
             <h2 id="flyoutTitle">A typical flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </WuiTitle>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody>
+          <WuiText>
             <p>
               For consistency across the many flyouts, please utilize the
               following code for implementing the flyout with a header.
             </p>
-          </EuiText>
-          <EuiCodeBlock language="html">{htmlCode}</EuiCodeBlock>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </WuiText>
+          <WuiCodeBlock language="html">{htmlCode}</WuiCodeBlock>
+        </WuiFlyoutBody>
+      </WuiFlyout>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={() => setIsFlyoutVisible(true)}>
+      <WuiButton onClick={() => setIsFlyoutVisible(true)}>
         Show flyout
-      </EuiButton>
+      </WuiButton>
       {flyout}
     </div>
   );

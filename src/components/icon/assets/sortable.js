@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconSortable = ({ title, titleId, ...props }) => (
+const WuiIconSortable = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconSortable = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconSortable;
+export const icon = WuiIconSortable;

@@ -1,39 +1,39 @@
 import React from 'react';
 
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { WuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
     <p>xs: 4px</p>
-    <EuiSpacer size="xs" />
+    <WuiSpacer size="xs" />
 
     <br />
     <br />
 
     <p>s: 8px</p>
-    <EuiSpacer size="s" />
+    <WuiSpacer size="s" />
 
     <br />
     <br />
 
     <p>m: 16px</p>
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
     <br />
     <br />
 
     <p>l: 24px (this is the default)</p>
-    <EuiSpacer />
+    <WuiSpacer />
 
     <br />
     <br />
 
     <p>xl: 32px</p>
-    <EuiSpacer size="xl" />
+    <WuiSpacer size="xl" />
 
     <br />
     <br />
     <p>xxl: 40px</p>
-    <EuiSpacer size="xxl" />
+    <WuiSpacer size="xxl" />
   </div>
 );

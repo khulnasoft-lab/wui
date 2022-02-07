@@ -1,75 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiStepNumber is rendered 1`] = `
+exports[`WuiStepNumber is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiStepNumber testClass1 testClass2"
+  class="wuiStepNumber testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiStepNumber props has titleSize is rendered 1`] = `
+exports[`WuiStepNumber props has titleSize is rendered 1`] = `
 <div
-  class="euiStepNumber"
+  class="wuiStepNumber"
 >
   1
 </div>
 `;
 
-exports[`EuiStepNumber props isHollow is rendered 1`] = `
+exports[`WuiStepNumber props isHollow is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber-isHollow"
+  class="wuiStepNumber wuiStepNumber-isHollow"
 />
 `;
 
-exports[`EuiStepNumber props status complete is rendered 1`] = `
+exports[`WuiStepNumber props status complete is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber--complete"
+  class="wuiStepNumber wuiStepNumber--complete"
 >
   <div
     aria-label="complete"
-    class="euiStepNumber__icon"
-    data-euiicon-type="check"
+    class="wuiStepNumber__icon"
+    data-wuiicon-type="check"
   />
 </div>
 `;
 
-exports[`EuiStepNumber props status danger is rendered 1`] = `
+exports[`WuiStepNumber props status danger is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber--danger"
+  class="wuiStepNumber wuiStepNumber--danger"
 >
   <div
     aria-label="has errors"
-    class="euiStepNumber__icon"
-    data-euiicon-type="cross"
+    class="wuiStepNumber__icon"
+    data-wuiicon-type="cross"
   />
 </div>
 `;
 
-exports[`EuiStepNumber props status disabled is rendered 1`] = `
+exports[`WuiStepNumber props status disabled is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber--disabled"
+  class="wuiStepNumber wuiStepNumber--disabled"
 >
   1
 </div>
 `;
 
-exports[`EuiStepNumber props status incomplete is rendered 1`] = `
+exports[`WuiStepNumber props status incomplete is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber--incomplete"
+  class="wuiStepNumber wuiStepNumber--incomplete"
 >
   1
 </div>
 `;
 
-exports[`EuiStepNumber props status warning is rendered 1`] = `
+exports[`WuiStepNumber props status warning is rendered 1`] = `
 <div
-  class="euiStepNumber euiStepNumber--warning"
+  class="wuiStepNumber wuiStepNumber--warning"
 >
   <div
     aria-label="has warnings"
-    class="euiStepNumber__icon"
-    data-euiicon-type="alert"
+    class="wuiStepNumber__icon"
+    data-wuiicon-type="alert"
   />
 </div>
 `;

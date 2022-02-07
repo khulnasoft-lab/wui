@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,34 +35,34 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
 
-import { EuiIcon } from '../icon';
-import { EuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
+import { WuiI18n } from '../i18n';
 
 const statusToClassNameMap = {
-  complete: 'euiTourStepIndicator--complete',
-  incomplete: 'euiTourStepIndicator--incomplete',
-  active: 'euiTourStepIndicator--active',
+  complete: 'wuiTourStepIndicator--complete',
+  incomplete: 'wuiTourStepIndicator--incomplete',
+  active: 'wuiTourStepIndicator--active',
 };
 
 export const STATUS = keysOf(statusToClassNameMap);
 
-export type EuiTourStepStatus = keyof typeof statusToClassNameMap;
+export type WuiTourStepStatus = keyof typeof statusToClassNameMap;
 
-export interface EuiTourStepIndicatorProps
+export interface WuiTourStepIndicatorProps
   extends CommonProps,
     HTMLAttributes<HTMLLIElement> {
   number: number;
-  status: EuiTourStepStatus;
+  status: WuiTourStepStatus;
 }
 
-export const EuiTourStepIndicator: FunctionComponent<EuiTourStepIndicatorProps> = ({
+export const WuiTourStepIndicator: FunctionComponent<WuiTourStepIndicatorProps> = ({
   className,
   number,
   status,
   ...rest
 }) => {
   const classes = classNames(
-    'euiTourStepIndicator',
+    'wuiTourStepIndicator',
     status ? statusToClassNameMap[status] : undefined,
     className
   );
@@ -57,50 +70,50 @@ export const EuiTourStepIndicator: FunctionComponent<EuiTourStepIndicatorProps> 
   let indicatorIcon: ReactNode;
   if (status === 'active') {
     indicatorIcon = (
-      <EuiI18n token="euiTourStepIndicator.isActive" default="active">
+      <WuiI18n token="wuiTourStepIndicator.isActive" default="active">
         {(isActive: string) => (
-          <EuiIcon
+          <WuiIcon
             type="dot"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             aria-label={isActive}
             color="secondary"
             aria-current="step"
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   } else if (status === 'complete') {
     indicatorIcon = (
-      <EuiI18n token="euiTourStepIndicator.isComplete" default="complete">
+      <WuiI18n token="wuiTourStepIndicator.isComplete" default="complete">
         {(isComplete: string) => (
-          <EuiIcon
+          <WuiIcon
             type="dot"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             aria-label={isComplete}
             color="subdued"
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   } else if (status === 'incomplete') {
     indicatorIcon = (
-      <EuiI18n token="euiTourStepIndicator.isIncomplete" default="incomplete">
+      <WuiI18n token="wuiTourStepIndicator.isIncomplete" default="incomplete">
         {(isIncomplete: string) => (
-          <EuiIcon
+          <WuiIcon
             type="dot"
-            className="euiStepNumber__icon"
+            className="wuiStepNumber__icon"
             aria-label={isIncomplete}
             color="subdued"
           />
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 
   return (
-    <EuiI18n
-      token="euiTourStepIndicator.ariaLabel"
-      default={({ status }: { status: EuiTourStepStatus }) => {
+    <WuiI18n
+      token="wuiTourStepIndicator.ariaLabel"
+      default={({ status }: { status: WuiTourStepStatus }) => {
         return `Step ${number} ${status}`;
       }}
       values={{ status }}>
@@ -109,6 +122,6 @@ export const EuiTourStepIndicator: FunctionComponent<EuiTourStepIndicatorProps> 
           {indicatorIcon}
         </li>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

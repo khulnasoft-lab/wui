@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,12 +38,12 @@ import { CommonProps } from '../../common';
 type Border = 'left' | 'right' | 'none';
 
 const borderToClassNameMap: { [border in Border]: string | undefined } = {
-  left: 'euiHeaderSectionItem--borderLeft',
-  right: 'euiHeaderSectionItem--borderRight',
+  left: 'wuiHeaderSectionItem--borderLeft',
+  right: 'wuiHeaderSectionItem--borderRight',
   none: undefined,
 };
 
-export type EuiHeaderSectionItemProps = CommonProps & {
+export type WuiHeaderSectionItemProps = CommonProps & {
   /**
    * Side to display a short border on.
    * Not supported in Wazuh theme.
@@ -43,7 +56,7 @@ export type EuiHeaderSectionItemProps = CommonProps & {
   children?: ReactNode;
 };
 
-export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> = ({
+export const WuiHeaderSectionItem: FunctionComponent<WuiHeaderSectionItemProps> = ({
   border = 'left',
   grow = false,
   children,
@@ -51,9 +64,9 @@ export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> 
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSectionItem',
+    'wuiHeaderSectionItem',
     borderToClassNameMap[border],
-    { 'euiHeaderSectionItem--grow': grow },
+    { 'wuiHeaderSectionItem--grow': grow },
     className
   );
 

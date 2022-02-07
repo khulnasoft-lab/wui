@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../../test';
 
-import { EuiTabbedContent, AUTOFOCUS } from './tabbed_content';
+import { WuiTabbedContent, AUTOFOCUS } from './tabbed_content';
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
 jest.mock('../../../services/accessibility/html_id_generator', () => ({
@@ -30,25 +43,25 @@ jest.mock('../../../services/accessibility/html_id_generator', () => ({
   },
 }));
 
-const elasticsearchTab = {
+const wazuhsearchTab = {
   id: 'es',
-  name: 'Elasticsearch',
-  content: <p>Elasticsearch content</p>,
+  name: 'Wazuhsearch',
+  content: <p>Wazuhsearch content</p>,
 };
 
-const kibanaTab = {
-  id: 'kibana',
-  name: <strong>Kibana</strong>,
-  'data-test-subj': 'kibanaTab',
-  content: <p>Kibana content</p>,
+const wazuhTab = {
+  id: 'wazuh',
+  name: <strong>Wazuh</strong>,
+  'data-test-subj': 'wazuhTab',
+  content: <p>Wazuh content</p>,
 };
 
-const tabs = [elasticsearchTab, kibanaTab];
+const tabs = [wazuhsearchTab, wazuhTab];
 
-describe('EuiTabbedContent', () => {
+describe('WuiTabbedContent', () => {
   test('is rendered with required props and tabs', () => {
     const component = render(
-      <EuiTabbedContent {...requiredProps} tabs={tabs} />
+      <WuiTabbedContent {...requiredProps} tabs={tabs} />
     );
     expect(component).toMatchSnapshot();
   });
@@ -58,18 +71,18 @@ describe('EuiTabbedContent', () => {
       test('is called when a tab is clicked', () => {
         const onTabClickHandler = jest.fn();
         const component = mount(
-          <EuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
+          <WuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
         );
-        findTestSubject(component, 'kibanaTab').simulate('click');
+        findTestSubject(component, 'wazuhTab').simulate('click');
         expect(onTabClickHandler).toBeCalledTimes(1);
-        expect(onTabClickHandler).toBeCalledWith(kibanaTab);
+        expect(onTabClickHandler).toBeCalledWith(wazuhTab);
       });
     });
 
     describe('selectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent selectedTab={wazuhTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -78,7 +91,7 @@ describe('EuiTabbedContent', () => {
     describe('initialSelectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
+          <WuiTabbedContent initialSelectedTab={wazuhTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -86,7 +99,7 @@ describe('EuiTabbedContent', () => {
 
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<EuiTabbedContent size="s" tabs={tabs} />);
+        const component = render(<WuiTabbedContent size="s" tabs={tabs} />);
         expect(component).toMatchSnapshot();
       });
     });
@@ -94,7 +107,7 @@ describe('EuiTabbedContent', () => {
     describe('display', () => {
       test('can be condensed', () => {
         const component = render(
-          <EuiTabbedContent display="condensed" tabs={tabs} />
+          <WuiTabbedContent display="condensed" tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -104,7 +117,7 @@ describe('EuiTabbedContent', () => {
       AUTOFOCUS.forEach(focusType => {
         test(`${focusType} is rendered`, () => {
           const component = render(
-            <EuiTabbedContent autoFocus={focusType} tabs={tabs} />
+            <WuiTabbedContent autoFocus={focusType} tabs={tabs} />
           );
 
           expect(component).toMatchSnapshot();
@@ -115,30 +128,30 @@ describe('EuiTabbedContent', () => {
 
   describe('behavior', () => {
     test("when selected tab state isn't controlled by the owner, select the first tab by default", () => {
-      const component = render(<EuiTabbedContent tabs={tabs} />);
+      const component = render(<WuiTabbedContent tabs={tabs} />);
       expect(component).toMatchSnapshot();
     });
 
     test('when uncontrolled, the selected tab should update if it receives new content', () => {
       const tabs = [
-        elasticsearchTab,
+        wazuhsearchTab,
         {
-          ...kibanaTab,
+          ...wazuhTab,
         },
       ];
-      const component = mount(<EuiTabbedContent tabs={tabs} />);
+      const component = mount(<WuiTabbedContent tabs={tabs} />);
 
       component
-        .find('EuiTab[id="kibana"] button')
+        .find('WuiTab[id="wazuh"] button')
         .first()
         .simulate('click');
 
       component.setProps({
         tabs: [
-          elasticsearchTab,
+          wazuhsearchTab,
           {
-            ...kibanaTab,
-            content: <p>updated Kibana content</p>,
+            ...wazuhTab,
+            content: <p>updated Wazuh content</p>,
           },
         ],
       });

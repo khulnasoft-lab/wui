@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,25 +34,25 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldNumber } from './field_number';
+import { WuiFieldNumber } from './field_number';
 
 jest.mock('../form_control_layout', () => {
   const formControlLayout = require.requireActual('../form_control_layout');
   return {
     ...formControlLayout,
-    EuiFormControlLayout: 'eui-form-control-layout',
+    WuiFormControlLayout: 'wui-form-control-layout',
   };
 });
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  WuiValidatableControl: 'wui-validatable-control',
 }));
 
-describe('EuiFieldNumber', () => {
+describe('WuiFieldNumber', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldNumber
+      <WuiFieldNumber
         id="1"
-        name="elastic"
+        name="wazuh"
         min={1}
         max={8}
         step={1}
@@ -55,31 +68,31 @@ describe('EuiFieldNumber', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldNumber isInvalid />);
+      const component = render(<WuiFieldNumber isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldNumber fullWidth />);
+      const component = render(<WuiFieldNumber fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldNumber isLoading />);
+      const component = render(<WuiFieldNumber isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('readOnly is rendered', () => {
-      const component = render(<EuiFieldNumber readOnly />);
+      const component = render(<WuiFieldNumber readOnly />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('controlOnly is rendered', () => {
-      const component = render(<EuiFieldNumber controlOnly />);
+      const component = render(<WuiFieldNumber controlOnly />);
 
       expect(component).toMatchSnapshot();
     });
@@ -87,14 +100,14 @@ describe('EuiFieldNumber', () => {
     describe('value', () => {
       test('value is number', () => {
         const component = render(
-          <EuiFieldNumber value={0} onChange={() => {}} />
+          <WuiFieldNumber value={0} onChange={() => {}} />
         );
         expect(component).toMatchSnapshot();
       });
 
       test('no initial value', () => {
         const component = render(
-          <EuiFieldNumber value={''} onChange={() => {}} />
+          <WuiFieldNumber value={''} onChange={() => {}} />
         );
         expect(component).toMatchSnapshot();
       });

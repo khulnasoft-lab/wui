@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,7 +41,7 @@ import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion } from '../common';
 
-import { EuiBetaBadge } from '../badge/beta_badge';
+import { WuiBetaBadge } from '../badge/beta_badge';
 
 import { getSecureRelForTarget } from '../../services';
 
@@ -42,11 +55,11 @@ const renderContent = (
   betaBadgeTooltipContent?: ReactNode,
   betaBadgeIconType?: IconType
 ) => (
-  <div className="euiKeyPadMenuItem__inner">
+  <div className="wuiKeyPadMenuItem__inner">
     {betaBadgeLabel && (
-      <span className="euiKeyPadMenuItem__betaBadgeWrapper">
-        <EuiBetaBadge
-          className="euiKeyPadMenuItem__betaBadge"
+      <span className="wuiKeyPadMenuItem__betaBadgeWrapper">
+        <WuiBetaBadge
+          className="wuiKeyPadMenuItem__betaBadge"
           label={betaBadgeLabel}
           iconType={betaBadgeIconType}
           tooltipContent={betaBadgeTooltipContent}
@@ -54,13 +67,13 @@ const renderContent = (
       </span>
     )}
 
-    <div className="euiKeyPadMenuItem__icon">{children}</div>
+    <div className="wuiKeyPadMenuItem__icon">{children}</div>
 
-    <p className="euiKeyPadMenuItem__label">{label}</p>
+    <p className="wuiKeyPadMenuItem__label">{label}</p>
   </div>
 );
 
-interface EuiKeyPadMenuItemCommonProps {
+interface WuiKeyPadMenuItemCommonProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -87,14 +100,14 @@ interface EuiKeyPadMenuItemCommonProps {
   rel?: string;
 }
 
-export type EuiKeyPadMenuItemProps = CommonProps &
+export type WuiKeyPadMenuItemProps = CommonProps &
   ExclusiveUnion<
     Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'onClick'>,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>
   > &
-  EuiKeyPadMenuItemCommonProps;
+  WuiKeyPadMenuItemCommonProps;
 
-export const EuiKeyPadMenuItem: FunctionComponent<EuiKeyPadMenuItemProps> = ({
+export const WuiKeyPadMenuItem: FunctionComponent<WuiKeyPadMenuItemProps> = ({
   isDisabled: _isDisabled,
   label,
   children,
@@ -111,9 +124,9 @@ export const EuiKeyPadMenuItem: FunctionComponent<EuiKeyPadMenuItemProps> = ({
   const isDisabled = _isDisabled || !isHrefValid;
 
   const classes = classNames(
-    'euiKeyPadMenuItem',
+    'wuiKeyPadMenuItem',
     {
-      'euiKeyPadMenuItem--hasBetaBadge': betaBadgeLabel,
+      'wuiKeyPadMenuItem--hasBetaBadge': betaBadgeLabel,
     },
     className
   );

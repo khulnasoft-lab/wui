@@ -1,5 +1,5 @@
 export const propsInfo = {
-  EuiSearchBar: {
+  WuiSearchBar: {
     __docgenInfo: {
       props: {
         onChange: {
@@ -42,7 +42,7 @@ export const propsInfo = {
 
   Query: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         parse: {
           description: 'Parses the given string and returns the parsed query',
@@ -58,7 +58,7 @@ export const propsInfo = {
         },
         toESQuery: {
           description:
-            'Builds and returns an Elasticsearch query object out of the given query',
+            'Builds and returns an query object out of the given query',
           type: {
             name:
               'static (query: #Query | string, options?: #ToESQueryOptions) => ESQuery',
@@ -70,7 +70,7 @@ export const propsInfo = {
 
   SearchBox: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         placeholder: {
           description: 'Sets the placeholder of the search input',
@@ -96,7 +96,7 @@ export const propsInfo = {
 
   Schema: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         strict: {
           description:
@@ -121,7 +121,7 @@ export const propsInfo = {
 
   SchemaField: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         type: {
           description: 'The data type of the field',
@@ -147,7 +147,7 @@ export const propsInfo = {
 
   SearchFilters: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description:
         '#IsFilter | #FieldValueSelectionFilter | #FieldValueToggleFilter | #FieldValueToggleGroupFilter',
       props: {},
@@ -156,7 +156,7 @@ export const propsInfo = {
 
   IsFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         type: {
           description: 'Defines the type of this filter. Must be set to `is`',
@@ -196,7 +196,7 @@ export const propsInfo = {
 
   FieldValueSelectionFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         type: {
           description:
@@ -295,7 +295,7 @@ export const propsInfo = {
 
   FieldValueOption: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         value: {
           description:
@@ -321,7 +321,7 @@ export const propsInfo = {
 
   FieldValueToggleFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         type: {
           description:
@@ -367,7 +367,7 @@ export const propsInfo = {
 
   FieldValueToggleGroupFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         type: {
           description:
@@ -398,7 +398,7 @@ export const propsInfo = {
 
   FieldValueToggleGroupFilterItemType: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         value: {
           description: 'Value of the filter item',
@@ -422,7 +422,7 @@ export const propsInfo = {
 
   ExecuteQueryOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         defaultFields: {
           description: 'A set of fields to execute the term clauses against',
@@ -444,7 +444,7 @@ export const propsInfo = {
 
   ToESQueryOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         extraMustQueries: {
           description:

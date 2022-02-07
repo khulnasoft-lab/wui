@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiFormRow,
-  EuiSpacer,
+  WuiColorPicker,
+  WuiColorStops,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -18,27 +18,27 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a swatch" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      <WuiFormRow label="Pick a swatch" isInvalid={!!errors} error={errors}>
+        <WuiColorPicker
           mode="swatch"
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      </WuiFormRow>
+      <WuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
+        <WuiColorPicker
           mode="picker"
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFormRow label="Set stops with swatches">
-        <EuiColorStops
+      <WuiFormRow label="Set stops with swatches">
+        <WuiColorStops
           label="Set stops with swatches"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -46,10 +46,10 @@ export default () => {
           max={100}
           mode="swatch"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow label="Set stops with picker">
-        <EuiColorStops
+      <WuiFormRow label="Set stops with picker">
+        <WuiColorStops
           label="Set stops with picker"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -57,7 +57,7 @@ export default () => {
           max={100}
           mode="picker"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </React.Fragment>
   );
 };

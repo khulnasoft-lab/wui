@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiColorPalettePicker is rendered 1`] = `
+exports[`WuiColorPalettePicker is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value=""
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: , is selected
@@ -27,20 +27,20 @@ exports[`EuiColorPalettePicker is rendered 1`] = `
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         />
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -50,25 +50,25 @@ exports[`EuiColorPalettePicker is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiColorPalettePicker is rendered with a selected custom text 1`] = `
+exports[`WuiColorPalettePicker is rendered with a selected custom text 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="custom"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: Plain text as a custom option, is selected
@@ -77,22 +77,22 @@ exports[`EuiColorPalettePicker is rendered with a selected custom text 1`] = `
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           Plain text as a custom option
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -102,30 +102,30 @@ exports[`EuiColorPalettePicker is rendered with a selected custom text 1`] = `
 </div>
 `;
 
-exports[`EuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
+exports[`WuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="paletteFixed"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: 
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #1fb0b2 0%, #1fb0b2 20%, #ffdb6d 20%, #ffdb6d 40%, #ee9191 40%, #ee9191 60%, #ffffff 60%, #ffffff 80%, #888094 80%, #888094 100%)"
           />
           , is selected
@@ -134,25 +134,25 @@ exports[`EuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #1fb0b2 0%, #1fb0b2 20%, #ffdb6d 20%, #ffdb6d 40%, #ee9191 40%, #ee9191 60%, #ffffff 60%, #ffffff 80%, #888094 80%, #888094 100%)"
           />
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -162,30 +162,30 @@ exports[`EuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
 </div>
 `;
 
-exports[`EuiColorPalettePicker is rendered with a selected gradient palette 1`] = `
+exports[`WuiColorPalettePicker is rendered with a selected gradient palette 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="paletteLinear"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: 
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #1fb0b2 0%, #ffdb6d 25%, #ee9191 50%, #ffffff 75%, #888094 100%)"
           />
           , is selected
@@ -194,25 +194,25 @@ exports[`EuiColorPalettePicker is rendered with a selected gradient palette 1`] 
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #1fb0b2 0%, #ffdb6d 25%, #ee9191 50%, #ffffff 75%, #888094 100%)"
           />
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -222,30 +222,30 @@ exports[`EuiColorPalettePicker is rendered with a selected gradient palette 1`] 
 </div>
 `;
 
-exports[`EuiColorPalettePicker is rendered with a selected gradient palette with stops 1`] = `
+exports[`WuiColorPalettePicker is rendered with a selected gradient palette with stops 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="paletteLinearStops"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: 
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #54B399 0%, #D36086 53%, #9170B8 74%, #F5A700 100%)"
           />
           , is selected
@@ -254,25 +254,25 @@ exports[`EuiColorPalettePicker is rendered with a selected gradient palette with
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
             style="background:linear-gradient(to right, #54B399 0%, #D36086 53%, #9170B8 74%, #F5A700 100%)"
           />
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -282,25 +282,25 @@ exports[`EuiColorPalettePicker is rendered with a selected gradient palette with
 </div>
 `;
 
-exports[`EuiColorPalettePicker is rendered with the prop selectionDisplay set as title  1`] = `
+exports[`WuiColorPalettePicker is rendered with the prop selectionDisplay set as title  1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="paletteFixed"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: Palette 1, is selected
@@ -309,22 +309,22 @@ exports[`EuiColorPalettePicker is rendered with the prop selectionDisplay set as
           aria-haspopup="true"
           aria-label="aria-label"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl testClass1 testClass2"
+          class="wuiSuperSelectControl testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           Palette 1
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>
@@ -334,54 +334,54 @@ exports[`EuiColorPalettePicker is rendered with the prop selectionDisplay set as
 </div>
 `;
 
-exports[`EuiColorPalettePicker more props are propagated to each option 1`] = `
+exports[`WuiColorPalettePicker more props are propagated to each option 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock euiSuperSelect"
+  class="wuiPopover wuiPopover--anchorDownCenter wuiPopover--displayBlock wuiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <input
       type="hidden"
       value="paletteFixed"
     />
     <div
-      class="euiFormControlLayout"
+      class="wuiFormControlLayout"
     >
       <div
-        class="euiFormControlLayout__childrenWrapper"
+        class="wuiFormControlLayout__childrenWrapper"
       >
         <span
-          class="euiScreenReaderOnly"
+          class="wuiScreenReaderOnly"
           id="generated-id"
         >
           Select an option: 
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
           />
           , is selected
         </span>
         <button
           aria-haspopup="true"
           aria-labelledby="undefined generated-id"
-          class="euiSuperSelectControl euiSuperSelect--isOpen__button"
+          class="wuiSuperSelectControl wuiSuperSelect--isOpen__button"
           data-test-subj="colorPalettePicker"
           type="button"
         >
           <div
-            class="euiColorPalettePicker__itemGradient"
+            class="wuiColorPalettePicker__itemGradient"
           />
         </button>
         <div
-          class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+          class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
         >
           <span
-            class="euiFormControlLayoutCustomIcon"
+            class="wuiFormControlLayoutCustomIcon"
           >
             <div
               aria-hidden="true"
-              class="euiFormControlLayoutCustomIcon__icon"
-              data-euiicon-type="arrowDown"
+              class="wuiFormControlLayoutCustomIcon__icon"
+              data-wuiicon-type="arrowDown"
             />
           </span>
         </div>

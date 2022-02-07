@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonIcon,
-  EuiImage,
-  EuiTitle,
-  EuiSpacer,
+  WuiDataGrid,
+  WuiButtonIcon,
+  WuiImage,
+  WuiTitle,
+  WuiSpacer,
 } from '../../../../src/components/';
 import { iconTypes } from '../icon/icons';
 
@@ -77,12 +77,12 @@ for (let i = 1; i < 5; i++) {
 const Franchise = props => {
   return (
     <div>
-      <EuiTitle size="s">
+      <WuiTitle size="s">
         <h3>{props.name} is the best!</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
+      </WuiTitle>
+      <WuiSpacer size="s" />
       {props.name === 'Star Wars' ? (
-        <EuiImage
+        <WuiImage
           allowFullScreen
           size="m"
           hasShadow
@@ -91,7 +91,7 @@ const Franchise = props => {
           url="https://source.unsplash.com/600x600/?starwars"
         />
       ) : (
-        <EuiImage
+        <WuiImage
           allowFullScreen
           size="m"
           hasShadow
@@ -151,7 +151,7 @@ export default class DataGridSchema extends Component {
   setVisibleColumns = visibleColumns => this.setState({ visibleColumns });
 
   dummyIcon = () => (
-    <EuiButtonIcon
+    <WuiButtonIcon
       aria-label="dummy icon"
       iconType={iconTypes[Math.floor(Math.random() * iconTypes.length)]}
     />
@@ -161,8 +161,8 @@ export default class DataGridSchema extends Component {
     const { data, pagination, sortingColumns } = this.state;
 
     return (
-      <EuiDataGrid
-        aria-label="Top EUI contributors"
+      <WuiDataGrid
+        aria-label="Top WUI contributors"
         columns={columns}
         columnVisibility={{
           visibleColumns: this.state.visibleColumns,

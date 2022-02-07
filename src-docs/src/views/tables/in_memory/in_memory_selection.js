@@ -2,14 +2,14 @@ import React, { useState, Fragment, useRef } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiInMemoryTable,
-  EuiEmptyPrompt,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
+  WuiLink,
+  WuiHealth,
+  WuiButton,
+  WuiInMemoryTable,
+  WuiEmptyPrompt,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
 } from '../../../../../src/components';
 import { Random } from '../../../../../src/services/random';
 
@@ -45,19 +45,19 @@ export const Table = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState(
-    <EuiEmptyPrompt
+    <WuiEmptyPrompt
       title={<h3>No users</h3>}
       titleSize="xs"
       body="Looks like you don&rsquo;t have any users. Let&rsquo;s create some!"
       actions={
-        <EuiButton
+        <WuiButton
           size="s"
           key="loadUsers"
           onClick={() => {
             loadUsers();
           }}>
           Load Users
-        </EuiButton>
+        </WuiButton>
       }
     />
   );
@@ -104,30 +104,30 @@ export const Table = () => {
     };
 
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClick}>
+      <WuiButton color="danger" iconType="trash" onClick={onClick}>
         Delete {selection.length} Users
-      </EuiButton>
+      </WuiButton>
     );
   };
 
   const renderToolsRight = () => {
     return [
-      <EuiButton
+      <WuiButton
         key="loadUsers"
         onClick={() => {
           loadUsers();
         }}
         isDisabled={loading}>
         Load Users
-      </EuiButton>,
-      <EuiButton
+      </WuiButton>,
+      <WuiButton
         key="loadUsersError"
         onClick={() => {
           loadUsersWithError();
         }}
         isDisabled={loading}>
         Load Users (Error)
-      </EuiButton>,
+      </WuiButton>,
     ];
   };
 
@@ -147,9 +147,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -174,7 +174,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
       sortable: true,
     },
@@ -228,16 +228,16 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={onSelection}>Select online users</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem />
-      </EuiFlexGroup>
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiButton onClick={onSelection}>Select online users</WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem />
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiInMemoryTable
+      <WuiInMemoryTable
         ref={tableRef}
         items={users}
         itemId="id"

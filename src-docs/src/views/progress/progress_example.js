@@ -4,34 +4,34 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCallOut, EuiCode, EuiProgress } from '../../../../src/components';
+import { WuiCallOut, WuiCode, WuiProgress } from '../../../../src/components';
 import progressConfig from './playground';
 
 import Progress from './progress';
 const progressSource = require('!!raw-loader!./progress');
 const progressHtml = renderToHtml(Progress);
-const progressSnippet = '<EuiProgress size="xs" color="accent" />';
+const progressSnippet = '<WuiProgress size="xs" color="accent" />';
 
 import ProgressValue from './progress_value';
 const progressValueSource = require('!!raw-loader!./progress_value');
 const progressValueHtml = renderToHtml(ProgressValue);
-const progressValueSnippet = '<EuiProgress value={22} max={100} size="xs" />';
+const progressValueSnippet = '<WuiProgress value={22} max={100} size="xs" />';
 
 import ProgressFixed from './progress_fixed';
 const progressFixedSource = require('!!raw-loader!./progress_fixed');
 const progressFixedHtml = renderToHtml(ProgressFixed);
 const progressFixedSnippet = `<!-- Position at top of parent container -->
-<EuiProgress size="xs" color="accent" position="absolute" />
+<WuiProgress size="xs" color="accent" position="absolute" />
 
 <!-- Position at top of screen, above global header -->
-<EuiPortal>
-  <EuiProgress size="xs" color="accent" position="fixed" />
-</EuiPortal>`;
+<WuiPortal>
+  <WuiProgress size="xs" color="accent" position="fixed" />
+</WuiPortal>`;
 
 import ProgressSizeColor from './progress_size_color';
 const progressSizeColorSource = require('!!raw-loader!./progress_size_color');
 const progressSizeColorHtml = renderToHtml(ProgressSizeColor);
-const progressSizeColorSnippet = `<EuiProgress
+const progressSizeColorSnippet = `<WuiProgress
   value={20}
   max={100} 
   size="s"
@@ -41,7 +41,7 @@ const progressSizeColorSnippet = `<EuiProgress
 import ProgressChart from './progress_chart';
 const progressChartSource = require('!!raw-loader!./progress_chart');
 const progressChartHtml = renderToHtml(ProgressChart);
-const progressChartSnippet = `<EuiProgress 
+const progressChartSnippet = `<WuiProgress 
   value={20}
   valueText={true}
   label={label}
@@ -64,15 +64,15 @@ export const ProgressExample = {
       ],
       text: (
         <p>
-          The <strong>EuiProgress</strong> component by default will display in
+          The <strong>WuiProgress</strong> component by default will display in
           an indeterminate loading state (rendered as a single div) until you
-          define a <EuiCode>max</EuiCode> and <EuiCode>value</EuiCode> prop. The{' '}
-          <EuiCode>size</EuiCode> prop refers to its vertical height. It will
-          always stretch <EuiCode>100%</EuiCode> to its container.
+          define a <WuiCode>max</WuiCode> and <WuiCode>value</WuiCode> prop. The{' '}
+          <WuiCode>size</WuiCode> prop refers to its vertical height. It will
+          always stretch <WuiCode>100%</WuiCode> to its container.
         </p>
       ),
       snippet: progressSnippet,
-      props: { EuiProgress },
+      props: { WuiProgress },
       demo: <Progress />,
     },
     {
@@ -89,9 +89,9 @@ export const ProgressExample = {
       ],
       text: (
         <p>
-          Once the <EuiCode>max</EuiCode> and <EuiCode>value</EuiCode> props are
+          Once the <WuiCode>max</WuiCode> and <WuiCode>value</WuiCode> props are
           set, it will act as a determinate progress bar. This is rendered using
-          an HTML5 <EuiCode>progress</EuiCode> tag.
+          an HTML5 <WuiCode>progress</WuiCode> tag.
         </p>
       ),
       snippet: progressValueSnippet,
@@ -112,25 +112,25 @@ export const ProgressExample = {
       text: (
         <div>
           <p>
-            Using the <EuiCode>position</EuiCode> prop we can align our bar to
-            be <EuiCode>fixed</EuiCode> or <EuiCode>absolute</EuiCode>. In both
+            Using the <WuiCode>position</WuiCode> prop we can align our bar to
+            be <WuiCode>fixed</WuiCode> or <WuiCode>absolute</WuiCode>. In both
             options, the background color of the base bar is dropped (since the
             context of width is already known from your wrapping element). For
             the absolute option, make sure that your wrapping element has{' '}
-            <EuiCode language="sass">position: relative</EuiCode> applied.
+            <WuiCode language="sass">position: relative</WuiCode> applied.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             title="Note about progress bars over fixed headers"
             iconType="iInCircle">
             <p>
-              Using <strong>EuiProgress</strong> with a <EuiCode>fixed</EuiCode>{' '}
+              Using <strong>WuiProgress</strong> with a <WuiCode>fixed</WuiCode>{' '}
               position may result in it being overlayed when its parent wrapper
-              has a <EuiCode>z-index</EuiCode> value lower than another fixed
-              element, such as <strong>EuiHeader</strong>. In that case, wrap{' '}
-              <strong>EuiProgress</strong> in an <strong>EuiPortal</strong> as
+              has a <WuiCode>z-index</WuiCode> value lower than another fixed
+              element, such as <strong>WuiHeader</strong>. In that case, wrap{' '}
+              <strong>WuiProgress</strong> in an <strong>WuiPortal</strong> as
               seen on the Snippet tab.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </div>
       ),
       snippet: progressFixedSnippet,
@@ -150,7 +150,7 @@ export const ProgressExample = {
       ],
       text: (
         <p>
-          Both <EuiCode>size</EuiCode> and <EuiCode>color</EuiCode> can be
+          Both <WuiCode>size</WuiCode> and <WuiCode>color</WuiCode> can be
           provided as props. These values will work on both determinate and
           indeterminate progress bars.
         </p>
@@ -174,15 +174,15 @@ export const ProgressExample = {
         <div>
           <p>
             Determinate progress bar can be used as simple bar charts. Use them
-            with the <EuiCode>label</EuiCode> and <EuiCode>valueText</EuiCode>{' '}
+            with the <WuiCode>label</WuiCode> and <WuiCode>valueText</WuiCode>{' '}
             props to show the data corresponding to each bar. The{' '}
-            <EuiCode>valueText</EuiCode> renders as the same color as the{' '}
-            <strong>EuiProgress</strong>.
+            <WuiCode>valueText</WuiCode> renders as the same color as the{' '}
+            <strong>WuiProgress</strong>.
           </p>
           <p>
-            Setting <EuiCode language="ts">{'valueText={true}'}</EuiCode> will
-            add a % sign next to the<EuiCode>value</EuiCode> passed. If you want
-            to display a custom <EuiCode>valueText</EuiCode>, you can pass a
+            Setting <WuiCode language="ts">{'valueText={true}'}</WuiCode> will
+            add a % sign next to the<WuiCode>value</WuiCode> passed. If you want
+            to display a custom <WuiCode>valueText</WuiCode>, you can pass a
             node instead.
           </p>
         </div>

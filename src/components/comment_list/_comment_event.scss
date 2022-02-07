@@ -1,37 +1,37 @@
-@include euiPanel($selector: '.euiCommentEvent--regular');
+@include wuiPanel($selector: '.wuiCommentEvent--regular');
 
-.euiCommentEvent {
+.wuiCommentEvent {
   overflow: hidden;
 }
 
-.euiCommentEvent__header {
-  line-height: $euiLineHeight;
+.wuiCommentEvent__header {
+  line-height: $wuiLineHeight;
   display: flex;
   align-items: center;
 }
 
-.euiCommentEvent__headerData {
+.wuiCommentEvent__headerData {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
 
   > div {
-    padding-right: $euiSizeXS;
+    padding-right: $wuiSizeXS;
   }
 }
 
-.euiCommentEvent__headerUsername {
-  font-weight: $euiFontWeightSemiBold;
+.wuiCommentEvent__headerUsername {
+  font-weight: $wuiFontWeightSemiBold;
 }
 
-.euiCommentEvent--regular {
-  border: $euiBorderThin;
+.wuiCommentEvent--regular {
+  border: $wuiBorderThin;
 
-  .euiCommentEvent__header {
-    min-height: $euiSizeXXL;
-    background-color: $euiColorLightestShade;
-    border-bottom: $euiBorderThin;
-    padding: $euiSizeXS $euiSizeS;
+  .wuiCommentEvent__header {
+    min-height: $wuiSizeXXL;
+    background-color: $wuiColorLightestShade;
+    border-bottom: $wuiBorderThin;
+    padding: $wuiSizeXS $wuiSizeS;
 
     /**
      * Fix for IE when using align-items:center in an item that has min-height
@@ -42,34 +42,34 @@
       &::after {
         content: '';
         // Calculates the minimum height based on full header's min-height minus the vertical padding
-        min-height: $euiSizeXXL - $euiSizeS;
+        min-height: $wuiSizeXXL - $wuiSizeS;
         font-size: 0;
         display: block;
       }
     }
   }
 
-  .euiCommentEvent__headerData {
+  .wuiCommentEvent__headerData {
     // Push the actions far right
     flex-grow: 1;
   }
 
-  .euiCommentEvent__body {
-    padding: $euiSizeS;
+  .wuiCommentEvent__body {
+    padding: $wuiSizeS;
   }
 }
 
-.euiCommentEvent--update {
-  .euiCommentEvent__header {
+.wuiCommentEvent--update {
+  .wuiCommentEvent__header {
     justify-content: flex-start;
-    padding: $euiSizeXS 0;
+    padding: $wuiSizeXS 0;
   }
 
-  .euiCommentEvent__headerData {
-    padding-right: $euiSizeS;
+  .wuiCommentEvent__headerData {
+    padding-right: $wuiSizeS;
   }
 
-  .euiCommentEvent__body {
-    padding-top: $euiSizeXS;
+  .wuiCommentEvent__body {
+    padding-top: $wuiSizeXS;
   }
 }

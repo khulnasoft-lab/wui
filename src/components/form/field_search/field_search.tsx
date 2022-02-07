@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,13 +37,13 @@ import { CommonProps } from '../../common';
 import { keys } from '../../../services';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { WuiValidatableControl } from '../validatable_control';
 
-export interface EuiFieldSearchProps
+export interface WuiFieldSearchProps
   extends CommonProps,
     InputHTMLAttributes<HTMLInputElement> {
   name?: string;
@@ -63,24 +76,24 @@ export interface EuiFieldSearchProps
    * Creates an input group with element(s) coming before input
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: WuiFormControlLayoutProps['prepend'];
 
   /**
    * Creates an input group with element(s) coming after input.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: WuiFormControlLayoutProps['append'];
 }
 
-interface EuiFieldSearchState {
+interface WuiFieldSearchState {
   value: string;
 }
 
 let isSearchSupported: boolean = false;
 
-export class EuiFieldSearch extends Component<
-  EuiFieldSearchProps,
-  EuiFieldSearchState
+export class WuiFieldSearch extends Component<
+  WuiFieldSearchProps,
+  WuiFieldSearchState
 > {
   static defaultProps = {
     fullWidth: false,
@@ -240,19 +253,19 @@ export class EuiFieldSearch extends Component<
     if (typeof this.props.value !== 'string') value = this.state.value;
 
     const classes = classNames(
-      'euiFieldSearch',
+      'wuiFieldSearch',
       {
-        'euiFieldSearch--fullWidth': fullWidth,
-        'euiFieldSearch--compressed': compressed,
-        'euiFieldSearch-isLoading': isLoading,
-        'euiFieldText--inGroup': prepend || append,
-        'euiFieldSearch-isClearable': isClearable,
+        'wuiFieldSearch--fullWidth': fullWidth,
+        'wuiFieldSearch--compressed': compressed,
+        'wuiFieldSearch-isLoading': isLoading,
+        'wuiFieldText--inGroup': prepend || append,
+        'wuiFieldSearch-isClearable': isClearable,
       },
       className
     );
 
     return (
-      <EuiFormControlLayout
+      <WuiFormControlLayout
         icon="search"
         fullWidth={fullWidth}
         isLoading={isLoading}
@@ -264,7 +277,7 @@ export class EuiFieldSearch extends Component<
         compressed={compressed}
         append={append}
         prepend={prepend}>
-        <EuiValidatableControl isInvalid={isInvalid}>
+        <WuiValidatableControl isInvalid={isInvalid}>
           <input
             type="search"
             id={id}
@@ -275,8 +288,8 @@ export class EuiFieldSearch extends Component<
             ref={this.setRef}
             {...rest}
           />
-        </EuiValidatableControl>
-      </EuiFormControlLayout>
+        </WuiValidatableControl>
+      </WuiFormControlLayout>
     );
   }
 }

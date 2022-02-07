@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuperSelectControl is rendered 1`] = `
+exports[`WuiSuperSelectControl is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -22,20 +22,20 @@ Array [
         aria-haspopup="true"
         aria-label="aria-label"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl testClass1 testClass2"
+        class="wuiSuperSelectControl testClass1 testClass2"
         data-test-subj="test subject string"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -44,20 +44,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props compressed is rendered 1`] = `
+exports[`WuiSuperSelectControl props compressed is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout euiFormControlLayout--compressed"
+    class="wuiFormControlLayout wuiFormControlLayout--compressed"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -65,19 +65,19 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl euiSuperSelectControl--compressed"
+        class="wuiSuperSelectControl wuiSuperSelectControl--compressed"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -86,20 +86,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props disabled options are rendered 1`] = `
+exports[`WuiSuperSelectControl props disabled options are rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -107,19 +107,19 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl"
+        class="wuiSuperSelectControl"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -128,20 +128,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props empty value option is rendered 1`] = `
+exports[`WuiSuperSelectControl props empty value option is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -149,19 +149,19 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl"
+        class="wuiSuperSelectControl"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -170,20 +170,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props fullWidth is rendered 1`] = `
+exports[`WuiSuperSelectControl props fullWidth is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout euiFormControlLayout--fullWidth"
+    class="wuiFormControlLayout wuiFormControlLayout--fullWidth"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -191,19 +191,19 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl euiSuperSelectControl--fullWidth"
+        class="wuiSuperSelectControl wuiSuperSelectControl--fullWidth"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -212,20 +212,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props isInvalid is rendered 1`] = `
+exports[`WuiSuperSelectControl props isInvalid is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -233,19 +233,19 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl euiSuperSelectControl-isInvalid"
+        class="wuiSuperSelectControl wuiSuperSelectControl-isInvalid"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -254,20 +254,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props isLoading is rendered 1`] = `
+exports[`WuiSuperSelectControl props isLoading is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value=""
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: , is selected
@@ -275,22 +275,22 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl euiSuperSelectControl-isLoading"
+        class="wuiSuperSelectControl wuiSuperSelectControl-isLoading"
         type="button"
       />
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiLoadingSpinner euiLoadingSpinner--medium"
+          class="wuiLoadingSpinner wuiLoadingSpinner--medium"
         />
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>
@@ -299,20 +299,20 @@ Array [
 ]
 `;
 
-exports[`EuiSuperSelectControl props value option is rendered 1`] = `
+exports[`WuiSuperSelectControl props value option is rendered 1`] = `
 Array [
   <input
     type="hidden"
     value="1"
   />,
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <span
-        class="euiScreenReaderOnly"
+        class="wuiScreenReaderOnly"
         id="generated-id"
       >
         Select an option: Option #1, is selected
@@ -320,21 +320,21 @@ Array [
       <button
         aria-haspopup="true"
         aria-labelledby="undefined generated-id"
-        class="euiSuperSelectControl"
+        class="wuiSuperSelectControl"
         type="button"
       >
         Option #1
       </button>
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="wuiFormControlLayoutIcons wuiFormControlLayoutIcons--right"
       >
         <span
-          class="euiFormControlLayoutCustomIcon"
+          class="wuiFormControlLayoutCustomIcon"
         >
           <div
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="wuiFormControlLayoutCustomIcon__icon"
+            data-wuiicon-type="arrowDown"
           />
         </span>
       </div>

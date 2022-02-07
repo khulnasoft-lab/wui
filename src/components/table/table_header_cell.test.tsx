@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,40 +34,40 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableHeaderCell } from './table_header_cell';
+import { WuiTableHeaderCell } from './table_header_cell';
 
 import { RIGHT_ALIGNMENT, CENTER_ALIGNMENT } from '../../services';
 import { WARNING_MESSAGE } from './utils';
 
-test('renders EuiTableHeaderCell', () => {
+test('renders WuiTableHeaderCell', () => {
   const component = (
-    <EuiTableHeaderCell {...requiredProps}>children</EuiTableHeaderCell>
+    <WuiTableHeaderCell {...requiredProps}>children</WuiTableHeaderCell>
   );
 
   expect(render(component)).toMatchSnapshot();
 });
 
 test('renders td when children is null/undefined', () => {
-  const component = render(<EuiTableHeaderCell {...requiredProps} />);
+  const component = render(<WuiTableHeaderCell {...requiredProps} />);
 
   expect(component).toMatchSnapshot();
 });
 
 describe('align', () => {
   test('defaults to left', () => {
-    const component = <EuiTableHeaderCell />;
+    const component = <WuiTableHeaderCell />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders right when specified', () => {
-    const component = <EuiTableHeaderCell align={RIGHT_ALIGNMENT} />;
+    const component = <WuiTableHeaderCell align={RIGHT_ALIGNMENT} />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders center when specified', () => {
-    const component = <EuiTableHeaderCell align={CENTER_ALIGNMENT} />;
+    const component = <WuiTableHeaderCell align={CENTER_ALIGNMENT} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -75,29 +88,29 @@ describe('width and style', () => {
 
   test('accepts style attribute', () => {
     const component = (
-      <EuiTableHeaderCell style={{ width: '20%' }}>Test</EuiTableHeaderCell>
+      <WuiTableHeaderCell style={{ width: '20%' }}>Test</WuiTableHeaderCell>
     );
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('accepts width attribute', () => {
-    const component = <EuiTableHeaderCell width="10%">Test</EuiTableHeaderCell>;
+    const component = <WuiTableHeaderCell width="10%">Test</WuiTableHeaderCell>;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('accepts width attribute as number', () => {
-    const component = <EuiTableHeaderCell width={100}>Test</EuiTableHeaderCell>;
+    const component = <WuiTableHeaderCell width={100}>Test</WuiTableHeaderCell>;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('resolves style and width attribute', () => {
     const component = (
-      <EuiTableHeaderCell width="10%" style={{ width: '20%' }}>
+      <WuiTableHeaderCell width="10%" style={{ width: '20%' }}>
         Test
-      </EuiTableHeaderCell>
+      </WuiTableHeaderCell>
     );
 
     expect(render(component)).toMatchSnapshot();

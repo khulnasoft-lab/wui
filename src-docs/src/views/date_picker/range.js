@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import moment from 'moment';
 
-import { EuiDatePicker, EuiDatePickerRange } from '../../../../src/components';
+import { WuiDatePicker, WuiDatePickerRange } from '../../../../src/components';
 
 export default class extends Component {
   constructor(props) {
@@ -31,9 +31,9 @@ export default class extends Component {
 
   render() {
     return (
-      <EuiDatePickerRange
+      <WuiDatePickerRange
         startDateControl={
-          <EuiDatePicker
+          <WuiDatePicker
             selected={this.state.startDate}
             onChange={this.handleChangeStart}
             startDate={this.state.startDate}
@@ -44,7 +44,7 @@ export default class extends Component {
           />
         }
         endDateControl={
-          <EuiDatePicker
+          <WuiDatePicker
             selected={this.state.endDate}
             onChange={this.handleChangeEnd}
             startDate={this.state.startDate}

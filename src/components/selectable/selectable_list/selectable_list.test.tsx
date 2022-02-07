@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,15 +34,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableList } from './selectable_list';
-import { EuiSelectableOption } from '../selectable_option';
+import { WuiSelectableList } from './selectable_list';
+import { WuiSelectableOption } from '../selectable_option';
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
 jest.mock('../../../services/accessibility/html_id_generator', () => ({
   htmlIdGenerator: () => () => 'htmlId',
 }));
 
-const options: EuiSelectableOption[] = [
+const options: WuiSelectableOption[] = [
   {
     label: 'Titan',
     'data-test-subj': 'titanOption',
@@ -60,10 +73,10 @@ const selectableListRequiredProps = {
   ...requiredProps,
 };
 
-describe('EuiSelectableListItem', () => {
+describe('WuiSelectableListItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelectableList options={options} {...selectableListRequiredProps} />
+      <WuiSelectableList options={options} {...selectableListRequiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -71,7 +84,7 @@ describe('EuiSelectableListItem', () => {
   describe('props', () => {
     test('visibleOptions', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           visibleOptions={options.slice(2)}
           {...selectableListRequiredProps}
@@ -83,7 +96,7 @@ describe('EuiSelectableListItem', () => {
 
     test('searchValue', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           searchValue="Mi"
           {...selectableListRequiredProps}
@@ -95,7 +108,7 @@ describe('EuiSelectableListItem', () => {
 
     test('searchValue', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           searchValue="Mi"
           {...selectableListRequiredProps}
@@ -107,9 +120,9 @@ describe('EuiSelectableListItem', () => {
 
     test('renderOption', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
-          renderOption={(option: EuiSelectableOption, searchValue?: string) => {
+          renderOption={(option: WuiSelectableOption, searchValue?: string) => {
             return (
               <span>
                 {searchValue} =&gt; {option.label}
@@ -125,7 +138,7 @@ describe('EuiSelectableListItem', () => {
 
     test('height is forced', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           height={200}
           {...selectableListRequiredProps}
@@ -137,7 +150,7 @@ describe('EuiSelectableListItem', () => {
 
     test('height is full', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           height="full"
           {...selectableListRequiredProps}
@@ -149,7 +162,7 @@ describe('EuiSelectableListItem', () => {
 
     test('allowExclusions', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           allowExclusions
           {...selectableListRequiredProps}
@@ -161,7 +174,7 @@ describe('EuiSelectableListItem', () => {
 
     test('activeOptionIndex', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           activeOptionIndex={2}
           {...selectableListRequiredProps}
@@ -173,7 +186,7 @@ describe('EuiSelectableListItem', () => {
 
     test('rowHeight', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           rowHeight={20}
           {...selectableListRequiredProps}
@@ -185,7 +198,7 @@ describe('EuiSelectableListItem', () => {
 
     test('showIcons can be turned off', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           showIcons={false}
           {...selectableListRequiredProps}
@@ -197,7 +210,7 @@ describe('EuiSelectableListItem', () => {
 
     test('singleSelection can be turned on', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           singleSelection={true}
           {...selectableListRequiredProps}
@@ -209,7 +222,7 @@ describe('EuiSelectableListItem', () => {
 
     test('singleSelection can be forced so that at least one must be selected', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           singleSelection="always"
           {...selectableListRequiredProps}
@@ -221,7 +234,7 @@ describe('EuiSelectableListItem', () => {
 
     test('bordered', () => {
       const component = render(
-        <EuiSelectableList
+        <WuiSelectableList
           options={options}
           bordered
           {...selectableListRequiredProps}

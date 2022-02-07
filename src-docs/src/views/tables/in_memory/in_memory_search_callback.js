@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
+  WuiInMemoryTable,
+  WuiLink,
+  WuiHealth,
 } from '../../../../../src/components';
 
 /*
@@ -65,7 +65,7 @@ export const Table = () => {
   };
 
   return (
-    <EuiInMemoryTable
+    <WuiInMemoryTable
       items={items}
       loading={isLoading}
       columns={[
@@ -84,9 +84,9 @@ export const Table = () => {
           field: 'github',
           name: 'Github',
           render: username => (
-            <EuiLink href={`https://github.com/${username}`} target="_blank">
+            <WuiLink href={`https://github.com/${username}`} target="_blank">
               {username}
-            </EuiLink>
+            </WuiLink>
           ),
         },
         {
@@ -111,7 +111,7 @@ export const Table = () => {
           render: online => {
             const color = online ? 'success' : 'danger';
             const label = online ? 'Online' : 'Offline';
-            return <EuiHealth color={color}>{label}</EuiHealth>;
+            return <WuiHealth color={color}>{label}</WuiHealth>;
           },
           sortable: true,
         },

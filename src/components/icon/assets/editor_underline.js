@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const EuiIconEditorUnderline = ({ title, titleId, ...props }) => (
+const WuiIconEditorUnderline = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconEditorUnderline = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconEditorUnderline;
+export const icon = WuiIconEditorUnderline;

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCommentEvent } from './comment_event';
+import { WuiCommentEvent } from './comment_event';
 
-describe('EuiCommentEvent', () => {
+describe('WuiCommentEvent', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCommentEvent username="someuser" {...requiredProps} />
+      <WuiCommentEvent username="someuser" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +49,7 @@ describe('EuiCommentEvent', () => {
     describe('type', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent username="someuser" type="update" />
+          <WuiCommentEvent username="someuser" type="update" />
         );
 
         expect(component).toMatchSnapshot();
@@ -46,7 +59,7 @@ describe('EuiCommentEvent', () => {
     describe('timestamp', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent timestamp="21 days ago" username="someuser" />
+          <WuiCommentEvent timestamp="21 days ago" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -56,7 +69,7 @@ describe('EuiCommentEvent', () => {
     describe('event', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent event="commented" username="someuser" />
+          <WuiCommentEvent event="commented" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();

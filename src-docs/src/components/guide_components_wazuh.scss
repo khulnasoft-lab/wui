@@ -1,8 +1,8 @@
 .guide {
-  background: $euiPageBackgroundColor;
+  background: $wuiPageBackgroundColor;
 }
 
 .guidePageContent {
-  @include euiBottomShadowFlat;
+  @include wuiBottomShadowFlat;
   border-left: none;
 }

@@ -1,120 +1,120 @@
-.euiTreeView__wrapper .euiTreeView {
+.wuiTreeView__wrapper .wuiTreeView {
   margin: 0;
   list-style-type: none;
 }
 
-.euiTreeView .euiTreeView {
-  padding-left: $euiSizeL;
+.wuiTreeView .wuiTreeView {
+  padding-left: $wuiSizeL;
 }
 
-.euiTreeView__node {
-  max-height: $euiSizeXL;
+.wuiTreeView__node {
+  max-height: $wuiSizeXL;
   overflow: hidden;
   cursor: pointer;
-  line-height: $euiSizeXL;
+  line-height: $wuiSizeXL;
 }
 
-.euiTreeView__node--expanded {
+.wuiTreeView__node--expanded {
   max-height: 100vh;
   overflow: auto;
 }
 
-.euiTreeView__nodeInner {
-  @include euiTextTruncate;
+.wuiTreeView__nodeInner {
+  @include wuiTextTruncate;
 
-  padding-left: $euiSizeS;
+  padding-left: $wuiSizeS;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $euiSizeXL;
-  border-radius: $euiBorderRadius;
+  height: $wuiSizeXL;
+  border-radius: $wuiBorderRadius;
   width: 100%;
   text-align-last: left;
 
   &:focus {
-    box-shadow: inset 0 0 0 $euiSizeXS / 4 $euiFocusRingColor;
+    box-shadow: inset 0 0 0 $wuiSizeXS / 4 $wuiFocusRingColor;
   }
 
   &:hover,
   &:active {
-    background-color: tintOrShade($euiColorLightShade, 50%, 10%);
+    background-color: tintOrShade($wuiColorLightShade, 50%, 10%);
   }
 
-  .euiTreeView__iconPlaceholder {
-    width: $euiSizeXL;
+  .wuiTreeView__iconPlaceholder {
+    width: $wuiSizeXL;
   }
 
 }
 
-.euiTreeView__nodeLabel {
-  @include euiTextTruncate;
+.wuiTreeView__nodeLabel {
+  @include wuiTextTruncate;
 }
 
-.euiTreeView__iconWrapper {
-  margin-top: -($euiSizeXS / 2);
-  margin-right: $euiSizeS;
+.wuiTreeView__iconWrapper {
+  margin-top: -($wuiSizeXS / 2);
+  margin-right: $wuiSizeS;
 
   // This helps tokens appear vertically centered
-  .euiToken {
-    margin-top: $euiSizeXS / 2;
+  .wuiToken {
+    margin-top: $wuiSizeXS / 2;
   }
 }
 
-.euiTreeView--compressed {
-  .euiTreeView__node {
-    max-height: $euiSizeL;
-    line-height: $euiSizeL;
+.wuiTreeView--compressed {
+  .wuiTreeView__node {
+    max-height: $wuiSizeL;
+    line-height: $wuiSizeL;
 
-    .euiTreeView__nodeInner {
-      height: $euiSizeL;
+    .wuiTreeView__nodeInner {
+      height: $wuiSizeL;
 
     }
 
-    .euiTreeView__iconWrapper {
-      margin: 0 ($euiSizeS * .75) 0 0;
+    .wuiTreeView__iconWrapper {
+      margin: 0 ($wuiSizeS * .75) 0 0;
     }
 
-    .euiTreeView__nodeLabel {
+    .wuiTreeView__nodeLabel {
       margin-top: -1px;
     }
 
-    .euiTreeView__iconPlaceholder {
-      width: $euiSizeL;
+    .wuiTreeView__iconPlaceholder {
+      width: $wuiSizeL;
     }
   }
 
-  .euiTreeView__node--expanded {
+  .wuiTreeView__node--expanded {
     max-height: 100vh;
     overflow: auto;
   }
 }
 
-.euiTreeView--withArrows {
-  .euiTreeView__expansionArrow {
-    margin-right: $euiSizeXS;
+.wuiTreeView--withArrows {
+  .wuiTreeView__expansionArrow {
+    margin-right: $wuiSizeXS;
   }
 
-  &.euiTreeView {
-    .euiTreeView__nodeInner--withArrows {
-      .euiTreeView__iconWrapper {
+  &.wuiTreeView {
+    .wuiTreeView__nodeInner--withArrows {
+      .wuiTreeView__iconWrapper {
         margin-left: 0;
       }
     }
 
-    .euiTreeView__iconWrapper {
-      margin-left: $euiSize + $euiSizeXS;
+    .wuiTreeView__iconWrapper {
+      margin-left: $wuiSize + $wuiSizeXS;
     }
   }
 
-  &.euiTreeView--compressed {
-    .euiTreeView__nodeInner--withArrows {
-      .euiTreeView__iconWrapper {
+  &.wuiTreeView--compressed {
+    .wuiTreeView__nodeInner--withArrows {
+      .wuiTreeView__iconWrapper {
         margin-left: 0;
       }
     }
 
-    .euiTreeView__iconWrapper {
-      margin-left: $euiSize;
+    .wuiTreeView__iconWrapper {
+      margin-left: $wuiSize;
     }
   }
 }

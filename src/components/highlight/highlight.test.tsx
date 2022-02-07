@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiHighlight } from './highlight';
+import { WuiHighlight } from './highlight';
 
-describe('EuiHighlight', () => {
+describe('WuiHighlight', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiHighlight {...requiredProps} search="">
+      <WuiHighlight {...requiredProps} search="">
         value
-      </EuiHighlight>
+      </WuiHighlight>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +51,7 @@ describe('EuiHighlight', () => {
     describe('matching', () => {
       test('only applies to first match', () => {
         const component = render(
-          <EuiHighlight search="match">match match match</EuiHighlight>
+          <WuiHighlight search="match">match match match</WuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -46,9 +59,9 @@ describe('EuiHighlight', () => {
 
       test('applies to all matches', () => {
         const component = render(
-          <EuiHighlight search="match" highlightAll>
+          <WuiHighlight search="match" highlightAll>
             match match match
-          </EuiHighlight>
+          </WuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -58,7 +71,7 @@ describe('EuiHighlight', () => {
     describe('loose matching', () => {
       test('matches strings with different casing', () => {
         const component = render(
-          <EuiHighlight search="CASE">different case match</EuiHighlight>
+          <WuiHighlight search="CASE">different case match</WuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -68,9 +81,9 @@ describe('EuiHighlight', () => {
     describe('strict matching', () => {
       test("doesn't match strings with different casing", () => {
         const component = render(
-          <EuiHighlight search="CASE" strict>
+          <WuiHighlight search="CASE" strict>
             different case match
-          </EuiHighlight>
+          </WuiHighlight>
         );
 
         expect(component).toMatchSnapshot();

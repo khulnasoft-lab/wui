@@ -6,12 +6,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiToast,
-  EuiGlobalToastList,
-  EuiGlobalToastListItem,
-  EuiText,
-  EuiSpacer,
+  WuiCode,
+  WuiToast,
+  WuiGlobalToastList,
+  WuiGlobalToastListItem,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 import toastConfig from './playground';
@@ -20,7 +20,7 @@ import ToastList from './toast_list';
 const toastListSource = require('!!raw-loader!./toast_list');
 const toastListHtml = renderToHtml(ToastList);
 const toastListSnippet = [
-  `<EuiGlobalToastList
+  `<WuiGlobalToastList
   toasts={[
     {
       id: 1,
@@ -36,74 +36,74 @@ import Default from './default';
 const defaultSource = require('!!raw-loader!./default');
 const defaultHtml = renderToHtml(Default);
 const defaultToastSnippet = [
-  `<EuiToast
+  `<WuiToast
   title="Default toast"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </WuiToast>`,
 ];
 
 import Info from './info';
 const infoSource = require('!!raw-loader!./info');
 const infoHtml = renderToHtml(Info);
 const infoToastSnippet = [
-  `<EuiToast
+  `<WuiToast
   title="Info toast"
   type="info"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </WuiToast>`,
 ];
 
 import Success from './success';
 const successSource = require('!!raw-loader!./success');
 const successHtml = renderToHtml(Success);
 const successToastSnippet = [
-  `<EuiToast
+  `<WuiToast
   title="Success toast"
   color="success"
   iconType="check"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </WuiToast>`,
 ];
 
 import Warning from './warning';
 const warningSource = require('!!raw-loader!./warning');
 const warningHtml = renderToHtml(Warning);
 const warningToastSnippet = [
-  `<EuiToast
+  `<WuiToast
   title="Warning toast"
   color="warning"
   iconType="help"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </WuiToast>`,
 ];
 
 import Danger from './danger';
 const dangerSource = require('!!raw-loader!./danger');
 const dangerHtml = renderToHtml(Danger);
 const dangerToastSnippet = [
-  `<EuiToast
+  `<WuiToast
   title="Danger toast"
   color="danger"
   iconType="alert"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </WuiToast>`,
 ];
 
 export const ToastExample = {
   title: 'Toast',
   intro: (
-    <EuiText>
+    <WuiText>
       <p>
         Be sure to read the full{' '}
         <Link to="/guidelines/toast">toast usage guidelines</Link>.
       </p>
-      <EuiSpacer />
-    </EuiText>
+      <WuiSpacer />
+    </WuiText>
   ),
   sections: [
     {
@@ -119,9 +119,9 @@ export const ToastExample = {
         },
       ],
       props: {
-        EuiToast,
-        EuiGlobalToastList,
-        EuiGlobalToastListItem,
+        WuiToast,
+        WuiGlobalToastList,
+        WuiGlobalToastListItem,
       },
       demo: (
         <>
@@ -145,7 +145,7 @@ export const ToastExample = {
       text: (
         <div>
           <p>
-            <strong>EuiToast</strong> allows for small notes that appear in the
+            <strong>WuiToast</strong> allows for small notes that appear in the
             bottom right of the screen. They should be used for ephemeral, live
             actions (think <strong>save complete</strong> or{' '}
             <strong>something just finished right now</strong>).
@@ -179,7 +179,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">type=&quot;info&quot;</EuiCode>.
+          Setting <WuiCode language="js">type=&quot;info&quot;</WuiCode>.
         </p>
       ),
       demo: (
@@ -203,7 +203,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;success&quot;</EuiCode>.
+          Setting <WuiCode language="js">color=&quot;success&quot;</WuiCode>.
         </p>
       ),
       demo: (
@@ -227,7 +227,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;warning&quot;</EuiCode>.
+          Setting <WuiCode language="js">color=&quot;warning&quot;</WuiCode>.
         </p>
       ),
       demo: (
@@ -251,7 +251,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;danger&quot;</EuiCode>.
+          Setting <WuiCode language="js">color=&quot;danger&quot;</WuiCode>.
         </p>
       ),
       demo: (

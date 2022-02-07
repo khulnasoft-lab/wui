@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,19 +31,19 @@
  */
 
 import React, { Component } from 'react';
-import { EuiPopover, Props as EuiPopoverProps } from './popover';
-import { EuiPortal } from '../portal';
+import { WuiPopover, Props as WuiPopoverProps } from './popover';
+import { WuiPortal } from '../portal';
 
-interface Props extends EuiPopoverProps {
+interface Props extends WuiPopoverProps {
   button: HTMLElement;
 }
 
 /**
- * Injects the EuiPopover next to the button via EuiPortal
+ * Injects the WuiPopover next to the button via WuiPortal
  * then the button element is moved into the popover dom.
  * On unmount, the button is moved back to its original location.
  */
-export class EuiWrappingPopover extends Component<Props> {
+export class WuiWrappingPopover extends Component<Props> {
   private portal: HTMLElement | null = null;
   private anchor: HTMLElement | null = null;
 
@@ -60,19 +73,19 @@ export class EuiWrappingPopover extends Component<Props> {
     const { button, ...rest } = this.props;
 
     return (
-      <EuiPortal
+      <WuiPortal
         portalRef={this.setPortalRef}
         insert={{ sibling: this.props.button, position: 'after' }}>
-        <EuiPopover
+        <WuiPopover
           {...rest}
           button={
             <div
               ref={this.setAnchorRef}
-              className="euiWrappingPopover__anchor"
+              className="wuiWrappingPopover__anchor"
             />
           }
         />
-      </EuiPortal>
+      </WuiPortal>
     );
   }
 }

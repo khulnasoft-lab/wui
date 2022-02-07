@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,12 +38,12 @@ import React, {
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiI18n } from '../i18n';
 
 const HUE_RANGE = 359;
 
-export type EuiHueProps = Omit<
+export type WuiHueProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'onChange'
 > &
@@ -40,7 +53,7 @@ export type EuiHueProps = Omit<
     onChange: (hue: number) => void;
   };
 
-export const EuiHue: FunctionComponent<EuiHueProps> = ({
+export const WuiHue: FunctionComponent<WuiHueProps> = ({
   className,
   hex,
   hue = 1,
@@ -51,20 +64,20 @@ export const EuiHue: FunctionComponent<EuiHueProps> = ({
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange(Number(e.target.value));
   };
-  const classes = classNames('euiHue', className);
+  const classes = classNames('wuiHue', className);
   return (
     <React.Fragment>
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <label htmlFor={`${id}-hue`}>
-          <EuiI18n
-            token="euiHue.label"
+          <WuiI18n
+            token="wuiHue.label"
             default="Select the HSV color mode 'hue' value"
           />
         </label>
-      </EuiScreenReaderOnly>
-      <EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <p aria-live="polite">{hex}</p>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
       <div className={classes}>
         <input
           id={`${id}-hue`}
@@ -72,7 +85,7 @@ export const EuiHue: FunctionComponent<EuiHueProps> = ({
           max={HUE_RANGE}
           step={1}
           type="range"
-          className="euiHue__range"
+          className="wuiHue__range"
           value={hue}
           onChange={handleChange}
           {...rest}

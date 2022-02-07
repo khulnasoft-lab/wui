@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,8 +40,8 @@ import {
 } from 'react';
 import { htmlIdGenerator } from '../../services/accessibility';
 
-export interface EuiEvent extends Event {
-  euiGeneratedBy: string[];
+export interface WuiEvent extends Event {
+  wuiGeneratedBy: string[];
 }
 
 interface Props {
@@ -36,15 +49,15 @@ interface Props {
    * ReactNode to render as this component's content
    */
   children: ReactElement<any>;
-  onOutsideClick: (event: EuiEvent) => void;
+  onOutsideClick: (event: WuiEvent) => void;
   isDisabled?: boolean;
-  onMouseDown?: (event: ReactMouseEvent<any, EuiEvent>) => void;
-  onMouseUp?: (event: ReactMouseEvent<any, EuiEvent>) => void;
-  onTouchStart?: (event: ReactMouseEvent<any, EuiEvent>) => void;
-  onTouchEnd?: (event: ReactMouseEvent<any, EuiEvent>) => void;
+  onMouseDown?: (event: ReactMouseEvent<any, WuiEvent>) => void;
+  onMouseUp?: (event: ReactMouseEvent<any, WuiEvent>) => void;
+  onTouchStart?: (event: ReactMouseEvent<any, WuiEvent>) => void;
+  onTouchEnd?: (event: ReactMouseEvent<any, WuiEvent>) => void;
 }
 
-export class EuiOutsideClickDetector extends Component<Props> {
+export class WuiOutsideClickDetector extends Component<Props> {
   // We are working with the assumption that a click event is
   // equivalent to a sequential, compound press and release of
   // the pointing device (mouse, finger, stylus, etc.).
@@ -63,7 +76,7 @@ export class EuiOutsideClickDetector extends Component<Props> {
   constructor(props: Props) {
     super(props);
 
-    // the id is used to identify which EuiOutsideClickDetector
+    // the id is used to identify which WuiOutsideClickDetector
     // is the source of a click event; as the click event bubbles
     // up and reaches the click detector's child component the
     // id value is stamped on the event. This id is inspected
@@ -74,9 +87,9 @@ export class EuiOutsideClickDetector extends Component<Props> {
     // Taking this approach instead of checking if the event's
     // target element exists in this component's DOM sub-tree is
     // necessary for handling clicks originating from children
-    // rendered through React's portals (EuiPortal). The id tracking
+    // rendered through React's portals (WuiPortal). The id tracking
     // works because React guarantees the event bubbles through the
-    // virtual DOM and executes EuiClickDetector's onClick handler,
+    // virtual DOM and executes WuiClickDetector's onClick handler,
     // stamping the id even though the event originates outside
     // this component's reified DOM tree.
     this.id = htmlIdGenerator()();
@@ -84,7 +97,7 @@ export class EuiOutsideClickDetector extends Component<Props> {
     this.capturedDownIds = [];
   }
 
-  onClickOutside: EventHandler<any> = (event: EuiEvent) => {
+  onClickOutside: EventHandler<any> = (event: WuiEvent) => {
     const { isDisabled, onOutsideClick } = this.props;
 
     if (isDisabled) {
@@ -93,7 +106,7 @@ export class EuiOutsideClickDetector extends Component<Props> {
     }
 
     if (
-      (event.euiGeneratedBy && event.euiGeneratedBy.includes(this.id)) ||
+      (event.wuiGeneratedBy && event.wuiGeneratedBy.includes(this.id)) ||
       this.capturedDownIds.includes(this.id)
     ) {
       this.capturedDownIds = [];
@@ -115,28 +128,28 @@ export class EuiOutsideClickDetector extends Component<Props> {
   }
 
   onChildClick = (
-    event: ReactMouseEvent<any, EuiEvent>,
-    cb: (event: ReactMouseEvent<any, EuiEvent>) => void
+    event: ReactMouseEvent<any, WuiEvent>,
+    cb: (event: ReactMouseEvent<any, WuiEvent>) => void
   ) => {
     // to support nested click detectors, build an array
     // of detector ids that have been encountered
-    if (event.nativeEvent.hasOwnProperty('euiGeneratedBy')) {
-      event.nativeEvent.euiGeneratedBy.push(this.id);
+    if (event.nativeEvent.hasOwnProperty('wuiGeneratedBy')) {
+      event.nativeEvent.wuiGeneratedBy.push(this.id);
     } else {
-      event.nativeEvent.euiGeneratedBy = [this.id];
+      event.nativeEvent.wuiGeneratedBy = [this.id];
     }
     if (cb) cb(event);
   };
 
-  onChildMouseDown = (event: ReactMouseEvent<any, EuiEvent>) => {
+  onChildMouseDown = (event: ReactMouseEvent<any, WuiEvent>) => {
     this.onChildClick(event, e => {
-      this.capturedDownIds = e.nativeEvent.euiGeneratedBy;
+      this.capturedDownIds = e.nativeEvent.wuiGeneratedBy;
       if (this.props.onMouseDown) this.props.onMouseDown(e);
       if (this.props.onTouchStart) this.props.onTouchStart(e);
     });
   };
 
-  onChildMouseUp = (event: ReactMouseEvent<any, EuiEvent>) => {
+  onChildMouseUp = (event: ReactMouseEvent<any, WuiEvent>) => {
     this.onChildClick(event, e => {
       if (this.props.onMouseUp) this.props.onMouseUp(e);
       if (this.props.onTouchEnd) this.props.onTouchEnd(e);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiColorPicker, EuiFormRow } from '../../../../src/components';
+import { WuiColorPicker, WuiFormRow } from '../../../../src/components';
 import { useColorPickerState } from '../../../../src/services';
 
 export default () => {
@@ -9,30 +9,30 @@ export default () => {
   const [color3, setColor3, errors3] = useColorPickerState('211, 96, 134');
   return (
     <>
-      <EuiFormRow label="Auto format" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      <WuiFormRow label="Auto format" isInvalid={!!errors} error={errors}>
+        <WuiColorPicker
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Hex format" isInvalid={!!errors2} error={errors2}>
-        <EuiColorPicker
+      </WuiFormRow>
+      <WuiFormRow label="Hex format" isInvalid={!!errors2} error={errors2}>
+        <WuiColorPicker
           format="hex"
           onChange={setColor2}
           color={color2}
           isInvalid={!!errors2}
         />
-      </EuiFormRow>
-      <EuiFormRow label="RGB(a) format" isInvalid={!!errors3} error={errors3}>
-        <EuiColorPicker
+      </WuiFormRow>
+      <WuiFormRow label="RGB(a) format" isInvalid={!!errors3} error={errors3}>
+        <WuiColorPicker
           format="rgba"
           onChange={setColor3}
           color={color3}
           isInvalid={!!errors3}
           showAlpha={true}
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </>
   );
 };

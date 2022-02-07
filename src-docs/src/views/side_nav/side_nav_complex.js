@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiIcon, EuiSideNav } from '../../../../src/components';
+import { WuiIcon, WuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
@@ -26,8 +26,8 @@ export default () => {
   };
 
   const sideNav = [
-    createItem('Elasticsearch', {
-      icon: <EuiIcon type="logoElasticsearch" />,
+    createItem('Wazuh', {
+      icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Data sources'),
         createItem('Users'),
@@ -38,8 +38,8 @@ export default () => {
         ),
       ],
     }),
-    createItem('Kibana', {
-      icon: <EuiIcon type="logoKibana" />,
+    createItem('Wazuh', {
+      icon: <WuiIcon type="logoWazuh" />,
       items: [
         createItem('Advanced settings', {
           items: [
@@ -47,10 +47,10 @@ export default () => {
             createItem('Timelion', {
               items: [
                 createItem('Time stuff', {
-                  icon: <EuiIcon type="clock" />,
+                  icon: <WuiIcon type="clock" />,
                 }),
                 createItem('Lion stuff', {
-                  icon: <EuiIcon type="stats" />,
+                  icon: <WuiIcon type="stats" />,
                 }),
               ],
             }),
@@ -63,13 +63,13 @@ export default () => {
       ],
     }),
     createItem('Logstash', {
-      icon: <EuiIcon type="logoLogstash" />,
+      icon: <WuiIcon type="logoLogstash" />,
       items: [createItem('Pipeline viewer')],
     }),
   ];
 
   return (
-    <EuiSideNav
+    <WuiSideNav
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={toggleOpenOnMobile}
       isOpenOnMobile={isSideNavOpenOnMobile}

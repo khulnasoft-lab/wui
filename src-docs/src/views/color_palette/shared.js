@@ -2,36 +2,36 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiFlexItem,
-  EuiCopy,
-  EuiCode,
-  EuiLink,
+  WuiFlexItem,
+  WuiCopy,
+  WuiCode,
+  WuiLink,
 } from '../../../../src/components';
 
 export const ColorPaletteFlexItem = ({ hexCode, className, ...rest }) => {
   return (
-    <EuiFlexItem
+    <WuiFlexItem
       key={hexCode}
       grow={false}
       className={classNames('guideColorPalette__swatch', className)}
       {...rest}>
       <span title={hexCode} style={{ backgroundColor: hexCode }} />
-    </EuiFlexItem>
+    </WuiFlexItem>
   );
 };
 
 export const ColorPaletteCopyCode = ({ textToCopy, code }) => {
   return (
     <span>
-      <EuiCopy
+      <WuiCopy
         beforeMessage="Click to copy palette config"
         textToCopy={textToCopy || code}>
         {copy => (
-          <EuiLink onClick={copy}>
-            <EuiCode>{code}</EuiCode>
-          </EuiLink>
+          <WuiLink onClick={copy}>
+            <WuiCode>{code}</WuiCode>
+          </WuiLink>
         )}
-      </EuiCopy>
+      </WuiCopy>
     </span>
   );
 };

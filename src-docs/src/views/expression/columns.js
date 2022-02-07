@@ -1,13 +1,13 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiPopoverTitle,
-  EuiPopover,
-  EuiSelect,
-  EuiComboBox,
-  EuiExpression,
-  EuiTitle,
-  EuiSpacer,
+  WuiPopoverTitle,
+  WuiPopover,
+  WuiSelect,
+  WuiComboBox,
+  WuiExpression,
+  WuiTitle,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,8 +15,8 @@ export default () => {
     isOpen: false,
     value: (
       <Fragment>
-        <p>.kibana_task_manager,</p>
-        <p>kibana_sample_data_ecommerce</p>
+        <p>.wazuh_task_manager,</p>
+        <p>wazuh_sample_data_ecommerce</p>
       </Fragment>
     ),
   });
@@ -28,19 +28,19 @@ export default () => {
 
   const options = [
     {
-      label: '.kibana_task_manager',
+      label: '.wazuh_task_manager',
     },
     {
-      label: 'kibana_sample_data_ecommerce',
+      label: 'wazuh_sample_data_ecommerce',
     },
     {
-      label: '.kibana-event-log-8.0.0-000001',
+      label: '.wazuh-event-log-8.0.0-000001',
     },
     {
-      label: 'kibana_sample_data_flights',
+      label: 'wazuh_sample_data_flights',
     },
     {
-      label: '.kibana-event-log-8.0.0',
+      label: '.wazuh-event-log-8.0.0',
     },
   ];
 
@@ -99,8 +99,8 @@ export default () => {
 
   const renderPopover1 = () => (
     <div style={{ width: 300 }}>
-      <EuiPopoverTitle>INDICES</EuiPopoverTitle>
-      <EuiComboBox
+      <WuiPopoverTitle>INDICES</WuiPopoverTitle>
+      <WuiComboBox
         placeholder="Select one or more indices"
         options={options}
         selectedOptions={selectedOptions}
@@ -113,8 +113,8 @@ export default () => {
 
   const renderPopover2 = () => (
     <div style={{ width: 150 }}>
-      <EuiPopoverTitle>WHEN</EuiPopoverTitle>
-      <EuiSelect
+      <WuiPopoverTitle>WHEN</WuiPopoverTitle>
+      <WuiSelect
         compressed
         value={example2.value}
         onChange={changeExample2}
@@ -139,10 +139,10 @@ export default () => {
 
   return (
     <div style={{ maxWidth: 500 }}>
-      <EuiPopover
+      <WuiPopover
         id="columnsPopover1"
         button={
-          <EuiExpression
+          <WuiExpression
             description="indices"
             display="columns"
             value={example1.value}
@@ -160,13 +160,13 @@ export default () => {
         panelPaddingSize="s"
         anchorPosition="downLeft">
         {renderPopover1()}
-      </EuiPopover>
+      </WuiPopover>
 
-      <EuiPopover
+      <WuiPopover
         id="columnsPopover2"
         panelPaddingSize="s"
         button={
-          <EuiExpression
+          <WuiExpression
             description="when"
             display="columns"
             value={example2.value}
@@ -180,21 +180,21 @@ export default () => {
         display="block"
         anchorPosition="downLeft">
         {renderPopover2()}
-      </EuiPopover>
-      <EuiExpression
+      </WuiPopover>
+      <WuiExpression
         display="columns"
         description="Except"
-        value="kibana_sample_data_ky_counties"
+        value="wazuh_sample_data_ky_counties"
       />
-      <EuiSpacer />
-      <EuiTitle size="xxs">
+      <WuiSpacer />
+      <WuiTitle size="xxs">
         <h3>Description width at 50px</h3>
-      </EuiTitle>
-      <EuiExpression
+      </WuiTitle>
+      <WuiExpression
         description="join"
         display="columns"
         descriptionWidth={50}
-        value="kibana_sample_data_ky_avl"
+        value="wazuh_sample_data_ky_avl"
         onClick={() => {}}
       />
     </div>

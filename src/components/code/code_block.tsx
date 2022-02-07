@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,13 +33,13 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
-import { EuiCodeBlockImpl } from './_code_block';
-import { EuiCodeSharedProps } from './code';
+import { WuiCodeBlockImpl } from './_code_block';
+import { WuiCodeSharedProps } from './code';
 
 export type PaddingSize = 'none' | 's' | 'm' | 'l';
 export type FontSize = 's' | 'm' | 'l';
 
-interface OwnProps extends EuiCodeSharedProps {
+interface OwnProps extends WuiCodeSharedProps {
   inline?: false;
   paddingSize?: PaddingSize;
   fontSize?: FontSize;
@@ -34,13 +47,13 @@ interface OwnProps extends EuiCodeSharedProps {
   isCopyable?: boolean;
 }
 
-export type EuiCodeBlockProps = CommonProps &
+export type WuiCodeBlockProps = CommonProps &
   OwnProps &
   HTMLAttributes<HTMLElement>;
 
-export const EuiCodeBlock: FunctionComponent<EuiCodeBlockProps> = ({
+export const WuiCodeBlock: FunctionComponent<WuiCodeBlockProps> = ({
   inline,
   ...rest
 }) => {
-  return <EuiCodeBlockImpl inline={false} {...rest} />;
+  return <WuiCodeBlockImpl inline={false} {...rest} />;
 };

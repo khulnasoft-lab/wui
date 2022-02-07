@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,9 +34,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiTablePagination } from './table_pagination';
+import { WuiTablePagination } from './table_pagination';
 
-describe('EuiTablePagination', () => {
+describe('WuiTablePagination', () => {
   const paginationProps = {
     activePage: 1,
     pageCount: 5,
@@ -31,7 +44,7 @@ describe('EuiTablePagination', () => {
   };
   test('is rendered', () => {
     const component = render(
-      <EuiTablePagination {...requiredProps} {...paginationProps} />
+      <WuiTablePagination {...requiredProps} {...paginationProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -39,7 +52,7 @@ describe('EuiTablePagination', () => {
 
   test('is rendered when hiding the per page options', () => {
     const component = render(
-      <EuiTablePagination
+      <WuiTablePagination
         {...requiredProps}
         {...paginationProps}
         hidePerPageOptions={true}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiKeyboardAccessible, EuiText } from '../../../../src/components';
+import { WuiKeyboardAccessible, WuiText } from '../../../../src/components';
 
 // For custom components, we just need to make sure they delegate props to their rendered root
 // element, e.g. onClick, tabIndex, and role.
@@ -10,42 +10,42 @@ const CustomComponent = ({ children, ...rest }) => (
 
 export default () => (
   <div>
-    <EuiText>
-      <EuiKeyboardAccessible>
+    <WuiText>
+      <WuiKeyboardAccessible>
         <div onClick={() => window.alert('Div clicked')}>Click this div</div>
-      </EuiKeyboardAccessible>
+      </WuiKeyboardAccessible>
 
-      <EuiKeyboardAccessible>
+      <WuiKeyboardAccessible>
         <a
-          className="euiLink"
+          className="wuiLink"
           onClick={() => window.alert('Anchor tag clicked')}>
           Click this anchor tag
         </a>
-      </EuiKeyboardAccessible>
+      </WuiKeyboardAccessible>
 
-      <EuiKeyboardAccessible>
+      <WuiKeyboardAccessible>
         <CustomComponent
           onClick={() => window.alert('Custom component clicked')}>
           Click this custom component
         </CustomComponent>
-      </EuiKeyboardAccessible>
+      </WuiKeyboardAccessible>
 
-      <EuiKeyboardAccessible>
+      <WuiKeyboardAccessible>
         <div
-          onClick={() => window.alert('Outer EuiKeyboardAccessible clicked')}>
-          This EuiKeyboardAccessible contains another
-          EuiKeyboardAccessible&nbsp;
-          <EuiKeyboardAccessible>
+          onClick={() => window.alert('Outer WuiKeyboardAccessible clicked')}>
+          This WuiKeyboardAccessible contains another
+          WuiKeyboardAccessible&nbsp;
+          <WuiKeyboardAccessible>
             <a
-              className="euiLink"
+              className="wuiLink"
               onClick={() =>
-                window.alert('Inner EuiKeyboardAccessible clicked')
+                window.alert('Inner WuiKeyboardAccessible clicked')
               }>
               Clicking this inner one should call both onClick handlers
             </a>
-          </EuiKeyboardAccessible>
+          </WuiKeyboardAccessible>
         </div>
-      </EuiKeyboardAccessible>
-    </EuiText>
+      </WuiKeyboardAccessible>
+    </WuiText>
   </div>
 );

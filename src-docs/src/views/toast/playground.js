@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiToast } from '../../../../src/components/';
+import { WuiToast } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
@@ -9,9 +9,9 @@ import {
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiToast.__docgenInfo)
-    ? EuiToast.__docgenInfo[0]
-    : EuiToast.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiToast.__docgenInfo)
+    ? WuiToast.__docgenInfo[0]
+    : WuiToast.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -28,14 +28,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiToast',
+      componentName: 'WuiToast',
       props: propsToUse,
       scope: {
-        EuiToast,
+        WuiToast,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiToast'],
+        '@wazuh/wui': {
+          named: ['WuiToast'],
         },
       },
       customProps: {

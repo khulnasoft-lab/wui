@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,61 +38,61 @@ import React, {
   Fragment,
 } from 'react';
 import classNames from 'classnames';
-import { EuiI18n } from '../i18n';
-import { EuiInnerText } from '../inner_text';
+import { WuiI18n } from '../i18n';
+import { WuiInnerText } from '../inner_text';
 import { CommonProps, ExclusiveUnion } from '../common';
 import { isNil } from '../../services/predicate';
 
 const sizeToClassNameMap = {
-  xs: 'euiProgress--xs',
-  s: 'euiProgress--s',
-  m: 'euiProgress--m',
-  l: 'euiProgress--l',
+  xs: 'wuiProgress--xs',
+  s: 'wuiProgress--s',
+  m: 'wuiProgress--m',
+  l: 'wuiProgress--l',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
-export type EuiProgressSize = keyof typeof sizeToClassNameMap;
+export type WuiProgressSize = keyof typeof sizeToClassNameMap;
 
 const colorToClassNameMap = {
-  primary: 'euiProgress--primary',
-  secondary: 'euiProgress--secondary',
-  danger: 'euiProgress--danger',
-  subdued: 'euiProgress--subdued',
-  accent: 'euiProgress--accent',
+  primary: 'wuiProgress--primary',
+  secondary: 'wuiProgress--secondary',
+  danger: 'wuiProgress--danger',
+  subdued: 'wuiProgress--subdued',
+  accent: 'wuiProgress--accent',
 };
 
 export const COLORS = Object.keys(colorToClassNameMap);
 
-export type EuiProgressColor = keyof typeof colorToClassNameMap;
+export type WuiProgressColor = keyof typeof colorToClassNameMap;
 
 const dataColorToClassNameMap = {
-  primary: 'euiProgress__data--primary',
-  secondary: 'euiProgress__data--secondary',
-  danger: 'euiProgress__data--danger',
-  subdued: 'euiProgress__data--subdued',
-  accent: 'euiProgress__data--accent',
+  primary: 'wuiProgress__data--primary',
+  secondary: 'wuiProgress__data--secondary',
+  danger: 'wuiProgress__data--danger',
+  subdued: 'wuiProgress__data--subdued',
+  accent: 'wuiProgress__data--accent',
 };
 
 const positionsToClassNameMap = {
-  fixed: 'euiProgress--fixed',
-  absolute: 'euiProgress--absolute',
+  fixed: 'wuiProgress--fixed',
+  absolute: 'wuiProgress--absolute',
   static: '',
 };
 
 export const POSITIONS = Object.keys(positionsToClassNameMap);
 
-export type EuiProgressPosition = keyof typeof positionsToClassNameMap;
+export type WuiProgressPosition = keyof typeof positionsToClassNameMap;
 
-export type EuiProgressProps = CommonProps & {
-  size?: EuiProgressSize;
-  color?: EuiProgressColor;
-  position?: EuiProgressPosition;
+export type WuiProgressProps = CommonProps & {
+  size?: WuiProgressSize;
+  color?: WuiProgressColor;
+  position?: WuiProgressPosition;
 };
 
-type Indeterminate = EuiProgressProps & HTMLAttributes<HTMLDivElement>;
+type Indeterminate = WuiProgressProps & HTMLAttributes<HTMLDivElement>;
 
-type Determinate = EuiProgressProps &
+type Determinate = WuiProgressProps &
   Omit<ProgressHTMLAttributes<HTMLProgressElement>, 'max'> & {
     max?: number;
     /*
@@ -93,7 +106,7 @@ type Determinate = EuiProgressProps &
     labelProps?: HTMLAttributes<HTMLSpanElement>;
   };
 
-export const EuiProgress: FunctionComponent<ExclusiveUnion<
+export const WuiProgress: FunctionComponent<ExclusiveUnion<
   Determinate,
   Indeterminate
 >> = ({
@@ -110,10 +123,10 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
 }) => {
   const determinate = !isNil(max);
   const classes = classNames(
-    'euiProgress',
+    'wuiProgress',
     {
-      'euiProgress--indeterminate': !determinate,
-      'euiProgress--native': determinate,
+      'wuiProgress--indeterminate': !determinate,
+      'wuiProgress--native': determinate,
     },
     sizeToClassNameMap[size],
     colorToClassNameMap[color],
@@ -121,14 +134,14 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
     className
   );
   const dataClasses = classNames(
-    'euiProgress__data',
+    'wuiProgress__data',
     {
-      'euiProgress__data--l': size === 'l',
+      'wuiProgress__data--l': size === 'l',
     },
     dataColorToClassNameMap[color]
   );
   const labelClasses = classNames(
-    'euiProgress__label',
+    'wuiProgress__label',
     labelProps && labelProps.className
   );
 
@@ -136,8 +149,8 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
   if (valueText === true) {
     // valueText is true
     valueRender = (
-      <EuiI18n
-        token="euiProgress.valueText"
+      <WuiI18n
+        token="wuiProgress.valueText"
         default="{value}%"
         values={{
           value,
@@ -158,7 +171,7 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
         {label || valueText ? (
           <div className={dataClasses}>
             {label && (
-              <EuiInnerText>
+              <WuiInnerText>
                 {(ref, innerText) => (
                   <span
                     title={innerText}
@@ -168,19 +181,19 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
                     {label}
                   </span>
                 )}
-              </EuiInnerText>
+              </WuiInnerText>
             )}
             {valueRender && (
-              <EuiInnerText>
+              <WuiInnerText>
                 {(ref, innerText) => (
                   <span
                     title={innerText}
                     ref={ref}
-                    className="euiProgress__valueText">
+                    className="wuiProgress__valueText">
                     {valueRender}
                   </span>
                 )}
-              </EuiInnerText>
+              </WuiInnerText>
             )}
           </div>
         ) : (

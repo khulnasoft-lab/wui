@@ -50,7 +50,7 @@ export const icon = ${componentName};
         `,
       },
       {
-        componentName: `EuiIcon${pascalCase(path.basename(filePath, '.svg'))}`,
+        componentName: `WuiIcon${pascalCase(path.basename(filePath, '.svg'))}`,
       }
     );
 

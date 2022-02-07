@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiProgress } from '../../../../src/components/';
+import { WuiProgress } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiProgress.__docgenInfo)
-    ? EuiProgress.__docgenInfo[0]
-    : EuiProgress.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiProgress.__docgenInfo)
+    ? WuiProgress.__docgenInfo[0]
+    : WuiProgress.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -27,14 +27,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiProgress',
+      componentName: 'WuiProgress',
       props: propsToUse,
       scope: {
-        EuiProgress,
+        WuiProgress,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiProgress'],
+        '@wazuh/wui': {
+          named: ['WuiProgress'],
         },
       },
     },

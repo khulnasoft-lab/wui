@@ -1,33 +1,33 @@
-.euiFormControlLayoutIcons {
+.wuiFormControlLayoutIcons {
   pointer-events: none;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: $euiFormControlPadding;
+  left: $wuiFormControlPadding;
   display: flex;
   align-items: center;
 
   > * + * {
-    margin-left: $euiFormControlPadding / 2;
+    margin-left: $wuiFormControlPadding / 2;
   }
 
-  .euiFormControlLayout--compressed & {
-    left: $euiFormControlCompressedPadding;
+  .wuiFormControlLayout--compressed & {
+    left: $wuiFormControlCompressedPadding;
   }
 }
 
-.euiFormControlLayoutIcons--right {
+.wuiFormControlLayoutIcons--right {
   left: auto;
-  right: $euiFormControlPadding;
+  right: $wuiFormControlPadding;
 
-  .euiFormControlLayout--compressed & {
+  .wuiFormControlLayout--compressed & {
     left: auto;
-    right: $euiFormControlCompressedPadding;
+    right: $wuiFormControlCompressedPadding;
   }
 }
 
 // If the control is disabled, change the color of the icons
-*:disabled + .euiFormControlLayoutIcons {
+*:disabled + .wuiFormControlLayoutIcons {
   cursor: not-allowed;
-  color: $euiFormControlDisabledColor;
+  color: $wuiFormControlDisabledColor;
 }

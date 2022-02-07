@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiFieldPassword, EuiSwitch } from '../../../../src/components';
+import { WuiFieldPassword, WuiSwitch } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default function() {
@@ -13,7 +13,7 @@ export default function() {
       canAppend
       canPrepend
       extras={[
-        <EuiSwitch
+        <WuiSwitch
           compressed
           label={'dual'}
           checked={dual}
@@ -22,7 +22,7 @@ export default function() {
           }}
         />,
       ]}>
-      <EuiFieldPassword
+      <WuiFieldPassword
         placeholder="Placeholder text"
         type={dual ? 'dual' : undefined}
         value={value}

@@ -1,8 +1,8 @@
 // These are variable overwrites used only for this theme.
-@import 'themes/eui-wazuh/eui_wazuh_colors_dark';
+@import 'themes/wui-wazuh/wui_wazuh_colors_dark';
 
 // Global styling
-@import 'themes/eui-wazuh/global_styling/index';
+@import 'themes/wui-wazuh/global_styling/index';
 
 // Components
 @import 'components/index';
@@ -12,4 +12,4 @@
 
 // Component overrides
 // Comes after the component import and overrides via cascade
-@import 'themes/eui-wazuh/overrides/index';
+@import 'themes/wui-wazuh/overrides/index';

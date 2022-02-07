@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,8 +36,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDragDropContext } from './';
-import { EuiDragDropContextContext } from './drag_drop_context';
+import { WuiDragDropContext } from './';
+import { WuiDragDropContextContext } from './drag_drop_context';
 
 function snapshotDragDropContext(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -34,13 +47,13 @@ function snapshotDragDropContext(component: ReactWrapper) {
   return container.firstChild;
 }
 
-describe('EuiDragDropContext', () => {
+describe('WuiDragDropContext', () => {
   test('is rendered', () => {
     const handler = jest.fn();
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <div />
-      </EuiDragDropContext>
+      </WuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -58,15 +71,15 @@ describe('EuiDragDropContext', () => {
         });
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDragDropContextContext.Consumer>
+          <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <WuiDragDropContextContext.Consumer>
               {value => (
                 <div data-test-subj="child">
                   {value.hasOwnProperty('isDraggingType') ? 'true' : 'false'}
                 </div>
               )}
-            </EuiDragDropContextContext.Consumer>
-          </EuiDragDropContext>
+            </WuiDragDropContextContext.Consumer>
+          </WuiDragDropContext>
         );
 
         expect(findTestSubject(component, 'child').text()).toBe('true');

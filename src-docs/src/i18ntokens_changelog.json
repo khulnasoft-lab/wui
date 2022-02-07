@@ -3,42 +3,42 @@
     "version": "29.1.0",
     "changes": [
       {
-        "token": "euiHeaderLinks.openNavigationMenu",
+        "token": "wuiHeaderLinks.openNavigationMenu",
         "changeType": "modified",
         "value": "Open menu"
       },
       {
-        "token": "euiHeaderLinks.appNavigation",
+        "token": "wuiHeaderLinks.appNavigation",
         "changeType": "modified",
         "value": "App menu"
       },
       {
-        "token": "euiColumnActions.hideColumn",
+        "token": "wuiColumnActions.hideColumn",
         "changeType": "added",
         "value": "Hide column"
       },
       {
-        "token": "euiColumnActions.sortAsc",
+        "token": "wuiColumnActions.sortAsc",
         "changeType": "added",
         "value": "Sort schema asc"
       },
       {
-        "token": "euiColumnActions.sortDesc",
+        "token": "wuiColumnActions.sortDesc",
         "changeType": "added",
         "value": "Sort schema desc"
       },
       {
-        "token": "euiColumnActions.moveLeft",
+        "token": "wuiColumnActions.moveLeft",
         "changeType": "added",
         "value": "Move left"
       },
       {
-        "token": "euiColumnActions.moveRight",
+        "token": "wuiColumnActions.moveRight",
         "changeType": "added",
         "value": "Move right"
       },
       {
-        "token": "euiDataGridHeaderCell.headerActions",
+        "token": "wuiDataGridHeaderCell.headerActions",
         "changeType": "added",
         "value": "Header actions"
       }
@@ -48,17 +48,17 @@
     "version": "28.2.0",
     "changes": [
       {
-        "token": "euiSelectableTemplateSitewide.loadingResults",
+        "token": "wuiSelectableTemplateSitewide.loadingResults",
         "changeType": "added",
         "value": "Loading results"
       },
       {
-        "token": "euiSelectableTemplateSitewide.noResults",
+        "token": "wuiSelectableTemplateSitewide.noResults",
         "changeType": "added",
         "value": "No results available"
       },
       {
-        "token": "euiSelectableTemplateSitewide.onFocusBadgeGoTo",
+        "token": "wuiSelectableTemplateSitewide.onFocusBadgeGoTo",
         "changeType": "added",
         "value": "Go to"
       }
@@ -68,7 +68,7 @@
     "version": "28.1.0",
     "changes": [
       {
-        "token": "euiAccordion.isLoading",
+        "token": "wuiAccordion.isLoading",
         "changeType": "added",
         "value": "Loading"
       }
@@ -78,52 +78,52 @@
     "version": "28.0.0",
     "changes": [
       {
-        "token": "euiMarkdownEditorFooter.uploadingFiles",
+        "token": "wuiMarkdownEditorFooter.uploadingFiles",
         "changeType": "added",
         "value": "Click to upload files"
       },
       {
-        "token": "euiMarkdownEditorFooter.openUploadModal",
+        "token": "wuiMarkdownEditorFooter.openUploadModal",
         "changeType": "added",
         "value": "Open upload files modal"
       },
       {
-        "token": "euiMarkdownEditorFooter.unsupportedFileType",
+        "token": "wuiMarkdownEditorFooter.unsupportedFileType",
         "changeType": "added",
         "value": "File type not supported"
       },
       {
-        "token": "euiMarkdownEditorFooter.supportedFileTypes",
+        "token": "wuiMarkdownEditorFooter.supportedFileTypes",
         "changeType": "added",
         "value": "Supported files: {supportedFileTypes}"
       },
       {
-        "token": "euiMarkdownEditorFooter.showSyntaxErrors",
+        "token": "wuiMarkdownEditorFooter.showSyntaxErrors",
         "changeType": "added",
         "value": "Show errors"
       },
       {
-        "token": "euiMarkdownEditorFooter.showMarkdownHelp",
+        "token": "wuiMarkdownEditorFooter.showMarkdownHelp",
         "changeType": "added",
         "value": "Show markdown help"
       },
       {
-        "token": "euiMarkdownEditorFooter.errorsTitle",
+        "token": "wuiMarkdownEditorFooter.errorsTitle",
         "changeType": "added",
         "value": "Errors"
       },
       {
-        "token": "euiMarkdownEditorFooter.syntaxTitle",
+        "token": "wuiMarkdownEditorFooter.syntaxTitle",
         "changeType": "added",
         "value": "Syntax help"
       },
       {
-        "token": "euiMarkdownEditorToolbar.editor",
+        "token": "wuiMarkdownEditorToolbar.editor",
         "changeType": "added",
         "value": "Editor"
       },
       {
-        "token": "euiMarkdownEditorToolbar.previewMarkdown",
+        "token": "wuiMarkdownEditorToolbar.previewMarkdown",
         "changeType": "added",
         "value": "Preview"
       }
@@ -133,12 +133,12 @@
     "version": "27.3.0",
     "changes": [
       {
-        "token": "euiComboBoxOptionsList.createCustomOption",
+        "token": "wuiComboBoxOptionsList.createCustomOption",
         "changeType": "modified",
         "value": "Add {searchValue} as a custom option"
       },
       {
-        "token": "euiComboBoxOptionsList.delimiterMessage",
+        "token": "wuiComboBoxOptionsList.delimiterMessage",
         "changeType": "modified",
         "value": "Add each item separated by {delimiter}"
       }
@@ -148,12 +148,12 @@
     "version": "27.2.0",
     "changes": [
       {
-        "token": "euiSelectableListItem.includedOptionInstructions",
+        "token": "wuiSelectableListItem.includedOptionInstructions",
         "changeType": "modified",
         "value": "To exclude this option, press enter."
       },
       {
-        "token": "euiSelectableListItem.excludedOptionInstructions",
+        "token": "wuiSelectableListItem.excludedOptionInstructions",
         "changeType": "modified",
         "value": "To deselect this option, press enter."
       }
@@ -163,32 +163,32 @@
     "version": "27.0.0",
     "changes": [
       {
-        "token": "euiProgress.valueText",
+        "token": "wuiProgress.valueText",
         "changeType": "added",
         "value": "{value}%"
       },
       {
-        "token": "euiSelectableListItem.includedOption",
+        "token": "wuiSelectableListItem.includedOption",
         "changeType": "added",
         "value": "Included option."
       },
       {
-        "token": "euiSelectableListItem.includedOptionInstructions",
+        "token": "wuiSelectableListItem.includedOptionInstructions",
         "changeType": "added",
         "value": "To exclude this option, press enter or space."
       },
       {
-        "token": "euiSelectableListItem.excludedOption",
+        "token": "wuiSelectableListItem.excludedOption",
         "changeType": "added",
         "value": "Excluded option."
       },
       {
-        "token": "euiSelectableListItem.excludedOptionInstructions",
+        "token": "wuiSelectableListItem.excludedOptionInstructions",
         "changeType": "added",
         "value": "To deselect this option, press enter or space."
       },
       {
-        "token": "euiSelectable.placeholderName",
+        "token": "wuiSelectable.placeholderName",
         "changeType": "added",
         "value": "Filter options"
       }
@@ -198,12 +198,12 @@
     "version": "26.0.0",
     "changes": [
       {
-        "token": "euiBreadcrumbs.collapsedBadge.ariaLabel",
+        "token": "wuiBreadcrumbs.collapsedBadge.ariaLabel",
         "changeType": "modified",
         "value": "Show collapsed breadcrumbs"
       },
       {
-        "token": "euiForm.addressFormErrors",
+        "token": "wuiForm.addressFormErrors",
         "changeType": "modified",
         "value": "Please address the highlighted errors."
       }
@@ -213,103 +213,103 @@
     "version": "25.0.0",
     "changes": [
       {
-        "token": "euiBasicTable.tableDescriptionWithPagination",
+        "token": "wuiBasicTable.tableDescriptionWithPagination",
         "changeType": "deleted"
       },
       {
-        "token": "euiBasicTable.tableDescriptionWithoutPagination",
+        "token": "wuiBasicTable.tableDescriptionWithoutPagination",
         "changeType": "deleted"
       },
       {
-        "token": "euiPagination.pageOfTotal",
+        "token": "wuiPagination.pageOfTotal",
         "changeType": "deleted"
       },
       {
-        "token": "euiPagination.previousPage",
+        "token": "wuiPagination.previousPage",
         "changeType": "modified",
         "value": "Previous page, {page}"
       },
       {
-        "token": "euiPagination.jumpToLastPage",
+        "token": "wuiPagination.jumpToLastPage",
         "changeType": "deleted"
       },
       {
-        "token": "euiPagination.nextPage",
+        "token": "wuiPagination.nextPage",
         "changeType": "modified",
         "value": "Next page, {page}"
       },
       {
-        "token": "euiBasicTable.tableCaptionWithPagination",
+        "token": "wuiBasicTable.tableCaptionWithPagination",
         "changeType": "added",
         "value": "{tableCaption}; Page {page} of {pageCount}."
       },
       {
-        "token": "euiBasicTable.tableAutoCaptionWithPagination",
+        "token": "wuiBasicTable.tableAutoCaptionWithPagination",
         "changeType": "added",
         "value": "This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
       },
       {
-        "token": "euiBasicTable.tableSimpleAutoCaptionWithPagination",
+        "token": "wuiBasicTable.tableSimpleAutoCaptionWithPagination",
         "changeType": "added",
         "value": "This table contains {itemCount} rows; Page {page} of {pageCount}."
       },
       {
-        "token": "euiBasicTable.tableAutoCaptionWithoutPagination",
+        "token": "wuiBasicTable.tableAutoCaptionWithoutPagination",
         "changeType": "added",
         "value": "This table contains {itemCount} rows."
       },
       {
-        "token": "euiBasicTable.tablePagination",
+        "token": "wuiBasicTable.tablePagination",
         "changeType": "added",
         "value": "Pagination for preceding table: {tableCaption}"
       },
       {
-        "token": "euiDataGrid.ariaLabelGridPagination",
+        "token": "wuiDataGrid.ariaLabelGridPagination",
         "changeType": "added",
         "value": "Pagination for preceding grid: {label}"
       },
       {
-        "token": "euiDataGrid.ariaLabelledByGridPagination",
+        "token": "wuiDataGrid.ariaLabelledByGridPagination",
         "changeType": "added",
         "value": "Pagination for preceding grid"
       },
       {
-        "token": "euiDataGrid.ariaLabel",
+        "token": "wuiDataGrid.ariaLabel",
         "changeType": "added",
         "value": "{label}; Page {page} of {pageCount}."
       },
       {
-        "token": "euiDataGrid.ariaLabelledBy",
+        "token": "wuiDataGrid.ariaLabelledBy",
         "changeType": "added",
         "value": "Page {page} of {pageCount}."
       },
       {
-        "token": "euiPaginationButton.longPageString",
+        "token": "wuiPaginationButton.longPageString",
         "changeType": "added",
         "value": "Page {page} of {totalPages}"
       },
       {
-        "token": "euiPaginationButton.shortPageString",
+        "token": "wuiPaginationButton.shortPageString",
         "changeType": "added",
         "value": "Page {page}"
       },
       {
-        "token": "euiPagination.disabledPreviousPage",
+        "token": "wuiPagination.disabledPreviousPage",
         "changeType": "added",
         "value": "Previous page"
       },
       {
-        "token": "euiPagination.firstRangeAriaLabel",
+        "token": "wuiPagination.firstRangeAriaLabel",
         "changeType": "added",
         "value": "Skipping pages 2 to {lastPage}"
       },
       {
-        "token": "euiPagination.lastRangeAriaLabel",
+        "token": "wuiPagination.lastRangeAriaLabel",
         "changeType": "added",
         "value": "Skipping pages {firstPage} to {lastPage}"
       },
       {
-        "token": "euiPagination.disabledNextPage",
+        "token": "wuiPagination.disabledNextPage",
         "changeType": "added",
         "value": "Next page"
       }
@@ -319,7 +319,7 @@
     "version": "23.2.0",
     "changes": [
       {
-        "token": "euiFlyout.closeAriaLabel",
+        "token": "wuiFlyout.closeAriaLabel",
         "changeType": "added",
         "value": "Close this dialog"
       }
@@ -329,29 +329,29 @@
     "version": "22.6.0",
     "changes": [
       {
-        "token": "euiRefreshInterval.fullDescription",
+        "token": "wuiRefreshInterval.fullDescription",
         "changeType": "modified",
         "value": "Refresh interval currently set to {optionValue} {optionText}."
       },
       {
-        "token": "euiTourStepIndicator.isActive",
+        "token": "wuiTourStepIndicator.isActive",
         "changeType": "added",
         "value": "active"
       },
       {
-        "token": "euiTourStepIndicator.isComplete",
+        "token": "wuiTourStepIndicator.isComplete",
         "changeType": "added",
         "value": "complete"
       },
       {
-        "token": "euiTourStepIndicator.isIncomplete",
+        "token": "wuiTourStepIndicator.isIncomplete",
         "changeType": "added",
         "value": "incomplete"
       },
       {
-        "token": "euiTourStepIndicator.ariaLabel",
+        "token": "wuiTourStepIndicator.ariaLabel",
         "changeType": "added",
-        "value": "({\n  status\n}: {\n  status: EuiTourStepStatus;\n}) => {\n  return `Step ${number} ${status}`;\n};"
+        "value": "({\n  status\n}: {\n  status: WuiTourStepStatus;\n}) => {\n  return `Step ${number} ${status}`;\n};"
       }
     ]
   },
@@ -359,7 +359,7 @@
     "version": "22.2.0",
     "changes": [
       {
-        "token": "euiCollapsibleNav.closeButtonLabel",
+        "token": "wuiCollapsibleNav.closeButtonLabel",
         "changeType": "added",
         "value": "close"
       }
@@ -369,7 +369,7 @@
     "version": "22.1.0",
     "changes": [
       {
-        "token": "euiComboBoxOptionsList.delimiterMessage",
+        "token": "wuiComboBoxOptionsList.delimiterMessage",
         "changeType": "added",
         "value": "Hit enter to add each item separated by {delimiter}"
       }
@@ -379,27 +379,27 @@
     "version": "22.0.0",
     "changes": [
       {
-        "token": "euiTableHeaderCell.clickForDescending",
+        "token": "wuiTableHeaderCell.clickForDescending",
         "changeType": "added",
         "value": "Click to sort in descending order"
       },
       {
-        "token": "euiTableHeaderCell.clickForUnsort",
+        "token": "wuiTableHeaderCell.clickForUnsort",
         "changeType": "added",
         "value": "Click to unsort"
       },
       {
-        "token": "euiTableHeaderCell.clickForAscending",
+        "token": "wuiTableHeaderCell.clickForAscending",
         "changeType": "added",
         "value": "Click to sort in ascending order"
       },
       {
-        "token": "euiTableHeaderCell.titleTextWithSort",
+        "token": "wuiTableHeaderCell.titleTextWithSort",
         "changeType": "added",
         "value": "{innerText}; Sorted in {ariaSortValue} order"
       },
       {
-        "token": "euiTableHeaderCell.sortedAriaLabel",
+        "token": "wuiTableHeaderCell.sortedAriaLabel",
         "changeType": "added",
         "value": "Sorted in {ariaSortValue} order"
       }
@@ -409,22 +409,22 @@
     "version": "21.1.0",
     "changes": [
       {
-        "token": "euiColorPicker.alphaLabel",
+        "token": "wuiColorPicker.alphaLabel",
         "changeType": "added",
         "value": "Alpha channel (opacity) value"
       },
       {
-        "token": "euiColumnSelector.button",
+        "token": "wuiColumnSelector.button",
         "changeType": "added",
         "value": "Columns"
       },
       {
-        "token": "euiColumnSelector.buttonActiveSingular",
+        "token": "wuiColumnSelector.buttonActiveSingular",
         "changeType": "added",
         "value": "{numberOfHiddenFields} column hidden"
       },
       {
-        "token": "euiColumnSelector.buttonActivePlural",
+        "token": "wuiColumnSelector.buttonActivePlural",
         "changeType": "added",
         "value": "{numberOfHiddenFields} columns hidden"
       }
@@ -434,32 +434,32 @@
     "version": "20.0.0",
     "changes": [
       {
-        "token": "euiBottomBar.screenReaderAnnouncement",
+        "token": "wuiBottomBar.screenReaderAnnouncement",
         "changeType": "modified",
         "value": "There is a new region landmark with page level controls at the end of the document."
       },
       {
-        "token": "euiBottomBar.screenReaderHeading",
+        "token": "wuiBottomBar.screenReaderHeading",
         "changeType": "added",
         "value": "Page level controls"
       },
       {
-        "token": "euiBottomBar.customScreenReaderAnnouncement",
+        "token": "wuiBottomBar.customScreenReaderAnnouncement",
         "changeType": "added",
         "value": "There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
       },
       {
-        "token": "euiControlBar.screenReaderHeading",
+        "token": "wuiControlBar.screenReaderHeading",
         "changeType": "added",
         "value": "Page level controls"
       },
       {
-        "token": "euiControlBar.customScreenReaderAnnouncement",
+        "token": "wuiControlBar.customScreenReaderAnnouncement",
         "changeType": "added",
         "value": "There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
       },
       {
-        "token": "euiControlBar.screenReaderAnnouncement",
+        "token": "wuiControlBar.screenReaderAnnouncement",
         "changeType": "added",
         "value": "There is a new region landmark with page level controls at the end of the document."
       }
@@ -469,16 +469,16 @@
     "version": "19.0.0",
     "changes": [
       {
-        "token": "euiBasicTable.tableDescription",
+        "token": "wuiBasicTable.tableDescription",
         "changeType": "deleted"
       },
       {
-        "token": "euiBasicTable.tableDescriptionWithPagination",
+        "token": "wuiBasicTable.tableDescriptionWithPagination",
         "changeType": "added",
         "value": "This table contains {itemCount} rows out of {totalItemCount} rows."
       },
       {
-        "token": "euiBasicTable.tableDescriptionWithoutPagination",
+        "token": "wuiBasicTable.tableDescriptionWithoutPagination",
         "changeType": "added",
         "value": "This table contains {itemCount} rows."
       }
@@ -488,12 +488,12 @@
     "version": "18.3.0",
     "changes": [
       {
-        "token": "euiFilterButton.filterBadge",
+        "token": "wuiFilterButton.filterBadge",
         "changeType": "modified",
         "value": "{count} {hasActiveFilters} filters"
       },
       {
-        "token": "euiPagination.pageOfTotalCompressed",
+        "token": "wuiPagination.pageOfTotalCompressed",
         "changeType": "added",
         "value": "{page} of {total}"
       }
@@ -503,7 +503,7 @@
     "version": "16.1.0",
     "changes": [
       {
-        "token": "euiHeaderAlert.dismiss",
+        "token": "wuiHeaderAlert.dismiss",
         "changeType": "deleted"
       }
     ]
@@ -512,12 +512,12 @@
     "version": "14.9.0",
     "changes": [
       {
-        "token": "euiTreeView.listNavigationInstructions",
+        "token": "wuiTreeView.listNavigationInstructions",
         "changeType": "added",
         "value": "You can quickly navigate this list using arrow keys."
       },
       {
-        "token": "euiTreeView.ariaLabel",
+        "token": "wuiTreeView.ariaLabel",
         "changeType": "added",
         "value": "{nodeLabel} child of {ariaLabel}"
       }
@@ -527,127 +527,127 @@
     "version": "14.8.0",
     "changes": [
       {
-        "token": "euiPopover.screenReaderAnnouncement",
+        "token": "wuiPopover.screenReaderAnnouncement",
         "changeType": "modified",
         "value": "You are in a dialog. To close this dialog, hit escape."
       },
       {
-        "token": "euiColumnSelector.selectAll",
+        "token": "wuiColumnSelector.selectAll",
         "changeType": "added",
         "value": "Show all"
       },
       {
-        "token": "euiColumnSelector.hideAll",
+        "token": "wuiColumnSelector.hideAll",
         "changeType": "added",
         "value": "Hide all"
       },
       {
-        "token": "euiColumnSortingDraggable.defaultSortAsc",
+        "token": "wuiColumnSortingDraggable.defaultSortAsc",
         "changeType": "added",
         "value": "A-Z"
       },
       {
-        "token": "euiColumnSortingDraggable.defaultSortDesc",
+        "token": "wuiColumnSortingDraggable.defaultSortDesc",
         "changeType": "added",
         "value": "Z-A"
       },
       {
-        "token": "euiColumnSortingDraggable.activeSortLabel",
+        "token": "wuiColumnSortingDraggable.activeSortLabel",
         "changeType": "added",
         "value": "is sorting this data grid"
       },
       {
-        "token": "euiColumnSortingDraggable.removeSortLabel",
+        "token": "wuiColumnSortingDraggable.removeSortLabel",
         "changeType": "added",
         "value": "Remove from data grid sort:"
       },
       {
-        "token": "euiColumnSortingDraggable.toggleLegend",
+        "token": "wuiColumnSortingDraggable.toggleLegend",
         "changeType": "added",
         "value": "Select sorting method for field: "
       },
       {
-        "token": "euiColumnSorting.emptySorting",
+        "token": "wuiColumnSorting.emptySorting",
         "changeType": "added",
         "value": "Currently no fields are sorted"
       },
       {
-        "token": "euiColumnSorting.pickFields",
+        "token": "wuiColumnSorting.pickFields",
         "changeType": "added",
         "value": "Pick fields to sort by"
       },
       {
-        "token": "euiColumnSorting.sortFieldAriaLabel",
+        "token": "wuiColumnSorting.sortFieldAriaLabel",
         "changeType": "added",
         "value": "Sort by: "
       },
       {
-        "token": "euiColumnSorting.clearAll",
+        "token": "wuiColumnSorting.clearAll",
         "changeType": "added",
         "value": "Clear sorting"
       },
       {
-        "token": "euiDataGridCell.expandButtonTitle",
+        "token": "wuiDataGridCell.expandButtonTitle",
         "changeType": "added",
         "value": "Click or hit enter to interact with cell content"
       },
       {
-        "token": "euiDataGridSchema.booleanSortTextAsc",
+        "token": "wuiDataGridSchema.booleanSortTextAsc",
         "changeType": "added",
         "value": "True-False"
       },
       {
-        "token": "euiDataGridSchema.booleanSortTextDesc",
+        "token": "wuiDataGridSchema.booleanSortTextDesc",
         "changeType": "added",
         "value": "False-True"
       },
       {
-        "token": "euiDataGridSchema.currencySortTextAsc",
+        "token": "wuiDataGridSchema.currencySortTextAsc",
         "changeType": "added",
         "value": "Low-High"
       },
       {
-        "token": "euiDataGridSchema.currencySortTextDesc",
+        "token": "wuiDataGridSchema.currencySortTextDesc",
         "changeType": "added",
         "value": "High-Low"
       },
       {
-        "token": "euiDataGridSchema.dateSortTextAsc",
+        "token": "wuiDataGridSchema.dateSortTextAsc",
         "changeType": "added",
         "value": "New-Old"
       },
       {
-        "token": "euiDataGridSchema.dateSortTextDesc",
+        "token": "wuiDataGridSchema.dateSortTextDesc",
         "changeType": "added",
         "value": "Old-New"
       },
       {
-        "token": "euiDataGridSchema.numberSortTextAsc",
+        "token": "wuiDataGridSchema.numberSortTextAsc",
         "changeType": "added",
         "value": "Low-High"
       },
       {
-        "token": "euiDataGridSchema.numberSortTextDesc",
+        "token": "wuiDataGridSchema.numberSortTextDesc",
         "changeType": "added",
         "value": "High-Low"
       },
       {
-        "token": "euiDataGridSchema.jsonSortTextAsc",
+        "token": "wuiDataGridSchema.jsonSortTextAsc",
         "changeType": "added",
         "value": "Small-Large"
       },
       {
-        "token": "euiDataGridSchema.jsonSortTextDesc",
+        "token": "wuiDataGridSchema.jsonSortTextDesc",
         "changeType": "added",
         "value": "Large-Small"
       },
       {
-        "token": "euiDataGrid.screenReaderNotice",
+        "token": "wuiDataGrid.screenReaderNotice",
         "changeType": "added",
         "value": "Cell contains interactive content."
       },
       {
-        "token": "euiStyleSelector.buttonText",
+        "token": "wuiStyleSelector.buttonText",
         "changeType": "added",
         "value": "Density"
       }
@@ -657,17 +657,17 @@
     "version": "14.7.0",
     "changes": [
       {
-        "token": "euiImage.closeImage",
+        "token": "wuiImage.closeImage",
         "changeType": "added",
         "value": "Close full screen {alt} image"
       },
       {
-        "token": "euiImage.openImage",
+        "token": "wuiImage.openImage",
         "changeType": "added",
         "value": "Open full screen {alt} image"
       },
       {
-        "token": "euiLink.external.ariaLabel",
+        "token": "wuiLink.external.ariaLabel",
         "changeType": "added",
         "value": "External link"
       }
@@ -677,107 +677,107 @@
     "version": "14.5.0",
     "changes": [
       {
-        "token": "euiColorStopThumb.screenReaderAnnouncement",
+        "token": "wuiColorStopThumb.screenReaderAnnouncement",
         "changeType": "added",
         "value": "A popup with a color stop edit form opened.\n            Tab forward to cycle through form controls or press\n            escape to close this popup."
       },
       {
-        "token": "euiColorStopThumb.removeLabel",
+        "token": "wuiColorStopThumb.removeLabel",
         "changeType": "added",
         "value": "Remove this stop"
       },
       {
-        "token": "euiColorStops.screenReaderAnnouncement",
+        "token": "wuiColorStops.screenReaderAnnouncement",
         "changeType": "added",
         "value": "{label}: {readOnly} {disabled} Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop."
       },
       {
-        "token": "euiRelativeTab.unitInputLabel",
+        "token": "wuiRelativeTab.unitInputLabel",
         "changeType": "added",
         "value": "Relative time span"
       },
       {
-        "token": "euiRelativeTab.roundingLabel",
+        "token": "wuiRelativeTab.roundingLabel",
         "changeType": "added",
         "value": "Round to the {unit}"
       },
       {
-        "token": "euiRelativeTab.relativeDate",
+        "token": "wuiRelativeTab.relativeDate",
         "changeType": "added",
         "value": "{position} date"
       },
       {
-        "token": "euiRelativeTab.fullDescription",
+        "token": "wuiRelativeTab.fullDescription",
         "changeType": "added",
         "value": "The unit is changeable. Currently set to {unit}."
       },
       {
-        "token": "euiCommonlyUsedTimeRanges.legend",
+        "token": "wuiCommonlyUsedTimeRanges.legend",
         "changeType": "added",
         "value": "Commonly used"
       },
       {
-        "token": "euiQuickSelect.legendText",
+        "token": "wuiQuickSelect.legendText",
         "changeType": "added",
         "value": "Quick select a time range"
       },
       {
-        "token": "euiQuickSelect.quickSelectTitle",
+        "token": "wuiQuickSelect.quickSelectTitle",
         "changeType": "added",
         "value": "Quick select"
       },
       {
-        "token": "euiQuickSelect.previousLabel",
+        "token": "wuiQuickSelect.previousLabel",
         "changeType": "added",
         "value": "Previous time window"
       },
       {
-        "token": "euiQuickSelect.nextLabel",
+        "token": "wuiQuickSelect.nextLabel",
         "changeType": "added",
         "value": "Next time window"
       },
       {
-        "token": "euiQuickSelect.tenseLabel",
+        "token": "wuiQuickSelect.tenseLabel",
         "changeType": "added",
         "value": "Time tense"
       },
       {
-        "token": "euiQuickSelect.valueLabel",
+        "token": "wuiQuickSelect.valueLabel",
         "changeType": "added",
         "value": "Time value"
       },
       {
-        "token": "euiQuickSelect.unitLabel",
+        "token": "wuiQuickSelect.unitLabel",
         "changeType": "added",
         "value": "Time unit"
       },
       {
-        "token": "euiQuickSelect.applyButton",
+        "token": "wuiQuickSelect.applyButton",
         "changeType": "added",
         "value": "Apply"
       },
       {
-        "token": "euiQuickSelect.fullDescription",
+        "token": "wuiQuickSelect.fullDescription",
         "changeType": "added",
         "value": "Currently set to {timeTense} {timeValue} {timeUnit}."
       },
       {
-        "token": "euiRefreshInterval.legend",
+        "token": "wuiRefreshInterval.legend",
         "changeType": "added",
         "value": "Refresh every"
       },
       {
-        "token": "euiRefreshInterval.start",
+        "token": "wuiRefreshInterval.start",
         "changeType": "added",
         "value": "Start"
       },
       {
-        "token": "euiRefreshInterval.stop",
+        "token": "wuiRefreshInterval.stop",
         "changeType": "added",
         "value": "Stop"
       },
       {
-        "token": "euiRefreshInterval.fullDescription",
+        "token": "wuiRefreshInterval.fullDescription",
         "changeType": "added",
         "value": "Currently set to {optionValue} {optionText}."
       }
@@ -787,7 +787,7 @@
     "version": "14.3.0",
     "changes": [
       {
-        "token": "euiBreadcrumbs.collapsedBadge.ariaLabel",
+        "token": "wuiBreadcrumbs.collapsedBadge.ariaLabel",
         "changeType": "added",
         "value": "Show all breadcrumbs"
       }
@@ -797,32 +797,32 @@
     "version": "13.3.0",
     "changes": [
       {
-        "token": "euiSuperDatePicker.showDatesButtonLabel",
+        "token": "wuiSuperDatePicker.showDatesButtonLabel",
         "changeType": "added",
         "value": "Show dates"
       },
       {
-        "token": "euiSuperUpdateButton.refreshButtonLabel",
+        "token": "wuiSuperUpdateButton.refreshButtonLabel",
         "changeType": "added",
         "value": "Refresh"
       },
       {
-        "token": "euiSuperUpdateButton.updatingButtonLabel",
+        "token": "wuiSuperUpdateButton.updatingButtonLabel",
         "changeType": "added",
         "value": "Updating"
       },
       {
-        "token": "euiSuperUpdateButton.updateButtonLabel",
+        "token": "wuiSuperUpdateButton.updateButtonLabel",
         "changeType": "added",
         "value": "Update"
       },
       {
-        "token": "euiSuperUpdateButton.cannotUpdateTooltip",
+        "token": "wuiSuperUpdateButton.cannotUpdateTooltip",
         "changeType": "added",
         "value": "Cannot update"
       },
       {
-        "token": "euiSuperUpdateButton.clickToApplyTooltip",
+        "token": "wuiSuperUpdateButton.clickToApplyTooltip",
         "changeType": "added",
         "value": "Click to apply"
       }
@@ -832,22 +832,22 @@
     "version": "13.2.0",
     "changes": [
       {
-        "token": "euiStepHorizontal.buttonTitle",
+        "token": "wuiStepHorizontal.buttonTitle",
         "changeType": "modified",
-        "value": "({\n  step,\n  title,\n  disabled,\n  isComplete\n}: Pick<EuiStepHorizontalProps, 'step' | 'title' | 'disabled' | 'isComplete'>) => {\n  let titleAppendix = '';\n\n  if (disabled) {\n    titleAppendix = ' is disabled';\n  } else if (isComplete) {\n    titleAppendix = ' is complete';\n  }\n\n  return `Step ${step}: ${title}${titleAppendix}`;\n};"
+        "value": "({\n  step,\n  title,\n  disabled,\n  isComplete\n}: Pick<WuiStepHorizontalProps, 'step' | 'title' | 'disabled' | 'isComplete'>) => {\n  let titleAppendix = '';\n\n  if (disabled) {\n    titleAppendix = ' is disabled';\n  } else if (isComplete) {\n    titleAppendix = ' is complete';\n  }\n\n  return `Step ${step}: ${title}${titleAppendix}`;\n};"
       },
       {
-        "token": "euiStep.incompleteStep",
+        "token": "wuiStep.incompleteStep",
         "changeType": "deleted"
       },
       {
-        "token": "euiStep.completeStep",
+        "token": "wuiStep.completeStep",
         "changeType": "deleted"
       },
       {
-        "token": "euiStep.ariaLabel",
+        "token": "wuiStep.ariaLabel",
         "changeType": "added",
-        "value": "({\n  status\n}: {\n  status?: EuiStepStatus;\n}) => {\n  if (status === 'incomplete') return 'Incomplete Step';\n  return 'Step';\n};"
+        "value": "({\n  status\n}: {\n  status?: WuiStepStatus;\n}) => {\n  if (status === 'incomplete') return 'Incomplete Step';\n  return 'Step';\n};"
       }
     ]
   },
@@ -855,7 +855,7 @@
     "version": "12.0.0",
     "changes": [
       {
-        "token": "euiColorPicker.screenReaderAnnouncement",
+        "token": "wuiColorPicker.screenReaderAnnouncement",
         "changeType": "modified",
         "value": "A popup with a range of selectable colors opened.\n                Tab forward to cycle through colors choices or press\n                escape to close this popup."
       }
@@ -865,35 +865,35 @@
     "version": "11.3.0",
     "changes": [
       {
-        "token": "euiColorPicker.transparentColor",
+        "token": "wuiColorPicker.transparentColor",
         "changeType": "deleted"
       },
       {
-        "token": "euiColorPicker.colorSelectionLabel",
+        "token": "wuiColorPicker.colorSelectionLabel",
         "changeType": "deleted"
       },
       {
-        "token": "euiColorPicker.screenReaderAnnouncement",
+        "token": "wuiColorPicker.screenReaderAnnouncement",
         "changeType": "added",
         "value": "A popup with a range of selectable colors opened.\n                  Tab forward to cycle through colors choices or press\n                  escape to close this popup."
       },
       {
-        "token": "euiColorPicker.swatchAriaLabel",
+        "token": "wuiColorPicker.swatchAriaLabel",
         "changeType": "added",
         "value": "Select {swatch} as the color"
       },
       {
-        "token": "euiHue.label",
+        "token": "wuiHue.label",
         "changeType": "added",
         "value": "Select the HSV color mode 'hue' value"
       },
       {
-        "token": "euiSaturation.roleDescription",
+        "token": "wuiSaturation.roleDescription",
         "changeType": "added",
         "value": "HSV color mode saturation and value selection"
       },
       {
-        "token": "euiSaturation.screenReaderAnnouncement",
+        "token": "wuiSaturation.screenReaderAnnouncement",
         "changeType": "added",
         "value": "Use the arrow keys to navigate the square color gradient. The coordinates resulting from each key press will be used to calculate HSV color mode 'saturation' and 'value' numbers, in the range of 0 to 1. Left and right decrease and increase (respectively) the 'saturation' value. Up and down decrease and increase (respectively) the 'value' value."
       }
@@ -903,17 +903,17 @@
     "version": "10.3.0",
     "changes": [
       {
-        "token": "euiCardSelect.selected",
+        "token": "wuiCardSelect.selected",
         "changeType": "added",
         "value": "Selected"
       },
       {
-        "token": "euiCardSelect.unavailable",
+        "token": "wuiCardSelect.unavailable",
         "changeType": "added",
         "value": "Unavailable"
       },
       {
-        "token": "euiCardSelect.select",
+        "token": "wuiCardSelect.select",
         "changeType": "added",
         "value": "Select"
       }
@@ -923,7 +923,7 @@
     "version": "10.2.1",
     "changes": [
       {
-        "token": "euiFilterButton.filterBadge",
+        "token": "wuiFilterButton.filterBadge",
         "changeType": "added",
         "value": "({\n  count,\n  hasActiveFilters\n}) => `${count} ${hasActiveFilters ? 'active' : 'available'} filters`;"
       }
@@ -933,12 +933,12 @@
     "version": "10.2.0",
     "changes": [
       {
-        "token": "euiStat.loadingText",
+        "token": "wuiStat.loadingText",
         "changeType": "added",
         "value": "Statistic is loading"
       },
       {
-        "token": "euiTablePagination.rowsPerPageOption",
+        "token": "wuiTablePagination.rowsPerPageOption",
         "changeType": "added",
         "value": "{rowsPerPage} rows"
       }
@@ -948,17 +948,17 @@
     "version": "9.8.0",
     "changes": [
       {
-        "token": "euiSelectable.loadingOptions",
+        "token": "wuiSelectable.loadingOptions",
         "changeType": "added",
         "value": "Loading options"
       },
       {
-        "token": "euiSelectable.noMatchingOptions",
+        "token": "wuiSelectable.noMatchingOptions",
         "changeType": "added",
         "value": "{searchValue} doesn't match any options"
       },
       {
-        "token": "euiSelectable.noAvailableOptions",
+        "token": "wuiSelectable.noAvailableOptions",
         "changeType": "added",
         "value": "No options available"
       }
@@ -968,7 +968,7 @@
     "version": "9.4.1",
     "changes": [
       {
-        "token": "euiBottomBar.screenReaderAnnouncement",
+        "token": "wuiBottomBar.screenReaderAnnouncement",
         "changeType": "modified",
         "value": "There is a new menu opening with page level controls at the end of the document."
       }
@@ -978,222 +978,222 @@
     "version": "9.0.0",
     "changes": [
       {
-        "token": "euiBasicTable.tableDescription",
+        "token": "wuiBasicTable.tableDescription",
         "changeType": "added",
         "value": "Below is a table of {itemCount} items."
       },
       {
-        "token": "euiBasicTable.selectAllRows",
+        "token": "wuiBasicTable.selectAllRows",
         "changeType": "added",
         "value": "Select all rows"
       },
       {
-        "token": "euiBasicTable.selectThisRow",
+        "token": "wuiBasicTable.selectThisRow",
         "changeType": "added",
         "value": "Select this row"
       },
       {
-        "token": "euiCollapsedItemActions.allActions",
+        "token": "wuiCollapsedItemActions.allActions",
         "changeType": "added",
         "value": "All actions"
       },
       {
-        "token": "euiBottomBar.screenReaderAnnouncement",
+        "token": "wuiBottomBar.screenReaderAnnouncement",
         "changeType": "added",
         "value": "There is a new menu opening with page level controls at the bottom of the document."
       },
       {
-        "token": "euiCodeEditor.startInteracting",
+        "token": "wuiCodeEditor.startInteracting",
         "changeType": "added",
         "value": "Press Enter to start interacting with the code."
       },
       {
-        "token": "euiCodeEditor.startEditing",
+        "token": "wuiCodeEditor.startEditing",
         "changeType": "added",
         "value": "Press Enter to start editing."
       },
       {
-        "token": "euiCodeEditor.stopInteracting",
+        "token": "wuiCodeEditor.stopInteracting",
         "changeType": "added",
         "value": "When you're done, press Escape to stop interacting with the code."
       },
       {
-        "token": "euiCodeEditor.stopEditing",
+        "token": "wuiCodeEditor.stopEditing",
         "changeType": "added",
         "value": "When you're done, press Escape to stop editing."
       },
       {
-        "token": "euiCodeBlock.copyButton",
+        "token": "wuiCodeBlock.copyButton",
         "changeType": "added",
         "value": "Copy"
       },
       {
-        "token": "euiColorPicker.transparentColor",
+        "token": "wuiColorPicker.transparentColor",
         "changeType": "added",
         "value": "transparent"
       },
       {
-        "token": "euiColorPicker.colorSelectionLabel",
+        "token": "wuiColorPicker.colorSelectionLabel",
         "changeType": "added",
         "value": "Color selection is {colorValue}"
       },
       {
-        "token": "euiComboBoxPill.removeSelection",
+        "token": "wuiComboBoxPill.removeSelection",
         "changeType": "added",
         "value": "Remove {children} from selection in this group"
       },
       {
-        "token": "euiComboBoxOptionsList.loadingOptions",
+        "token": "wuiComboBoxOptionsList.loadingOptions",
         "changeType": "added",
         "value": "Loading options"
       },
       {
-        "token": "euiComboBoxOptionsList.alreadyAdded",
+        "token": "wuiComboBoxOptionsList.alreadyAdded",
         "changeType": "added",
         "value": "{label} has already been added"
       },
       {
-        "token": "euiComboBoxOptionsList.createCustomOption",
+        "token": "wuiComboBoxOptionsList.createCustomOption",
         "changeType": "added",
         "value": "Hit {key} to add {searchValue} as a custom option"
       },
       {
-        "token": "euiComboBoxOptionsList.noMatchingOptions",
+        "token": "wuiComboBoxOptionsList.noMatchingOptions",
         "changeType": "added",
         "value": "{searchValue} doesn't match any options"
       },
       {
-        "token": "euiComboBoxOptionsList.noAvailableOptions",
+        "token": "wuiComboBoxOptionsList.noAvailableOptions",
         "changeType": "added",
         "value": "There aren't any options available"
       },
       {
-        "token": "euiComboBoxOptionsList.allOptionsSelected",
+        "token": "wuiComboBoxOptionsList.allOptionsSelected",
         "changeType": "added",
         "value": "You've selected all available options"
       },
       {
-        "token": "euiFormControlLayoutClearButton.label",
+        "token": "wuiFormControlLayoutClearButton.label",
         "changeType": "added",
         "value": "Clear input"
       },
       {
-        "token": "euiForm.addressFormErrors",
+        "token": "wuiForm.addressFormErrors",
         "changeType": "added",
         "value": "Please address the errors in your form."
       },
       {
-        "token": "euiSuperSelectControl.selectAnOption",
+        "token": "wuiSuperSelectControl.selectAnOption",
         "changeType": "added",
         "value": "Select an option: {selectedValue}, is selected"
       },
       {
-        "token": "euiSuperSelect.screenReaderAnnouncement",
+        "token": "wuiSuperSelect.screenReaderAnnouncement",
         "changeType": "added",
         "value": "You are in a form selector of {optionsCount} items and must select a single option.\n              Use the up and down keys to navigate or escape to close."
       },
       {
-        "token": "euiHeaderAlert.dismiss",
+        "token": "wuiHeaderAlert.dismiss",
         "changeType": "added",
         "value": "Dismiss"
       },
       {
-        "token": "euiHeaderLinks.openNavigationMenu",
+        "token": "wuiHeaderLinks.openNavigationMenu",
         "changeType": "added",
         "value": "Open navigation menu"
       },
       {
-        "token": "euiHeaderLinks.appNavigation",
+        "token": "wuiHeaderLinks.appNavigation",
         "changeType": "added",
         "value": "App navigation"
       },
       {
-        "token": "euiModal.closeModal",
+        "token": "wuiModal.closeModal",
         "changeType": "added",
         "value": "Closes this modal window"
       },
       {
-        "token": "euiPagination.pageOfTotal",
+        "token": "wuiPagination.pageOfTotal",
         "changeType": "added",
         "value": "Page {page} of {total}"
       },
       {
-        "token": "euiPagination.previousPage",
+        "token": "wuiPagination.previousPage",
         "changeType": "added",
         "value": "Previous page"
       },
       {
-        "token": "euiPagination.jumpToLastPage",
+        "token": "wuiPagination.jumpToLastPage",
         "changeType": "added",
         "value": "Jump to the last page, number {pageCount}"
       },
       {
-        "token": "euiPagination.nextPage",
+        "token": "wuiPagination.nextPage",
         "changeType": "added",
         "value": "Next page"
       },
       {
-        "token": "euiPopover.screenReaderAnnouncement",
+        "token": "wuiPopover.screenReaderAnnouncement",
         "changeType": "added",
         "value": "You are in a popup. To exit this popup, hit escape."
       },
       {
-        "token": "euiStepHorizontal.buttonTitle",
+        "token": "wuiStepHorizontal.buttonTitle",
         "changeType": "added",
         "value": "({\n  step,\n  title,\n  disabled,\n  isComplete\n}) => {\n  let titleAppendix = '';\n\n  if (disabled) {\n    titleAppendix = ' is disabled';\n  } else if (isComplete) {\n    titleAppendix = ' is complete';\n  }\n\n  return `Step ${step}: ${title}${titleAppendix}`;\n};"
       },
       {
-        "token": "euiStepHorizontal.step",
+        "token": "wuiStepHorizontal.step",
         "changeType": "added",
         "value": "Step"
       },
       {
-        "token": "euiStepNumber.isComplete",
+        "token": "wuiStepNumber.isComplete",
         "changeType": "added",
         "value": "complete"
       },
       {
-        "token": "euiStepNumber.hasWarnings",
+        "token": "wuiStepNumber.hasWarnings",
         "changeType": "added",
         "value": "has warnings"
       },
       {
-        "token": "euiStepNumber.hasErrors",
+        "token": "wuiStepNumber.hasErrors",
         "changeType": "added",
         "value": "has errors"
       },
       {
-        "token": "euiStep.incompleteStep",
+        "token": "wuiStep.incompleteStep",
         "changeType": "added",
         "value": "Incomplete Step"
       },
       {
-        "token": "euiStep.completeStep",
+        "token": "wuiStep.completeStep",
         "changeType": "added",
         "value": "Step"
       },
       {
-        "token": "euiTableSortMobile.sorting",
+        "token": "wuiTableSortMobile.sorting",
         "changeType": "added",
         "value": "Sorting"
       },
       {
-        "token": "euiTablePagination.rowsPerPage",
+        "token": "wuiTablePagination.rowsPerPage",
         "changeType": "added",
         "value": "Rows per page"
       },
       {
-        "token": "euiToast.dismissToast",
+        "token": "wuiToast.dismissToast",
         "changeType": "added",
         "value": "Dismiss toast"
       },
       {
-        "token": "euiToast.newNotification",
+        "token": "wuiToast.newNotification",
         "changeType": "added",
         "value": "A new notification appears"
       },
       {
-        "token": "euiToast.notification",
+        "token": "wuiToast.notification",
         "changeType": "added",
         "value": "Notification"
       }

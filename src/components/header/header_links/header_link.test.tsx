@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,23 +34,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiHeaderLink } from './header_link';
+import { WuiHeaderLink } from './header_link';
 
-describe('EuiHeaderLink', () => {
+describe('WuiHeaderLink', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLink {...requiredProps} />);
+    const component = render(<WuiHeaderLink {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('is rendered as active', () => {
-    const component = render(<EuiHeaderLink isActive />);
+    const component = render(<WuiHeaderLink isActive />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('can render as specific color', () => {
-    const component = render(<EuiHeaderLink color="danger" />);
+    const component = render(<WuiHeaderLink color="danger" />);
 
     expect(component).toMatchSnapshot();
   });

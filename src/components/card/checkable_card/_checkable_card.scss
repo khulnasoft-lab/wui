@@ -1,51 +1,51 @@
-@include euiPanel($selector: '.euiCheckableCard');
+@include wuiPanel($selector: '.wuiCheckableCard');
 
-.euiCheckableCard {
-  transition: border-color $euiAnimSpeedNormal ease-in;
+.wuiCheckableCard {
+  transition: border-color $wuiAnimSpeedNormal ease-in;
   overflow: hidden; // Hides background color inside panel rounded corners
 
-  &:not(.euiCheckableCard-isDisabled) {
-    &.euiCheckableCard-isChecked {
-      border-color: $euiColorPrimary;
+  &:not(.wuiCheckableCard-isDisabled) {
+    &.wuiCheckableCard-isChecked {
+      border-color: $wuiColorPrimary;
     }
 
     &:focus-within {
-      @include euiFocusRing;
+      @include wuiFocusRing;
     }
   }
 }
 
-.euiCheckableCard__row {
+.wuiCheckableCard__row {
   display: flex;
   align-items: stretch;
 }
 
-.euiCheckableCard__control {
+.wuiCheckableCard__control {
   display: flex;
-  flex: 0 0 $euiSizeXXL;
+  flex: 0 0 $wuiSizeXXL;
   justify-content: center;
   align-items: center;
-  background-color: map-get($euiCardSelectButtonBackgrounds, 'text');
-  transition: background-color $euiAnimSpeedNormal ease-in;
+  background-color: map-get($wuiCardSelectButtonBackgrounds, 'text');
+  transition: background-color $wuiAnimSpeedNormal ease-in;
 
-  .euiCheckableCard-isChecked & {
-    background-color: map-get($euiCardSelectButtonBackgrounds, 'primary');
+  .wuiCheckableCard-isChecked & {
+    background-color: map-get($wuiCardSelectButtonBackgrounds, 'primary');
   }
 }
 
-.euiCheckableCard__label {
+.wuiCheckableCard__label {
   flex-grow: 1;
-  font-size: $euiFontSize;
-  line-height: $euiSizeL;
-  padding: $euiSizeS $euiSizeS $euiSizeS $euiSize;
+  font-size: $wuiFontSize;
+  line-height: $wuiSizeL;
+  padding: $wuiSizeS $wuiSizeS $wuiSizeS $wuiSize;
   cursor: pointer;
 }
 
-.euiCheckableCard__label-isDisabled {
-  color: $euiFormControlDisabledColor;
+.wuiCheckableCard__label-isDisabled {
+  color: $wuiFormControlDisabledColor;
   cursor: not-allowed;
 }
 
-.euiCheckableCard__children {
-  padding:  0 $euiSizeS $euiSizeS $euiSize;
+.wuiCheckableCard__children {
+  padding:  0 $wuiSizeS $wuiSizeS $wuiSize;
 }

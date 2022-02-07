@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,16 +31,16 @@
  */
 
 export {
-  EuiConfirmModal,
-  EuiConfirmModalProps,
-  CONFIRM_BUTTON as EUI_MODAL_CONFIRM_BUTTON,
-  CANCEL_BUTTON as EUI_MODAL_CANCEL_BUTTON,
+  WuiConfirmModal,
+  WuiConfirmModalProps,
+  CONFIRM_BUTTON as WUI_MODAL_CONFIRM_BUTTON,
+  CANCEL_BUTTON as WUI_MODAL_CANCEL_BUTTON,
 } from './confirm_modal';
-export { EuiModal, EuiModalProps } from './modal';
-export { EuiModalFooter, EuiModalFooterProps } from './modal_footer';
-export { EuiModalHeader, EuiModalHeaderProps } from './modal_header';
-export { EuiModalBody, EuiModalBodyProps } from './modal_body';
+export { WuiModal, WuiModalProps } from './modal';
+export { WuiModalFooter, WuiModalFooterProps } from './modal_footer';
+export { WuiModalHeader, WuiModalHeaderProps } from './modal_header';
+export { WuiModalBody, WuiModalBodyProps } from './modal_body';
 export {
-  EuiModalHeaderTitle,
-  EuiModalHeaderTitleProps,
+  WuiModalHeaderTitle,
+  WuiModalHeaderTitleProps,
 } from './modal_header_title';

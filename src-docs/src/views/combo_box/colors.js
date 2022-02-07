@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
-import { euiPaletteColorBlindBehindText } from '../../../../src/services';
+import { WuiComboBox } from '../../../../src/components';
+import { wuiPaletteColorBlindBehindText } from '../../../../src/services';
 
-const visColorsBehindText = euiPaletteColorBlindBehindText();
+const visColorsBehindText = wuiPaletteColorBlindBehindText();
 const optionsStatic = [
   {
     label: 'Titan',
@@ -86,7 +86,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <WuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}

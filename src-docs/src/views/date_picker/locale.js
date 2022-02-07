@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  WuiDatePicker,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,43 +17,43 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="US with fractional seconds">
-        <EuiDatePicker
+      <WuiFormRow label="US with fractional seconds">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           dateFormat="YYYY-MM-DD hh:mm:ss:SSS A"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="China">
-        <EuiDatePicker
+      <WuiFormRow label="China">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           dateFormat="YYYY-MM-DD hh:mm A"
           locale="zh-cn"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="Korea">
-        <EuiDatePicker
+      <WuiFormRow label="Korea">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           locale="ko"
           dateFormat="YYYY-MM-DD hh:mm A"
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="Germany on 24 hour clock">
-        <EuiDatePicker
+      <WuiFormRow label="Germany on 24 hour clock">
+        <WuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
@@ -61,7 +61,7 @@ export default () => {
           timeFormat="HH:mm"
           locale="de-de"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </div>
   );
 };

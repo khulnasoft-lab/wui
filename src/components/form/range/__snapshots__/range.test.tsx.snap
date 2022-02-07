@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiRange allows value prop to accept a number 1`] = `
+exports[`WuiRange allows value prop to accept a number 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -19,10 +19,10 @@ exports[`EuiRange allows value prop to accept a number 1`] = `
       value="8"
     />
     <div
-      class="euiRangeTooltip"
+      class="wuiRangeTooltip"
     >
       <output
-        class="euiRangeTooltip__value euiRangeTooltip__value--right"
+        class="wuiRangeTooltip__value wuiRangeTooltip__value--right"
         style="left:8%"
       >
         8
@@ -32,17 +32,17 @@ exports[`EuiRange allows value prop to accept a number 1`] = `
 </div>
 `;
 
-exports[`EuiRange allows value prop to accept empty string 1`] = `
+exports[`WuiRange allows value prop to accept empty string 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -54,18 +54,18 @@ exports[`EuiRange allows value prop to accept empty string 1`] = `
 </div>
 `;
 
-exports[`EuiRange is rendered 1`] = `
+exports[`WuiRange is rendered 1`] = `
 <div
-  class="euiRangeWrapper euiRange testClass1 testClass2"
+  class="wuiRangeWrapper wuiRange testClass1 testClass2"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
       aria-label="aria-label"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       data-test-subj="test subject string"
       id="id"
       max="100"
@@ -79,17 +79,17 @@ exports[`EuiRange is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRange props compressed should render 1`] = `
+exports[`WuiRange props compressed should render 1`] = `
 <div
-  class="euiRangeWrapper euiRangeWrapper--compressed euiRange"
+  class="wuiRangeWrapper wuiRangeWrapper--compressed wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider euiRangeSlider--compressed"
+      class="wuiRangeSlider wuiRangeSlider--compressed"
       id="generated-id"
       max="100"
       min="0"
@@ -101,20 +101,20 @@ exports[`EuiRange props compressed should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props custom ticks should render 1`] = `
+exports[`WuiRange props custom ticks should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
     style="margin-right:0.6em"
   >
     <div
-      class="euiRangeTicks"
+      class="wuiRangeTicks"
     >
       <button
-        class="euiRangeTick euiRangeTick--isCustom"
+        class="wuiRangeTick wuiRangeTick--isCustom"
         style="left:20%"
         tabindex="-1"
         title="20kb"
@@ -124,7 +124,7 @@ exports[`EuiRange props custom ticks should render 1`] = `
         20kb
       </button>
       <button
-        class="euiRangeTick euiRangeTick--isCustom"
+        class="wuiRangeTick wuiRangeTick--isCustom"
         style="left:100%"
         tabindex="-1"
         title="100kb"
@@ -136,7 +136,7 @@ exports[`EuiRange props custom ticks should render 1`] = `
     </div>
     <input
       aria-hidden="false"
-      class="euiRangeSlider euiRangeSlider--hasTicks"
+      class="wuiRangeSlider wuiRangeSlider--hasTicks"
       id="generated-id"
       max="100"
       min="0"
@@ -148,17 +148,17 @@ exports[`EuiRange props custom ticks should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props disabled should render 1`] = `
+exports[`WuiRange props disabled should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack euiRangeTrack--disabled"
+    class="wuiRangeTrack wuiRangeTrack--disabled"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       disabled=""
       id="generated-id"
       max="100"
@@ -171,17 +171,17 @@ exports[`EuiRange props disabled should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props fullWidth should render 1`] = `
+exports[`WuiRange props fullWidth should render 1`] = `
 <div
-  class="euiRangeWrapper euiRangeWrapper--fullWidth euiRange"
+  class="wuiRangeWrapper wuiRangeWrapper--fullWidth wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -193,18 +193,18 @@ exports[`EuiRange props fullWidth should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props input should render 1`] = `
+exports[`WuiRange props input should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange testClass1 testClass2"
+  class="wuiRangeWrapper wuiRange testClass1 testClass2"
 >
   <div
     aria-hidden="true"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="true"
       aria-label="aria-label"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       data-test-subj="test subject string"
       max="100"
       min="0"
@@ -216,17 +216,17 @@ exports[`EuiRange props input should render 1`] = `
     />
   </div>
   <div
-    class="euiRange__horizontalSpacer"
+    class="wuiRange__horizontalSpacer"
   />
   <div
-    class="euiFormControlLayout"
+    class="wuiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="wuiFormControlLayout__childrenWrapper"
     >
       <input
         aria-label="aria-label"
-        class="euiFieldNumber euiRangeInput euiRangeInput--max"
+        class="wuiFieldNumber wuiRangeInput wuiRangeInput--max"
         data-test-subj="test subject string"
         id="id"
         max="100"
@@ -242,22 +242,22 @@ exports[`EuiRange props input should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props labels should render 1`] = `
+exports[`WuiRange props labels should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <label
-    class="euiRangeLabel euiRangeLabel--min"
+    class="wuiRangeLabel wuiRangeLabel--min"
   >
     0
   </label>
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -267,36 +267,36 @@ exports[`EuiRange props labels should render 1`] = `
     />
   </div>
   <label
-    class="euiRangeLabel euiRangeLabel--max"
+    class="wuiRangeLabel wuiRangeLabel--max"
   >
     100
   </label>
 </div>
 `;
 
-exports[`EuiRange props levels should render 1`] = `
+exports[`WuiRange props levels should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <div
-      class="euiRangeLevels"
+      class="wuiRangeLevels"
     >
       <span
-        class="euiRangeLevel euiRangeLevel--danger"
+        class="wuiRangeLevel wuiRangeLevel--danger"
         style="width:20%"
       />
       <span
-        class="euiRangeLevel euiRangeLevel--success"
+        class="wuiRangeLevel wuiRangeLevel--success"
         style="width:80%"
       />
     </div>
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -308,25 +308,25 @@ exports[`EuiRange props levels should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props range should render 1`] = `
+exports[`WuiRange props range should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <div
-      class="euiRangeHighlight"
+      class="wuiRangeHighlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="wuiRangeHighlight__progress"
         style="margin-left:0%;width:8%"
       />
     </div>
     <input
       aria-hidden="false"
-      class="euiRangeSlider euiRangeSlider--hasRange"
+      class="wuiRangeSlider wuiRangeSlider--hasRange"
       id="generated-id"
       max="100"
       min="0"
@@ -338,23 +338,23 @@ exports[`EuiRange props range should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props slider should display in popover 1`] = `
+exports[`WuiRange props slider should display in popover 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiRange__popover"
+  class="wuiPopover wuiPopover--anchorDownLeft wuiPopover--displayBlock wuiInputPopover wuiRange__popover"
 >
   <div
-    class="euiPopover__anchor"
+    class="wuiPopover__anchor"
   >
     <div>
       <div
-        class="euiFormControlLayout"
+        class="wuiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="wuiFormControlLayout__childrenWrapper"
         >
           <input
             aria-label="aria-label"
-            class="euiFieldNumber euiRangeInput euiRangeInput--max"
+            class="wuiFieldNumber wuiRangeInput wuiRangeInput--max"
             data-test-subj="test subject string"
             id="id"
             max="100"
@@ -371,21 +371,21 @@ exports[`EuiRange props slider should display in popover 1`] = `
 </div>
 `;
 
-exports[`EuiRange props ticks should render 1`] = `
+exports[`WuiRange props ticks should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
     style="margin-right:0.6em"
   >
     <div
-      class="euiRangeTicks"
+      class="wuiRangeTicks"
       style="margin:0 -8.333333333333332%;left:0;right:0"
     >
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -394,7 +394,7 @@ exports[`EuiRange props ticks should render 1`] = `
         0
       </button>
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -403,7 +403,7 @@ exports[`EuiRange props ticks should render 1`] = `
         20
       </button>
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -412,7 +412,7 @@ exports[`EuiRange props ticks should render 1`] = `
         40
       </button>
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -421,7 +421,7 @@ exports[`EuiRange props ticks should render 1`] = `
         60
       </button>
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -430,7 +430,7 @@ exports[`EuiRange props ticks should render 1`] = `
         80
       </button>
       <button
-        class="euiRangeTick"
+        class="wuiRangeTick"
         style="width:16.666666666666664%"
         tabindex="-1"
         type="button"
@@ -441,7 +441,7 @@ exports[`EuiRange props ticks should render 1`] = `
     </div>
     <input
       aria-hidden="false"
-      class="euiRangeSlider euiRangeSlider--hasTicks"
+      class="wuiRangeSlider wuiRangeSlider--hasTicks"
       id="generated-id"
       max="100"
       min="0"
@@ -453,17 +453,17 @@ exports[`EuiRange props ticks should render 1`] = `
 </div>
 `;
 
-exports[`EuiRange props value should render 1`] = `
+exports[`WuiRange props value should render 1`] = `
 <div
-  class="euiRangeWrapper euiRange"
+  class="wuiRangeWrapper wuiRange"
 >
   <div
     aria-hidden="false"
-    class="euiRangeTrack"
+    class="wuiRangeTrack"
   >
     <input
       aria-hidden="false"
-      class="euiRangeSlider"
+      class="wuiRangeSlider"
       id="generated-id"
       max="100"
       min="0"
@@ -472,10 +472,10 @@ exports[`EuiRange props value should render 1`] = `
       value="200"
     />
     <div
-      class="euiRangeTooltip"
+      class="wuiRangeTooltip"
     >
       <output
-        class="euiRangeTooltip__value euiRangeTooltip__value--left"
+        class="wuiRangeTooltip__value wuiRangeTooltip__value--left"
         style="right:0%"
       >
         before200after

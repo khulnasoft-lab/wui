@@ -3,12 +3,12 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiBasicTable,
+  WuiLink,
+  WuiHealth,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../../src/components';
 
 import uniqBy from 'lodash/uniqBy';
@@ -71,16 +71,16 @@ export const Table = () => {
     }
 
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <WuiButton color="danger" iconType="trash" onClick={onClickDelete}>
         Delete {selectedItems.length} Users
-      </EuiButton>
+      </WuiButton>
     );
   };
 
   const renderStatus = online => {
     const color = online ? 'success' : 'danger';
     const label = online ? 'Online' : 'Offline';
-    return <EuiHealth color={color}>{label}</EuiHealth>;
+    return <WuiHealth color={color}>{label}</WuiHealth>;
   };
 
   const { pageOfItems, totalItemCount } = store.findUsers(
@@ -119,12 +119,12 @@ export const Table = () => {
         fullWidth: true,
       },
       render: (name, item) => (
-        <EuiFlexGroup responsive={false} alignItems="center">
-          <EuiFlexItem>
+        <WuiFlexGroup responsive={false} alignItems="center">
+          <WuiFlexItem>
             {item.firstName} {item.lastName}
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>{renderStatus(item.online)}</EuiFlexItem>
-        </EuiFlexGroup>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>{renderStatus(item.online)}</WuiFlexItem>
+        </WuiFlexGroup>
       ),
     },
     {
@@ -134,9 +134,9 @@ export const Table = () => {
         <span>{uniqBy(items, 'github').length} users</span>
       ),
       render: username => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <WuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </WuiLink>
       ),
     },
     {
@@ -194,7 +194,7 @@ export const Table = () => {
   return (
     <Fragment>
       {deleteButton}
-      <EuiBasicTable
+      <WuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

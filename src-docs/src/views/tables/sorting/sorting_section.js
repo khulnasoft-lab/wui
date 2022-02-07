@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { WuiBasicTable, WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,13 +22,13 @@ export const section = {
   text: (
     <p>
       The following example shows how to configure column sorting via the{' '}
-      <EuiCode>sorting</EuiCode> property and flagging the sortable columns as{' '}
-      <EuiCode language="js">sortable: true</EuiCode>. To enable the default
+      <WuiCode>sorting</WuiCode> property and flagging the sortable columns as{' '}
+      <WuiCode language="js">sortable: true</WuiCode>. To enable the default
       sorting ability for <strong>every</strong> column, pass{' '}
-      <EuiCode language="js">enableAllColumns: true</EuiCode> to the{' '}
-      <EuiCode>sorting</EuiCode> prop.
+      <WuiCode language="js">enableAllColumns: true</WuiCode> to the{' '}
+      <WuiCode>sorting</WuiCode> prop.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { WuiBasicTable },
   demo: <Table />,
 };

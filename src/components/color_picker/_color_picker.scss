@@ -1,50 +1,50 @@
-.euiColorPicker {
+.wuiColorPicker {
   position: relative;
-  width: $euiColorPickerWidth;
+  width: $wuiColorPickerWidth;
 }
 
-.euiColorPicker__popoverAnchor {
-  // Nested needed for specificity of overriding .euiFieldText
-  .euiColorPicker__input {
-    @include euiFormControlWithIcon($isIconOptional: false, $side: 'right');
+.wuiColorPicker__popoverAnchor {
+  // Nested needed for specificity of overriding .wuiFieldText
+  .wuiColorPicker__input {
+    @include wuiFormControlWithIcon($isIconOptional: false, $side: 'right');
 
     &[class*='--compressed'] {
-      @include euiFormControlWithIcon($isIconOptional: false, $side: 'right', $compressed: true);
+      @include wuiFormControlWithIcon($isIconOptional: false, $side: 'right', $compressed: true);
     }
 
-    + .euiFormControlLayoutIcons {
+    + .wuiFormControlLayoutIcons {
       // Override :disabled state, which obscures the selected color
       color: inherit;
     }
   }
 }
 
-// Adds a stroke color for the swatchInput icon. Unlike most EuiIcons it has a stroke in the SVG
-.euiSwatchInput__stroke {
+// Adds a stroke color for the swatchInput icon. Unlike most WuiIcons it has a stroke in the SVG
+.wuiSwatchInput__stroke {
   fill: none;
-  stroke: transparentize($euiColorFullShade, .8);
+  stroke: transparentize($wuiColorFullShade, .8);
 }
 
-.euiColorPicker__popoverPanel--pickerOnly {
-  // Override of EuiPanel padding
+.wuiColorPicker__popoverPanel--pickerOnly {
+  // Override of WuiPanel padding
   // sass-lint:disable no-important
   padding-bottom: 0 !important;
 }
 
 // sass-lint:disable no-important
-.euiColorPicker__input--inGroup {
-  height: $euiFormControlLayoutGroupInputHeight !important;
+.wuiColorPicker__input--inGroup {
+  height: $wuiFormControlLayoutGroupInputHeight !important;
   box-shadow: none !important;
   border-radius: 0;
 
-  &.euiFieldText--compressed {
-    height: $euiFormControlLayoutGroupInputCompressedHeight !important;
+  &.wuiFieldText--compressed {
+    height: $wuiFormControlLayoutGroupInputCompressedHeight !important;
     border-radius: 0;
   }
 }
 
-.euiColorPicker__alphaRange {
-  .euiRangeInput {
+.wuiColorPicker__alphaRange {
+  .wuiRangeInput {
     min-width: 0;
   }
 }

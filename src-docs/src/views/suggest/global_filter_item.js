@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import {
-  EuiBadge,
-  EuiPopover,
-  EuiContextMenu,
+  WuiBadge,
+  WuiPopover,
+  WuiContextMenu,
 } from '../../../../src/components';
 import GlobalFilterForm from './global_filter_form';
 
@@ -75,7 +75,7 @@ export const GlobalFilterItem = props => {
   }
 
   const badge = (
-    <EuiBadge
+    <WuiBadge
       id={id}
       className={classes}
       title={title}
@@ -95,7 +95,7 @@ export const GlobalFilterItem = props => {
       {prefix}
       <span>{field}: </span>
       <span>&quot;{value}&quot;</span>
-    </EuiBadge>
+    </WuiBadge>
   );
 
   const _createFilterContextMenu = (filter, button) => {
@@ -157,7 +157,7 @@ export const GlobalFilterItem = props => {
     };
 
     return (
-      <EuiPopover
+      <WuiPopover
         id={`popoverFor_${filter.id}`}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
@@ -165,11 +165,11 @@ export const GlobalFilterItem = props => {
         anchorPosition="downCenter"
         panelPaddingSize="none"
         display="block">
-        <EuiContextMenu
+        <WuiContextMenu
           initialPanelId={0}
           panels={flattenPanelTree(panelTree)}
         />
-      </EuiPopover>
+      </WuiPopover>
     );
   };
 

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,10 +39,10 @@ import {
 } from '../../test';
 import { comboBoxKeys } from '../../services';
 
-import { EuiComboBox, EuiComboBoxProps } from './combo_box';
+import { WuiComboBox, WuiComboBoxProps } from './combo_box';
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: ReactNode }) => children,
+  WuiPortal: ({ children }: { children: ReactNode }) => children,
 }));
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
@@ -78,9 +91,9 @@ const options: TitanOption[] = [
   },
 ];
 
-describe('EuiComboBox', () => {
+describe('WuiComboBox', () => {
   test('is rendered', () => {
-    const component = render(<EuiComboBox {...requiredProps} />);
+    const component = render(<WuiComboBox {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -89,7 +102,7 @@ describe('EuiComboBox', () => {
 describe('props', () => {
   test('options list is rendered', () => {
     const component = mount(
-      <EuiComboBox
+      <WuiComboBox
         options={options}
         data-test-subj="alsoGetsAppliedToOptionsList"
       />
@@ -101,7 +114,7 @@ describe('props', () => {
 
   test('selectedOptions are rendered', () => {
     const component = shallow(
-      <EuiComboBox
+      <WuiComboBox
         options={options}
         selectedOptions={[options[2], options[4]]}
       />
@@ -113,7 +126,7 @@ describe('props', () => {
   describe('isClearable=false disallows user from clearing input', () => {
     test('when no options are selected', () => {
       const component = shallow(
-        <EuiComboBox options={options} isClearable={false} />
+        <WuiComboBox options={options} isClearable={false} />
       );
 
       expect(component).toMatchSnapshot();
@@ -121,7 +134,7 @@ describe('props', () => {
 
     test('when options are selected', () => {
       const component = shallow(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2], options[4]]}
           isClearable={false}
@@ -135,7 +148,7 @@ describe('props', () => {
   describe('singleSelection', () => {
     test('is rendered', () => {
       const component = shallow(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           singleSelection={true}
@@ -146,7 +159,7 @@ describe('props', () => {
     });
     test('selects existing option when opened', () => {
       const component = shallow(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           singleSelection={true}
@@ -158,7 +171,7 @@ describe('props', () => {
     });
     test('prepend and append is rendered', () => {
       const component = shallow(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           singleSelection={true}
           prepend="String"
@@ -173,7 +186,7 @@ describe('props', () => {
 
   test('isDisabled is rendered', () => {
     const component = shallow(
-      <EuiComboBox
+      <WuiComboBox
         options={options}
         selectedOptions={[options[2]]}
         isDisabled={true}
@@ -185,7 +198,7 @@ describe('props', () => {
 
   test('full width is rendered', () => {
     const component = shallow(
-      <EuiComboBox
+      <WuiComboBox
         options={options}
         selectedOptions={[options[2]]}
         fullWidth={true}
@@ -197,7 +210,7 @@ describe('props', () => {
 
   test('delimiter is rendered', () => {
     const component = shallow(
-      <EuiComboBox
+      <WuiComboBox
         options={options}
         selectedOptions={[options[2], options[3]]}
         delimiter=","
@@ -214,7 +227,7 @@ describe('behavior', () => {
       const onCreateOptionHandler = jest.fn();
 
       const component = mount(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onCreateOption={onCreateOptionHandler}
@@ -233,7 +246,7 @@ describe('behavior', () => {
       const onCreateOptionHandler = jest.fn();
 
       const component = mount(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onCreateOption={onCreateOptionHandler}
@@ -252,7 +265,7 @@ describe('behavior', () => {
       const onKeyDownWrapper = jest.fn();
       const component = mount(
         <div onKeyDown={onKeyDownWrapper}>
-          <EuiComboBox options={options} selectedOptions={[options[2]]} />
+          <WuiComboBox options={options} selectedOptions={[options[2]]} />
         </div>
       );
 
@@ -276,7 +289,7 @@ describe('behavior', () => {
       const onCreateOptionHandler = jest.fn();
 
       const component = mount(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onCreateOption={onCreateOptionHandler}
@@ -301,7 +314,7 @@ describe('behavior', () => {
       const onKeyDownWrapper = jest.fn();
       const component = mount(
         <div onKeyDown={onKeyDownWrapper}>
-          <EuiComboBox options={options} selectedOptions={[options[2]]} />
+          <WuiComboBox options={options} selectedOptions={[options[2]]} />
         </div>
       );
 
@@ -329,7 +342,7 @@ describe('behavior', () => {
     test('calls onChange callback with empty array', () => {
       const onChangeHandler = jest.fn();
       const component = mount(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onChange={onChangeHandler}
@@ -343,7 +356,7 @@ describe('behavior', () => {
 
     test('focuses the input', () => {
       const component = mount(
-        <EuiComboBox
+        <WuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onChange={() => {}}
@@ -366,10 +379,10 @@ describe('behavior', () => {
     ];
     test('options "none"', () => {
       const component = mount<
-        EuiComboBox<TitanOption>,
-        EuiComboBoxProps<TitanOption>,
+        WuiComboBox<TitanOption>,
+        WuiComboBoxProps<TitanOption>,
         { matchingOptions: TitanOption[] }
-      >(<EuiComboBox options={sortMatchesByOptions} sortMatchesBy="none" />);
+      >(<WuiComboBox options={sortMatchesByOptions} sortMatchesBy="none" />);
 
       findTestSubject(component, 'comboBoxSearchInput').simulate('change', {
         target: { value: 'di' },
@@ -382,11 +395,11 @@ describe('behavior', () => {
 
     test('options "startsWith"', () => {
       const component = mount<
-        EuiComboBox<TitanOption>,
-        EuiComboBoxProps<TitanOption>,
+        WuiComboBox<TitanOption>,
+        WuiComboBoxProps<TitanOption>,
         { matchingOptions: TitanOption[] }
       >(
-        <EuiComboBox
+        <WuiComboBox
           options={sortMatchesByOptions}
           sortMatchesBy="startsWith"
         />
@@ -404,10 +417,10 @@ describe('behavior', () => {
     const inputRefCallback = jest.fn();
 
     const component = mount<
-      EuiComboBox<TitanOption>,
-      EuiComboBoxProps<TitanOption>,
+      WuiComboBox<TitanOption>,
+      WuiComboBoxProps<TitanOption>,
       { matchingOptions: TitanOption[] }
-    >(<EuiComboBox options={options} inputRef={inputRefCallback} />);
+    >(<WuiComboBox options={options} inputRef={inputRefCallback} />);
 
     expect(inputRefCallback).toHaveBeenCalledTimes(1);
     expect(component.find('input[role="textbox"]').getDOMNode()).toBe(

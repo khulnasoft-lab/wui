@@ -1,22 +1,22 @@
-import { EuiHorizontalRule } from '../../../../src/components/';
+import { WuiHorizontalRule } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const horizontalRuleConfig = () => {
-  const docgenInfo = Array.isArray(EuiHorizontalRule.__docgenInfo)
-    ? EuiHorizontalRule.__docgenInfo[0]
-    : EuiHorizontalRule.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiHorizontalRule.__docgenInfo)
+    ? WuiHorizontalRule.__docgenInfo[0]
+    : WuiHorizontalRule.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiHorizontalRule',
+      componentName: 'WuiHorizontalRule',
       props: propsToUse,
       scope: {
-        EuiHorizontalRule,
+        WuiHorizontalRule,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiHorizontalRule'],
+        '@wazuh/wui': {
+          named: ['WuiHorizontalRule'],
         },
       },
     },

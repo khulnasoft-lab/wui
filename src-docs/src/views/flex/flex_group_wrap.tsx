@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { WuiFlexGroup, WuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
-  <EuiFlexGroup wrap>
-    <EuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</EuiFlexItem>
+  <WuiFlexGroup wrap>
+    <WuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</WuiFlexItem>
 
-    <EuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</EuiFlexItem>
+    <WuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</WuiFlexItem>
 
-    <EuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</EuiFlexItem>
-  </EuiFlexGroup>
+    <WuiFlexItem style={{ minWidth: 300 }}>Min-width 300px</WuiFlexItem>
+  </WuiFlexGroup>
 );

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,7 +37,7 @@ import React, {
   useContext,
   ReactElement,
 } from 'react';
-import { EuiI18nConsumer } from '../context';
+import { WuiI18nConsumer } from '../context';
 import { ExclusiveUnion } from '../common';
 import {
   I18nContext,
@@ -98,14 +111,14 @@ interface I18nTokensShape<T extends any[]> {
   children: (x: Array<T[number]>) => ReactChild;
 }
 
-type EuiI18nProps<
+type WuiI18nProps<
   T,
   DEFAULT extends Renderable<T>,
   DEFAULTS extends any[]
 > = ExclusiveUnion<I18nTokenShape<T, DEFAULT>, I18nTokensShape<DEFAULTS>>;
 
 function isI18nTokensShape<T extends any[]>(
-  x: EuiI18nProps<any, any, T>
+  x: WuiI18nProps<any, any, T>
 ): x is I18nTokensShape<T> {
   return x.tokens != null;
 }
@@ -113,14 +126,14 @@ function isI18nTokensShape<T extends any[]>(
 // Must use the generics <T extends {}>
 // If instead typed with React.FunctionComponent there isn't feedback given back to the dev
 // when using a `values` object with a renderer callback.
-const EuiI18n = <
+const WuiI18n = <
   T extends {},
   DEFAULT extends Renderable<T>,
   DEFAULTS extends any[]
 >(
-  props: EuiI18nProps<T, DEFAULT, DEFAULTS>
+  props: WuiI18nProps<T, DEFAULT, DEFAULTS>
 ) => (
-  <EuiI18nConsumer>
+  <WuiI18nConsumer>
     {i18nConfig => {
       const { mapping, mappingFunc } = i18nConfig;
       if (isI18nTokensShape(props)) {
@@ -144,7 +157,7 @@ const EuiI18n = <
         return tokenValue;
       }
     }}
-  </EuiI18nConsumer>
+  </WuiI18nConsumer>
 );
 
 // A single default could be a string, react child, or render function
@@ -159,16 +172,16 @@ type DefaultsRenderType<
   K extends Array<string | ReactElement>
 > = K extends Array<infer Item> ? Item : never;
 
-function useEuiI18n<T extends {}, DEFAULT extends Renderable<T>>(
+function useWuiI18n<T extends {}, DEFAULT extends Renderable<T>>(
   token: string,
   defaultValue: DEFAULT,
   values?: T
 ): DefaultRenderType<T, DEFAULT>;
-function useEuiI18n<DEFAULTS extends Array<string | ReactElement>>(
+function useWuiI18n<DEFAULTS extends Array<string | ReactElement>>(
   tokens: string[],
   defaultValues: DEFAULTS
 ): Array<DefaultsRenderType<DEFAULTS>>;
-function useEuiI18n(...props: any[]) {
+function useWuiI18n(...props: any[]) {
   const i18nConfig = useContext(I18nContext);
   const { mapping, mappingFunc } = i18nConfig;
 
@@ -183,4 +196,4 @@ function useEuiI18n(...props: any[]) {
   }
 }
 
-export { EuiI18n, useEuiI18n };
+export { WuiI18n, useWuiI18n };

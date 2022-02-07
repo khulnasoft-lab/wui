@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,13 +39,13 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiOverlayMask } from '../overlay_mask';
+import { WuiOverlayMask } from '../overlay_mask';
 
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 
-import { useEuiI18n } from '../i18n';
+import { useWuiI18n } from '../i18n';
 
-import { EuiFocusTrap } from '../focus_trap';
+import { WuiFocusTrap } from '../focus_trap';
 
 import { keys } from '../../services';
 import { useInnerText } from '../inner_text';
@@ -40,11 +53,11 @@ import { useInnerText } from '../inner_text';
 type ImageSize = 's' | 'm' | 'l' | 'xl' | 'fullWidth' | 'original';
 
 const sizeToClassNameMap: { [size in ImageSize]: string } = {
-  s: 'euiImage--small',
-  m: 'euiImage--medium',
-  l: 'euiImage--large',
-  xl: 'euiImage--xlarge',
-  fullWidth: 'euiImage--fullWidth',
+  s: 'wuiImage--small',
+  m: 'wuiImage--medium',
+  l: 'wuiImage--large',
+  xl: 'wuiImage--xlarge',
+  fullWidth: 'wuiImage--fullWidth',
   original: '',
 };
 
@@ -57,7 +70,7 @@ const fullScreenIconColorMap: { [color in FullScreenIconColor]: string } = {
   dark: 'default',
 };
 
-interface EuiImageProps extends CommonProps, HTMLAttributes<HTMLImageElement> {
+interface WuiImageProps extends CommonProps, HTMLAttributes<HTMLImageElement> {
   /**
    * Separate from the caption is a title on the alt tag itself.
    * This one is required for accessibility.
@@ -89,7 +102,7 @@ interface EuiImageProps extends CommonProps, HTMLAttributes<HTMLImageElement> {
   allowFullScreen?: boolean;
 }
 
-export const EuiImage: FunctionComponent<EuiImageProps> = ({
+export const WuiImage: FunctionComponent<WuiImageProps> = ({
   className,
   url,
   size = 'original',
@@ -122,10 +135,10 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
   const customStyle: React.CSSProperties = { ...style };
 
   let classes = classNames(
-    'euiImage',
+    'wuiImage',
     {
-      'euiImage--hasShadow': hasShadow,
-      'euiImage--allowFullScreen': allowFullScreen,
+      'wuiImage--hasShadow': hasShadow,
+      'wuiImage--allowFullScreen': allowFullScreen,
     },
     className
   );
@@ -144,59 +157,59 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
   let optionalCaption;
   if (caption) {
     optionalCaption = (
-      <figcaption ref={optionalCaptionRef} className="euiImage__caption">
+      <figcaption ref={optionalCaptionRef} className="wuiImage__caption">
         {caption}
       </figcaption>
     );
   }
 
   const allowFullScreenIcon = (
-    <EuiIcon
+    <WuiIcon
       type="fullScreen"
       color={fullScreenIconColorMap[fullScreenIconColor]}
-      className="euiImage__icon"
+      className="wuiImage__icon"
     />
   );
 
   const fullScreenDisplay = (
-    <EuiOverlayMask
+    <WuiOverlayMask
       data-test-subj="fullScreenOverlayMask"
       onClick={closeFullScreen}>
-      <EuiFocusTrap clickOutsideDisables={true}>
+      <WuiFocusTrap clickOutsideDisables={true}>
         <figure
-          className="euiImage euiImage-isFullScreen"
+          className="wuiImage wuiImage-isFullScreen"
           aria-label={optionalCaptionText}>
           <button
             type="button"
-            aria-label={useEuiI18n(
-              'euiImage.closeImage',
+            aria-label={useWuiI18n(
+              'wuiImage.closeImage',
               'Close full screen {alt} image',
               { alt }
             )}
-            className="euiImage__button"
+            className="wuiImage__button"
             data-test-subj="deactivateFullScreenButton"
             onClick={closeFullScreen}
             onKeyDown={onKeyDown}>
             <img
               src={url}
               alt={alt}
-              className="euiImage-isFullScreen__img"
+              className="wuiImage-isFullScreen__img"
               {...rest}
             />
-            <EuiIcon
+            <WuiIcon
               type="cross"
               color={fullScreenIconColorMap[fullScreenIconColor]}
-              className="euiImage-isFullScreen__icon"
+              className="wuiImage-isFullScreen__icon"
             />
           </button>
           {optionalCaption}
         </figure>
-      </EuiFocusTrap>
-    </EuiOverlayMask>
+      </WuiFocusTrap>
+    </WuiOverlayMask>
   );
 
-  const fullscreenLabel = useEuiI18n(
-    'euiImage.openImage',
+  const fullscreenLabel = useWuiI18n(
+    'wuiImage.openImage',
     'Open full screen {alt} image',
     { alt }
   );
@@ -206,13 +219,13 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
         <button
           type="button"
           aria-label={fullscreenLabel}
-          className="euiImage__button"
+          className="wuiImage__button"
           data-test-subj="activateFullScreenButton"
           onClick={openFullScreen}>
           <img
             src={url}
             alt={alt}
-            className="euiImage__img"
+            className="wuiImage__img"
             style={customStyle}
             {...rest}
           />
@@ -228,7 +241,7 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
         <img
           style={customStyle}
           src={url}
-          className="euiImage__img"
+          className="wuiImage__img"
           alt={alt}
           {...rest}
         />

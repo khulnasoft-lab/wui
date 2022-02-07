@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,7 +35,7 @@ import ReactDOM from 'react-dom';
 import { resetServerContext } from 'react-beautiful-dnd';
 import html from 'html';
 import { requiredProps } from '../../test/required_props';
-import { EuiDragDropContext, EuiDraggable, EuiDroppable } from './';
+import { WuiDragDropContext, WuiDraggable, WuiDroppable } from './';
 
 function takeSnapshot(element: HTMLElement) {
   expect(
@@ -33,7 +46,7 @@ function takeSnapshot(element: HTMLElement) {
   ).toMatchSnapshot();
 }
 
-describe('EuiDraggable', () => {
+describe('WuiDraggable', () => {
   let appDiv: HTMLElement;
 
   beforeEach(() => {
@@ -51,13 +64,13 @@ describe('EuiDraggable', () => {
     const handler = jest.fn();
 
     ReactDOM.render(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
-          <EuiDraggable draggableId="testDraggable" index={0}>
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <WuiDroppable droppableId="testDroppable">
+          <WuiDraggable draggableId="testDraggable" index={0}>
             {() => <div>Hello</div>}
-          </EuiDraggable>
-        </EuiDroppable>
-      </EuiDragDropContext>,
+          </WuiDraggable>
+        </WuiDroppable>
+      </WuiDragDropContext>,
       appDiv
     );
 
@@ -68,13 +81,13 @@ describe('EuiDraggable', () => {
     const handler = jest.fn();
 
     ReactDOM.render(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
-          <EuiDraggable draggableId="testDraggable" index={0}>
+      <WuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <WuiDroppable droppableId="testDroppable">
+          <WuiDraggable draggableId="testDraggable" index={0}>
             <div>Hello</div>
-          </EuiDraggable>
-        </EuiDroppable>
-      </EuiDragDropContext>,
+          </WuiDraggable>
+        </WuiDroppable>
+      </WuiDragDropContext>,
       appDiv
     );
 

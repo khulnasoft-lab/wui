@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiHorizontalRule } from '../../../../src/components';
+import { WuiHorizontalRule } from '../../../../src/components';
 
 import { horizontalRuleConfig } from './playground';
 
@@ -16,8 +16,8 @@ import HorizontalRuleMargin from './horizontal_rule_margin';
 const horizontalRuleMarginSource = require('!!raw-loader!./horizontal_rule_margin');
 const horizontalRuleMarginHtml = renderToHtml(HorizontalRuleMargin);
 
-const horizontalRuleSnippet = '<EuiHorizontalRule size="quarter" />';
-const horizontalRuleMarginSnippet = '<EuiHorizontalRule margin="xs" />';
+const horizontalRuleSnippet = '<WuiHorizontalRule size="quarter" />';
+const horizontalRuleMarginSnippet = '<WuiHorizontalRule margin="xs" />';
 
 export const HorizontalRuleExample = {
   title: 'Horizontal rule',
@@ -35,11 +35,11 @@ export const HorizontalRuleExample = {
       ],
       text: (
         <p>
-          <strong>EuiHorizontalRule</strong> can carry a size. By default it
+          <strong>WuiHorizontalRule</strong> can carry a size. By default it
           will be full.
         </p>
       ),
-      props: { EuiHorizontalRule },
+      props: { WuiHorizontalRule },
       snippet: horizontalRuleSnippet,
       demo: <HorizontalRule />,
     },
@@ -57,7 +57,7 @@ export const HorizontalRuleExample = {
       ],
       text: (
         <p>
-          <strong>EuiHorizontalRule</strong> margins can also be defined.
+          <strong>WuiHorizontalRule</strong> margins can also be defined.
           Don&rsquo;t forget that margins will collapse against items that
           proceed / follow.
         </p>

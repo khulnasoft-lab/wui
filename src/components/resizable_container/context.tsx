@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,22 +32,22 @@
 
 import React, { createContext, useContext } from 'react';
 
-export interface EuiResizablePanelController {
+export interface WuiResizablePanelController {
   id: string;
   setSize: (panelSize: number) => void;
   getSizePx: () => number;
   minSize: string;
 }
 
-export class EuiResizablePanelRegistry {
-  private panels: { [key: string]: EuiResizablePanelController } = {};
+export class WuiResizablePanelRegistry {
+  private panels: { [key: string]: WuiResizablePanelController } = {};
   private resizerRefs = new Set<HTMLElement>();
 
-  registerPanel(panel: EuiResizablePanelController) {
+  registerPanel(panel: WuiResizablePanelController) {
     this.panels[panel.id] = panel;
   }
 
-  deregisterPanel(id: EuiResizablePanelController['id']) {
+  deregisterPanel(id: WuiResizablePanelController['id']) {
     delete this.panels[id];
   }
 
@@ -71,10 +84,10 @@ export class EuiResizablePanelRegistry {
 }
 
 interface ContextProps {
-  registry?: EuiResizablePanelRegistry;
+  registry?: WuiResizablePanelRegistry;
 }
 
-const EuiResizablePanelContext = createContext<ContextProps>({});
+const WuiResizablePanelContext = createContext<ContextProps>({});
 
 interface ContextProviderProps extends Required<ContextProps> {
   /**
@@ -83,22 +96,22 @@ interface ContextProviderProps extends Required<ContextProps> {
   children: any;
 }
 
-export function EuiResizablePanelContextProvider({
+export function WuiResizablePanelContextProvider({
   children,
   registry,
 }: ContextProviderProps) {
   return (
-    <EuiResizablePanelContext.Provider value={{ registry }}>
+    <WuiResizablePanelContext.Provider value={{ registry }}>
       {children}
-    </EuiResizablePanelContext.Provider>
+    </WuiResizablePanelContext.Provider>
   );
 }
 
-export const useEuiResizablePanelContext = () => {
-  const context = useContext(EuiResizablePanelContext);
+export const useWuiResizablePanelContext = () => {
+  const context = useContext(WuiResizablePanelContext);
   if (!context.registry) {
     throw new Error(
-      'useEuiResizablePanelContext must be used within a <EuiResizablePanelContextProvider />'
+      'useWuiResizablePanelContext must be used within a <WuiResizablePanelContextProvider />'
     );
   }
   return context;

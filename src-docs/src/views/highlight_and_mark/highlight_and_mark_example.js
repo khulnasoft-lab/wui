@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiHighlight, EuiMark } from '../../../../src/components';
+import { WuiCode, WuiHighlight, WuiMark } from '../../../../src/components';
 
 import { highlightConfig, markConfig } from './playground';
 
@@ -13,14 +13,14 @@ import { Mark } from './mark';
 
 const highlightSource = require('!!raw-loader!./highlight');
 const highlightHtml = renderToHtml(Highlight);
-const highlightSnippet = `<EuiHighlight search={searchValue} highlightAll={isHighlightAll}>
+const highlightSnippet = `<WuiHighlight search={searchValue} highlightAll={isHighlightAll}>
   <!-- A text where all your search matches will be highlighted -->
-</EuiHighlight>
+</WuiHighlight>
 `;
 
 const markSource = require('!!raw-loader!./mark');
 const markHtml = renderToHtml(Mark);
-const markSnippet = '<EuiMark><!-- Mark text --></EuiMark>';
+const markSnippet = '<WuiMark><!-- Mark text --></WuiMark>';
 
 export const HighlightAndMarkExample = {
   title: 'Highlight and mark',
@@ -39,12 +39,12 @@ export const HighlightAndMarkExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiHighlight</strong> to highlight substrings within a
+          Use <strong>WuiHighlight</strong> to highlight substrings within a
           string, typically in response to user input.
         </p>
       ),
-      props: { EuiHighlight },
-      components: { EuiHighlight },
+      props: { WuiHighlight },
+      components: { WuiHighlight },
       snippet: highlightSnippet,
       demo: <Highlight />,
     },
@@ -62,11 +62,11 @@ export const HighlightAndMarkExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiMark</strong> to wrap a string in a{' '}
-          <EuiCode>mark</EuiCode> element.
+          Use <strong>WuiMark</strong> to wrap a string in a{' '}
+          <WuiCode>mark</WuiCode> element.
         </p>
       ),
-      components: { EuiMark },
+      components: { WuiMark },
       snippet: markSnippet,
       demo: <Mark />,
     },

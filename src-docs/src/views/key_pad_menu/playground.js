@@ -1,8 +1,8 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiKeyPadMenuItem,
-  EuiIcon,
-  EuiBetaBadge,
+  WuiKeyPadMenuItem,
+  WuiIcon,
+  WuiBetaBadge,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -11,9 +11,9 @@ import {
 import * as t from '@babel/types';
 
 export const keyPadMenuItemConfig = () => {
-  const docgenInfo = Array.isArray(EuiKeyPadMenuItem.__docgenInfo)
-    ? EuiKeyPadMenuItem.__docgenInfo[0]
-    : EuiKeyPadMenuItem.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiKeyPadMenuItem.__docgenInfo)
+    ? WuiKeyPadMenuItem.__docgenInfo[0]
+    : WuiKeyPadMenuItem.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -42,22 +42,22 @@ export const keyPadMenuItemConfig = () => {
   propsToUse.children = {
     ...propsToUse.children,
     type: PropTypes.ReactNode,
-    value: '<EuiIcon type="dashboardApp" size="l" />',
+    value: '<WuiIcon type="dashboardApp" size="l" />',
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiKeyPadMenuItem',
+      componentName: 'WuiKeyPadMenuItem',
       props: propsToUse,
       scope: {
-        EuiKeyPadMenuItem,
-        EuiIcon,
-        EuiBetaBadge,
+        WuiKeyPadMenuItem,
+        WuiIcon,
+        WuiBetaBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiKeyPadMenuItem', 'EuiIcon', 'EuiBetaBadge'],
+        '@wazuh/wui': {
+          named: ['WuiKeyPadMenuItem', 'WuiIcon', 'WuiBetaBadge'],
         },
       },
       customProps: {

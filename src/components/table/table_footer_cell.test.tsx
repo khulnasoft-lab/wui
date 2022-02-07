@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableFooterCell } from './table_footer_cell';
+import { WuiTableFooterCell } from './table_footer_cell';
 
 import { RIGHT_ALIGNMENT, CENTER_ALIGNMENT } from '../../services';
 import { WARNING_MESSAGE } from './utils';
 
-describe('EuiTableFooterCell', () => {
+describe('WuiTableFooterCell', () => {
   const _consoleWarn = console.warn;
   beforeAll(() => {
     console.warn = (...args: [any?, ...any[]]) => {
@@ -41,7 +54,7 @@ describe('EuiTableFooterCell', () => {
 
   test('is rendered', () => {
     const component = render(
-      <EuiTableFooterCell {...requiredProps}>children</EuiTableFooterCell>
+      <WuiTableFooterCell {...requiredProps}>children</WuiTableFooterCell>
     );
 
     expect(component).toMatchSnapshot();
@@ -49,19 +62,19 @@ describe('EuiTableFooterCell', () => {
 
   describe('align', () => {
     test('defaults to left', () => {
-      const component = <EuiTableFooterCell />;
+      const component = <WuiTableFooterCell />;
 
       expect(render(component)).toMatchSnapshot();
     });
 
     test('renders right when specified', () => {
-      const component = <EuiTableFooterCell align={RIGHT_ALIGNMENT} />;
+      const component = <WuiTableFooterCell align={RIGHT_ALIGNMENT} />;
 
       expect(render(component)).toMatchSnapshot();
     });
 
     test('renders center when specified', () => {
-      const component = <EuiTableFooterCell align={CENTER_ALIGNMENT} />;
+      const component = <WuiTableFooterCell align={CENTER_ALIGNMENT} />;
 
       expect(render(component)).toMatchSnapshot();
     });
@@ -70,7 +83,7 @@ describe('EuiTableFooterCell', () => {
   describe('width and style', () => {
     test('accepts style attribute', () => {
       const component = (
-        <EuiTableFooterCell style={{ width: '20%' }}>Test</EuiTableFooterCell>
+        <WuiTableFooterCell style={{ width: '20%' }}>Test</WuiTableFooterCell>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -78,7 +91,7 @@ describe('EuiTableFooterCell', () => {
 
     test('accepts width attribute', () => {
       const component = (
-        <EuiTableFooterCell width="10%">Test</EuiTableFooterCell>
+        <WuiTableFooterCell width="10%">Test</WuiTableFooterCell>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -86,7 +99,7 @@ describe('EuiTableFooterCell', () => {
 
     test('accepts width attribute as number', () => {
       const component = (
-        <EuiTableFooterCell width={100}>Test</EuiTableFooterCell>
+        <WuiTableFooterCell width={100}>Test</WuiTableFooterCell>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -94,9 +107,9 @@ describe('EuiTableFooterCell', () => {
 
     test('resolves style and width attribute', () => {
       const component = (
-        <EuiTableFooterCell width="10%" style={{ width: '20%' }}>
+        <WuiTableFooterCell width="10%" style={{ width: '20%' }}>
           Test
-        </EuiTableFooterCell>
+        </WuiTableFooterCell>
       );
 
       expect(render(component)).toMatchSnapshot();

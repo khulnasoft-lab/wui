@@ -1,4 +1,4 @@
-import { EuiPagination, EuiText } from '../../../../src/components/';
+import { WuiPagination, WuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -6,23 +6,23 @@ import {
 } from '../../services/playground';
 
 export const paginationConfig = () => {
-  const docgenInfo = Array.isArray(EuiPagination.__docgenInfo)
-    ? EuiPagination.__docgenInfo[0]
-    : EuiPagination.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiPagination.__docgenInfo)
+    ? WuiPagination.__docgenInfo[0]
+    : WuiPagination.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onPageClick = simulateFunction(propsToUse.onPageClick);
   return {
     config: {
-      componentName: 'EuiPagination',
+      componentName: 'WuiPagination',
       props: propsToUse,
       scope: {
-        EuiPagination,
-        EuiText,
+        WuiPagination,
+        WuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPagination', 'EuiText'],
+        '@wazuh/wui': {
+          named: ['WuiPagination', 'WuiText'],
         },
       },
       customProps: {

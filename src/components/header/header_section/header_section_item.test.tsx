@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +34,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderSectionItem } from './header_section_item';
+import { WuiHeaderSectionItem } from './header_section_item';
 
-describe('EuiHeaderSectionItem', () => {
+describe('WuiHeaderSectionItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSectionItem {...requiredProps} />);
+    const component = render(<WuiHeaderSectionItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeaderSectionItem>
+      <WuiHeaderSectionItem>
         <span>Call me Ishmael.</span>
-      </EuiHeaderSectionItem>
+      </WuiHeaderSectionItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,13 +55,13 @@ describe('EuiHeaderSectionItem', () => {
 
   describe('border', () => {
     test('defaults to left', () => {
-      const component = render(<EuiHeaderSectionItem />);
+      const component = render(<WuiHeaderSectionItem />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders right', () => {
-      const component = render(<EuiHeaderSectionItem border="right" />);
+      const component = render(<WuiHeaderSectionItem border="right" />);
 
       expect(component).toMatchSnapshot();
     });

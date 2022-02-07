@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiColorStops, EuiFormRow } from '../../../../src/components';
+import { WuiColorStops, WuiFormRow } from '../../../../src/components';
 
 export default () => {
   const [emptyColorStops, setEmptyColorStops] = useState([]);
@@ -47,58 +47,58 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Empty array without `min` or `max`">
-        <EuiColorStops
+      <WuiFormRow label="Empty array without `min` or `max`">
+        <WuiColorStops
           label="Empty start"
           onChange={handleEmptyChange2}
           colorStops={emptyColorStops2}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Empty array with `min` defined">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Empty array with `min` defined">
+        <WuiColorStops
           label="Empty start"
           onChange={handleEmptyChange}
           colorStops={emptyColorStops}
           min={0}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Empty array with `max` defined">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Empty array with `max` defined">
+        <WuiColorStops
           label="Empty start"
           onChange={handleEmptyChange3}
           colorStops={emptyColorStops3}
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop without `min` or `max`">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Single stop without `min` or `max`">
+        <WuiColorStops
           label="Single start"
           onChange={handleSingleChange}
           colorStops={singleColorStops}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop with `min` defined">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Single stop with `min` defined">
+        <WuiColorStops
           label="Single start"
           onChange={handleSingleChange2}
           colorStops={singleColorStops2}
           min={0}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop with `max` defined">
-        <EuiColorStops
+      </WuiFormRow>
+      <WuiFormRow label="Single stop with `max` defined">
+        <WuiColorStops
           label="Single start"
           onChange={handleSingleChange3}
           colorStops={singleColorStops3}
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </React.Fragment>
   );
 };

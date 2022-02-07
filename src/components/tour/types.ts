@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,7 +30,7 @@
  * under the License.
  */
 
-export interface EuiTourState {
+export interface WuiTourState {
   currentTourStep: number;
   isTourActive: boolean;
   tourPopoverWidth: number;
@@ -25,35 +38,35 @@ export interface EuiTourState {
 }
 
 interface ActionFinish {
-  type: 'EUI_TOUR_FINISH';
+  type: 'WUI_TOUR_FINISH';
   payload: { resetTour?: boolean };
 }
 
 interface ActionReset {
-  type: 'EUI_TOUR_RESET';
+  type: 'WUI_TOUR_RESET';
 }
 
 interface ActionDecrement {
-  type: 'EUI_TOUR_PREVIOUS';
+  type: 'WUI_TOUR_PREVIOUS';
 }
 
 interface ActionIncrement {
-  type: 'EUI_TOUR_NEXT';
+  type: 'WUI_TOUR_NEXT';
 }
 
 interface ActionGotoStep {
-  type: 'EUI_TOUR_GOTO';
+  type: 'WUI_TOUR_GOTO';
   payload: { step: number; isTourActive?: boolean };
 }
 
-export type EuiTourAction =
+export type WuiTourAction =
   | ActionFinish
   | ActionReset
   | ActionDecrement
   | ActionIncrement
   | ActionGotoStep;
 
-export interface EuiTourActions {
+export interface WuiTourActions {
   finishTour: (resetTour?: boolean) => void;
   resetTour: () => void;
   decrementStep: () => void;

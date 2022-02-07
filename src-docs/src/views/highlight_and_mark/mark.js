@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-import { EuiMark } from '../../../../src/components';
+import { WuiMark } from '../../../../src/components';
 
 export function Mark() {
   return (
     <Fragment>
-      The quick brown fox <EuiMark>jumped over</EuiMark> the lazy dog
+      The quick brown fox <WuiMark>jumped over</WuiMark> the lazy dog
     </Fragment>
   );
 }

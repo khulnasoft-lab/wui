@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiRange,
-  EuiToolTip,
-  EuiIcon,
-  EuiSwitch,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFormRow,
+  WuiRange,
+  WuiToolTip,
+  WuiIcon,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../../src/components';
 import { ratingAAA, ratingAA18, ratingAA, ratingAll } from './_utilities';
 
@@ -24,81 +24,81 @@ export const ContrastSlider = ({
     {
       value: 0,
       label: (
-        <EuiToolTip
+        <WuiToolTip
           position="bottom"
           content={
             <ul>
               <li>
-                <EuiIcon type="minusInCircle" /> Contrast is between 2 and 3.
+                <WuiIcon type="minusInCircle" /> Contrast is between 2 and 3.
                 Use only for disabled or inconsequential content.
               </li>
               <li>
-                <EuiIcon type="cross" /> Contrast is less than 2. Do not use.
+                <WuiIcon type="cross" /> Contrast is less than 2. Do not use.
               </li>
             </ul>
           }>
           {ratingAll}
-        </EuiToolTip>
+        </WuiToolTip>
       ),
     },
     {
       value: 3,
       label: (
-        <EuiToolTip
+        <WuiToolTip
           position="bottom"
           content={
             <p>
-              <EuiIcon type="partial" /> Partially passes with a contrast of 3+,
+              <WuiIcon type="partial" /> Partially passes with a contrast of 3+,
               but only for graphics or if the text is at least 18px, or 14px and
               bold
             </p>
           }>
           {ratingAA18}
-        </EuiToolTip>
+        </WuiToolTip>
       ),
     },
     {
       value: 4.5,
       label: (
-        <EuiToolTip
+        <WuiToolTip
           position="bottom"
           content={
             <p>
-              <EuiIcon type="checkInCircleFilled" /> Passes with a contrast of
+              <WuiIcon type="checkInCircleFilled" /> Passes with a contrast of
               4.5+
             </p>
           }>
           {ratingAA}
-        </EuiToolTip>
+        </WuiToolTip>
       ),
     },
     {
       value: 7,
       label: (
-        <EuiToolTip
+        <WuiToolTip
           position="bottom"
           content={
             <p>
-              <EuiIcon type="checkInCircleFilled" /> Passes with a contrast of
+              <WuiIcon type="checkInCircleFilled" /> Passes with a contrast of
               7+
             </p>
           }>
           {ratingAAA}
-        </EuiToolTip>
+        </WuiToolTip>
       ),
     },
   ];
 
   return (
-    <EuiFlexGroup
+    <WuiFlexGroup
       className="guideSection__emptyBox guideColorsPage__stickySlider"
       justifyContent="center"
       {...rest}>
-      <EuiFlexItem className="guideSection__shadedBox">
-        <EuiFormRow
+      <WuiFlexItem className="guideSection__shadedBox">
+        <WuiFormRow
           id="ratingsRange"
           label="Minimum color contrast combinations to show">
-          <EuiRange
+          <WuiRange
             min={0}
             max={7}
             step={0.5}
@@ -112,16 +112,16 @@ export const ContrastSlider = ({
             ticks={ticks}
             valueAppend="+"
           />
-        </EuiFormRow>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideSection__shadedBox">
-        <EuiFormRow
+        </WuiFormRow>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideSection__shadedBox">
+        <WuiFormRow
           labelType="legend"
           label="Use text variant variables of core colors for better text contrast"
           hasChildLabel={false}>
           <div>
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <WuiSpacer size="s" />
+            <WuiSwitch
               label="Show text variant"
               checked={showTextVariants}
               onChange={e => {
@@ -130,8 +130,8 @@ export const ContrastSlider = ({
               }}
             />
           </div>
-        </EuiFormRow>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiFormRow>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

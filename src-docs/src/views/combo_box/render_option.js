@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 import {
-  EuiComboBox,
-  EuiHighlight,
-  EuiHealth,
+  WuiComboBox,
+  WuiHighlight,
+  WuiHealth,
 } from '../../../../src/components';
 import {
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
+  wuiPaletteColorBlind,
+  wuiPaletteColorBlindBehindText,
 } from '../../../../src/services';
 
-const visColors = euiPaletteColorBlind();
-const visColorsBehindText = euiPaletteColorBlindBehindText();
+const visColors = wuiPaletteColorBlind();
+const visColorsBehindText = wuiPaletteColorBlindBehindText();
 const optionsStatic = [
   {
     value: {
@@ -129,18 +129,18 @@ export default () => {
     const { color, label, value } = option;
     const dotColor = visColors[visColorsBehindText.indexOf(color)];
     return (
-      <EuiHealth color={dotColor}>
+      <WuiHealth color={dotColor}>
         <span className={contentClassName}>
-          <EuiHighlight search={searchValue}>{label}</EuiHighlight>
+          <WuiHighlight search={searchValue}>{label}</WuiHighlight>
           &nbsp;
           <span>({value.size})</span>
         </span>
-      </EuiHealth>
+      </WuiHealth>
     );
   };
 
   return (
-    <EuiComboBox
+    <WuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}

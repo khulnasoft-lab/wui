@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiDatePicker,
-  EuiSpacer,
-  EuiFormRow,
+  WuiDatePicker,
+  WuiSpacer,
+  WuiFormRow,
 } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
@@ -23,7 +23,7 @@ export default () => {
     /* DisplayToggles wrapper for Docs only */
     <div>
       <DisplayToggles canCompressed={false}>
-        <EuiDatePicker
+        <WuiDatePicker
           showTimeSelect
           selected={startDate}
           onChange={handleChange}
@@ -31,9 +31,9 @@ export default () => {
         />
       </DisplayToggles>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiDatePicker
+      <WuiDatePicker
         showTimeSelect
         selected={startDate}
         onChange={handleChange}
@@ -41,17 +41,17 @@ export default () => {
         placeholder="Clearable"
       />
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiFormRow label="Form row validation" isInvalid error={errors}>
-        <EuiDatePicker
+      <WuiFormRow label="Form row validation" isInvalid error={errors}>
+        <WuiDatePicker
           showTimeSelect
           isInvalid
           selected={startDate}
           onChange={handleChange}
           placeholder="Example of an error"
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </div>
   );
 };

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,7 +40,7 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion } from '../common';
-import { EuiBetaBadge } from '../badge/beta_badge';
+import { WuiBetaBadge } from '../badge/beta_badge';
 
 export type PanelPaddingSize = 'none' | 's' | 'm' | 'l';
 
@@ -41,7 +54,7 @@ interface Props extends CommonProps {
    */
   paddingSize?: PanelPaddingSize;
   /**
-   * When true the panel will grow to match `EuiFlexItem`
+   * When true the panel will grow to match `WuiFlexItem`
    */
   grow?: boolean;
 
@@ -69,18 +82,18 @@ interface Divlike
 
 interface Buttonlike extends Props, ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export type EuiPanelProps = ExclusiveUnion<Divlike, Buttonlike>;
+export type WuiPanelProps = ExclusiveUnion<Divlike, Buttonlike>;
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPanel--paddingSmall',
-  m: 'euiPanel--paddingMedium',
-  l: 'euiPanel--paddingLarge',
+  s: 'wuiPanel--paddingSmall',
+  m: 'wuiPanel--paddingMedium',
+  l: 'wuiPanel--paddingLarge',
 };
 
 export const SIZES = Object.keys(paddingSizeToClassNameMap);
 
-export const EuiPanel: FunctionComponent<EuiPanelProps> = ({
+export const WuiPanel: FunctionComponent<WuiPanelProps> = ({
   children,
   className,
   paddingSize = 'm',
@@ -94,13 +107,13 @@ export const EuiPanel: FunctionComponent<EuiPanelProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiPanel',
+    'wuiPanel',
     paddingSize ? paddingSizeToClassNameMap[paddingSize] : null,
     {
-      'euiPanel--shadow': hasShadow,
-      'euiPanel--flexGrowZero': !grow,
-      'euiPanel--isClickable': onClick,
-      'euiPanel--hasBetaBadge': betaBadgeLabel,
+      'wuiPanel--shadow': hasShadow,
+      'wuiPanel--flexGrowZero': !grow,
+      'wuiPanel--isClickable': onClick,
+      'wuiPanel--hasBetaBadge': betaBadgeLabel,
     },
     className
   );
@@ -108,12 +121,12 @@ export const EuiPanel: FunctionComponent<EuiPanelProps> = ({
   let optionalBetaBadge;
   if (betaBadgeLabel) {
     optionalBetaBadge = (
-      <span className="euiPanel__betaBadgeWrapper">
-        <EuiBetaBadge
+      <span className="wuiPanel__betaBadgeWrapper">
+        <WuiBetaBadge
           label={betaBadgeLabel}
           title={betaBadgeTitle}
           tooltipContent={betaBadgeTooltipContent}
-          className="euiPanel__betaBadge"
+          className="wuiPanel__betaBadge"
         />
       </span>
     );

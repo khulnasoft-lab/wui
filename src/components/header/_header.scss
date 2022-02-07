@@ -1,15 +1,15 @@
 // Header. Includes breadcrumbs of nav buttons.
 
-.euiHeader {
-  @include euiBottomShadowSmall;
+.wuiHeader {
+  @include wuiBottomShadowSmall;
 
-  height: $euiHeaderHeight + 1; // Add one for the border
+  height: $wuiHeaderHeight + 1; // Add one for the border
   position: relative;
-  z-index: $euiZHeader; // ensure the shadow shows above content
+  z-index: $wuiZHeader; // ensure the shadow shows above content
   display: flex;
   justify-content: space-between;
-  background: $euiHeaderBackgroundColor;
-  border-bottom: 1px solid $euiHeaderBorderColor;
+  background: $wuiHeaderBackgroundColor;
+  border-bottom: 1px solid $wuiHeaderBorderColor;
 
   &--fixed {
     position: fixed;
@@ -19,31 +19,31 @@
   }
 }
 
-.euiHeader--fixed + .euiHeader--fixed,
-.euiHeader--fixed + .euiHeader--fixed + .euiHeader--fixed {
-  top: $euiHeaderHeightCompensation;
+.wuiHeader--fixed + .wuiHeader--fixed,
+.wuiHeader--fixed + .wuiHeader--fixed + .wuiHeader--fixed {
+  top: $wuiHeaderHeightCompensation;
   transition: all 150ms;
 
-  &.euiHeader--collapsed {
+  &.wuiHeader--collapsed {
     top: 0;
     z-index: 0;
     box-shadow: none;
   }
 
-  &.euiNavDrawer--expanded {
-    padding-left: $euiNavDrawerWidthExpanded + $euiSizeM;
+  &.wuiNavDrawer--expanded {
+    padding-left: $wuiNavDrawerWidthExpanded + $wuiSizeM;
   }
 }
 
-.euiHeader--fixed + .euiHeader--fixed + .euiHeader--fixed {
-  top: $euiHeaderHeightCompensation * 2;
+.wuiHeader--fixed + .wuiHeader--fixed + .wuiHeader--fixed {
+  top: $wuiHeaderHeightCompensation * 2;
 }
 
-.euiHeader--dark {
-  @if (lightness($euiTextColor) < 50) {
-    @include euiHeaderDarkTheme($backgroundColor: shade($euiColorDarkestShade, 28%));
+.wuiHeader--dark {
+  @if (lightness($wuiTextColor) < 50) {
+    @include wuiHeaderDarkTheme($backgroundColor: shade($wuiColorDarkestShade, 28%));
   } @else {
     // Makes forced "dark" theme darker than the typical dark them to separate them visually
-    @include euiHeaderDarkTheme($backgroundColor: shade($euiColorLightestShade, 50%));
+    @include wuiHeaderDarkTheme($backgroundColor: shade($wuiColorLightestShade, 50%));
   }
 }

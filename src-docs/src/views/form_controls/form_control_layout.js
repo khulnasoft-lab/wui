@@ -1,182 +1,182 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiFormControlLayout,
-  EuiSpacer,
-  EuiFormLabel,
-  EuiButtonEmpty,
-  EuiText,
+  WuiFormControlLayout,
+  WuiSpacer,
+  WuiFormLabel,
+  WuiButtonEmpty,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFormControlLayout icon="search">
+    <WuiFormControlLayout icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading>
+    <WuiFormControlLayout isLoading>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout clear={{ onClick: () => {} }}>
+    <WuiFormControlLayout clear={{ onClick: () => {} }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }}>
+    <WuiFormControlLayout isLoading clear={{ onClick: () => {} }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading icon="search">
+    <WuiFormControlLayout isLoading icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading icon={{ type: 'arrowDown', side: 'right' }}>
+    <WuiFormControlLayout isLoading icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout clear={{ onClick: () => {} }} icon="search">
+    <WuiFormControlLayout clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       clear={{ onClick: () => {} }}
       icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
+    <WuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       isLoading
       clear={{ onClick: () => {} }}
       icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
+    <WuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="wuiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
-      prepend={<EuiFormLabel htmlFor="textField19">Label</EuiFormLabel>}>
+    <WuiFormControlLayout
+      prepend={<WuiFormLabel htmlFor="textField19">Label</WuiFormLabel>}>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="wuiFieldText wuiFieldText--inGroup"
         id="textField19"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       readOnly
-      prepend={<EuiFormLabel htmlFor="textField19a">Read only</EuiFormLabel>}>
+      prepend={<WuiFormLabel htmlFor="textField19a">Read only</WuiFormLabel>}>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="wuiFieldText wuiFieldText--inGroup"
         id="textField19a"
         readOnly
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       append={
-        <EuiText size="xs">
+        <WuiText size="xs">
           <strong>%</strong>
-        </EuiText>
+        </WuiText>
       }>
       <input
         type="number"
-        className="euiFieldNumber euiFieldNumber--inGroup"
+        className="wuiFieldNumber wuiFieldNumber--inGroup"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <WuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <WuiFormControlLayout
       isLoading
       clear={{ onClick: () => {} }}
       prepend={
-        <EuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
+        <WuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
           Button
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       }>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="wuiFieldText wuiFieldText--inGroup"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
   </Fragment>
 );

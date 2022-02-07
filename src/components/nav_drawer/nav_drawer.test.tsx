@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,11 +33,11 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiNavDrawer } from './nav_drawer';
-import { EuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
-import { EuiListGroupItemProps } from '../list_group';
+import { WuiNavDrawer } from './nav_drawer';
+import { WuiNavDrawerGroup, FlyoutMenuItem } from './nav_drawer_group';
+import { WuiListGroupItemProps } from '../list_group';
 
-const extraAction: EuiListGroupItemProps['extraAction'] = {
+const extraAction: WuiListGroupItemProps['extraAction'] = {
   color: 'subdued',
   iconType: 'pin',
   iconSize: 's',
@@ -133,13 +146,13 @@ const exploreLinks: FlyoutMenuItem[] = [
   },
 ];
 
-describe('EuiNavDrawer', () => {
+describe('WuiNavDrawer', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNavDrawer>
-        <EuiNavDrawerGroup listItems={topLinks} />
-        <EuiNavDrawerGroup listItems={exploreLinks} />
-      </EuiNavDrawer>
+      <WuiNavDrawer>
+        <WuiNavDrawerGroup listItems={topLinks} />
+        <WuiNavDrawerGroup listItems={exploreLinks} />
+      </WuiNavDrawer>
     );
 
     expect(component).toMatchSnapshot();
@@ -148,12 +161,12 @@ describe('EuiNavDrawer', () => {
   describe('renders', () => {
     test('with fragments', () => {
       const component = render(
-        <EuiNavDrawer>
+        <WuiNavDrawer>
           <>
-            <EuiNavDrawerGroup listItems={topLinks} />
-            <EuiNavDrawerGroup listItems={exploreLinks} />
+            <WuiNavDrawerGroup listItems={topLinks} />
+            <WuiNavDrawerGroup listItems={exploreLinks} />
           </>
-        </EuiNavDrawer>
+        </WuiNavDrawer>
       );
 
       expect(component).toMatchSnapshot();
@@ -161,11 +174,11 @@ describe('EuiNavDrawer', () => {
 
     test('with falsy children', () => {
       const component = render(
-        <EuiNavDrawer>
-          {false && <EuiNavDrawerGroup listItems={topLinks} />}
-          {true ? undefined : <EuiNavDrawerGroup listItems={topLinks} />}
-          <EuiNavDrawerGroup listItems={exploreLinks} />
-        </EuiNavDrawer>
+        <WuiNavDrawer>
+          {false && <WuiNavDrawerGroup listItems={topLinks} />}
+          {true ? undefined : <WuiNavDrawerGroup listItems={topLinks} />}
+          <WuiNavDrawerGroup listItems={exploreLinks} />
+        </WuiNavDrawer>
       );
 
       expect(component).toMatchSnapshot();

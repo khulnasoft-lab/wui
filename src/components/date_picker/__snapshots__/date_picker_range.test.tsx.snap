@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDatePickerRange is rendered 1`] = `
+exports[`WuiDatePickerRange is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiDatePickerRange testClass1 testClass2"
+  class="wuiDatePickerRange testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span>
     <span
-      class="euiDatePicker euiDatePicker--shadow"
+      class="wuiDatePicker wuiDatePicker--shadow"
     >
       <div
-        class="euiFormControlLayout"
+        class="wuiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="wuiFormControlLayout__childrenWrapper"
         >
           <div
             class="react-datepicker-wrapper"
@@ -24,22 +24,22 @@ exports[`EuiDatePickerRange is rendered 1`] = `
             >
               <input
                 aria-label=""
-                class="euiDatePicker euiFieldText euiFieldText--withIcon"
+                class="wuiDatePicker wuiFieldText wuiFieldText--withIcon"
                 type="text"
                 value=""
               />
             </div>
           </div>
           <div
-            class="euiFormControlLayoutIcons"
+            class="wuiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="wuiFormControlLayoutCustomIcon"
             >
               <div
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="calendar"
+                class="wuiFormControlLayoutCustomIcon__icon"
+                data-wuiicon-type="calendar"
               />
             </span>
           </div>
@@ -48,23 +48,23 @@ exports[`EuiDatePickerRange is rendered 1`] = `
     </span>
   </span>
   <div
-    class="euiText euiText--small euiDatePickerRange__delimeter"
+    class="wuiText wuiText--small wuiDatePickerRange__delimeter"
   >
     <div
-      class="euiTextColor euiTextColor--subdued"
+      class="wuiTextColor wuiTextColor--subdued"
     >
       →
     </div>
   </div>
   <span>
     <span
-      class="euiDatePicker euiDatePicker--shadow"
+      class="wuiDatePicker wuiDatePicker--shadow"
     >
       <div
-        class="euiFormControlLayout"
+        class="wuiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="wuiFormControlLayout__childrenWrapper"
         >
           <div
             class="react-datepicker-wrapper"
@@ -74,7 +74,7 @@ exports[`EuiDatePickerRange is rendered 1`] = `
             >
               <input
                 aria-label=""
-                class="euiDatePicker euiFieldText"
+                class="wuiDatePicker wuiFieldText"
                 type="text"
                 value=""
               />

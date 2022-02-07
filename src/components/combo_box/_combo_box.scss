@@ -1,5 +1,5 @@
-.euiComboBox {
-  @include euiFormControlSize(auto, $includeAlternates: true);
+.wuiComboBox {
+  @include wuiFormControlSize(auto, $includeAlternates: true);
   position: relative;
 
   /**
@@ -9,33 +9,33 @@
    */
 
   &--compressed,
-  .euiFormControlLayout {
+  .wuiFormControlLayout {
     height: auto;
   }
 
-  .euiComboBox__inputWrap {
-    @include euiFormControlStyle($includeStates: false, $includeSizes: true);
-    @include euiFormControlWithIcon($isIconOptional: true);
-    @include euiFormControlSize(auto, $includeAlternates: true);
-    padding: $euiSizeXS $euiSizeS;
+  .wuiComboBox__inputWrap {
+    @include wuiFormControlStyle($includeStates: false, $includeSizes: true);
+    @include wuiFormControlWithIcon($isIconOptional: true);
+    @include wuiFormControlSize(auto, $includeAlternates: true);
+    padding: $wuiSizeXS $wuiSizeS;
     display: flex; /* 1 */
 
     // sass-lint:disable-block mixins-before-declarations
     // to override the padding added above
-    @include euiFormControlLayoutPadding(1); /* 2 */
+    @include wuiFormControlLayoutPadding(1); /* 2 */
 
-    .euiComboBoxPill {
-      $inputMinWidth: $euiSize;
+    .wuiComboBoxPill {
+      $inputMinWidth: $wuiSize;
 
-      // Ensure the input doesn't drop to the next line when the EuiBadge has a very long text
-      // Overrides the default EuiBadge max-width that is 100%
-      max-width: calc(100% - #{$euiSizeXS * .5} - #{$inputMinWidth});
+      // Ensure the input doesn't drop to the next line when the WuiBadge has a very long text
+      // Overrides the default WuiBadge max-width that is 100%
+      max-width: calc(100% - #{$wuiSizeXS * .5} - #{$inputMinWidth});
     }
 
-    &:not(.euiComboBox__inputWrap--noWrap) {
-      padding-top: $euiSizeXS;
-      padding-bottom: $euiSizeXS;
-      padding-left: $euiSizeXS;
+    &:not(.wuiComboBox__inputWrap--noWrap) {
+      padding-top: $wuiSizeXS;
+      padding-bottom: $wuiSizeXS;
+      padding-left: $wuiSizeXS;
       height: auto;  /* 3 */
       flex-wrap: wrap; /* 1 */
       align-content: flex-start;
@@ -45,16 +45,16 @@
       }
     }
 
-    &.euiComboBox__inputWrap-isClearable {
-      @include euiFormControlLayoutPadding(2); /* 2 */
+    &.wuiComboBox__inputWrap-isClearable {
+      @include wuiFormControlLayoutPadding(2); /* 2 */
     }
 
-    &.euiComboBox__inputWrap-isLoading {
-      @include euiFormControlLayoutPadding(2); /* 2 */
+    &.wuiComboBox__inputWrap-isLoading {
+      @include wuiFormControlLayoutPadding(2); /* 2 */
     }
 
-    &.euiComboBox__inputWrap-isLoading.euiComboBox__inputWrap-isClearable {
-      @include euiFormControlLayoutPadding(3); /* 2 */
+    &.wuiComboBox__inputWrap-isLoading.wuiComboBox__inputWrap-isClearable {
+      @include wuiFormControlLayoutPadding(3); /* 2 */
     }
   }
 
@@ -65,66 +65,66 @@
    * 4. Fix react-input-autosize appearance.
    * 5. Prevent a lot of input from causing the react-input-autosize to overflow the container.
    */
-  .euiComboBox__input {
+  .wuiComboBox__input {
     // sass-lint:disable-block no-important
     display: inline-flex !important; /* 1 */
-    height: $euiSizeXL; /* 2 */
+    height: $wuiSizeXL; /* 2 */
     overflow: hidden; /* 5 */
 
     > input {
-      @include euiFont;
+      @include wuiFont;
       appearance: none; /* 3 */
       padding: 0;
       border: none;
       background: transparent;
-      font-size: $euiFontSizeS;
-      color: $euiTextColor;
-      margin: $euiSizeXS;
-      line-height: $euiLineHeight; /* 4 */
+      font-size: $wuiFontSizeS;
+      color: $wuiTextColor;
+      margin: $wuiSizeXS;
+      line-height: $wuiLineHeight; /* 4 */
     }
   }
 
-  &.euiComboBox-isOpen {
-    .euiComboBox__inputWrap {
-      @include euiFormControlFocusStyle;
+  &.wuiComboBox-isOpen {
+    .wuiComboBox__inputWrap {
+      @include wuiFormControlFocusStyle;
 
       &--compressed {
-        @include euiFormControlFocusStyle($borderOnly: true);
+        @include wuiFormControlFocusStyle($borderOnly: true);
       }
     }
   }
 
-  &.euiComboBox-isInvalid {
-    .euiComboBox__inputWrap {
-      @include euiFormControlInvalidStyle;
+  &.wuiComboBox-isInvalid {
+    .wuiComboBox__inputWrap {
+      @include wuiFormControlInvalidStyle;
     }
   }
 
-  &.euiComboBox-isDisabled {
-    .euiComboBox__inputWrap {
-      @include euiFormControlDisabledStyle;
+  &.wuiComboBox-isDisabled {
+    .wuiComboBox__inputWrap {
+      @include wuiFormControlDisabledStyle;
     }
   }
 
-  &.euiComboBox--compressed {
-    .euiComboBox__inputWrap {
-      line-height: $euiFormControlCompressedHeight; /* 2 */
+  &.wuiComboBox--compressed {
+    .wuiComboBox__inputWrap {
+      line-height: $wuiFormControlCompressedHeight; /* 2 */
       padding-top: 0;
       padding-bottom: 0;
 
       // sass-lint:disable-block mixins-before-declarations
-      @include euiFormControlLayoutPadding(1, $compressed: true); /* 2 */
+      @include wuiFormControlLayoutPadding(1, $compressed: true); /* 2 */
 
-      &.euiComboBox__inputWrap-isClearable {
-        @include euiFormControlLayoutPadding(2, $compressed: true); /* 2 */
+      &.wuiComboBox__inputWrap-isClearable {
+        @include wuiFormControlLayoutPadding(2, $compressed: true); /* 2 */
       }
 
-      &.euiComboBox__inputWrap-isLoading {
-        @include euiFormControlLayoutPadding(2, $compressed: true); /* 2 */
+      &.wuiComboBox__inputWrap-isLoading {
+        @include wuiFormControlLayoutPadding(2, $compressed: true); /* 2 */
       }
 
-      &.euiComboBox__inputWrap-isLoading.euiComboBox__inputWrap-isClearable {
-        @include euiFormControlLayoutPadding(3, $compressed: true); /* 2 */
+      &.wuiComboBox__inputWrap-isLoading.wuiComboBox__inputWrap-isClearable {
+        @include wuiFormControlLayoutPadding(3, $compressed: true); /* 2 */
       }
     }
   }

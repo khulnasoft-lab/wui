@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,30 +34,30 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormLabel } from './form_label';
+import { WuiFormLabel } from './form_label';
 
-describe('EuiFormLabel', () => {
+describe('WuiFormLabel', () => {
   test('is rendered', () => {
-    const component = render(<EuiFormLabel {...requiredProps} />);
+    const component = render(<WuiFormLabel {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('isFocused is rendered', () => {
-      const component = render(<EuiFormLabel isFocused />);
+      const component = render(<WuiFormLabel isFocused />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFormLabel isInvalid />);
+      const component = render(<WuiFormLabel isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('type can be changed to legend', () => {
-      const component = render(<EuiFormLabel type="legend" />);
+      const component = render(<WuiFormLabel type="legend" />);
 
       expect(component).toMatchSnapshot();
     });

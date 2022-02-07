@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiBreadcrumbs } from './breadcrumbs';
+import { WuiBreadcrumbs } from './breadcrumbs';
 
 const breadcrumbs = [
   {
@@ -65,10 +78,10 @@ const breadcrumbs = [
   },
 ];
 
-describe('EuiBreadcrumbs', () => {
+describe('WuiBreadcrumbs', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiBreadcrumbs {...requiredProps} breadcrumbs={breadcrumbs} />
+      <WuiBreadcrumbs {...requiredProps} breadcrumbs={breadcrumbs} />
     );
 
     expect(component).toMatchSnapshot();
@@ -78,21 +91,21 @@ describe('EuiBreadcrumbs', () => {
     describe('responsive', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} responsive />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} responsive />
         );
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered as false', () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} responsive={false} />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} responsive={false} />
         );
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered with custom breakpoints', () => {
         const component = render(
-          <EuiBreadcrumbs
+          <WuiBreadcrumbs
             breadcrumbs={breadcrumbs}
             responsive={{ xs: 1, s: 1, m: 1, l: 1, xl: 1 }}
           />
@@ -104,7 +117,7 @@ describe('EuiBreadcrumbs', () => {
     describe('truncate as false', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} truncate={false} />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} truncate={false} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -113,21 +126,21 @@ describe('EuiBreadcrumbs', () => {
     describe('max', () => {
       test('renders 1 item', () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} max={1} />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} max={1} />
         );
         expect(component).toMatchSnapshot();
       });
 
       test('renders all items with null', () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} max={null} />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} max={null} />
         );
         expect(component).toMatchSnapshot();
       });
 
       test("doesn't break when max exceeds the number of breadcrumbs", () => {
         const component = render(
-          <EuiBreadcrumbs breadcrumbs={breadcrumbs} max={20} />
+          <WuiBreadcrumbs breadcrumbs={breadcrumbs} max={20} />
         );
         expect(component).toMatchSnapshot();
       });

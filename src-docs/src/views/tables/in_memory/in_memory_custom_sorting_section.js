@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -26,10 +26,10 @@ export const customSortingSection = {
       <p>
         Sometimes the value displayed in a column is not appropriate to use for
         sorting, such as pre-formatting values to be human-readable. In these
-        cases it&apos;s possible to pass the <EuiCode>sortable</EuiCode> prop as
-        a function instead of <EuiCode>true</EuiCode> or{' '}
-        <EuiCode>false</EuiCode>. The function is used to extract or calculate
-        the intended sort value for each <EuiCode>item</EuiCode>.
+        cases it&apos;s possible to pass the <WuiCode>sortable</WuiCode> prop as
+        a function instead of <WuiCode>true</WuiCode> or{' '}
+        <WuiCode>false</WuiCode>. The function is used to extract or calculate
+        the intended sort value for each <WuiCode>item</WuiCode>.
       </p>
     </div>
   ),

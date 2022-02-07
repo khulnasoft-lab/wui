@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +31,7 @@
  */
 
 import React, { ReactChild, ReactElement } from 'react';
-import { EuiI18nConsumer } from '../context';
+import { WuiI18nConsumer } from '../context';
 import { ExclusiveUnion } from '../common';
 
 const defaultFormatter = new Intl.NumberFormat('en');
@@ -26,12 +39,12 @@ function defaultFormatNumber(value: number) {
   return defaultFormatter.format(value);
 }
 
-interface EuiI18nNumberValueShape {
+interface WuiI18nNumberValueShape {
   value: number;
   children?: (x: ReactChild) => ReactElement<any>;
 }
 
-interface EuiI18nNumberValuesShape {
+interface WuiI18nNumberValuesShape {
   values: number[];
   /**
    * ReactNode to render as this component's content
@@ -39,17 +52,17 @@ interface EuiI18nNumberValuesShape {
   children: (x: ReactChild[]) => ReactElement<any>;
 }
 
-type EuiI18nNumberProps = ExclusiveUnion<
-  EuiI18nNumberValueShape,
-  EuiI18nNumberValuesShape
+type WuiI18nNumberProps = ExclusiveUnion<
+  WuiI18nNumberValueShape,
+  WuiI18nNumberValuesShape
 >;
 
-function hasValues(x: EuiI18nNumberProps): x is EuiI18nNumberValuesShape {
+function hasValues(x: WuiI18nNumberProps): x is WuiI18nNumberValuesShape {
   return x.values != null;
 }
 
-const EuiI18nNumber: React.FunctionComponent<EuiI18nNumberProps> = props => (
-  <EuiI18nConsumer>
+const WuiI18nNumber: React.FunctionComponent<WuiI18nNumberProps> = props => (
+  <WuiI18nConsumer>
     {i18nConfig => {
       const formatNumber = i18nConfig.formatNumber || defaultFormatNumber;
 
@@ -64,7 +77,7 @@ const EuiI18nNumber: React.FunctionComponent<EuiI18nNumberProps> = props => (
         return formattedValue;
       }
     }}
-  </EuiI18nConsumer>
+  </WuiI18nConsumer>
 );
 
-export { EuiI18nNumber };
+export { WuiI18nNumber };

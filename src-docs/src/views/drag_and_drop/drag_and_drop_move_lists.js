@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiDraggable,
-  EuiDroppable,
-  EuiIcon,
-  EuiPanel,
-  euiDragDropMove,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiDraggable,
+  WuiDroppable,
+  WuiIcon,
+  WuiPanel,
+  wuiDragDropMove,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -30,7 +30,7 @@ export default () => {
     const actions = { DROPPABLE_AREA_1: setList1, DROPPABLE_AREA_2: setList2 };
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = wuiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -40,7 +40,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropMove(
+        const result = wuiDragDropMove(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -53,69 +53,69 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiDroppable
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiFlexGroup>
+        <WuiFlexItem>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_1"
             spacing="m"
             withPanel
             grow={false}>
             {list1.length > 0 ? (
               list1.map(({ content, id }, idx) => (
-                <EuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
+                <WuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
                   {(provided, state) => (
-                    <EuiPanel>
+                    <WuiPanel>
                       {content}
                       {state.isDragging && ' ✨'}
-                    </EuiPanel>
+                    </WuiPanel>
                   )}
-                </EuiDraggable>
+                </WuiDraggable>
               ))
             ) : (
-              <EuiFlexGroup
+              <WuiFlexGroup
                 alignItems="center"
                 justifyContent="spaceAround"
                 gutterSize="none"
                 style={{ height: '100%' }}>
-                <EuiFlexItem grow={false}>
-                  <EuiIcon type="faceSad" />
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                <WuiFlexItem grow={false}>
+                  <WuiIcon type="faceSad" />
+                </WuiFlexItem>
+              </WuiFlexGroup>
             )}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </WuiDroppable>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiDroppable
             droppableId="DROPPABLE_AREA_2"
             spacing="m"
             withPanel
             grow={false}>
             {list2.length > 0 ? (
               list2.map(({ content, id }, idx) => (
-                <EuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
+                <WuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
                   {(provided, state) => (
-                    <EuiPanel>
+                    <WuiPanel>
                       {content}
                       {state.isDragging && ' ✨'}
-                    </EuiPanel>
+                    </WuiPanel>
                   )}
-                </EuiDraggable>
+                </WuiDraggable>
               ))
             ) : (
-              <EuiFlexGroup
+              <WuiFlexGroup
                 alignItems="center"
                 justifyContent="spaceAround"
                 gutterSize="none"
                 style={{ height: '100%' }}>
-                <EuiFlexItem grow={false}>
-                  <EuiIcon type="faceSad" />
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                <WuiFlexItem grow={false}>
+                  <WuiIcon type="faceSad" />
+                </WuiFlexItem>
+              </WuiFlexGroup>
             )}
-          </EuiDroppable>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiDragDropContext>
+          </WuiDroppable>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiDragDropContext>
   );
 };

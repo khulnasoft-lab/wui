@@ -1,40 +1,40 @@
 import React from 'react';
 
-import { EuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { WuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
+import { WuiText } from '../../../../src/components/text';
+import { WuiCode } from '../../../../src/components/code';
 
 export default () => (
   <>
-    <EuiCollapsibleNavGroup>
-      <EuiText size="s" color="subdued">
+    <WuiCollapsibleNavGroup>
+      <WuiText size="s" color="subdued">
         <p>This is a basic group without any modifications</p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup title="Nav group" iconType="logoElastic">
-      <EuiText size="s" color="subdued">
+      </WuiText>
+    </WuiCollapsibleNavGroup>
+    <WuiCollapsibleNavGroup title="Nav group" iconType="logoWazuh">
+      <WuiText size="s" color="subdued">
         <p>
           This is a nice group with a heading supplied via{' '}
-          <EuiCode>title</EuiCode> and <EuiCode>iconType</EuiCode>.
+          <WuiCode>title</WuiCode> and <WuiCode>iconType</WuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+      </WuiText>
+    </WuiCollapsibleNavGroup>
+    <WuiCollapsibleNavGroup
       background="light"
       title="Nav group"
       isCollapsible={true}
-      iconType="logoElastic"
+      iconType="logoWazuh"
       initialIsOpen={true}>
-      <EuiText size="s" color="subdued">
+      <WuiText size="s" color="subdued">
         <p>
-          This group is <EuiCode>collapsible</EuiCode> and set with{' '}
-          <EuiCode>initialIsOpen</EuiCode>. It has a heading that is the
-          collapsing button via <EuiCode>title</EuiCode> and{' '}
-          <EuiCode>iconType</EuiCode>.
+          This group is <WuiCode>collapsible</WuiCode> and set with{' '}
+          <WuiCode>initialIsOpen</WuiCode>. It has a heading that is the
+          collapsing button via <WuiCode>title</WuiCode> and{' '}
+          <WuiCode>iconType</WuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+      </WuiText>
+    </WuiCollapsibleNavGroup>
+    <WuiCollapsibleNavGroup
       title="Nav group"
       iconType="logoGCPMono"
       iconSize="xxl"
@@ -42,14 +42,14 @@ export default () => (
       isCollapsible={true}
       initialIsOpen={false}
       background="dark">
-      <EuiText size="s">
+      <WuiText size="s">
         <p>
-          This is a <EuiCode>dark</EuiCode> <EuiCode>collapsible</EuiCode> group
+          This is a <WuiCode>dark</WuiCode> <WuiCode>collapsible</WuiCode> group
           that is initally set to closed,{' '}
-          <EuiCode>iconSize=&quot;xxl&quot;</EuiCode> and{' '}
-          <EuiCode>titleSize=&quot;s&quot;</EuiCode>.
+          <WuiCode>iconSize=&quot;xxl&quot;</WuiCode> and{' '}
+          <WuiCode>titleSize=&quot;s&quot;</WuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
+      </WuiText>
+    </WuiCollapsibleNavGroup>
   </>
 );

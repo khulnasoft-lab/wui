@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiHighlight,
-  EuiSpacer,
-  EuiTextColor,
-  EuiSwitch,
+  WuiBadge,
+  WuiHighlight,
+  WuiSpacer,
+  WuiTextColor,
+  WuiSwitch,
 } from '../../../../src/components';
-import { EuiSelectable } from '../../../../src/components/selectable';
+import { WuiSelectable } from '../../../../src/components/selectable';
 import { createDataStore } from '../tables/data_store';
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
       label: `${country.name}`,
       searchableLabel: `${country.name} ${'I am secondary content, I am!'}`,
       prepend: country.flag,
-      append: <EuiBadge>{country.code}</EuiBadge>,
+      append: <WuiBadge>{country.code}</WuiBadge>,
     };
   });
 
@@ -40,15 +40,15 @@ export default () => {
   const renderCountryOption = (option, searchValue) => {
     return (
       <>
-        <EuiHighlight search={searchValue}>{option.label}</EuiHighlight>
+        <WuiHighlight search={searchValue}>{option.label}</WuiHighlight>
         <br />
-        <EuiTextColor color="subdued">
+        <WuiTextColor color="subdued">
           <small>
-            <EuiHighlight search={searchValue}>
+            <WuiHighlight search={searchValue}>
               I am secondary content, I am!
-            </EuiHighlight>
+            </WuiHighlight>
           </small>
-        </EuiTextColor>
+        </WuiTextColor>
       </>
     );
   };
@@ -67,15 +67,15 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <WuiSwitch
         label="Custom content"
         checked={useCustomContent}
         onChange={onCustom}
       />
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiSelectable
+      <WuiSelectable
         aria-label="Selectable example with custom list items"
         searchable
         options={options}
@@ -87,7 +87,7 @@ export default () => {
             {list}
           </>
         )}
-      </EuiSelectable>
+      </WuiSelectable>
     </>
   );
 };

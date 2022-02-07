@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,15 +38,15 @@ import React, {
 import moment from 'moment';
 import dateMath from '@elastic/datemath';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiButton, EuiButtonIcon } from '../../../button';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
-import { EuiSpacer } from '../../../spacer';
-import { EuiSelect, EuiFieldNumber } from '../../../form';
-import { EuiToolTip } from '../../../tool_tip';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
-import { EuiI18n } from '../../../i18n';
+import { WuiButton, WuiButtonIcon } from '../../../button';
+import { WuiFlexGroup, WuiFlexItem } from '../../../flex';
+import { WuiSpacer } from '../../../spacer';
+import { WuiSelect, WuiFieldNumber } from '../../../form';
+import { WuiToolTip } from '../../../tool_tip';
+import { WuiHorizontalRule } from '../../../horizontal_rule';
+import { WuiI18n } from '../../../i18n';
 import { timeUnits } from '../time_units';
-import { EuiScreenReaderOnly } from '../../../accessibility';
+import { WuiScreenReaderOnly } from '../../../accessibility';
 import { ApplyTime, QuickSelect, TimeUnitId } from '../../types';
 import { keysOf } from '../../../common';
 import { parseTimeParts } from './quick_select_utils';
@@ -49,20 +62,20 @@ const timeUnitsOptions = keysOf(timeUnits).map(key => {
   return { value: key, text: `${timeUnits[key]}s` };
 });
 
-type EuiQuickSelectState = QuickSelect;
+type WuiQuickSelectState = QuickSelect;
 
-export interface EuiQuickSelectProps {
+export interface WuiQuickSelectProps {
   applyTime: ApplyTime;
   start: string;
   end: string;
-  prevQuickSelect?: EuiQuickSelectState;
+  prevQuickSelect?: WuiQuickSelectState;
 }
 
-export class EuiQuickSelect extends Component<
-  EuiQuickSelectProps,
-  EuiQuickSelectState
+export class WuiQuickSelect extends Component<
+  WuiQuickSelectProps,
+  WuiQuickSelectState
 > {
-  constructor(props: EuiQuickSelectProps) {
+  constructor(props: WuiQuickSelectProps) {
     super(props);
 
     const {
@@ -184,76 +197,76 @@ export class EuiQuickSelect extends Component<
 
     return (
       <fieldset>
-        <EuiI18n
-          token="euiQuickSelect.legendText"
+        <WuiI18n
+          token="wuiQuickSelect.legendText"
           default="Quick select a time range">
           {(legendText: string) => (
             // Legend needs to be the first thing in a fieldset, but we want the visible title within the flex.
             // So we hide it, but allow screen readers to see it
-            <EuiScreenReaderOnly>
-              <legend id={legendId} className="euiFormLabel">
+            <WuiScreenReaderOnly>
+              <legend id={legendId} className="wuiFormLabel">
                 {legendText}
               </legend>
-            </EuiScreenReaderOnly>
+            </WuiScreenReaderOnly>
           )}
-        </EuiI18n>
-        <EuiFlexGroup
+        </WuiI18n>
+        <WuiFlexGroup
           responsive={false}
           alignItems="center"
           justifyContent="spaceBetween"
           gutterSize="s">
-          <EuiFlexItem grow={false}>
-            <EuiI18n
-              token="euiQuickSelect.quickSelectTitle"
+          <WuiFlexItem grow={false}>
+            <WuiI18n
+              token="wuiQuickSelect.quickSelectTitle"
               default="Quick select">
               {(quickSelectTitle: string) => (
-                <div aria-hidden className="euiFormLabel">
+                <div aria-hidden className="wuiFormLabel">
                   {quickSelectTitle}
                 </div>
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
-              <EuiFlexItem grow={false}>
-                <EuiI18n
-                  token="euiQuickSelect.previousLabel"
+            </WuiI18n>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
+              <WuiFlexItem grow={false}>
+                <WuiI18n
+                  token="wuiQuickSelect.previousLabel"
                   default="Previous time window">
                   {(previousLabel: string) => (
-                    <EuiToolTip content={previousLabel}>
-                      <EuiButtonIcon
+                    <WuiToolTip content={previousLabel}>
+                      <WuiButtonIcon
                         aria-label={previousLabel}
                         iconType="arrowLeft"
                         onClick={this.stepBackward}
                       />
-                    </EuiToolTip>
+                    </WuiToolTip>
                   )}
-                </EuiI18n>
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiI18n
-                  token="euiQuickSelect.nextLabel"
+                </WuiI18n>
+              </WuiFlexItem>
+              <WuiFlexItem grow={false}>
+                <WuiI18n
+                  token="wuiQuickSelect.nextLabel"
                   default="Next time window">
                   {(nextLabel: string) => (
-                    <EuiToolTip content={nextLabel}>
-                      <EuiButtonIcon
+                    <WuiToolTip content={nextLabel}>
+                      <WuiButtonIcon
                         aria-label={nextLabel}
                         iconType="arrowRight"
                         onClick={this.stepForward}
                       />
-                    </EuiToolTip>
+                    </WuiToolTip>
                   )}
-                </EuiI18n>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.tenseLabel" default="Time tense">
+                </WuiI18n>
+              </WuiFlexItem>
+            </WuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiSpacer size="s" />
+        <WuiFlexGroup gutterSize="s" responsive={false}>
+          <WuiFlexItem>
+            <WuiI18n token="wuiQuickSelect.tenseLabel" default="Time tense">
               {(tenseLabel: string) => (
-                <EuiSelect
+                <WuiSelect
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-label={tenseLabel}
@@ -263,12 +276,12 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeTenseChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.valueLabel" default="Time value">
+            </WuiI18n>
+          </WuiFlexItem>
+          <WuiFlexItem>
+            <WuiI18n token="wuiQuickSelect.valueLabel" default="Time value">
               {(valueLabel: string) => (
-                <EuiFieldNumber
+                <WuiFieldNumber
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-describedby={`${timeSelectionId} ${legendId}`}
@@ -277,12 +290,12 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeValueChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.unitLabel" default="Time unit">
+            </WuiI18n>
+          </WuiFlexItem>
+          <WuiFlexItem>
+            <WuiI18n token="wuiQuickSelect.unitLabel" default="Time unit">
               {(unitLabel: string) => (
-                <EuiSelect
+                <WuiSelect
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-label={unitLabel}
@@ -292,24 +305,24 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeUnitsChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+            </WuiI18n>
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiButton
               aria-describedby={`${timeSelectionId} ${legendId}`}
-              className="euiQuickSelect__applyButton"
+              className="wuiQuickSelect__applyButton"
               size="s"
               onClick={this.applyQuickSelect}
               disabled={timeValue <= 0}>
-              <EuiI18n token="euiQuickSelect.applyButton" default="Apply" />
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiHorizontalRule margin="s" />
-        <EuiScreenReaderOnly>
+              <WuiI18n token="wuiQuickSelect.applyButton" default="Apply" />
+            </WuiButton>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiHorizontalRule margin="s" />
+        <WuiScreenReaderOnly>
           <p id={timeSelectionId}>
-            <EuiI18n
-              token="euiQuickSelect.fullDescription"
+            <WuiI18n
+              token="wuiQuickSelect.fullDescription"
               default="Currently set to {timeTense} {timeValue} {timeUnit}."
               values={{
                 timeTense,
@@ -318,7 +331,7 @@ export class EuiQuickSelect extends Component<
               }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       </fieldset>
     );
   }

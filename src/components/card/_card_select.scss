@@ -1,21 +1,21 @@
-.euiCardSelect {
+.wuiCardSelect {
   // Option select button that expands to sides and bottom
-  @include euiCardBottomNodePosition;
-  font-weight: $euiFontWeightBold;
+  @include wuiCardBottomNodePosition;
+  font-weight: $wuiFontWeightBold;
 
   // Create button modifiers based upon the map.
-  @each $name, $color in $euiCardSelectButtonBackgrounds {
+  @each $name, $color in $wuiCardSelectButtonBackgrounds {
     &--#{$name}:enabled {
       background-color: $color;
 
-      // Custom success text color since it doesn't exist on EuiButtonEmpty
+      // Custom success text color since it doesn't exist on WuiButtonEmpty
       @if ($name == 'success') {
-        color: makeHighContrastColor($euiColorSuccess, $color);
+        color: makeHighContrastColor($wuiColorSuccess, $color);
       }
     }
   }
 
   &:disabled {
-    background-color: $euiPageBackgroundColor;
+    background-color: $wuiPageBackgroundColor;
   }
 }

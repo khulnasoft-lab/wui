@@ -8,14 +8,14 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiLink,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiButtonIcon,
-  EuiSpacer,
+  WuiDataGrid,
+  WuiLink,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiButtonIcon,
+  WuiSpacer,
 } from '../../../../src/components/';
 
 const columns = [
@@ -72,13 +72,13 @@ const raw_data = [];
 for (let i = 1; i < 100; i++) {
   raw_data.push({
     name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    email: <EuiLink href="">{fake('{{internet.email}}')}</EuiLink>,
+    email: <WuiLink href="">{fake('{{internet.email}}')}</WuiLink>,
     location: (
       <Fragment>
         {`${fake('{{address.city}}')}, `}
-        <EuiLink href="https://google.com">
+        <WuiLink href="https://google.com">
           {fake('{{address.country}}')}
-        </EuiLink>
+        </WuiLink>
       </Fragment>
     ),
     date: fake('{{date.past}}'),
@@ -98,11 +98,11 @@ const trailingControlColumns = [
       const [isPopoverOpen, setIsPopoverOpen] = useState(false);
       return (
         <div>
-          <EuiPopover
+          <WuiPopover
             isOpen={isPopoverOpen}
             anchorPosition="upCenter"
             button={
-              <EuiButtonIcon
+              <WuiButtonIcon
                 aria-label="show actions"
                 iconType="boxesHorizontal"
                 color="text"
@@ -111,41 +111,41 @@ const trailingControlColumns = [
             }
             closePopover={() => setIsPopoverOpen(false)}
             ownFocus={true}>
-            <EuiPopoverTitle>Actions</EuiPopoverTitle>
+            <WuiPopoverTitle>Actions</WuiPopoverTitle>
             <div style={{ width: 150 }}>
               <button onClick={() => alert('hello')} component="span">
-                <EuiFlexGroup
+                <WuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <WuiFlexItem grow={false}>
+                    <WuiButtonIcon
                       aria-label="Pin selected items"
                       iconType="pin"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Pin</EuiFlexItem>
-                </EuiFlexGroup>
+                  </WuiFlexItem>
+                  <WuiFlexItem>Pin</WuiFlexItem>
+                </WuiFlexGroup>
               </button>
-              <EuiSpacer size="s" />
+              <WuiSpacer size="s" />
               <button onClick={() => alert('hello')}>
-                <EuiFlexGroup
+                <WuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <WuiFlexItem grow={false}>
+                    <WuiButtonIcon
                       aria-label="Delete selected items"
                       iconType="trash"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Delete</EuiFlexItem>
-                </EuiFlexGroup>
+                  </WuiFlexItem>
+                  <WuiFlexItem>Delete</WuiFlexItem>
+                </WuiFlexGroup>
               </button>
             </div>
-          </EuiPopover>
+          </WuiPopover>
         </div>
       );
     },
@@ -204,7 +204,7 @@ export default () => {
   }, []);
 
   return (
-    <EuiDataGrid
+    <WuiDataGrid
       aria-label="Data grid demo"
       columns={columns}
       columnVisibility={{ visibleColumns, setVisibleColumns }}

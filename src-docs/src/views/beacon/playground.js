@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiBeacon } from '../../../../src/components/';
+import { WuiBeacon } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const beaconConfig = () => {
-  const docgenInfo = Array.isArray(EuiBeacon.__docgenInfo)
-    ? EuiBeacon.__docgenInfo[0]
-    : EuiBeacon.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiBeacon.__docgenInfo)
+    ? WuiBeacon.__docgenInfo[0]
+    : WuiBeacon.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.size = {
@@ -16,14 +16,14 @@ export const beaconConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBeacon',
+      componentName: 'WuiBeacon',
       props: propsToUse,
       scope: {
-        EuiBeacon,
+        WuiBeacon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBeacon'],
+        '@wazuh/wui': {
+          named: ['WuiBeacon'],
         },
       },
     },

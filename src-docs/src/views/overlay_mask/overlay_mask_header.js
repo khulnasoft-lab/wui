@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiOverlayMask,
-  EuiButton,
-  EuiFlyout,
-  EuiTitle,
-  EuiFlyoutHeader,
+  WuiOverlayMask,
+  WuiButton,
+  WuiFlyout,
+  WuiTitle,
+  WuiFlyoutHeader,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,23 +19,23 @@ export default () => {
   if (flyOut) {
     flyout = (
       <React.Fragment>
-        <EuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
-        <EuiFlyout size="s" onClose={toggleFlyOut}>
-          <EuiFlyoutHeader>
-            <EuiTitle>
+        <WuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
+        <WuiFlyout size="s" onClose={toggleFlyOut}>
+          <WuiFlyoutHeader>
+            <WuiTitle>
               <h1>Click outside this flyout to close overlay. </h1>
-            </EuiTitle>
-          </EuiFlyoutHeader>
-        </EuiFlyout>
+            </WuiTitle>
+          </WuiFlyoutHeader>
+        </WuiFlyout>
       </React.Fragment>
     );
   }
 
   return (
     <React.Fragment>
-      <EuiButton onClick={() => toggleFlyOut()}>
+      <WuiButton onClick={() => toggleFlyOut()}>
         Overlay as a sibling of a flyout
-      </EuiButton>
+      </WuiButton>
       {flyout}
     </React.Fragment>
   );

@@ -1,7 +1,7 @@
-.euiButtonContent {
-  @include euiButtonContent;
+.wuiButtonContent {
+  @include wuiButtonContent;
 }
 
-.euiButtonContent--iconRight {
-  @include euiButtonContent($isReverse: true);
+.wuiButtonContent--iconRight {
+  @include wuiButtonContent($isReverse: true);
 }

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,8 +38,8 @@ import { CommonProps } from '../../common';
 type HeaderSectionSide = 'left' | 'right';
 
 const sideToClassNameMap: { [side in HeaderSectionSide]: string } = {
-  left: 'euiHeaderSection--left',
-  right: 'euiHeaderSection--right',
+  left: 'wuiHeaderSection--left',
+  right: 'wuiHeaderSection--right',
 };
 
 type Props = CommonProps &
@@ -35,7 +48,7 @@ type Props = CommonProps &
     grow?: boolean;
   };
 
-export const EuiHeaderSection: FunctionComponent<Props> = ({
+export const WuiHeaderSection: FunctionComponent<Props> = ({
   side = 'left',
   children,
   className,
@@ -43,10 +56,10 @@ export const EuiHeaderSection: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSection',
+    'wuiHeaderSection',
     {
-      'euiHeaderSection--grow': grow,
-      'euiHeaderSection--dontGrow': !grow,
+      'wuiHeaderSection--grow': grow,
+      'wuiHeaderSection--dontGrow': !grow,
     },
     sideToClassNameMap[side],
     className

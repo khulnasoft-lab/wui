@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,30 +35,30 @@ import classNames from 'classnames';
 
 import { keys } from '../../../services';
 import { isWithinRange } from '../../../services/number';
-import { EuiInputPopover } from '../../popover';
+import { WuiInputPopover } from '../../popover';
 import {
-  EuiFormControlLayoutDelimited,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayoutDelimited,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
 
 import { htmlIdGenerator } from '../../../services/accessibility';
 
-import { EuiRangeProps } from './range';
-import { EuiRangeHighlight } from './range_highlight';
-import { EuiRangeInput, EuiRangeInputProps } from './range_input';
-import { EuiRangeLabel } from './range_label';
-import { EuiRangeLevel } from './range_levels';
-import { EuiRangeSlider, EuiRangeSliderProps } from './range_slider';
-import { EuiRangeThumb } from './range_thumb';
-import { EuiRangeTick } from './range_ticks';
-import { EuiRangeTrack } from './range_track';
-import { EuiRangeWrapper } from './range_wrapper';
+import { WuiRangeProps } from './range';
+import { WuiRangeHighlight } from './range_highlight';
+import { WuiRangeInput, WuiRangeInputProps } from './range_input';
+import { WuiRangeLabel } from './range_label';
+import { WuiRangeLevel } from './range_levels';
+import { WuiRangeSlider, WuiRangeSliderProps } from './range_slider';
+import { WuiRangeThumb } from './range_thumb';
+import { WuiRangeTick } from './range_ticks';
+import { WuiRangeTrack } from './range_track';
+import { WuiRangeWrapper } from './range_wrapper';
 
 type ValueMember = number | string;
 
-export interface EuiDualRangeProps
+export interface WuiDualRangeProps
   extends Omit<
-    EuiRangeSliderProps,
+    WuiRangeSliderProps,
     'onChange' | 'onBlur' | 'onFocus' | 'value'
   > {
   value: [ValueMember, ValueMember];
@@ -68,7 +81,7 @@ export interface EuiDualRangeProps
   /**
    * Create colored indicators for certain intervals
    */
-  levels?: EuiRangeLevel[];
+  levels?: WuiRangeLevel[];
   /**
    * Shows static min/max labels on the sides of the range slider
    */
@@ -77,7 +90,7 @@ export interface EuiDualRangeProps
    * Pass `true` to displays an extra input control for direct manipulation.
    * Pass `'inputWithPopover'` to only show the input but show the range in a dropdown.
    */
-  showInput?: EuiRangeProps['showInput'];
+  showInput?: WuiRangeProps['showInput'];
   /**
    * Modifies the number of tick marks and at what interval
    */
@@ -85,29 +98,29 @@ export interface EuiDualRangeProps
   /**
    * Specified ticks at specified values
    */
-  ticks?: EuiRangeTick[];
+  ticks?: WuiRangeTick[];
   /**
    * Creates an input group with element(s) coming before input.  Will only show if `showInput = inputWithPopover`.
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: WuiFormControlLayoutProps['prepend'];
   /**
    * Creates an input group with element(s) coming after input. Will only show if `showInput = inputWithPopover`.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: WuiFormControlLayoutProps['append'];
   /**
    *  Intended to be uses with aria attributes. Some attributes may be overwritten.
    */
-  minInputProps?: Partial<EuiRangeInputProps>;
+  minInputProps?: Partial<WuiRangeInputProps>;
 
   /**
    *  Intended to be uses with aria attributes. Some attributes may be overwritten.
    */
-  maxInputProps?: Partial<EuiRangeInputProps>;
+  maxInputProps?: Partial<WuiRangeInputProps>;
 }
 
-export class EuiDualRange extends Component<EuiDualRangeProps> {
+export class WuiDualRange extends Component<WuiDualRangeProps> {
   static defaultProps = {
     min: 0,
     max: 100,
@@ -355,12 +368,12 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
     let valuePosition = decimal <= 1 ? decimal : 1;
     valuePosition = valuePosition >= 0 ? valuePosition : 0;
 
-    const EUI_THUMB_SIZE = 16;
+    const WUI_THUMB_SIZE = 16;
     const trackWidth =
       this.props.showInput === 'inputWithPopover' && !!width
         ? width
         : this.rangeSliderRef!.clientWidth;
-    const thumbToTrackRatio = EUI_THUMB_SIZE / trackWidth;
+    const thumbToTrackRatio = WUI_THUMB_SIZE / trackWidth;
     const trackPositionScale = (1 - thumbToTrackRatio) * 100;
     return { left: `${valuePosition * trackPositionScale}%` };
   };
@@ -463,7 +476,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
     const canShowDropdown = showInputOnly && !readOnly && !disabled;
 
     const minInput = !!showInput ? (
-      <EuiRangeInput
+      <WuiRangeInput
         // Overridable props
         aria-describedby={this.props['aria-describedby']}
         aria-label={this.props['aria-label']}
@@ -496,7 +509,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
     );
 
     const maxInput = !!showInput ? (
-      <EuiRangeInput
+      <WuiRangeInput
         // Overridable props
         aria-describedby={this.props['aria-describedby']}
         aria-label={this.props['aria-label']}
@@ -528,24 +541,24 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
       undefined
     );
 
-    const classes = classNames('euiDualRange', className);
+    const classes = classNames('wuiDualRange', className);
     const theRange = (
-      <EuiRangeWrapper
+      <WuiRangeWrapper
         className={classes}
         fullWidth={fullWidth}
         compressed={compressed}>
         {showInput && !showInputOnly && (
           <>
             {minInput}
-            <div className="euiRange__horizontalSpacer" />
+            <div className="wuiRange__horizontalSpacer" />
           </>
         )}
         {showLabels && (
-          <EuiRangeLabel side="min" disabled={disabled}>
+          <WuiRangeLabel side="min" disabled={disabled}>
             {min}
-          </EuiRangeLabel>
+          </WuiRangeLabel>
         )}
-        <EuiRangeTrack
+        <WuiRangeTrack
           compressed={compressed}
           disabled={disabled}
           max={max}
@@ -559,7 +572,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
           value={value}
           aria-hidden={showInput === true}>
           {showRange && this.isValid && (
-            <EuiRangeHighlight
+            <WuiRangeHighlight
               compressed={compressed}
               hasFocus={this.state.hasFocus}
               showTicks={showTicks}
@@ -570,8 +583,8 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
             />
           )}
 
-          <EuiRangeSlider
-            className="euiDualRange__slider"
+          <WuiRangeSlider
+            className="wuiDualRange__slider"
             ref={this.handleRangeSliderRefUpdate}
             id={id}
             name={name}
@@ -594,7 +607,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
 
           {this.state.rangeSliderRefAvailable && (
             <React.Fragment>
-              <EuiRangeThumb
+              <WuiRangeThumb
                 min={min}
                 max={Number(this.upperValue)}
                 value={this.lowerValue}
@@ -611,7 +624,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
                 aria-describedby={this.props['aria-describedby']}
                 aria-label={this.props['aria-label']}
               />
-              <EuiRangeThumb
+              <WuiRangeThumb
                 min={Number(this.lowerValue)}
                 max={max}
                 value={this.upperValue}
@@ -630,22 +643,22 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
               />
             </React.Fragment>
           )}
-        </EuiRangeTrack>
-        {showLabels && <EuiRangeLabel disabled={disabled}>{max}</EuiRangeLabel>}
+        </WuiRangeTrack>
+        {showLabels && <WuiRangeLabel disabled={disabled}>{max}</WuiRangeLabel>}
         {showInput && !showInputOnly && (
           <>
-            <div className="euiRange__horizontalSpacer" />
+            <div className="wuiRange__horizontalSpacer" />
             {maxInput}
           </>
         )}
-      </EuiRangeWrapper>
+      </WuiRangeWrapper>
     );
 
     const thePopover = showInputOnly ? (
-      <EuiInputPopover
-        className="euiRange__popover"
+      <WuiInputPopover
+        className="wuiRange__popover"
         input={
-          <EuiFormControlLayoutDelimited
+          <WuiFormControlLayoutDelimited
             startControl={minInput!}
             endControl={maxInput!}
             isDisabled={disabled}
@@ -662,7 +675,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
         disableFocusTrap={true}
         onPanelResize={this.onResize}>
         {theRange}
-      </EuiInputPopover>
+      </WuiInputPopover>
     ) : (
       undefined
     );

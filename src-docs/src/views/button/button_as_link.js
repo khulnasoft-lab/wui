@@ -1,56 +1,56 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton href="http://www.elastic.co">Link to elastic.co</EuiButton>
-      </EuiFlexItem>
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton href="http://www.wazuh.com">Link to wazuh.co</WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty href="http://www.elastic.co">
-          Link to elastic.co
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty href="http://www.wazuh.com">
+          Link to wazuh.com
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
-          href="http://www.elastic.co"
+      <WuiFlexItem grow={false}>
+        <WuiButtonIcon
+          href="http://www.wazuh.com"
           iconType="link"
           aria-label="This is a link"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton href="http://www.elastic.co" isDisabled>
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton href="http://www.wazuh.com" isDisabled>
           Disabled link
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty href="http://www.elastic.co" isDisabled>
+      <WuiFlexItem grow={false}>
+        <WuiButtonEmpty href="http://www.wazuh.com" isDisabled>
           Disabled empty link
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </WuiButtonEmpty>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
-          href="http://www.elastic.co"
+      <WuiFlexItem grow={false}>
+        <WuiButtonIcon
+          href="http://www.wazuh.com"
           iconType="link"
           aria-label="This is a link"
           isDisabled
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </Fragment>
 );

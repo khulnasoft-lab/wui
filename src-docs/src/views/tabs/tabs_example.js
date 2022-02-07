@@ -4,10 +4,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiTabs,
-  EuiTab,
-  EuiTabbedContent,
+  WuiCode,
+  WuiTabs,
+  WuiTab,
+  WuiTabbedContent,
 } from '../../../../src/components';
 import { tabConfig } from './playground';
 
@@ -26,7 +26,7 @@ const tabbedContentHtml = renderToHtml(TabbedContent);
 import Controlled from './controlled';
 const controlledSource = require('!!raw-loader!./controlled');
 const controlledHtml = renderToHtml(Controlled);
-const controlledSnippet = `<EuiTabbedContent
+const controlledSnippet = `<WuiTabbedContent
   tabs={tabs}
   selectedTab={selectedTab}
   onTabClick={onTabClick}
@@ -49,21 +49,21 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabs</strong> allow a <EuiCode>size</EuiCode> prop. In
+          <strong>WuiTabs</strong> allow a <WuiCode>size</WuiCode> prop. In
           general you should always use the default size, but in rare cases
           (like putting tabs within a popover of other small menu) it is OK to
           use the smaller sizing.
         </p>
       ),
       props: {
-        EuiTabs,
-        EuiTab,
+        WuiTabs,
+        WuiTab,
       },
       demo: <Tabs />,
-      snippet: `<EuiTabs>
-  <EuiTab onClick={onClick}>Example 1</EuiTab>
-  <EuiTab onClick={onClick}>Example 2</EuiTab>
-</EuiTabs>`,
+      snippet: `<WuiTabs>
+  <WuiTab onClick={onClick}>Example 1</WuiTab>
+  <WuiTab onClick={onClick}>Example 2</WuiTab>
+</WuiTabs>`,
     },
     {
       title: 'Condensed tabs',
@@ -79,22 +79,22 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabs</strong> allow a <EuiCode>display</EuiCode> prop. In
+          <strong>WuiTabs</strong> allow a <WuiCode>display</WuiCode> prop. In
           general you should always use the default display. However, it is
-          acceptable to use the alternative <EuiCode>condensed</EuiCode> display
+          acceptable to use the alternative <WuiCode>condensed</WuiCode> display
           in situations where it is desirable to display a bolder, more compact
           and borderless tab interface (for use as primary navigation within
           your application or to establish a higher level hierarchy of tabs).
         </p>
       ),
       props: {
-        EuiTabs,
+        WuiTabs,
       },
       demo: <TabsCondensed />,
-      snippet: `<EuiTabs display="condensed">
-  <EuiTab onClick={onClick}>Example 1</EuiTab>
-  <EuiTab onClick={onClick}>Example 2</EuiTab>
-</EuiTabs>`,
+      snippet: `<WuiTabs display="condensed">
+  <WuiTab onClick={onClick}>Example 1</WuiTab>
+  <WuiTab onClick={onClick}>Example 2</WuiTab>
+</WuiTabs>`,
     },
     {
       title: 'Tabbed content',
@@ -110,17 +110,17 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabbedContent</strong> makes it easier to associate tabs
+          <strong>WuiTabbedContent</strong> makes it easier to associate tabs
           with content based on the selected tab. Use the{' '}
-          <EuiCode>initialSelectedTab</EuiCode> prop to specify which tab to
+          <WuiCode>initialSelectedTab</WuiCode> prop to specify which tab to
           initially select.
         </p>
       ),
       props: {
-        EuiTabbedContent,
+        WuiTabbedContent,
       },
       demo: <TabbedContent />,
-      snippet: `<EuiTabbedContent
+      snippet: `<WuiTabbedContent
   tabs={[
     {
       id: 'example1',
@@ -149,14 +149,14 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          You can also use the <EuiCode>selectedTab</EuiCode> and{' '}
-          <EuiCode>onTabClick</EuiCode> props to take complete control over tab
+          You can also use the <WuiCode>selectedTab</WuiCode> and{' '}
+          <WuiCode>onTabClick</WuiCode> props to take complete control over tab
           selection. This can be useful if you want to change tabs based on user
           interaction with another part of the UI.
         </p>
       ),
       props: {
-        EuiTabbedContent,
+        WuiTabbedContent,
       },
       snippet: controlledSnippet,
       demo: <Controlled />,

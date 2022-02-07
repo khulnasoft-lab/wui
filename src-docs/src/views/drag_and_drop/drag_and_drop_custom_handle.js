@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
+  WuiPanel,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -25,39 +25,39 @@ export default () => {
   const [list, setList] = useState(makeList(3));
   const onDragEnd = ({ source, destination }) => {
     if (source && destination) {
-      const items = euiDragDropReorder(list, source.index, destination.index);
+      const items = wuiDragDropReorder(list, source.index, destination.index);
 
       setList(items);
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiDroppable
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiDroppable
         droppableId="CUSTOM_HANDLE_DROPPABLE_AREA"
         spacing="m"
         withPanel>
         {list.map(({ content, id }, idx) => (
-          <EuiDraggable
+          <WuiDraggable
             spacing="m"
             key={id}
             index={idx}
             draggableId={id}
             customDragHandle={true}>
             {provided => (
-              <EuiPanel className="custom" paddingSize="m">
-                <EuiFlexGroup>
-                  <EuiFlexItem grow={false}>
+              <WuiPanel className="custom" paddingSize="m">
+                <WuiFlexGroup>
+                  <WuiFlexItem grow={false}>
                     <div {...provided.dragHandleProps}>
-                      <EuiIcon type="grab" />
+                      <WuiIcon type="grab" />
                     </div>
-                  </EuiFlexItem>
-                  <EuiFlexItem>{content}</EuiFlexItem>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </WuiFlexItem>
+                  <WuiFlexItem>{content}</WuiFlexItem>
+                </WuiFlexGroup>
+              </WuiPanel>
             )}
-          </EuiDraggable>
+          </WuiDraggable>
         ))}
-      </EuiDroppable>
-    </EuiDragDropContext>
+      </WuiDroppable>
+    </WuiDragDropContext>
   );
 };

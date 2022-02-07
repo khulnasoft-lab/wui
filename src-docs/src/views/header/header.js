@@ -2,35 +2,35 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
-  EuiAvatar,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
-  EuiLink,
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverTitle,
-  EuiSelectable,
-  EuiSelectableMessage,
-  EuiSelectableTemplateSitewide,
-  EuiSpacer,
-  EuiText,
+  WuiAvatar,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiHeader,
+  WuiHeaderBreadcrumbs,
+  WuiHeaderLogo,
+  WuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemButton,
+  WuiIcon,
+  WuiKeyPadMenu,
+  WuiKeyPadMenuItem,
+  WuiLink,
+  WuiPopover,
+  WuiPopoverFooter,
+  WuiPopoverTitle,
+  WuiSelectable,
+  WuiSelectableMessage,
+  WuiSelectableTemplateSitewide,
+  WuiSpacer,
+  WuiText,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
 export default () => {
   const renderLogo = () => (
-    <EuiHeaderLogo
-      iconType="logoElastic"
+    <WuiHeaderLogo
+      iconType="logoWazuh"
       href="#"
       onClick={e => e.preventDefault()}
       aria-label="Go to home page"
@@ -75,7 +75,7 @@ export default () => {
     ];
 
     return (
-      <EuiHeaderBreadcrumbs
+      <WuiHeaderBreadcrumbs
         aria-label="Header breadcrumbs example"
         breadcrumbs={breadcrumbs}
       />
@@ -83,55 +83,55 @@ export default () => {
   };
 
   const search = (
-    <EuiSelectableTemplateSitewide
+    <WuiSelectableTemplateSitewide
       options={[]}
       searchProps={{
         compressed: true,
       }}
       popoverButton={
-        <EuiHeaderSectionItemButton aria-label="Sitewide search">
-          <EuiIcon type="search" size="m" />
-        </EuiHeaderSectionItemButton>
+        <WuiHeaderSectionItemButton aria-label="Sitewide search">
+          <WuiIcon type="search" size="m" />
+        </WuiHeaderSectionItemButton>
       }
       emptyMessage={
-        <EuiSelectableMessage style={{ minHeight: 300 }}>
+        <WuiSelectableMessage style={{ minHeight: 300 }}>
           <p>
             Please see the component page for{' '}
             <Link to="/forms/selectable">
-              <strong>EuiSelectableTemplateSitewide</strong>
+              <strong>WuiSelectableTemplateSitewide</strong>
             </Link>{' '}
             on how to configure your sitewide search.
           </p>
-        </EuiSelectableMessage>
+        </WuiSelectableMessage>
       }
     />
   );
 
   return (
-    <EuiHeader>
-      <EuiHeaderSection grow={false}>
-        <EuiHeaderSectionItem border="right">
+    <WuiHeader>
+      <WuiHeaderSection grow={false}>
+        <WuiHeaderSectionItem border="right">
           {renderLogo()}
-        </EuiHeaderSectionItem>
-        <EuiHeaderSectionItem border="right">
+        </WuiHeaderSectionItem>
+        <WuiHeaderSectionItem border="right">
           <HeaderSpacesMenu />
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
+        </WuiHeaderSectionItem>
+      </WuiHeaderSection>
 
       {renderBreadcrumbs()}
 
-      <EuiHeaderSection side="right">
-        <EuiHeaderSectionItem>{search}</EuiHeaderSectionItem>
+      <WuiHeaderSection side="right">
+        <WuiHeaderSectionItem>{search}</WuiHeaderSectionItem>
 
-        <EuiHeaderSectionItem>
+        <WuiHeaderSectionItem>
           <HeaderUserMenu />
-        </EuiHeaderSectionItem>
+        </WuiHeaderSectionItem>
 
-        <EuiHeaderSectionItem>
+        <WuiHeaderSectionItem>
           <HeaderAppMenu />
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
-    </EuiHeader>
+        </WuiHeaderSectionItem>
+      </WuiHeaderSection>
+    </WuiHeader>
   );
 };
 
@@ -148,18 +148,18 @@ const HeaderUserMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <WuiHeaderSectionItemButton
       aria-controls={id}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Account menu"
       onClick={onMenuButtonClick}>
-      <EuiAvatar name="John Username" size="s" />
-    </EuiHeaderSectionItemButton>
+      <WuiAvatar name="John Username" size="s" />
+    </WuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       id={id}
       ownFocus
       button={button}
@@ -168,38 +168,38 @@ const HeaderUserMenu = () => {
       closePopover={closeMenu}
       panelPaddingSize="none">
       <div style={{ width: 320 }}>
-        <EuiFlexGroup
+        <WuiFlexGroup
           gutterSize="m"
-          className="euiHeaderProfile"
+          className="wuiHeaderProfile"
           responsive={false}>
-          <EuiFlexItem grow={false}>
-            <EuiAvatar name="John Username" size="xl" />
-          </EuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiAvatar name="John Username" size="xl" />
+          </WuiFlexItem>
 
-          <EuiFlexItem>
-            <EuiText>
+          <WuiFlexItem>
+            <WuiText>
               <p>John Username</p>
-            </EuiText>
+            </WuiText>
 
-            <EuiSpacer size="m" />
+            <WuiSpacer size="m" />
 
-            <EuiFlexGroup>
-              <EuiFlexItem>
-                <EuiFlexGroup justifyContent="spaceBetween">
-                  <EuiFlexItem grow={false}>
-                    <EuiLink>Edit profile</EuiLink>
-                  </EuiFlexItem>
+            <WuiFlexGroup>
+              <WuiFlexItem>
+                <WuiFlexGroup justifyContent="spaceBetween">
+                  <WuiFlexItem grow={false}>
+                    <WuiLink>Edit profile</WuiLink>
+                  </WuiFlexItem>
 
-                  <EuiFlexItem grow={false}>
-                    <EuiLink>Log out</EuiLink>
-                  </EuiFlexItem>
-                </EuiFlexGroup>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-        </EuiFlexGroup>
+                  <WuiFlexItem grow={false}>
+                    <WuiLink>Log out</WuiLink>
+                  </WuiFlexItem>
+                </WuiFlexGroup>
+              </WuiFlexItem>
+            </WuiFlexGroup>
+          </WuiFlexItem>
+        </WuiFlexGroup>
       </div>
-    </EuiPopover>
+    </WuiPopover>
   );
 };
 
@@ -208,39 +208,39 @@ const HeaderSpacesMenu = () => {
   const spacesValues = [
     {
       label: 'Sales team',
-      prepend: <EuiAvatar type="space" name="Sales Team" size="s" />,
+      prepend: <WuiAvatar type="space" name="Sales Team" size="s" />,
       checked: 'on',
     },
     {
       label: 'Engineering',
-      prepend: <EuiAvatar type="space" name="Engineering" size="s" />,
+      prepend: <WuiAvatar type="space" name="Engineering" size="s" />,
     },
     {
       label: 'Security',
-      prepend: <EuiAvatar type="space" name="Security" size="s" />,
+      prepend: <WuiAvatar type="space" name="Security" size="s" />,
     },
     {
       label: 'Default',
-      prepend: <EuiAvatar type="space" name="Default" size="s" />,
+      prepend: <WuiAvatar type="space" name="Default" size="s" />,
     },
   ];
 
   const additionalSpaces = [
     {
       label: 'Sales team 2',
-      prepend: <EuiAvatar type="space" name="Sales Team 2" size="s" />,
+      prepend: <WuiAvatar type="space" name="Sales Team 2" size="s" />,
     },
     {
       label: 'Engineering 2',
-      prepend: <EuiAvatar type="space" name="Engineering 2" size="s" />,
+      prepend: <WuiAvatar type="space" name="Engineering 2" size="s" />,
     },
     {
       label: 'Security 2',
-      prepend: <EuiAvatar type="space" name="Security 2" size="s" />,
+      prepend: <WuiAvatar type="space" name="Security 2" size="s" />,
     },
     {
       label: 'Default 2',
-      prepend: <EuiAvatar type="space" name="Default 2" size="s" />,
+      prepend: <WuiAvatar type="space" name="Default 2" size="s" />,
     },
   ];
 
@@ -273,18 +273,18 @@ const HeaderSpacesMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <WuiHeaderSectionItemButton
       aria-controls={id}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Spaces menu"
       onClick={onMenuButtonClick}>
       {selectedSpace.prepend}
-    </EuiHeaderSectionItemButton>
+    </WuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       id={id}
       ownFocus
       button={button}
@@ -292,7 +292,7 @@ const HeaderSpacesMenu = () => {
       anchorPosition="downLeft"
       closePopover={closePopover}
       panelPaddingSize="none">
-      <EuiSelectable
+      <WuiSelectable
         searchable={isListExtended()}
         searchProps={{
           placeholder: 'Find a space',
@@ -308,21 +308,21 @@ const HeaderSpacesMenu = () => {
         }}>
         {(list, search) => (
           <>
-            <EuiPopoverTitle>{search || 'Your spaces'}</EuiPopoverTitle>
+            <WuiPopoverTitle>{search || 'Your spaces'}</WuiPopoverTitle>
             {list}
-            <EuiPopoverFooter>
-              <EuiButton
+            <WuiPopoverFooter>
+              <WuiButton
                 size="s"
                 fullWidth
                 onClick={addMoreSpaces}
                 disabled={isListExtended()}>
                 Add more spaces
-              </EuiButton>
-            </EuiPopoverFooter>
+              </WuiButton>
+            </WuiPopoverFooter>
           </>
         )}
-      </EuiSelectable>
-    </EuiPopover>
+      </WuiSelectable>
+    </WuiPopover>
   );
 };
 
@@ -342,54 +342,54 @@ const HeaderAppMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <WuiHeaderSectionItemButton
       aria-controls={keypadId}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Apps menu with 1 new app"
       notification="1"
       onClick={onMenuButtonClick}>
-      <EuiIcon type="apps" size="m" />
-    </EuiHeaderSectionItemButton>
+      <WuiIcon type="apps" size="m" />
+    </WuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <WuiPopover
       id={popoverId}
       ownFocus
       button={button}
       isOpen={isOpen}
       anchorPosition="downRight"
       closePopover={closeMenu}>
-      <EuiKeyPadMenu id={keypadId} style={{ width: 288 }}>
-        <EuiKeyPadMenuItem label="Discover">
-          <EuiIcon type="discoverApp" size="l" />
-        </EuiKeyPadMenuItem>
+      <WuiKeyPadMenu id={keypadId} style={{ width: 288 }}>
+        <WuiKeyPadMenuItem label="Discover">
+          <WuiIcon type="discoverApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Dashboard">
-          <EuiIcon type="dashboardApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <WuiKeyPadMenuItem label="Dashboard">
+          <WuiIcon type="dashboardApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Dev Tools">
-          <EuiIcon type="devToolsApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <WuiKeyPadMenuItem label="Dev Tools">
+          <WuiIcon type="devToolsApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Machine Learning">
-          <EuiIcon type="machineLearningApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <WuiKeyPadMenuItem label="Machine Learning">
+          <WuiIcon type="machineLearningApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Graph">
-          <EuiIcon type="graphApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <WuiKeyPadMenuItem label="Graph">
+          <WuiIcon type="graphApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Visualize">
-          <EuiIcon type="visualizeApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <WuiKeyPadMenuItem label="Visualize">
+          <WuiIcon type="visualizeApp" size="l" />
+        </WuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Timelion" betaBadgeLabel="Beta">
-          <EuiIcon type="timelionApp" size="l" />
-        </EuiKeyPadMenuItem>
-      </EuiKeyPadMenu>
-    </EuiPopover>
+        <WuiKeyPadMenuItem label="Timelion" betaBadgeLabel="Beta">
+          <WuiIcon type="timelionApp" size="l" />
+        </WuiKeyPadMenuItem>
+      </WuiKeyPadMenu>
+    </WuiPopover>
   );
 };

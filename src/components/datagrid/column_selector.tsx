@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,29 +39,29 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnVisibility,
-  EuiDataGridToolBarVisibilityColumnSelectorOptions,
-  EuiDataGridToolBarVisibilityOptions,
+  WuiDataGridColumn,
+  WuiDataGridColumnVisibility,
+  WuiDataGridToolBarVisibilityColumnSelectorOptions,
+  WuiDataGridToolBarVisibilityOptions,
 } from './data_grid_types';
-import { EuiPopover, EuiPopoverFooter, EuiPopoverTitle } from '../popover';
-import { EuiI18n } from '../i18n';
-import { EuiButtonEmpty } from '../button';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiSwitch, EuiFieldText } from '../form';
+import { WuiPopover, WuiPopoverFooter, WuiPopoverTitle } from '../popover';
+import { WuiI18n } from '../i18n';
+import { WuiButtonEmpty } from '../button';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
+import { WuiSwitch, WuiFieldText } from '../form';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
+  wuiDragDropReorder,
 } from '../drag_and_drop';
 import { DropResult } from 'react-beautiful-dnd';
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 import { useDependentState } from '../../services';
 
 const getShowColumnSelectorValue = (
-  showColumnSelector: EuiDataGridToolBarVisibilityOptions['showColumnSelector'],
-  valueName: keyof EuiDataGridToolBarVisibilityColumnSelectorOptions
+  showColumnSelector: WuiDataGridToolBarVisibilityOptions['showColumnSelector'],
+  valueName: keyof WuiDataGridToolBarVisibilityColumnSelectorOptions
 ) => {
   if (showColumnSelector === false) return false;
   if (showColumnSelector == null) return true;
@@ -57,13 +70,13 @@ const getShowColumnSelectorValue = (
 };
 
 export const useColumnSelector = (
-  availableColumns: EuiDataGridColumn[],
-  columnVisibility: EuiDataGridColumnVisibility,
-  showColumnSelector: EuiDataGridToolBarVisibilityOptions['showColumnSelector'],
+  availableColumns: WuiDataGridColumn[],
+  columnVisibility: WuiDataGridColumnVisibility,
+  showColumnSelector: WuiDataGridToolBarVisibilityOptions['showColumnSelector'],
   displayValues: { [key: string]: string }
 ): [
   ReactElement,
-  EuiDataGridColumn[],
+  WuiDataGridColumn[],
   (columns: string[]) => void,
   (colFrom: string, colTo: string) => void
 ] => {
@@ -100,7 +113,7 @@ export const useColumnSelector = (
     destination,
   }: DropResult) {
     const destinationIndex = destination!.index;
-    const nextSortedColumns = euiDragDropReorder(
+    const nextSortedColumns = wuiDragDropReorder(
       sortedColumns,
       sourceIndex,
       destinationIndex
@@ -112,8 +125,8 @@ export const useColumnSelector = (
 
   const [columnSearchText, setColumnSearchText] = useState('');
 
-  const controlBtnClasses = classNames('euiDataGrid__controlBtn', {
-    'euiDataGrid__controlBtn--active': numberOfHiddenFields > 0,
+  const controlBtnClasses = classNames('wuiDataGrid__controlBtn', {
+    'wuiDataGrid__controlBtn--active': numberOfHiddenFields > 0,
   });
 
   const filteredColumns = sortedColumns.filter(
@@ -123,21 +136,21 @@ export const useColumnSelector = (
   const isDragEnabled = allowColumnReorder && columnSearchText.length === 0; // only allow drag-and-drop when not filtering columns
 
   let buttonText = (
-    <EuiI18n token="euiColumnSelector.button" default="Columns" />
+    <WuiI18n token="wuiColumnSelector.button" default="Columns" />
   );
 
   if (numberOfHiddenFields === 1) {
     buttonText = (
-      <EuiI18n
-        token="euiColumnSelector.buttonActiveSingular"
+      <WuiI18n
+        token="wuiColumnSelector.buttonActiveSingular"
         default="{numberOfHiddenFields} column hidden"
         values={{ numberOfHiddenFields }}
       />
     );
   } else if (numberOfHiddenFields > 1) {
     buttonText = (
-      <EuiI18n
-        token="euiColumnSelector.buttonActivePlural"
+      <WuiI18n
+        token="wuiColumnSelector.buttonActivePlural"
         default="{numberOfHiddenFields} columns hidden"
         values={{ numberOfHiddenFields }}
       />
@@ -145,16 +158,16 @@ export const useColumnSelector = (
   }
 
   const columnSelector = (
-    <EuiPopover
+    <WuiPopover
       data-test-subj="dataGridColumnSelectorPopover"
       isOpen={isOpen}
       closePopover={() => setIsOpen(false)}
       anchorPosition="downLeft"
       ownFocus
       panelPaddingSize="s"
-      panelClassName="euiDataGridColumnSelectorPopover"
+      panelClassName="wuiDataGridColumnSelectorPopover"
       button={
-        <EuiButtonEmpty
+        <WuiButtonEmpty
           size="xs"
           iconType={allowColumnHiding ? 'listAdd' : 'list'}
           color="text"
@@ -162,19 +175,19 @@ export const useColumnSelector = (
           data-test-subj="dataGridColumnSelectorButton"
           onClick={() => setIsOpen(!isOpen)}>
           {buttonText}
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       }>
       <div>
         {allowColumnHiding && (
-          <EuiPopoverTitle>
-            <EuiI18n
+          <WuiPopoverTitle>
+            <WuiI18n
               tokens={[
-                'euiColumnSelector.search',
-                'euiColumnSelector.searchcolumns',
+                'wuiColumnSelector.search',
+                'wuiColumnSelector.searchcolumns',
               ]}
               defaults={['Search', 'Search columns']}>
               {([search, searchcolumns]: string[]) => (
-                <EuiFieldText
+                <WuiFieldText
                   compressed
                   placeholder={search}
                   aria-label={searchcolumns}
@@ -184,34 +197,34 @@ export const useColumnSelector = (
                   }
                 />
               )}
-            </EuiI18n>
-          </EuiPopoverTitle>
+            </WuiI18n>
+          </WuiPopoverTitle>
         )}
-        <div className="euiDataGrid__controlScroll">
-          <EuiDragDropContext onDragEnd={onDragEnd}>
-            <EuiDroppable
+        <div className="wuiDataGrid__controlScroll">
+          <WuiDragDropContext onDragEnd={onDragEnd}>
+            <WuiDroppable
               droppableId="columnOrder"
               isDropDisabled={!isDragEnabled}>
               <Fragment>
                 {filteredColumns.map((id, index) => (
-                  <EuiDraggable
+                  <WuiDraggable
                     key={id}
                     draggableId={id}
                     index={index}
                     isDragDisabled={!isDragEnabled}>
                     {(provided, state) => (
                       <div
-                        className={`euiDataGridColumnSelector__item ${state.isDragging &&
-                          'euiDataGridColumnSelector__item-isDragging'}`}>
-                        <EuiFlexGroup gutterSize="m" alignItems="center">
-                          <EuiFlexItem>
+                        className={`wuiDataGridColumnSelector__item ${state.isDragging &&
+                          'wuiDataGridColumnSelector__item-isDragging'}`}>
+                        <WuiFlexGroup gutterSize="m" alignItems="center">
+                          <WuiFlexItem>
                             {allowColumnHiding ? (
-                              <EuiSwitch
+                              <WuiSwitch
                                 name={id}
                                 label={displayValues[id] || id}
                                 checked={visibleColumnIds.has(id)}
                                 compressed
-                                className="euiSwitch--mini"
+                                className="wuiSwitch--mini"
                                 onChange={event => {
                                   const {
                                     target: { checked },
@@ -228,62 +241,62 @@ export const useColumnSelector = (
                                 }}
                               />
                             ) : (
-                              <span className="euiDataGridColumnSelector__itemLabel">
+                              <span className="wuiDataGridColumnSelector__itemLabel">
                                 {id}
                               </span>
                             )}
-                          </EuiFlexItem>
+                          </WuiFlexItem>
                           {isDragEnabled && (
-                            <EuiFlexItem grow={false}>
-                              <EuiIcon type="grab" color="subdued" />
-                            </EuiFlexItem>
+                            <WuiFlexItem grow={false}>
+                              <WuiIcon type="grab" color="subdued" />
+                            </WuiFlexItem>
                           )}
-                        </EuiFlexGroup>
+                        </WuiFlexGroup>
                       </div>
                     )}
-                  </EuiDraggable>
+                  </WuiDraggable>
                 ))}
               </Fragment>
-            </EuiDroppable>
-          </EuiDragDropContext>
+            </WuiDroppable>
+          </WuiDragDropContext>
         </div>
       </div>
       {allowColumnHiding && (
-        <EuiPopoverFooter>
-          <EuiFlexGroup gutterSize="s" justifyContent="spaceBetween">
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
+        <WuiPopoverFooter>
+          <WuiFlexGroup gutterSize="s" justifyContent="spaceBetween">
+            <WuiFlexItem grow={false}>
+              <WuiButtonEmpty
                 size="xs"
                 flush="left"
                 onClick={() => setVisibleColumns(sortedColumns)}>
-                <EuiI18n
-                  token="euiColumnSelector.selectAll"
+                <WuiI18n
+                  token="wuiColumnSelector.selectAll"
                   default="Show all"
                 />
-              </EuiButtonEmpty>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
+              </WuiButtonEmpty>
+            </WuiFlexItem>
+            <WuiFlexItem grow={false}>
+              <WuiButtonEmpty
                 size="xs"
                 flush="right"
                 onClick={() => setVisibleColumns([])}>
-                <EuiI18n token="euiColumnSelector.hideAll" default="Hide all" />
-              </EuiButtonEmpty>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiPopoverFooter>
+                <WuiI18n token="wuiColumnSelector.hideAll" default="Hide all" />
+              </WuiButtonEmpty>
+            </WuiFlexItem>
+          </WuiFlexGroup>
+        </WuiPopoverFooter>
       )}
-    </EuiPopover>
+    </WuiPopover>
   );
 
   const orderedVisibleColumns = useMemo(
     () =>
       visibleColumns
-        .map<EuiDataGridColumn>(
+        .map<WuiDataGridColumn>(
           columnId =>
             availableColumns.find(
               ({ id }) => id === columnId
-            ) as EuiDataGridColumn // cast to avoid `undefined`, it filters those out next
+            ) as WuiDataGridColumn // cast to avoid `undefined`, it filters those out next
         )
         .filter(column => column != null),
     [availableColumns, visibleColumns]

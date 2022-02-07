@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "eui.d.ts"
+    "wui.d.ts"
   ]
 }

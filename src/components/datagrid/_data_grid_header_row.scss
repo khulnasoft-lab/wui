@@ -1,17 +1,17 @@
-.euiDataGridHeader {
+.wuiDataGridHeader {
   display: inline-flex;
   min-width: 100%; // Needed to prevent wraps. Inline flex is tricky
   z-index: 3; // Needs to sit above the content and focused cells
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
   position: sticky; // In IE11 this does not work, but doesn't cause a break.
   top: 0;
 }
 
-@include euiDataGridHeaderCell {
-  @include euiFontSizeS;
+@include wuiDataGridHeaderCell {
+  @include wuiFontSizeS;
 
-  font-weight: $euiFontWeightBold;
-  padding: $euiDataGridCellPaddingM;
+  font-weight: $wuiFontWeightBold;
+  padding: $wuiDataGridCellPaddingM;
   flex: 0 0 auto;
   position: relative;
   align-items: center;
@@ -22,115 +22,115 @@
     width: 100%;
   }
 
-  &.euiDataGridHeaderCell--numeric {
+  &.wuiDataGridHeaderCell--numeric {
     text-align: right;
   }
 
-  &.euiDataGridHeaderCell--currency {
+  &.wuiDataGridHeaderCell--currency {
     text-align: right;
   }
 
   &:focus {
-    @include euiDataGridCellFocus;
+    @include wuiDataGridCellFocus;
   }
 
   // We only truncate if the cell is not a control column.
-  &:not(.euiDataGridHeaderCell--controlColumn) {
+  &:not(.wuiDataGridHeaderCell--controlColumn) {
 
     &:focus-within {
-      @include euiDataGridCellFocus;
+      @include wuiDataGridCellFocus;
     }
 
-    .euiDataGridHeaderCell__button {
+    .wuiDataGridHeaderCell__button {
       flex: 0 0 auto;
       position: relative;
       align-items: center;
       display: flex;
       text-align: left;
-      font-weight: $euiFontWeightBold;
+      font-weight: $wuiFontWeightBold;
     }
 
-    .euiDataGridHeaderCell__content {
-      @include euiTextTruncate;
+    .wuiDataGridHeaderCell__content {
+      @include wuiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
       flex-grow: 1;
     }
 
-    .euiDataGridHeaderCell__popover {
+    .wuiDataGridHeaderCell__popover {
       flex-grow: 0;
       flex-basis: auto;
       width: auto;
-      padding-left: $euiSizeXS;
+      padding-left: $wuiSizeXS;
     }
   }
 }
 
-.euiDataGridHeader__action--selected {
+.wuiDataGridHeader__action--selected {
   // sass-lint:disable-block no-important
-  font-weight: $euiFontWeightBold !important;
+  font-weight: $wuiFontWeightBold !important;
 }
 
 // Header alternates
 // Often these need extra specificity because they need to gracefully clash with the border settings
 
-@include euiDataGridStyles(bordersNone, bordersHorizontal) {
-  .euiDataGridHeader {
-    background: $euiColorEmptyShade;
+@include wuiDataGridStyles(bordersNone, bordersHorizontal) {
+  .wuiDataGridHeader {
+    background: $wuiColorEmptyShade;
   }
 }
 
-@include euiDataGridStyles(headerUnderline) {
-  @include euiDataGridHeaderCell {
+@include wuiDataGridStyles(headerUnderline) {
+  @include wuiDataGridHeaderCell {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: $euiBorderThick;
-    border-bottom-color: $euiTextColor;
+    border-bottom: $wuiBorderThick;
+    border-bottom-color: $wuiTextColor;
   }
 }
 
-@include euiDataGridStyles(bordersNone, headerUnderline) {
-  @include euiDataGridHeaderCell {
-    border-bottom: $euiBorderThick;
-    border-color: $euiTextColor;
+@include wuiDataGridStyles(bordersNone, headerUnderline) {
+  @include wuiDataGridHeaderCell {
+    border-bottom: $wuiBorderThick;
+    border-color: $wuiTextColor;
   }
 }
 
-@include euiDataGridStyles(headerShade) {
-  @include euiDataGridHeaderCell {
-    background: tintOrShade($euiColorLightestShade, 0%, 10%);
+@include wuiDataGridStyles(headerShade) {
+  @include wuiDataGridHeaderCell {
+    background: tintOrShade($wuiColorLightestShade, 0%, 10%);
   }
 }
 
-@include euiDataGridStyles(headerShade, bordersAll) {
-  @include euiDataGridHeaderCell {
-    border-right: $euiBorderThin;
-    border-bottom: $euiBorderThin;
+@include wuiDataGridStyles(headerShade, bordersAll) {
+  @include wuiDataGridHeaderCell {
+    border-right: $wuiBorderThin;
+    border-bottom: $wuiBorderThin;
     border-left: none;
 
     &:first-of-type {
-      border-left: $euiBorderThin;
+      border-left: $wuiBorderThin;
     }
   }
 }
 
-@include euiDataGridStyles(headerShade, bordersHorizontal) {
-  @include euiDataGridHeaderCell {
+@include wuiDataGridStyles(headerShade, bordersHorizontal) {
+  @include wuiDataGridHeaderCell {
     border-top: none;
-    border-bottom: $euiBorderThin;
+    border-bottom: $wuiBorderThin;
   }
 }
 
 // Border alternates
-@include euiDataGridStyles(bordersNone) {
-  @include euiDataGridHeaderCell {
+@include wuiDataGridStyles(bordersNone) {
+  @include wuiDataGridHeaderCell {
     border: none;
   }
 }
 
-@include euiDataGridStyles(borderhorizontal) {
-  @include euiDataGridHeaderCell {
+@include wuiDataGridStyles(borderhorizontal) {
+  @include wuiDataGridHeaderCell {
     border-top: none;
     border-right: none;
     border-left: none;
@@ -138,39 +138,39 @@
 }
 
 // Font alternates
-@include euiDataGridStyles(fontSizeSmall) {
-  @include euiDataGridHeaderCell {
-    @include euiFontSizeXS;
+@include wuiDataGridStyles(fontSizeSmall) {
+  @include wuiDataGridHeaderCell {
+    @include wuiFontSizeXS;
   }
 }
 
-@include euiDataGridStyles(fontSizeLarge) {
-  @include euiDataGridHeaderCell {
-    @include euiFontSize;
+@include wuiDataGridStyles(fontSizeLarge) {
+  @include wuiDataGridHeaderCell {
+    @include wuiFontSize;
   }
 }
 
 // Padding alternates
-@include euiDataGridStyles(paddingSmall) {
-  @include euiDataGridHeaderCell {
-    padding: $euiDataGridCellPaddingS;
+@include wuiDataGridStyles(paddingSmall) {
+  @include wuiDataGridHeaderCell {
+    padding: $wuiDataGridCellPaddingS;
   }
 }
 
-@include euiDataGridStyles(paddingLarge) {
-  @include euiDataGridHeaderCell {
-    padding: $euiDataGridCellPaddingL;
+@include wuiDataGridStyles(paddingLarge) {
+  @include wuiDataGridHeaderCell {
+    padding: $wuiDataGridCellPaddingL;
   }
 }
 
-@include euiDataGridStyles(noControls, bordersAll) {
-  @include euiDataGridHeaderCell {
-    border-top: $euiBorderThin;
+@include wuiDataGridStyles(noControls, bordersAll) {
+  @include wuiDataGridHeaderCell {
+    border-top: $wuiBorderThin;
   }
 }
 
-@include euiDataGridStyles(noControls, bordersHorizontal) {
-  @include euiDataGridHeaderCell {
-    border-top: $euiBorderThin;
+@include wuiDataGridStyles(noControls, bordersHorizontal) {
+  @include wuiDataGridHeaderCell {
+    border-top: $wuiBorderThin;
   }
 }

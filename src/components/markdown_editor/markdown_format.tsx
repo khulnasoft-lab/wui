@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,7 +37,7 @@ import {
   defaultParsingPlugins,
 } from './plugins/markdown_default_plugins';
 
-interface EuiMarkdownFormatProps {
+interface WuiMarkdownFormatProps {
   children: string;
   /** array of unified plugins to parse content into an AST */
   parsingPluginList?: PluggableList;
@@ -32,7 +45,7 @@ interface EuiMarkdownFormatProps {
   processingPluginList?: PluggableList;
 }
 
-export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
+export const WuiMarkdownFormat: FunctionComponent<WuiMarkdownFormatProps> = ({
   children,
   parsingPluginList = defaultParsingPlugins,
   processingPluginList = defaultProcessingPlugins,
@@ -51,5 +64,5 @@ export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
       return children;
     }
   }, [children, processor]);
-  return <div className="euiMarkdownFormat">{result}</div>;
+  return <div className="wuiMarkdownFormat">{result}</div>;
 };

@@ -1,13 +1,13 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiSpacer,
-  EuiSwitch,
-  EuiCode,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiListGroup,
+  WuiListGroupItem,
+  WuiSpacer,
+  WuiSwitch,
+  WuiCode,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -20,23 +20,23 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <WuiFlexGroup alignItems="center">
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label={
               <span>
-                Show as <EuiCode>flush</EuiCode>
+                Show as <WuiCode>flush</WuiCode>
               </span>
             }
             checked={flushWidth}
             onChange={() => setFlushWidth(!flushWidth)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>
+          <WuiSwitch
             label={
               <span>
-                Show as <EuiCode>bordered</EuiCode>
+                Show as <WuiCode>bordered</WuiCode>
               </span>
             }
             checked={showBorder}
@@ -44,24 +44,24 @@ export default () => {
               setShowBorder(!showBorder);
             }}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiListGroup flush={flushWidth} bordered={showBorder}>
-        <EuiListGroupItem onClick={handleOnClick} label="First item" />
+      <WuiListGroup flush={flushWidth} bordered={showBorder}>
+        <WuiListGroupItem onClick={handleOnClick} label="First item" />
 
-        <EuiListGroupItem onClick={handleOnClick} label="Second item" />
+        <WuiListGroupItem onClick={handleOnClick} label="Second item" />
 
-        <EuiListGroupItem onClick={handleOnClick} label="Third item" isActive />
+        <WuiListGroupItem onClick={handleOnClick} label="Third item" isActive />
 
-        <EuiListGroupItem
+        <WuiListGroupItem
           onClick={handleOnClick}
           label="Fourth item"
           isDisabled
         />
-      </EuiListGroup>
+      </WuiListGroup>
     </Fragment>
   );
 };

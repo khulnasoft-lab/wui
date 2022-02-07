@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,58 +35,58 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 
 import {
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemProps,
-  EuiHeaderSection,
+  WuiHeaderSectionItem,
+  WuiHeaderSectionItemProps,
+  WuiHeaderSection,
 } from './header_section';
-import { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
-import { EuiBreadcrumb, EuiBreadcrumbsProps } from '../breadcrumbs';
+import { WuiHeaderBreadcrumbs } from './header_breadcrumbs';
+import { WuiBreadcrumb, WuiBreadcrumbsProps } from '../breadcrumbs';
 
-type EuiHeaderSectionItemType = EuiHeaderSectionItemProps['children'];
-type EuiHeaderSectionBorderType = EuiHeaderSectionItemProps['border'];
+type WuiHeaderSectionItemType = WuiHeaderSectionItemProps['children'];
+type WuiHeaderSectionBorderType = WuiHeaderSectionItemProps['border'];
 
-export interface EuiHeaderSections {
+export interface WuiHeaderSections {
   /**
-   * An arry of items that will be wrapped in a #EuiHeaderSectionItem
+   * An arry of items that will be wrapped in a #WuiHeaderSectionItem
    */
-  items?: EuiHeaderSectionItemType[];
+  items?: WuiHeaderSectionItemType[];
   /**
-   * Apply the passed border side to each #EuiHeaderSectionItem
+   * Apply the passed border side to each #WuiHeaderSectionItem
    */
-  borders?: EuiHeaderSectionBorderType;
+  borders?: WuiHeaderSectionBorderType;
   /**
-   * Breadcrumbs in the header cannot be wrapped in a #EuiHeaderSection in order for truncation to work.
-   * Simply pass the array of EuiBreadcrumb objects
+   * Breadcrumbs in the header cannot be wrapped in a #WuiHeaderSection in order for truncation to work.
+   * Simply pass the array of WuiBreadcrumb objects
    */
-  breadcrumbs?: EuiBreadcrumb[];
+  breadcrumbs?: WuiBreadcrumb[];
   /**
-   * Other props to pass to #EuiHeaderBreadcrumbs
+   * Other props to pass to #WuiHeaderBreadcrumbs
    */
-  breadcrumbProps?: Omit<EuiBreadcrumbsProps, 'breadcrumbs'>;
+  breadcrumbProps?: Omit<WuiBreadcrumbsProps, 'breadcrumbs'>;
 }
 
 function createHeaderSection(
-  sections: EuiHeaderSectionItemType[],
-  border?: EuiHeaderSectionBorderType
+  sections: WuiHeaderSectionItemType[],
+  border?: WuiHeaderSectionBorderType
 ) {
   return sections.map((section, index) => {
     return (
-      <EuiHeaderSectionItem key={index} border={border}>
+      <WuiHeaderSectionItem key={index} border={border}>
         {section}
-      </EuiHeaderSectionItem>
+      </WuiHeaderSectionItem>
     );
   });
 }
 
-export type EuiHeaderProps = CommonProps &
+export type WuiHeaderProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
-     * An array of objects to wrap in a #EuiHeaderSection.
+     * An array of objects to wrap in a #WuiHeaderSection.
      * Each section is spaced using `space-between`.
-     * See #EuiHeaderSectionsProp for object details.
+     * See #WuiHeaderSectionsProp for object details.
      * This prop disregards the prop `children` if both are passed.
      */
-    sections?: EuiHeaderSections[];
+    sections?: WuiHeaderSections[];
     /**
      * Helper that positions the header against the window body and
      * adds the correct amount of top padding to the window when in `fixed` mode
@@ -87,9 +100,9 @@ export type EuiHeaderProps = CommonProps &
   };
 
 // Start a counter to manage the total number of fixed headers that need the body class
-let euiHeaderFixedCounter = 0;
+let wuiHeaderFixedCounter = 0;
 
-export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
+export const WuiHeader: FunctionComponent<WuiHeaderProps> = ({
   children,
   className,
   sections,
@@ -98,23 +111,23 @@ export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeader',
-    `euiHeader--${theme}`,
-    `euiHeader--${position}`,
+    'wuiHeader',
+    `wuiHeader--${theme}`,
+    `wuiHeader--${position}`,
     className
   );
 
   useEffect(() => {
     if (position === 'fixed') {
       // Increment fixed header counter for each fixed header
-      euiHeaderFixedCounter++;
-      document.body.classList.add('euiBody--headerIsFixed');
+      wuiHeaderFixedCounter++;
+      document.body.classList.add('wuiBody--headerIsFixed');
 
       return () => {
         // Both decrement the fixed counter AND then check if there are none
-        if (--euiHeaderFixedCounter === 0) {
+        if (--wuiHeaderFixedCounter === 0) {
           // If there are none, THEN remove class
-          document.body.classList.remove('euiBody--headerIsFixed');
+          document.body.classList.remove('wuiBody--headerIsFixed');
         }
       };
     }
@@ -125,25 +138,25 @@ export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
     if (children) {
       // In case both children and sections are passed, warn in the console that the children will be disregarded
       console.warn(
-        'EuiHeader cannot accept both `children` and `sections`. It will disregard the `children`.'
+        'WuiHeader cannot accept both `children` and `sections`. It will disregard the `children`.'
       );
     }
 
     contents = sections.map((section, index) => {
       const content = [];
       if (section.items) {
-        // Items get wrapped in EuiHeaderSection and each item in a EuiHeaderSectionItem
+        // Items get wrapped in WuiHeaderSection and each item in a WuiHeaderSectionItem
         content.push(
-          <EuiHeaderSection key={`items-${index}`}>
+          <WuiHeaderSection key={`items-${index}`}>
             {createHeaderSection(section.items, section.borders)}
-          </EuiHeaderSection>
+          </WuiHeaderSection>
         );
       }
       if (section.breadcrumbs) {
         content.push(
-          // Breadcrumbs are separate and cannot be contained in a EuiHeaderSection
+          // Breadcrumbs are separate and cannot be contained in a WuiHeaderSection
           // in order for truncation to work
-          <EuiHeaderBreadcrumbs
+          <WuiHeaderBreadcrumbs
             key={`breadcrumbs-${index}`}
             breadcrumbs={section.breadcrumbs}
             {...section.breadcrumbProps}

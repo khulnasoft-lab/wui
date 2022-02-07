@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +34,20 @@ import React, { Component } from 'react';
 
 const MINIMUM_COLUMN_WIDTH = 40;
 
-export interface EuiDataGridColumnResizerProps {
+export interface WuiDataGridColumnResizerProps {
   columnId: string;
   columnWidth: number;
   setColumnWidth: (columnId: string, width: number) => void;
 }
 
-interface EuiDataGridColumnResizerState {
+interface WuiDataGridColumnResizerState {
   initialX: number;
   offset: number;
 }
 
-export class EuiDataGridColumnResizer extends Component<
-  EuiDataGridColumnResizerProps,
-  EuiDataGridColumnResizerState
+export class WuiDataGridColumnResizer extends Component<
+  WuiDataGridColumnResizerProps,
+  WuiDataGridColumnResizerState
 > {
   state = {
     initialX: 0,
@@ -84,7 +97,7 @@ export class EuiDataGridColumnResizer extends Component<
 
     return (
       <div
-        className="euiDataGridColumnResizer"
+        className="wuiDataGridColumnResizer"
         data-test-subj="dataGridColumnResizer"
         style={{ marginRight: `${-offset}px` }}
         onMouseDown={this.onMouseDown}

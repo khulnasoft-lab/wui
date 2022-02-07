@@ -1,28 +1,28 @@
-@mixin euiToolTipStyle($size: null) {
-  @include euiBottomShadow($color: $euiColorInk);
-  border-radius: $euiBorderRadius;
-  background-color: $euiTooltipBackgroundColor;
-  color: $euiColorGhost;
-  z-index: $euiZLevel9;
+@mixin wuiToolTipStyle($size: null) {
+  @include wuiBottomShadow($color: $wuiColorInk);
+  border-radius: $wuiBorderRadius;
+  background-color: $wuiTooltipBackgroundColor;
+  color: $wuiColorGhost;
+  z-index: $wuiZLevel9;
   max-width: 256px;
   overflow-wrap: break-word;
 
   @if ($size == 's') {
-    @include euiFontSizeXS;
-    padding: $euiSizeS;
+    @include wuiFontSizeXS;
+    padding: $wuiSizeS;
   } @else {
-    @include euiFontSizeS;
-    padding: $euiSizeM;
+    @include wuiFontSizeS;
+    padding: $wuiSizeM;
   }
 }
 
-@mixin euiToolTipTitle {
-  font-weight: $euiFontWeightBold;
-  border-bottom: solid 1px tintOrShade($euiColorFullShade, 35%, 80%);
-  padding-bottom: $euiSizeXS;
-  margin-bottom: $euiSizeXS;
+@mixin wuiToolTipTitle {
+  font-weight: $wuiFontWeightBold;
+  border-bottom: solid 1px tintOrShade($wuiColorFullShade, 35%, 80%);
+  padding-bottom: $wuiSizeXS;
+  margin-bottom: $wuiSizeXS;
 }
 
-@mixin euiToolTipAnimation($side: 'top') {
-  animation: #{map-get($euiTooltipAnimations, $side)} $euiAnimSpeedSlow ease-out 0s forwards;
+@mixin wuiToolTipAnimation($side: 'top') {
+  animation: #{map-get($wuiTooltipAnimations, $side)} $wuiAnimSpeedSlow ease-out 0s forwards;
 }

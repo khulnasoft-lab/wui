@@ -1,15 +1,15 @@
-.euiStat {
+.wuiStat {
   // Modifier naming and colors.
   $titleColors: (
-    subdued: $euiTextSubduedColor,
-    primary: $euiColorPrimaryText,
-    secondary: $euiColorSecondaryText,
-    danger: $euiColorDangerText,
-    accent: $euiColorAccentText,
+    subdued: $wuiTextSubduedColor,
+    primary: $wuiColorPrimaryText,
+    secondary: $wuiColorSecondaryText,
+    danger: $wuiColorDangerText,
+    accent: $wuiColorAccentText,
   );
 
-  .euiStat__title {
-    color: $euiColorFullShade;
+  .wuiStat__title {
+    color: $wuiColorFullShade;
 
     // Create color classes based upon the map.
     @each $name, $color in $titleColors {
@@ -19,31 +19,31 @@
     }
   }
 
-  .euiStat__title-isLoading {
-    animation: euiStatPulse 1.5s infinite ease-in-out;
+  .wuiStat__title-isLoading {
+    animation: wuiStatPulse 1.5s infinite ease-in-out;
   }
 
-  .euiStat__description {
+  .wuiStat__description {
     color: map-get($titleColors, dark);
   }
 
-  &.euiStat--leftAligned {
+  &.wuiStat--leftAligned {
     text-align: left;
     align-items: flex-start;
   }
 
-  &.euiStat--centerAligned {
+  &.wuiStat--centerAligned {
     text-align: center;
     align-items: center;
   }
 
-  &.euiStat--rightAligned {
+  &.wuiStat--rightAligned {
     text-align: right;
     align-items: flex-end;
   }
 }
 
-@keyframes euiStatPulse {
+@keyframes wuiStatPulse {
   0% { opacity: 1; }
   50% { opacity: .25; }
   100% { opacity: 1; }

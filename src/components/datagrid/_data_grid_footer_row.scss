@@ -1,39 +1,39 @@
-@include euiDataGridFooterCell {
-  font-weight: $euiFontWeightBold;
+@include wuiDataGridFooterCell {
+  font-weight: $wuiFontWeightBold;
 }
 
-@include euiDataGridStyles(stickyFooter) {
-  .euiDataGridFooter {
+@include wuiDataGridStyles(stickyFooter) {
+  .wuiDataGridFooter {
     position: sticky;
     bottom: 0;
   }
 }
 
-@include euiDataGridStyles(footerOverline) {
-  @include euiDataGridFooterCell {
-    border-top: $euiBorderThick;
+@include wuiDataGridStyles(footerOverline) {
+  @include wuiDataGridFooterCell {
+    border-top: $wuiBorderThick;
     // sass-lint:disable-block no-important
-    border-top-color: $euiTextColor !important;
-    background: $euiColorEmptyShade !important;
+    border-top-color: $wuiTextColor !important;
+    background: $wuiColorEmptyShade !important;
   }
 }
 
-@include euiDataGridStyles(bordersNone) {
-  @include euiDataGridFooterCell {
+@include wuiDataGridStyles(bordersNone) {
+  @include wuiDataGridFooterCell {
     border-left: none;
     border-right: none;
   }
 }
 
-@include euiDataGridStyles(bordersHorizontal) {
-  @include euiDataGridFooterCell {
+@include wuiDataGridStyles(bordersHorizontal) {
+  @include wuiDataGridFooterCell {
     border-left: none;
     border-right: none;
   }
 }
 
-@include euiDataGridStyles(footerShade) {
-  @include euiDataGridFooterCell {
-    background: tintOrShade($euiColorLightestShade, 0%, 10%);
+@include wuiDataGridStyles(footerShade) {
+  @include wuiDataGridFooterCell {
+    background: tintOrShade($wuiColorLightestShade, 0%, 10%);
   }
 }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiText,
+  WuiPopover,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiSpacer,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -72,246 +72,246 @@ export default () => {
   const closePopover12 = () => setIsPopoverOpen12(false);
 
   const noteHeight = (
-    <EuiText>
+    <WuiText>
       <p style={{ width: 200 }}>
         For left- or right-aligned popovers, make sure there is sufficient
         content. If the popover height is too short, the arrow positioning will
         appear off.
       </p>
-    </EuiText>
+    </WuiText>
   );
 
   return (
     <div>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick1}>
                 downLeft
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen1}
             closePopover={closePopover1}
             anchorPosition="downLeft">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick2}>
                 downCenter
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen2}
             closePopover={closePopover2}
             anchorPosition="downCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick3}>
                 downRight
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen3}
             closePopover={closePopover3}
             anchorPosition="downRight">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiPopover>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick4}>
                 upLeft
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen4}
             closePopover={closePopover4}
             anchorPosition="upLeft">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick5}>
                 upCenter
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen5}
             closePopover={closePopover5}
             anchorPosition="upCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick6}>
                 upRight
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen6}
             closePopover={closePopover6}
             anchorPosition="upRight">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiPopover>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick7}>
                 leftUp
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen7}
             closePopover={closePopover7}
             anchorPosition="leftUp">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick8}>
                 leftCenter
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen8}
             closePopover={closePopover8}
             anchorPosition="leftCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick9}>
                 leftDown
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen9}
             closePopover={closePopover9}
             anchorPosition="leftDown">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiPopover>
+        </WuiFlexItem>
+      </WuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick10}>
                 rightUp
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen10}
             closePopover={closePopover10}
             anchorPosition="rightUp">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick11}>
                 rightCenter
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen11}
             closePopover={closePopover11}
             anchorPosition="rightCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </WuiPopover>
+        </WuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <WuiFlexItem grow={false}>
+          <WuiPopover
             ownFocus
             button={
-              <EuiButton
+              <WuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick12}>
                 rightDown
-              </EuiButton>
+              </WuiButton>
             }
             isOpen={isPopoverOpen12}
             closePopover={closePopover12}
             anchorPosition="rightDown">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiPopover>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

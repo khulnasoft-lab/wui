@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,14 +36,14 @@ import React, {
   KeyboardEventHandler,
 } from 'react';
 import { timeUnits, timeUnitsPlural } from '../time_units';
-import { EuiI18n } from '../../../i18n';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
-import { EuiTitle } from '../../../title';
-import { EuiSpacer } from '../../../spacer';
-import { EuiSelect, EuiFieldNumber } from '../../../form';
-import { EuiButton } from '../../../button';
+import { WuiI18n } from '../../../i18n';
+import { WuiFlexGroup, WuiFlexItem } from '../../../flex';
+import { WuiTitle } from '../../../title';
+import { WuiSpacer } from '../../../spacer';
+import { WuiSelect, WuiFieldNumber } from '../../../form';
+import { WuiButton } from '../../../button';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiScreenReaderOnly } from '../../../accessibility';
+import { WuiScreenReaderOnly } from '../../../accessibility';
 import {
   Milliseconds,
   TimeUnitId,
@@ -47,7 +60,7 @@ const MILLISECONDS_IN_SECOND = 1000;
 const MILLISECONDS_IN_MINUTE = MILLISECONDS_IN_SECOND * 60;
 const MILLISECONDS_IN_HOUR = MILLISECONDS_IN_MINUTE * 60;
 
-function fromMilliseconds(milliseconds: Milliseconds): EuiRefreshIntervalState {
+function fromMilliseconds(milliseconds: Milliseconds): WuiRefreshIntervalState {
   const round = (value: number) => parseFloat(value.toFixed(2));
   if (milliseconds > MILLISECONDS_IN_HOUR) {
     return {
@@ -81,22 +94,22 @@ function toMilliseconds(units: TimeUnitId, value: Milliseconds) {
   }
 }
 
-export interface EuiRefreshIntervalProps {
+export interface WuiRefreshIntervalProps {
   applyRefreshInterval?: ApplyRefreshInterval;
   isPaused: boolean;
   refreshInterval: Milliseconds;
 }
 
-interface EuiRefreshIntervalState {
+interface WuiRefreshIntervalState {
   value: number | '';
   units: TimeUnitId;
 }
 
-export class EuiRefreshInterval extends Component<
-  EuiRefreshIntervalProps,
-  EuiRefreshIntervalState
+export class WuiRefreshInterval extends Component<
+  WuiRefreshIntervalProps,
+  WuiRefreshIntervalState
 > {
-  state: EuiRefreshIntervalState = fromMilliseconds(this.props.refreshInterval);
+  state: WuiRefreshIntervalState = fromMilliseconds(this.props.refreshInterval);
 
   generateId = htmlIdGenerator();
 
@@ -183,18 +196,18 @@ export class EuiRefreshInterval extends Component<
 
     return (
       <fieldset>
-        <EuiTitle size="xxxs">
+        <WuiTitle size="xxxs">
           <legend id={legendId}>
-            <EuiI18n
-              token="euiRefreshInterval.legend"
+            <WuiI18n
+              token="wuiRefreshInterval.legend"
               default="Refresh every"
             />
           </legend>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiFieldNumber
+        </WuiTitle>
+        <WuiSpacer size="s" />
+        <WuiFlexGroup gutterSize="s" responsive={false}>
+          <WuiFlexItem>
+            <WuiFieldNumber
               compressed
               value={value}
               onChange={this.onValueChange}
@@ -203,9 +216,9 @@ export class EuiRefreshInterval extends Component<
               aria-describedby={`${refreshSelectionId} ${legendId}`}
               data-test-subj="superDatePickerRefreshIntervalInput"
             />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiSelect
+          </WuiFlexItem>
+          <WuiFlexItem>
+            <WuiSelect
               compressed
               aria-label="Refresh interval units"
               aria-describedby={`${refreshSelectionId} ${legendId}`}
@@ -215,10 +228,10 @@ export class EuiRefreshInterval extends Component<
               onKeyDown={this.handleKeyDown}
               data-test-subj="superDatePickerRefreshIntervalUnitsSelect"
             />
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
-              className="euiRefreshInterval__startButton"
+          </WuiFlexItem>
+          <WuiFlexItem grow={false}>
+            <WuiButton
+              className="wuiRefreshInterval__startButton"
               iconType={isPaused ? 'play' : 'stop'}
               size="s"
               onClick={this.toggleRefresh}
@@ -226,17 +239,17 @@ export class EuiRefreshInterval extends Component<
               data-test-subj="superDatePickerToggleRefreshButton"
               aria-describedby={refreshSelectionId}>
               {isPaused ? (
-                <EuiI18n token="euiRefreshInterval.start" default="Start" />
+                <WuiI18n token="wuiRefreshInterval.start" default="Start" />
               ) : (
-                <EuiI18n token="euiRefreshInterval.stop" default="Stop" />
+                <WuiI18n token="wuiRefreshInterval.stop" default="Stop" />
               )}
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiScreenReaderOnly>
+            </WuiButton>
+          </WuiFlexItem>
+        </WuiFlexGroup>
+        <WuiScreenReaderOnly>
           <p id={refreshSelectionId}>
-            <EuiI18n
-              token="euiRefreshInterval.fullDescription"
+            <WuiI18n
+              token="wuiRefreshInterval.fullDescription"
               default="Refresh interval currently set to {optionValue} {optionText}."
               values={{
                 optionValue: value,
@@ -244,7 +257,7 @@ export class EuiRefreshInterval extends Component<
               }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       </fieldset>
     );
   }

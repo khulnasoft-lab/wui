@@ -1,35 +1,35 @@
 import React from 'react';
-import { EuiText, EuiResizableContainer } from '../../../../src/components';
+import { WuiText, WuiResizableContainer } from '../../../../src/components';
 import { fake } from 'faker';
 
 const text = fake('{{lorem.paragraphs}}');
 
 export default () => (
-  <EuiResizableContainer style={{ height: '400px' }}>
-    {(EuiResizablePanel, EuiResizableButton) => (
+  <WuiResizableContainer style={{ height: '400px' }}>
+    {(WuiResizablePanel, WuiResizableButton) => (
       <>
-        <EuiResizablePanel initialSize={100 / 3} minSize="50px">
-          <EuiText>
+        <WuiResizablePanel initialSize={100 / 3} minSize="50px">
+          <WuiText>
             <p>{text}</p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="l" />
+        <WuiResizableButton size="l" />
 
-        <EuiResizablePanel initialSize={100 / 3}>
-          <EuiText>
+        <WuiResizablePanel initialSize={100 / 3}>
+          <WuiText>
             <p>{text}</p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
 
-        <EuiResizableButton size="l" />
+        <WuiResizableButton size="l" />
 
-        <EuiResizablePanel initialSize={100 / 3} minSize="10%">
-          <EuiText>
+        <WuiResizablePanel initialSize={100 / 3} minSize="10%">
+          <WuiText>
             <p>{text}</p>
-          </EuiText>
-        </EuiResizablePanel>
+          </WuiText>
+        </WuiResizablePanel>
       </>
     )}
-  </EuiResizableContainer>
+  </WuiResizableContainer>
 );

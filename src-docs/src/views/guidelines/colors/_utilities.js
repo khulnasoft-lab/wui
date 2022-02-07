@@ -3,41 +3,41 @@ import { ThemeContext } from '../../../components';
 import { calculateContrast, rgbToHex } from '../../../../../src/services';
 import { getSassVars } from '../_get_sass_vars';
 
-import { EuiBadge, EuiCopy, EuiFlexItem } from '../../../../../src/components';
-import { EuiIcon } from '../../../../../src/components/icon';
+import { WuiBadge, WuiCopy, WuiFlexItem } from '../../../../../src/components';
+import { WuiIcon } from '../../../../../src/components/icon';
 
 export const coreColors = [
-  'euiColorPrimary',
-  'euiColorAccent',
-  'euiColorSuccess',
-  'euiColorWarning',
-  'euiColorDanger',
+  'wuiColorPrimary',
+  'wuiColorAccent',
+  'wuiColorSuccess',
+  'wuiColorWarning',
+  'wuiColorDanger',
 ];
 
 export const coreTextVariants = [
-  'euiColorPrimaryText',
-  'euiColorAccentText',
-  'euiColorSuccessText',
-  'euiColorWarningText',
-  'euiColorDangerText',
+  'wuiColorPrimaryText',
+  'wuiColorAccentText',
+  'wuiColorSuccessText',
+  'wuiColorWarningText',
+  'wuiColorDangerText',
 ];
 
 export const grayColors = [
-  'euiColorEmptyShade',
-  'euiColorLightestShade',
-  'euiColorLightShade',
-  'euiColorMediumShade',
-  'euiColorDarkShade',
-  'euiColorDarkestShade',
-  'euiColorFullShade',
+  'wuiColorEmptyShade',
+  'wuiColorLightestShade',
+  'wuiColorLightShade',
+  'wuiColorMediumShade',
+  'wuiColorDarkShade',
+  'wuiColorDarkestShade',
+  'wuiColorFullShade',
 ];
 
 export const textColors = [
-  'euiTextSubduedColor',
-  'euiTextColor',
-  'euiTitleColor',
-  'euiColorGhost',
-  'euiColorInk',
+  'wuiTextSubduedColor',
+  'wuiTextColor',
+  'wuiTitleColor',
+  'wuiColorGhost',
+  'wuiColorInk',
 ];
 
 export const allowedColors = [...coreColors, ...grayColors];
@@ -45,21 +45,21 @@ export const allowedColors = [...coreColors, ...grayColors];
 export const textVariants = [...coreTextVariants, ...textColors];
 
 export const ratingAAA = (
-  <EuiBadge iconType="checkInCircleFilled" color="#000">
+  <WuiBadge iconType="checkInCircleFilled" color="#000">
     AAA
-  </EuiBadge>
+  </WuiBadge>
 );
 export const ratingAA = (
-  <EuiBadge iconType="checkInCircleFilled" color="#333">
+  <WuiBadge iconType="checkInCircleFilled" color="#333">
     AA
-  </EuiBadge>
+  </WuiBadge>
 );
 export const ratingAA18 = (
-  <EuiBadge iconType="partial" color="#666">
+  <WuiBadge iconType="partial" color="#666">
     AA18
-  </EuiBadge>
+  </WuiBadge>
 );
-export const ratingAll = <EuiBadge color="#eee">ALL</EuiBadge>;
+export const ratingAll = <WuiBadge color="#eee">ALL</WuiBadge>;
 
 function getContrastRatings(background, foreground, palette) {
   const contrast = calculateContrast(
@@ -80,10 +80,10 @@ function getContrastRatings(background, foreground, palette) {
     contrastRatingBadge = ratingAA18;
   } else if (foreground.includes('Shade') && contrast >= 2) {
     contrastRating = 'minusInCircle';
-    contrastRatingBadge = <EuiIcon type="minusInCircle" />;
+    contrastRatingBadge = <WuiIcon type="minusInCircle" />;
   } else {
     contrastRating = 'cross';
-    contrastRatingBadge = <EuiIcon type="cross" />;
+    contrastRatingBadge = <WuiIcon type="cross" />;
   }
 
   return { contrast, contrastRating, contrastRatingBadge };
@@ -121,9 +121,9 @@ color: $${foreground};`;
   );
 
   return (
-    <EuiFlexItem className="eui-textCenter">
-      <EuiCopy
-        anchorClassName="eui-displayBlock"
+    <WuiFlexItem className="wui-textCenter">
+      <WuiCopy
+        anchorClassName="wui-displayBlock"
         title={
           <span>
             {contrastRatingBadge} Contrast is {contrast.toFixed(1)}
@@ -133,7 +133,7 @@ color: $${foreground};`;
         afterMessage={<small>Copied!</small>}
         textToCopy={textToCopy}>
         {copy => (
-          <EuiBadge
+          <WuiBadge
             className="guideColorSection__button"
             iconType={contrastRating}
             onClick={copy}
@@ -144,10 +144,10 @@ color: $${foreground};`;
               color: palette[foreground].rgba,
             }}>
             {foreground}
-          </EuiBadge>
+          </WuiBadge>
         )}
-      </EuiCopy>
-    </EuiFlexItem>
+      </WuiCopy>
+    </WuiFlexItem>
   );
 };
 

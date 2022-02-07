@@ -1,187 +1,187 @@
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components/';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton onClick={() => window.alert('Button clicked')}>
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton onClick={() => window.alert('Button clicked')}>
           Primary
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton fill onClick={() => window.alert('Button clicked')}>
+      <WuiFlexItem grow={false}>
+        <WuiButton fill onClick={() => window.alert('Button clicked')}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" onClick={() => window.alert('Button clicked')}>
+      <WuiFlexItem grow={false}>
+        <WuiButton size="s" onClick={() => window.alert('Button clicked')}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" fill onClick={() => window.alert('Button clicked')}>
+      <WuiFlexItem grow={false}>
+        <WuiButton size="s" fill onClick={() => window.alert('Button clicked')}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="secondary"
           onClick={() => window.alert('Button clicked')}>
           Secondary
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="secondary"
           fill
           onClick={() => window.alert('Button clicked')}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="secondary"
           size="s"
           onClick={() => window.alert('Button clicked')}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="secondary"
           size="s"
           fill
           onClick={() => window.alert('Button clicked')}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="warning"
           onClick={() => window.alert('Button clicked')}>
           Warning
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="warning"
           fill
           onClick={() => window.alert('Button clicked')}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="warning"
           size="s"
           onClick={() => window.alert('Button clicked')}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="warning"
           size="s"
           fill
           onClick={() => window.alert('Button clicked')}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="danger"
           onClick={() => window.alert('Button clicked')}>
           Danger
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="danger"
           fill
           onClick={() => window.alert('Button clicked')}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="danger"
           size="s"
           onClick={() => window.alert('Button clicked')}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           color="danger"
           size="s"
           fill
           onClick={() => window.alert('Button clicked')}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton isDisabled onClick={() => window.alert('Button clicked')}>
+    <WuiFlexGroup gutterSize="s" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiButton isDisabled onClick={() => window.alert('Button clicked')}>
           Disabled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           isDisabled
           fill
           onClick={() => window.alert('Button clicked')}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           isDisabled
           size="s"
           onClick={() => window.alert('Button clicked')}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </WuiButton>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <WuiFlexItem grow={false}>
+        <WuiButton
           isDisabled
           size="s"
           fill
           onClick={() => window.alert('Button clicked')}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,68 +34,68 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableListItem } from './selectable_list_item';
+import { WuiSelectableListItem } from './selectable_list_item';
 
-describe('EuiSelectableListItem', () => {
+describe('WuiSelectableListItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiSelectableListItem {...requiredProps} />);
+    const component = render(<WuiSelectableListItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('checked is on', () => {
-      const component = render(<EuiSelectableListItem checked="on" />);
+      const component = render(<WuiSelectableListItem checked="on" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('checked is off', () => {
-      const component = render(<EuiSelectableListItem checked="off" />);
+      const component = render(<WuiSelectableListItem checked="off" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('showIcons can be turned off', () => {
-      const component = render(<EuiSelectableListItem showIcons={false} />);
+      const component = render(<WuiSelectableListItem showIcons={false} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isFocused', () => {
-      const component = render(<EuiSelectableListItem isFocused />);
+      const component = render(<WuiSelectableListItem isFocused />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('disabled', () => {
-      const component = render(<EuiSelectableListItem disabled />);
+      const component = render(<WuiSelectableListItem disabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('prepend', () => {
-      const component = render(<EuiSelectableListItem prepend={<span />} />);
+      const component = render(<WuiSelectableListItem prepend={<span />} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('append', () => {
-      const component = render(<EuiSelectableListItem append={<span />} />);
+      const component = render(<WuiSelectableListItem append={<span />} />);
 
       expect(component).toMatchSnapshot();
     });
 
     describe('onFocusBadge', () => {
       test('can be true', () => {
-        const component = render(<EuiSelectableListItem onFocusBadge={true} />);
+        const component = render(<WuiSelectableListItem onFocusBadge={true} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('can be custom', () => {
         const component = render(
-          <EuiSelectableListItem
+          <WuiSelectableListItem
             onFocusBadge={{
               children: 'Custom',
               iconType: 'bolt',

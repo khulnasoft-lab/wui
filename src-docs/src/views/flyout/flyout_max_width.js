@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiLink,
-  EuiText,
-  EuiTitle,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSpacer,
+  WuiFlyout,
+  WuiFlyoutBody,
+  WuiFlyoutHeader,
+  WuiLink,
+  WuiText,
+  WuiTitle,
+  WuiFieldText,
+  WuiForm,
+  WuiFormRow,
+  WuiFilePicker,
+  WuiRange,
+  WuiSelect,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -46,37 +46,37 @@ export default () => {
     }
 
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         ownFocus
         onClose={closeFlyout}
         aria-labelledby="flyoutMaxWidthTitle"
         size={flyoutSize}
         maxWidth={flyoutMaxWidth}>
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="m">
             <h2 id="flyoutMaxWidthTitle">{maxWidthTitle} maxWidth</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </WuiTitle>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody>
+          <WuiText>
             <p>
               In many cases, you&rsquo;ll want to set a custom width
               that&rsquo;s tailored to your content. In this case, the flyout is
               an ideal width for form elements.
             </p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer />
+          <WuiSpacer />
 
-          <EuiForm>
-            <EuiFormRow
+          <WuiForm>
+            <WuiFormRow
               label="Text field"
               helpText="I am some friendly help text.">
-              <EuiFieldText name="first" />
-            </EuiFormRow>
+              <WuiFieldText name="first" />
+            </WuiFormRow>
 
-            <EuiFormRow label="Select (with no initial selection)">
-              <EuiSelect
+            <WuiFormRow label="Select (with no initial selection)">
+              <WuiSelect
                 hasNoInitialSelection
                 options={[
                   { value: 'option_one', text: 'Option one' },
@@ -84,93 +84,93 @@ export default () => {
                   { value: 'option_three', text: 'Option three' },
                 ]}
               />
-            </EuiFormRow>
+            </WuiFormRow>
 
-            <EuiFormRow label="File picker">
-              <EuiFilePicker />
-            </EuiFormRow>
+            <WuiFormRow label="File picker">
+              <WuiFilePicker />
+            </WuiFormRow>
 
-            <EuiFormRow label="Range">
-              <EuiRange min={0} max={100} name="range" id="range" />
-            </EuiFormRow>
-          </EuiForm>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+            <WuiFormRow label="Range">
+              <WuiRange min={0} max={100} name="range" id="range" />
+            </WuiFormRow>
+          </WuiForm>
+        </WuiFlyoutBody>
+      </WuiFlyout>
     );
   }
   return (
     <div>
-      <EuiLink color="secondary" onClick={() => showFlyout('s')}>
+      <WuiLink color="secondary" onClick={() => showFlyout('s')}>
         Show <strong>small</strong> flyout with <strong>no max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="secondary" onClick={() => showFlyout('s', true)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="secondary" onClick={() => showFlyout('s', true)}>
         Show <strong>small</strong> flyout with{' '}
         <strong>default max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="danger" onClick={() => showFlyout('s', 200)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="danger" onClick={() => showFlyout('s', 200)}>
         Show <strong>small</strong> flyout with{' '}
         <strong>smaller custom max-width</strong> -- minWidth wins except for on
         small screens
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="danger" onClick={() => showFlyout('s', 448)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="danger" onClick={() => showFlyout('s', 448)}>
         Show <strong>small</strong> flyout with{' '}
         <strong>larger custom max-width</strong> -- minWidth wins except for on
         small screens
-      </EuiLink>
+      </WuiLink>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiLink color="secondary" onClick={() => showFlyout('m')}>
+      <WuiLink color="secondary" onClick={() => showFlyout('m')}>
         Show <strong>medium</strong> flyout with <strong>no max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="secondary" onClick={() => showFlyout('m', true)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="secondary" onClick={() => showFlyout('m', true)}>
         Show <strong>medium</strong> flyout with{' '}
         <strong>default max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="danger" onClick={() => showFlyout('m', 448)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="danger" onClick={() => showFlyout('m', 448)}>
         Show <strong>medium</strong> flyout with{' '}
         <strong>smaller custom max-width</strong> -- minWidth wins and full
         100vw wins on small screens
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="secondary" onClick={() => showFlyout('m', 900)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="secondary" onClick={() => showFlyout('m', 900)}>
         Show <strong>medium</strong> flyout with{' '}
         <strong>larger custom max-width</strong>
-      </EuiLink>
+      </WuiLink>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiLink color="secondary" onClick={() => showFlyout('l')}>
+      <WuiLink color="secondary" onClick={() => showFlyout('l')}>
         Show <strong>large</strong> flyout with <strong>no max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="secondary" onClick={() => showFlyout('l', true)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="secondary" onClick={() => showFlyout('l', true)}>
         Show <strong>large</strong> flyout with{' '}
         <strong>default max-width</strong>
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="danger" onClick={() => showFlyout('l', 448)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="danger" onClick={() => showFlyout('l', 448)}>
         Show <strong>large</strong> flyout with{' '}
         <strong>smaller custom max-width</strong> -- minWidth wins and full
         100vw wins on small screens
-      </EuiLink>
-      <EuiSpacer size="s" />
-      <EuiLink color="secondary" onClick={() => showFlyout('l', 1600)}>
+      </WuiLink>
+      <WuiSpacer size="s" />
+      <WuiLink color="secondary" onClick={() => showFlyout('l', 1600)}>
         Show <strong>large</strong> flyout with{' '}
         <strong>larger custom max-width</strong>
-      </EuiLink>
+      </WuiLink>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiLink color="primary" onClick={() => showFlyout('m', 0)}>
+      <WuiLink color="primary" onClick={() => showFlyout('m', 0)}>
         Trick for forms: <strong>Medium</strong> flyout with{' '}
         <strong>0 as max-width</strong>
-      </EuiLink>
+      </WuiLink>
 
       {flyout}
     </div>

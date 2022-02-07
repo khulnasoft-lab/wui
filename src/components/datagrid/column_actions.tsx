@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -16,17 +29,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 import React from 'react';
-import { EuiDataGridColumn, EuiDataGridSorting } from './data_grid_types';
-import { EuiI18n } from '../i18n';
-import { EuiListGroupItemProps } from '../list_group';
+import { WuiDataGridColumn, WuiDataGridSorting } from './data_grid_types';
+import { WuiI18n } from '../i18n';
+import { WuiListGroupItemProps } from '../list_group';
 
 export function getColumnActions(
-  column: EuiDataGridColumn,
-  columns: EuiDataGridColumn[],
+  column: WuiDataGridColumn,
+  columns: WuiDataGridColumn[],
   setVisibleColumns: (columnId: string[]) => void,
   setIsPopoverOpen: (value: boolean) => void,
-  sorting: EuiDataGridSorting | undefined,
+  sorting: WuiDataGridSorting | undefined,
   switchColumnPos: (colFromId: string, colToId: string) => void
 ) {
   if (column.actions === false) {
@@ -60,7 +74,7 @@ export function getColumnActions(
           direction: direction,
         },
       });
-      sorting.onSort(newColumns as EuiDataGridSorting['columns']);
+      sorting.onSort(newColumns as WuiDataGridSorting['columns']);
     } else {
       // add new sort
       const newColumns = [
@@ -70,7 +84,7 @@ export function getColumnActions(
           direction: direction,
         },
       ];
-      sorting.onSort(newColumns as EuiDataGridSorting['columns']);
+      sorting.onSort(newColumns as WuiDataGridSorting['columns']);
     }
   };
   const onClickHideColumn = () =>
@@ -100,17 +114,17 @@ export function getColumnActions(
     }
   };
 
-  const result: EuiListGroupItemProps[] = [];
+  const result: WuiListGroupItemProps[] = [];
   if (column.actions?.showHide !== false) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.hideColumn" default="Hide column" />
+        <WuiI18n token="wuiColumnActions.hideColumn" default="Hide column" />
       ),
       onClick: onClickHideColumn,
       iconType: 'eyeClosed',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as WuiListGroupItemProps;
     if (typeof column.actions?.showHide === 'object') {
       result.push({ ...option, ...column.actions.showHide });
     } else {
@@ -121,18 +135,18 @@ export function getColumnActions(
   if (column.actions?.showSortAsc !== false && sorting) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.sortAsc" default="Sort schema asc" />
+        <WuiI18n token="wuiColumnActions.sortAsc" default="Sort schema asc" />
       ),
       onClick: onClickSortAsc,
       isDisabled: column.isSortable === false,
       className:
         sortingIdx >= 0 && sorting.columns[sortingIdx].direction === 'asc'
-          ? 'euiDataGridHeader__action--selected'
+          ? 'wuiDataGridHeader__action--selected'
           : '',
       iconType: 'sortUp',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as WuiListGroupItemProps;
     if (typeof column.actions?.showSortAsc === 'object') {
       result.push({ ...option, ...column.actions.showSortAsc });
     } else {
@@ -143,18 +157,18 @@ export function getColumnActions(
   if (column.actions?.showSortDesc !== false && sorting) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.sortDesc" default="Sort schema desc" />
+        <WuiI18n token="wuiColumnActions.sortDesc" default="Sort schema desc" />
       ),
       onClick: onClickSortDesc,
       isDisabled: column.isSortable === false,
       className:
         sortingIdx >= 0 && sorting.columns[sortingIdx].direction === 'desc'
-          ? 'euiDataGridHeader__action--selected'
+          ? 'wuiDataGridHeader__action--selected'
           : '',
       iconType: 'sortDown',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as WuiListGroupItemProps;
     if (typeof column.actions?.showSortDesc === 'object') {
       result.push({ ...option, ...column.actions.showSortDesc });
     } else {
@@ -164,13 +178,13 @@ export function getColumnActions(
 
   if (column.actions?.showMoveLeft !== false) {
     const option = {
-      label: <EuiI18n token="euiColumnActions.moveLeft" default="Move left" />,
+      label: <WuiI18n token="wuiColumnActions.moveLeft" default="Move left" />,
       iconType: 'sortLeft',
       size: 'xs',
       color: 'text',
       onClick: onClickMoveLeft,
       isDisabled: colIdx === 0,
-    } as EuiListGroupItemProps;
+    } as WuiListGroupItemProps;
     if (typeof column.actions?.showMoveLeft === 'object') {
       result.push({ ...option, ...column.actions.showMoveLeft });
     } else {
@@ -181,14 +195,14 @@ export function getColumnActions(
   if (column.actions?.showMoveRight !== false) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.moveRight" default="Move right" />
+        <WuiI18n token="wuiColumnActions.moveRight" default="Move right" />
       ),
       iconType: 'sortRight',
       size: 'xs',
       color: 'text',
       onClick: onClickMoveRight,
       isDisabled: colIdx === columns.length - 1,
-    } as EuiListGroupItemProps;
+    } as WuiListGroupItemProps;
     if (typeof column.actions?.showMoveRight === 'object') {
       result.push({ ...option, ...column.actions.showMoveRight });
     } else {
@@ -199,7 +213,7 @@ export function getColumnActions(
     ? [...result, ...column.actions?.additional]
     : result;
 
-  //wrap EuiListGroupItem onClick function to close the popover and prevet bubbling up
+  //wrap WuiListGroupItem onClick function to close the popover and prevet bubbling up
 
   return allActions.map(action => {
     return {
@@ -214,5 +228,5 @@ export function getColumnActions(
         },
       },
     };
-  }) as EuiListGroupItemProps[];
+  }) as WuiListGroupItemProps[];
 }

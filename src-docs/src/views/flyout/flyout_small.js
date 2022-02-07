@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiButton,
-  EuiText,
-  EuiTitle,
+  WuiFlyout,
+  WuiFlyoutHeader,
+  WuiFlyoutBody,
+  WuiButton,
+  WuiText,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,29 +19,29 @@ export default () => {
   let flyout;
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         onClose={closeFlyout}
         size="s"
         aria-labelledby="flyoutSmallTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="s">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="s">
             <h2 id="flyoutSmallTitle">A small flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </WuiTitle>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody>
+          <WuiText>
             <p>
               In small flyouts, it is ok to reduce the header size to{' '}
               <code>s</code>.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </WuiText>
+        </WuiFlyoutBody>
+      </WuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show small flyout</EuiButton>
+      <WuiButton onClick={showFlyout}>Show small flyout</WuiButton>
 
       {flyout}
     </div>

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSearchFilters render - no filters 1`] = `<EuiFilterGroup />`;
+exports[`WuiSearchFilters render - no filters 1`] = `<WuiFilterGroup />`;
 
-exports[`EuiSearchFilters render - with filters 1`] = `
-<EuiFilterGroup>
+exports[`WuiSearchFilters render - with filters 1`] = `
+<WuiFilterGroup>
   <IsFilter
     config={
       Object {
@@ -65,5 +65,5 @@ exports[`EuiSearchFilters render - with filters 1`] = `
       }
     }
   />
-</EuiFilterGroup>
+</WuiFilterGroup>
 `;

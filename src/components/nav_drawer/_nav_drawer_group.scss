@@ -1,55 +1,55 @@
-.euiNavDrawerGroup__item {
-  .euiListGroupItem__label {
-    transition: all $euiAnimSpeedExtraFast;
+.wuiNavDrawerGroup__item {
+  .wuiListGroupItem__label {
+    transition: all $wuiAnimSpeedExtraFast;
   }
 
-  .euiListGroupItem__button {
+  .wuiListGroupItem__button {
     color: inherit; // Force color to inherit from regular text color in case it's an anchor tag
 
     &:focus {
-      background-color: $euiFocusBackgroundColor;
+      background-color: $wuiFocusBackgroundColor;
     }
   }
 
-  .euiListGroupItem__icon {
-    max-width: $euiSize;
+  .wuiListGroupItem__icon {
+    max-width: $wuiSize;
     white-space: nowrap;
   }
 }
 
 // Default icon will simulate an avatar but with coloring specific to
-.euiNavDrawerGroup__itemDefaultIcon {
+.wuiNavDrawerGroup__itemDefaultIcon {
   @include innerBorder('dark', 50%, .05);
-  @include size($euiSize);
-  line-height: $euiSize;
-  font-size: $euiSizeM;
+  @include size($wuiSize);
+  line-height: $wuiSize;
+  font-size: $wuiSizeM;
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   overflow: visible;
-  font-weight: $euiFontWeightMedium; // Explicitly state so it doesn't get overridden by inheritance
+  font-weight: $wuiFontWeightMedium; // Explicitly state so it doesn't get overridden by inheritance
   border-radius: 50%;
 
   &:after {
-    top: -$euiSizeXS;
-    left: -$euiSizeXS;
-    right: -$euiSizeXS;
-    bottom: -$euiSizeXS;
+    top: -$wuiSizeXS;
+    left: -$wuiSizeXS;
+    right: -$wuiSizeXS;
+    bottom: -$wuiSizeXS;
   }
 }
 
-.euiNavDrawerMenu {
-  .euiListGroupItem:not(:first-of-type) {
+.wuiNavDrawerMenu {
+  .wuiListGroupItem:not(:first-of-type) {
     margin-top: 0;
   }
 
-  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) .euiListGroupItem__button,
-  .euiAccordion__button__isActive {
-    box-shadow: 3px 0 0 inset $euiColorPrimary;
+  .wuiListGroupItem-isActive:not(.wuiListGroupItem--ghost) .wuiListGroupItem__button,
+  .wuiAccordion__button__isActive {
+    box-shadow: 3px 0 0 inset $wuiColorPrimary;
   }
 
-  .euiAccordion__button > span {
+  .wuiAccordion__button > span {
     text-overflow: ellipsis;
     overflow: hidden;
   }

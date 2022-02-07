@@ -1,4 +1,4 @@
-// Enforce EuiI18n token names & variable names in render prop
+// Enforce WuiI18n token names & variable names in render prop
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 
@@ -76,7 +76,7 @@ module.exports = {
     type: 'problem',
 
     docs: {
-      description: 'Enforce EuiI18n token names & variable names in render prop',
+      description: 'Enforce WuiI18n token names & variable names in render prop',
     },
 
     messages: {
@@ -93,12 +93,12 @@ module.exports = {
   create: function (context) {
     const filename = context.getFilename();
     const basename = path.basename(filename, path.extname(filename));
-    const expectedTokenNamespace = `eui${basename.replace(/(^|_)([a-z])/g, (match, leading, char) => char.toUpperCase())}`;
+    const expectedTokenNamespace = `wui${basename.replace(/(^|_)([a-z])/g, (match, leading, char) => char.toUpperCase())}`;
 
     return {
       JSXOpeningElement(node) {
-        // only process <EuiI8n/> elements
-        if (node.name.type !== 'JSXIdentifier' || node.name.name !== 'EuiI18n') return;
+        // only process <WuiI8n/> elements
+        if (node.name.type !== 'JSXIdentifier' || node.name.name !== 'WuiI18n') return;
 
         const jsxElement = node.parent;
         const hasRenderProp = jsxElement.children.length > 0;
@@ -323,11 +323,11 @@ module.exports = {
         // debugger;
       },
       CallExpression(node) {
-        // Only process calls to useEuiI18n
+        // Only process calls to useWuiI18n
         if (
           !node.callee ||
           node.callee.type !== 'Identifier' ||
-          node.callee.name !== 'useEuiI18n'
+          node.callee.name !== 'useWuiI18n'
         )
           return;
 

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,24 +36,24 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { EuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { WuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
 import { throttle } from '../color_picker/utils';
 
-export type EuiHideForBreakpoints = EuiBreakpointSize;
+export type WuiHideForBreakpoints = WuiBreakpointSize;
 
-export interface EuiHideForProps {
+export interface WuiHideForProps {
   /**
    * Required otherwise nothing ever gets returned
    */
   children: ReactNode;
   /**
    * List of all the responsive sizes to hide the children for.
-   * Array of #EuiBreakpointSize
+   * Array of #WuiBreakpointSize
    */
-  sizes: EuiHideForBreakpoints[] | 'all' | 'none';
+  sizes: WuiHideForBreakpoints[] | 'all' | 'none';
 }
 
-export const EuiHideFor: FunctionComponent<EuiHideForProps> = ({
+export const WuiHideFor: FunctionComponent<WuiHideForProps> = ({
   children,
   sizes,
 }) => {
@@ -67,7 +80,7 @@ export const EuiHideFor: FunctionComponent<EuiHideForProps> = ({
 
   if (
     sizes === 'all' ||
-    sizes.includes(currentBreakpoint as EuiBreakpointSize)
+    sizes.includes(currentBreakpoint as WuiBreakpointSize)
   ) {
     return null;
   }

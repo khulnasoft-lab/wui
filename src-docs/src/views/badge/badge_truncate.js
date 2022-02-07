@@ -1,27 +1,27 @@
 import React from 'react';
 
-import { EuiBadge, EuiPanel, EuiBadgeGroup } from '../../../../src/components';
+import { WuiBadge, WuiPanel, WuiBadgeGroup } from '../../../../src/components';
 
 export default () => (
-  <EuiPanel style={{ maxWidth: 200 }}>
-    <EuiBadgeGroup gutterSize="s">
-      <EuiBadge>Badge with simple text being truncated</EuiBadge>
+  <WuiPanel style={{ maxWidth: 200 }}>
+    <WuiBadgeGroup gutterSize="s">
+      <WuiBadge>Badge with simple text being truncated</WuiBadge>
 
-      <EuiBadge iconType="clock">Badge with icon being truncated</EuiBadge>
+      <WuiBadge iconType="clock">Badge with icon being truncated</WuiBadge>
 
-      <EuiBadge onClick={() => {}} onClickAriaLabel="Click this badge to...">
+      <WuiBadge onClick={() => {}} onClickAriaLabel="Click this badge to...">
         Badge with onClick being truncated
-      </EuiBadge>
+      </WuiBadge>
 
-      <EuiBadge
+      <WuiBadge
         iconType="cross"
         iconSide="right"
         iconOnClick={() => {}}
         iconOnClickAriaLabel="Click this icon to...">
         Badge with iconOnClick being truncated
-      </EuiBadge>
+      </WuiBadge>
 
-      <EuiBadge
+      <WuiBadge
         iconType="cross"
         iconSide="right"
         onClick={() => {}}
@@ -29,7 +29,7 @@ export default () => (
         iconOnClick={() => {}}
         iconOnClickAriaLabel="Click this icon to...">
         Badge with both onClicks being truncated
-      </EuiBadge>
-    </EuiBadgeGroup>
-  </EuiPanel>
+      </WuiBadge>
+    </WuiBadgeGroup>
+  </WuiPanel>
 );

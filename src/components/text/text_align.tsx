@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,9 +35,9 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 export const alignmentToClassNameMap = {
-  left: 'euiTextAlign--left',
-  right: 'euiTextAlign--right',
-  center: 'euiTextAlign--center',
+  left: 'wuiTextAlign--left',
+  right: 'wuiTextAlign--right',
+  center: 'wuiTextAlign--center',
 };
 
 export type TextAlignment = keyof typeof alignmentToClassNameMap;
@@ -36,14 +49,14 @@ type Props = CommonProps &
     textAlign?: TextAlignment;
   };
 
-export const EuiTextAlign: FunctionComponent<Props> = ({
+export const WuiTextAlign: FunctionComponent<Props> = ({
   children,
   className,
   textAlign = 'left',
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextAlign',
+    'wuiTextAlign',
     alignmentToClassNameMap[textAlign],
     className
   );

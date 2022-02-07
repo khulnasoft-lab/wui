@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
+export type WuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
      * Aspect ratio height. For example 9 would be widescreen video.
@@ -37,7 +50,7 @@ export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
     maxWidth?: number;
   };
 
-export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
+export const WuiAspectRatio: FunctionComponent<WuiAspectRatioProps> = ({
   children,
   className,
   height,
@@ -45,7 +58,7 @@ export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
   maxWidth,
   ...rest
 }) => {
-  const classes = classNames('euiAspectRatio', className);
+  const classes = classNames('wuiAspectRatio', className);
 
   const paddingBottom = `${(height / width) * 100}%`;
 

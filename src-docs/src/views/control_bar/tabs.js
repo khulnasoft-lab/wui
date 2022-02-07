@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiButton, EuiControlBar, EuiText } from '../../../../src/components';
+import { WuiButton, WuiControlBar, WuiText } from '../../../../src/components';
 
 export default () => {
   const [tabContent, setTabContent] = useState('');
@@ -84,23 +84,23 @@ export default () => {
 
   if (isDisplaying) {
     display = (
-      <EuiControlBar
+      <WuiControlBar
         controls={controls}
         size="m"
         showContent={contentIsVisible}
         showOnMobile>
         {tabContent !== '' && (
           <div style={{ padding: '1rem' }}>
-            <EuiText>{tabContent}</EuiText>
+            <WuiText>{tabContent}</WuiText>
           </div>
         )}
-      </EuiControlBar>
+      </WuiControlBar>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={toggleDisplay}>Toggle tabs example</EuiButton>
+      <WuiButton onClick={toggleDisplay}>Toggle tabs example</WuiButton>
       {display}
     </div>
   );

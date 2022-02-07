@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 
 import {
-  EuiMarkdownEditor,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiButtonToggle,
+  WuiMarkdownEditor,
+  WuiSpacer,
+  WuiCodeBlock,
+  WuiButtonToggle,
 } from '../../../../src/components';
 
 const initialContent = `## Hello world!
@@ -48,8 +48,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor demo"
+      <WuiMarkdownEditor
+        aria-label="WUI markdown editor demo"
         value={value}
         onChange={setValue}
         height={400}
@@ -57,9 +57,9 @@ export default () => {
         errors={messages}
         dropHandlers={dropHandlers}
       />
-      <EuiSpacer size="s" />
-      <div className="eui-textRight">
-        <EuiButtonToggle
+      <WuiSpacer size="s" />
+      <div className="wui-textRight">
+        <WuiButtonToggle
           label={isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
           size="s"
           isEmpty
@@ -68,7 +68,7 @@ export default () => {
           isSelected={isAstShowing}
         />
       </div>
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <WuiCodeBlock language="json">{ast}</WuiCodeBlock>}
     </>
   );
 };

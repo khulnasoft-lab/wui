@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiPortal } from '../../../../src/components';
+import { WuiCode, WuiPortal } from '../../../../src/components';
 
 import { Portal } from './portal';
 const portalSource = require('!!raw-loader!./portal');
@@ -30,13 +30,13 @@ export const PortalExample = {
       ],
       text: (
         <p>
-          <strong>EuiPortal</strong> allows you to append its contained children
+          <strong>WuiPortal</strong> allows you to append its contained children
           onto the document body. It is useful for moving fixed elements like
           modals, tooltips or toasts when you are worried about a z-index or
           overflow conflict.
         </p>
       ),
-      components: { EuiPortal },
+      components: { WuiPortal },
       demo: <Portal />,
     },
     {
@@ -54,23 +54,23 @@ export const PortalExample = {
       text: (
         <React.Fragment>
           <p>
-            There is an optional <EuiCode>insert</EuiCode> prop that can specify
+            There is an optional <WuiCode>insert</WuiCode> prop that can specify
             the portal&apos;s location in the DOM. When used, it is important to
             consider how the location relates to the component lifecycle, as it
             could be removed from the DOM by another component update.
           </p>
           <p>
-            <EuiCode>insert</EuiCode> is an object with two key-value pairs:{' '}
-            <EuiCode>sibling</EuiCode> and <EuiCode>position</EuiCode>.
-            <EuiCode>sibling</EuiCode> is the React node or HTMLElement to
-            insert the portal next to, and <EuiCode>position</EuiCode> specifies
+            <WuiCode>insert</WuiCode> is an object with two key-value pairs:{' '}
+            <WuiCode>sibling</WuiCode> and <WuiCode>position</WuiCode>.
+            <WuiCode>sibling</WuiCode> is the React node or HTMLElement to
+            insert the portal next to, and <WuiCode>position</WuiCode> specifies
             the portal&apos;s relative position, either{' '}
-            <EuiCode>before</EuiCode> or
-            <EuiCode>after</EuiCode>.
+            <WuiCode>before</WuiCode> or
+            <WuiCode>after</WuiCode>.
           </p>
         </React.Fragment>
       ),
-      props: { EuiPortal },
+      props: { WuiPortal },
       demo: <PortalInsert />,
     },
   ],

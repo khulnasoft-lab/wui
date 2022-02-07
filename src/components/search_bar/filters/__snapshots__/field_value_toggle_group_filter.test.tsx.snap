@@ -2,7 +2,7 @@
 
 exports[`TermToggleGroupFilter render - active 1`] = `
 Array [
-  <EuiFilterButton
+  <WuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -10,9 +10,9 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+    Wazuh
+  </WuiFilterButton>,
+  <WuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -20,14 +20,14 @@ Array [
     onClick={[Function]}
     withNext={false}
   >
-    Elasticsearch
-  </EuiFilterButton>,
+    Wazuhsearch
+  </WuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render - active negated - custom negated name 1`] = `
 Array [
-  <EuiFilterButton
+  <WuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -35,9 +35,9 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    -Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+    -Wazuh
+  </WuiFilterButton>,
+  <WuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -45,14 +45,14 @@ Array [
     onClick={[Function]}
     withNext={false}
   >
-    Elasticsearch
-  </EuiFilterButton>,
+    Wazuhsearch
+  </WuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render - active negated 1`] = `
 Array [
-  <EuiFilterButton
+  <WuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -60,9 +60,9 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Not Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+    Not Wazuh
+  </WuiFilterButton>,
+  <WuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -70,14 +70,14 @@ Array [
     onClick={[Function]}
     withNext={false}
   >
-    Elasticsearch
-  </EuiFilterButton>,
+    Wazuhsearch
+  </WuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render 1`] = `
 Array [
-  <EuiFilterButton
+  <WuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_0"
@@ -85,9 +85,9 @@ Array [
     onClick={[Function]}
     withNext={true}
   >
-    Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+    Wazuh
+  </WuiFilterButton>,
+  <WuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -95,7 +95,7 @@ Array [
     onClick={[Function]}
     withNext={false}
   >
-    Elasticsearch
-  </EuiFilterButton>,
+    Wazuhsearch
+  </WuiFilterButton>,
 ]
 `;

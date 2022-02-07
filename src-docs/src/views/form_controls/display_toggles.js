@@ -2,14 +2,14 @@ import React, { cloneElement, Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiFlexGroup,
-  EuiSwitch,
-  EuiFlexItem,
-  EuiToolTip,
-  EuiIcon,
-  EuiButtonEmpty,
-  EuiPopover,
-  EuiSpacer,
+  WuiFlexGroup,
+  WuiSwitch,
+  WuiFlexItem,
+  WuiToolTip,
+  WuiIcon,
+  WuiButtonEmpty,
+  WuiPopover,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export class DisplayToggles extends Component {
@@ -66,32 +66,32 @@ export class DisplayToggles extends Component {
     return (
       <Fragment>
         {cloneElement(children, canProps)}
-        <EuiSpacer size={spacerSize} />
-        <EuiPopover
+        <WuiSpacer size={spacerSize} />
+        <WuiPopover
           panelPaddingSize="s"
           isOpen={this.state.isPopoverOpen}
           closePopover={() => {
             this.setState({ isPopoverOpen: false });
           }}
           button={
-            <EuiButtonEmpty
+            <WuiButtonEmpty
               iconType="controlsHorizontal"
               size="xs"
               onClick={() => {
                 this.setState({ isPopoverOpen: !this.state.isPopoverOpen });
               }}>
               Display toggles
-            </EuiButtonEmpty>
+            </WuiButtonEmpty>
           }>
           <div>
-            <EuiFlexGroup
+            <WuiFlexGroup
               wrap={true}
               direction="column"
               gutterSize="s"
               responsive={false}>
               {(canDisabled || canIsDisabled) && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'disabled'}
                     checked={this.state.disabled}
@@ -99,11 +99,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'disabled')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canReadOnly && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'readOnly'}
                     checked={this.state.readOnly}
@@ -111,11 +111,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'readOnly')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canLoading && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'loading'}
                     checked={this.state.loading}
@@ -123,11 +123,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'loading')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canInvalid && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'invalid'}
                     checked={this.state.invalid}
@@ -135,11 +135,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'invalid')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canFullWidth && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'fullWidth'}
                     checked={this.state.fullWidth}
@@ -147,20 +147,20 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'fullWidth')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canCompressed && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={
                       <span>
                         compressed{' '}
-                        <EuiToolTip content="Compressed usages are very specific. Click to view full compressed documentation">
+                        <WuiToolTip content="Compressed usages are very specific. Click to view full compressed documentation">
                           <a href="/#/forms/compressed-forms">
-                            <EuiIcon type="help" />
+                            <WuiIcon type="help" />
                           </a>
-                        </EuiToolTip>
+                        </WuiToolTip>
                       </span>
                     }
                     checked={this.state.compressed}
@@ -168,11 +168,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'compressed')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canPrepend && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'prepend'}
                     checked={this.state.prepend}
@@ -180,11 +180,11 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'prepend')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {canAppend && (
-                <EuiFlexItem grow={false}>
-                  <EuiSwitch
+                <WuiFlexItem grow={false}>
+                  <WuiSwitch
                     compressed
                     label={'append'}
                     checked={this.state.append}
@@ -192,19 +192,19 @@ export class DisplayToggles extends Component {
                       this.updateProperty(e.target.checked, 'append')
                     }
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               )}
               {extras &&
                 extras.map((extra, index) => {
                   return (
-                    <EuiFlexItem key={index} grow={false}>
+                    <WuiFlexItem key={index} grow={false}>
                       {extra}
-                    </EuiFlexItem>
+                    </WuiFlexItem>
                   );
                 })}
-            </EuiFlexGroup>
+            </WuiFlexGroup>
           </div>
-        </EuiPopover>
+        </WuiPopover>
       </Fragment>
     );
   }

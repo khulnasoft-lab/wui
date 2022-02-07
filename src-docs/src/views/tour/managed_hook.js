@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCodeBlock,
-  EuiForm,
-  EuiFormRow,
-  EuiSpacer,
-  EuiTextArea,
-  EuiTourStep,
-  useEuiTour,
+  WuiButton,
+  WuiButtonEmpty,
+  WuiCodeBlock,
+  WuiForm,
+  WuiFormRow,
+  WuiSpacer,
+  WuiTextArea,
+  WuiTourStep,
+  useWuiTour,
 } from '../../../../src/components';
 
 const demoTourSteps = [
@@ -19,10 +19,10 @@ const demoTourSteps = [
     content: (
       <span>
         <p>Copy and paste this sample query.</p>
-        <EuiSpacer />
-        <EuiCodeBlock language="html" paddingSize="s" isCopyable>
-          {'SELECT email FROM “kibana_sample_data_ecommerce”'}
-        </EuiCodeBlock>
+        <WuiSpacer />
+        <WuiCodeBlock language="html" paddingSize="s" isCopyable>
+          {'SELECT email FROM “wazuh_sample_data_ecommerce”'}
+        </WuiCodeBlock>
       </span>
     ),
     anchorPosition: 'rightUp',
@@ -54,7 +54,7 @@ export default () => {
     state = tourConfig;
   }
 
-  const [[euiTourStepOne, euiTourStepTwo], actions, reducerState] = useEuiTour(
+  const [[wuiTourStepOne, wuiTourStepTwo], actions, reducerState] = useWuiTour(
     demoTourSteps,
     state
   );
@@ -82,29 +82,29 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
+      <WuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
         Reset tour
-      </EuiButtonEmpty>
-      <EuiSpacer />
-      <EuiForm>
-        <EuiFormRow label="Enter an ES SQL query">
-          <EuiTourStep {...euiTourStepOne}>
-            <EuiTextArea
+      </WuiButtonEmpty>
+      <WuiSpacer />
+      <WuiForm>
+        <WuiFormRow label="Enter an ES SQL query">
+          <WuiTourStep {...wuiTourStepOne}>
+            <WuiTextArea
               placeholder="Placeholder text"
               aria-label="Enter ES SQL query"
               value={queryValue}
               onChange={onChange}
               style={{ width: 400 }}
             />
-          </EuiTourStep>
-        </EuiFormRow>
+          </WuiTourStep>
+        </WuiFormRow>
 
-        <EuiSpacer />
+        <WuiSpacer />
 
-        <EuiTourStep {...euiTourStepTwo}>
-          <EuiButton onClick={handleClick}>Save query</EuiButton>
-        </EuiTourStep>
-      </EuiForm>
+        <WuiTourStep {...wuiTourStepTwo}>
+          <WuiButton onClick={handleClick}>Save query</WuiButton>
+        </WuiTourStep>
+      </WuiForm>
     </div>
   );
 };

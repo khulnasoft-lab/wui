@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiIcon,
-  EuiTabs,
-  EuiTab,
-  EuiSpacer,
+  WuiIcon,
+  WuiTabs,
+  WuiTab,
+  WuiSpacer,
 } from '../../../../src/components';
 
 const tabs = [
@@ -22,7 +22,7 @@ const tabs = [
     id: 'hydrogen',
     name: (
       <span>
-        <EuiIcon type="heatmap" />
+        <WuiIcon type="heatmap" />
         &nbsp;Hydrogen
       </span>
     ),
@@ -34,10 +34,10 @@ const tabs = [
     disabled: false,
   },
   {
-    id: 'elastic_link',
-    name: 'Elastic Website',
+    id: 'wazuh_link',
+    name: 'Wazuh Website',
     disabled: false,
-    href: 'https://www.elastic.co/',
+    href: 'https://www.wazuh.com/',
   },
 ];
 
@@ -50,24 +50,24 @@ export default () => {
 
   const renderTabs = () => {
     return tabs.map((tab, index) => (
-      <EuiTab
+      <WuiTab
         {...(tab.href && { href: tab.href, target: '_blank' })}
         onClick={() => onSelectedTabChanged(tab.id)}
         isSelected={tab.id === selectedTabId}
         disabled={tab.disabled}
         key={index}>
         {tab.name}
-      </EuiTab>
+      </WuiTab>
     ));
   };
 
   return (
     <Fragment>
-      <EuiTabs>{renderTabs()}</EuiTabs>
+      <WuiTabs>{renderTabs()}</WuiTabs>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiTabs size="s">{renderTabs()}</EuiTabs>
+      <WuiTabs size="s">{renderTabs()}</WuiTabs>
     </Fragment>
   );
 };

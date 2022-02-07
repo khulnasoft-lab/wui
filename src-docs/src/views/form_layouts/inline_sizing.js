@@ -1,36 +1,36 @@
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiButton,
-  EuiFieldText,
-  EuiFieldNumber,
-  EuiAvatar,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFormRow,
+  WuiButton,
+  WuiFieldText,
+  WuiFieldNumber,
+  WuiAvatar,
 } from '../../../../src/components/';
 
 export default () => (
-  <EuiFlexGroup style={{ maxWidth: 600 }}>
-    <EuiFlexItem grow={false} style={{ width: 100 }}>
-      <EuiFormRow label="Age">
-        <EuiFieldNumber max={10} placeholder={42} />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiFormRow label="Full name">
-        <EuiFieldText icon="user" placeholder="John Doe" />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiFormRow label="Avatar" display="center">
-        <EuiAvatar name="John Doe" size="s" />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiFormRow hasEmptyLabelSpace display="center">
-        <EuiButton>Save</EuiButton>
-      </EuiFormRow>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <WuiFlexGroup style={{ maxWidth: 600 }}>
+    <WuiFlexItem grow={false} style={{ width: 100 }}>
+      <WuiFormRow label="Age">
+        <WuiFieldNumber max={10} placeholder={42} />
+      </WuiFormRow>
+    </WuiFlexItem>
+    <WuiFlexItem>
+      <WuiFormRow label="Full name">
+        <WuiFieldText icon="user" placeholder="John Doe" />
+      </WuiFormRow>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiFormRow label="Avatar" display="center">
+        <WuiAvatar name="John Doe" size="s" />
+      </WuiFormRow>
+    </WuiFlexItem>
+    <WuiFlexItem grow={false}>
+      <WuiFormRow hasEmptyLabelSpace display="center">
+        <WuiButton>Save</WuiButton>
+      </WuiFormRow>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

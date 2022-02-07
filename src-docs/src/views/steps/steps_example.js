@@ -5,14 +5,14 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiSteps,
-  EuiStep,
-  EuiSubSteps,
-  EuiStepsHorizontal,
+  WuiCode,
+  WuiSteps,
+  WuiStep,
+  WuiSubSteps,
+  WuiStepsHorizontal,
 } from '../../../../src/components';
 
-import { EuiStepHorizontal } from '../../../../src/components/steps/step_horizontal';
+import { WuiStepHorizontal } from '../../../../src/components/steps/step_horizontal';
 
 import { stepConfig } from './playground';
 
@@ -20,7 +20,7 @@ import Steps from './steps';
 const stepsSource = require('!!raw-loader!./steps');
 const stepsHtml = renderToHtml(Steps);
 const stepsSnippet = [
-  `<EuiSteps
+  `<WuiSteps
   steps={[
     {
       title: 'Step 1',
@@ -28,7 +28,7 @@ const stepsSnippet = [
     },
   ]}
 />`,
-  `<EuiSteps
+  `<WuiSteps
   firstStepNumber={3}
   steps={[
     {
@@ -46,13 +46,13 @@ const stepsComplexHtml = renderToHtml(StepsComplex);
 import HeadingElementSteps from './heading_element_steps';
 const headingElementStepsSource = require('!!raw-loader!./heading_element_steps');
 const headingElementStepsHtml = renderToHtml(HeadingElementSteps);
-const headingElementStepsSnippet = `<EuiSteps steps={steps} headingElement="h2" />
+const headingElementStepsSnippet = `<WuiSteps steps={steps} headingElement="h2" />
 `;
 
 import StepsHorizontal from './steps_horizontal';
 const stepsHorizontalSource = require('!!raw-loader!./steps_horizontal');
 const stepsHorizontalHtml = renderToHtml(StepsHorizontal);
-const stepsHorizontalSnippet = `<EuiStepsHorizontal steps={[{
+const stepsHorizontalSnippet = `<WuiStepsHorizontal steps={[{
   title: 'Completed step',
   isComplete: true,
   onClick: function,
@@ -62,7 +62,7 @@ const stepsHorizontalSnippet = `<EuiStepsHorizontal steps={[{
 import Status from './status';
 const statusSource = require('!!raw-loader!./status');
 const statusHtml = renderToHtml(Steps);
-const statusSnippet = `<EuiSteps
+const statusSnippet = `<WuiSteps
   steps={[
     {
       title: 'Warning',
@@ -75,7 +75,7 @@ const statusSnippet = `<EuiSteps
 import StepsTitleSizes from './steps_title_sizes';
 const stepsTitleSizesSource = require('!!raw-loader!./steps_title_sizes');
 const stepsTitleSizesHtml = renderToHtml(StepsTitleSizes);
-const stepsTitleSizesSnippet = `<EuiSteps titleSize="xs" steps={[{
+const stepsTitleSizesSnippet = `<WuiSteps titleSize="xs" steps={[{
   title: 'Completed step',
 }]} />
 `;
@@ -96,11 +96,11 @@ export const StepsExample = {
       ],
       text: (
         <p>
-          <strong>EuiSteps</strong> presents procedural content in a numbered
+          <strong>WuiSteps</strong> presents procedural content in a numbered
           outline format.
         </p>
       ),
-      props: { EuiSteps, EuiStep },
+      props: { WuiSteps, WuiStep },
       snippet: stepsSnippet,
       demo: <Steps />,
     },
@@ -119,12 +119,12 @@ export const StepsExample = {
       text: (
         <p>
           If you need to call out a set of substeps that are not lines of code,
-          most likely a <EuiCode>{'<ol/>'}</EuiCode>, wrap the block in a{' '}
-          <EuiCode>{'<EuiSubSteps/>'}</EuiCode>.
+          most likely a <WuiCode>{'<ol/>'}</WuiCode>, wrap the block in a{' '}
+          <WuiCode>{'<WuiSubSteps/>'}</WuiCode>.
         </p>
       ),
       demo: <StepsComplex />,
-      props: { EuiSubSteps },
+      props: { WuiSubSteps },
     },
     {
       title: 'Heading elements',
@@ -144,10 +144,10 @@ export const StepsExample = {
             To aid with accessibility and hierarchical headings, you can and
             should pass in a heading element to use for each step title. The
             example below shows that the logical heading element should be an{' '}
-            <EuiCode>h2</EuiCode>
+            <WuiCode>h2</WuiCode>
             and therefore adds{' '}
-            <EuiCode language="j">{'headingElement="h2"'}</EuiCode> to the
-            EuiSteps component.
+            <WuiCode language="j">{'headingElement="h2"'}</WuiCode> to the
+            WuiSteps component.
           </p>
           <p>
             The style of the title will <strong>not</strong> be affected.
@@ -171,10 +171,10 @@ export const StepsExample = {
       ],
       text: (
         <p>
-          Steps can optionally include <EuiCode>status</EuiCode> prop that will
+          Steps can optionally include <WuiCode>status</WuiCode> prop that will
           alter the look of the number prefix. The options are{' '}
-          <EuiCode>incomplete</EuiCode>, <EuiCode>complete</EuiCode>,{' '}
-          <EuiCode>warning</EuiCode>, and <EuiCode>danger</EuiCode>. This is
+          <WuiCode>incomplete</WuiCode>, <WuiCode>complete</WuiCode>,{' '}
+          <WuiCode>warning</WuiCode>, and <WuiCode>danger</WuiCode>. This is
           used mostly as a final step when you need to make some sort of final
           check.
         </p>
@@ -198,10 +198,10 @@ export const StepsExample = {
         <Fragment>
           <p>
             You can set a different title size using{' '}
-            <EuiCode>titleSize</EuiCode>. If <EuiCode>titleSize</EuiCode> is set
-            in both <strong>EuiSteps</strong> and <strong>EuiStep</strong>, the
+            <WuiCode>titleSize</WuiCode>. If <WuiCode>titleSize</WuiCode> is set
+            in both <strong>WuiSteps</strong> and <strong>WuiStep</strong>, the
             latter value will override the former. Additionally, the title size{' '}
-            <EuiCode>xs</EuiCode> will automatically generate smaller steps
+            <WuiCode>xs</WuiCode> will automatically generate smaller steps
             circles.
           </p>
         </Fragment>
@@ -229,15 +229,15 @@ export const StepsExample = {
           </p>
           <p>
             For each step object, be sure to signify previous/completed steps
-            with <EuiCode language="ts">isComplete: true</EuiCode> and the
+            with <WuiCode language="ts">isComplete: true</WuiCode> and the
             current/selected step with{' '}
-            <EuiCode language="ts">isSelected: true</EuiCode>.
+            <WuiCode language="ts">isSelected: true</WuiCode>.
           </p>
         </Fragment>
       ),
       demo: <StepsHorizontal />,
       snippet: stepsHorizontalSnippet,
-      props: { EuiStepsHorizontal, EuiStepHorizontal },
+      props: { WuiStepsHorizontal, WuiStepHorizontal },
     },
   ],
   playground: stepConfig,

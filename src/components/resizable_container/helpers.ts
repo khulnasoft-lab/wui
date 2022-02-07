@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +34,18 @@ import { useCallback, MouseEvent, TouchEvent } from 'react';
 
 import { keys } from '../../services';
 import {
-  EuiResizableButtonMouseEvent,
-  EuiResizableButtonKeyDownEvent,
+  WuiResizableButtonMouseEvent,
+  WuiResizableButtonKeyDownEvent,
 } from './resizable_button';
-import { EuiResizablePanelRegistry } from './context';
-import { EuiResizableContainerState } from './resizable_container';
+import { WuiResizablePanelRegistry } from './context';
+import { WuiResizableContainerState } from './resizable_container';
 
 interface Params {
   isHorizontal: boolean;
-  state: EuiResizableContainerState;
-  setState: React.Dispatch<React.SetStateAction<EuiResizableContainerState>>;
+  state: WuiResizableContainerState;
+  setState: React.Dispatch<React.SetStateAction<WuiResizableContainerState>>;
   containerRef: React.RefObject<HTMLDivElement>;
-  registryRef: React.MutableRefObject<EuiResizablePanelRegistry>;
+  registryRef: React.MutableRefObject<WuiResizablePanelRegistry>;
   onPanelWidthChange?: ({}: { [key: string]: number }) => any;
 }
 
@@ -86,7 +99,7 @@ export const useContainerCallbacks = ({
   }, [registryRef, isHorizontal]);
 
   const onMouseDown = useCallback(
-    (event: EuiResizableButtonMouseEvent) => {
+    (event: WuiResizableButtonMouseEvent) => {
       const currentTarget = event.currentTarget;
       const clientX = isMouseEvent(event)
         ? event.clientX
@@ -107,7 +120,7 @@ export const useContainerCallbacks = ({
   );
 
   const onKeyDown = useCallback(
-    (event: EuiResizableButtonKeyDownEvent) => {
+    (event: WuiResizableButtonKeyDownEvent) => {
       const { key, currentTarget } = event;
       const shouldResizeHorizontalPanel =
         isHorizontal && (key === keys.ARROW_LEFT || key === keys.ARROW_RIGHT);

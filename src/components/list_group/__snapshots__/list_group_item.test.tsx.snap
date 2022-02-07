@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiListGroupItem is rendered 1`] = `
+exports[`WuiListGroupItem is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -17,15 +17,15 @@ exports[`EuiListGroupItem is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props color ghost is rendered 1`] = `
+exports[`WuiListGroupItem props color ghost is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem--ghost"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem--ghost"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -34,15 +34,15 @@ exports[`EuiListGroupItem props color ghost is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props color inherit is rendered 1`] = `
+exports[`WuiListGroupItem props color inherit is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -51,15 +51,15 @@ exports[`EuiListGroupItem props color inherit is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props color primary is rendered 1`] = `
+exports[`WuiListGroupItem props color primary is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem--primary"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem--primary"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -68,15 +68,15 @@ exports[`EuiListGroupItem props color primary is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props color subdued is rendered 1`] = `
+exports[`WuiListGroupItem props color subdued is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem--subdued"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem--subdued"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -85,15 +85,15 @@ exports[`EuiListGroupItem props color subdued is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props color text is rendered 1`] = `
+exports[`WuiListGroupItem props color text is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem--text"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem--text"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -102,15 +102,15 @@ exports[`EuiListGroupItem props color text is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props extraAction is rendered 1`] = `
+exports[`WuiListGroupItem props extraAction is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-hasExtraAction"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-hasExtraAction"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -118,46 +118,46 @@ exports[`EuiListGroupItem props extraAction is rendered 1`] = `
   </span>
   <button
     aria-label="label"
-    class="euiButtonIcon euiButtonIcon--primary euiListGroupItem__extraAction euiListGroupItem__extraAction-alwaysShow"
+    class="wuiButtonIcon wuiButtonIcon--primary wuiListGroupItem__extraAction wuiListGroupItem__extraAction-alwaysShow"
     type="button"
   >
     <div
       aria-hidden="true"
-      class="euiButtonIcon__icon"
-      data-euiicon-type="empty"
+      class="wuiButtonIcon__icon"
+      data-wuiicon-type="empty"
     />
   </button>
 </li>
 `;
 
-exports[`EuiListGroupItem props href and onClick is rendered 1`] = `
+exports[`WuiListGroupItem props href and onClick is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable"
 >
   <a
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     href="#"
     rel="noreferrer"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title=""
     />
   </a>
 </li>
 `;
 
-exports[`EuiListGroupItem props href is rendered 1`] = `
+exports[`WuiListGroupItem props href is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable"
 >
   <a
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     href="#"
     rel="noreferrer"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -166,17 +166,17 @@ exports[`EuiListGroupItem props href is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props href is rendered with rel 1`] = `
+exports[`WuiListGroupItem props href is rendered with rel 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable"
 >
   <a
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     href="#"
     rel="noreferrer"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -185,18 +185,18 @@ exports[`EuiListGroupItem props href is rendered with rel 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props icon is rendered 1`] = `
+exports[`WuiListGroupItem props icon is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__icon"
+      class="wuiListGroupItem__icon"
     />
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -205,19 +205,19 @@ exports[`EuiListGroupItem props icon is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props iconType is rendered 1`] = `
+exports[`WuiListGroupItem props iconType is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <div
-      class="euiListGroupItem__icon"
-      data-euiicon-type="empty"
+      class="wuiListGroupItem__icon"
+      data-wuiicon-type="empty"
     />
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -226,15 +226,15 @@ exports[`EuiListGroupItem props iconType is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props isActive is rendered 1`] = `
+exports[`WuiListGroupItem props isActive is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isActive"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isActive"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -243,15 +243,15 @@ exports[`EuiListGroupItem props isActive is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props isDisabled is rendered 1`] = `
+exports[`WuiListGroupItem props isDisabled is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isDisabled"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isDisabled"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -260,16 +260,16 @@ exports[`EuiListGroupItem props isDisabled is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props onClick is rendered 1`] = `
+exports[`WuiListGroupItem props onClick is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isClickable"
 >
   <button
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     type="button"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -278,15 +278,15 @@ exports[`EuiListGroupItem props onClick is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props size l is rendered 1`] = `
+exports[`WuiListGroupItem props size l is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--large"
+  class="wuiListGroupItem wuiListGroupItem--large"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -295,15 +295,15 @@ exports[`EuiListGroupItem props size l is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props size m is rendered 1`] = `
+exports[`WuiListGroupItem props size m is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -312,15 +312,15 @@ exports[`EuiListGroupItem props size m is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props size s is rendered 1`] = `
+exports[`WuiListGroupItem props size s is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--small"
+  class="wuiListGroupItem wuiListGroupItem--small"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -329,15 +329,15 @@ exports[`EuiListGroupItem props size s is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props size xs is rendered 1`] = `
+exports[`WuiListGroupItem props size xs is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--xSmall"
+  class="wuiListGroupItem wuiListGroupItem--xSmall"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -346,15 +346,15 @@ exports[`EuiListGroupItem props size xs is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem props wrapText is rendered 1`] = `
+exports[`WuiListGroupItem props wrapText is rendered 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem--wrapText"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem--wrapText"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
     >
       Label
     </span>
@@ -362,17 +362,17 @@ exports[`EuiListGroupItem props wrapText is rendered 1`] = `
 </li>
 `;
 
-exports[`EuiListGroupItem renders a disabled button even if provided an href 1`] = `
+exports[`WuiListGroupItem renders a disabled button even if provided an href 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isDisabled euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isDisabled wuiListGroupItem-isClickable"
 >
   <button
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     disabled=""
     type="button"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -381,17 +381,17 @@ exports[`EuiListGroupItem renders a disabled button even if provided an href 1`]
 </li>
 `;
 
-exports[`EuiListGroupItem renders a disabled button even if provided an href 2`] = `
+exports[`WuiListGroupItem renders a disabled button even if provided an href 2`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isDisabled euiListGroupItem-isClickable"
+  class="wuiListGroupItem wuiListGroupItem--medium wuiListGroupItem-isDisabled wuiListGroupItem-isClickable"
 >
   <button
-    class="euiListGroupItem__button"
+    class="wuiListGroupItem__button"
     disabled=""
     type="button"
   >
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title="Label"
     >
       Label
@@ -400,19 +400,19 @@ exports[`EuiListGroupItem renders a disabled button even if provided an href 2`]
 </li>
 `;
 
-exports[`EuiListGroupItem throws a warning if both iconType and icon are provided but still renders 1`] = `
+exports[`WuiListGroupItem throws a warning if both iconType and icon are provided but still renders 1`] = `
 <li
-  class="euiListGroupItem euiListGroupItem--medium"
+  class="wuiListGroupItem wuiListGroupItem--medium"
 >
   <span
-    class="euiListGroupItem__text"
+    class="wuiListGroupItem__text"
   >
     <div
-      class="euiListGroupItem__icon"
-      data-euiicon-type="empty"
+      class="wuiListGroupItem__icon"
+      data-wuiicon-type="empty"
     />
     <span
-      class="euiListGroupItem__label"
+      class="wuiListGroupItem__label"
       title=""
     />
   </span>

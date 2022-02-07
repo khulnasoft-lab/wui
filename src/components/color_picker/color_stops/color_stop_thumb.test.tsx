@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,21 +33,21 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiColorStopThumb } from './color_stop_thumb';
+import { WuiColorStopThumb } from './color_stop_thumb';
 
 import { requiredProps } from '../../../test';
 
 jest.mock('../../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  WuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const onChange = jest.fn();
 
 // Note: Unit/interaction tests can be found in ./color_stops.test
 
-test('renders EuiColorStopThumb', () => {
+test('renders WuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <WuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -52,9 +65,9 @@ test('renders EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders swatch-only EuiColorStopThumb', () => {
+test('renders swatch-only WuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <WuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -72,9 +85,9 @@ test('renders swatch-only EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders picker-only EuiColorStopThumb', () => {
+test('renders picker-only WuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <WuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -92,9 +105,9 @@ test('renders picker-only EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders disabled EuiColorStopThumb', () => {
+test('renders disabled WuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <WuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -113,9 +126,9 @@ test('renders disabled EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders readOnly EuiColorStopThumb', () => {
+test('renders readOnly WuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <WuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"

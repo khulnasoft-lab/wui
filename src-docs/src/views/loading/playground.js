@@ -1,29 +1,28 @@
 import { propUtilityForPlayground } from '../../services/playground';
 import {
-  EuiLoadingElastic,
-  EuiLoadingChart,
-  EuiLoadingKibana,
-  EuiLoadingSpinner,
-  EuiLoadingContent,
+  WuiLoadingWazuh,
+  WuiLoadingChart,
+  WuiLoadingSpinner,
+  WuiLoadingContent,
 } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
-export const loadingElasticConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingElastic.__docgenInfo)
-    ? EuiLoadingElastic.__docgenInfo[0]
-    : EuiLoadingElastic.__docgenInfo;
+export const loadingWazuhConfig = () => {
+  const docgenInfo = Array.isArray(WuiLoadingWazuh.__docgenInfo)
+    ? WuiLoadingWazuh.__docgenInfo[0]
+    : WuiLoadingWazuh.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingElastic',
+      componentName: 'WuiLoadingWazuh',
       props: propsToUse,
       scope: {
-        EuiLoadingElastic,
+        WuiLoadingWazuh,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingElastic'],
+        '@wazuh/wui': {
+          named: ['WuiLoadingWazuh'],
         },
       },
     },
@@ -31,43 +30,21 @@ export const loadingElasticConfig = () => {
 };
 
 export const loadingChartConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingChart.__docgenInfo)
-    ? EuiLoadingChart.__docgenInfo[0]
-    : EuiLoadingChart.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiLoadingChart.__docgenInfo)
+    ? WuiLoadingChart.__docgenInfo[0]
+    : WuiLoadingChart.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingChart',
+      componentName: 'WuiLoadingChart',
       props: propsToUse,
       scope: {
-        EuiLoadingChart,
+        WuiLoadingChart,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingChart'],
-        },
-      },
-    },
-  };
-};
-
-export const loadingKibanaConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingKibana.__docgenInfo)
-    ? EuiLoadingKibana.__docgenInfo[0]
-    : EuiLoadingKibana.__docgenInfo;
-  const propsToUse = propUtilityForPlayground(docgenInfo.props);
-
-  return {
-    config: {
-      componentName: 'EuiLoadingKibana',
-      props: propsToUse,
-      scope: {
-        EuiLoadingKibana,
-      },
-      imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingKibana'],
+        '@wazuh/wui': {
+          named: ['WuiLoadingChart'],
         },
       },
     },
@@ -75,21 +52,21 @@ export const loadingKibanaConfig = () => {
 };
 
 export const loadingSpinnerConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingSpinner.__docgenInfo)
-    ? EuiLoadingSpinner.__docgenInfo[0]
-    : EuiLoadingSpinner.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiLoadingSpinner.__docgenInfo)
+    ? WuiLoadingSpinner.__docgenInfo[0]
+    : WuiLoadingSpinner.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingSpinner',
+      componentName: 'WuiLoadingSpinner',
       props: propsToUse,
       scope: {
-        EuiLoadingSpinner,
+        WuiLoadingSpinner,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingSpinner'],
+        '@wazuh/wui': {
+          named: ['WuiLoadingSpinner'],
         },
       },
     },
@@ -97,9 +74,9 @@ export const loadingSpinnerConfig = () => {
 };
 
 export const loadingContentConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingContent.__docgenInfo)
-    ? EuiLoadingContent.__docgenInfo[0]
-    : EuiLoadingContent.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiLoadingContent.__docgenInfo)
+    ? WuiLoadingContent.__docgenInfo[0]
+    : WuiLoadingContent.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.lines = {
@@ -109,14 +86,14 @@ export const loadingContentConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiLoadingContent',
+      componentName: 'WuiLoadingContent',
       props: propsToUse,
       scope: {
-        EuiLoadingContent,
+        WuiLoadingContent,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingContent'],
+        '@wazuh/wui': {
+          named: ['WuiLoadingContent'],
         },
       },
     },

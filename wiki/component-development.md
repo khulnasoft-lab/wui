@@ -2,7 +2,7 @@
 
 For information on how to design components, see the [component design docs][component-design].
 
-Before working with EUI components or creating new ones, you may want to run a local server for the [documentation site][docs]. This is where we demonstrate how the components in our design system work.
+Before working with WUI components or creating new ones, you may want to run a local server for the [documentation site][docs]. This is where we demonstrate how the components in our design system work.
 
 ## Launching the Documentation Server
 
@@ -50,31 +50,21 @@ Refer to the [testing guide](testing.md) for guidelines on writing and designing
 
 Refer to the [automated accessibility testing guide](automated-accessibility-testing.md) for info more info on those.
 
-### Testing the component with Kibana
-
-Note that `yarn link` currently does not work with Kibana. You'll need to manually pack and insert it into Kibana to test locally.
-
-1. In the `eui` folder, run `yarn build` then `npm pack`. This will create a `.tgz` file with the changes in your EUI directory. At this point you can move it anywhere.
-2. In Kibana you have two choices:
-    * Point your `package.json` files in Kibana to that file: `"@elastic/eui": "/path/to/elastic-eui-xx.x.x.tgz"` and run `yarn kbn bootstrap`.
-    * Alternatively (and often easier), you can run `yarn kbn bootstrap` in Kibana first, then just unpack the `.tgz` file and paste its contents into an empty `/kibana/node_modules/@elastic/eui` folder. This method avoids having to edit all the various `package.json` files in Kibana if you need to run functional tests.
-3. Regardless of the method you decide run Kibana with `FORCE_DLL_CREATION=true node scripts/kibana --dev` to make sure it doesn't use a previously cached version of EUI.
-
 ## Principles
 
 ### Logically-grouped components
 
-If a component has subcomponents (`<EuiToolBar>` and `<EuiToolBarSearch>`), tightly-coupled components (`<EuiButton>` and `<EuiButtonGroup>`), or you just want to group some related components together (`<EuiTextInput>`, `<EuiTextArea>`, and `<EuiCheckBox>`), then they belong in the same logical grouping. In this case, you can create additional SCSS files for these components in the same component directory.
+If a component has subcomponents (`<WuiToolBar>` and `<WuiToolBarSearch>`), tightly-coupled components (`<WuiButton>` and `<WuiButtonGroup>`), or you just want to group some related components together (`<WuiTextInput>`, `<WuiTextArea>`, and `<WuiCheckBox>`), then they belong in the same logical grouping. In this case, you can create additional SCSS files for these components in the same component directory.
 
 ### Writing CSS
 
 Refer to the [SASS page][sass] of our documentation site for a guide to writing styles.
 
 [component-design]: component-design.md
-[docs]: https://elastic.github.io/eui/
+[docs]: https://wazuh.github.io/wui/
 [docs-yeoman]: creating-components-yeoman.md
 [docs-manual]: creating-components-manually.md
-[sass]: https://elastic.github.io/eui/#/guidelines/sass
+[sass]: https://wazuh.github.io/wui/#/guidelines/sass
 
 ## TypeScript definitions
 

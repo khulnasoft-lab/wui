@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSkipLink is rendered 1`] = `
+exports[`WuiSkipLink is rendered 1`] = `
 <a
   aria-label="aria-label"
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--static testClass1 testClass2 euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--static testClass1 testClass2 wuiButton--fill"
   data-test-subj="test subject string"
   href="#somewhere"
   rel="noreferrer"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     >
       Skip
     </span>
@@ -20,83 +20,83 @@ exports[`EuiSkipLink is rendered 1`] = `
 </a>
 `;
 
-exports[`EuiSkipLink props onClick is rendered 1`] = `
+exports[`WuiSkipLink props onClick is rendered 1`] = `
 <a
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--static euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--static wuiButton--fill"
   href="#somewhere"
   rel="noreferrer"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiSkipLink props position absolute is rendered 1`] = `
+exports[`WuiSkipLink props position absolute is rendered 1`] = `
 <a
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--absolute euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--absolute wuiButton--fill"
   href="#somewhere"
   rel="noreferrer"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiSkipLink props position fixed is rendered 1`] = `
+exports[`WuiSkipLink props position fixed is rendered 1`] = `
 <a
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--fixed euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--fixed wuiButton--fill"
   href="#somewhere"
   rel="noreferrer"
   tabindex="0"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiSkipLink props position static is rendered 1`] = `
+exports[`WuiSkipLink props position static is rendered 1`] = `
 <a
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--static euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--static wuiButton--fill"
   href="#somewhere"
   rel="noreferrer"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiSkipLink props tabIndex is rendered 1`] = `
+exports[`WuiSkipLink props tabIndex is rendered 1`] = `
 <a
-  class="euiButton euiButton--primary euiButton--small euiScreenReaderOnly--showOnFocus euiSkipLink euiSkipLink--static euiButton--fill"
+  class="wuiButton wuiButton--primary wuiButton--small wuiScreenReaderOnly--showOnFocus wuiSkipLink wuiSkipLink--static wuiButton--fill"
   href="#somewhere"
   rel="noreferrer"
   tabindex="-1"
 >
   <span
-    class="euiButtonContent euiButton__content"
+    class="wuiButtonContent wuiButton__content"
   >
     <span
-      class="euiButton__text"
+      class="wuiButton__text"
     />
   </span>
 </a>

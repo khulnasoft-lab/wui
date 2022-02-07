@@ -1,41 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiBadgeGroup gutterSize none is rendered 1`] = `
+exports[`WuiBadgeGroup gutterSize none is rendered 1`] = `
 <div
-  class="euiBadgeGroup"
+  class="wuiBadgeGroup"
 />
 `;
 
-exports[`EuiBadgeGroup gutterSize s is rendered 1`] = `
+exports[`WuiBadgeGroup gutterSize s is rendered 1`] = `
 <div
-  class="euiBadgeGroup euiBadgeGroup--gutterSmall"
+  class="wuiBadgeGroup wuiBadgeGroup--gutterSmall"
 />
 `;
 
-exports[`EuiBadgeGroup gutterSize xs is rendered 1`] = `
+exports[`WuiBadgeGroup gutterSize xs is rendered 1`] = `
 <div
-  class="euiBadgeGroup euiBadgeGroup--gutterExtraSmall"
+  class="wuiBadgeGroup wuiBadgeGroup--gutterExtraSmall"
 />
 `;
 
-exports[`EuiBadgeGroup is rendered 1`] = `
+exports[`WuiBadgeGroup is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiBadgeGroup euiBadgeGroup--gutterExtraSmall testClass1 testClass2"
+  class="wuiBadgeGroup wuiBadgeGroup--gutterExtraSmall testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
-    class="euiBadgeGroup__item"
+    class="wuiBadgeGroup__item"
   >
     <span
-      class="euiBadge euiBadge--iconLeft"
+      class="wuiBadge wuiBadge--iconLeft"
       style="background-color:#d3dae6;color:#000"
     >
       <span
-        class="euiBadge__content"
+        class="wuiBadge__content"
       >
         <span
-          class="euiBadge__text"
+          class="wuiBadge__text"
         >
           Content
         </span>

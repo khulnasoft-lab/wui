@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,29 +33,29 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-import { EuiComment, EuiCommentProps } from './comment';
+import { WuiComment, WuiCommentProps } from './comment';
 
-export type EuiCommentListProps = HTMLAttributes<HTMLDivElement> &
+export type WuiCommentListProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
-     * List of comments to render. See #EuiComment
+     * List of comments to render. See #WuiComment
      */
-    comments?: EuiCommentProps[];
+    comments?: WuiCommentProps[];
   };
 
-export const EuiCommentList: FunctionComponent<EuiCommentListProps> = ({
+export const WuiCommentList: FunctionComponent<WuiCommentListProps> = ({
   children,
   className,
   comments,
   ...rest
 }) => {
-  const classes = classNames('euiCommentList', className);
+  const classes = classNames('wuiCommentList', className);
 
   let commentElements = null;
 
   if (comments) {
     commentElements = comments.map((item, index) => (
-      <EuiComment key={index} {...item} />
+      <WuiComment key={index} {...item} />
     ));
   }
 

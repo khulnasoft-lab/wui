@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiControlBar,
-  EuiPanel,
-  EuiText,
+  WuiButton,
+  WuiControlBar,
+  WuiPanel,
+  WuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -90,10 +90,10 @@ export default () => {
 
   if (isDisplaying) {
     display = (
-      <EuiControlBar controls={codeControls} showContent={contentIsVisible}>
+      <WuiControlBar controls={codeControls} showContent={contentIsVisible}>
         <div style={{ padding: '2rem', maxWidth: '60rem', margin: '0 auto' }}>
-          <EuiPanel>
-            <EuiText>
+          <WuiPanel>
+            <WuiText>
               <h1>1984</h1>
               <h3>By: George Orwell</h3>
               <p>
@@ -136,16 +136,16 @@ export default () => {
                 soap and blunt razor blades and the cold of the winter that had
                 just ended.
               </p>
-            </EuiText>
-          </EuiPanel>
+            </WuiText>
+          </WuiPanel>
         </div>
-      </EuiControlBar>
+      </WuiControlBar>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={toggleDisplay}>Toggle example</EuiButton>
+      <WuiButton onClick={toggleDisplay}>Toggle example</WuiButton>
       {display}
     </div>
   );

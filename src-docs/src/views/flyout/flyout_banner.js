@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 import {
-  EuiCallOut,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiIcon,
-  EuiLink,
-  EuiButton,
-  EuiText,
-  EuiTextColor,
-  EuiTitle,
+  WuiCallOut,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiFlyout,
+  WuiFlyoutHeader,
+  WuiFlyoutBody,
+  WuiIcon,
+  WuiLink,
+  WuiButton,
+  WuiText,
+  WuiTextColor,
+  WuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -25,48 +25,48 @@ export default () => {
   let flyout;
 
   const callOut = (
-    <EuiCallOut>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiIcon type="help" />
-        </EuiFlexItem>
-        <EuiFlexItem>
+    <WuiCallOut>
+      <WuiFlexGroup>
+        <WuiFlexItem grow={false}>
+          <WuiIcon type="help" />
+        </WuiFlexItem>
+        <WuiFlexItem>
           {' '}
-          <EuiTextColor color="subdued">
+          <WuiTextColor color="subdued">
             Here&rsquo;s some stuff that you need to know. This banner helps
             highlight important information.
-          </EuiTextColor>
-          <EuiLink href="#">View docs</EuiLink>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiCallOut>
+          </WuiTextColor>
+          <WuiLink href="#">View docs</WuiLink>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+    </WuiCallOut>
   );
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <WuiFlyout
         ownFocus
         onClose={closeFlyout}
         aria-labelledby="flyoutWithBannerTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <WuiFlyoutHeader hasBorder>
+          <WuiTitle size="m">
             <h2 id="flyoutWithBannerTitle">A flyout with a banner</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody banner={callOut}>
-          <EuiText>
+          </WuiTitle>
+        </WuiFlyoutHeader>
+        <WuiFlyoutBody banner={callOut}>
+          <WuiText>
             <p>
               This flyout is using the banner prop in{' '}
-              <strong>EuiFlyoutBody</strong>.
+              <strong>WuiFlyoutBody</strong>.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </WuiText>
+        </WuiFlyoutBody>
+      </WuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show flyout with banner</EuiButton>
+      <WuiButton onClick={showFlyout}>Show flyout with banner</WuiButton>
       {flyout}
     </div>
   );

@@ -1,5 +1,5 @@
-.euiTabs {
-  @include euiScrollBar;
+.wuiTabs {
+  @include wuiScrollBar;
   display: flex;
   max-width: 100%;
   overflow-x: auto;
@@ -12,8 +12,8 @@
     height: 3px;
   }
 
-  &:not(.euiTabs--condensed)::before {
-    background-color: $euiColorLightShade;
+  &:not(.wuiTabs--condensed)::before {
+    background-color: $wuiColorLightShade;
     bottom: 0;
     content: '';
     height: 1px;
@@ -23,26 +23,26 @@
   }
 }
 
-.euiTab {
-  @include fontSize($euiTabFontSize);
-  color: $euiTextColor;
+.wuiTab {
+  @include fontSize($wuiTabFontSize);
+  color: $wuiTextColor;
   background-color: transparent;
   cursor: pointer;
-  line-height: $euiLineHeight;
-  padding: $euiSizeM $euiSize;
+  line-height: $wuiLineHeight;
+  padding: $wuiSizeM $wuiSize;
   position: relative;
-  transition: color $euiAnimSpeedNormal $euiAnimSlightResistance, background-color $euiAnimSpeedNormal $euiAnimSlightResistance;
+  transition: color $wuiAnimSpeedNormal $wuiAnimSlightResistance, background-color $wuiAnimSpeedNormal $wuiAnimSlightResistance;
 
-  &:hover:not(.euiTab-isSelected) {
+  &:hover:not(.wuiTab-isSelected) {
     text-decoration: underline;
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $wuiFocusBackgroundColor;
     text-decoration: underline;
 
     &::before {
-      background-color: $euiColorLightShade;
+      background-color: $wuiColorLightShade;
       bottom: 0;
       content: '';
       height: 1px;
@@ -52,26 +52,26 @@
     }
   }
 
-  &.euiTab-isDisabled {
-    color: $euiColorMediumShade;
+  &.wuiTab-isDisabled {
+    color: $wuiColorMediumShade;
 
     &:hover {
-      color: $euiColorMediumShade;
+      color: $wuiColorMediumShade;
       cursor: not-allowed;
       text-decoration: none;
     }
   }
 
-  &.euiTab-isSelected {
-    color: $euiColorPrimary;
+  &.wuiTab-isSelected {
+    color: $wuiColorPrimary;
     cursor: default;
 
     &::after {
-      animation: euiTab $euiAnimSpeedFast $euiAnimSlightResistance;
-      background-color: $euiColorPrimary;
+      animation: wuiTab $wuiAnimSpeedFast $wuiAnimSlightResistance;
+      background-color: $wuiColorPrimary;
       bottom: 0;
       content: ' ';
-      height: $euiBorderWidthThick;
+      height: $wuiBorderWidthThick;
       left: 0;
       position: absolute;
       width: 100%;
@@ -80,19 +80,19 @@
 
   // Small Tabs Group Modifier
 
-  .euiTabs--small & {
-    @include fontSize($euiTabFontSizeS);
-    padding: $euiSizeS;
+  .wuiTabs--small & {
+    @include fontSize($wuiTabFontSizeS);
+    padding: $wuiSizeS;
   }
 
   // Condensed Tabs Group Modifier
 
-  .euiTabs--condensed & {
-    font-weight: $euiFontWeightSemiBold;
-    padding: $euiSizeS $euiSizeXS;
+  .wuiTabs--condensed & {
+    font-weight: $wuiFontWeightSemiBold;
+    padding: $wuiSizeS $wuiSizeXS;
 
     &:focus {
-      background-color: $euiFocusBackgroundColor;
+      background-color: $wuiFocusBackgroundColor;
 
       &::before {
         display: none;
@@ -103,29 +103,29 @@
       text-decoration: none;
     }
 
-    & + .euiTab {
-      margin-left: $euiSize;
+    & + .wuiTab {
+      margin-left: $wuiSize;
     }
   }
 
   // Expand Tabs Group Modifier
 
-  .euiTabs--expand & {
+  .wuiTabs--expand & {
     flex-basis: 0%;
     flex-grow: 1;
   }
 }
 
-.euiTab__content {
+.wuiTab__content {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   transform: translateY(0);
-  transition: transform $euiAnimSpeedFast $euiAnimSlightBounce;
+  transition: transform $wuiAnimSpeedFast $wuiAnimSlightBounce;
   white-space: nowrap;
 }
 
-@keyframes euiTab {
+@keyframes wuiTab {
   0% {
     transform: scaleX(0);
   }

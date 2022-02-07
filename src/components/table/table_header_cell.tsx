@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,11 +37,11 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiScreenReaderOnly } from '../accessibility';
 import { CommonProps, NoArgCallback } from '../common';
-import { EuiIcon } from '../icon';
+import { WuiIcon } from '../icon';
 import { resolveWidthAsStyle } from './utils';
-import { EuiInnerText } from '../inner_text';
+import { WuiInnerText } from '../inner_text';
 
 import {
   HorizontalAlignment,
@@ -36,7 +49,7 @@ import {
   RIGHT_ALIGNMENT,
   CENTER_ALIGNMENT,
 } from '../../services';
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
 export type TableHeaderCellScope = 'col' | 'row' | 'colgroup' | 'rowgroup';
 
@@ -44,8 +57,8 @@ type Props = CommonProps &
   Omit<ThHTMLAttributes<HTMLTableHeaderCellElement>, 'align' | 'scope'> & {
     align?: HorizontalAlignment;
     /**
-     * Set `allowNeutralSort` on EuiInMemoryTable to false to force column
-     * sorting.  EuiBasicTable always forces column sorting.
+     * Set `allowNeutralSort` on WuiInMemoryTable to false to force column
+     * sorting.  WuiBasicTable always forces column sorting.
      */
     allowNeutralSort?: boolean;
     /**
@@ -81,7 +94,7 @@ type Props = CommonProps &
     width?: string | number;
   };
 
-export const EuiTableHeaderCell: FunctionComponent<Props> = ({
+export const WuiTableHeaderCell: FunctionComponent<Props> = ({
   children,
   align = LEFT_ALIGNMENT,
   onSort,
@@ -100,14 +113,14 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
   style,
   ...rest
 }) => {
-  const classes = classNames('euiTableHeaderCell', className, {
-    'euiTableHeaderCell--hideForDesktop': mobileOptions.only || isMobileHeader,
-    'euiTableHeaderCell--hideForMobile': !mobileOptions.show || hideForMobile,
+  const classes = classNames('wuiTableHeaderCell', className, {
+    'wuiTableHeaderCell--hideForDesktop': mobileOptions.only || isMobileHeader,
+    'wuiTableHeaderCell--hideForMobile': !mobileOptions.show || hideForMobile,
   });
 
-  const contentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
+  const contentClasses = classNames('wuiTableCellContent', className, {
+    'wuiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
+    'wuiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
   });
 
   const styleObj = resolveWidthAsStyle(style, width);
@@ -115,8 +128,8 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
   const CellComponent = children ? 'th' : 'td';
 
   if (onSort) {
-    const buttonClasses = classNames('euiTableHeaderButton', {
-      'euiTableHeaderButton-isSorted': isSorted,
+    const buttonClasses = classNames('wuiTableHeaderButton', {
+      'wuiTableHeaderButton-isSorted': isSorted,
     });
 
     let ariaSortValue: HTMLAttributes<any>['aria-sort'] = 'none';
@@ -127,8 +140,8 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
     function getScreenCasterDirection() {
       if (ariaSortValue === 'ascending') {
         return (
-          <EuiI18n
-            token="euiTableHeaderCell.clickForDescending"
+          <WuiI18n
+            token="wuiTableHeaderCell.clickForDescending"
             default="Click to sort in descending order"
           />
         );
@@ -136,16 +149,16 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
 
       if (allowNeutralSort && ariaSortValue === 'descending') {
         return (
-          <EuiI18n
-            token="euiTableHeaderCell.clickForUnsort"
+          <WuiI18n
+            token="wuiTableHeaderCell.clickForUnsort"
             default="Click to unsort"
           />
         );
       }
 
       return (
-        <EuiI18n
-          token="euiTableHeaderCell.clickForAscending"
+        <WuiI18n
+          token="wuiTableHeaderCell.clickForAscending"
           default="Click to sort in ascending order"
         />
       );
@@ -166,42 +179,42 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
           onClick={onSort}
           data-test-subj="tableHeaderSortButton">
           <span className={contentClasses}>
-            <EuiInnerText>
+            <WuiInnerText>
               {(ref, innerText) => (
-                <EuiI18n
-                  token="euiTableHeaderCell.titleTextWithSort"
+                <WuiI18n
+                  token="wuiTableHeaderCell.titleTextWithSort"
                   default="{innerText}; Sorted in {ariaSortValue} order"
                   values={{ innerText, ariaSortValue }}>
                   {(titleTextWithSort: string) => (
                     <span
                       title={isSorted ? titleTextWithSort : innerText}
                       ref={ref}
-                      className="euiTableCellContent__text">
+                      className="wuiTableCellContent__text">
                       {children}
                     </span>
                   )}
-                </EuiI18n>
+                </WuiI18n>
               )}
-            </EuiInnerText>
+            </WuiInnerText>
 
             {isSorted && (
-              <EuiI18n
-                token="euiTableHeaderCell.sortedAriaLabel"
+              <WuiI18n
+                token="wuiTableHeaderCell.sortedAriaLabel"
                 default="Sorted in {ariaSortValue} order"
                 values={{ ariaSortValue }}>
                 {(sortedAriaLabel: string) => (
-                  <EuiIcon
-                    className="euiTableSortIcon"
+                  <WuiIcon
+                    className="wuiTableSortIcon"
                     type={isSortAscending ? 'sortUp' : 'sortDown'}
                     size="m"
                     aria-label={sortedAriaLabel}
                   />
                 )}
-              </EuiI18n>
+              </WuiI18n>
             )}
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <span>{getScreenCasterDirection()}</span>
-            </EuiScreenReaderOnly>
+            </WuiScreenReaderOnly>
           </span>
         </button>
       </CellComponent>
@@ -216,16 +229,16 @@ export const EuiTableHeaderCell: FunctionComponent<Props> = ({
       style={styleObj}
       {...rest}>
       <div className={contentClasses}>
-        <EuiInnerText>
+        <WuiInnerText>
           {(ref, innerText) => (
             <span
               title={innerText}
               ref={ref}
-              className="euiTableCellContent__text">
+              className="wuiTableCellContent__text">
               {children}
             </span>
           )}
-        </EuiInnerText>
+        </WuiInnerText>
       </div>
     </CellComponent>
   );

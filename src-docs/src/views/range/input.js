@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiRange, EuiSpacer, EuiDualRange } from '../../../../src/components';
+import { WuiRange, WuiSpacer, WuiDualRange } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -18,24 +18,24 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <WuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={onChange}
         showInput
-        aria-label="An example of EuiRange"
+        aria-label="An example of WuiRange"
       />
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
-      <EuiDualRange
+      <WuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={onDualChange}
         showInput
         minInputProps={{ 'aria-label': 'Min value' }}
         maxInputProps={{ 'aria-label': 'Max value' }}
-        aria-label="An example of EuiDualRange with inputs"
+        aria-label="An example of WuiDualRange with inputs"
       />
     </Fragment>
   );

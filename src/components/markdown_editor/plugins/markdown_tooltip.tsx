@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,10 +31,10 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { EuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
-import { EuiToolTip } from '../../tool_tip';
-import { EuiIcon } from '../../icon';
-import { EuiCodeBlock } from '../../code';
+import { WuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
+import { WuiToolTip } from '../../tool_tip';
+import { WuiIcon } from '../../icon';
+import { WuiCodeBlock } from '../../code';
 import { Plugin } from 'unified';
 
 interface TooltipNodeDetails {
@@ -41,9 +54,9 @@ const tooltipPlugin = {
     trimFirst: true,
   },
   helpText: (
-    <EuiCodeBlock language="md" paddingSize="s" fontSize="l">
+    <WuiCodeBlock language="md" paddingSize="s" fontSize="l">
       {'!{tooltip[anchor text](helpful description)}'}
-    </EuiCodeBlock>
+    </WuiCodeBlock>
   ),
 };
 
@@ -133,19 +146,19 @@ const TooltipParser: Plugin = function TooltipParser() {
 };
 
 const tooltipMarkdownRenderer: FunctionComponent<TooltipNodeDetails & {
-  position: EuiMarkdownAstNodePosition;
+  position: WuiMarkdownAstNodePosition;
 }> = ({ content, children }) => {
   return (
     <span>
-      <EuiToolTip content={content}>
+      <WuiToolTip content={content}>
         <span>
           <strong>{children}</strong>
-          <EuiIcon
+          <WuiIcon
             type="questionInCircle"
-            className="euiMarkdownTooltip__icon"
+            className="wuiMarkdownTooltip__icon"
           />
         </span>
-      </EuiToolTip>
+      </WuiToolTip>
     </span>
   );
 };

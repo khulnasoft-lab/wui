@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { EuiMarkdownFormat } from '../../../../src';
+import { WuiMarkdownFormat } from '../../../../src';
 
-const markdownContent = `Beyond Remark's base syntax, **EuiMarkdownFormat** bundles these abilities by default:
+const markdownContent = `Beyond Remark's base syntax, **WuiMarkdownFormat** bundles these abilities by default:
 
 \`:smile:\` we support emojis :smile:!
 
@@ -22,9 +22,9 @@ turns into
 - [x] Can be filled
 - [ ] Or empty
 
-Note that you'll need to use *EuiMarkdownEditor* to make those checkboxes dynamic.
+Note that you'll need to use *WuiMarkdownEditor* to make those checkboxes dynamic.
 `;
 
 export default () => {
-  return <EuiMarkdownFormat>{markdownContent}</EuiMarkdownFormat>;
+  return <WuiMarkdownFormat>{markdownContent}</WuiMarkdownFormat>;
 };

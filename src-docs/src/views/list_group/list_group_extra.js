@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { EuiListGroup, EuiListGroupItem } from '../../../../src/components';
+import { WuiListGroup, WuiListGroupItem } from '../../../../src/components';
 
 const handleOnClick = () => {
   alert('Item was clicked');
 };
 
 export default () => (
-  <EuiListGroup showToolTips>
-    <EuiListGroupItem onClick={handleOnClick} label="First item" />
+  <WuiListGroup showToolTips>
+    <WuiListGroupItem onClick={handleOnClick} label="First item" />
 
-    <EuiListGroupItem onClick={handleOnClick} label="Second item" />
+    <WuiListGroupItem onClick={handleOnClick} label="Second item" />
 
-    <EuiListGroupItem
+    <WuiListGroupItem
       onClick={handleOnClick}
       label={
         <span>
@@ -22,10 +22,10 @@ export default () => (
       }
     />
 
-    <EuiListGroupItem
+    <WuiListGroupItem
       onClick={handleOnClick}
       wrapText
       label="Fourth very, very long item with wrapping enabled that will not force truncation"
     />
-  </EuiListGroup>
+  </WuiListGroup>
 );

@@ -1,14 +1,14 @@
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiRadioGroup,
-  EuiText,
-  EuiButton,
-  EuiCode,
+  WuiCard,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiCodeBlock,
+  WuiRadioGroup,
+  WuiText,
+  WuiButton,
+  WuiCode,
 } from '../../../../src/components';
 
 const radios = [
@@ -29,63 +29,63 @@ const radios = [
 
 export default () => {
   return (
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>
-        <EuiCard
+    <WuiFlexGroup gutterSize="l">
+      <WuiFlexItem>
+        <WuiCard
           textAlign="left"
           title="Lists"
           description={
             <span>
-              Wrap a lists with <strong>EuiText size=&quot;s&quot;</strong> to
+              Wrap a lists with <strong>WuiText size=&quot;s&quot;</strong> to
               match the description text.
             </span>
           }>
-          <EuiText size="s">
+          <WuiText size="s">
             <ul>
               <li>Bullet 1</li>
               <li>Bullet 2</li>
               <li>Bullet 3</li>
             </ul>
-          </EuiText>
-        </EuiCard>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+          </WuiText>
+        </WuiCard>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiCard
           textAlign="left"
           title="Form controls"
           description="Add any controls you need."
           footer={
-            <EuiFlexGroup justifyContent="flexEnd">
-              <EuiFlexItem grow={false}>
-                <EuiButton size="s" fill>
+            <WuiFlexGroup justifyContent="flexEnd">
+              <WuiFlexItem grow={false}>
+                <WuiButton size="s" fill>
                   Send
-                </EuiButton>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+                </WuiButton>
+              </WuiFlexItem>
+            </WuiFlexGroup>
           }>
-          <EuiRadioGroup
+          <WuiRadioGroup
             options={radios}
             idSelected={radios[0].id}
             onChange={() => {}}
             compressed
           />
-        </EuiCard>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+        </WuiCard>
+      </WuiFlexItem>
+      <WuiFlexItem>
+        <WuiCard
           textAlign="left"
           title="Just about anything"
           description={
             <span>
-              Just be sure not to add any <EuiCode>onClick</EuiCode> handler to
+              Just be sure not to add any <WuiCode>onClick</WuiCode> handler to
               the card if the children are also interactable.
             </span>
           }>
-          <EuiCodeBlock language="html" paddingSize="s">
+          <WuiCodeBlock language="html" paddingSize="s">
             {'<yoda>Hello, young Skywalker</yoda>'}
-          </EuiCodeBlock>
-        </EuiCard>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+          </WuiCodeBlock>
+        </WuiCard>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

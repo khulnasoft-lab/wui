@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiColorPicker, EuiFormRow } from '../../../../src/components';
+import { WuiColorPicker, WuiFormRow } from '../../../../src/components';
 import { useColorPickerState } from '../../../../src/services';
 
 export default () => {
@@ -29,24 +29,24 @@ export default () => {
 
   return (
     <>
-      <EuiFormRow
+      <WuiFormRow
         label="Pick a color with optional opacity"
         isInvalid={!!errors}
         error={errors}>
-        <EuiColorPicker
+        <WuiColorPicker
           onChange={setColor}
           color={color}
           showAlpha={true}
           isInvalid={!!errors}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiFormRow
+      <WuiFormRow
         label="Using RGBa format"
         isInvalid={!!errors2}
         error={errors2}>
-        <EuiColorPicker
+        <WuiColorPicker
           onChange={setColor2}
           color={color2}
           showAlpha={true}
@@ -54,7 +54,7 @@ export default () => {
           isInvalid={!!errors2}
           swatches={customSwatches2}
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiButton, EuiControlBar } from '../../../../src/components';
+import { WuiButton, WuiControlBar } from '../../../../src/components';
 
 export default () => {
   const [isDisplaying, setDisplay] = useState(false);
@@ -15,12 +15,12 @@ export default () => {
       id: 'icon',
       iconType: 'folderClosed',
       'aria-label': 'folder',
-      className: 'eui-hideFor--m eui-hideFor--l eui-hideFor--xl',
+      className: 'wui-hideFor--m wui-hideFor--l wui-hideFor--xl',
     },
     {
       controlType: 'breadcrumbs',
       id: 'current_file_path',
-      className: 'eui-hideFor--s eui-hideFor--xs',
+      className: 'wui-hideFor--s wui-hideFor--xs',
       breadcrumbs: [
         {
           text: 'src',
@@ -49,12 +49,12 @@ export default () => {
   let display;
 
   if (isDisplaying) {
-    display = <EuiControlBar controls={controls} showOnMobile />;
+    display = <WuiControlBar controls={controls} showOnMobile />;
   }
 
   return (
     <div>
-      <EuiButton onClick={toggleDisplay}>Toggle mobile example</EuiButton>
+      <WuiButton onClick={toggleDisplay}>Toggle mobile example</WuiButton>
       {display}
     </div>
   );

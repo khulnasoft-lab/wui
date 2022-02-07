@@ -4,14 +4,14 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiEmptyPrompt } from '../../../../src/components';
+import { WuiCode, WuiEmptyPrompt } from '../../../../src/components';
 
 import emptyPromptConfig from './playground';
 
 import EmptyPrompt from './empty_prompt';
 const emptyPromptSource = require('!!raw-loader!./empty_prompt');
 const emptyPromptHtml = renderToHtml(EmptyPrompt);
-const emptyPromptSnippet = `<EuiEmptyPrompt
+const emptyPromptSnippet = `<WuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>You have no spice</h2>}
   body={bodyContent}
@@ -21,7 +21,7 @@ const emptyPromptSnippet = `<EuiEmptyPrompt
 import Custom from './custom';
 const customSource = require('!!raw-loader!./custom');
 const customHtml = renderToHtml(Custom);
-const customSnippet = `<EuiEmptyPrompt
+const customSnippet = `<WuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>You have no spice</h2>}
   titleSize="xs"
@@ -32,7 +32,7 @@ const customSnippet = `<EuiEmptyPrompt
 import Simple from './simple';
 const simpleSource = require('!!raw-loader!./simple');
 const simpleHtml = renderToHtml(Simple);
-const simpleSnippet = `<EuiEmptyPrompt
+const simpleSnippet = `<WuiEmptyPrompt
   title={<h2>You have no spice</h2>}
   actions={multipleActions}
 />`;
@@ -53,11 +53,11 @@ export const EmptyPromptExample = {
       ],
       text: (
         <p>
-          Use the <strong>EuiEmptyPrompt</strong> as a placeholder for an empty
+          Use the <strong>WuiEmptyPrompt</strong> as a placeholder for an empty
           table or list of content.
         </p>
       ),
-      props: { EuiEmptyPrompt },
+      props: { WuiEmptyPrompt },
       demo: <EmptyPrompt />,
       snippet: emptyPromptSnippet,
     },
@@ -75,11 +75,11 @@ export const EmptyPromptExample = {
       ],
       text: (
         <p>
-          You can control sizes and colors with the <EuiCode>iconColor</EuiCode>
-          , and <EuiCode>titleSize</EuiCode> props.
+          You can control sizes and colors with the <WuiCode>iconColor</WuiCode>
+          , and <WuiCode>titleSize</WuiCode> props.
         </p>
       ),
-      props: { EuiEmptyPrompt },
+      props: { WuiEmptyPrompt },
       demo: <Custom />,
       snippet: customSnippet,
     },
@@ -104,7 +104,7 @@ export const EmptyPromptExample = {
           </p>
         </Fragment>
       ),
-      props: { EuiEmptyPrompt },
+      props: { WuiEmptyPrompt },
       demo: <Simple />,
       snippet: simpleSnippet,
     },

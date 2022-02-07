@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  EuiPanel,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
+  WuiPanel,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -22,25 +22,25 @@ export default () => {
   const [list, setList] = useState(makeList(3));
   const onDragEnd = ({ source, destination }) => {
     if (source && destination) {
-      const items = euiDragDropReorder(list, source.index, destination.index);
+      const items = wuiDragDropReorder(list, source.index, destination.index);
 
       setList(items);
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiDroppable droppableId="DROPPABLE_AREA" spacing="m" withPanel>
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiDroppable droppableId="DROPPABLE_AREA" spacing="m" withPanel>
         {list.map(({ content, id }, idx) => (
-          <EuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
+          <WuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
             {(provided, state) => (
-              <EuiPanel hasShadow={state.isDragging}>
+              <WuiPanel hasShadow={state.isDragging}>
                 {content}
                 {state.isDragging && ' ✨'}
-              </EuiPanel>
+              </WuiPanel>
             )}
-          </EuiDraggable>
+          </WuiDraggable>
         ))}
-      </EuiDroppable>
-    </EuiDragDropContext>
+      </WuiDroppable>
+    </WuiDragDropContext>
   );
 };

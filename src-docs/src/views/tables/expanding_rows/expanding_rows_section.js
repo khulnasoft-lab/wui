@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { WuiBasicTable, WuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,12 +22,12 @@ export const section = {
   text: (
     <p>
       You can expand rows by passing in a{' '}
-      <EuiCode>itemIdToExpandedRowMap</EuiCode> prop which will contain the
+      <WuiCode>itemIdToExpandedRowMap</WuiCode> prop which will contain the
       content you want rendered inside the expanded row. When building out your
-      table manually (not using EuiBasicTable), you will also need to add the
-      prop <EuiCode>isExpandedRow</EuiCode> to the row that will be revealed.
+      table manually (not using WuiBasicTable), you will also need to add the
+      prop <WuiCode>isExpandedRow</WuiCode> to the row that will be revealed.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { WuiBasicTable },
   demo: <Table />,
 };

@@ -1,68 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiRadio is rendered 1`] = `
+exports[`WuiRadio is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiRadio euiRadio--noLabel testClass1 testClass2"
+  class="wuiRadio wuiRadio--noLabel testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <input
-    class="euiRadio__input"
+    class="wuiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="wuiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props checked is rendered 1`] = `
+exports[`WuiRadio props checked is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="wuiRadio wuiRadio--noLabel"
 >
   <input
     checked=""
-    class="euiRadio__input"
+    class="wuiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="wuiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props disabled is rendered 1`] = `
+exports[`WuiRadio props disabled is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="wuiRadio wuiRadio--noLabel"
 >
   <input
-    class="euiRadio__input"
+    class="wuiRadio__input"
     disabled=""
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="wuiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props label is rendered 1`] = `
+exports[`WuiRadio props label is rendered 1`] = `
 <div
-  class="euiRadio"
+  class="wuiRadio"
 >
   <input
-    class="euiRadio__input"
+    class="wuiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="wuiRadio__circle"
   />
   <label
-    class="euiRadio__label"
+    class="wuiRadio__label"
     for="id"
   >
     <span>
@@ -72,18 +72,18 @@ exports[`EuiRadio props label is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRadio props value is rendered 1`] = `
+exports[`WuiRadio props value is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="wuiRadio wuiRadio--noLabel"
 >
   <input
-    class="euiRadio__input"
+    class="wuiRadio__input"
     id="id"
     type="radio"
     value="bobbins"
   />
   <div
-    class="euiRadio__circle"
+    class="wuiRadio__circle"
   />
 </div>
 `;

@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiCodeEditor } from '../../../../src/components/';
+import { WuiCodeEditor } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -36,9 +36,9 @@ import 'brace/snippets/c_cpp';
 import 'brace/snippets/css';
 
 export const codeEditorConfig = () => {
-  const docgenInfo = Array.isArray(EuiCodeEditor.__docgenInfo)
-    ? EuiCodeEditor.__docgenInfo[0]
-    : EuiCodeEditor.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiCodeEditor.__docgenInfo)
+    ? WuiCodeEditor.__docgenInfo[0]
+    : WuiCodeEditor.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -100,14 +100,14 @@ export const codeEditorConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCodeEditor',
+      componentName: 'WuiCodeEditor',
       props: propsToUse,
       scope: {
-        EuiCodeEditor,
+        WuiCodeEditor,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCodeEditor'],
+        '@wazuh/wui': {
+          named: ['WuiCodeEditor'],
         },
         'brace/theme/cobalt': {},
         'brace/theme/dawn': {},

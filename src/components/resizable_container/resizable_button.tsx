@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,47 +42,47 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiResizablePanelRegistry } from './context';
+import { WuiI18n } from '../i18n';
+import { WuiResizablePanelRegistry } from './context';
 
-export type EuiResizableButtonMouseEvent =
+export type WuiResizableButtonMouseEvent =
   | MouseEvent<HTMLButtonElement>
   | TouchEvent<HTMLButtonElement>;
-export type EuiResizableButtonKeyDownEvent = KeyboardEvent<HTMLButtonElement>;
+export type WuiResizableButtonKeyDownEvent = KeyboardEvent<HTMLButtonElement>;
 
-export type EuiResizableButtonSize = 's' | 'm' | 'l' | 'xl';
+export type WuiResizableButtonSize = 's' | 'm' | 'l' | 'xl';
 
-interface EuiResizableButtonControls {
-  onKeyDown: (eve: EuiResizableButtonKeyDownEvent) => void;
-  onMouseDown: (eve: EuiResizableButtonMouseEvent) => void;
-  onTouchStart: (eve: EuiResizableButtonMouseEvent) => void;
+interface WuiResizableButtonControls {
+  onKeyDown: (eve: WuiResizableButtonKeyDownEvent) => void;
+  onMouseDown: (eve: WuiResizableButtonMouseEvent) => void;
+  onTouchStart: (eve: WuiResizableButtonMouseEvent) => void;
   isHorizontal: boolean;
-  registryRef: React.MutableRefObject<EuiResizablePanelRegistry>;
+  registryRef: React.MutableRefObject<WuiResizablePanelRegistry>;
 }
 
-export interface EuiResizableButtonProps
+export interface WuiResizableButtonProps
   extends Omit<
       ButtonHTMLAttributes<HTMLButtonElement>,
-      keyof EuiResizableButtonControls
+      keyof WuiResizableButtonControls
     >,
     CommonProps,
-    Partial<EuiResizableButtonControls> {
+    Partial<WuiResizableButtonControls> {
   /**
    * The size of the Resizer (the space between panels)
    */
-  size?: EuiResizableButtonSize;
+  size?: WuiResizableButtonSize;
 }
 
 const sizeToClassNameMap = {
-  s: 'euiResizableButton--sizeSmall',
-  m: 'euiResizableButton--sizeMedium',
-  l: 'euiResizableButton--sizeLarge',
-  xl: 'euiResizableButton--sizeExtraLarge',
+  s: 'wuiResizableButton--sizeSmall',
+  m: 'wuiResizableButton--sizeMedium',
+  l: 'wuiResizableButton--sizeLarge',
+  xl: 'wuiResizableButton--sizeExtraLarge',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
-export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
+export const WuiResizableButton: FunctionComponent<WuiResizableButtonProps> = ({
   isHorizontal,
   className,
   size = 'm',
@@ -77,11 +90,11 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiResizableButton',
+    'wuiResizableButton',
     size ? sizeToClassNameMap[size] : null,
     {
-      'euiResizableButton--vertical': !isHorizontal,
-      'euiResizableButton--horizontal': isHorizontal,
+      'wuiResizableButton--vertical': !isHorizontal,
+      'wuiResizableButton--horizontal': isHorizontal,
     },
     className
   );
@@ -106,10 +119,10 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
     e.currentTarget.focus();
 
   return (
-    <EuiI18n
+    <WuiI18n
       tokens={[
-        'euiResizableButton.horizontalResizerAriaLabel',
-        'euiResizableButton.verticalResizerAriaLabel',
+        'wuiResizableButton.horizontalResizerAriaLabel',
+        'wuiResizableButton.verticalResizerAriaLabel',
       ]}
       defaults={[
         'Press left or right to adjust panels size',
@@ -128,14 +141,14 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
           {...rest}
         />
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };
 
-export function euiResizableButtonWithControls(
-  controls: EuiResizableButtonControls
+export function wuiResizableButtonWithControls(
+  controls: WuiResizableButtonControls
 ) {
   return (props: CommonProps) => (
-    <EuiResizableButton {...controls} {...props} />
+    <WuiResizableButton {...controls} {...props} />
   );
 }

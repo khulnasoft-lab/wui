@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { findTestSubject, requiredProps } from '../../test';
 
-import { COLORS, EuiToast } from './toast';
+import { COLORS, WuiToast } from './toast';
 
-describe('EuiToast', () => {
+describe('WuiToast', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToast {...requiredProps} title="test title">
+      <WuiToast {...requiredProps} title="test title">
         <p>Hi</p>
-      </EuiToast>
+      </WuiToast>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +50,7 @@ describe('EuiToast', () => {
   describe('Props', () => {
     describe('title', () => {
       test('is rendered', () => {
-        const component = <EuiToast title="toast title" />;
+        const component = <WuiToast title="toast title" />;
         expect(mount(component)).toMatchSnapshot();
       });
     });
@@ -45,7 +58,7 @@ describe('EuiToast', () => {
     describe('color', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
-          const component = <EuiToast color={color} title="test title" />;
+          const component = <WuiToast color={color} title="test title" />;
           expect(mount(component)).toMatchSnapshot();
         });
       });
@@ -53,7 +66,7 @@ describe('EuiToast', () => {
 
     describe('iconType', () => {
       test('is rendered', () => {
-        const component = <EuiToast iconType="user" title="test title" />;
+        const component = <WuiToast iconType="user" title="test title" />;
         expect(mount(component)).toMatchSnapshot();
       });
     });
@@ -63,7 +76,7 @@ describe('EuiToast', () => {
         const onCloseHandler = jest.fn();
 
         const component = mount(
-          <EuiToast onClose={onCloseHandler} title="test title" />
+          <WuiToast onClose={onCloseHandler} title="test title" />
         );
         const closeButton = findTestSubject(component, 'toastCloseButton');
         closeButton.simulate('click');

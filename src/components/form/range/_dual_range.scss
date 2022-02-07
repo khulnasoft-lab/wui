@@ -1,6 +1,6 @@
-.euiDualRange {
+.wuiDualRange {
   &__slider {
-    @include euiRangeThumbPerBrowser {
+    @include wuiRangeThumbPerBrowser {
       visibility: hidden;
     }
   }

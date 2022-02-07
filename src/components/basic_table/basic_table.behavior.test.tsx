@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 
-import { EuiBasicTable, EuiBasicTableProps } from './basic_table';
+import { WuiBasicTable, WuiBasicTableProps } from './basic_table';
 
-describe('EuiBasicTable', () => {
+describe('WuiBasicTable', () => {
   describe('behavior', () => {
     describe('selected items', () => {
-      let props: EuiBasicTableProps<{ id: string; name: string }>;
+      let props: WuiBasicTableProps<{ id: string; name: string }>;
       let component: ReactWrapper;
 
       beforeEach(() => {
@@ -49,7 +62,7 @@ describe('EuiBasicTable', () => {
           onChange: () => {},
         };
 
-        component = mount(<EuiBasicTable {...props} />);
+        component = mount(<WuiBasicTable {...props} />);
       });
 
       test('check the select all checkbox when all are selected', () => {

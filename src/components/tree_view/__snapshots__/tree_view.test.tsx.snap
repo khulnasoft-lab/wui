@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTreeView is rendered 1`] = `
+exports[`WuiTreeView is rendered 1`] = `
 <div
-  class="euiText euiText--medium euiTreeView__wrapper"
+  class="wuiText wuiText--medium wuiTreeView__wrapper"
 >
   <p
-    class="euiScreenReaderOnly"
+    class="wuiScreenReaderOnly"
     id="htmlId--instruction"
   >
     You can quickly navigate this list using arrow keys.
@@ -13,123 +13,123 @@ exports[`EuiTreeView is rendered 1`] = `
   <ul
     aria-describedby="htmlId--instruction"
     aria-label="aria-label"
-    class="euiTreeView testClass1 testClass2"
+    class="wuiTreeView testClass1 testClass2"
     data-test-subj="test subject string"
     id="htmlId"
   >
     <li
-      class="euiTreeView__node euiTreeView__node--expanded"
+      class="wuiTreeView__node wuiTreeView__node--expanded"
     >
       <button
-        aria-controls="euiNestedTreeView-htmlId"
+        aria-controls="wuiNestedTreeView-htmlId"
         aria-expanded="true"
-        class="euiTreeView__nodeInner"
-        data-test-subj="euiTreeViewButton-htmlId"
+        class="wuiTreeView__nodeInner"
+        data-test-subj="wuiTreeViewButton-htmlId"
         id="htmlId--0--node"
       >
         <span
-          class="euiTreeView__iconWrapper"
+          class="wuiTreeView__iconWrapper"
         >
           <div
-            data-euiicon-type="folderOpen"
+            data-wuiicon-type="folderOpen"
           />
         </span>
         <span
-          class="euiTreeView__nodeLabel"
+          class="wuiTreeView__nodeLabel"
         >
           Item One
         </span>
       </button>
       <div
-        id="euiNestedTreeView-htmlId"
+        id="wuiNestedTreeView-htmlId"
       >
         <div
-          class="euiText euiText--medium euiTreeView__wrapper"
+          class="wuiText wuiText--medium wuiTreeView__wrapper"
         >
           <ul
             aria-label="Item One child of aria-label"
-            class="euiTreeView"
+            class="wuiTreeView"
             id="htmlId"
           >
             <li
-              class="euiTreeView__node"
+              class="wuiTreeView__node"
             >
               <button
-                aria-controls="euiNestedTreeView-htmlId"
+                aria-controls="wuiNestedTreeView-htmlId"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-htmlId"
+                class="wuiTreeView__nodeInner"
+                data-test-subj="wuiTreeViewButton-htmlId"
                 id="htmlId--0--node"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="wuiTreeView__iconWrapper"
                 >
                   <div
-                    data-euiicon-type="document"
+                    data-wuiicon-type="document"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="wuiTreeView__nodeLabel"
                 >
                   Item A
                 </span>
               </button>
               <div
-                id="euiNestedTreeView-htmlId"
+                id="wuiNestedTreeView-htmlId"
               />
             </li>
             <li
-              class="euiTreeView__node"
+              class="wuiTreeView__node"
             >
               <button
-                aria-controls="euiNestedTreeView-htmlId"
+                aria-controls="wuiNestedTreeView-htmlId"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-htmlId"
+                class="wuiTreeView__nodeInner"
+                data-test-subj="wuiTreeViewButton-htmlId"
                 id="htmlId--1--node"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="wuiTreeView__iconWrapper"
                 >
                   <div
-                    data-euiicon-type="arrowRight"
+                    data-wuiicon-type="arrowRight"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="wuiTreeView__nodeLabel"
                 >
                   Item B
                 </span>
               </button>
               <div
-                id="euiNestedTreeView-htmlId"
+                id="wuiNestedTreeView-htmlId"
               />
             </li>
             <li
-              class="euiTreeView__node"
+              class="wuiTreeView__node"
             >
               <button
-                aria-controls="euiNestedTreeView-htmlId"
+                aria-controls="wuiNestedTreeView-htmlId"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-htmlId"
+                class="wuiTreeView__nodeInner"
+                data-test-subj="wuiTreeViewButton-htmlId"
                 id="htmlId--2--node"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="wuiTreeView__iconWrapper"
                 >
                   <div
-                    data-euiicon-type="arrowRight"
+                    data-wuiicon-type="arrowRight"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="wuiTreeView__nodeLabel"
                 >
                   Item C
                 </span>
               </button>
               <div
-                id="euiNestedTreeView-htmlId"
+                id="wuiNestedTreeView-htmlId"
               />
             </li>
           </ul>
@@ -137,23 +137,23 @@ exports[`EuiTreeView is rendered 1`] = `
       </div>
     </li>
     <li
-      class="euiTreeView__node"
+      class="wuiTreeView__node"
     >
       <button
-        aria-controls="euiNestedTreeView-htmlId"
+        aria-controls="wuiNestedTreeView-htmlId"
         aria-expanded="false"
-        class="euiTreeView__nodeInner"
-        data-test-subj="euiTreeViewButton-htmlId"
+        class="wuiTreeView__nodeInner"
+        data-test-subj="wuiTreeViewButton-htmlId"
         id="htmlId--1--node"
       >
         <span
-          class="euiTreeView__nodeLabel"
+          class="wuiTreeView__nodeLabel"
         >
           Item Two
         </span>
       </button>
       <div
-        id="euiNestedTreeView-htmlId"
+        id="wuiNestedTreeView-htmlId"
       />
     </li>
   </ul>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiFieldSearch,
-  EuiFilterSelectItem,
-  EuiLoadingChart,
-  EuiSpacer,
-  EuiIcon,
-  EuiFilterGroup,
-  EuiFilterButton,
+  WuiPopover,
+  WuiPopoverTitle,
+  WuiFieldSearch,
+  WuiFilterSelectItem,
+  WuiLoadingChart,
+  WuiSpacer,
+  WuiIcon,
+  WuiFilterGroup,
+  WuiFilterButton,
 } from '../../../../src/components';
 
 export default () => {
@@ -46,7 +46,7 @@ export default () => {
   ];
 
   const button = (
-    <EuiFilterButton
+    <WuiFilterButton
       iconType="arrowDown"
       onClick={onButtonClick}
       isSelected={isPopoverOpen}
@@ -54,12 +54,12 @@ export default () => {
       hasActiveFilters={true}
       numActiveFilters={2}>
       Composers
-    </EuiFilterButton>
+    </WuiFilterButton>
   );
 
   return (
-    <EuiFilterGroup>
-      <EuiPopover
+    <WuiFilterGroup>
+      <WuiPopover
         id="popoverExampleMultiSelect"
         ownFocus
         button={button}
@@ -67,37 +67,37 @@ export default () => {
         closePopover={closePopover}
         panelPaddingSize="none"
         withTitle>
-        <EuiPopoverTitle>
-          <EuiFieldSearch />
-        </EuiPopoverTitle>
-        <div className="euiFilterSelect__items">
+        <WuiPopoverTitle>
+          <WuiFieldSearch />
+        </WuiPopoverTitle>
+        <div className="wuiFilterSelect__items">
           {items.map((item, index) => (
-            <EuiFilterSelectItem checked={item.checked} key={index}>
+            <WuiFilterSelectItem checked={item.checked} key={index}>
               {item.name}
-            </EuiFilterSelectItem>
+            </WuiFilterSelectItem>
           ))}
           {/*
               Use when loading items initially
             */}
-          <div className="euiFilterSelect__note">
-            <div className="euiFilterSelect__noteContent">
-              <EuiLoadingChart size="m" />
-              <EuiSpacer size="xs" />
+          <div className="wuiFilterSelect__note">
+            <div className="wuiFilterSelect__noteContent">
+              <WuiLoadingChart size="m" />
+              <WuiSpacer size="xs" />
               <p>Loading filters</p>
             </div>
           </div>
           {/*
               Use when no results are returned
             */}
-          <div className="euiFilterSelect__note">
-            <div className="euiFilterSelect__noteContent">
-              <EuiIcon type="minusInCircle" />
-              <EuiSpacer size="xs" />
+          <div className="wuiFilterSelect__note">
+            <div className="wuiFilterSelect__noteContent">
+              <WuiIcon type="minusInCircle" />
+              <WuiSpacer size="xs" />
               <p>No filters found</p>
             </div>
           </div>
         </div>
-      </EuiPopover>
-    </EuiFilterGroup>
+      </WuiPopover>
+    </WuiFilterGroup>
   );
 };

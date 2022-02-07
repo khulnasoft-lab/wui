@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiSwitch,
-  EuiSpacer,
+  WuiHeader,
+  WuiHeaderLogo,
+  WuiSwitch,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -12,20 +12,20 @@ export default () => {
 
   const sections = [
     {
-      items: [<EuiHeaderLogo>Elastic</EuiHeaderLogo>],
+      items: [<WuiHeaderLogo>Wazuh</WuiHeaderLogo>],
       borders: 'right',
     },
   ];
 
   return (
     <>
-      <EuiSwitch
+      <WuiSwitch
         label={'Make header fixed position'}
         checked={position === 'fixed'}
         onChange={e => setPosition(e.target.checked ? 'fixed' : 'static')}
       />
-      <EuiSpacer />
-      <EuiHeader position={position} sections={sections} />
+      <WuiSpacer />
+      <WuiHeader position={position} sections={sections} />
     </>
   );
 };

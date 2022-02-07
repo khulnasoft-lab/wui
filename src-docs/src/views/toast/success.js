@@ -1,15 +1,15 @@
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiLink,
-  EuiToast,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButton,
+  WuiLink,
+  WuiToast,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiToast
+  <WuiToast
     title="Created report for dashboard 'Tuba Sales by Region'"
     color="success"
     iconType="check">
@@ -22,13 +22,13 @@ export default () => (
 
     <p>
       And some other stuff on another line, just for kicks. And{' '}
-      <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+      <WuiLink href="#">here&rsquo;s a link</WuiLink>.
     </p>
 
-    <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s">Download report</EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiToast>
+    <WuiFlexGroup justifyContent="flexEnd" gutterSize="s">
+      <WuiFlexItem grow={false}>
+        <WuiButton size="s">Download report</WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
+  </WuiToast>
 );

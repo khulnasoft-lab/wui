@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EuiFlexItem, EuiPanel } from '../../../../src/components';
+import { WuiFlexItem, WuiPanel } from '../../../../src/components';
 
 const typeToClassNameMap = {
   do: 'guideRule__example--do',
@@ -34,12 +34,12 @@ export const GuideRuleExample = ({
     className
   );
 
-  const ChildrenComponent = panel ? EuiPanel : 'div';
+  const ChildrenComponent = panel ? WuiPanel : 'div';
 
   const styles = { ...style, minHeight };
 
   return (
-    <EuiFlexItem
+    <WuiFlexItem
       component="figure"
       className={classes}
       style={styles}
@@ -52,7 +52,7 @@ export const GuideRuleExample = ({
       <figcaption className="guideRule__caption">
         {text || typeToSubtitleTextMap[type]}
       </figcaption>
-    </EuiFlexItem>
+    </WuiFlexItem>
   );
 };
 

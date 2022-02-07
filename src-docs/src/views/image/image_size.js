@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { EuiImage, EuiSpacer } from '../../../../src/components';
+import { WuiImage, WuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiImage
+    <WuiImage
       hasShadow
       allowFullScreen
       size={50}
@@ -12,8 +12,8 @@ export default () => (
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       size="s"
       hasShadow
       allowFullScreen
@@ -21,8 +21,8 @@ export default () => (
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       size="m"
       hasShadow
       allowFullScreen
@@ -30,8 +30,8 @@ export default () => (
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       size="l"
       hasShadow
       allowFullScreen
@@ -39,8 +39,8 @@ export default () => (
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       size="xl"
       hasShadow
       allowFullScreen
@@ -48,16 +48,16 @@ export default () => (
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       hasShadow
       allowFullScreen
       caption="Original"
       alt="Accessible image alt goes here"
       url="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <WuiSpacer />
+    <WuiImage
       hasShadow
       allowFullScreen
       size="fullWidth"

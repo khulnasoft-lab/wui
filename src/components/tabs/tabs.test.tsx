@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +34,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTabs } from './tabs';
+import { WuiTabs } from './tabs';
 
-describe('EuiTabs', () => {
+describe('WuiTabs', () => {
   test('renders', () => {
-    const component = <EuiTabs {...requiredProps} />;
+    const component = <WuiTabs {...requiredProps} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -33,21 +46,21 @@ describe('EuiTabs', () => {
   describe('props', () => {
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<EuiTabs size="s" />);
+        const component = render(<WuiTabs size="s" />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('display', () => {
       test('can be condensed', () => {
-        const component = render(<EuiTabs display="condensed" />);
+        const component = render(<WuiTabs display="condensed" />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('expand', () => {
       test('is rendered', () => {
-        const component = render(<EuiTabs expand />);
+        const component = render(<WuiTabs expand />);
         expect(component).toMatchSnapshot();
       });
     });

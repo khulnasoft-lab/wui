@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,15 +40,15 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { WuiScreenReaderOnly } from '../../accessibility';
 import { htmlIdGenerator } from '../../../services/accessibility';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from '../form_control_layout';
-import { EuiI18n } from '../../i18n';
+import { WuiI18n } from '../../i18n';
 
-export interface EuiSuperSelectOption<T> {
+export interface WuiSuperSelectOption<T> {
   value: T;
   inputDisplay?: ReactNode;
   dropdownDisplay?: ReactNode;
@@ -43,7 +56,7 @@ export interface EuiSuperSelectOption<T> {
   'data-test-subj'?: string;
 }
 
-export interface EuiSuperSelectControlProps<T>
+export interface WuiSuperSelectControlProps<T>
   extends CommonProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> {
   compressed?: boolean;
@@ -55,24 +68,24 @@ export interface EuiSuperSelectControlProps<T>
   name?: string;
   value?: T;
 
-  options?: Array<EuiSuperSelectOption<T>>;
+  options?: Array<WuiSuperSelectOption<T>>;
 
   /**
    * Creates an input group with element(s) coming before input.
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: WuiFormControlLayoutProps['prepend'];
 
   /**
    * Creates an input group with element(s) coming after input.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: WuiFormControlLayoutProps['append'];
 }
 
-export const EuiSuperSelectControl: <T extends string>(
-  props: EuiSuperSelectControlProps<T>
-) => ReturnType<FunctionComponent<EuiSuperSelectControlProps<T>>> = ({
+export const WuiSuperSelectControl: <T extends string>(
+  props: WuiSuperSelectControlProps<T>
+) => ReturnType<FunctionComponent<WuiSuperSelectControlProps<T>>> = ({
   className,
   options = [],
   id,
@@ -88,13 +101,13 @@ export const EuiSuperSelectControl: <T extends string>(
   ...rest
 }) => {
   const classes = classNames(
-    'euiSuperSelectControl',
+    'wuiSuperSelectControl',
     {
-      'euiSuperSelectControl--fullWidth': fullWidth,
-      'euiSuperSelectControl--compressed': compressed,
-      'euiSuperSelectControl--inGroup': prepend || append,
-      'euiSuperSelectControl-isLoading': isLoading,
-      'euiSuperSelectControl-isInvalid': isInvalid,
+      'wuiSuperSelectControl--fullWidth': fullWidth,
+      'wuiSuperSelectControl--compressed': compressed,
+      'wuiSuperSelectControl--inGroup': prepend || append,
+      'wuiSuperSelectControl-isLoading': isLoading,
+      'wuiSuperSelectControl-isInvalid': isInvalid,
     },
     className
   );
@@ -114,7 +127,7 @@ export const EuiSuperSelectControl: <T extends string>(
       : selectedValue;
   }
 
-  const icon: EuiFormControlLayoutProps['icon'] = {
+  const icon: WuiFormControlLayoutProps['icon'] = {
     type: 'arrowDown',
     side: 'right',
   };
@@ -131,7 +144,7 @@ export const EuiSuperSelectControl: <T extends string>(
         value={value}
       />
 
-      <EuiFormControlLayout
+      <WuiFormControlLayout
         icon={icon}
         fullWidth={fullWidth}
         isLoading={isLoading}
@@ -142,15 +155,15 @@ export const EuiSuperSelectControl: <T extends string>(
           This is read when the user tabs in. The comma is important,
           otherwise the screen reader often combines the text.
         */}
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <span id={screenReaderId}>
-            <EuiI18n
-              token="euiSuperSelectControl.selectAnOption"
+            <WuiI18n
+              token="wuiSuperSelectControl.selectAnOption"
               default="Select an option: {selectedValue}, is selected"
               values={{ selectedValue }}
             />
           </span>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
         <button
           type="button"
           className={classes}
@@ -159,7 +172,7 @@ export const EuiSuperSelectControl: <T extends string>(
           {...rest}>
           {selectedValue}
         </button>
-      </EuiFormControlLayout>
+      </WuiFormControlLayout>
     </Fragment>
   );
 };

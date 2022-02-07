@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiToast } from '../../../../src/components';
+import { WuiToast } from '../../../../src/components';
 
 export default () => (
-  <EuiToast
+  <WuiToast
     title="Sometimes a title is enough!"
     color="warning"
     iconType="help"

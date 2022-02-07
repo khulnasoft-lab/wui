@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,23 +33,23 @@
 import React, { ReactNode, FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { WuiScreenReaderOnly } from '../../accessibility';
 import { ToggleType } from '../../toggle';
 
-import { EuiButtonToggle } from '../button_toggle';
+import { WuiButtonToggle } from '../button_toggle';
 import { CommonProps } from '../../common';
 
 import { ButtonColor } from '../button';
 import { ButtonContentIconSide } from '../button_content';
 import { IconType } from '../../icon';
 
-export interface EuiButtonGroupIdToSelectedMap {
+export interface WuiButtonGroupIdToSelectedMap {
   [id: string]: boolean;
 }
 
 export type GroupButtonSize = 's' | 'm' | 'compressed';
 
-export interface EuiButtonGroupOption extends CommonProps {
+export interface WuiButtonGroupOption extends CommonProps {
   id: string;
   label: ReactNode;
   name?: string;
@@ -46,8 +59,8 @@ export interface EuiButtonGroupOption extends CommonProps {
   iconType?: IconType;
 }
 
-export interface EuiButtonGroupProps extends CommonProps {
-  options?: EuiButtonGroupOption[];
+export interface WuiButtonGroupProps extends CommonProps {
+  options?: WuiButtonGroupOption[];
   onChange: (id: string, value?: any) => void;
   /**
    * Typical sizing is `s`. Medium `m` size should be reserved for major features.
@@ -62,13 +75,13 @@ export interface EuiButtonGroupProps extends CommonProps {
   color?: ButtonColor;
   name?: string;
   type?: ToggleType;
-  idToSelectedMap?: EuiButtonGroupIdToSelectedMap;
+  idToSelectedMap?: WuiButtonGroupIdToSelectedMap;
 }
 
 type Props = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
-  EuiButtonGroupProps;
+  WuiButtonGroupProps;
 
-export const EuiButtonGroup: FunctionComponent<Props> = ({
+export const WuiButtonGroup: FunctionComponent<Props> = ({
   className,
   buttonSize = 's',
   color = 'text',
@@ -86,24 +99,24 @@ export const EuiButtonGroup: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiButtonGroup',
-    [`euiButtonGroup--${buttonSize}`],
+    'wuiButtonGroup',
+    [`wuiButtonGroup--${buttonSize}`],
     {
-      'euiButtonGroup--fullWidth': isFullWidth,
+      'wuiButtonGroup--fullWidth': isFullWidth,
     },
     className
   );
 
-  const fieldsetClasses = classNames('euiButtonGroup__fieldset', {
-    'euiButtonGroup__fieldset--fullWidth': isFullWidth,
+  const fieldsetClasses = classNames('wuiButtonGroup__fieldset', {
+    'wuiButtonGroup__fieldset--fullWidth': isFullWidth,
   });
 
   let legendNode;
   if (legend) {
     legendNode = (
-      <EuiScreenReaderOnly>
+      <WuiScreenReaderOnly>
         <legend>{legend}</legend>
-      </EuiScreenReaderOnly>
+      </WuiScreenReaderOnly>
     );
   }
 
@@ -134,17 +147,17 @@ export const EuiButtonGroup: FunctionComponent<Props> = ({
             fill = isSelectedState;
           }
           const buttonClasses = classNames(
-            'euiButtonGroup__button',
+            'wuiButtonGroup__button',
             {
-              'euiButtonGroup__button--selected': isSelectedState,
+              'wuiButtonGroup__button--selected': isSelectedState,
             },
             className
           );
 
           return (
-            <EuiButtonToggle
+            <WuiButtonToggle
               className={buttonClasses}
-              toggleClassName="euiButtonGroup__toggle"
+              toggleClassName="wuiButtonGroup__toggle"
               id={id}
               key={index}
               value={value}

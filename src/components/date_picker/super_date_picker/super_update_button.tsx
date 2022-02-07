@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,11 +33,11 @@
 import React, { Component, MouseEventHandler, Ref } from 'react';
 import classNames from 'classnames';
 
-import { EuiButton } from '../../button';
-import { EuiI18n } from '../../i18n';
-import { EuiToolTip, EuiToolTipProps } from '../../tool_tip';
+import { WuiButton } from '../../button';
+import { WuiI18n } from '../../i18n';
+import { WuiToolTip, WuiToolTipProps } from '../../tool_tip';
 
-export interface EuiSuperUpdateButtonProps {
+export interface WuiSuperUpdateButtonProps {
   className?: string;
   isDisabled: boolean;
   isLoading: boolean;
@@ -32,9 +45,9 @@ export interface EuiSuperUpdateButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
 
   /**
-   * Passes props to `EuiToolTip`
+   * Passes props to `WuiToolTip`
    */
-  toolTipProps?: EuiToolTipProps;
+  toolTipProps?: WuiToolTipProps;
 
   /**
    * Show the "Click to apply" tooltip
@@ -42,7 +55,7 @@ export interface EuiSuperUpdateButtonProps {
   showTooltip: boolean;
 }
 
-export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
+export class WuiSuperUpdateButton extends Component<WuiSuperUpdateButtonProps> {
   static defaultProps = {
     needsUpdate: false,
     isLoading: false,
@@ -52,7 +65,7 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
 
   _isMounted = false;
   tooltipTimeout: number | undefined;
-  tooltip: EuiToolTip | null = null;
+  tooltip: WuiToolTip | null = null;
 
   componentWillUnmount() {
     this._isMounted = false;
@@ -76,7 +89,7 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
     }
   }
 
-  setTootipRef: Ref<EuiToolTip> = node => {
+  setTootipRef: Ref<WuiToolTip> = node => {
     this.tooltip = node;
   };
 
@@ -106,23 +119,23 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiSuperUpdateButton', className);
+    const classes = classNames('wuiSuperUpdateButton', className);
 
     let buttonText = (
-      <EuiI18n
-        token="euiSuperUpdateButton.refreshButtonLabel"
+      <WuiI18n
+        token="wuiSuperUpdateButton.refreshButtonLabel"
         default="Refresh"
       />
     );
     if (needsUpdate || isLoading) {
       buttonText = isLoading ? (
-        <EuiI18n
-          token="euiSuperUpdateButton.updatingButtonLabel"
+        <WuiI18n
+          token="wuiSuperUpdateButton.updatingButtonLabel"
           default="Updating"
         />
       ) : (
-        <EuiI18n
-          token="euiSuperUpdateButton.updateButtonLabel"
+        <WuiI18n
+          token="wuiSuperUpdateButton.updateButtonLabel"
           default="Update"
         />
       );
@@ -131,39 +144,39 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
     let tooltipContent;
     if (isDisabled) {
       tooltipContent = (
-        <EuiI18n
-          token="euiSuperUpdateButton.cannotUpdateTooltip"
+        <WuiI18n
+          token="wuiSuperUpdateButton.cannotUpdateTooltip"
           default="Cannot update"
         />
       );
     } else if (needsUpdate && !isLoading) {
       tooltipContent = (
-        <EuiI18n
-          token="euiSuperUpdateButton.clickToApplyTooltip"
+        <WuiI18n
+          token="wuiSuperUpdateButton.clickToApplyTooltip"
           default="Click to apply"
         />
       );
     }
 
     return (
-      <EuiToolTip
+      <WuiToolTip
         ref={this.setTootipRef}
         content={tooltipContent}
         position="bottom"
         {...toolTipProps}>
-        <EuiButton
+        <WuiButton
           className={classes}
           color={needsUpdate || isLoading ? 'secondary' : 'primary'}
           fill
-          iconType={needsUpdate || isLoading ? 'kqlFunction' : 'refresh'}
-          textProps={{ className: 'euiSuperUpdateButton__text' }}
+          iconType={needsUpdate || isLoading ? 'qryFunction' : 'refresh'}
+          textProps={{ className: 'wuiSuperUpdateButton__text' }}
           isDisabled={isDisabled}
           onClick={onClick}
           isLoading={isLoading}
           {...rest}>
           {buttonText}
-        </EuiButton>
-      </EuiToolTip>
+        </WuiButton>
+      </WuiToolTip>
     );
   }
 }

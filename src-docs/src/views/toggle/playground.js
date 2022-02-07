@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiToggle } from '../../../../src/components/';
+import { WuiToggle } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -7,9 +7,9 @@ import {
 } from '../../services/playground';
 
 export const toggleConfig = () => {
-  const docgenInfo = Array.isArray(EuiToggle.__docgenInfo)
-    ? EuiToggle.__docgenInfo[0]
-    : EuiToggle.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiToggle.__docgenInfo)
+    ? WuiToggle.__docgenInfo[0]
+    : WuiToggle.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.label.value = 'Is toggle on?';
@@ -30,14 +30,14 @@ export const toggleConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiToggle',
+      componentName: 'WuiToggle',
       props: propsToUse,
       scope: {
-        EuiToggle,
+        WuiToggle,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiToggle'],
+        '@wazuh/wui': {
+          named: ['WuiToggle'],
         },
       },
       customProps: {

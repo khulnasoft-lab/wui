@@ -1,20 +1,20 @@
 import { PropTypes } from 'react-view';
-import { EuiPanel, EuiText } from '../../../../src/components/';
+import { WuiPanel, WuiText } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 import * as t from '@babel/types';
 
 export const panelConfig = () => {
-  const docgenInfo = Array.isArray(EuiPanel.__docgenInfo)
-    ? EuiPanel.__docgenInfo[0]
-    : EuiPanel.__docgenInfo;
+  const docgenInfo = Array.isArray(WuiPanel.__docgenInfo)
+    ? WuiPanel.__docgenInfo[0]
+    : WuiPanel.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
-    value: `<EuiText>
+    value: `<WuiText>
     <p>
-      Any content inside of <strong>EuiPanel</strong> will appear here.
+      Any content inside of <strong>WuiPanel</strong> will appear here.
     </p>
-  </EuiText>`,
+  </WuiText>`,
     type: PropTypes.ReactNode,
     hidden: false,
   };
@@ -37,15 +37,15 @@ export const panelConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiPanel',
+      componentName: 'WuiPanel',
       props: propsToUse,
       scope: {
-        EuiPanel,
-        EuiText,
+        WuiPanel,
+        WuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPanel', 'EuiText'],
+        '@wazuh/wui': {
+          named: ['WuiPanel', 'WuiText'],
         },
       },
       customProps: {

@@ -1,40 +1,40 @@
-.euiHeaderAlert {
+.wuiHeaderAlert {
   min-width: 300px;
   position: relative;
-  margin-bottom: $euiSizeL;
-  padding: 0 $euiSizeS $euiSizeL;
-  border-bottom: $euiBorderThin;
+  margin-bottom: $wuiSizeL;
+  padding: 0 $wuiSizeS $wuiSizeL;
+  border-bottom: $wuiBorderThin;
   border-top: none;
 
-  .euiHeaderAlert__dismiss {
+  .wuiHeaderAlert__dismiss {
     opacity: 0;
     position: absolute;
-    right: $euiSize - 4px;
-    top: $euiSize - 4px;
-    transition: opacity $euiAnimSpeedNormal ease-in;
+    right: $wuiSize - 4px;
+    top: $wuiSize - 4px;
+    transition: opacity $wuiAnimSpeedNormal ease-in;
   }
 
-  &:hover .euiHeaderAlert__dismiss,
-  .euiHeaderAlert__dismiss:focus {
+  &:hover .wuiHeaderAlert__dismiss,
+  .wuiHeaderAlert__dismiss:focus {
     opacity: 1;
   }
 
-  .euiHeaderAlert__title {
-    @include euiTitle('xs');
-    margin-bottom: $euiSizeS;
+  .wuiHeaderAlert__title {
+    @include wuiTitle('xs');
+    margin-bottom: $wuiSizeS;
   }
 
-  .euiHeaderAlert__text {
-    @include euiFontSizeS;
-    margin-bottom: $euiSize;
+  .wuiHeaderAlert__text {
+    @include wuiFontSizeS;
+    margin-bottom: $wuiSize;
   }
 
-  .euiHeaderAlert__action {
-    @include euiFontSizeS;
+  .wuiHeaderAlert__action {
+    @include wuiFontSizeS;
   }
 
-  .euiHeaderAlert__date {
-    @include euiFontSizeXS;
-    color: $euiColorDarkShade;
+  .wuiHeaderAlert__date {
+    @include wuiFontSizeXS;
+    color: $wuiColorDarkShade;
   }
 }

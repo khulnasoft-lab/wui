@@ -2,12 +2,12 @@ import React, { useState, Fragment } from 'react';
 import { DisplayToggles } from './display_toggles';
 
 import {
-  EuiFilePicker,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiSpacer,
-  EuiSwitch,
+  WuiFilePicker,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiText,
+  WuiSpacer,
+  WuiSwitch,
 } from '../../../../src/components';
 
 export default () => {
@@ -38,13 +38,13 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={2}>
+      <WuiFlexGroup>
+        <WuiFlexItem grow={2}>
           {/* DisplayToggles wrapper for Docs only */}
           <DisplayToggles
             canReadOnly={false}
             extras={[
-              <EuiSwitch
+              <WuiSwitch
                 compressed
                 label={'large'}
                 checked={large}
@@ -53,7 +53,7 @@ export default () => {
                 }}
               />,
             ]}>
-            <EuiFilePicker
+            <WuiFilePicker
               id="asdf2"
               multiple
               initialPromptText="Select or drag and drop multiple files"
@@ -64,15 +64,15 @@ export default () => {
               aria-label="Use aria labels when no actual label is in use"
             />
           </DisplayToggles>
-          <EuiSpacer />
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiText>
+          <WuiSpacer />
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiText>
             <h3>Files attached</h3>
             {renderFiles()}
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </WuiText>
+        </WuiFlexItem>
+      </WuiFlexGroup>
     </Fragment>
   );
 };

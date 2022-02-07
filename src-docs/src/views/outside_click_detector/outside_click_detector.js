@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiOutsideClickDetector,
-  EuiSpacer,
+  WuiButton,
+  WuiOutsideClickDetector,
+  WuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <div>
-      <EuiOutsideClickDetector
+      <WuiOutsideClickDetector
         onOutsideClick={() => {
           window.alert('Clicked outside');
         }}
@@ -25,13 +25,13 @@ export default () => {
             ? 'This detector is disabled, so clicking outside will do nothing.'
             : 'Clicking inside here will do nothing, but clicking outside will trigger an alert.'}
         </p>
-      </EuiOutsideClickDetector>
+      </WuiOutsideClickDetector>
 
-      <EuiSpacer size="l" />
+      <WuiSpacer size="l" />
 
-      <EuiButton onClick={toggleDisabled}>
+      <WuiButton onClick={toggleDisabled}>
         {isDisabled ? 'Enable' : 'Disable'} the detector
-      </EuiButton>
+      </WuiButton>
     </div>
   );
 };

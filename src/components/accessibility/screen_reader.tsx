@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +33,7 @@
 import { cloneElement, ReactElement, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiScreenReaderOnlyProps {
+export interface WuiScreenReaderOnlyProps {
   /**
    * ReactElement to render as this component's content
    */
@@ -32,14 +45,14 @@ export interface EuiScreenReaderOnlyProps {
   showOnFocus?: boolean;
 }
 
-export const EuiScreenReaderOnly: FunctionComponent<EuiScreenReaderOnlyProps> = ({
+export const WuiScreenReaderOnly: FunctionComponent<WuiScreenReaderOnlyProps> = ({
   children,
   showOnFocus,
 }) => {
   const classes = classNames(
     {
-      euiScreenReaderOnly: !showOnFocus,
-      'euiScreenReaderOnly--showOnFocus': showOnFocus,
+      wuiScreenReaderOnly: !showOnFocus,
+      'wuiScreenReaderOnly--showOnFocus': showOnFocus,
     },
     children.props.className
   );

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,7 +43,7 @@ export const TYPES = Object.keys(typeToInputTypeMap);
 
 export type ToggleType = keyof typeof typeToInputTypeMap;
 
-export type EuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
+export type WuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
   CommonProps & {
     id?: string;
     /**
@@ -58,7 +71,7 @@ export type EuiToggleProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
     value?: string | number;
   };
 
-export const EuiToggle: SFC<EuiToggleProps> = ({
+export const WuiToggle: SFC<WuiToggleProps> = ({
   id,
   className,
   checked,
@@ -75,12 +88,12 @@ export const EuiToggle: SFC<EuiToggleProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiToggle',
-    { 'euiToggle--checked': checked },
+    'wuiToggle',
+    { 'wuiToggle--checked': checked },
     className
   );
 
-  const inputClasses = classNames('euiToggle__input', inputClassName);
+  const inputClasses = classNames('wuiToggle__input', inputClassName);
 
   return (
     <div className={classes} {...rest}>
@@ -103,6 +116,6 @@ export const EuiToggle: SFC<EuiToggleProps> = ({
   );
 };
 
-EuiToggle.defaultProps = {
+WuiToggle.defaultProps = {
   type: 'multi',
 };

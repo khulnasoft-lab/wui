@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,15 +33,15 @@
 import React, { ReactElement } from 'react';
 import { isString } from '../../services/predicate';
 import {
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiButtonEmptyColor,
-  EuiButtonIconColor,
+  WuiButtonEmpty,
+  WuiButtonIcon,
+  WuiButtonEmptyColor,
+  WuiButtonIconColor,
 } from '../button';
-import { EuiToolTip } from '../tool_tip';
+import { WuiToolTip } from '../tool_tip';
 import { DefaultItemAction as Action } from './action_types';
 import { htmlIdGenerator } from '../../services/accessibility';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiScreenReaderOnly } from '../accessibility';
 
 export interface DefaultItemActionProps<T> {
   action: Action<T>;
@@ -54,7 +67,7 @@ export const DefaultItemAction = <T extends {}>({
   const onClick = action.onClick ? () => action.onClick!(item) : undefined;
 
   const buttonColor = action.color;
-  let color: EuiButtonIconColor = 'primary';
+  let color: WuiButtonIconColor = 'primary';
   if (buttonColor) {
     color = isString(buttonColor) ? buttonColor : buttonColor(item);
   }
@@ -76,7 +89,7 @@ export const DefaultItemAction = <T extends {}>({
     const ariaLabelId = htmlIdGenerator()();
     button = (
       <>
-        <EuiButtonIcon
+        <WuiButtonIcon
           className={className}
           aria-labelledby={ariaLabelId}
           isDisabled={!enabled}
@@ -88,18 +101,18 @@ export const DefaultItemAction = <T extends {}>({
           data-test-subj={action['data-test-subj']}
         />
         {/* actionContent (action.name) is a ReactNode and must be rendered to an element and referenced by ID for screen readers */}
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <span id={ariaLabelId}>{actionContent}</span>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       </>
     );
   } else {
     button = (
-      <EuiButtonEmpty
+      <WuiButtonEmpty
         className={className}
         size="s"
         isDisabled={!enabled}
-        color={color as EuiButtonEmptyColor}
+        color={color as WuiButtonEmptyColor}
         iconType={icon}
         onClick={onClick}
         href={action.href}
@@ -107,14 +120,14 @@ export const DefaultItemAction = <T extends {}>({
         data-test-subj={action['data-test-subj']}
         flush="right">
         {actionContent}
-      </EuiButtonEmpty>
+      </WuiButtonEmpty>
     );
   }
 
   return enabled && action.description ? (
-    <EuiToolTip content={action.description} delay="long">
+    <WuiToolTip content={action.description} delay="long">
       {button}
-    </EuiToolTip>
+    </WuiToolTip>
   ) : (
     button
   );

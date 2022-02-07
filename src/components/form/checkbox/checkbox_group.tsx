@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,35 +36,35 @@ import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
 import {
-  EuiFormFieldsetProps,
-  EuiFormLegendProps,
-  EuiFormFieldset,
+  WuiFormFieldsetProps,
+  WuiFormLegendProps,
+  WuiFormFieldset,
 } from '../form_fieldset';
-import { EuiCheckbox, EuiCheckboxProps } from './checkbox';
+import { WuiCheckbox, WuiCheckboxProps } from './checkbox';
 
-export interface EuiCheckboxGroupOption
-  extends Omit<EuiCheckboxProps, 'checked' | 'onChange'> {
+export interface WuiCheckboxGroupOption
+  extends Omit<WuiCheckboxProps, 'checked' | 'onChange'> {
   id: string;
 }
 
-export interface EuiCheckboxGroupIdToSelectedMap {
+export interface WuiCheckboxGroupIdToSelectedMap {
   [id: string]: boolean;
 }
 
-// Must omit inherit `onChange` properties or else TS complains when applying to the EuiRadio
+// Must omit inherit `onChange` properties or else TS complains when applying to the WuiRadio
 type AsDivProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>;
-type WithLegendProps = Omit<EuiFormFieldsetProps, 'onChange'> & {
+type WithLegendProps = Omit<WuiFormFieldsetProps, 'onChange'> & {
   /**
    * If the individual labels for each radio do not provide a sufficient description, add a legend.
-   * Wraps the group in a `EuiFormFieldset` which adds an `EuiLegend` for titling the whole group.
-   * Accepts an `EuiFormLegendProps` shape.
+   * Wraps the group in a `WuiFormFieldset` which adds an `WuiLegend` for titling the whole group.
+   * Accepts an `WuiFormLegendProps` shape.
    */
-  legend?: EuiFormLegendProps;
+  legend?: WuiFormLegendProps;
 };
 
-export type EuiCheckboxGroupProps = CommonProps & {
-  options: EuiCheckboxGroupOption[];
-  idToSelectedMap: EuiCheckboxGroupIdToSelectedMap;
+export type WuiCheckboxGroupProps = CommonProps & {
+  options: WuiCheckboxGroupOption[];
+  idToSelectedMap: WuiCheckboxGroupIdToSelectedMap;
   onChange: (optionId: string) => void;
   /**
    * Tightens up the spacing between checkbox rows and sends down the
@@ -61,7 +74,7 @@ export type EuiCheckboxGroupProps = CommonProps & {
   disabled?: boolean;
 } & ExclusiveUnion<AsDivProps, WithLegendProps>;
 
-export const EuiCheckboxGroup: FunctionComponent<EuiCheckboxGroupProps> = ({
+export const WuiCheckboxGroup: FunctionComponent<WuiCheckboxGroupProps> = ({
   options = [],
   idToSelectedMap = {},
   onChange,
@@ -78,8 +91,8 @@ export const EuiCheckboxGroup: FunctionComponent<EuiCheckboxGroupProps> = ({
       ...optionRest
     } = option;
     return (
-      <EuiCheckbox
-        className={classNames('euiCheckboxGroup__item', optionClass)}
+      <WuiCheckbox
+        className={classNames('wuiCheckboxGroup__item', optionClass)}
         key={index}
         checked={idToSelectedMap[option.id]}
         disabled={disabled || isOptionDisabled}
@@ -95,12 +108,12 @@ export const EuiCheckboxGroup: FunctionComponent<EuiCheckboxGroupProps> = ({
     legend.compressed = compressed;
 
     return (
-      <EuiFormFieldset
+      <WuiFormFieldset
         className={className}
         legend={legend}
-        {...(rest as EuiFormFieldsetProps)}>
+        {...(rest as WuiFormFieldsetProps)}>
         {checkboxes}
-      </EuiFormFieldset>
+      </WuiFormFieldset>
     );
   }
 

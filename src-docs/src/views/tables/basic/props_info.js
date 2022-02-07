@@ -1,5 +1,5 @@
 export const propsInfo = {
-  EuiBasicTable: {
+  WuiBasicTable: {
     __docgenInfo: {
       props: {
         items: {
@@ -21,7 +21,7 @@ export const propsInfo = {
           type: { name: 'object[]' },
         },
         cellProps: {
-          description: 'Applied to `EuiTableRowCell`',
+          description: 'Applied to `WuiTableRowCell`',
           required: false,
           type: { name: 'func | object[]' },
         },
@@ -74,7 +74,7 @@ export const propsInfo = {
           defaultValue: { value: 'true' },
         },
         rowProps: {
-          description: 'Applied to `EuiTableRow`',
+          description: 'Applied to `WuiTableRow`',
           required: false,
           type: { name: 'func | object[]' },
         },
@@ -129,7 +129,7 @@ export const propsInfo = {
 
   Pagination: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         pageIndex: {
           description: 'The current page (zero-based) index',
@@ -165,7 +165,7 @@ export const propsInfo = {
 
   Sorting: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         sort: {
           description: 'Indicates the property/field to sort on',
@@ -174,7 +174,7 @@ export const propsInfo = {
         },
         allowNeutralSort: {
           description:
-            'Enables/disables unsorting of table columns. Supported by EuiInMemoryTable.',
+            'Enables/disables unsorting of table columns. Supported by WuiInMemoryTable.',
           required: false,
           type: { name: 'bool' },
         },
@@ -189,7 +189,7 @@ export const propsInfo = {
 
   Selection: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         onSelectionChange: {
           description:
@@ -216,7 +216,7 @@ export const propsInfo = {
 
   Criteria: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         page: {
           description:
@@ -236,7 +236,7 @@ export const propsInfo = {
 
   FieldDataColumn: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description:
         "Describes a column that displays a value derived of one of the item's fields",
       props: {
@@ -311,7 +311,7 @@ export const propsInfo = {
 
   ComputedColumn: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description: 'Describes a column for computed values',
       props: {
         render: {
@@ -356,7 +356,7 @@ export const propsInfo = {
 
   ActionsColumn: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description:
         'Describes a column that holds action controls (e.g. Buttons)',
       props: {
@@ -388,7 +388,7 @@ export const propsInfo = {
 
   DefaultItemAction: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description: 'Describes an action that is displayed as a button',
       props: {
         name: {
@@ -455,7 +455,7 @@ export const propsInfo = {
 
   CustomItemAction: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       description: 'Describes a custom action',
       props: {
         render: {

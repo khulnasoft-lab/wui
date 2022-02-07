@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +33,12 @@
 import React, { AriaAttributes, Component, MouseEventHandler } from 'react';
 import classNames from 'classnames';
 
-import { EuiBadge } from '../../badge';
-import { EuiI18n } from '../../i18n';
-import { EuiComboBoxOptionOption, OptionHandler } from '../types';
+import { WuiBadge } from '../../badge';
+import { WuiI18n } from '../../i18n';
+import { WuiComboBoxOptionOption, OptionHandler } from '../types';
 import { CommonProps } from '../../common';
 
-export interface EuiComboBoxPillProps<T> extends CommonProps {
+export interface WuiComboBoxPillProps<T> extends CommonProps {
   asPlainText?: boolean;
   children?: string;
   className?: string;
@@ -33,10 +46,10 @@ export interface EuiComboBoxPillProps<T> extends CommonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onClickAriaLabel?: AriaAttributes['aria-label'];
   onClose?: OptionHandler<T>;
-  option: EuiComboBoxOptionOption<T>;
+  option: WuiComboBoxOptionOption<T>;
 }
 
-export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
+export class WuiComboBoxPill<T> extends Component<WuiComboBoxPillProps<T>> {
   static defaultProps = {
     color: 'hollow',
   };
@@ -61,9 +74,9 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
       ...rest
     } = this.props;
     const classes = classNames(
-      'euiComboBoxPill',
+      'wuiComboBoxPill',
       {
-        'euiComboBoxPill--plainText': asPlainText,
+        'wuiComboBoxPill--plainText': asPlainText,
       },
       className
     );
@@ -77,12 +90,12 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
 
     if (onClose) {
       return (
-        <EuiI18n
-          token="euiComboBoxPill.removeSelection"
+        <WuiI18n
+          token="wuiComboBoxPill.removeSelection"
           default="Remove {children} from selection in this group"
           values={{ children }}>
           {(removeSelection: string) => (
-            <EuiBadge
+            <WuiBadge
               className={classes}
               closeButtonProps={{ tabIndex: -1 }}
               color={color}
@@ -94,9 +107,9 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
               {...onClickProps}
               {...rest}>
               {children}
-            </EuiBadge>
+            </WuiBadge>
           )}
-        </EuiI18n>
+        </WuiI18n>
       );
     }
 
@@ -109,14 +122,14 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
     }
 
     return (
-      <EuiBadge
+      <WuiBadge
         className={classes}
         color={color}
         title={children}
         {...rest}
         {...onClickProps}>
         {children}
-      </EuiBadge>
+      </WuiBadge>
     );
   }
 }

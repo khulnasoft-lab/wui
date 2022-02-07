@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,14 +38,14 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiText } from '../../text';
+import { WuiText } from '../../text';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  WuiFormControlLayout,
+  WuiFormControlLayoutProps,
 } from './form_control_layout';
 
-export type EuiFormControlLayoutDelimitedProps = Partial<
-  EuiFormControlLayoutProps
+export type WuiFormControlLayoutDelimitedProps = Partial<
+  WuiFormControlLayoutProps
 > & {
   /**
    * Left side control
@@ -43,33 +56,33 @@ export type EuiFormControlLayoutDelimitedProps = Partial<
    */
   endControl: ReactElement;
   /**
-   * The center content. Accepts a string to be wrapped in a subdued EuiText
+   * The center content. Accepts a string to be wrapped in a subdued WuiText
    * or a single ReactElement
    */
   delimiter?: ReactNode;
   className?: string;
 };
 
-export const EuiFormControlLayoutDelimited: FunctionComponent<EuiFormControlLayoutDelimitedProps> = ({
+export const WuiFormControlLayoutDelimited: FunctionComponent<WuiFormControlLayoutDelimitedProps> = ({
   startControl,
   endControl,
   delimiter = '→',
   className,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutDelimited', className);
+  const classes = classNames('wuiFormControlLayoutDelimited', className);
 
   return (
-    <EuiFormControlLayout className={classes} {...rest}>
+    <WuiFormControlLayout className={classes} {...rest}>
       {addClassesToControl(startControl)}
-      <EuiText
-        className="euiFormControlLayoutDelimited__delimeter"
+      <WuiText
+        className="wuiFormControlLayoutDelimited__delimeter"
         size="s"
         color="subdued">
         {delimiter}
-      </EuiText>
+      </WuiText>
       {addClassesToControl(endControl)}
-    </EuiFormControlLayout>
+    </WuiFormControlLayout>
   );
 };
 
@@ -77,7 +90,7 @@ function addClassesToControl(control: ReactElement) {
   return cloneElement(control, {
     className: classNames(
       control.props.className,
-      'euiFormControlLayoutDelimited__input'
+      'wuiFormControlLayoutDelimited__input'
     ),
   });
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { ThemeContext } from '../with_theme';
-import { EuiSelect, EuiFormRow } from '../../../../src/components';
-import { EUI_THEMES } from '../../../../src/themes';
+import { WuiSelect, WuiFormRow } from '../../../../src/components';
+import { WUI_THEMES } from '../../../../src/themes';
 
 export const GuideThemeSelector = () => {
   return (
@@ -14,15 +14,15 @@ export const GuideThemeSelector = () => {
 
 const GuideThemeSelectorComponent = ({ context }) => {
   return (
-    <EuiFormRow label="Theme">
-      <EuiSelect
-        options={EUI_THEMES}
+    <WuiFormRow label="Theme">
+      <WuiSelect
+        options={WUI_THEMES}
         value={context.theme}
         onChange={e => {
           context.changeTheme(e.target.value);
         }}
         aria-label="Switch the theme"
       />
-    </EuiFormRow>
+    </WuiFormRow>
   );
 };

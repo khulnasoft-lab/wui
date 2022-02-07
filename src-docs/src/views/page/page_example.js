@@ -5,18 +5,18 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiPageHeader,
-  EuiPageHeaderSection,
-  EuiPageSideBar,
-  EuiText,
-  EuiSpacer,
+  WuiCode,
+  WuiPage,
+  WuiPageBody,
+  WuiPageContent,
+  WuiPageContentBody,
+  WuiPageContentHeader,
+  WuiPageContentHeaderSection,
+  WuiPageHeader,
+  WuiPageHeaderSection,
+  WuiPageSideBar,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import Page from './page';
@@ -42,14 +42,14 @@ const PageContentCenterWithSideBarHtml = renderToHtml(Page);
 export const PageExample = {
   title: 'Page',
   intro: (
-    <EuiText>
+    <WuiText>
       <p>
         Page layouts are modular and have the ability to add or remove
         components as needed for the design. These examples are colored for
         illustrative purposes only.
       </p>
-      <EuiSpacer />
-    </EuiText>
+      <WuiSpacer />
+    </WuiText>
   ),
   sections: [
     {
@@ -69,22 +69,22 @@ export const PageExample = {
           <p>
             By default, the entire page will always be 100% of the window&apos;s
             width; to max out the typical width and center the page, set the{' '}
-            <EuiCode>restrictWidth</EuiCode> prop to <EuiCode>true</EuiCode>.
+            <WuiCode>restrictWidth</WuiCode> prop to <WuiCode>true</WuiCode>.
             You can also pass an integer to this property to max out the width
             at a custom pixel value or a string with a custom measurement.
           </p>
         </div>
       ),
       props: {
-        EuiPage,
-        EuiPageBody,
-        EuiPageContent,
-        EuiPageContentBody,
-        EuiPageContentHeader,
-        EuiPageContentHeaderSection,
-        EuiPageHeader,
-        EuiPageHeaderSection,
-        EuiPageSideBar,
+        WuiPage,
+        WuiPageBody,
+        WuiPageContent,
+        WuiPageContentBody,
+        WuiPageContentHeader,
+        WuiPageContentHeaderSection,
+        WuiPageHeader,
+        WuiPageHeaderSection,
+        WuiPageSideBar,
       },
       demo: (
         <div className="guideDemo__highlightLayout">

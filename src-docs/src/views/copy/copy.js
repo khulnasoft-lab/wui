@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiCopy,
-  EuiButton,
-  EuiFieldText,
-  EuiSpacer,
-  EuiFormRow,
+  WuiCopy,
+  WuiButton,
+  WuiFieldText,
+  WuiSpacer,
+  WuiFormRow,
 } from '../../../../src/components/';
 
 export default () => {
@@ -17,15 +17,15 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="Enter text that will be copied to clipboard">
-        <EuiFieldText value={copyText} onChange={onChange} />
-      </EuiFormRow>
+      <WuiFormRow label="Enter text that will be copied to clipboard">
+        <WuiFieldText value={copyText} onChange={onChange} />
+      </WuiFormRow>
 
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
 
-      <EuiCopy textToCopy={copyText}>
-        {copy => <EuiButton onClick={copy}>Click to copy input text</EuiButton>}
-      </EuiCopy>
+      <WuiCopy textToCopy={copyText}>
+        {copy => <WuiButton onClick={copy}>Click to copy input text</WuiButton>}
+      </WuiCopy>
     </div>
   );
 };

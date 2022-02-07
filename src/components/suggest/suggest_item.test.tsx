@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,17 +34,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSuggestItem } from './suggest_item';
+import { WuiSuggestItem } from './suggest_item';
 
 const TYPE = {
   iconType: 'search',
   color: 'tint1',
 };
 
-describe('EuiSuggestItem', () => {
+describe('WuiSuggestItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuggestItem {...requiredProps} label="Test label" type={TYPE} />
+      <WuiSuggestItem {...requiredProps} label="Test label" type={TYPE} />
     );
 
     expect(component).toMatchSnapshot();
@@ -48,7 +61,7 @@ describe('props', () => {
   describe('labelDisplay as expand', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSuggestItem
+        <WuiSuggestItem
           type={sampleItem.type}
           description={sampleItem.description}
           label={sampleItem.description}
@@ -62,7 +75,7 @@ describe('props', () => {
   describe('item with no description has expanded label', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSuggestItem label={sampleItem.description} type={sampleItem.type} />
+        <WuiSuggestItem label={sampleItem.description} type={sampleItem.type} />
       );
       expect(component).toMatchSnapshot();
     });

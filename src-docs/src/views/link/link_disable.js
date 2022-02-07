@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {
-  EuiLink,
-  EuiSwitch,
-  EuiSpacer,
-  EuiTextColor,
+  WuiLink,
+  WuiSwitch,
+  WuiSpacer,
+  WuiTextColor,
 } from '../../../../src/components';
 
 export const LinkDisable = () => {
@@ -11,40 +11,40 @@ export const LinkDisable = () => {
 
   return (
     <div>
-      <EuiSwitch
+      <WuiSwitch
         label="Disable links"
         checked={disableLink}
         onChange={() => setDisableLink(!disableLink)}
       />
-      <EuiSpacer size="m" />
+      <WuiSpacer size="m" />
       <p>
         This{' '}
-        <EuiLink
+        <WuiLink
           color="accent"
           disabled={disableLink}
           onClick={() => window.alert('Button clicked')}>
           paragraph
-        </EuiLink>{' '}
+        </WuiLink>{' '}
         has two{disableLink ? ' disabled ' : ' enabled '}
-        <EuiLink
+        <WuiLink
           color="warning"
           disabled={disableLink}
           onClick={() => window.alert('Button clicked')}>
           links
-        </EuiLink>{' '}
+        </WuiLink>{' '}
         in it.
       </p>
-      <EuiSpacer size="m" />
-      <EuiTextColor color="accent">
+      <WuiSpacer size="m" />
+      <WuiTextColor color="accent">
         When links are disabled, they inherit the{' '}
-        <EuiLink
+        <WuiLink
           color="secondary"
           disabled={disableLink}
           onClick={() => window.alert('Button clicked')}>
           color
-        </EuiLink>{' '}
+        </WuiLink>{' '}
         of surrounding text.
-      </EuiTextColor>
+      </WuiTextColor>
     </div>
   );
 };

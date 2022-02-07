@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders EuiModal 1`] = `
+exports[`renders WuiModal 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -17,23 +17,23 @@ Array [
   >
     <div
       aria-label="aria-label"
-      class="euiModal euiModal--maxWidth-default testClass1 testClass2"
+      class="wuiModal wuiModal--maxWidth-default testClass1 testClass2"
       data-test-subj="test subject string"
       tabindex="0"
     >
       <button
         aria-label="Closes this modal window"
-        class="euiButtonIcon euiButtonIcon--text euiModal__closeIcon"
+        class="wuiButtonIcon wuiButtonIcon--text wuiModal__closeIcon"
         type="button"
       >
         <div
           aria-hidden="true"
-          class="euiButtonIcon__icon"
-          data-euiicon-type="cross"
+          class="wuiButtonIcon__icon"
+          data-wuiicon-type="cross"
         />
       </button>
       <div
-        class="euiModal__flex"
+        class="wuiModal__flex"
       >
         children
       </div>

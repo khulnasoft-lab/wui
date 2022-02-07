@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,11 +33,11 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiListGroupItem, SIZES, COLORS } from './list_group_item';
+import { WuiListGroupItem, SIZES, COLORS } from './list_group_item';
 
-describe('EuiListGroupItem', () => {
+describe('WuiListGroupItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiListGroupItem label="Label" />);
+    const component = render(<WuiListGroupItem label="Label" />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +47,7 @@ describe('EuiListGroupItem', () => {
       SIZES.forEach(size => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiListGroupItem label="Label" size={size} />
+            <WuiListGroupItem label="Label" size={size} />
           );
 
           expect(component).toMatchSnapshot();
@@ -46,7 +59,7 @@ describe('EuiListGroupItem', () => {
       COLORS.forEach(color => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiListGroupItem label="Label" color={color} />
+            <WuiListGroupItem label="Label" color={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -56,7 +69,7 @@ describe('EuiListGroupItem', () => {
 
     describe('isActive', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" isActive />);
+        const component = render(<WuiListGroupItem label="Label" isActive />);
 
         expect(component).toMatchSnapshot();
       });
@@ -64,7 +77,7 @@ describe('EuiListGroupItem', () => {
 
     describe('isDisabled', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" isDisabled />);
+        const component = render(<WuiListGroupItem label="Label" isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -73,7 +86,7 @@ describe('EuiListGroupItem', () => {
     describe('iconType', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" iconType="empty" />
+          <WuiListGroupItem label="Label" iconType="empty" />
         );
 
         expect(component).toMatchSnapshot();
@@ -83,7 +96,7 @@ describe('EuiListGroupItem', () => {
     describe('icon', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" icon={<span />} />
+          <WuiListGroupItem label="Label" icon={<span />} />
         );
 
         expect(component).toMatchSnapshot();
@@ -94,7 +107,7 @@ describe('EuiListGroupItem', () => {
     // describe('showToolTip', () => {
     //   test('is rendered', () => {
     //     const component = render(
-    //       <EuiListGroupItem label="Label" showToolTip />
+    //       <WuiListGroupItem label="Label" showToolTip />
     //     );
 
     //     expect(component).toMatchSnapshot();
@@ -103,7 +116,7 @@ describe('EuiListGroupItem', () => {
 
     describe('wrapText', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" wrapText />);
+        const component = render(<WuiListGroupItem label="Label" wrapText />);
 
         expect(component).toMatchSnapshot();
       });
@@ -112,7 +125,7 @@ describe('EuiListGroupItem', () => {
     describe('extraAction', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem
+          <WuiListGroupItem
             label="Label"
             extraAction={{
               iconType: 'empty',
@@ -128,14 +141,14 @@ describe('EuiListGroupItem', () => {
 
     describe('href', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" href="#" />);
+        const component = render(<WuiListGroupItem label="Label" href="#" />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered with rel', () => {
         const component = render(
-          <EuiListGroupItem label="Label" href="#" rel="noreferrer" />
+          <WuiListGroupItem label="Label" href="#" rel="noreferrer" />
         );
 
         expect(component).toMatchSnapshot();
@@ -145,7 +158,7 @@ describe('EuiListGroupItem', () => {
     describe('onClick', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" onClick={() => {}} />
+          <WuiListGroupItem label="Label" onClick={() => {}} />
         );
 
         expect(component).toMatchSnapshot();
@@ -155,7 +168,7 @@ describe('EuiListGroupItem', () => {
     describe('href and onClick', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="" onClick={() => {}} href="#" />
+          <WuiListGroupItem label="" onClick={() => {}} href="#" />
         );
 
         expect(component).toMatchSnapshot();
@@ -165,7 +178,7 @@ describe('EuiListGroupItem', () => {
 
   test('renders a disabled button even if provided an href', () => {
     const component = render(
-      <EuiListGroupItem label="Label" isDisabled href="#" />
+      <WuiListGroupItem label="Label" isDisabled href="#" />
     );
 
     expect(component).toMatchSnapshot();
@@ -173,7 +186,7 @@ describe('EuiListGroupItem', () => {
 
   test('renders a disabled button even if provided an href', () => {
     const component = render(
-      <EuiListGroupItem label="Label" isDisabled href="#" />
+      <WuiListGroupItem label="Label" isDisabled href="#" />
     );
 
     expect(component).toMatchSnapshot();
@@ -184,7 +197,7 @@ describe('EuiListGroupItem', () => {
     let consoleStub: jest.Mock;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because WUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
       console.warn = consoleStub = jest.fn();
@@ -196,7 +209,7 @@ describe('EuiListGroupItem', () => {
 
     test('if both iconType and icon are provided but still renders', () => {
       const component = render(
-        <EuiListGroupItem label="" iconType="empty" icon={<span />} />
+        <WuiListGroupItem label="" iconType="empty" icon={<span />} />
       );
 
       expect(consoleStub).toBeCalled();

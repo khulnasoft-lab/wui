@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -31,8 +44,8 @@ import { ColorSpaces } from 'chroma-js';
 import { CommonProps } from '../common';
 import { keys } from '../../services';
 import { isNil } from '../../services/predicate';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { WuiScreenReaderOnly } from '../accessibility';
+import { WuiI18n } from '../i18n';
 
 import { getEventPosition, useMouseMove } from './utils';
 
@@ -47,7 +60,7 @@ interface HTMLDivElementOverrides {
   color?: ColorSpaces['hsv'];
   onChange: (color: ColorSpaces['hsv']) => void;
 }
-export type EuiSaturationProps = Omit<
+export type WuiSaturationProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   keyof HTMLDivElementOverrides
 > &
@@ -56,12 +69,12 @@ export type EuiSaturationProps = Omit<
     hex?: string;
   };
 
-export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
+export const WuiSaturation = forwardRef<HTMLDivElement, WuiSaturationProps>(
   (
     {
       className,
       color = [1, 0, 0],
-      'data-test-subj': dataTestSubj = 'euiSaturation',
+      'data-test-subj': dataTestSubj = 'wuiSaturation',
       hex,
       id,
       onChange,
@@ -158,10 +171,10 @@ export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
       onChange(newColor);
     };
 
-    const classes = classNames('euiSaturation', className);
+    const classes = classNames('wuiSaturation', className);
     return (
-      <EuiI18n
-        token="euiSaturation.roleDescription"
+      <WuiI18n
+        token="wuiSaturation.roleDescription"
         default="HSV color mode saturation and value selection">
         {(roleDescription: string) => (
           // Unsure why this element causes errors as `tabIndex` and focus/interactivity (by extension) are accounted for.
@@ -183,30 +196,30 @@ export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
               background: `hsl(${color[0]}, 100%, 50%)`,
             }}
             {...rest}>
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <p>
-                <EuiI18n
-                  token="euiSaturation.screenReaderAnnouncement"
+                <WuiI18n
+                  token="wuiSaturation.screenReaderAnnouncement"
                   default="Use the arrow keys to navigate the square color gradient. The coordinates resulting from each key press will be used to calculate HSV color mode 'saturation' and 'value' numbers, in the range of 0 to 1. Left and right decrease and increase (respectively) the 'saturation' value. Up and down decrease and increase (respectively) the 'value' value."
                 />
               </p>
-            </EuiScreenReaderOnly>
-            <EuiScreenReaderOnly>
+            </WuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <p aria-live="polite">{hex}</p>
-            </EuiScreenReaderOnly>
-            <div className="euiSaturation__lightness" ref={boxRef}>
-              <div className="euiSaturation__saturation" />
+            </WuiScreenReaderOnly>
+            <div className="wuiSaturation__lightness" ref={boxRef}>
+              <div className="wuiSaturation__saturation" />
             </div>
             <div
               id={`${id}-saturationIndicator`}
-              className="euiSaturation__indicator"
+              className="wuiSaturation__indicator"
               style={{ ...indicator }}
             />
           </div>
         )}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 );
 
-EuiSaturation.displayName = 'EuiSaturation';
+WuiSaturation.displayName = 'WuiSaturation';

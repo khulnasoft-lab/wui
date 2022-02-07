@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,18 +38,18 @@ import {
   takeMountedSnapshot,
   sleep,
 } from '../../test';
-import { EuiToolTip } from './tool_tip';
+import { WuiToolTip } from './tool_tip';
 
 jest.mock('./../../services/accessibility', () => ({
   htmlIdGenerator: () => () => 'id',
 }));
 
-describe('EuiToolTip', () => {
+describe('WuiToolTip', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <WuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button>Trigger</button>
-      </EuiToolTip>
+      </WuiToolTip>
     );
 
     expect(component).toMatchSnapshot();
@@ -44,9 +57,9 @@ describe('EuiToolTip', () => {
 
   test('shows tooltip on focus', async () => {
     const component = mount(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <WuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </EuiToolTip>
+      </WuiToolTip>
     );
 
     const trigger = findTestSubject(component, 'trigger');

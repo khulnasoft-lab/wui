@@ -1,16 +1,16 @@
-.euiDataGridRow {
+.wuiDataGridRow {
   display: inline-flex;
   min-width: 100%; // Needed to prevent wraps. Inline flex is tricky
 }
 
-@include euiDataGridRowCell {
-  @include euiFontSizeS;
+@include wuiDataGridRowCell {
+  @include wuiFontSizeS;
 
-  padding: $euiDataGridCellPaddingM;
-  border-right: $euiDataGridVerticalBorder;
-  border-bottom: $euiBorderThin;
+  padding: $wuiDataGridCellPaddingM;
+  border-right: $wuiDataGridVerticalBorder;
+  border-bottom: $wuiBorderThin;
   flex: 0 0 auto;
-  background: $euiColorEmptyShade;
+  background: $wuiColorEmptyShade;
   position: relative;
   align-items: center;
   display: flex;
@@ -22,22 +22,22 @@
   }
 
   &:first-of-type {
-    border-left: $euiBorderThin;
+    border-left: $wuiBorderThin;
   }
 
   &:last-of-type {
-    border-right-color: $euiBorderColor;
+    border-right-color: $wuiBorderColor;
   }
 
   &:focus {
-    @include euiDataGridCellFocus;
+    @include wuiDataGridCellFocus;
     margin-top: -1px;
 
-    .euiDataGridRowCell__expandButton {
-      margin-left: $euiDataGridCellPaddingM;
+    .wuiDataGridRowCell__expandButton {
+      margin-left: $wuiDataGridCellPaddingM;
     }
 
-    .euiDataGridRowCell__expandButtonIcon {
+    .wuiDataGridRowCell__expandButtonIcon {
       display: flex;
       width: inherit;
       visibility: visible;
@@ -46,73 +46,73 @@
 
   &:focus:not(:first-of-type) {
     // Needed because the focus state adds a border, which needs to be subtracted from padding
-    padding-left: $euiDataGridCellPaddingM - 1px;
+    padding-left: $wuiDataGridCellPaddingM - 1px;
   }
 
-  &.euiDataGridRowCell--numeric {
+  &.wuiDataGridRowCell--numeric {
     text-align: right;
   }
 
-  &.euiDataGridRowCell--currency {
+  &.wuiDataGridRowCell--currency {
     text-align: right;
   }
 
 
-  &.euiDataGridRowCell--boolean {
+  &.wuiDataGridRowCell--boolean {
     text-transform: capitalize;
   }
 
   // We only truncate if the cell is not a control column.
-  &:not(.euiDataGridRowCell--controlColumn) {
-    .euiDataGridRowCell__content,
-    .euiDataGridRowCell__truncate,
-    .euiDataGridRowCell__expandContent {
-      @include euiTextTruncate;
+  &:not(.wuiDataGridRowCell--controlColumn) {
+    .wuiDataGridRowCell__content,
+    .wuiDataGridRowCell__truncate,
+    .wuiDataGridRowCell__expandContent {
+      @include wuiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
     }
   }
 }
 
-.euiDataGridRowCell__popover {
-  @include euiScrollBar;
+.wuiDataGridRowCell__popover {
+  @include wuiScrollBar;
   overflow: auto;
   // sass-lint:disable-block no-important
   max-width: 400px !important;
   max-height: 400px !important;
 }
 
-.euiDataGridRowCell__expand {
+.wuiDataGridRowCell__expand {
   width: 100%;
   max-width: 100%;
 }
 
-.euiDataGridRowCell__expandFlex {
+.wuiDataGridRowCell__expandFlex {
   display: flex;
   align-items: center;
 }
 
-.euiDataGridRowCell__expandContent {
+.wuiDataGridRowCell__expandContent {
   flex-grow: 1;
 }
 
 
-.euiDataGridRowCell__expandButton {
+.wuiDataGridRowCell__expandButton {
   display: flex;
   flex-grow: 0;
 
   &-isActive,
   &:focus {
-    margin-left: $euiDataGridCellPaddingM;
+    margin-left: $wuiDataGridCellPaddingM;
   }
 }
 
-.euiDataGridRowCell__expandButtonIcon {
-  height: $euiSizeM;
-  min-height: $euiSizeM;
-  background: $euiColorPrimary;
-  color: $euiColorGhost;
-  border-radius: $euiBorderRadius / 2;
+.wuiDataGridRowCell__expandButtonIcon {
+  height: $wuiSizeM;
+  min-height: $wuiSizeM;
+  background: $wuiColorPrimary;
+  color: $wuiColorGhost;
+  border-radius: $wuiBorderRadius / 2;
   padding: 0;
   width: 0;
   min-width: 0;
@@ -123,77 +123,77 @@
   &:focus {
     width: inherit;
     visibility: visible;
-    background: $euiColorPrimary;
+    background: $wuiColorPrimary;
   }
 }
 
 // Row highlights
-@include euiDataGridStyles(rowHoverHighlight) {
-  .euiDataGridRow:hover {
-    @include euiDataGridRowCell {
+@include wuiDataGridStyles(rowHoverHighlight) {
+  .wuiDataGridRow:hover {
+    @include wuiDataGridRowCell {
       // sass-lint:disable-block no-important
       // Needed to overtake striping
-      background-color: $euiColorHighlight !important;
+      background-color: $wuiColorHighlight !important;
     }
   }
 }
 
 // Stripes
-@include euiDataGridStyles(stripes) {
-  .euiDataGridRow:nth-child(odd) {
-    @include euiDataGridRowCell {
-      background: $euiColorLightestShade;
+@include wuiDataGridStyles(stripes) {
+  .wuiDataGridRow:nth-child(odd) {
+    @include wuiDataGridRowCell {
+      background: $wuiColorLightestShade;
     }
   }
 }
 
 // Border alternates
-@include euiDataGridStyles(bordersNone) {
-  @include euiDataGridRowCell {
+@include wuiDataGridStyles(bordersNone) {
+  @include wuiDataGridRowCell {
     // sass-lint:disable-block no-important
     border-color: transparent !important;
   }
 }
 
-@include euiDataGridStyles(bordersHorizontal) {
-  @include euiDataGridRowCell {
+@include wuiDataGridStyles(bordersHorizontal) {
+  @include wuiDataGridRowCell {
     border-right-color: transparent;
     border-left-color: transparent;
   }
 }
 
 // Font alternates
-@include euiDataGridStyles(fontSizeSmall) {
-  @include euiDataGridRowCell {
-    @include euiFontSizeXS;
+@include wuiDataGridStyles(fontSizeSmall) {
+  @include wuiDataGridRowCell {
+    @include wuiFontSizeXS;
   }
 }
 
-@include euiDataGridStyles(fontSizeLarge) {
-  @include euiDataGridRowCell {
-    @include euiFontSize;
+@include wuiDataGridStyles(fontSizeLarge) {
+  @include wuiDataGridRowCell {
+    @include wuiFontSize;
   }
 }
 
 // Padding alternates
-@include euiDataGridStyles(paddingSmall) {
-  @include euiDataGridRowCell {
-    padding: $euiDataGridCellPaddingS;
+@include wuiDataGridStyles(paddingSmall) {
+  @include wuiDataGridRowCell {
+    padding: $wuiDataGridCellPaddingS;
 
     &:focus:not(:first-of-type) {
       // Needed because the focus state adds a border, which needs to be subtracted from padding
-      padding-left: $euiDataGridCellPaddingS - 1px;
+      padding-left: $wuiDataGridCellPaddingS - 1px;
     }
   }
 }
 
-@include euiDataGridStyles(paddingLarge) {
-  @include euiDataGridRowCell {
-    padding: $euiDataGridCellPaddingL;
+@include wuiDataGridStyles(paddingLarge) {
+  @include wuiDataGridRowCell {
+    padding: $wuiDataGridCellPaddingL;
 
     &:focus:not(:first-of-type) {
       // Needed because the focus state adds a border, which needs to be subtracted from padding
-      padding-left: $euiDataGridCellPaddingL - 1px;
+      padding-left: $wuiDataGridCellPaddingL - 1px;
     }
   }
 }

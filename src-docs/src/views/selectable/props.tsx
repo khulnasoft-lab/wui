@@ -1,26 +1,26 @@
 import React, { FunctionComponent } from 'react';
 import {
-  EuiSelectableOption,
-  EuiSelectableOptionsListProps,
+  WuiSelectableOption,
+  WuiSelectableOptionsListProps,
 } from '../../../../src/components/selectable';
 
 import {
-  EuiSelectableTemplateSitewideOption,
-  EuiSelectableTemplateSitewideMetaData,
+  WuiSelectableTemplateSitewideOption,
+  WuiSelectableTemplateSitewideMetaData,
 } from '../../../../src/components/selectable/selectable_templates/selectable_template_sitewide_option';
 
-export const EuiSelectableOptionProps: FunctionComponent<EuiSelectableOption> = () => (
+export const WuiSelectableOptionProps: FunctionComponent<WuiSelectableOption> = () => (
   <div />
 );
 
-export const EuiSelectableOptionsList: FunctionComponent<EuiSelectableOptionsListProps> = () => (
+export const WuiSelectableOptionsList: FunctionComponent<WuiSelectableOptionsListProps> = () => (
   <div />
 );
 
-export const Options: FunctionComponent<EuiSelectableTemplateSitewideOption> = () => (
+export const Options: FunctionComponent<WuiSelectableTemplateSitewideOption> = () => (
   <div />
 );
 
-export const MetaData: FunctionComponent<EuiSelectableTemplateSitewideMetaData> = () => (
+export const MetaData: FunctionComponent<WuiSelectableTemplateSitewideMetaData> = () => (
   <div />
 );

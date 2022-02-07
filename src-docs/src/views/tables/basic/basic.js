@@ -3,9 +3,9 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
+  WuiBasicTable,
+  WuiLink,
+  WuiHealth,
 } from '../../../../../src/components';
 
 /*
@@ -43,9 +43,9 @@ export const Table = () => {
         render: item => (
           <span>
             {item.firstName}{' '}
-            <EuiLink href="#" target="_blank">
+            <WuiLink href="#" target="_blank">
               {item.lastName}
-            </EuiLink>
+            </WuiLink>
           </span>
         ),
         header: false,
@@ -59,9 +59,9 @@ export const Table = () => {
       name: 'Last Name',
       truncateText: true,
       render: name => (
-        <EuiLink href="#" target="_blank">
+        <WuiLink href="#" target="_blank">
           {name}
-        </EuiLink>
+        </WuiLink>
       ),
       mobileOptions: {
         show: false,
@@ -92,7 +92,7 @@ export const Table = () => {
       render: online => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <WuiHealth color={color}>{label}</WuiHealth>;
       },
     },
   ];
@@ -119,7 +119,7 @@ export const Table = () => {
   };
 
   return (
-    <EuiBasicTable
+    <WuiBasicTable
       items={items}
       rowHeader="firstName"
       columns={columns}

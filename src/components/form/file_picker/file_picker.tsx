@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,24 +35,24 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../../common';
 
-import { EuiValidatableControl } from '../validatable_control';
-import { EuiButtonEmpty } from '../../button';
-import { EuiProgress } from '../../progress';
-import { EuiIcon } from '../../icon';
-import { EuiI18n } from '../../i18n';
-import { EuiLoadingSpinner } from '../../loading';
+import { WuiValidatableControl } from '../validatable_control';
+import { WuiButtonEmpty } from '../../button';
+import { WuiProgress } from '../../progress';
+import { WuiIcon } from '../../icon';
+import { WuiI18n } from '../../i18n';
+import { WuiLoadingSpinner } from '../../loading';
 import { htmlIdGenerator } from '../../../services/accessibility/html_id_generator';
 
 const displayToClassNameMap = {
   default: null,
-  large: 'euiFilePicker--large',
+  large: 'wuiFilePicker--large',
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
-export type EuiFilePickerDisplay = keyof typeof displayToClassNameMap;
+export type WuiFilePickerDisplay = keyof typeof displayToClassNameMap;
 
-export interface EuiFilePickerProps
+export interface WuiFilePickerProps
   extends CommonProps,
     Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   id?: string;
@@ -62,14 +75,14 @@ export interface EuiFilePickerProps
    * `default` for normal height, similar to other controls;
    * `large` for taller size
    */
-  display?: EuiFilePickerDisplay;
+  display?: WuiFilePickerDisplay;
   fullWidth?: boolean;
   isInvalid?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
 }
 
-export class EuiFilePicker extends Component<EuiFilePickerProps> {
+export class WuiFilePicker extends Component<WuiFilePickerProps> {
   static defaultProps = {
     initialPromptText: 'Select or drag and drop a file',
     compressed: false,
@@ -125,10 +138,10 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
 
   render() {
     return (
-      <EuiI18n
+      <WuiI18n
         tokens={[
-          'euiFilePicker.clearSelectedFiles',
-          'euiFilePicker.filesSelected',
+          'wuiFilePicker.clearSelectedFiles',
+          'wuiFilePicker.filesSelected',
         ]}
         defaults={['Clear selected files', 'files selected']}>
         {([clearSelectedFiles, filesSelected]: string[]) => {
@@ -158,15 +171,15 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           const normalFormControl = display === 'default';
 
           const classes = classNames(
-            'euiFilePicker',
+            'wuiFilePicker',
             displayToClassNameMap[display!],
             {
-              euiFilePicker__showDrop: this.state.isHoveringDrop,
-              'euiFilePicker--compressed': compressed,
-              'euiFilePicker--fullWidth': fullWidth,
-              'euiFilePicker-isInvalid': isInvalid,
-              'euiFilePicker-isLoading': isLoading,
-              'euiFilePicker-hasFiles': isOverridingInitialPrompt,
+              wuiFilePicker__showDrop: this.state.isHoveringDrop,
+              'wuiFilePicker--compressed': compressed,
+              'wuiFilePicker--fullWidth': fullWidth,
+              'wuiFilePicker-isInvalid': isInvalid,
+              'wuiFilePicker-isLoading': isLoading,
+              'wuiFilePicker-hasFiles': isOverridingInitialPrompt,
             },
             className
           );
@@ -175,7 +188,7 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           if (isLoading && normalFormControl) {
             // Override clear button with loading spinner if it is in loading state
             clearButton = (
-              <EuiLoadingSpinner className="euiFilePicker__loadingSpinner" />
+              <WuiLoadingSpinner className="wuiFilePicker__loadingSpinner" />
             );
           } else if (isOverridingInitialPrompt) {
             if (normalFormControl) {
@@ -183,20 +196,20 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
                 <button
                   type="button"
                   aria-label={clearSelectedFiles}
-                  className="euiFilePicker__clearButton"
+                  className="wuiFilePicker__clearButton"
                   onClick={this.removeFiles}>
-                  <EuiIcon className="euiFilePicker__clearIcon" type="cross" />
+                  <WuiIcon className="wuiFilePicker__clearIcon" type="cross" />
                 </button>
               );
             } else {
               clearButton = (
-                <EuiButtonEmpty
+                <WuiButtonEmpty
                   aria-label={clearSelectedFiles}
-                  className="euiFilePicker__clearButton"
+                  className="wuiFilePicker__clearButton"
                   size="xs"
                   onClick={this.removeFiles}>
                   Remove
-                </EuiButtonEmpty>
+                </WuiButtonEmpty>
               );
             }
           } else {
@@ -204,18 +217,18 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           }
 
           const loader = !normalFormControl && isLoading && (
-            <EuiProgress size="xs" color="accent" position="absolute" />
+            <WuiProgress size="xs" color="accent" position="absolute" />
           );
 
           return (
             <div className={classes}>
-              <div className="euiFilePicker__wrap">
-                <EuiValidatableControl isInvalid={isInvalid}>
+              <div className="wuiFilePicker__wrap">
+                <WuiValidatableControl isInvalid={isInvalid}>
                   <input
                     type="file"
                     id={id}
                     name={name}
-                    className="euiFilePicker__input"
+                    className="wuiFilePicker__input"
                     onChange={() => this.handleChange(filesSelected)}
                     ref={input => {
                       this.fileInput = input;
@@ -227,15 +240,15 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
                     aria-describedby={promptId}
                     {...rest}
                   />
-                </EuiValidatableControl>
-                <div className="euiFilePicker__prompt" id={promptId}>
-                  <EuiIcon
-                    className="euiFilePicker__icon"
+                </WuiValidatableControl>
+                <div className="wuiFilePicker__prompt" id={promptId}>
+                  <WuiIcon
+                    className="wuiFilePicker__icon"
                     type="importAction"
                     size={normalFormControl ? 'm' : 'l'}
                     aria-hidden="true"
                   />
-                  <div className="euiFilePicker__promptText">
+                  <div className="wuiFilePicker__promptText">
                     {this.state.promptText || initialPromptText}
                   </div>
                   {clearButton}
@@ -245,7 +258,7 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
             </div>
           );
         }}
-      </EuiI18n>
+      </WuiI18n>
     );
   }
 }

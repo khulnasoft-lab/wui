@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +34,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiContextMenu } from './context_menu';
+import { WuiContextMenu } from './context_menu';
 import { setTimeout } from 'timers';
 
 const panel3 = {
@@ -79,16 +92,16 @@ export const tick = (ms = 0) =>
     setTimeout(resolve, ms);
   });
 
-describe('EuiContextMenu', () => {
+describe('WuiContextMenu', () => {
   test('is rendered', () => {
-    const component = render(<EuiContextMenu {...requiredProps} />);
+    const component = render(<WuiContextMenu {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   it('panel item can contain JSX', () => {
     const component = render(
-      <EuiContextMenu panels={panels} initialPanelId={3} />
+      <WuiContextMenu panels={panels} initialPanelId={3} />
     );
 
     expect(component).toMatchSnapshot();
@@ -96,7 +109,7 @@ describe('EuiContextMenu', () => {
 
   it('panel item can be a separator line', () => {
     const component = render(
-      <EuiContextMenu
+      <WuiContextMenu
         panels={[
           {
             id: 3,
@@ -117,7 +130,7 @@ describe('EuiContextMenu', () => {
 
   it('can pass-through horizontal rule props', () => {
     const component = render(
-      <EuiContextMenu
+      <WuiContextMenu
         panels={[
           {
             id: 3,
@@ -143,7 +156,7 @@ describe('EuiContextMenu', () => {
     describe('panels and initialPanelId', () => {
       it('renders the referenced panel', () => {
         const component = render(
-          <EuiContextMenu panels={panels} initialPanelId={2} />
+          <WuiContextMenu panels={panels} initialPanelId={2} />
         );
 
         expect(component).toMatchSnapshot();
@@ -151,7 +164,7 @@ describe('EuiContextMenu', () => {
 
       it('allows you to click the title button to go back to the previous panel', async () => {
         const component = mount(
-          <EuiContextMenu panels={panels} initialPanelId={2} />
+          <WuiContextMenu panels={panels} initialPanelId={2} />
         );
 
         await tick(20);

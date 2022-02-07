@@ -2,17 +2,17 @@
 
 exports[`astToEsQueryString ast - '*' 1`] = `"*"`;
 
-exports[`astToEsQueryString ast - '-group:es group:kibana -group:beats group:logstash' 1`] = `"-group:es +group:kibana -group:beats +group:logstash"`;
+exports[`astToEsQueryString ast - '-group:es group:wazuh -group:beats group:logstash' 1`] = `"-group:es +group:wazuh -group:beats +group:logstash"`;
 
-exports[`astToEsQueryString ast - 'is:online group:kibana john' 1`] = `"+online:true +group:kibana +john"`;
+exports[`astToEsQueryString ast - 'is:online group:wazuh john' 1`] = `"+online:true +group:wazuh +john"`;
 
-exports[`astToEsQueryString ast - 'john -doe is:online group:eng group:es -group:kibana -is:active' 1`] = `"+john -doe +online:true +group:eng +group:es -group:kibana +active:false"`;
+exports[`astToEsQueryString ast - 'john -doe is:online group:eng group:es -group:wazuh -is:active' 1`] = `"+john -doe +online:true +group:eng +group:es -group:wazuh +active:false"`;
 
 exports[`astToEsQueryString ast - 'john -sales' 1`] = `"+john -sales"`;
 
-exports[`astToEsQueryString ast - 'john group:(eng or "marketing org") -group:"kibana team" 1`] = `"+john +(group:eng OR group:\\"marketing org\\") -group:\\"kibana team\\""`;
+exports[`astToEsQueryString ast - 'john group:(eng or "marketing org") -group:"wazuh team" 1`] = `"+john +(group:eng OR group:\\"marketing org\\") -group:\\"wazuh team\\""`;
 
-exports[`astToEsQueryString ast - 'john group:(eng or es) -group:kibana' 1`] = `"+john +(group:eng OR group:es) -group:kibana"`;
+exports[`astToEsQueryString ast - 'john group:(eng or es) -group:wazuh' 1`] = `"+john +(group:eng OR group:es) -group:wazuh"`;
 
 exports[`astToEsQueryString ast - -count<=4 size<5 age>=3 -number>9 1`] = `"-count:<=4 +size:<5 +age:>=3 -number:>9"`;
 

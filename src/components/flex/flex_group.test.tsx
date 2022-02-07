@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,7 +39,7 @@ import {
 } from '../../test';
 
 import {
-  EuiFlexGroup,
+  WuiFlexGroup,
   GUTTER_SIZES,
   ALIGN_ITEMS,
   JUSTIFY_CONTENTS,
@@ -36,12 +49,12 @@ import {
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
 
-describe('EuiFlexGroup', () => {
+describe('WuiFlexGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFlexGroup {...requiredProps}>
+      <WuiFlexGroup {...requiredProps}>
         <h2>My Child</h2>
-      </EuiFlexGroup>
+      </WuiFlexGroup>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,7 +64,7 @@ describe('EuiFlexGroup', () => {
     describe('responsive', () => {
       [true, false].forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup responsive={value} />);
+          const component = render(<WuiFlexGroup responsive={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -61,7 +74,7 @@ describe('EuiFlexGroup', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup gutterSize={value} />);
+          const component = render(<WuiFlexGroup gutterSize={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -71,7 +84,7 @@ describe('EuiFlexGroup', () => {
     describe('alignItems', () => {
       ALIGN_ITEMS.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup alignItems={value} />);
+          const component = render(<WuiFlexGroup alignItems={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -81,7 +94,7 @@ describe('EuiFlexGroup', () => {
     describe('justifyContent', () => {
       JUSTIFY_CONTENTS.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup justifyContent={value} />);
+          const component = render(<WuiFlexGroup justifyContent={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -91,7 +104,7 @@ describe('EuiFlexGroup', () => {
     describe('direction', () => {
       DIRECTIONS.forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup direction={value} />);
+          const component = render(<WuiFlexGroup direction={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -102,7 +115,7 @@ describe('EuiFlexGroup', () => {
       ['div', 'span'].forEach(value => {
         test(`${value} is rendered`, () => {
           const component = render(
-            <EuiFlexGroup component={value as 'div' | 'span'} />
+            <WuiFlexGroup component={value as 'div' | 'span'} />
           );
 
           expect(component).toMatchSnapshot();
@@ -114,7 +127,7 @@ describe('EuiFlexGroup', () => {
           expect(() =>
             render(
               // @ts-ignore intentionally passing an invalid value
-              <EuiFlexGroup component={value} />
+              <WuiFlexGroup component={value} />
             )
           ).toThrow();
         });
@@ -124,7 +137,7 @@ describe('EuiFlexGroup', () => {
     describe('wrap', () => {
       [true, false].forEach(value => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup wrap={value} />);
+          const component = render(<WuiFlexGroup wrap={value} />);
 
           expect(component).toMatchSnapshot();
         });

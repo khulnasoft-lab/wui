@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,35 +37,35 @@ import React, {
   Fragment,
   ReactChild,
 } from 'react';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiButtonEmpty, EuiButtonIcon } from '../button';
-import { EuiOverlayMask } from '../overlay_mask';
-import { EuiTitle } from '../title';
-import { EuiModal, EuiModalBody, EuiModalHeader } from '../modal';
-import { EuiI18n, useEuiI18n } from '../i18n';
+import { WuiLoadingSpinner } from '../loading';
+import { WuiButtonEmpty, WuiButtonIcon } from '../button';
+import { WuiOverlayMask } from '../overlay_mask';
+import { WuiTitle } from '../title';
+import { WuiModal, WuiModalBody, WuiModalHeader } from '../modal';
+import { WuiI18n, useWuiI18n } from '../i18n';
 import {
-  EuiMarkdownDropHandler,
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
+  WuiMarkdownDropHandler,
+  WuiMarkdownEditorUiPlugin,
+  WuiMarkdownParseError,
 } from './markdown_types';
-import { EuiPopover, EuiPopoverTitle } from '../popover';
-import { EuiText } from '../text';
-import { EuiSpacer } from '../spacer';
+import { WuiPopover, WuiPopoverTitle } from '../popover';
+import { WuiText } from '../text';
+import { WuiSpacer } from '../spacer';
 // @ts-ignore a react svg
 import MarkdownLogo from './icons/markdown_logo';
-import { EuiHorizontalRule } from '../horizontal_rule';
-import { EuiToolTip } from '../tool_tip';
+import { WuiHorizontalRule } from '../horizontal_rule';
+import { WuiToolTip } from '../tool_tip';
 
-interface EuiMarkdownEditorFooterProps {
-  uiPlugins: EuiMarkdownEditorUiPlugin[];
+interface WuiMarkdownEditorFooterProps {
+  uiPlugins: WuiMarkdownEditorUiPlugin[];
   isUploadingFiles: boolean;
   openFiles: () => void;
-  errors: EuiMarkdownParseError[];
+  errors: WuiMarkdownParseError[];
   hasUnacceptedItems: boolean;
-  dropHandlers: EuiMarkdownDropHandler[];
+  dropHandlers: WuiMarkdownDropHandler[];
 }
 
-export const EuiMarkdownEditorFooter: FunctionComponent<EuiMarkdownEditorFooterProps> = props => {
+export const WuiMarkdownEditorFooter: FunctionComponent<WuiMarkdownEditorFooterProps> = props => {
   const {
     uiPlugins,
     isUploadingFiles,
@@ -78,45 +91,45 @@ export const EuiMarkdownEditorFooter: FunctionComponent<EuiMarkdownEditorFooterP
   );
 
   const ariaLabels = {
-    uploadingFiles: useEuiI18n(
-      'euiMarkdownEditorFooter.uploadingFiles',
+    uploadingFiles: useWuiI18n(
+      'wuiMarkdownEditorFooter.uploadingFiles',
       'Click to upload files'
     ),
-    openUploadModal: useEuiI18n(
-      'euiMarkdownEditorFooter.openUploadModal',
+    openUploadModal: useWuiI18n(
+      'wuiMarkdownEditorFooter.openUploadModal',
       'Open upload files modal'
     ),
-    unsupportedFileType: useEuiI18n(
-      'euiMarkdownEditorFooter.unsupportedFileType',
+    unsupportedFileType: useWuiI18n(
+      'wuiMarkdownEditorFooter.unsupportedFileType',
       'File type not supported'
     ),
-    supportedFileTypes: useEuiI18n(
-      'euiMarkdownEditorFooter.supportedFileTypes',
+    supportedFileTypes: useWuiI18n(
+      'wuiMarkdownEditorFooter.supportedFileTypes',
       'Supported files: {supportedFileTypes}',
       { supportedFileTypes }
     ),
-    showSyntaxErrors: useEuiI18n(
-      'euiMarkdownEditorFooter.showSyntaxErrors',
+    showSyntaxErrors: useWuiI18n(
+      'wuiMarkdownEditorFooter.showSyntaxErrors',
       'Show errors'
     ),
-    showMarkdownHelp: useEuiI18n(
-      'euiMarkdownEditorFooter.showMarkdownHelp',
+    showMarkdownHelp: useWuiI18n(
+      'wuiMarkdownEditorFooter.showMarkdownHelp',
       'Show markdown help'
     ),
   };
 
   if (isUploadingFiles) {
     uploadButton = (
-      <EuiButtonIcon
-        iconType={EuiLoadingSpinner}
+      <WuiButtonIcon
+        iconType={WuiLoadingSpinner}
         aria-label={ariaLabels.uploadingFiles}
       />
     );
   } else if (dropHandlers.length > 0 && hasUnacceptedItems) {
     uploadButton = (
-      <EuiToolTip content={ariaLabels.supportedFileTypes}>
-        <EuiButtonEmpty
-          className="euiMarkdownEditorFooter__uploadError"
+      <WuiToolTip content={ariaLabels.supportedFileTypes}>
+        <WuiButtonEmpty
+          className="wuiMarkdownEditorFooter__uploadError"
           autoFocus
           size="xs"
           iconType="paperClip"
@@ -124,12 +137,12 @@ export const EuiMarkdownEditorFooter: FunctionComponent<EuiMarkdownEditorFooterP
           aria-label={`${ariaLabels.unsupportedFileType}. ${ariaLabels.supportedFileTypes}. ${ariaLabels.uploadingFiles}`}
           onClick={openFiles}>
           {ariaLabels.unsupportedFileType}
-        </EuiButtonEmpty>
-      </EuiToolTip>
+        </WuiButtonEmpty>
+      </WuiToolTip>
     );
   } else if (dropHandlers.length > 0) {
     uploadButton = (
-      <EuiButtonIcon
+      <WuiButtonIcon
         iconType="paperClip"
         color="text"
         aria-label={ariaLabels.openUploadModal}
@@ -141,69 +154,69 @@ export const EuiMarkdownEditorFooter: FunctionComponent<EuiMarkdownEditorFooterP
   let errorsButton;
   if (errors && errors.length) {
     errorsButton = (
-      <EuiPopover
+      <WuiPopover
         button={
-          <EuiButtonEmpty
+          <WuiButtonEmpty
             iconType="crossInACircleFilled"
             size="s"
             color="danger"
             aria-label={ariaLabels.showSyntaxErrors}
             onClick={onButtonClick}>
             {errors.length}
-          </EuiButtonEmpty>
+          </WuiButtonEmpty>
         }
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         anchorPosition="upCenter">
-        <div className="euiMarkdownEditorFooter__popover">
-          <EuiPopoverTitle>
-            <EuiI18n
-              token="euiMarkdownEditorFooter.errorsTitle"
+        <div className="wuiMarkdownEditorFooter__popover">
+          <WuiPopoverTitle>
+            <WuiI18n
+              token="wuiMarkdownEditorFooter.errorsTitle"
               default="Errors"
             />
-          </EuiPopoverTitle>
+          </WuiPopoverTitle>
           {errors.map((message, idx) => (
-            <EuiText key={idx}>{message.toString()}</EuiText>
+            <WuiText key={idx}>{message.toString()}</WuiText>
           ))}
         </div>
-      </EuiPopover>
+      </WuiPopover>
     );
   }
 
   return (
-    <div className="euiMarkdownEditorFooter">
-      <div className="euiMarkdownEditorFooter__actions">
+    <div className="wuiMarkdownEditorFooter">
+      <div className="wuiMarkdownEditorFooter__actions">
         {uploadButton}
         {errorsButton}
       </div>
 
-      <EuiButtonIcon
-        className="euiMarkdownEditorFooter__help"
+      <WuiButtonIcon
+        className="wuiMarkdownEditorFooter__help"
         iconType={MarkdownLogo}
         color="text"
         aria-label={ariaLabels.showMarkdownHelp}
         onClick={() => setIsShowingHelp(!isShowingHelp)}
       />
       {isShowingHelp && (
-        <EuiOverlayMask onClick={() => setIsShowingHelp(false)}>
-          <EuiModal onClose={() => setIsShowingHelp(false)}>
-            <EuiModalHeader>
-              <EuiTitle>
+        <WuiOverlayMask onClick={() => setIsShowingHelp(false)}>
+          <WuiModal onClose={() => setIsShowingHelp(false)}>
+            <WuiModalHeader>
+              <WuiTitle>
                 <h3>
-                  <EuiI18n
-                    token="euiMarkdownEditorFooter.syntaxTitle"
+                  <WuiI18n
+                    token="wuiMarkdownEditorFooter.syntaxTitle"
                     default="Syntax help"
                   />
                 </h3>
-              </EuiTitle>
-            </EuiModalHeader>
-            <EuiModalBody>
+              </WuiTitle>
+            </WuiModalHeader>
+            <WuiModalBody>
               <Fragment>
-                <EuiText>
-                  <EuiI18n
+                <WuiText>
+                  <WuiI18n
                     tokens={[
-                      'euiMarkdownEditorFooter.descriptionPrefix',
-                      'euiMarkdownEditorFooter.descriptionSuffix',
+                      'wuiMarkdownEditorFooter.descriptionPrefix',
+                      'wuiMarkdownEditorFooter.descriptionSuffix',
                     ]}
                     defaults={[
                       'This editor uses',
@@ -220,27 +233,27 @@ export const EuiMarkdownEditorFooter: FunctionComponent<EuiMarkdownEditorFooterP
                         . {descriptionSuffix}
                       </p>
                     )}
-                  </EuiI18n>
-                </EuiText>
-                <EuiHorizontalRule />
+                  </WuiI18n>
+                </WuiText>
+                <WuiHorizontalRule />
                 {uiPlugins
                   .filter(({ helpText }) => !!helpText)
                   .map(({ name, helpText }) => (
                     <Fragment key={name}>
-                      <EuiTitle size="xxs">
+                      <WuiTitle size="xxs">
                         <p>
                           <strong>{name}</strong>
                         </p>
-                      </EuiTitle>
-                      <EuiSpacer size="s" />
+                      </WuiTitle>
+                      <WuiSpacer size="s" />
                       {helpText}
-                      <EuiSpacer size="l" />
+                      <WuiSpacer size="l" />
                     </Fragment>
                   ))}
               </Fragment>
-            </EuiModalBody>
-          </EuiModal>
-        </EuiOverlayMask>
+            </WuiModalBody>
+          </WuiModal>
+        </WuiOverlayMask>
       )}
     </div>
   );

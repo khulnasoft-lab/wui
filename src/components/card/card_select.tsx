@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
+  WuiButtonEmpty,
+  WuiButtonEmptyColor,
+  WuiButtonEmptyProps,
 } from '../button/button_empty';
 
-import { EuiI18n } from '../i18n';
+import { WuiI18n } from '../i18n';
 
-export type EuiCardSelectProps = EuiButtonEmptyProps & {
+export type WuiCardSelectProps = WuiButtonEmptyProps & {
   /**
    * Is in the selected state
    */
@@ -36,7 +49,7 @@ export type EuiCardSelectProps = EuiButtonEmptyProps & {
   isDisabled?: boolean;
 };
 
-export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
+export const WuiCardSelect: FunctionComponent<WuiCardSelectProps> = ({
   className,
   isSelected = false,
   isDisabled,
@@ -44,16 +57,16 @@ export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
   children,
   ...rest
 }) => {
-  const child = euiCardSelectableText(isSelected, isDisabled, children);
+  const child = wuiCardSelectableText(isSelected, isDisabled, children);
 
   const selectClasses = classNames(
-    'euiCardSelect',
-    `euiCardSelect--${euiCardSelectableColor(color, isSelected)}`,
+    'wuiCardSelect',
+    `wuiCardSelect--${wuiCardSelectableColor(color, isSelected)}`,
     className
   );
 
   return (
-    <EuiButtonEmpty
+    <WuiButtonEmpty
       className={selectClasses}
       color={color || 'text'}
       size="xs"
@@ -63,11 +76,11 @@ export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
       aria-checked={isSelected}
       {...rest}>
       {child}
-    </EuiButtonEmpty>
+    </WuiButtonEmpty>
   );
 };
 
-function euiCardSelectableText(
+function wuiCardSelectableText(
   isSelected: boolean | undefined,
   isDisabled: boolean | undefined,
   children: ReactNode
@@ -79,18 +92,18 @@ function euiCardSelectableText(
   let text;
 
   if (isSelected) {
-    text = <EuiI18n token="euiCardSelect.selected" default="Selected" />;
+    text = <WuiI18n token="wuiCardSelect.selected" default="Selected" />;
   } else if (isDisabled) {
-    text = <EuiI18n token="euiCardSelect.unavailable" default="Unavailable" />;
+    text = <WuiI18n token="wuiCardSelect.unavailable" default="Unavailable" />;
   } else {
-    text = <EuiI18n token="euiCardSelect.select" default="Select" />;
+    text = <WuiI18n token="wuiCardSelect.select" default="Select" />;
   }
 
   return text;
 }
 
-export function euiCardSelectableColor(
-  color: EuiButtonEmptyColor | undefined,
+export function wuiCardSelectableColor(
+  color: WuiButtonEmptyColor | undefined,
   isSelected: boolean | undefined
 ): string {
   let calculatedColor;

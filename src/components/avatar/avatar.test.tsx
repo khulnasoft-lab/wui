@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,17 +34,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiAvatar, SIZES } from './avatar';
+import { WuiAvatar, SIZES } from './avatar';
 
-describe('EuiAvatar', () => {
+describe('WuiAvatar', () => {
   test('is rendered', () => {
-    const component = render(<EuiAvatar name="name" {...requiredProps} />);
+    const component = render(<WuiAvatar name="name" {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('allows a name composed entirely of whitespace', () => {
-    const component = render(<EuiAvatar name="  " {...requiredProps} />);
+    const component = render(<WuiAvatar name="  " {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -40,7 +53,7 @@ describe('EuiAvatar', () => {
     describe('imageUrl', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAvatar name="name" imageUrl="image url" />
+          <WuiAvatar name="name" imageUrl="image url" />
         );
 
         expect(component).toMatchSnapshot();
@@ -50,7 +63,7 @@ describe('EuiAvatar', () => {
     describe('size', () => {
       SIZES.forEach(size => {
         it(`${size} is rendered`, () => {
-          const component = render(<EuiAvatar name="name" size={size} />);
+          const component = render(<WuiAvatar name="name" size={size} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -59,7 +72,7 @@ describe('EuiAvatar', () => {
 
     describe('initials', () => {
       it('is rendered', () => {
-        const component = render(<EuiAvatar name="name" initials="lo" />);
+        const component = render(<WuiAvatar name="name" initials="lo" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -67,7 +80,7 @@ describe('EuiAvatar', () => {
 
     describe('initialsLength', () => {
       it('is rendered', () => {
-        const component = render(<EuiAvatar name="name" initialsLength={2} />);
+        const component = render(<WuiAvatar name="name" initialsLength={2} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -75,7 +88,7 @@ describe('EuiAvatar', () => {
 
     describe('type', () => {
       it('is rendered', () => {
-        const component = render(<EuiAvatar name="name" type="space" />);
+        const component = render(<WuiAvatar name="name" type="space" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -83,7 +96,7 @@ describe('EuiAvatar', () => {
 
     describe('color', () => {
       it('is rendered', () => {
-        const component = render(<EuiAvatar name="name" color="#000" />);
+        const component = render(<WuiAvatar name="name" color="#000" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -92,7 +105,7 @@ describe('EuiAvatar', () => {
 
   test('should throw error if color is not a hex', () => {
     const component = () =>
-      render(<EuiAvatar name="name" color="rgba(0,0,0,0)" />);
+      render(<WuiAvatar name="name" color="rgba(0,0,0,0)" />);
 
     expect(component).toThrowErrorMatchingSnapshot();
   });

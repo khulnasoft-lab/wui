@@ -2,70 +2,70 @@
  * 1. Ensure that the step number vertically aligns with the title text
  */
 
-.euiStep {
+.wuiStep {
   // sass-lint:disable indentation
   // Create border on all but the last step
   &:not(:last-of-type) {
     background-image: linear-gradient(
                         to right,
                         transparent 0,
-                        transparent ($euiSize - 1),
-                        $euiBorderColor ($euiSize - 1),
-                        $euiBorderColor ($euiSize + 1),
-                        transparent ($euiSize + 1),
+                        transparent ($wuiSize - 1),
+                        $wuiBorderColor ($wuiSize - 1),
+                        $wuiBorderColor ($wuiSize + 1),
+                        transparent ($wuiSize + 1),
                         transparent 100%
                       );
     background-repeat: no-repeat;
-    background-position: left $euiSizeXXL;
+    background-position: left $wuiSizeXXL;
   }
 
   &--small {
     &:not(:last-of-type) {
-      background-position: left -#{$euiSizeXS} top $euiSizeXL;
+      background-position: left -#{$wuiSizeXS} top $wuiSizeXL;
     }
 
-    .euiStep__content {
+    .wuiStep__content {
       // Align the content's contents with the title
-      padding-left: ($euiStepNumberSmallSize / 2) + $euiStepNumberMargin;
+      padding-left: ($wuiStepNumberSmallSize / 2) + $wuiStepNumberMargin;
 
       // Align content border to horizontal center of step number
-      margin-left: ($euiStepNumberSmallSize / 2);
+      margin-left: ($wuiStepNumberSmallSize / 2);
     }
   }
 }
 
-.euiStep__titleWrapper {
+.wuiStep__titleWrapper {
   display: flex;
 }
 
-.euiStep__circle {
+.wuiStep__circle {
   flex-shrink: 0;
-  margin-right: $euiStepNumberMargin;
+  margin-right: $wuiStepNumberMargin;
   vertical-align: top; /* 1 */
 
   &[class*='complete'],
   &[class*='warning'],
   &[class*='danger'] {
-    animation: euiGrow $euiAnimSpeedFast $euiAnimSlightBounce;
+    animation: wuiGrow $wuiAnimSpeedFast $wuiAnimSlightBounce;
   }
 
   &[class*='incomplete'] {
-    border-color: $euiColorPrimary;
+    border-color: $wuiColorPrimary;
     animation: none;
   }
 }
 
-.euiStep__title {
-  font-weight: $euiFontWeightMedium;
+.wuiStep__title {
+  font-weight: $wuiFontWeightMedium;
 }
 
-.euiStep__content {
-  padding: $euiSize $euiSize $euiSizeXL;
-  margin: $euiSizeS 0;
+.wuiStep__content {
+  padding: $wuiSize $wuiSize $wuiSizeXL;
+  margin: $wuiSizeS 0;
 
   // Align the content's contents with the title
-  padding-left: ($euiStepNumberSize / 2) + $euiStepNumberMargin;
+  padding-left: ($wuiStepNumberSize / 2) + $wuiStepNumberMargin;
 
   // Align content border to horizontal center of step number
-  margin-left: ($euiStepNumberSize / 2);
+  margin-left: ($wuiStepNumberSize / 2);
 }

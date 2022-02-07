@@ -1,19 +1,19 @@
 import React from 'react';
 
 import {
-  EuiEmptyPrompt,
-  EuiButton,
-  EuiButtonEmpty,
+  WuiEmptyPrompt,
+  WuiButton,
+  WuiButtonEmpty,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiEmptyPrompt
+  <WuiEmptyPrompt
     title={<h2>You have no spice</h2>}
     actions={[
-      <EuiButton color="primary" fill>
+      <WuiButton color="primary" fill>
         Harvest spice
-      </EuiButton>,
-      <EuiButtonEmpty color="danger">Sabotage all spice fields</EuiButtonEmpty>,
+      </WuiButton>,
+      <WuiButtonEmpty color="danger">Sabotage all spice fields</WuiButtonEmpty>,
     ]}
   />
 );

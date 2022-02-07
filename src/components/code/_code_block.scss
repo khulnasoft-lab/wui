@@ -1,192 +1,192 @@
-.euiCodeBlock {
+.wuiCodeBlock {
   max-width: 100%;
   display: block;
   position: relative;
-  background: $euiCodeBlockBackgroundColor;
-  color: $euiCodeBlockColor;
+  background: $wuiCodeBlockBackgroundColor;
+  color: $wuiCodeBlockColor;
 
-  .euiCodeBlock__pre {
-    @include euiScrollBar;
+  .wuiCodeBlock__pre {
+    @include wuiScrollBar;
     height: 100%;
     overflow: auto;
     display: block;
   }
 
-  .euiCodeBlock__pre--whiteSpacePre {
+  .wuiCodeBlock__pre--whiteSpacePre {
     white-space: pre;
   }
 
-  .euiCodeBlock__pre--whiteSpacePreWrap {
+  .wuiCodeBlock__pre--whiteSpacePreWrap {
     white-space: pre-wrap;
   }
 
-  .euiCodeBlock__code {
-    @include euiCodeFont;
+  .wuiCodeBlock__code {
+    @include wuiCodeFont;
     display: block;
-    line-height: $euiLineHeight;
-    font-weight: $euiFontWeightRegular;
+    line-height: $wuiLineHeight;
+    font-weight: $wuiFontWeightRegular;
     font-size: inherit;
   }
 
-  .euiCodeBlock__controls {
+  .wuiCodeBlock__controls {
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .euiCodeBlock__fullScreenButton + .euiCodeBlock__copyButton {
-    margin-top: $euiSizeXS;
+  .wuiCodeBlock__fullScreenButton + .wuiCodeBlock__copyButton {
+    margin-top: $wuiSizeXS;
   }
 
-  &.euiCodeBlock-isFullScreen {
+  &.wuiCodeBlock-isFullScreen {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
-    .euiCodeBlock__pre {
+    .wuiCodeBlock__pre {
       // sass-lint:disable-block no-important
-      padding: $euiSizeXL !important;
+      padding: $wuiSizeXL !important;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeXS;
-      right: $euiSizeXS;
+    .wuiCodeBlock__controls {
+      top: $wuiSizeXS;
+      right: $wuiSizeXS;
     }
   }
 
-  &.euiCodeBlock--fontSmall {
-    font-size: $euiFontSizeXS;
+  &.wuiCodeBlock--fontSmall {
+    font-size: $wuiFontSizeXS;
   }
 
-  &.euiCodeBlock--fontMedium {
-    font-size: $euiFontSizeS;
+  &.wuiCodeBlock--fontMedium {
+    font-size: $wuiFontSizeS;
   }
 
-  &.euiCodeBlock--fontLarge {
-    font-size: $euiFontSize;
+  &.wuiCodeBlock--fontLarge {
+    font-size: $wuiFontSize;
   }
 
   // Storing for re-use the sizing of controls plus extra padding
-  $controlsPadding: $euiSizeL + $euiSizeXS;
+  $controlsPadding: $wuiSizeL + $wuiSizeXS;
 
-  &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
+  &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePreWrap {
     padding-right: $controlsPadding;
   }
 
-  &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
+  &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePre {
     margin-right: $controlsPadding;
   }
 
   // Small padding
-  &.euiCodeBlock--paddingSmall {
-    .euiCodeBlock__pre {
-      padding: $euiSizeS;
+  &.wuiCodeBlock--paddingSmall {
+    .wuiCodeBlock__pre {
+      padding: $wuiSizeS;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeS;
-      right: $euiSizeS;
+    .wuiCodeBlock__controls {
+      top: $wuiSizeS;
+      right: $wuiSizeS;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSizeS + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $wuiSizeS + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSizeS + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePre {
+      margin-right: $wuiSizeS + $controlsPadding;
     }
   }
 
   // Medium padding
-  &.euiCodeBlock--paddingMedium {
-    .euiCodeBlock__pre {
-      padding: $euiSize;
+  &.wuiCodeBlock--paddingMedium {
+    .wuiCodeBlock__pre {
+      padding: $wuiSize;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSize;
-      right: $euiSize;
+    .wuiCodeBlock__controls {
+      top: $wuiSize;
+      right: $wuiSize;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSize + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $wuiSize + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSize + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePre {
+      margin-right: $wuiSize + $controlsPadding;
     }
   }
 
   // Large padding
-  &.euiCodeBlock--paddingLarge {
-    .euiCodeBlock__pre {
-      padding: $euiSizeL;
+  &.wuiCodeBlock--paddingLarge {
+    .wuiCodeBlock__pre {
+      padding: $wuiSizeL;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeL;
-      right: $euiSizeL;
+    .wuiCodeBlock__controls {
+      top: $wuiSizeL;
+      right: $wuiSizeL;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSizeL + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $wuiSizeL + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSizeL + $controlsPadding;
+    &.wuiCodeBlock--hasControls .wuiCodeBlock__pre--whiteSpacePre {
+      margin-right: $wuiSizeL + $controlsPadding;
     }
   }
 
   /*
    * 1. Size the code against the text its embedded within.
    */
-  &.euiCodeBlock--inline {
+  &.wuiCodeBlock--inline {
     display: inline-block;
     white-space: pre;
-    color: $euiTextColor;
+    color: $wuiTextColor;
     font-size: 90%; /* 1 */
-    padding: 0 $euiSizeS;
-    background: $euiCodeBlockBackgroundColor;
+    padding: 0 $wuiSizeS;
+    background: $wuiCodeBlockBackgroundColor;
 
-    .euiCodeBlock__pre {
-      padding: 0 $euiSizeXS;
+    .wuiCodeBlock__pre {
+      padding: 0 $wuiSizeXS;
     }
 
-    .euiCodeBlock__code {
+    .wuiCodeBlock__code {
       display: inline;
       white-space: normal;
     }
   }
 
-  &.euiCodeBlock--transparentBackground {
+  &.wuiCodeBlock--transparentBackground {
     background: transparent;
   }
 
   .hljs > *::selection {
     // Only change the color if the variable IS a color
     // or else no highlight color shows up at all
-    @if type-of($euiCodeBlockSelectedBackgroundColor) == color {
-      background-color: $euiCodeBlockSelectedBackgroundColor;
+    @if type-of($wuiCodeBlockSelectedBackgroundColor) == color {
+      background-color: $wuiCodeBlockSelectedBackgroundColor;
     }
   }
 
   .hljs-comment,
   .hljs-quote {
-    color: $euiCodeBlockCommentColor;
+    color: $wuiCodeBlockCommentColor;
     font-style: italic;
   }
 
   .hljs-selector-tag {
-    color: $euiCodeBlockSelectorTagColor;
+    color: $wuiCodeBlockSelectorTagColor;
     font-weight: bold;
   }
 
   .hljs-string,
   .hljs-subst,
   .hljs-doctag {
-    color: $euiCodeBlockStringColor;
+    color: $wuiCodeBlockStringColor;
   }
 
   .hljs-number,
@@ -195,32 +195,32 @@
   .hljs-variable,
   .hljs-template-variable,
   .hljs-tag .hljs-attr {
-    color: $euiCodeBlockNumberColor;
+    color: $wuiCodeBlockNumberColor;
   }
 
   .hljs-keyword {
-    color: $euiCodeBlockKeywordColor;
+    color: $wuiCodeBlockKeywordColor;
   }
 
   .hljs-function > .hljs-title {
-    color: $euiCodeBlockFunctionTitleColor;
+    color: $wuiCodeBlockFunctionTitleColor;
   }
 
   .hljs-tag {
-    color: $euiCodeBlockTagColor;
+    color: $wuiCodeBlockTagColor;
   }
 
   .hljs-name {
-    color: $euiCodeBlockNameColor;
+    color: $wuiCodeBlockNameColor;
   }
 
   .hljs-type,
   .hljs-class .hljs-title {
-    color: $euiCodeBlockTypeColor;
+    color: $wuiCodeBlockTypeColor;
   }
 
   .hljs-attribute {
-    color: $euiCodeBlockAttributeColor;
+    color: $wuiCodeBlockAttributeColor;
   }
 
   .hljs-symbol,
@@ -228,45 +228,45 @@
   .hljs-built_in,
   .hljs-builtin-name,
   .hljs-link {
-    color: $euiCodeBlockSymbolColor;
+    color: $wuiCodeBlockSymbolColor;
   }
 
   .hljs-params {
-    color: $euiCodeBlockParamsColor;
+    color: $wuiCodeBlockParamsColor;
   }
 
   .hljs-meta {
-    color: $euiCodeBlockMetaColor;
+    color: $wuiCodeBlockMetaColor;
   }
 
   .hljs-title {
-    color: $euiCodeBlockTitleColor;
+    color: $wuiCodeBlockTitleColor;
   }
 
   .hljs-section {
-    color: $euiCodeBlockSectionColor;
+    color: $wuiCodeBlockSectionColor;
   }
 
   .hljs-addition,
   .hljs-deletion {
-    padding-left: $euiSizeXS;
-    margin-left: -$euiSizeXS;
+    padding-left: $wuiSizeXS;
+    margin-left: -$wuiSizeXS;
   }
 
   .hljs-addition {
-    box-shadow: -$euiSizeXS 0 $euiCodeBlockAdditionColor;
+    box-shadow: -$wuiSizeXS 0 $wuiCodeBlockAdditionColor;
   }
 
   .hljs-deletion {
-    box-shadow: -$euiSizeXS 0 $euiCodeBlockDeletionColor;
+    box-shadow: -$wuiSizeXS 0 $wuiCodeBlockDeletionColor;
   }
 
   .hljs-selector-class {
-    color: $euiCodeBlockSelectorClassColor;
+    color: $wuiCodeBlockSelectorClassColor;
   }
 
   .hljs-selector-id {
-    color: $euiCodeBlockSelectorIdColor;
+    color: $wuiCodeBlockSelectorIdColor;
   }
 
   .hljs-emphasis {

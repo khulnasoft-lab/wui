@@ -1,37 +1,37 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiCheckbox,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIconTip,
-  EuiSpacer,
-  EuiText,
-  EuiCode,
+  WuiCheckbox,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIconTip,
+  WuiSpacer,
+  WuiText,
+  WuiCode,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
-      <EuiFlexItem grow={false}>
-        <EuiCheckbox
+    <WuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
+      <WuiFlexItem grow={false}>
+        <WuiCheckbox
           id="explainedCheckbox"
           label="Use source maps"
           onChange={() => {}}
         />
-      </EuiFlexItem>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiIconTip
+      <WuiFlexItem grow={false}>
+        <WuiIconTip
           content="Source maps allow browser dev tools to map minified code to the original source code"
           position="right"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiIconTip
+    <WuiIconTip
       aria-label="Warning"
       size="xl"
       type="alert"
@@ -39,25 +39,25 @@ export default () => (
       content="I do not think it means what you think it means"
     />
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiText>
+    <WuiText>
       <p>
-        Pass a position utility class via <EuiCode>iconProps</EuiCode> to shift
+        Pass a position utility class via <WuiCode>iconProps</WuiCode> to shift
         for better alignment.
-        <EuiIconTip
+        <WuiIconTip
           type="iInCircle"
           color="subdued"
           content={
             <span>
-              This was passed <EuiCode>.eui-alignTop</EuiCode>
+              This was passed <WuiCode>.wui-alignTop</WuiCode>
             </span>
           }
           iconProps={{
-            className: 'eui-alignTop',
+            className: 'wui-alignTop',
           }}
         />
       </p>
-    </EuiText>
+    </WuiText>
   </Fragment>
 );

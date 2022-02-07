@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,44 +40,44 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../../common';
-import { EuiIcon, IconType } from '../../icon';
-import { EuiPopover, EuiPopoverProps } from '../../popover';
-import { EuiI18n } from '../../i18n';
+import { WuiIcon, IconType } from '../../icon';
+import { WuiPopover, WuiPopoverProps } from '../../popover';
+import { WuiI18n } from '../../i18n';
 import {
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  WuiHeaderSectionItemButton,
+  WuiHeaderSectionItemButtonProps,
 } from '../header_section';
-import { EuiBreakpointSize } from '../../../services/breakpoint';
-import { EuiHideFor, EuiShowFor } from '../../responsive';
+import { WuiBreakpointSize } from '../../../services/breakpoint';
+import { WuiHideFor, WuiShowFor } from '../../responsive';
 
-type EuiHeaderLinksGutterSize = 'xs' | 's' | 'm' | 'l';
-type EuiHeaderLinksPopoverButtonProps = EuiHeaderSectionItemButtonProps & {
+type WuiHeaderLinksGutterSize = 'xs' | 's' | 'm' | 'l';
+type WuiHeaderLinksPopoverButtonProps = WuiHeaderSectionItemButtonProps & {
   iconType?: IconType;
 };
 
-export type EuiHeaderLinksProps = CommonProps &
+export type WuiHeaderLinksProps = CommonProps &
   HTMLAttributes<HTMLElement> & {
     /**
      * Spacing between direct children
      */
-    gutterSize?: EuiHeaderLinksGutterSize;
+    gutterSize?: WuiHeaderLinksGutterSize;
     /**
      * A list of named breakpoints at which to show the popover version
      */
-    popoverBreakpoints?: EuiBreakpointSize[] | 'all' | 'none';
+    popoverBreakpoints?: WuiBreakpointSize[] | 'all' | 'none';
     /**
-     * Extend the functionality of the EuiPopover.button which is a EuiHeaderSectionItemButton.
+     * Extend the functionality of the WuiPopover.button which is a WuiHeaderSectionItemButton.
      * With the addition of `iconType` to change the display icon which defaults to `apps`
      */
-    popoverButtonProps?: EuiHeaderLinksPopoverButtonProps;
+    popoverButtonProps?: WuiHeaderLinksPopoverButtonProps;
     /**
-     * Extend the functionality of the EuiPopover
+     * Extend the functionality of the WuiPopover
      */
-    popoverProps?: Omit<EuiPopoverProps, 'button' | 'closePopover'>;
+    popoverProps?: Omit<WuiPopoverProps, 'button' | 'closePopover'>;
   };
 
 const gutterSizeToClassNameMap: {
-  [gutterSize in EuiHeaderLinksGutterSize]: string;
+  [gutterSize in WuiHeaderLinksGutterSize]: string;
 } = {
   xs: '--gutterXS',
   s: '--gutterS',
@@ -73,7 +86,7 @@ const gutterSizeToClassNameMap: {
 };
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
 
-export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
+export const WuiHeaderLinks: FunctionComponent<WuiHeaderLinksProps> = ({
   children,
   className,
   gutterSize = 's',
@@ -104,36 +117,36 @@ export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
     };
   });
 
-  const classes = classNames('euiHeaderLinks', className);
+  const classes = classNames('wuiHeaderLinks', className);
 
   const button = (
-    <EuiI18n token="euiHeaderLinks.openNavigationMenu" default="Open menu">
+    <WuiI18n token="wuiHeaderLinks.openNavigationMenu" default="Open menu">
       {(openNavigationMenu: string) => (
-        <EuiHeaderSectionItemButton
+        <WuiHeaderSectionItemButton
           aria-label={openNavigationMenu}
           onClick={onMenuButtonClick}
           {...popoverButtonRest}>
-          <EuiIcon type={iconType} size="m" />
-        </EuiHeaderSectionItemButton>
+          <WuiIcon type={iconType} size="m" />
+        </WuiHeaderSectionItemButton>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 
   return (
-    <EuiI18n token="euiHeaderLinks.appNavigation" default="App menu">
+    <WuiI18n token="wuiHeaderLinks.appNavigation" default="App menu">
       {(appNavigation: string) => (
         <nav className={classes} aria-label={appNavigation} {...rest}>
-          <EuiHideFor sizes={popoverBreakpoints}>
+          <WuiHideFor sizes={popoverBreakpoints}>
             <div
-              className={classNames('euiHeaderLinks__list', [
-                `euiHeaderLinks__list${gutterSizeToClassNameMap[gutterSize]}`,
+              className={classNames('wuiHeaderLinks__list', [
+                `wuiHeaderLinks__list${gutterSizeToClassNameMap[gutterSize]}`,
               ])}>
               {children}
             </div>
-          </EuiHideFor>
+          </WuiHideFor>
 
-          <EuiShowFor sizes={popoverBreakpoints}>
-            <EuiPopover
+          <WuiShowFor sizes={popoverBreakpoints}>
+            <WuiPopover
               ownFocus
               button={button}
               isOpen={mobileMenuIsOpen}
@@ -142,15 +155,15 @@ export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
               panelPaddingSize="none"
               {...popoverProps}>
               <div
-                className={classNames('euiHeaderLinks__mobileList', [
-                  `euiHeaderLinks__mobileList${gutterSizeToClassNameMap[gutterSize]}`,
+                className={classNames('wuiHeaderLinks__mobileList', [
+                  `wuiHeaderLinks__mobileList${gutterSizeToClassNameMap[gutterSize]}`,
                 ])}>
                 {children}
               </div>
-            </EuiPopover>
-          </EuiShowFor>
+            </WuiPopover>
+          </WuiShowFor>
         </nav>
       )}
-    </EuiI18n>
+    </WuiI18n>
   );
 };

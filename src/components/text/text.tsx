@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,21 +34,21 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-import { TextColor, EuiTextColor } from './text_color';
+import { TextColor, WuiTextColor } from './text_color';
 
-import { EuiTextAlign, TextAlignment } from './text_align';
+import { WuiTextAlign, TextAlignment } from './text_align';
 
 const textSizeToClassNameMap = {
-  xs: 'euiText--extraSmall',
-  s: 'euiText--small',
-  m: 'euiText--medium',
+  xs: 'wuiText--extraSmall',
+  s: 'wuiText--small',
+  m: 'wuiText--medium',
 };
 
 export type TextSize = keyof typeof textSizeToClassNameMap;
 
 export const TEXT_SIZES = keysOf(textSizeToClassNameMap);
 
-export type EuiTextProps = CommonProps &
+export type WuiTextProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     textAlign?: TextAlignment;
     size?: TextSize;
@@ -43,7 +56,7 @@ export type EuiTextProps = CommonProps &
     grow?: boolean;
   };
 
-export const EuiText: FunctionComponent<EuiTextProps> = ({
+export const WuiText: FunctionComponent<WuiTextProps> = ({
   size = 'm',
   color,
   grow = true,
@@ -53,28 +66,28 @@ export const EuiText: FunctionComponent<EuiTextProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiText',
+    'wuiText',
     textSizeToClassNameMap[size],
     className,
     {
-      'euiText--constrainedWidth': !grow,
+      'wuiText--constrainedWidth': !grow,
     }
   );
 
   let optionallyAlteredText;
   if (color) {
     optionallyAlteredText = (
-      <EuiTextColor color={color} component="div">
+      <WuiTextColor color={color} component="div">
         {children}
-      </EuiTextColor>
+      </WuiTextColor>
     );
   }
 
   if (textAlign) {
     optionallyAlteredText = (
-      <EuiTextAlign textAlign={textAlign}>
+      <WuiTextAlign textAlign={textAlign}>
         {optionallyAlteredText || children}
-      </EuiTextAlign>
+      </WuiTextAlign>
     );
   }
 

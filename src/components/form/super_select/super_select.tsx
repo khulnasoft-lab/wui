@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,28 +35,28 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { WuiScreenReaderOnly } from '../../accessibility';
 import {
-  EuiSuperSelectControl,
-  EuiSuperSelectControlProps,
-  EuiSuperSelectOption,
+  WuiSuperSelectControl,
+  WuiSuperSelectControlProps,
+  WuiSuperSelectOption,
 } from './super_select_control';
-import { EuiPopover } from '../../popover';
+import { WuiPopover } from '../../popover';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemLayoutAlignment,
+  WuiContextMenuItem,
+  WuiContextMenuItemLayoutAlignment,
 } from '../../context_menu';
 import { keys } from '../../../services';
-import { EuiI18n } from '../../i18n';
+import { WuiI18n } from '../../i18n';
 
 enum ShiftDirection {
   BACK = 'back',
   FORWARD = 'forward',
 }
 
-export type EuiSuperSelectProps<T extends string> = CommonProps &
+export type WuiSuperSelectProps<T extends string> = CommonProps &
   Omit<
-    EuiSuperSelectControlProps<T>,
+    WuiSuperSelectControlProps<T>,
     'onChange' | 'onClick' | 'options' | 'value'
   > & {
     /**
@@ -52,7 +65,7 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
      * `inputDisplay`: what shows inside the form input when selected
      * `dropdownDisplay` (optional): what shows for the item in the dropdown
      */
-    options: Array<EuiSuperSelectOption<T>>;
+    options: Array<WuiSuperSelectOption<T>>;
 
     valueOfSelected?: T;
 
@@ -73,9 +86,9 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
     hasDividers?: boolean;
 
     /**
-     * Change `EuiContextMenuItem` layout position of icon
+     * Change `WuiContextMenuItem` layout position of icon
      */
-    itemLayoutAlign?: EuiContextMenuItemLayoutAlignment;
+    itemLayoutAlign?: WuiContextMenuItemLayoutAlignment;
 
     /**
      * Applied to the outermost wrapper (popover)
@@ -88,8 +101,8 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
     isOpen?: boolean;
   };
 
-export class EuiSuperSelect<T extends string> extends Component<
-  EuiSuperSelectProps<T>
+export class WuiSuperSelect<T extends string> extends Component<
+  WuiSuperSelectProps<T>
 > {
   static defaultProps = {
     hasDividers: false,
@@ -275,34 +288,34 @@ export class EuiSuperSelect<T extends string> extends Component<
     } = this.props;
 
     const popoverClasses = classNames(
-      'euiSuperSelect',
+      'wuiSuperSelect',
       {
-        'euiSuperSelect--fullWidth': fullWidth,
+        'wuiSuperSelect--fullWidth': fullWidth,
       },
       popoverClassName
     );
 
-    const popoverPanelClasses = classNames('euiSuperSelect__popoverPanel', {
+    const popoverPanelClasses = classNames('wuiSuperSelect__popoverPanel', {
       [`${popoverClassName}__popoverPanel`]: !!popoverClassName,
     });
 
     const buttonClasses = classNames(
       {
-        'euiSuperSelect--isOpen__button': this.state.isPopoverOpen,
+        'wuiSuperSelect--isOpen__button': this.state.isPopoverOpen,
       },
       className
     );
 
     const itemClasses = classNames(
-      'euiSuperSelect__item',
+      'wuiSuperSelect__item',
       {
-        'euiSuperSelect__item--hasDividers': hasDividers,
+        'wuiSuperSelect__item--hasDividers': hasDividers,
       },
       itemClassName
     );
 
     const button = (
-      <EuiSuperSelectControl
+      <WuiSuperSelectControl
         options={options}
         value={valueOfSelected}
         onClick={
@@ -321,7 +334,7 @@ export class EuiSuperSelect<T extends string> extends Component<
       const { value, dropdownDisplay, inputDisplay, ...optionRest } = option;
 
       return (
-        <EuiContextMenuItem
+        <WuiContextMenuItem
           key={index}
           className={itemClasses}
           icon={valueOfSelected === value ? 'check' : 'empty'}
@@ -334,12 +347,12 @@ export class EuiSuperSelect<T extends string> extends Component<
           aria-selected={valueOfSelected === value}
           {...optionRest}>
           {dropdownDisplay || inputDisplay}
-        </EuiContextMenuItem>
+        </WuiContextMenuItem>
       );
     });
 
     return (
-      <EuiPopover
+      <WuiPopover
         className={popoverClasses}
         display="block"
         panelClassName={popoverPanelClasses}
@@ -353,25 +366,25 @@ export class EuiSuperSelect<T extends string> extends Component<
         buttonRef={this.setButtonRef}
         hasArrow={false}
         buffer={0}>
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <p role="alert">
-            <EuiI18n
-              token="euiSuperSelect.screenReaderAnnouncement"
+            <WuiI18n
+              token="wuiSuperSelect.screenReaderAnnouncement"
               default="You are in a form selector of {optionsCount} items and must select a single option.
               Use the up and down keys to navigate or escape to close."
               values={{ optionsCount: options.length }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
         <div
-          className="euiSuperSelect__listbox"
+          className="wuiSuperSelect__listbox"
           role="listbox"
           aria-activedescendant={valueOfSelected}
           style={{ width: this.state.menuWidth }}
           tabIndex={0}>
           {items}
         </div>
-      </EuiPopover>
+      </WuiPopover>
     );
   }
 }

@@ -1,27 +1,27 @@
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiButton,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup gutterSize="s" alignItems="center" wrap>
-    <EuiFlexItem grow={false}>
-      <EuiButton isLoading={true}>Loading&hellip;</EuiButton>
-    </EuiFlexItem>
+  <WuiFlexGroup gutterSize="s" alignItems="center" wrap>
+    <WuiFlexItem grow={false}>
+      <WuiButton isLoading={true}>Loading&hellip;</WuiButton>
+    </WuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButton fill isLoading={true}>
+    <WuiFlexItem grow={false}>
+      <WuiButton fill isLoading={true}>
         Loading&hellip;
-      </EuiButton>
-    </EuiFlexItem>
+      </WuiButton>
+    </WuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButton fill isLoading={true} iconType="check" iconSide="right">
+    <WuiFlexItem grow={false}>
+      <WuiButton fill isLoading={true} iconType="check" iconSide="right">
         Loading&hellip;
-      </EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+      </WuiButton>
+    </WuiFlexItem>
+  </WuiFlexGroup>
 );

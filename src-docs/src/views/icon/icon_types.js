@@ -1,73 +1,73 @@
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiText,
-  EuiSpacer,
-  EuiButton,
+  WuiFlexGrid,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiIcon,
+  WuiPanel,
+  WuiText,
+  WuiSpacer,
+  WuiButton,
 } from '../../../../src/components';
 
 import reactSvg from '../../images/custom.svg';
 
 export default () => (
   <div>
-    <EuiFlexGrid columns={4}>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
-        <EuiPanel>
-          <EuiIcon type="logoElastic" size="xl" />
-          <EuiText size="s">
-            <p>logoElastic</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
-        <EuiPanel>
-          <EuiIcon
+    <WuiFlexGrid columns={4}>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
+        <WuiPanel>
+          <WuiIcon type="logoWazuh" size="xl" />
+          <WuiText size="s">
+            <p>logoWazuh</p>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
+        <WuiPanel>
+          <WuiIcon
             type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg"
             size="xl"
             title="My SVG logo"
           />
-          <EuiText size="s">
+          <WuiText size="s">
             <p>http://some.svg</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
-        <EuiPanel>
-          <EuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />
-          <EuiText size="s">
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon" style={{ width: '200px' }}>
+        <WuiPanel>
+          <WuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />
+          <WuiText size="s">
             <p>{'{reactSvg}'}</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+    </WuiFlexGrid>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiText>
+    <WuiText>
       <p>
-        Any component that utlizes <strong>EuiIcon</strong> can use custom SVGs
+        Any component that utlizes <strong>WuiIcon</strong> can use custom SVGs
         as well
       </p>
-    </EuiText>
+    </WuiText>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <WuiFlexGroup>
+      <WuiFlexItem grow={false}>
+        <WuiButton
           iconType="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg"
           title="Another SVG Logo">
           http://some.svg
-        </EuiButton>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButton iconType={reactSvg}>{'{reactSvg}'}</EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </WuiButton>
+      </WuiFlexItem>
+      <WuiFlexItem grow={false}>
+        <WuiButton iconType={reactSvg}>{'{reactSvg}'}</WuiButton>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   </div>
 );

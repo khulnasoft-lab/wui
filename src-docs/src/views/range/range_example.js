@@ -5,23 +5,23 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiDualRange,
-  EuiRange,
-  EuiSpacer,
-  EuiCode,
+  WuiCallOut,
+  WuiDualRange,
+  WuiRange,
+  WuiSpacer,
+  WuiCode,
 } from '../../../../src/components';
 
 import { rangeConfig, dualRangeConfig } from './playground';
 
 import {
-  EuiRangeLevels,
+  WuiRangeLevels,
   LEVEL_COLORS,
 } from '../../../../src/components/form/range/range_levels';
 
-import { EuiRangeTicks } from '../../../../src/components/form/range/range_ticks';
+import { WuiRangeTicks } from '../../../../src/components/form/range/range_ticks';
 
-import { EuiRangeInput } from '../../../../src/components/form/range/range_input';
+import { WuiRangeInput } from '../../../../src/components/form/range/range_input';
 
 import DualRangeExample from './dual_range';
 const dualRangeSource = require('!!raw-loader!./dual_range');
@@ -55,15 +55,15 @@ export const RangeControlExample = {
   title: 'Range sliders',
   intro: (
     <Fragment>
-      <EuiCallOut color="warning" title="Understanding precision">
+      <WuiCallOut color="warning" title="Understanding precision">
         <p>
           Range sliders should only be used when{' '}
           <strong>the precise value is not considered important</strong>. If the
-          precise value does matter, add the <EuiCode>showInput</EuiCode> prop
-          or use a <strong>EuiFieldNumber</strong> instead.
+          precise value does matter, add the <WuiCode>showInput</WuiCode> prop
+          or use a <strong>WuiFieldNumber</strong> instead.
         </p>
-      </EuiCallOut>
-      <EuiSpacer />
+      </WuiCallOut>
+      <WuiSpacer />
     </Fragment>
   ),
   sections: [
@@ -74,31 +74,31 @@ export const RangeControlExample = {
           <h3>Required</h3>
           <ul>
             <li>
-              <EuiCode>min, max</EuiCode>: Sets the range values.
+              <WuiCode>min, max</WuiCode>: Sets the range values.
             </li>
             <li>
-              <EuiCode>step</EuiCode>: Technically not required because the
-              default is <EuiCode>1</EuiCode>.
+              <WuiCode>step</WuiCode>: Technically not required because the
+              default is <WuiCode>1</WuiCode>.
             </li>
             <li>
-              <EuiCode>value, onChange</EuiCode>
+              <WuiCode>value, onChange</WuiCode>
             </li>
           </ul>
           <h3>Optional</h3>
           <ul>
             <li>
-              <EuiCode>showLabels</EuiCode>: While currently considered
+              <WuiCode>showLabels</WuiCode>: While currently considered
               optional, the property should be added to explicitly state the
               range to the user.
             </li>
             <li>
-              <EuiCode>showValue</EuiCode>: Displays a tooltip style indicator
-              of the selected value. You can add <EuiCode>valuePrepend</EuiCode>{' '}
-              and/or <EuiCode>valueAppend</EuiCode> to bookend the value with
+              <WuiCode>showValue</WuiCode>: Displays a tooltip style indicator
+              of the selected value. You can add <WuiCode>valuePrepend</WuiCode>{' '}
+              and/or <WuiCode>valueAppend</WuiCode> to bookend the value with
               custom content.
             </li>
             <li>
-              <EuiCode>showRange</EuiCode>: Displays a thickened line from the
+              <WuiCode>showRange</WuiCode>: Displays a thickened line from the
               minimum value to the selected value.
             </li>
           </ul>
@@ -115,11 +115,11 @@ export const RangeControlExample = {
         },
       ],
       props: {
-        EuiRange,
+        WuiRange,
       },
       demo: <RangeExample />,
       snippet: [
-        `<EuiRange
+        `<WuiRange
   min={100}
   max={200}
   step={0.05}
@@ -128,7 +128,7 @@ export const RangeControlExample = {
   showLabels
 />`,
         `// Show tooltip
-<EuiRange
+<WuiRange
   min={100}
   max={200}
   value={value}
@@ -137,7 +137,7 @@ export const RangeControlExample = {
   showValue
 />`,
         `// Show thickened range and prepend a string to the tooltip
-<EuiRange
+<WuiRange
   min={100}
   max={200}
   value={value}
@@ -154,31 +154,31 @@ export const RangeControlExample = {
       text: (
         <Fragment>
           <p>
-            The <strong>EuiDualRange</strong> accepts almost all the same props
-            as the regular <strong>EuiRange</strong>, with the exception of{' '}
-            <EuiCode>showRange</EuiCode> which is on by default, and{' '}
-            <EuiCode>showValue</EuiCode> since tooltips don&apos;t fit properly
+            The <strong>WuiDualRange</strong> accepts almost all the same props
+            as the regular <strong>WuiRange</strong>, with the exception of{' '}
+            <WuiCode>showRange</WuiCode> which is on by default, and{' '}
+            <WuiCode>showValue</WuiCode> since tooltips don&apos;t fit properly
             when there are two.
           </p>
-          <EuiCallOut color="warning" title="Retrieving field values">
+          <WuiCallOut color="warning" title="Retrieving field values">
             <p>
-              Two-value <EuiCode>input[type=range]</EuiCode> elements are not
+              Two-value <WuiCode>input[type=range]</WuiCode> elements are not
               part of the HTML5 specification. Because of this support gap,{' '}
-              <strong>EuiDualRange</strong> cannot expose a native{' '}
-              <EuiCode>value</EuiCode> property for native form to consumption.{' '}
+              <strong>WuiDualRange</strong> cannot expose a native{' '}
+              <WuiCode>value</WuiCode> property for native form to consumption.{' '}
               <strong>
-                The React <EuiCode>onChange</EuiCode> prop is the recommended
+                The React <WuiCode>onChange</WuiCode> prop is the recommended
                 method for retrieving the upper and lower values.
               </strong>
             </p>
             <p>
-              <strong>EuiDualRange</strong> does use native inputs to help
+              <strong>WuiDualRange</strong> does use native inputs to help
               validate step values and range limits. These may be used as form
-              values when <EuiCode>showInput</EuiCode> is in use. The
+              values when <WuiCode>showInput</WuiCode> is in use. The
               alternative is to store values in{' '}
-              <EuiCode>input[type=hidden]</EuiCode>.
+              <WuiCode>input[type=hidden]</WuiCode>.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </Fragment>
       ),
       source: [
@@ -192,10 +192,10 @@ export const RangeControlExample = {
         },
       ],
       props: {
-        EuiDualRange,
+        WuiDualRange,
       },
       demo: <DualRangeExample />,
-      snippet: `<EuiDualRange
+      snippet: `<WuiDualRange
   min={100}
   max={200}
   step={10}
@@ -209,12 +209,12 @@ export const RangeControlExample = {
       text: (
         <Fragment>
           <p>
-            The <EuiCode>showInput</EuiCode> prop, will append or bookend the
+            The <WuiCode>showInput</WuiCode> prop, will append or bookend the
             range slider with number type inputs. This is important for allowing
             precise values to be entered by the user.
           </p>
           <p>
-            Passing empty strings as the <EuiCode>value</EuiCode> to the ranges,
+            Passing empty strings as the <WuiCode>value</WuiCode> to the ranges,
             will allow the inputs to be blank, though the range handles will
             show at the min (or max and min) positions.
           </p>
@@ -231,8 +231,8 @@ export const RangeControlExample = {
         },
       ],
       demo: <InputExample />,
-      props: { EuiRangeInput },
-      snippet: ['<EuiRange showInput />', '<EuiDualRange showInput />'],
+      props: { WuiRangeInput },
+      snippet: ['<WuiRange showInput />', '<WuiDualRange showInput />'],
     },
     {
       title: 'Tick marks',
@@ -240,23 +240,23 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             To show clickable tick marks and labels at a given interval, add the
-            prop <EuiCode>showTicks</EuiCode>. By default, tick mark interval is
-            bound to the <EuiCode>step</EuiCode> prop, however, you can set a
+            prop <WuiCode>showTicks</WuiCode>. By default, tick mark interval is
+            bound to the <WuiCode>step</WuiCode> prop, however, you can set a
             custom interval without changing the actual steps allowed by passing
-            a number to the <EuiCode>tickInterval</EuiCode> prop.
+            a number to the <WuiCode>tickInterval</WuiCode> prop.
           </p>
           <p>
             To pass completely custom tick marks, you can pass an array of
-            objects that require a <EuiCode>value</EuiCode> and{' '}
-            <EuiCode>label</EuiCode>. The value must be included in the range of
+            objects that require a <WuiCode>value</WuiCode> and{' '}
+            <WuiCode>label</WuiCode>. The value must be included in the range of
             values (min-max), though the label may be anythin you choose.
           </p>
-          <EuiCallOut color="warning" title="Maximum of 20 ticks allowed">
+          <WuiCallOut color="warning" title="Maximum of 20 ticks allowed">
             <p>
               Spacing can get quite cramped with lots of ticks so we max out the
               number to 20.
             </p>
-          </EuiCallOut>
+          </WuiCallOut>
         </Fragment>
       ),
       source: [
@@ -270,11 +270,11 @@ export const RangeControlExample = {
         },
       ],
       demo: <TicksExample />,
-      props: { EuiRangeTicks },
+      props: { WuiRangeTicks },
       snippet: [
-        '<EuiRange step={10} showTicks />',
-        '<EuiRange showTicks tickInterval={20} />',
-        `<EuiDualRange
+        '<WuiRange step={10} showTicks />',
+        '<WuiRange showTicks tickInterval={20} />',
+        `<WuiDualRange
   showTicks
   ticks={[
     { label: '20kb', value: 20 },
@@ -289,17 +289,17 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             To create colored indicators for certain intervals, pass an array of
-            objects that include a <EuiCode>min</EuiCode>,{' '}
-            <EuiCode>max</EuiCode> and <EuiCode>color</EuiCode>. Color options
+            objects that include a <WuiCode>min</WuiCode>,{' '}
+            <WuiCode>max</WuiCode> and <WuiCode>color</WuiCode>. Color options
             are{' '}
-            <EuiCode language="js">
+            <WuiCode language="js">
               {JSON.stringify(LEVEL_COLORS, null, 2)}
-            </EuiCode>
+            </WuiCode>
             .
           </p>
           <p>
-            Be sure to then add an <EuiCode>aria-describedby</EuiCode> and match
-            it to the id of a <strong>EuiFormHelpText</strong>.
+            Be sure to then add an <WuiCode>aria-describedby</WuiCode> and match
+            it to the id of a <strong>WuiFormHelpText</strong>.
           </p>
         </Fragment>
       ),
@@ -314,16 +314,16 @@ export const RangeControlExample = {
         },
       ],
       demo: <LevelsExample />,
-      props: { EuiRangeLevels },
+      props: { WuiRangeLevels },
       snippet: [
-        `<EuiRange
+        `<WuiRange
   levels={[
     {min: 0, max: 20, color: 'danger'},
     {min: 20, max: 100, color: 'success'}
   ]}
   aria-describedBy={replaceWithID}
 />`,
-        `<EuiDualRange
+        `<WuiDualRange
   levels={[
     {min: 0, max: 20, color: 'danger'},
     {min: 20, max: 100, color: 'success'}
@@ -338,9 +338,9 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             Passing{' '}
-            <EuiCode language="js">
+            <WuiCode language="js">
               showInput=&quot;inputWithPopover&quot;
-            </EuiCode>{' '}
+            </WuiCode>{' '}
             instead of a boolean will only display the inputs until the input is
             interacted with in which case a dropdown will appear displaying the
             actual slider.
@@ -359,13 +359,13 @@ export const RangeControlExample = {
       ],
       demo: <InputOnlyExample />,
       snippet: [
-        `<EuiRange
+        `<WuiRange
   id={rangeId}
   value={value}
   onChange={handleChange}
   showInput="inputWithPopover"
 />`,
-        `<EuiDualRange
+        `<WuiDualRange
   id={rangeId}
   value={value}
   onChange={handleChange}
@@ -379,7 +379,7 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             Other alterations you can add to the range are{' '}
-            <EuiCode>fullWidth</EuiCode>, and <EuiCode>disabled</EuiCode>.
+            <WuiCode>fullWidth</WuiCode>, and <WuiCode>disabled</WuiCode>.
           </p>
         </Fragment>
       ),
@@ -395,7 +395,7 @@ export const RangeControlExample = {
       ],
       demo: <StatesExample />,
       snippet: [
-        `<EuiRange
+        `<WuiRange
   id={rangeId}
   value={value}
   onChange={handleChange}
@@ -410,7 +410,7 @@ export const RangeControlExample = {
   levels={levels}
   aria-describedBy={replaceWithID}
 />`,
-        `<EuiDualRange
+        `<WuiDualRange
   id={rangeId}
   value={value}
   onChange={handleChange}

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,13 +35,13 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const colorsToClassNameMap = {
-  default: 'euiTextColor--default',
-  subdued: 'euiTextColor--subdued',
-  secondary: 'euiTextColor--secondary',
-  accent: 'euiTextColor--accent',
-  danger: 'euiTextColor--danger',
-  warning: 'euiTextColor--warning',
-  ghost: 'euiTextColor--ghost',
+  default: 'wuiTextColor--default',
+  subdued: 'wuiTextColor--subdued',
+  secondary: 'wuiTextColor--secondary',
+  accent: 'wuiTextColor--accent',
+  danger: 'wuiTextColor--danger',
+  warning: 'wuiTextColor--warning',
+  ghost: 'wuiTextColor--ghost',
 };
 
 export type TextColor = keyof typeof colorsToClassNameMap;
@@ -47,7 +60,7 @@ type Props = CommonProps &
     component?: 'div' | 'span';
   };
 
-export const EuiTextColor: FunctionComponent<Props> = ({
+export const WuiTextColor: FunctionComponent<Props> = ({
   children,
   color = 'default',
   className,
@@ -55,7 +68,7 @@ export const EuiTextColor: FunctionComponent<Props> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextColor',
+    'wuiTextColor',
     colorsToClassNameMap[color],
     className
   );

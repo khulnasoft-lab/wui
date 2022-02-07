@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiDescriptionList, EuiSpacer } from '../../../../src/components';
+import { WuiDescriptionList, WuiSpacer } from '../../../../src/components';
 
 const favoriteVideoGames = [
   {
@@ -19,24 +19,24 @@ const favoriteVideoGames = [
 ];
 export default () => (
   <div style={{ maxWidth: '400px' }}>
-    <EuiDescriptionList
+    <WuiDescriptionList
       listItems={favoriteVideoGames}
       align="center"
       compressed
     />
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiDescriptionList
+    <WuiDescriptionList
       listItems={favoriteVideoGames}
       type="column"
       align="center"
       compressed
     />
 
-    <EuiSpacer size="l" />
+    <WuiSpacer size="l" />
 
-    <EuiDescriptionList
+    <WuiDescriptionList
       listItems={favoriteVideoGames}
       type="inline"
       align="center"

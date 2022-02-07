@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiContextMenuItem,
-  EuiContextMenuPanel,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPagination,
-  EuiPopover,
+  WuiButtonEmpty,
+  WuiContextMenuItem,
+  WuiContextMenuPanel,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiPagination,
+  WuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -22,18 +22,18 @@ export default () => {
   const goToPage = pageNumber => setActivePage(pageNumber);
 
   const button = (
-    <EuiButtonEmpty
+    <WuiButtonEmpty
       size="s"
       color="text"
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}>
       Rows per page: 50
-    </EuiButtonEmpty>
+    </WuiButtonEmpty>
   );
 
   const items = [
-    <EuiContextMenuItem
+    <WuiContextMenuItem
       key="10 rows"
       icon="empty"
       onClick={() => {
@@ -41,8 +41,8 @@ export default () => {
         window.alert('10 rows');
       }}>
       10 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="20 rows"
       icon="empty"
       onClick={() => {
@@ -50,8 +50,8 @@ export default () => {
         window.alert('20 rows');
       }}>
       20 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="50 rows"
       icon="check"
       onClick={() => {
@@ -59,8 +59,8 @@ export default () => {
         window.alert('50 rows');
       }}>
       50 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </WuiContextMenuItem>,
+    <WuiContextMenuItem
       key="100 rows"
       icon="empty"
       onClick={() => {
@@ -68,29 +68,29 @@ export default () => {
         window.alert('100 rows');
       }}>
       100 rows
-    </EuiContextMenuItem>,
+    </WuiContextMenuItem>,
   ];
 
   return (
-    <EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <WuiFlexGroup justifyContent="spaceBetween" alignItems="center">
+      <WuiFlexItem grow={false}>
+        <WuiPopover
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}
           panelPaddingSize="none">
-          <EuiContextMenuPanel items={items} />
-        </EuiPopover>
-      </EuiFlexItem>
+          <WuiContextMenuPanel items={items} />
+        </WuiPopover>
+      </WuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPagination
+      <WuiFlexItem grow={false}>
+        <WuiPagination
           aria-label="Custom pagination example"
           pageCount={PAGE_COUNT}
           activePage={activePage}
           onPageClick={goToPage}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </WuiFlexItem>
+    </WuiFlexGroup>
   );
 };

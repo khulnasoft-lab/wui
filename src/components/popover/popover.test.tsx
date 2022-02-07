@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,7 +35,7 @@ import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
 import {
-  EuiPopover,
+  WuiPopover,
   getPopoverPositionFromAnchorPosition,
   getPopoverAlignFromAnchorPosition,
   PopoverAnchorPosition,
@@ -31,7 +44,7 @@ import {
 import { keys } from '../../services';
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: ReactNode }) => children,
+  WuiPortal: ({ children }: { children: ReactNode }) => children,
 }));
 
 // Mock the htmlIdGenerator to generate predictable ids for snapshot tests
@@ -42,10 +55,10 @@ jest.mock('../../services/accessibility/html_id_generator', () => ({
 let id = 0;
 const getId = () => `${id++}`;
 
-describe('EuiPopover', () => {
+describe('WuiPopover', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPopover
+      <WuiPopover
         id={getId()}
         button={<button />}
         closePopover={() => {}}
@@ -58,9 +71,9 @@ describe('EuiPopover', () => {
 
   test('children is rendered', () => {
     const component = render(
-      <EuiPopover id={getId()} button={<button />} closePopover={() => {}}>
+      <WuiPopover id={getId()} button={<button />} closePopover={() => {}}>
         Children
-      </EuiPopover>
+      </WuiPopover>
     );
 
     expect(component).toMatchSnapshot();
@@ -70,7 +83,7 @@ describe('EuiPopover', () => {
     describe('display block', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             display="block"
             button={<button />}
@@ -85,7 +98,7 @@ describe('EuiPopover', () => {
     describe('anchorClassName', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             anchorClassName="test"
             button={<button />}
@@ -102,7 +115,7 @@ describe('EuiPopover', () => {
         const closePopoverHandler = jest.fn();
 
         const component = mount(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             withTitle
             button={<button />}
@@ -119,7 +132,7 @@ describe('EuiPopover', () => {
         const closePopoverHandler = jest.fn();
 
         const component = mount(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             withTitle
             button={<button />}
@@ -136,7 +149,7 @@ describe('EuiPopover', () => {
     describe('anchorPosition', () => {
       test('defaults to centerDown', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -148,7 +161,7 @@ describe('EuiPopover', () => {
 
       test('leftCenter is rendered', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -161,7 +174,7 @@ describe('EuiPopover', () => {
 
       test('downRight is rendered', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -176,7 +189,7 @@ describe('EuiPopover', () => {
     describe('isOpen', () => {
       test('defaults to false', () => {
         const component = render(
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -189,7 +202,7 @@ describe('EuiPopover', () => {
       test('renders true', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -208,7 +221,7 @@ describe('EuiPopover', () => {
       test('defaults to false', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               isOpen
               button={<button />}
@@ -223,7 +236,7 @@ describe('EuiPopover', () => {
       test('renders true', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               isOpen
               ownFocus
@@ -241,7 +254,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -259,7 +272,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -277,7 +290,7 @@ describe('EuiPopover', () => {
       test('with arrow', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -293,7 +306,7 @@ describe('EuiPopover', () => {
       test('without arrow', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -312,7 +325,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <WuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -329,7 +342,7 @@ describe('EuiPopover', () => {
     test('buffer', () => {
       const component = mount(
         <div>
-          <EuiPopover
+          <WuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -375,7 +388,7 @@ describe('EuiPopover', () => {
 
     it('cleans up timeouts and rAFs on unmount', () => {
       const component = mount(
-        <EuiPopover
+        <WuiPopover
           id={getId()}
           button={<button />}
           closePopover={() => {}}
@@ -388,7 +401,7 @@ describe('EuiPopover', () => {
 
       component.unmount();
 
-      // EUI's jest configuration throws an error if there are any console.error calls, like
+      // WUI's jest configuration throws an error if there are any console.error calls, like
       // React's setState on an unmounted component warning
       // to be future proof, verify that's still the case
       expect(() => {
@@ -396,7 +409,7 @@ describe('EuiPopover', () => {
       }).toThrow();
 
       // execute any pending timeouts or animation frame callbacks
-      // and validate the timeout/rAF clearing done by EuiPopover
+      // and validate the timeout/rAF clearing done by WuiPopover
       jest.advanceTimersByTime(10);
     });
   });

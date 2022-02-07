@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,20 +42,20 @@ import React, {
 import classNames from 'classnames';
 
 import { keysOf } from '../common';
-import { EuiPortal } from '../portal';
-import { EuiToolTipPopover } from './tool_tip_popover';
+import { WuiPortal } from '../portal';
+import { WuiToolTipPopover } from './tool_tip_popover';
 import { findPopoverPosition, htmlIdGenerator, keys } from '../../services';
 import { enqueueStateChange } from '../../services/react';
 
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { WuiResizeObserver } from '../observer/resize_observer';
 
 export type ToolTipPositions = 'top' | 'right' | 'bottom' | 'left';
 
 const positionsToClassNameMap: { [key in ToolTipPositions]: string } = {
-  top: 'euiToolTip--top',
-  right: 'euiToolTip--right',
-  bottom: 'euiToolTip--bottom',
-  left: 'euiToolTip--left',
+  top: 'wuiToolTip--top',
+  right: 'wuiToolTip--right',
+  bottom: 'wuiToolTip--bottom',
+  left: 'wuiToolTip--left',
 };
 
 export const POSITIONS = keysOf(positionsToClassNameMap);
@@ -121,7 +134,7 @@ interface State {
   id: string;
 }
 
-export class EuiToolTip extends Component<Props, State> {
+export class WuiToolTip extends Component<Props, State> {
   _isMounted = false;
   anchor: null | HTMLElement = null;
   popover: null | HTMLElement = null;
@@ -165,7 +178,7 @@ export class EuiToolTip extends Component<Props, State> {
   testAnchor = () => {
     // when the tooltip is visible, this checks if the anchor is still part of document
     // this fixes when the react root is removed from the dom without unmounting
-    // https://github.com/elastic/eui/issues/1105
+    // https://github.com/wazuh/wui/issues/1105
     if (document.body.contains(this.anchor) === false) {
       // the anchor is no longer part of `document`
       this.hideToolTip();
@@ -292,18 +305,18 @@ export class EuiToolTip extends Component<Props, State> {
     const { arrowStyles, id, toolTipStyles, visible } = this.state;
 
     const classes = classNames(
-      'euiToolTip',
+      'wuiToolTip',
       positionsToClassNameMap[this.state.calculatedPosition],
       className
     );
 
-    const anchorClasses = classNames('euiToolTipAnchor', anchorClassName);
+    const anchorClasses = classNames('wuiToolTipAnchor', anchorClassName);
 
     let tooltip;
     if (visible && (content || title)) {
       tooltip = (
-        <EuiPortal>
-          <EuiToolTipPopover
+        <WuiPortal>
+          <WuiToolTipPopover
             className={classes}
             style={toolTipStyles}
             positionToolTip={this.positionToolTip}
@@ -312,12 +325,12 @@ export class EuiToolTip extends Component<Props, State> {
             id={id}
             role="tooltip"
             {...rest}>
-            <div style={arrowStyles} className="euiToolTip__arrow" />
-            <EuiResizeObserver onResize={this.positionToolTip}>
+            <div style={arrowStyles} className="wuiToolTip__arrow" />
+            <WuiResizeObserver onResize={this.positionToolTip}>
               {resizeRef => <div ref={resizeRef}>{content}</div>}
-            </EuiResizeObserver>
-          </EuiToolTipPopover>
-        </EuiPortal>
+            </WuiResizeObserver>
+          </WuiToolTipPopover>
+        </WuiPortal>
       );
     }
 

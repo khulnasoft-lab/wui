@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EuiSuperDatePicker } from '../../../../../src/components';
+import { WuiSuperDatePicker } from '../../../../../src/components';
 
 export default () => {
   const [recentlyUsedRanges, setRecentlyUsedRanges] = useState([]);
@@ -48,7 +48,7 @@ export default () => {
   };
 
   return (
-    <EuiSuperDatePicker
+    <WuiSuperDatePicker
       isLoading={isLoading}
       start={start}
       end={end}

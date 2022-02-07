@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -44,7 +57,7 @@ function isMutableRef(
   return ref != null && ref.hasOwnProperty('current');
 }
 
-export interface EuiValidatableControlProps {
+export interface WuiValidatableControlProps {
   isInvalid?: boolean;
   /**
    * ReactNode to render as this component's content
@@ -52,8 +65,8 @@ export interface EuiValidatableControlProps {
   children: ReactElementWithRef;
 }
 
-export const EuiValidatableControl: FunctionComponent<CommonProps &
-  EuiValidatableControlProps> = ({ isInvalid, children }) => {
+export const WuiValidatableControl: FunctionComponent<CommonProps &
+  WuiValidatableControlProps> = ({ isInvalid, children }) => {
   const control = useRef<HTMLConstraintValidityElement | null>(null);
 
   const child = Children.only(children);

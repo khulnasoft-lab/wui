@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -48,11 +61,11 @@ interface withId extends RadioProps {
   id: string;
 }
 
-export type EuiRadioProps = CommonProps &
+export type WuiRadioProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'id'> &
   ExclusiveUnion<ExclusiveUnion<RadioProps, idWithLabel>, withId>;
 
-export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
+export const WuiRadio: FunctionComponent<WuiRadioProps> = ({
   className,
   id,
   name,
@@ -66,10 +79,10 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiRadio',
+    'wuiRadio',
     {
-      'euiRadio--noLabel': !label,
-      'euiRadio--compressed': compressed,
+      'wuiRadio--noLabel': !label,
+      'wuiRadio--compressed': compressed,
     },
     className
   );
@@ -78,7 +91,7 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
 
   if (label) {
     optionalLabel = (
-      <label className="euiRadio__label" htmlFor={id}>
+      <label className="wuiRadio__label" htmlFor={id}>
         {label}
       </label>
     );
@@ -87,7 +100,7 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
   return (
     <div className={classes} {...rest}>
       <input
-        className="euiRadio__input"
+        className="wuiRadio__input"
         type="radio"
         id={id}
         name={name}
@@ -98,7 +111,7 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
         autoFocus={autoFocus}
       />
 
-      <div className="euiRadio__circle" />
+      <div className="wuiRadio__circle" />
 
       {optionalLabel}
     </div>

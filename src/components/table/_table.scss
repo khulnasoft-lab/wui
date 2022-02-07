@@ -2,131 +2,131 @@
  * NOTE: table-layout: fixed causes a bug in IE11 and Edge (see #9929). It also prevents us from
  * specifying a column width, e.g. the checkbox column.
  */
-.euiTable {
-  @include euiFontSizeS;
-  @include euiNumberFormat;
+.wuiTable {
+  @include wuiFontSizeS;
+  @include wuiNumberFormat;
 
   width: 100%;
   table-layout: fixed;
   border: none;
   border-collapse: collapse;
-  background-color: $euiColorEmptyShade;
+  background-color: $wuiColorEmptyShade;
 
-  &.euiTable--auto {
+  &.wuiTable--auto {
     table-layout: auto;
   }
 }
 
-.euiTableCaption {
+.wuiTableCaption {
   position: relative;
 }
 
 // Compressed styles not for mobile
-@include euiBreakpoint('m', 'l', 'xl') {
-  .euiTable--compressed {
-    .euiTableCellContent {
-      @include euiFontSizeXS;
-      padding: $euiTableCellContentPaddingCompressed;
+@include wuiBreakpoint('m', 'l', 'xl') {
+  .wuiTable--compressed {
+    .wuiTableCellContent {
+      @include wuiFontSizeXS;
+      padding: $wuiTableCellContentPaddingCompressed;
     }
   }
 }
 
-.euiTableFooterCell,
-.euiTableHeaderCell {
-  @include euiTableCell;
-  @include euiTitle('xxs');
-  font-weight: $euiFontWeightMedium;
+.wuiTableFooterCell,
+.wuiTableHeaderCell {
+  @include wuiTableCell;
+  @include wuiTitle('xxs');
+  font-weight: $wuiFontWeightMedium;
   border-top: none;
 
-  .euiTableHeaderButton {
+  .wuiTableHeaderButton {
     text-align: left;
-    font-weight: $euiFontWeightMedium;
+    font-weight: $wuiFontWeightMedium;
   }
 
-  .euiTableCellContent__text {
-    @include euiFontSizeXS;
-    font-weight: $euiFontWeightSemiBold;
+  .wuiTableCellContent__text {
+    @include wuiFontSizeXS;
+    font-weight: $wuiFontWeightSemiBold;
   }
 }
 
-.euiTableHeaderButton {
-  @include euiFontSizeS;
+.wuiTableHeaderButton {
+  @include wuiFontSizeS;
   color: inherit;
   width: 100%;
 
   &:hover,
   &:focus {
-    .euiTableCellContent__text {
+    .wuiTableCellContent__text {
       text-decoration: underline;
-      color: $euiColorPrimary;
+      color: $wuiColorPrimary;
     }
 
-    .euiTableSortIcon {
-      fill: $euiColorPrimary;
+    .wuiTableSortIcon {
+      fill: $wuiColorPrimary;
     }
   }
 }
 
-.euiTableSortIcon {
-  margin-left: $euiSizeXS;
+.wuiTableSortIcon {
+  margin-left: $wuiSizeXS;
   flex-shrink: 0; // makes sure the icon doesn't change size because the text is long
 
-  .euiTableHeaderButton-isSorted & {
-    fill: $euiTitleColor;
+  .wuiTableHeaderButton-isSorted & {
+    fill: $wuiTitleColor;
   }
 }
 
-.euiTableHeaderCellCheckbox {
-  @include euiTableCellCheckbox;
+.wuiTableHeaderCellCheckbox {
+  @include wuiTableCellCheckbox;
   border-top: none;
 }
 
-.euiTableRow {
+.wuiTableRow {
   &:hover {
-    background-color: $euiTableHoverColor;
+    background-color: $wuiTableHoverColor;
   }
 
-  &.euiTableRow-isExpandedRow {
-    .euiTableRowCell {
-      background-color: $euiTableHoverColor;
+  &.wuiTableRow-isExpandedRow {
+    .wuiTableRowCell {
+      background-color: $wuiTableHoverColor;
     }
 
-    &.euiTableRow-isSelectable .euiTableCellContent {
-      padding-left: $euiTableCellCheckboxWidth + $euiTableCellContentPadding;
+    &.wuiTableRow-isSelectable .wuiTableCellContent {
+      padding-left: $wuiTableCellCheckboxWidth + $wuiTableCellContentPadding;
     }
   }
 
-  &.euiTableRow-isSelected {
-    background-color: $euiTableSelectedColor;
+  &.wuiTableRow-isSelected {
+    background-color: $wuiTableSelectedColor;
 
-    + .euiTableRow.euiTableRow-isExpandedRow .euiTableRowCell {
-      background-color: $euiTableSelectedColor;
+    + .wuiTableRow.wuiTableRow-isExpandedRow .wuiTableRowCell {
+      background-color: $wuiTableSelectedColor;
     }
 
     &:hover,
-    &:hover + .euiTableRow.euiTableRow-isExpandedRow .euiTableRowCell  {
-      background-color: $euiTableHoverSelectedColor;
+    &:hover + .wuiTableRow.wuiTableRow-isExpandedRow .wuiTableRowCell  {
+      background-color: $wuiTableHoverSelectedColor;
     }
   }
 }
 
-.euiTableRowCell {
-  @include euiTableCell;
+.wuiTableRowCell {
+  @include wuiTableCell;
 
-  color: $euiTextColor;
+  color: $wuiTextColor;
 
-  &.euiTableRowCell--isMobileHeader {
+  &.wuiTableRowCell--isMobileHeader {
     display: none; // Hide if not mobile breakpoint
   }
 }
 
-.euiTableRowCellCheckbox {
-  @include euiTableCellCheckbox;
+.wuiTableRowCellCheckbox {
+  @include wuiTableCellCheckbox;
 }
 
-// Must come after .euiTableRowCell selector for border to be removed
-.euiTableFooterCell {
-  background-color: $euiColorLightestShade;
+// Must come after .wuiTableRowCell selector for border to be removed
+.wuiTableFooterCell {
+  background-color: $wuiColorLightestShade;
   border-bottom: none;
 }
 
@@ -138,40 +138,40 @@
  * 4. Prevent very long single words (e.g. the name of a field in a document) from overflowing
  *    the cell.
  */
-.euiTableCellContent {
+.wuiTableCellContent {
   overflow: hidden; /* 4 */
   display: flex;
   align-items: center; /* 1 */
-  padding: $euiTableCellContentPadding; /* 2 */
+  padding: $wuiTableCellContentPadding; /* 2 */
 }
 
-.euiTableCellContent__text {
-  @include euiTextBreakWord; /* 4 */
+.wuiTableCellContent__text {
+  @include wuiTextBreakWord; /* 4 */
   min-width: 0;
   text-overflow: ellipsis;
 }
 
-.euiTableCellContent--alignRight {
+.wuiTableCellContent--alignRight {
   justify-content: flex-end;
   text-align: right;
 }
 
-.euiTableCellContent--alignCenter {
+.wuiTableCellContent--alignCenter {
   justify-content: center;
   text-align: center;
 }
 
-.euiTableHeaderCell,
-.euiTableFooterCell,
-.euiTableCellContent--truncateText {
+.wuiTableHeaderCell,
+.wuiTableFooterCell,
+.wuiTableCellContent--truncateText {
   white-space: nowrap; /* 3 */
 
-  .euiTableCellContent__text {
+  .wuiTableCellContent__text {
     overflow: hidden;
   }
 }
 
-.euiTableCellContent--overflowingContent {
+.wuiTableCellContent--overflowingContent {
   overflow: visible;
   white-space: normal;
   //* 4 */ overflow-wrap is not supported on flex parents
@@ -179,32 +179,32 @@
   word-break: break-word;
 }
 
-.euiTableCellContent--showOnHover {
+.wuiTableCellContent--showOnHover {
   > *:not(:first-child) {
-    margin-left: $euiSizeS;
+    margin-left: $wuiSizeS;
   }
 }
 
-.euiTableRow-hasActions {
-  .euiTableCellContent--showOnHover {
-    .euiTableCellContent__hoverItem {
+.wuiTableRow-hasActions {
+  .wuiTableCellContent--showOnHover {
+    .wuiTableCellContent__hoverItem {
       flex-shrink: 0;
       opacity: .7;
       filter: grayscale(100%);
-      transition: opacity $euiAnimSpeedNormal $euiAnimSlightResistance, filter $euiAnimSpeedNormal $euiAnimSlightResistance;
+      transition: opacity $wuiAnimSpeedNormal $wuiAnimSlightResistance, filter $wuiAnimSpeedNormal $wuiAnimSlightResistance;
     }
 
     .expandedItemActions__completelyHide,
     .expandedItemActions__completelyHide:disabled,
     .expandedItemActions__completelyHide:disabled:hover,
     .expandedItemActions__completelyHide:disabled:focus,
-    .euiTableRow:hover & .expandedItemActions__completelyHide:disabled {
+    .wuiTableRow:hover & .expandedItemActions__completelyHide:disabled {
       filter: grayscale(0%);
       opacity: 0;
     }
   }
 
-  &:hover .euiTableCellContent--showOnHover .euiTableCellContent__hoverItem:not(:disabled) {
+  &:hover .wuiTableCellContent--showOnHover .wuiTableCellContent__hoverItem:not(:disabled) {
     &,
     &:hover,
     &:focus {
@@ -216,9 +216,9 @@
 
 // Animate expanded row must be on the contents div inside
 
-.euiTableRow-isExpandedRow .euiTableCellContent {
+.wuiTableRow-isExpandedRow .wuiTableCellContent {
   overflow: hidden;
-  animation: $euiAnimSpeedNormal $euiAnimSlightResistance 1 normal forwards growExpandedRow;
+  animation: $wuiAnimSpeedNormal $wuiAnimSlightResistance 1 normal forwards growExpandedRow;
 }
 
 @keyframes growExpandedRow {
@@ -235,13 +235,13 @@
   }
 }
 
-.euiTableRow-isClickable {
+.wuiTableRow-isClickable {
   &:hover {
-    background-color: $euiTableHoverClickableColor;
+    background-color: $wuiTableHoverClickableColor;
     cursor: pointer;
   }
 
   &:focus {
-    background-color: $euiTableFocusClickableColor;
+    background-color: $wuiTableFocusClickableColor;
   }
 }

@@ -12,12 +12,12 @@
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiText,
-  EuiCopy,
+  WuiFlexGrid,
+  WuiFlexItem,
+  WuiIcon,
+  WuiPanel,
+  WuiText,
+  WuiCopy,
 } from '../../../../src/components';
 
 const iconTypes = [
@@ -52,23 +52,23 @@ const iconTypes = [
 ];
 
 export default () => (
-  <EuiFlexGrid columns={4}>
+  <WuiFlexGrid columns={4}>
     {iconTypes.map(iconType => (
-      <EuiFlexItem
+      <WuiFlexItem
         className="guideDemo__icon"
         key={iconType}
         style={{ width: '200px' }}>
-        <EuiCopy textToCopy={iconType} afterMessage={`${iconType} copied`}>
+        <WuiCopy textToCopy={iconType} afterMessage={`${iconType} copied`}>
           {copy => (
-            <EuiPanel onClick={copy} className="eui-textCenter">
-              <EuiIcon type={iconType} />
-              <EuiText size="s">
+            <WuiPanel onClick={copy} className="wui-textCenter">
+              <WuiIcon type={iconType} />
+              <WuiText size="s">
                 <p>{iconType}</p>
-              </EuiText>
-            </EuiPanel>
+              </WuiText>
+            </WuiPanel>
           )}
-        </EuiCopy>
-      </EuiFlexItem>
+        </WuiCopy>
+      </WuiFlexItem>
     ))}
-  </EuiFlexGrid>
+  </WuiFlexGrid>
 );

@@ -12,14 +12,14 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiPanel,
-  EuiText,
-  EuiToken,
-  EuiSpacer,
-  EuiCopy,
-  EuiCode,
+  WuiFlexGrid,
+  WuiFlexItem,
+  WuiPanel,
+  WuiText,
+  WuiToken,
+  WuiSpacer,
+  WuiCopy,
+  WuiCode,
 } from '../../../../src/components';
 
 const tokens = [
@@ -77,120 +77,120 @@ const tokens = [
 
 export default () => (
   <Fragment>
-    <EuiFlexGrid columns={4}>
+    <WuiFlexGrid columns={4}>
       {tokens.map(token => (
-        <EuiFlexItem
+        <WuiFlexItem
           className="guideDemo__icon"
           key={token}
           style={{ width: '200px' }}>
-          <EuiCopy textToCopy={token} afterMessage={`${token} copied`}>
+          <WuiCopy textToCopy={token} afterMessage={`${token} copied`}>
             {copy => (
-              <EuiPanel className="eui-textCenter" onClick={copy}>
+              <WuiPanel className="wui-textCenter" onClick={copy}>
                 <div
                   style={{
                     display: 'flex',
                     justifyContent: 'center',
                     marginBottom: '8px',
                   }}>
-                  <EuiToken iconType={token} />
+                  <WuiToken iconType={token} />
                 </div>
-                <EuiText size="s">
+                <WuiText size="s">
                   <p>{token}</p>
-                </EuiText>
-              </EuiPanel>
+                </WuiText>
+              </WuiPanel>
             )}
-          </EuiCopy>
-        </EuiFlexItem>
+          </WuiCopy>
+        </WuiFlexItem>
       ))}
-    </EuiFlexGrid>
+    </WuiFlexGrid>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiText size="s">
+    <WuiText size="s">
       <h3>Custom tokens</h3>
       <p>
-        By default, an <EuiCode>iconType</EuiCode> with the token prefix (i.e.
+        By default, an <WuiCode>iconType</WuiCode> with the token prefix (i.e.
         those listed above) will have predefined styles. However, any valid{' '}
-        <EuiCode>iconType</EuiCode> can be passed and, in either case, the{' '}
-        <EuiCode>shape</EuiCode>, <EuiCode>size</EuiCode>,{' '}
-        <EuiCode>color</EuiCode>, and <EuiCode>fill</EuiCode> can be customized.
+        <WuiCode>iconType</WuiCode> can be passed and, in either case, the{' '}
+        <WuiCode>shape</WuiCode>, <WuiCode>size</WuiCode>,{' '}
+        <WuiCode>color</WuiCode>, and <WuiCode>fill</WuiCode> can be customized.
       </p>
-    </EuiText>
+    </WuiText>
 
-    <EuiSpacer />
+    <WuiSpacer />
 
-    <EuiFlexGrid columns={4}>
-      <EuiFlexItem className="guideDemo__icon">
-        <EuiPanel>
+    <WuiFlexGrid columns={4}>
+      <WuiFlexItem className="guideDemo__icon">
+        <WuiPanel>
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
               marginBottom: '8px',
             }}>
-            <EuiToken iconType="tokenStruct" size="xs" color="gray" />
+            <WuiToken iconType="tokenStruct" size="xs" color="gray" />
           </div>
-          <EuiText size="s">
+          <WuiText size="s">
             <p>An xs, gray tokenStruct</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon">
-        <EuiPanel>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon">
+        <WuiPanel>
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
               marginBottom: '8px',
             }}>
-            <EuiToken iconType="tokenStruct" fill="none" />
+            <WuiToken iconType="tokenStruct" fill="none" />
           </div>
-          <EuiText size="s">
+          <WuiText size="s">
             <p>A none fill tokenStruct</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon">
-        <EuiPanel>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon">
+        <WuiPanel>
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
               marginBottom: '8px',
             }}>
-            <EuiToken
+            <WuiToken
               iconType="tokenStruct"
               size="m"
               shape="circle"
               color="#FF0000"
             />
           </div>
-          <EuiText size="s">
+          <WuiText size="s">
             <p>A size m, circle, #FF0000 tokenStruct</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-      <EuiFlexItem className="guideDemo__icon">
-        <EuiPanel>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+      <WuiFlexItem className="guideDemo__icon">
+        <WuiPanel>
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
               marginBottom: '8px',
             }}>
-            <EuiToken
+            <WuiToken
               iconType="faceNeutral"
               size="l"
-              color="euiColorVis7"
+              color="wuiColorVis7"
               shape="rectangle"
               fill="dark"
             />
           </div>
-          <EuiText size="s">
+          <WuiText size="s">
             <p>A completely custom token</p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+          </WuiText>
+        </WuiPanel>
+      </WuiFlexItem>
+    </WuiFlexGrid>
   </Fragment>
 );

@@ -4,14 +4,14 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiBeacon, EuiText } from '../../../../src/components';
+import { WuiBeacon, WuiText } from '../../../../src/components';
 
 import { beaconConfig } from './playground';
 
 import Beacon from './beacon';
 const beaconSource = require('!!raw-loader!./beacon');
 const beaconHtml = renderToHtml(Beacon);
-const beaconSnippet = '<EuiBeacon />';
+const beaconSnippet = '<WuiBeacon />';
 
 export const BeaconExample = {
   title: 'Beacon',
@@ -28,14 +28,14 @@ export const BeaconExample = {
         },
       ],
       text: (
-        <EuiText>
+        <WuiText>
           <p>
-            Use the <strong>EuiBeacon</strong> component to draw visual
+            Use the <strong>WuiBeacon</strong> component to draw visual
             attention to a specific location or element.
           </p>
-        </EuiText>
+        </WuiText>
       ),
-      props: { EuiBeacon },
+      props: { WuiBeacon },
       snippet: beaconSnippet,
       demo: <Beacon />,
     },

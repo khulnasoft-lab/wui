@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,21 +33,21 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 
-import { EuiSuperDatePicker } from './super_date_picker';
+import { WuiSuperDatePicker } from './super_date_picker';
 
 const noop = () => {};
 
-describe('EuiSuperDatePicker', () => {
+describe('WuiSuperDatePicker', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiSuperDatePicker onTimeChange={noop} />);
+    const component = shallow(<WuiSuperDatePicker onTimeChange={noop} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('refresh is disabled by default', () => {
     // By default we expect `asyncInterval` to be not set.
-    const componentPaused = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker onTimeChange={noop} />
+    const componentPaused = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker onTimeChange={noop} />
     );
     const instancePaused = componentPaused.instance();
     expect(instancePaused.asyncInterval).toBe(undefined);
@@ -45,8 +58,8 @@ describe('EuiSuperDatePicker', () => {
     // If refresh is enabled via `isPaused/onRefresh` we expect
     // `asyncInterval` to be present and `asyncInterval.isStopped` to be `false`.
     const onRefresh = jest.fn();
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -77,8 +90,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -104,8 +117,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<WuiSuperDatePicker>(
+      <WuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiText,
+  WuiSpacer,
+  WuiCodeBlock,
+  WuiText,
   prettyDuration,
 } from '../../../../src/components';
 
@@ -57,19 +57,19 @@ export default function prettyDurationExample() {
     <Fragment>
       {examples.map(({ start, end, quickRanges, dateFormat }, idx) => (
         <div key={idx}>
-          <EuiCodeBlock paddingSize="s" isCopyable language="js">
+          <WuiCodeBlock paddingSize="s" isCopyable language="js">
             prettyDuration(&apos;{start}&apos;, &apos;{end}&apos;,{' '}
             {JSON.stringify(quickRanges)}, &apos;
             {dateFormat}&apos;)
-          </EuiCodeBlock>
+          </WuiCodeBlock>
 
-          <EuiSpacer size="s" />
+          <WuiSpacer size="s" />
 
-          <EuiText>
+          <WuiText>
             <p>{prettyDuration(start, end, quickRanges, dateFormat)}</p>
-          </EuiText>
+          </WuiText>
 
-          <EuiSpacer size="xl" />
+          <WuiSpacer size="xl" />
         </div>
       ))}
     </Fragment>

@@ -1,5 +1,5 @@
-.euiMarkdownEditorDropZone {
-  @include euiFormControlDefaultShadow;
+.wuiMarkdownEditorDropZone {
+  @include wuiFormControlDefaultShadow;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -25,36 +25,36 @@
   }
 
   &--isDragging {
-    .euiMarkdownEditorFooter,
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus,
-    .euiMarkdownEditor:focus-within .euiMarkdownEditorTextArea {
+    .wuiMarkdownEditorFooter,
+    .wuiMarkdownEditorTextArea,
+    .wuiMarkdownEditorTextArea:focus,
+    .wuiMarkdownEditor:focus-within .wuiMarkdownEditorTextArea {
       // sass-lint:disable-block no-important
-      background-color: transparentize($euiColorPrimary, .9) !important;
+      background-color: transparentize($wuiColorPrimary, .9) !important;
     }
 
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus {
+    .wuiMarkdownEditorTextArea,
+    .wuiMarkdownEditorTextArea:focus {
       // sass-lint:disable-block no-important
-      background-image: euiFormControlGradient($euiColorPrimary) !important;
+      background-image: wuiFormControlGradient($wuiColorPrimary) !important;
     }
   }
 
   &--isDraggingError {
-    .euiMarkdownEditorFooter,
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus,
-    .euiMarkdownEditor:focus-within .euiMarkdownEditorTextArea {
+    .wuiMarkdownEditorFooter,
+    .wuiMarkdownEditorTextArea,
+    .wuiMarkdownEditorTextArea:focus,
+    .wuiMarkdownEditor:focus-within .wuiMarkdownEditorTextArea {
       // sass-lint:disable-block no-important
-      background-color: transparentize($euiColorDanger, .9) !important;
+      background-color: transparentize($wuiColorDanger, .9) !important;
     }
   }
 
   &--hasError {
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus {
+    .wuiMarkdownEditorTextArea,
+    .wuiMarkdownEditorTextArea:focus {
       // sass-lint:disable-block no-important
-      background-image: euiFormControlGradient($euiColorDanger) !important;
+      background-image: wuiFormControlGradient($wuiColorDanger) !important;
     }
   }
 }

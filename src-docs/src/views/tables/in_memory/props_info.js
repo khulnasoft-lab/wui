@@ -2,11 +2,11 @@ import { omit } from '../../../../../src/services/objects';
 import { propsInfo as basicPropsInfo } from '../basic/props_info';
 import { propsInfo as searchBarPropsInfo } from '../../search_bar/props_info';
 
-const basicTableProps = omit(basicPropsInfo, ['EuiBasicTable', 'Pagination']);
-const searchBarProps = omit(searchBarPropsInfo, ['EuiSearchBar']);
+const basicTableProps = omit(basicPropsInfo, ['WuiBasicTable', 'Pagination']);
+const searchBarProps = omit(searchBarPropsInfo, ['WuiSearchBar']);
 
 export const propsInfo = {
-  EuiBasicTableContainer: {
+  WuiBasicTableContainer: {
     __docgenInfo: {
       props: {
         items: {
@@ -33,7 +33,7 @@ export const propsInfo = {
           required: false,
           type: { name: 'boolean' },
         },
-        columns: basicPropsInfo.EuiBasicTable.__docgenInfo.props.columns,
+        columns: basicPropsInfo.WuiBasicTable.__docgenInfo.props.columns,
         pagination: {
           description:
             'Enables/disables pagination. Can be an object that configures pagination when enabled',
@@ -57,7 +57,7 @@ export const propsInfo = {
           required: false,
           type: { name: 'boolean | #Search' },
         },
-        selection: basicPropsInfo.EuiBasicTable.__docgenInfo.props.selection,
+        selection: basicPropsInfo.WuiBasicTable.__docgenInfo.props.selection,
         onTableChange: {
           description: `Callback for when table pagination or sorting is changed. This is meant to
           be informational only, and not used to set any state as the in-memory table already
@@ -71,7 +71,7 @@ export const propsInfo = {
 
   Pagination: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         initialPageIndex: {
           description: 'Configures the default page to show',
@@ -107,7 +107,7 @@ export const propsInfo = {
 
   Search: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _wuiObjectType: 'type',
       props: {
         defaultQuery: {
           description: 'Sets the default query of the search bar',

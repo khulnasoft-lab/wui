@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,25 +35,25 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
 
-import { EuiIcon } from '../icon';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiResizeObserver } from '../observer/resize_observer';
-import { EuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
+import { WuiLoadingSpinner } from '../loading';
+import { WuiResizeObserver } from '../observer/resize_observer';
+import { WuiI18n } from '../i18n';
 import { htmlIdGenerator } from '../../services';
 
 const paddingSizeToClassNameMap = {
   none: '',
-  xs: 'euiAccordion__padding--xs',
-  s: 'euiAccordion__padding--s',
-  m: 'euiAccordion__padding--m',
-  l: 'euiAccordion__padding--l',
-  xl: 'euiAccordion__padding--xl',
+  xs: 'wuiAccordion__padding--xs',
+  s: 'wuiAccordion__padding--s',
+  m: 'wuiAccordion__padding--m',
+  l: 'wuiAccordion__padding--l',
+  xl: 'wuiAccordion__padding--xl',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
-export type EuiAccordionSize = keyof typeof paddingSizeToClassNameMap;
+export type WuiAccordionSize = keyof typeof paddingSizeToClassNameMap;
 
-export type EuiAccordionProps = CommonProps &
+export type WuiAccordionProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'id'> & {
     id: string;
     /**
@@ -70,7 +83,7 @@ export type EuiAccordionProps = CommonProps &
     /**
      * The padding around the exposed accordion content.
      */
-    paddingSize?: EuiAccordionSize;
+    paddingSize?: WuiAccordionSize;
     /**
      * Placement of the arrow indicator, or 'none' to hide it.
      */
@@ -89,8 +102,8 @@ export type EuiAccordionProps = CommonProps &
     isLoadingMessage?: boolean | ReactNode;
   };
 
-export class EuiAccordion extends Component<
-  EuiAccordionProps,
+export class WuiAccordion extends Component<
+  WuiAccordionProps,
   { isOpen: boolean }
 > {
   static defaultProps = {
@@ -173,9 +186,9 @@ export class EuiAccordion extends Component<
     const isOpen = forceState ? forceState === 'open' : this.state.isOpen;
 
     const classes = classNames(
-      'euiAccordion',
+      'wuiAccordion',
       {
-        'euiAccordion-isOpen': isOpen,
+        'wuiAccordion-isOpen': isOpen,
       },
       className
     );
@@ -185,28 +198,28 @@ export class EuiAccordion extends Component<
       : undefined;
 
     const childrenClasses = classNames(paddingClass, {
-      'euiAccordion__children-isLoading': isLoading,
+      'wuiAccordion__children-isLoading': isLoading,
     });
 
     const buttonClasses = classNames(
-      'euiAccordion__button',
+      'wuiAccordion__button',
       {
-        euiAccordion__buttonReverse: !extraAction && arrowDisplay === 'right',
+        wuiAccordion__buttonReverse: !extraAction && arrowDisplay === 'right',
       },
       buttonClassName
     );
 
-    const iconClasses = classNames('euiAccordion__icon', {
-      'euiAccordion__icon-isOpen': isOpen,
+    const iconClasses = classNames('wuiAccordion__icon', {
+      'wuiAccordion__icon-isOpen': isOpen,
     });
 
-    const iconWrapperClasses = classNames('euiAccordion__iconWrapper', {
-      euiAccordion__iconButton: extraAction && arrowDisplay === 'right',
+    const iconWrapperClasses = classNames('wuiAccordion__iconWrapper', {
+      wuiAccordion__iconButton: extraAction && arrowDisplay === 'right',
     });
 
     let baseIcon;
     if (arrowDisplay !== 'none') {
-      baseIcon = <EuiIcon className={iconClasses} type="arrowRight" size="m" />;
+      baseIcon = <WuiIcon className={iconClasses} type="arrowRight" size="m" />;
     }
 
     let icon;
@@ -232,12 +245,12 @@ export class EuiAccordion extends Component<
 
     if (extraAction && !isLoading) {
       optionalAction = (
-        <div className="euiAccordion__optionalAction">{extraAction}</div>
+        <div className="wuiAccordion__optionalAction">{extraAction}</div>
       );
     } else if (isLoading) {
       optionalAction = (
-        <div className="euiAccordion__optionalAction">
-          <EuiLoadingSpinner />
+        <div className="wuiAccordion__optionalAction">
+          <WuiLoadingSpinner />
         </div>
       );
     }
@@ -246,12 +259,12 @@ export class EuiAccordion extends Component<
     if (isLoading && isLoadingMessage) {
       childrenContent = (
         <>
-          <EuiLoadingSpinner className="euiAccordion__spinner" />
+          <WuiLoadingSpinner className="wuiAccordion__spinner" />
           <span>
             {isLoadingMessage && isLoadingMessage !== true ? (
               isLoadingMessage
             ) : (
-              <EuiI18n token="euiAccordion.isLoading" default="Loading" />
+              <WuiI18n token="wuiAccordion.isLoading" default="Loading" />
             )}
           </span>
         </>
@@ -262,7 +275,7 @@ export class EuiAccordion extends Component<
 
     return (
       <div className={classes} {...rest}>
-        <div className="euiAccordion__triggerWrapper">
+        <div className="wuiAccordion__triggerWrapper">
           <button
             id={buttonId}
             aria-controls={id}
@@ -273,7 +286,7 @@ export class EuiAccordion extends Component<
             {icon}
             <span
               className={classNames(
-                'euiIEFlexWrapFix',
+                'wuiIEFlexWrapFix',
                 buttonContentClassName
               )}>
               {buttonContent}
@@ -284,12 +297,12 @@ export class EuiAccordion extends Component<
         </div>
 
         <div
-          className="euiAccordion__childWrapper"
+          className="wuiAccordion__childWrapper"
           ref={node => {
             this.childWrapper = node;
           }}
           id={id}>
-          <EuiResizeObserver onResize={this.setChildContentHeight}>
+          <WuiResizeObserver onResize={this.setChildContentHeight}>
             {resizeRef => (
               <div
                 ref={ref => {
@@ -299,7 +312,7 @@ export class EuiAccordion extends Component<
                 <div className={childrenClasses}>{childrenContent}</div>
               </div>
             )}
-          </EuiResizeObserver>
+          </WuiResizeObserver>
         </div>
       </div>
     );

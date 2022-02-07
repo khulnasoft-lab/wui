@@ -6,12 +6,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiFormRow,
-  EuiToolTip,
-  EuiCallOut,
-  EuiText,
-  EuiSpacer,
+  WuiCode,
+  WuiFormRow,
+  WuiToolTip,
+  WuiCallOut,
+  WuiText,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import FormCompressed from './form_compressed';
@@ -34,7 +34,7 @@ export const FormCompressedExample = {
   title: 'Compressed forms',
   intro: (
     <Fragment>
-      <EuiText>
+      <WuiText>
         <p>
           Also known as <strong>Editor-Style Controls</strong>, compressed forms
           and controls were specifically created for use when space is at a
@@ -43,13 +43,13 @@ export const FormCompressedExample = {
           where form controls are being used to create or edit content on the
           page.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCallOut
+      </WuiText>
+      <WuiSpacer />
+      <WuiCallOut
         color="danger"
         title="Do not use compressed and non-compressed form controls in the same form."
       />
-      <EuiSpacer />
+      <WuiSpacer />
     </Fragment>
   ),
   sections: [
@@ -67,22 +67,22 @@ export const FormCompressedExample = {
       text: (
         <p>
           To use compressed forms, pass{' '}
-          <EuiCode language="js">display=&quot;rowCompressed&quot;</EuiCode> to
-          the EuiFormRows and <EuiCode language="js">compressed=true</EuiCode>{' '}
+          <WuiCode language="js">display=&quot;rowCompressed&quot;</WuiCode> to
+          the WuiFormRows and <WuiCode language="js">compressed=true</WuiCode>{' '}
           to the form controls themselves.
         </p>
       ),
       props: {
-        EuiFormRow,
+        WuiFormRow,
       },
       demo: <FormCompressed />,
       snippet: [
-        `<EuiFormRow
+        `<WuiFormRow
   label="Text field"
   display="rowCompressed"
 >
-  <EuiFieldText compressed />
-</EuiFormRow>`,
+  <WuiFieldText compressed />
+</WuiFormRow>`,
       ],
     },
     {
@@ -102,35 +102,35 @@ export const FormCompressedExample = {
           <p>
             Editor-style controls can be displayed in a two column layout for
             even better use of limited space, just pass{' '}
-            <EuiCode language="js">
+            <WuiCode language="js">
               display=&quot;columnCompressed&quot;
-            </EuiCode>{' '}
+            </WuiCode>{' '}
             to align the labels and inputs side by side.
           </p>
           <p>
-            <strong>EuiSwitches</strong> are a special case in which so you must
-            pass <EuiCode language="js">{'"columnCompressedSwitch"'}</EuiCode>{' '}
-            to the EuiFormRow as the display property.
+            <strong>WuiSwitches</strong> are a special case in which so you must
+            pass <WuiCode language="js">{'"columnCompressedSwitch"'}</WuiCode>{' '}
+            to the WuiFormRow as the display property.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormRow,
+        WuiFormRow,
       },
       demo: <FormHorizontal />,
       snippet: [
-        `<EuiFormRow
+        `<WuiFormRow
   label="Text field"
   display="columnCompressed"
 >
-  <EuiFieldText compressed />
-</EuiFormRow>`,
-        `<EuiFormRow
+  <WuiFieldText compressed />
+</WuiFormRow>`,
+        `<WuiFormRow
   label="Switch"
   display="columnCompressedSwitch"
 >
-  <EuiSwitch compressed />
-</EuiFormRow>`,
+  <WuiSwitch compressed />
+</WuiFormRow>`,
       ],
     },
     {
@@ -150,39 +150,39 @@ export const FormCompressedExample = {
           <p>
             When using compressed, horizontal form styles, it is best not to
             overload the UI with expansive help text. If it&apos;s short and
-            part of the validation, use <EuiCode>helpText</EuiCode>. However, if
+            part of the validation, use <WuiCode>helpText</WuiCode>. However, if
             it&apos;s an explanation of the control, consider wraping the label
             with an{' '}
             <Link to="/display/tooltip">
-              <strong>EuiToolTip</strong>
+              <strong>WuiToolTip</strong>
             </Link>{' '}
-            and appending the <EuiCode>questionInCircle</EuiCode> icon to it.
+            and appending the <WuiCode>questionInCircle</WuiCode> icon to it.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormRow,
-        EuiToolTip,
+        WuiFormRow,
+        WuiToolTip,
       },
       demo: <FormHelp />,
       snippet: [
-        `<EuiFormRow
+        `<WuiFormRow
   display="columnCompressed"
   label=""
   helpText="">
-  <EuiFieldText compressed />
-</EuiFormRow>`,
-        `<EuiFormRow
+  <WuiFieldText compressed />
+</WuiFormRow>`,
+        `<WuiFormRow
   display="columnCompressed"
   label={
-    <EuiToolTip content="">
+    <WuiToolTip content="">
       <span>
-        Label <EuiIcon type="questionInCircle" color="subdued" />
+        Label <WuiIcon type="questionInCircle" color="subdued" />
       </span>
-    </EuiToolTip>
+    </WuiToolTip>
   }>
-  <EuiFieldText compressed />
-</EuiFormRow>`,
+  <WuiFieldText compressed />
+</WuiFormRow>`,
       ],
     },
     {
@@ -203,15 +203,15 @@ export const FormCompressedExample = {
             This is an example of how to combine compressed form controls with
             from rows, labels, prepend and appends in a column layout.
           </p>
-          <EuiCallOut
+          <WuiCallOut
             color="warning"
             iconType="accessibility"
             title={
               <span>
                 Pay close attention to the patterns of using{' '}
-                <EuiCode>htmlFor</EuiCode> and <EuiCode>aria-label</EuiCode>.
+                <WuiCode>htmlFor</WuiCode> and <WuiCode>aria-label</WuiCode>.
                 For best results, each form control that is not wrapped in an
-                EuiFormRow should be supplied an <EuiCode>id</EuiCode>.
+                WuiFormRow should be supplied an <WuiCode>id</WuiCode>.
               </span>
             }
           />

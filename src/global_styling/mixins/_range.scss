@@ -1,28 +1,28 @@
 // Prefixes are unique in this file
 // sass-lint:disable no-vendor-prefixes
 
-@mixin euiRangeTrackSize {
-  height: $euiRangeTrackHeight;
-  transition: all $euiAnimSpeedNormal ease-in;
-  width: $euiRangeTrackWidth;
+@mixin wuiRangeTrackSize {
+  height: $wuiRangeTrackHeight;
+  transition: all $wuiAnimSpeedNormal ease-in;
+  width: $wuiRangeTrackWidth;
 }
 
-@mixin euiRangeTrackPerBrowser {
+@mixin wuiRangeTrackPerBrowser {
   &::-webkit-slider-runnable-track { @content; }
   &::-moz-range-track { @content; }
   &::-ms-fill-lower { @content; }
   &::-ms-fill-upper { @content; }
 }
 
-@mixin euiRangeThumbStyle {
+@mixin wuiRangeThumbStyle {
   cursor: pointer;
-  border-color: $euiRangeThumbBorderColor;
+  border-color: $wuiRangeThumbBorderColor;
   padding: 0;
-  height: $euiRangeThumbHeight;
-  width: $euiRangeThumbWidth;
+  height: $wuiRangeThumbHeight;
+  width: $wuiRangeThumbWidth;
 }
 
-@mixin euiRangeThumbPerBrowser {
+@mixin wuiRangeThumbPerBrowser {
   &::-webkit-slider-thumb { @content; }
   &::-moz-range-thumb { @content; }
   &::-ms-thumb { @content; }

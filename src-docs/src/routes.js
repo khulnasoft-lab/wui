@@ -2,7 +2,7 @@ import React, { createElement, Fragment } from 'react';
 
 import { GuidePage, GuideSection } from './components';
 
-import { EuiErrorBoundary } from '../../src/components';
+import { WuiErrorBoundary } from '../../src/components';
 
 import { playgroundCreator } from './services/playground';
 
@@ -216,17 +216,17 @@ import { I18nTokens } from './views/package/i18n_tokens';
 
 import { SuperSelectExample } from './views/super_select/super_select_example';
 
-/** Elastic Charts */
+/** Wazuh Charts */
 
-import { ElasticChartsThemingExample } from './views/elastic_charts/theming_example';
+import { WazuhChartsThemingExample } from './views/wazuh_charts/theming_example';
 
-import { ElasticChartsTimeExample } from './views/elastic_charts/time_example';
+import { WazuhChartsTimeExample } from './views/wazuh_charts/time_example';
 
-import { ElasticChartsCategoryExample } from './views/elastic_charts/category_example';
+import { WazuhChartsCategoryExample } from './views/wazuh_charts/category_example';
 
-import { ElasticChartsSparklinesExample } from './views/elastic_charts/sparklines_example';
+import { WazuhChartsSparklinesExample } from './views/wazuh_charts/sparklines_example';
 
-import { ElasticChartsPieExample } from './views/elastic_charts/pie_example';
+import { WazuhChartsPieExample } from './views/wazuh_charts/pie_example';
 /**
  * Lowercases input and replaces spaces with hyphens:
  * e.g. 'GridView Example' -> 'gridview-example'
@@ -287,7 +287,7 @@ const createExample = (example, customTitle) => {
   }
 
   const component = () => (
-    <EuiErrorBoundary>
+    <WuiErrorBoundary>
       <GuidePage
         title={title}
         intro={intro}
@@ -296,7 +296,7 @@ const createExample = (example, customTitle) => {
         guidelines={guidelines}>
         {renderedSections}
       </GuidePage>
-    </EuiErrorBoundary>
+    </WuiErrorBoundary>
   );
 
   return {
@@ -435,13 +435,13 @@ const navigation = [
     ].map(example => createExample(example)),
   },
   {
-    name: 'Elastic Charts',
+    name: 'Wazuh Charts',
     items: [
-      ElasticChartsThemingExample,
-      ElasticChartsSparklinesExample,
-      ElasticChartsTimeExample,
-      ElasticChartsCategoryExample,
-      ElasticChartsPieExample,
+      WazuhChartsThemingExample,
+      WazuhChartsSparklinesExample,
+      WazuhChartsTimeExample,
+      WazuhChartsCategoryExample,
+      WazuhChartsPieExample,
     ].map(example => createExample(example)),
   },
   {

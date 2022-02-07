@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +34,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTourStepIndicator } from './tour_step_indicator';
+import { WuiTourStepIndicator } from './tour_step_indicator';
 
-describe('EuiTourStepIndicator', () => {
+describe('WuiTourStepIndicator', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="active" {...requiredProps} />
+      <WuiTourStepIndicator number={1} status="active" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,7 +47,7 @@ describe('EuiTourStepIndicator', () => {
 
   test('can be complete', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="complete" {...requiredProps} />
+      <WuiTourStepIndicator number={1} status="complete" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +55,7 @@ describe('EuiTourStepIndicator', () => {
 
   test('can be incomplete', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="incomplete" {...requiredProps} />
+      <WuiTourStepIndicator number={1} status="incomplete" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

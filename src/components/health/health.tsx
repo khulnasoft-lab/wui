@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +34,11 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-import { EuiIcon, IconColor } from '../icon';
+import { WuiIcon, IconColor } from '../icon';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { WuiFlexGroup, WuiFlexItem } from '../flex';
 
-type EuiHealthProps = CommonProps &
+type WuiHealthProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     /**
      * Sets the color of the dot icon.
@@ -35,22 +48,22 @@ type EuiHealthProps = CommonProps &
     color?: IconColor;
   };
 
-export const EuiHealth: FunctionComponent<EuiHealthProps> = ({
+export const WuiHealth: FunctionComponent<WuiHealthProps> = ({
   children,
   className,
   color,
   ...rest
 }) => {
-  const classes = classNames('euiHealth', className);
+  const classes = classNames('wuiHealth', className);
 
   return (
     <div className={classes} {...rest}>
-      <EuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
-        <EuiFlexItem grow={false}>
-          <EuiIcon type="dot" color={color} />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>{children}</EuiFlexItem>
-      </EuiFlexGroup>
+      <WuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
+        <WuiFlexItem grow={false}>
+          <WuiIcon type="dot" color={color} />
+        </WuiFlexItem>
+        <WuiFlexItem grow={false}>{children}</WuiFlexItem>
+      </WuiFlexGroup>
     </div>
   );
 };

@@ -5,10 +5,10 @@ import { GuidePageChrome, ThemeContext } from '../components';
 import { registerRouter, translateUsingPseudoLocale } from '../services';
 
 import {
-  EuiErrorBoundary,
-  EuiPage,
-  EuiPageBody,
-  EuiContext,
+  WuiErrorBoundary,
+  WuiPage,
+  WuiPageBody,
+  WuiContext,
 } from '../../../src/components';
 
 import { keys } from '../../../src/services';
@@ -29,7 +29,7 @@ export class AppView extends Component {
   }
 
   componentDidMount() {
-    document.title = `Elastic UI Framework - ${this.props.currentRoute.name}`;
+    document.title = `Wazuh UI Framework - ${this.props.currentRoute.name}`;
     document.addEventListener('keydown', this.onKeydown);
   }
 
@@ -52,18 +52,18 @@ export class AppView extends Component {
     };
 
     return (
-      <EuiPage restrictWidth={1240} className="guidePage">
-        <EuiPageBody>
-          <EuiErrorBoundary>
+      <WuiPage restrictWidth={1240} className="guidePage">
+        <WuiPageBody>
+          <WuiErrorBoundary>
             <GuidePageChrome
               currentRoute={currentRoute}
               onToggleLocale={toggleLocale}
               selectedLocale={locale}
               navigation={navigation}
             />
-          </EuiErrorBoundary>
+          </WuiErrorBoundary>
           <div className="guidePageContent">
-            <EuiContext i18n={i18n}>
+            <WuiContext i18n={i18n}>
               <ThemeContext.Consumer>
                 {context => {
                   return React.cloneElement(children, {
@@ -72,10 +72,10 @@ export class AppView extends Component {
                   });
                 }}
               </ThemeContext.Consumer>
-            </EuiContext>
+            </WuiContext>
           </div>
-        </EuiPageBody>
-      </EuiPage>
+        </WuiPageBody>
+      </WuiPage>
     );
   }
 

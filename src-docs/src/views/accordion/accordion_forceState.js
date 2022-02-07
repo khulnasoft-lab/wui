@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiText,
-  EuiButtonGroup,
-  EuiSpacer,
+  WuiAccordion,
+  WuiText,
+  WuiButtonGroup,
+  WuiSpacer,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -37,25 +37,25 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonGroup
+      <WuiButtonGroup
         legend="This is a basic group"
         options={toggleButtons}
         idSelected={toggleIdSelected}
         onChange={onChange}
       />
-      <EuiSpacer />
-      <EuiAccordion
+      <WuiSpacer />
+      <WuiAccordion
         id="accordion--forceState"
         forceState={trigger}
         onToggle={onToggle}
         buttonContent="I am controlled via prop">
-        <EuiText>
+        <WuiText>
           <p>
-            Any content inside of <strong>EuiAccordion</strong> will appear
+            Any content inside of <strong>WuiAccordion</strong> will appear
             here.
           </p>
-        </EuiText>
-      </EuiAccordion>
+        </WuiText>
+      </WuiAccordion>
     </div>
   );
 };

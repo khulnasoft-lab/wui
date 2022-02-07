@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +31,7 @@
  */
 
 import React, { Component } from 'react';
-import { EuiFieldSearch, EuiFieldSearchProps } from '../form';
+import { WuiFieldSearch, WuiFieldSearchProps } from '../form';
 
 export interface SchemaType {
   strict?: boolean;
@@ -26,15 +39,15 @@ export interface SchemaType {
   flags?: string[];
 }
 
-export interface EuiSearchBoxProps extends EuiFieldSearchProps {
+export interface WuiSearchBoxProps extends WuiFieldSearchProps {
   query: string;
-  // This is optional in EuiFieldSearchProps
+  // This is optional in WuiFieldSearchProps
   onSearch: (queryText: string) => void;
 }
 
-type DefaultProps = Pick<EuiSearchBoxProps, 'placeholder' | 'incremental'>;
+type DefaultProps = Pick<WuiSearchBoxProps, 'placeholder' | 'incremental'>;
 
-export class EuiSearchBox extends Component<EuiSearchBoxProps> {
+export class WuiSearchBox extends Component<WuiSearchBoxProps> {
   static defaultProps: DefaultProps = {
     placeholder: 'Search...',
     incremental: false,
@@ -42,7 +55,7 @@ export class EuiSearchBox extends Component<EuiSearchBoxProps> {
 
   private inputElement: HTMLInputElement | null = null;
 
-  componentDidUpdate(oldProps: EuiSearchBoxProps) {
+  componentDidUpdate(oldProps: WuiSearchBoxProps) {
     if (oldProps.query !== this.props.query && this.inputElement != null) {
       this.inputElement.value = this.props.query;
       this.inputElement.dispatchEvent(new Event('change'));
@@ -62,7 +75,7 @@ export class EuiSearchBox extends Component<EuiSearchBoxProps> {
     }
 
     return (
-      <EuiFieldSearch
+      <WuiFieldSearch
         inputRef={input => (this.inputElement = input)}
         fullWidth
         defaultValue={query}

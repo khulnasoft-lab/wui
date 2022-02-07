@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSideNavItem href is rendered 1`] = `
+exports[`WuiSideNavItem href is rendered 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <a
-    class="euiSideNavItemButton euiSideNavItemButton--isClickable"
+    class="wuiSideNavItemButton wuiSideNavItemButton--isClickable"
     href="#"
     rel="noreferrer"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button />
       </span>
@@ -22,20 +22,20 @@ exports[`EuiSideNavItem href is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSideNavItem href is rendered with rel 1`] = `
+exports[`WuiSideNavItem href is rendered with rel 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <a
-    class="euiSideNavItemButton euiSideNavItemButton--isClickable"
+    class="wuiSideNavItemButton wuiSideNavItemButton--isClickable"
     href="#"
     rel="noopener noreferrer"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button />
       </span>
@@ -44,18 +44,18 @@ exports[`EuiSideNavItem href is rendered with rel 1`] = `
 </div>
 `;
 
-exports[`EuiSideNavItem is rendered 1`] = `
+exports[`WuiSideNavItem is rendered 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <div
-    class="euiSideNavItemButton"
+    class="wuiSideNavItemButton"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button
           aria-label="aria-label"
@@ -68,18 +68,18 @@ exports[`EuiSideNavItem is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSideNavItem isSelected defaults to false 1`] = `
+exports[`WuiSideNavItem isSelected defaults to false 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <div
-    class="euiSideNavItemButton"
+    class="wuiSideNavItemButton"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button />
       </span>
@@ -88,18 +88,18 @@ exports[`EuiSideNavItem isSelected defaults to false 1`] = `
 </div>
 `;
 
-exports[`EuiSideNavItem isSelected is rendered when specified as true 1`] = `
+exports[`WuiSideNavItem isSelected is rendered when specified as true 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <div
-    class="euiSideNavItemButton euiSideNavItemButton-isSelected"
+    class="wuiSideNavItemButton wuiSideNavItemButton-isSelected"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button />
       </span>
@@ -108,18 +108,18 @@ exports[`EuiSideNavItem isSelected is rendered when specified as true 1`] = `
 </div>
 `;
 
-exports[`EuiSideNavItem preserves child's classes 1`] = `
+exports[`WuiSideNavItem preserves child's classes 1`] = `
 <div
-  class="euiSideNavItem euiSideNavItem--root"
+  class="wuiSideNavItem wuiSideNavItem--root"
 >
   <div
-    class="euiSideNavItemButton"
+    class="wuiSideNavItemButton"
   >
     <span
-      class="euiSideNavItemButton__content"
+      class="wuiSideNavItemButton__content"
     >
       <span
-        class="euiSideNavItemButton__label"
+        class="wuiSideNavItemButton__label"
       >
         <button
           class="test"

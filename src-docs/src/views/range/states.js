@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiRange, EuiSpacer, EuiDualRange } from '../../../../src/components';
+import { WuiRange, WuiSpacer, WuiDualRange } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -32,7 +32,7 @@ export default () => {
   return (
     <Fragment>
       <DisplayToggles canAppend canPrepend canLoading={false}>
-        <EuiRange
+        <WuiRange
           id={htmlIdGenerator()()}
           value={value}
           onChange={onChange}
@@ -43,14 +43,14 @@ export default () => {
           showRange
           tickInterval={20}
           levels={levels}
-          aria-label="An example of EuiRange"
+          aria-label="An example of WuiRange"
         />
       </DisplayToggles>
 
-      <EuiSpacer size="xl" />
+      <WuiSpacer size="xl" />
 
       <DisplayToggles canLoading={false}>
-        <EuiDualRange
+        <WuiDualRange
           id={htmlIdGenerator()()}
           value={dualValue}
           onChange={onDualChange}
@@ -62,7 +62,7 @@ export default () => {
             { label: '100kb', value: 100 },
           ]}
           levels={levels}
-          aria-label="An example of EuiRange"
+          aria-label="An example of WuiRange"
         />
       </DisplayToggles>
     </Fragment>

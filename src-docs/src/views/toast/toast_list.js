@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiCode,
-  EuiGlobalToastList,
-  EuiLink,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButton,
+  WuiCode,
+  WuiGlobalToastList,
+  WuiLink,
+  WuiFlexGroup,
+  WuiFlexItem,
+  WuiButton,
 } from '../../../../src/components';
 
 let addToastHandler;
@@ -51,7 +51,7 @@ export default () => {
             </p>
             <p>
               And some other stuff on another line, just for kicks. And{' '}
-              <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+              <WuiLink href="#">here&rsquo;s a link</WuiLink>.
             </p>
           </Fragment>
         ),
@@ -70,7 +70,7 @@ export default () => {
             <p>This is a security measure.</p>
             <p>
               Please move your mouse to show that you&rsquo;re still using
-              Kibana.
+              Wazuh.
             </p>
           </Fragment>
         ),
@@ -88,7 +88,7 @@ export default () => {
         toastLifeTimeMs: 15000,
         text: (
           <p>
-            This toast overrides the default <EuiCode>toastLifeTimeMs</EuiCode>{' '}
+            This toast overrides the default <WuiCode>toastLifeTimeMs</WuiCode>{' '}
             value and will be around for 15 seconds.
           </p>
         ),
@@ -103,19 +103,19 @@ export default () => {
 
   return (
     <div style={{ maxWidth: 320 }}>
-      <EuiFlexGroup gutterSize="s">
-        <EuiFlexItem>
-          <EuiButton onClick={addToast}>
+      <WuiFlexGroup gutterSize="s">
+        <WuiFlexItem>
+          <WuiButton onClick={addToast}>
             Add toast to global toast list
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={removeAllToasts} color="danger">
+          </WuiButton>
+        </WuiFlexItem>
+        <WuiFlexItem>
+          <WuiButton onClick={removeAllToasts} color="danger">
             Remove all toasts
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiGlobalToastList
+          </WuiButton>
+        </WuiFlexItem>
+      </WuiFlexGroup>
+      <WuiGlobalToastList
         toasts={toasts}
         dismissToast={removeToast}
         toastLifeTimeMs={6000}

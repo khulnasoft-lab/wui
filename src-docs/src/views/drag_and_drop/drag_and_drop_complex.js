@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  EuiButtonIcon,
-  EuiPanel,
-  euiDragDropMove,
-  euiDragDropReorder,
+  WuiDragDropContext,
+  WuiDraggable,
+  WuiDroppable,
+  WuiButtonIcon,
+  WuiPanel,
+  wuiDragDropMove,
+  wuiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -37,7 +37,7 @@ export default () => {
   const onDragEnd = ({ source, destination }) => {
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = wuiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -47,7 +47,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropMove(
+        const result = wuiDragDropMove(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -60,8 +60,8 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiDroppable
+    <WuiDragDropContext onDragEnd={onDragEnd}>
+      <WuiDroppable
         droppableId="COMPLEX_DROPPABLE_PARENT"
         type="MACRO"
         direction="horizontal"
@@ -69,7 +69,7 @@ export default () => {
         spacing="l"
         style={{ display: 'flex' }}>
         {list.map((did, didx) => (
-          <EuiDraggable
+          <WuiDraggable
             key={did}
             index={didx}
             draggableId={`COMPLEX_DRAGGABLE_${did}`}
@@ -78,34 +78,34 @@ export default () => {
             disableInteractiveElementBlocking // Allows button to be drag handle
           >
             {provided => (
-              <EuiPanel paddingSize="s">
-                <EuiButtonIcon
+              <WuiPanel paddingSize="s">
+                <WuiButtonIcon
                   iconType="grab"
                   aria-label="Drag Handle"
                   {...provided.dragHandleProps}
                 />
-                <EuiDroppable
+                <WuiDroppable
                   droppableId={`COMPLEX_DROPPABLE_AREA_${did}`}
                   type="MICRO"
                   spacing="m"
                   style={{ flex: '1 0 50%' }}>
                   {lists[`COMPLEX_DROPPABLE_AREA_${did}`].map(
                     ({ content, id }, idx) => (
-                      <EuiDraggable
+                      <WuiDraggable
                         key={id}
                         index={idx}
                         draggableId={id}
                         spacing="m">
-                        <EuiPanel>{content}</EuiPanel>
-                      </EuiDraggable>
+                        <WuiPanel>{content}</WuiPanel>
+                      </WuiDraggable>
                     )
                   )}
-                </EuiDroppable>
-              </EuiPanel>
+                </WuiDroppable>
+              </WuiPanel>
             )}
-          </EuiDraggable>
+          </WuiDraggable>
         ))}
-      </EuiDroppable>
-    </EuiDragDropContext>
+      </WuiDroppable>
+    </WuiDragDropContext>
   );
 };

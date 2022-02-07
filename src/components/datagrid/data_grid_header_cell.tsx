@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,29 +41,29 @@ import React, {
 } from 'react';
 import { htmlIdGenerator } from '../../services/accessibility';
 import classnames from 'classnames';
-import { EuiDataGridHeaderRowPropsSpecificProps } from './data_grid_header_row';
+import { WuiDataGridHeaderRowPropsSpecificProps } from './data_grid_header_row';
 import { keys } from '../../services';
-import { EuiDataGridColumnResizer } from './data_grid_column_resizer';
-import { EuiPopover } from '../popover';
-import { EuiListGroup } from '../list_group';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { WuiDataGridColumnResizer } from './data_grid_column_resizer';
+import { WuiPopover } from '../popover';
+import { WuiListGroup } from '../list_group';
+import { WuiScreenReaderOnly } from '../accessibility';
 import tabbable from 'tabbable';
-import { EuiDataGridColumn } from './data_grid_types';
+import { WuiDataGridColumn } from './data_grid_types';
 import { getColumnActions } from './column_actions';
-import { useEuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
+import { useWuiI18n } from '../i18n';
+import { WuiIcon } from '../icon';
 
-export interface EuiDataGridHeaderCellProps
+export interface WuiDataGridHeaderCellProps
   extends Omit<
-    EuiDataGridHeaderRowPropsSpecificProps,
+    WuiDataGridHeaderRowPropsSpecificProps,
     'leadingControlColumns'
   > {
-  column: EuiDataGridColumn;
+  column: WuiDataGridColumn;
   index: number;
   className?: string;
 }
 
-export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps> = props => {
+export const WuiDataGridHeaderCell: FunctionComponent<WuiDataGridHeaderCellProps> = props => {
   const {
     column,
     index,
@@ -78,8 +91,8 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
 
   const screenReaderId = htmlIdGenerator()();
   let sortString;
-  const actionButtonAriaLabel = useEuiI18n(
-    'euiDataGridHeaderCell.headerActions',
+  const actionButtonAriaLabel = useWuiI18n(
+    'wuiDataGridHeaderCell.headerActions',
     'Header actions'
   );
 
@@ -108,9 +121,9 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
   const columnType = schema[id] ? schema[id].columnType : null;
 
   const classes = classnames(
-    'euiDataGridHeaderCell',
+    'wuiDataGridHeaderCell',
     {
-      [`euiDataGridHeaderCell--${columnType}`]: columnType,
+      [`wuiDataGridHeaderCell--${columnType}`]: columnType,
     },
     className
   );
@@ -124,7 +137,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
   const enableInteractives = useCallback(() => {
     if (headerRef.current) {
       const interactiveElements = headerRef.current.querySelectorAll(
-        '[data-euigrid-tab-managed]'
+        '[data-wuigrid-tab-managed]'
       );
       for (let i = 0; i < interactiveElements.length; i++) {
         interactiveElements[i].setAttribute('tabIndex', '0');
@@ -137,12 +150,12 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       const tababbles = tabbable(headerRef.current);
       if (tababbles.length > 1) {
         console.warn(
-          `EuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
+          `WuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
         );
       }
       for (let i = 0; i < tababbles.length; i++) {
         const element = tababbles[i];
-        element.setAttribute('data-euigrid-tab-managed', 'true');
+        element.setAttribute('data-wuigrid-tab-managed', 'true');
         element.setAttribute('tabIndex', '-1');
       }
     }
@@ -166,7 +179,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
     if (headerRef.current) {
       if (isFocused) {
         const interactives = headerRef.current.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-wuigrid-tab-managed]'
         );
         if (interactives.length === 1) {
           setIsCellEntered(true);
@@ -290,7 +303,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       data-test-subj={`dataGridHeaderCell-${id}`}
       style={width != null ? { width: `${width}px` } : {}}>
       {column.isResizable !== false && width != null ? (
-        <EuiDataGridColumnResizer
+        <WuiDataGridColumnResizer
           columnId={id}
           columnWidth={width}
           setColumnWidth={setColumnWidth}
@@ -298,23 +311,23 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       ) : null}
 
       {sorting && sorting.columns.length >= 2 && (
-        <EuiScreenReaderOnly>
+        <WuiScreenReaderOnly>
           <div id={screenReaderId}>{sortString}</div>
-        </EuiScreenReaderOnly>
+        </WuiScreenReaderOnly>
       )}
       {!showColumnActions ? (
-        <div className="euiDataGridHeaderCell__content">{display || id}</div>
+        <div className="wuiDataGridHeaderCell__content">{display || id}</div>
       ) : (
         <button
-          className="euiDataGridHeaderCell__button"
+          className="wuiDataGridHeaderCell__button"
           onClick={() => setIsPopoverOpen(true)}>
-          <div className="euiDataGridHeaderCell__content">{display || id}</div>
-          <EuiPopover
-            className="euiDataGridHeaderCell__popover"
+          <div className="wuiDataGridHeaderCell__content">{display || id}</div>
+          <WuiPopover
+            className="wuiDataGridHeaderCell__popover"
             panelPaddingSize="none"
             anchorPosition="downRight"
             button={
-              <EuiIcon
+              <WuiIcon
                 type="arrowDown"
                 size="s"
                 color="text"
@@ -326,13 +339,13 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
             closePopover={() => setIsPopoverOpen(false)}
             ownFocus={isFocused}>
             <div>
-              <EuiListGroup
+              <WuiListGroup
                 listItems={columnActions}
                 gutterSize="none"
                 data-test-subj={`dataGridHeaderCellActionGroup-${id}`}
               />
             </div>
-          </EuiPopover>
+          </WuiPopover>
         </button>
       )}
     </div>

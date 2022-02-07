@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiFormRow,
-  EuiSpacer,
+  WuiColorPicker,
+  WuiColorStops,
+  WuiFormRow,
+  WuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -20,19 +20,19 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      <WuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
+        <WuiColorPicker
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </WuiFormRow>
 
-      <EuiSpacer />
+      <WuiSpacer />
 
-      <EuiFormRow label="Set color stops">
-        <EuiColorStops
+      <WuiFormRow label="Set color stops">
+        <WuiColorStops
           label="Set color stops"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -40,7 +40,7 @@ export default () => {
           max={100}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </WuiFormRow>
     </React.Fragment>
   );
 };

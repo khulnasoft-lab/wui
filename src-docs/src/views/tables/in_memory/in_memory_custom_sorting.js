@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiInMemoryTable } from '../../../../../src/components';
+import { WuiInMemoryTable } from '../../../../../src/components';
 
 const data = [
   { animal: 'snail', weight: 25 },
@@ -37,7 +37,7 @@ export const Table = () => {
   };
 
   return (
-    <EuiInMemoryTable
+    <WuiInMemoryTable
       items={data}
       columns={columns}
       pagination={false}

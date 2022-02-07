@@ -1,10 +1,10 @@
-.euiHeaderLinks__mobileList {
-  .euiHeaderLink {
+.wuiHeaderLinks__mobileList {
+  .wuiHeaderLink {
     display: block;
     width: 100%;
-    padding: $euiSizeS;
+    padding: $wuiSizeS;
 
-    // EuiButtons normally center, which makes sense. In mobile though we want
+    // WuiButtons normally center, which makes sense. In mobile though we want
     // them to align left. This is a safe hack given the specificity.
     > span {
       justify-content: flex-start;

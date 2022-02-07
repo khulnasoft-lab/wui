@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormControlLayoutCustomIcon is rendered as button 1`] = `
+exports[`WuiFormControlLayoutCustomIcon is rendered as button 1`] = `
 <button
-  class="euiFormControlLayoutCustomIcon customClass euiFormControlLayoutCustomIcon--clickable"
+  class="wuiFormControlLayoutCustomIcon customClass wuiFormControlLayoutCustomIcon--clickable"
   data-test-subj="customIcon"
   type="button"
 >
   <div
     aria-hidden="true"
-    class="euiFormControlLayoutCustomIcon__icon"
-    data-euiicon-type="alert"
+    class="wuiFormControlLayoutCustomIcon__icon"
+    data-wuiicon-type="alert"
   />
 </button>
 `;
 
-exports[`EuiFormControlLayoutCustomIcon is rendered as span 1`] = `
+exports[`WuiFormControlLayoutCustomIcon is rendered as span 1`] = `
 <span
-  class="euiFormControlLayoutCustomIcon customClass"
+  class="wuiFormControlLayoutCustomIcon customClass"
   data-test-subj="customIcon"
 >
   <div
     aria-hidden="true"
-    class="euiFormControlLayoutCustomIcon__icon"
-    data-euiicon-type="alert"
+    class="wuiFormControlLayoutCustomIcon__icon"
+    data-wuiicon-type="alert"
   />
 </span>
 `;

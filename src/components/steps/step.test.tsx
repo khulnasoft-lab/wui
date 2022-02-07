@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,15 +34,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiStep } from './step';
+import { WuiStep } from './step';
 import { STATUS } from './step_number';
 
-describe('EuiStep', () => {
+describe('WuiStep', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStep {...requiredProps} title={'First step'}>
+      <WuiStep {...requiredProps} title={'First step'}>
         <p>Do this</p>
-      </EuiStep>
+      </WuiStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +51,9 @@ describe('EuiStep', () => {
   describe('props', () => {
     test('headingElement', () => {
       const component = render(
-        <EuiStep headingElement={'h3'} title={'First step'}>
+        <WuiStep headingElement={'h3'} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -48,9 +61,9 @@ describe('EuiStep', () => {
 
     test('step', () => {
       const component = render(
-        <EuiStep step={5} title={'First step'}>
+        <WuiStep step={5} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -58,9 +71,9 @@ describe('EuiStep', () => {
 
     test('titleSize', () => {
       const component = render(
-        <EuiStep titleSize="xs" title={'First step'}>
+        <WuiStep titleSize="xs" title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </WuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -70,9 +83,9 @@ describe('EuiStep', () => {
       STATUS.forEach(status => {
         test(`${status} is rendered`, () => {
           const component = render(
-            <EuiStep status={status} title={'First step'}>
+            <WuiStep status={status} title={'First step'}>
               <p>Do this</p>
-            </EuiStep>
+            </WuiStep>
           );
 
           expect(component).toMatchSnapshot();

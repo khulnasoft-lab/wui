@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiInMemoryTable behavior pagination 1`] = `
-<EuiInMemoryTable
+exports[`WuiInMemoryTable behavior pagination 1`] = `
+<WuiInMemoryTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -46,7 +46,7 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
   responsive={true}
   tableLayout="fixed"
 >
-  <EuiBasicTable
+  <WuiBasicTable
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
@@ -91,69 +91,69 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
   >
     <div
       aria-label="aria-label"
-      className="euiBasicTable testClass1 testClass2"
+      className="wuiBasicTable testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div>
-        <EuiTableHeaderMobile>
+        <WuiTableHeaderMobile>
           <div
-            className="euiTableHeaderMobile"
+            className="wuiTableHeaderMobile"
           >
-            <EuiFlexGroup
+            <WuiFlexGroup
               alignItems="baseline"
               justifyContent="spaceBetween"
               responsive={false}
             >
               <div
-                className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsBaseline euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+                className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--alignItemsBaseline wuiFlexGroup--justifyContentSpaceBetween wuiFlexGroup--directionRow"
               >
-                <EuiFlexItem
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   />
-                </EuiFlexItem>
-                <EuiFlexItem
+                </WuiFlexItem>
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               </div>
-            </EuiFlexGroup>
+            </WuiFlexGroup>
           </div>
-        </EuiTableHeaderMobile>
-        <EuiTable
+        </WuiTableHeaderMobile>
+        <WuiTable
           id="generated-id"
           responsive={true}
           tableLayout="fixed"
         >
           <table
-            className="euiTable euiTable--responsive"
+            className="wuiTable wuiTable--responsive"
             id="generated-id"
             tabIndex={-1}
           >
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <caption
-                className="euiScreenReaderOnly euiTableCaption"
+                className="wuiScreenReaderOnly wuiTableCaption"
               >
-                <EuiDelayRender
+                <WuiDelayRender
                   delay={500}
                 />
               </caption>
-            </EuiScreenReaderOnly>
-            <EuiTableHeader>
+            </WuiScreenReaderOnly>
+            <WuiTableHeader>
               <thead>
                 <tr>
-                  <EuiTableHeaderCell
+                  <WuiTableHeaderCell
                     align="left"
                     data-test-subj="tableHeaderCell_name_0"
                     key="_data_h_name_0"
                   >
                     <th
-                      className="euiTableHeaderCell"
+                      className="wuiTableHeaderCell"
                       data-test-subj="tableHeaderCell_name_0"
                       role="columnheader"
                       scope="col"
@@ -164,33 +164,33 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                       }
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiInnerText>
+                        <WuiInnerText>
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                             title="Name"
                           >
                             Name
                           </span>
-                        </EuiInnerText>
+                        </WuiInnerText>
                       </div>
                     </th>
-                  </EuiTableHeaderCell>
+                  </WuiTableHeaderCell>
                 </tr>
               </thead>
-            </EuiTableHeader>
-            <EuiTableBody
+            </WuiTableHeader>
+            <WuiTableBody
               bodyRef={[Function]}
             >
               <tbody>
-                <EuiTableRow
+                <WuiTableRow
                   isSelected={false}
                 >
                   <tr
-                    className="euiTableRow"
+                    className="wuiTableRow"
                   >
-                    <EuiTableRowCell
+                    <WuiTableRowCell
                       align="left"
                       key="_data_column_name_2_0"
                       mobileOptions={
@@ -203,7 +203,7 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                       textOnly={true}
                     >
                       <td
-                        className="euiTableRowCell"
+                        className="wuiTableRowCell"
                         style={
                           Object {
                             "width": undefined,
@@ -211,30 +211,30 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                         }
                       >
                         <div
-                          className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                          className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                         >
                           Name
                         </div>
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                           >
                             name3
                           </span>
                         </div>
                       </td>
-                    </EuiTableRowCell>
+                    </WuiTableRowCell>
                   </tr>
-                </EuiTableRow>
-                <EuiTableRow
+                </WuiTableRow>
+                <WuiTableRow
                   isSelected={false}
                 >
                   <tr
-                    className="euiTableRow"
+                    className="wuiTableRow"
                   >
-                    <EuiTableRowCell
+                    <WuiTableRowCell
                       align="left"
                       key="_data_column_name_3_0"
                       mobileOptions={
@@ -247,7 +247,7 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                       textOnly={true}
                     >
                       <td
-                        className="euiTableRowCell"
+                        className="wuiTableRowCell"
                         style={
                           Object {
                             "width": undefined,
@@ -255,27 +255,27 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                         }
                       >
                         <div
-                          className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                          className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                         >
                           Name
                         </div>
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                           >
                             name4
                           </span>
                         </div>
                       </td>
-                    </EuiTableRowCell>
+                    </WuiTableRowCell>
                   </tr>
-                </EuiTableRow>
+                </WuiTableRow>
               </tbody>
-            </EuiTableBody>
+            </WuiTableBody>
           </table>
-        </EuiTable>
+        </WuiTable>
       </div>
       <PaginationBar
         aria-controls="generated-id"
@@ -296,14 +296,14 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
         }
       >
         <div>
-          <EuiSpacer
+          <WuiSpacer
             size="m"
           >
             <div
-              className="euiSpacer euiSpacer--m"
+              className="wuiSpacer wuiSpacer--m"
             />
-          </EuiSpacer>
-          <EuiTablePagination
+          </WuiSpacer>
+          <WuiTablePagination
             activePage={1}
             aria-controls="generated-id"
             itemsPerPage={2}
@@ -318,24 +318,24 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
             onChangePage={[Function]}
             pageCount={2}
           >
-            <EuiFlexGroup
+            <WuiFlexGroup
               alignItems="center"
               justifyContent="spaceBetween"
               responsive={false}
             >
               <div
-                className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+                className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--alignItemsCenter wuiFlexGroup--justifyContentSpaceBetween wuiFlexGroup--directionRow"
               >
-                <EuiFlexItem
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   >
-                    <EuiPopover
+                    <WuiPopover
                       anchorPosition="upRight"
                       button={
-                        <EuiButtonEmpty
+                        <WuiButtonEmpty
                           color="text"
                           data-test-subj="tablePaginationPopoverButton"
                           iconSide="right"
@@ -343,13 +343,13 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                           onClick={[Function]}
                           size="xs"
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Rows per page"
-                            token="euiTablePagination.rowsPerPage"
+                            token="wuiTablePagination.rowsPerPage"
                           />
                           : 
                           2
-                        </EuiButtonEmpty>
+                        </WuiButtonEmpty>
                       }
                       closePopover={[Function]}
                       display="inlineBlock"
@@ -359,12 +359,12 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                       panelPaddingSize="none"
                       withTitle={true}
                     >
-                      <EuiOutsideClickDetector
+                      <WuiOutsideClickDetector
                         isDisabled={true}
                         onOutsideClick={[Function]}
                       >
                         <div
-                          className="euiPopover euiPopover--anchorUpRight euiPopover--withTitle"
+                          className="wuiPopover wuiPopover--anchorUpRight wuiPopover--withTitle"
                           onKeyDown={[Function]}
                           onMouseDown={[Function]}
                           onMouseUp={[Function]}
@@ -372,9 +372,9 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                           onTouchStart={[Function]}
                         >
                           <div
-                            className="euiPopover__anchor"
+                            className="wuiPopover__anchor"
                           >
-                            <EuiButtonEmpty
+                            <WuiButtonEmpty
                               color="text"
                               data-test-subj="tablePaginationPopoverButton"
                               iconSide="right"
@@ -383,87 +383,87 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                               size="xs"
                             >
                               <button
-                                className="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall"
+                                className="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall"
                                 data-test-subj="tablePaginationPopoverButton"
                                 disabled={false}
                                 onClick={[Function]}
                                 type="button"
                               >
-                                <EuiButtonContent
-                                  className="euiButtonEmpty__content"
+                                <WuiButtonContent
+                                  className="wuiButtonEmpty__content"
                                   iconSide="right"
                                   iconType="arrowDown"
                                   textProps={
                                     Object {
-                                      "className": "euiButtonEmpty__text",
+                                      "className": "wuiButtonEmpty__text",
                                     }
                                   }
                                 >
                                   <span
-                                    className="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+                                    className="wuiButtonContent wuiButtonContent--iconRight wuiButtonEmpty__content"
                                   >
-                                    <EuiIcon
-                                      className="euiButtonContent__icon"
+                                    <WuiIcon
+                                      className="wuiButtonContent__icon"
                                       size="m"
                                       type="arrowDown"
                                     >
                                       <div
-                                        className="euiButtonContent__icon"
-                                        data-euiicon-type="arrowDown"
+                                        className="wuiButtonContent__icon"
+                                        data-wuiicon-type="arrowDown"
                                         size="m"
                                       />
-                                    </EuiIcon>
+                                    </WuiIcon>
                                     <span
-                                      className="euiButtonEmpty__text"
+                                      className="wuiButtonEmpty__text"
                                     >
-                                      <EuiI18n
+                                      <WuiI18n
                                         default="Rows per page"
-                                        token="euiTablePagination.rowsPerPage"
+                                        token="wuiTablePagination.rowsPerPage"
                                       >
                                         Rows per page
-                                      </EuiI18n>
+                                      </WuiI18n>
                                       : 
                                       2
                                     </span>
                                   </span>
-                                </EuiButtonContent>
+                                </WuiButtonContent>
                               </button>
-                            </EuiButtonEmpty>
+                            </WuiButtonEmpty>
                           </div>
                         </div>
-                      </EuiOutsideClickDetector>
-                    </EuiPopover>
+                      </WuiOutsideClickDetector>
+                    </WuiPopover>
                   </div>
-                </EuiFlexItem>
-                <EuiFlexItem
+                </WuiFlexItem>
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   >
-                    <EuiPagination
+                    <WuiPagination
                       activePage={1}
                       aria-controls="generated-id"
                       onPageClick={[Function]}
                       pageCount={2}
                     >
                       <nav
-                        className="euiPagination"
+                        className="wuiPagination"
                       >
-                        <EuiI18n
+                        <WuiI18n
                           default="Previous page, {page}"
-                          token="euiPagination.previousPage"
+                          token="wuiPagination.previousPage"
                           values={
                             Object {
                               "page": 1,
                             }
                           }
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Previous page"
-                            token="euiPagination.disabledPreviousPage"
+                            token="wuiPagination.disabledPreviousPage"
                           >
-                            <EuiButtonIcon
+                            <WuiButtonIcon
                               aria-controls="generated-id"
                               aria-label="Previous page, 1"
                               color="text"
@@ -475,40 +475,40 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                               <a
                                 aria-controls="generated-id"
                                 aria-label="Previous page, 1"
-                                className="euiButtonIcon euiButtonIcon--text"
+                                className="wuiButtonIcon wuiButtonIcon--text"
                                 data-test-subj="pagination-button-previous"
                                 href="#generated-id"
                                 onClick={[Function]}
                                 rel="noreferrer"
                               >
-                                <EuiIcon
+                                <WuiIcon
                                   aria-hidden="true"
-                                  className="euiButtonIcon__icon"
+                                  className="wuiButtonIcon__icon"
                                   size="m"
                                   type="arrowLeft"
                                 >
                                   <div
                                     aria-hidden="true"
-                                    className="euiButtonIcon__icon"
-                                    data-euiicon-type="arrowLeft"
+                                    className="wuiButtonIcon__icon"
+                                    data-wuiicon-type="arrowLeft"
                                     size="m"
                                   />
-                                </EuiIcon>
+                                </WuiIcon>
                               </a>
-                            </EuiButtonIcon>
-                          </EuiI18n>
-                        </EuiI18n>
+                            </WuiButtonIcon>
+                          </WuiI18n>
+                        </WuiI18n>
                         <ul
-                          className="euiPagination__list"
+                          className="wuiPagination__list"
                         >
                           <PaginationButton
                             key="0"
                             pageIndex={0}
                           >
                             <li
-                              className="euiPagination__item"
+                              className="wuiPagination__item"
                             >
-                              <EuiPaginationButton
+                              <WuiPaginationButton
                                 aria-controls="generated-id"
                                 hideOnMobile={true}
                                 isActive={false}
@@ -516,9 +516,9 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                 pageIndex={0}
                                 totalPages={2}
                               >
-                                <EuiI18n
+                                <WuiI18n
                                   default="Page {page} of {totalPages}"
-                                  token="euiPaginationButton.longPageString"
+                                  token="wuiPaginationButton.longPageString"
                                   values={
                                     Object {
                                       "page": 1,
@@ -526,19 +526,19 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                     }
                                   }
                                 >
-                                  <EuiI18n
+                                  <WuiI18n
                                     default="Page {page}"
-                                    token="euiPaginationButton.shortPageString"
+                                    token="wuiPaginationButton.shortPageString"
                                     values={
                                       Object {
                                         "page": 1,
                                       }
                                     }
                                   >
-                                    <EuiButtonEmpty
+                                    <WuiButtonEmpty
                                       aria-controls="generated-id"
                                       aria-label="Page 1 of 2"
-                                      className="euiPaginationButton euiPaginationButton--hideOnMobile"
+                                      className="wuiPaginationButton wuiPaginationButton--hideOnMobile"
                                       color="text"
                                       data-test-subj="pagination-button-0"
                                       href="#generated-id"
@@ -549,36 +549,36 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                       <a
                                         aria-controls="generated-id"
                                         aria-label="Page 1 of 2"
-                                        className="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiPaginationButton euiPaginationButton--hideOnMobile"
+                                        className="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall wuiPaginationButton wuiPaginationButton--hideOnMobile"
                                         data-test-subj="pagination-button-0"
                                         href="#generated-id"
                                         onClick={[Function]}
                                         rel="noreferrer"
                                       >
-                                        <EuiButtonContent
-                                          className="euiButtonEmpty__content"
+                                        <WuiButtonContent
+                                          className="wuiButtonEmpty__content"
                                           iconSide="left"
                                           textProps={
                                             Object {
-                                              "className": "euiButtonEmpty__text",
+                                              "className": "wuiButtonEmpty__text",
                                             }
                                           }
                                         >
                                           <span
-                                            className="euiButtonContent euiButtonEmpty__content"
+                                            className="wuiButtonContent wuiButtonEmpty__content"
                                           >
                                             <span
-                                              className="euiButtonEmpty__text"
+                                              className="wuiButtonEmpty__text"
                                             >
                                               1
                                             </span>
                                           </span>
-                                        </EuiButtonContent>
+                                        </WuiButtonContent>
                                       </a>
-                                    </EuiButtonEmpty>
-                                  </EuiI18n>
-                                </EuiI18n>
-                              </EuiPaginationButton>
+                                    </WuiButtonEmpty>
+                                  </WuiI18n>
+                                </WuiI18n>
+                              </WuiPaginationButton>
                             </li>
                           </PaginationButton>
                           <PaginationButton
@@ -586,9 +586,9 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                             pageIndex={1}
                           >
                             <li
-                              className="euiPagination__item"
+                              className="wuiPagination__item"
                             >
-                              <EuiPaginationButton
+                              <WuiPaginationButton
                                 aria-controls="generated-id"
                                 hideOnMobile={true}
                                 isActive={true}
@@ -596,9 +596,9 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                 pageIndex={1}
                                 totalPages={2}
                               >
-                                <EuiI18n
+                                <WuiI18n
                                   default="Page {page} of {totalPages}"
-                                  token="euiPaginationButton.longPageString"
+                                  token="wuiPaginationButton.longPageString"
                                   values={
                                     Object {
                                       "page": 2,
@@ -606,20 +606,20 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                     }
                                   }
                                 >
-                                  <EuiI18n
+                                  <WuiI18n
                                     default="Page {page}"
-                                    token="euiPaginationButton.shortPageString"
+                                    token="wuiPaginationButton.shortPageString"
                                     values={
                                       Object {
                                         "page": 2,
                                       }
                                     }
                                   >
-                                    <EuiButtonEmpty
+                                    <WuiButtonEmpty
                                       aria-controls="generated-id"
                                       aria-current={true}
                                       aria-label="Page 2 of 2"
-                                      className="euiPaginationButton euiPaginationButton-isActive euiPaginationButton--hideOnMobile"
+                                      className="wuiPaginationButton wuiPaginationButton-isActive wuiPaginationButton--hideOnMobile"
                                       color="text"
                                       data-test-subj="pagination-button-1"
                                       href="#generated-id"
@@ -631,53 +631,53 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                                         aria-controls="generated-id"
                                         aria-current={true}
                                         aria-label="Page 2 of 2"
-                                        className="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiButtonEmpty-isDisabled euiPaginationButton euiPaginationButton-isActive euiPaginationButton--hideOnMobile"
+                                        className="wuiButtonEmpty wuiButtonEmpty--text wuiButtonEmpty--xSmall wuiButtonEmpty-isDisabled wuiPaginationButton wuiPaginationButton-isActive wuiPaginationButton--hideOnMobile"
                                         data-test-subj="pagination-button-1"
                                         disabled={true}
                                         onClick={[Function]}
                                         type="button"
                                       >
-                                        <EuiButtonContent
-                                          className="euiButtonEmpty__content"
+                                        <WuiButtonContent
+                                          className="wuiButtonEmpty__content"
                                           iconSide="left"
                                           textProps={
                                             Object {
-                                              "className": "euiButtonEmpty__text",
+                                              "className": "wuiButtonEmpty__text",
                                             }
                                           }
                                         >
                                           <span
-                                            className="euiButtonContent euiButtonEmpty__content"
+                                            className="wuiButtonContent wuiButtonEmpty__content"
                                           >
                                             <span
-                                              className="euiButtonEmpty__text"
+                                              className="wuiButtonEmpty__text"
                                             >
                                               2
                                             </span>
                                           </span>
-                                        </EuiButtonContent>
+                                        </WuiButtonContent>
                                       </button>
-                                    </EuiButtonEmpty>
-                                  </EuiI18n>
-                                </EuiI18n>
-                              </EuiPaginationButton>
+                                    </WuiButtonEmpty>
+                                  </WuiI18n>
+                                </WuiI18n>
+                              </WuiPaginationButton>
                             </li>
                           </PaginationButton>
                         </ul>
-                        <EuiI18n
+                        <WuiI18n
                           default="Next page, {page}"
-                          token="euiPagination.nextPage"
+                          token="wuiPagination.nextPage"
                           values={
                             Object {
                               "page": 3,
                             }
                           }
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Next page"
-                            token="euiPagination.disabledNextPage"
+                            token="wuiPagination.disabledNextPage"
                           >
-                            <EuiButtonIcon
+                            <WuiButtonIcon
                               aria-label="Next page"
                               color="text"
                               data-test-subj="pagination-button-next"
@@ -687,45 +687,45 @@ exports[`EuiInMemoryTable behavior pagination 1`] = `
                             >
                               <button
                                 aria-label="Next page"
-                                className="euiButtonIcon euiButtonIcon--text"
+                                className="wuiButtonIcon wuiButtonIcon--text"
                                 data-test-subj="pagination-button-next"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
                               >
-                                <EuiIcon
+                                <WuiIcon
                                   aria-hidden="true"
-                                  className="euiButtonIcon__icon"
+                                  className="wuiButtonIcon__icon"
                                   size="m"
                                   type="arrowRight"
                                 >
                                   <div
                                     aria-hidden="true"
-                                    className="euiButtonIcon__icon"
-                                    data-euiicon-type="arrowRight"
+                                    className="wuiButtonIcon__icon"
+                                    data-wuiicon-type="arrowRight"
                                     size="m"
                                   />
-                                </EuiIcon>
+                                </WuiIcon>
                               </button>
-                            </EuiButtonIcon>
-                          </EuiI18n>
-                        </EuiI18n>
+                            </WuiButtonIcon>
+                          </WuiI18n>
+                        </WuiI18n>
                       </nav>
-                    </EuiPagination>
+                    </WuiPagination>
                   </div>
-                </EuiFlexItem>
+                </WuiFlexItem>
               </div>
-            </EuiFlexGroup>
-          </EuiTablePagination>
+            </WuiFlexGroup>
+          </WuiTablePagination>
         </div>
       </PaginationBar>
     </div>
-  </EuiBasicTable>
-</EuiInMemoryTable>
+  </WuiBasicTable>
+</WuiInMemoryTable>
 `;
 
-exports[`EuiInMemoryTable empty array 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable empty array 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -746,8 +746,8 @@ exports[`EuiInMemoryTable empty array 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with executeQueryOptions 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with executeQueryOptions 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -768,8 +768,8 @@ exports[`EuiInMemoryTable with executeQueryOptions 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with initial selection 1`] = `
-<EuiInMemoryTable
+exports[`WuiInMemoryTable with initial selection 1`] = `
+<WuiInMemoryTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -813,7 +813,7 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
   }
   tableLayout="fixed"
 >
-  <EuiBasicTable
+  <WuiBasicTable
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
@@ -861,33 +861,33 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
   >
     <div
       aria-label="aria-label"
-      className="euiBasicTable testClass1 testClass2"
+      className="wuiBasicTable testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div>
-        <EuiTableHeaderMobile>
+        <WuiTableHeaderMobile>
           <div
-            className="euiTableHeaderMobile"
+            className="wuiTableHeaderMobile"
           >
-            <EuiFlexGroup
+            <WuiFlexGroup
               alignItems="baseline"
               justifyContent="spaceBetween"
               responsive={false}
             >
               <div
-                className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsBaseline euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+                className="wuiFlexGroup wuiFlexGroup--gutterLarge wuiFlexGroup--alignItemsBaseline wuiFlexGroup--justifyContentSpaceBetween wuiFlexGroup--directionRow"
               >
-                <EuiFlexItem
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   >
-                    <EuiI18n
+                    <WuiI18n
                       default="Select all rows"
-                      token="euiBasicTable.selectAllRows"
+                      token="wuiBasicTable.selectAllRows"
                     >
-                      <EuiCheckbox
+                      <WuiCheckbox
                         aria-label="Select all rows"
                         checked={false}
                         compressed={false}
@@ -898,69 +898,69 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                         onChange={[Function]}
                       >
                         <div
-                          className="euiCheckbox"
+                          className="wuiCheckbox"
                         >
                           <input
                             aria-label="Select all rows"
                             checked={false}
-                            className="euiCheckbox__input"
+                            className="wuiCheckbox__input"
                             disabled={false}
                             id="_selection_column-checkbox_generated-id"
                             onChange={[Function]}
                             type="checkbox"
                           />
                           <div
-                            className="euiCheckbox__square"
+                            className="wuiCheckbox__square"
                           />
                           <label
-                            className="euiCheckbox__label"
+                            className="wuiCheckbox__label"
                             htmlFor="_selection_column-checkbox_generated-id"
                           >
                             Select all rows
                           </label>
                         </div>
-                      </EuiCheckbox>
-                    </EuiI18n>
+                      </WuiCheckbox>
+                    </WuiI18n>
                   </div>
-                </EuiFlexItem>
-                <EuiFlexItem
+                </WuiFlexItem>
+                <WuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="euiFlexItem euiFlexItem--flexGrowZero"
+                    className="wuiFlexItem wuiFlexItem--flexGrowZero"
                   />
-                </EuiFlexItem>
+                </WuiFlexItem>
               </div>
-            </EuiFlexGroup>
+            </WuiFlexGroup>
           </div>
-        </EuiTableHeaderMobile>
-        <EuiTable
+        </WuiTableHeaderMobile>
+        <WuiTable
           id="generated-id"
           responsive={true}
           tableLayout="fixed"
         >
           <table
-            className="euiTable euiTable--responsive"
+            className="wuiTable wuiTable--responsive"
             id="generated-id"
             tabIndex={-1}
           >
-            <EuiScreenReaderOnly>
+            <WuiScreenReaderOnly>
               <caption
-                className="euiScreenReaderOnly euiTableCaption"
+                className="wuiScreenReaderOnly wuiTableCaption"
               >
-                <EuiDelayRender
+                <WuiDelayRender
                   delay={500}
                 />
               </caption>
-            </EuiScreenReaderOnly>
-            <EuiTableHeader>
+            </WuiScreenReaderOnly>
+            <WuiTableHeader>
               <thead>
                 <tr>
-                  <EuiTableHeaderCellCheckbox
+                  <WuiTableHeaderCellCheckbox
                     key="_selection_column_h"
                   >
                     <th
-                      className="euiTableHeaderCellCheckbox"
+                      className="wuiTableHeaderCellCheckbox"
                       scope="col"
                       style={
                         Object {
@@ -969,13 +969,13 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiI18n
+                        <WuiI18n
                           default="Select all rows"
-                          token="euiBasicTable.selectAllRows"
+                          token="wuiBasicTable.selectAllRows"
                         >
-                          <EuiCheckbox
+                          <WuiCheckbox
                             aria-label="Select all rows"
                             checked={false}
                             compressed={false}
@@ -988,12 +988,12 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select all rows"
                                 checked={false}
-                                className="euiCheckbox__input"
+                                className="wuiCheckbox__input"
                                 data-test-subj="checkboxSelectAll"
                                 disabled={false}
                                 id="_selection_column-checkbox_generated-id"
@@ -1001,21 +1001,21 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="wuiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </WuiCheckbox>
+                        </WuiI18n>
                       </div>
                     </th>
-                  </EuiTableHeaderCellCheckbox>
-                  <EuiTableHeaderCell
+                  </WuiTableHeaderCellCheckbox>
+                  <WuiTableHeaderCell
                     align="left"
                     data-test-subj="tableHeaderCell_name_0"
                     key="_data_h_name_0"
                   >
                     <th
-                      className="euiTableHeaderCell"
+                      className="wuiTableHeaderCell"
                       data-test-subj="tableHeaderCell_name_0"
                       role="columnheader"
                       scope="col"
@@ -1026,47 +1026,47 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="wuiTableCellContent"
                       >
-                        <EuiInnerText>
+                        <WuiInnerText>
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                             title="Name"
                           >
                             Name
                           </span>
-                        </EuiInnerText>
+                        </WuiInnerText>
                       </div>
                     </th>
-                  </EuiTableHeaderCell>
+                  </WuiTableHeaderCell>
                 </tr>
               </thead>
-            </EuiTableHeader>
-            <EuiTableBody
+            </WuiTableHeader>
+            <WuiTableBody
               bodyRef={[Function]}
             >
               <tbody>
-                <EuiTableRow
+                <WuiTableRow
                   isSelectable={true}
                   isSelected={true}
                 >
                   <tr
-                    className="euiTableRow euiTableRow-isSelectable euiTableRow-isSelected"
+                    className="wuiTableRow wuiTableRow-isSelectable wuiTableRow-isSelected"
                   >
-                    <EuiTableRowCellCheckbox
+                    <WuiTableRowCellCheckbox
                       key="_selection_column_1"
                     >
                       <td
-                        className="euiTableRowCellCheckbox"
+                        className="wuiTableRowCellCheckbox"
                       >
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Select this row"
-                            token="euiBasicTable.selectThisRow"
+                            token="wuiBasicTable.selectThisRow"
                           >
-                            <EuiCheckbox
+                            <WuiCheckbox
                               aria-label="Select this row"
                               checked={true}
                               compressed={false}
@@ -1079,12 +1079,12 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                               type="inList"
                             >
                               <div
-                                className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                                className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                               >
                                 <input
                                   aria-label="Select this row"
                                   checked={true}
-                                  className="euiCheckbox__input"
+                                  className="wuiCheckbox__input"
                                   data-test-subj="checkboxSelectRow-1"
                                   disabled={false}
                                   id="_selection_column_1-checkbox"
@@ -1093,15 +1093,15 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  className="euiCheckbox__square"
+                                  className="wuiCheckbox__square"
                                 />
                               </div>
-                            </EuiCheckbox>
-                          </EuiI18n>
+                            </WuiCheckbox>
+                          </WuiI18n>
                         </div>
                       </td>
-                    </EuiTableRowCellCheckbox>
-                    <EuiTableRowCell
+                    </WuiTableRowCellCheckbox>
+                    <WuiTableRowCell
                       align="left"
                       key="_data_column_name_1_0"
                       mobileOptions={
@@ -1114,7 +1114,7 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                       textOnly={true}
                     >
                       <td
-                        className="euiTableRowCell"
+                        className="wuiTableRowCell"
                         style={
                           Object {
                             "width": undefined,
@@ -1122,44 +1122,44 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                         }
                       >
                         <div
-                          className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                          className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                         >
                           Name
                         </div>
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                           >
                             name1
                           </span>
                         </div>
                       </td>
-                    </EuiTableRowCell>
+                    </WuiTableRowCell>
                   </tr>
-                </EuiTableRow>
-                <EuiTableRow
+                </WuiTableRow>
+                <WuiTableRow
                   isSelectable={true}
                   isSelected={false}
                 >
                   <tr
-                    className="euiTableRow euiTableRow-isSelectable"
+                    className="wuiTableRow wuiTableRow-isSelectable"
                   >
-                    <EuiTableRowCellCheckbox
+                    <WuiTableRowCellCheckbox
                       key="_selection_column_2"
                     >
                       <td
-                        className="euiTableRowCellCheckbox"
+                        className="wuiTableRowCellCheckbox"
                       >
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Select this row"
-                            token="euiBasicTable.selectThisRow"
+                            token="wuiBasicTable.selectThisRow"
                           >
-                            <EuiCheckbox
+                            <WuiCheckbox
                               aria-label="Select this row"
                               checked={false}
                               compressed={false}
@@ -1172,12 +1172,12 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                               type="inList"
                             >
                               <div
-                                className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                                className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                               >
                                 <input
                                   aria-label="Select this row"
                                   checked={false}
-                                  className="euiCheckbox__input"
+                                  className="wuiCheckbox__input"
                                   data-test-subj="checkboxSelectRow-2"
                                   disabled={false}
                                   id="_selection_column_2-checkbox"
@@ -1186,15 +1186,15 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  className="euiCheckbox__square"
+                                  className="wuiCheckbox__square"
                                 />
                               </div>
-                            </EuiCheckbox>
-                          </EuiI18n>
+                            </WuiCheckbox>
+                          </WuiI18n>
                         </div>
                       </td>
-                    </EuiTableRowCellCheckbox>
-                    <EuiTableRowCell
+                    </WuiTableRowCellCheckbox>
+                    <WuiTableRowCell
                       align="left"
                       key="_data_column_name_2_0"
                       mobileOptions={
@@ -1207,7 +1207,7 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                       textOnly={true}
                     >
                       <td
-                        className="euiTableRowCell"
+                        className="wuiTableRowCell"
                         style={
                           Object {
                             "width": undefined,
@@ -1215,44 +1215,44 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                         }
                       >
                         <div
-                          className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                          className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                         >
                           Name
                         </div>
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                           >
                             name2
                           </span>
                         </div>
                       </td>
-                    </EuiTableRowCell>
+                    </WuiTableRowCell>
                   </tr>
-                </EuiTableRow>
-                <EuiTableRow
+                </WuiTableRow>
+                <WuiTableRow
                   isSelectable={true}
                   isSelected={false}
                 >
                   <tr
-                    className="euiTableRow euiTableRow-isSelectable"
+                    className="wuiTableRow wuiTableRow-isSelectable"
                   >
-                    <EuiTableRowCellCheckbox
+                    <WuiTableRowCellCheckbox
                       key="_selection_column_3"
                     >
                       <td
-                        className="euiTableRowCellCheckbox"
+                        className="wuiTableRowCellCheckbox"
                       >
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
-                          <EuiI18n
+                          <WuiI18n
                             default="Select this row"
-                            token="euiBasicTable.selectThisRow"
+                            token="wuiBasicTable.selectThisRow"
                           >
-                            <EuiCheckbox
+                            <WuiCheckbox
                               aria-label="Select this row"
                               checked={false}
                               compressed={false}
@@ -1265,12 +1265,12 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                               type="inList"
                             >
                               <div
-                                className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                                className="wuiCheckbox wuiCheckbox--inList wuiCheckbox--noLabel"
                               >
                                 <input
                                   aria-label="Select this row"
                                   checked={false}
-                                  className="euiCheckbox__input"
+                                  className="wuiCheckbox__input"
                                   data-test-subj="checkboxSelectRow-3"
                                   disabled={false}
                                   id="_selection_column_3-checkbox"
@@ -1279,15 +1279,15 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  className="euiCheckbox__square"
+                                  className="wuiCheckbox__square"
                                 />
                               </div>
-                            </EuiCheckbox>
-                          </EuiI18n>
+                            </WuiCheckbox>
+                          </WuiI18n>
                         </div>
                       </td>
-                    </EuiTableRowCellCheckbox>
-                    <EuiTableRowCell
+                    </WuiTableRowCellCheckbox>
+                    <WuiTableRowCell
                       align="left"
                       key="_data_column_name_3_0"
                       mobileOptions={
@@ -1300,7 +1300,7 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                       textOnly={true}
                     >
                       <td
-                        className="euiTableRowCell"
+                        className="wuiTableRowCell"
                         style={
                           Object {
                             "width": undefined,
@@ -1308,35 +1308,35 @@ exports[`EuiInMemoryTable with initial selection 1`] = `
                         }
                       >
                         <div
-                          className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                          className="wuiTableRowCell__mobileHeader wuiTableRowCell--hideForDesktop"
                         >
                           Name
                         </div>
                         <div
-                          className="euiTableCellContent"
+                          className="wuiTableCellContent"
                         >
                           <span
-                            className="euiTableCellContent__text"
+                            className="wuiTableCellContent__text"
                           >
                             name3
                           </span>
                         </div>
                       </td>
-                    </EuiTableRowCell>
+                    </WuiTableRowCell>
                   </tr>
-                </EuiTableRow>
+                </WuiTableRow>
               </tbody>
-            </EuiTableBody>
+            </WuiTableBody>
           </table>
-        </EuiTable>
+        </WuiTable>
       </div>
     </div>
-  </EuiBasicTable>
-</EuiInMemoryTable>
+  </WuiBasicTable>
+</WuiInMemoryTable>
 `;
 
-exports[`EuiInMemoryTable with initial sorting 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with initial sorting 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1382,8 +1382,8 @@ exports[`EuiInMemoryTable with initial sorting 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with items 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with items 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1419,8 +1419,8 @@ exports[`EuiInMemoryTable with items 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with items and expanded item 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with items and expanded item 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1464,8 +1464,8 @@ exports[`EuiInMemoryTable with items and expanded item 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with items and message - expecting to show the items 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with items and message - expecting to show the items 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1501,8 +1501,8 @@ exports[`EuiInMemoryTable with items and message - expecting to show the items 1
 />
 `;
 
-exports[`EuiInMemoryTable with message 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with message 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1523,8 +1523,8 @@ exports[`EuiInMemoryTable with message 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with message and loading 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with message and loading 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1546,8 +1546,8 @@ exports[`EuiInMemoryTable with message and loading 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1592,8 +1592,8 @@ exports[`EuiInMemoryTable with pagination 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination and default page size and index 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination and default page size and index 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1634,8 +1634,8 @@ exports[`EuiInMemoryTable with pagination and default page size and index 1`] = 
 />
 `;
 
-exports[`EuiInMemoryTable with pagination and selection 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination and selection 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1690,8 +1690,8 @@ exports[`EuiInMemoryTable with pagination and selection 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, default page size and error 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination, default page size and error 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1733,8 +1733,8 @@ exports[`EuiInMemoryTable with pagination, default page size and error 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, hiding the per page options 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination, hiding the per page options 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1783,8 +1783,8 @@ exports[`EuiInMemoryTable with pagination, hiding the per page options 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, selection and sorting 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination, selection and sorting 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -1846,15 +1846,15 @@ exports[`EuiInMemoryTable with pagination, selection and sorting 1`] = `
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, selection, sorting  and simple search 1`] = `
+exports[`WuiInMemoryTable with pagination, selection, sorting  and simple search 1`] = `
 <div>
-  <EuiSearchBar
+  <WuiSearchBar
     onChange={[Function]}
   />
-  <EuiSpacer
+  <WuiSpacer
     size="l"
   />
-  <EuiBasicTable
+  <WuiBasicTable
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
@@ -1927,8 +1927,8 @@ exports[`EuiInMemoryTable with pagination, selection, sorting  and simple search
 </div>
 `;
 
-exports[`EuiInMemoryTable with pagination, selection, sorting and a single record action 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination, selection, sorting and a single record action 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -2000,8 +2000,8 @@ exports[`EuiInMemoryTable with pagination, selection, sorting and a single recor
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, selection, sorting and column renderer 1`] = `
-<EuiBasicTable
+exports[`WuiInMemoryTable with pagination, selection, sorting and column renderer 1`] = `
+<WuiBasicTable
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
@@ -2060,9 +2060,9 @@ exports[`EuiInMemoryTable with pagination, selection, sorting and column rendere
 />
 `;
 
-exports[`EuiInMemoryTable with pagination, selection, sorting and configured search 1`] = `
+exports[`WuiInMemoryTable with pagination, selection, sorting and configured search 1`] = `
 <div>
-  <EuiSearchBar
+  <WuiSearchBar
     box={
       Object {
         "incremental": true,
@@ -2082,10 +2082,10 @@ exports[`EuiInMemoryTable with pagination, selection, sorting and configured sea
     }
     onChange={[Function]}
   />
-  <EuiSpacer
+  <WuiSpacer
     size="l"
   />
-  <EuiBasicTable
+  <WuiBasicTable
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={

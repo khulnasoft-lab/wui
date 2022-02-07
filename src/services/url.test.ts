@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,29 +35,29 @@ import { isDomainSecure } from './url';
 describe('url', () => {
   describe('#isDomainSecure', () => {
     it('returns true for secure domains', () => {
-      expect(isDomainSecure('https://elastic.co')).toEqual(true);
-      expect(isDomainSecure('https://elastic.co?foo=bar')).toEqual(true);
-      expect(isDomainSecure('https://elastic.co/')).toEqual(true);
-      expect(isDomainSecure('https://www.elastic.co')).toEqual(true);
-      expect(isDomainSecure('https://docs.elastic.co')).toEqual(true);
-      expect(isDomainSecure('https://stats.elastic.co')).toEqual(true);
-      expect(isDomainSecure('https://lots.of.kids.elastic.co')).toEqual(true);
+      expect(isDomainSecure('https://wazuh.co')).toEqual(true);
+      expect(isDomainSecure('https://wazuh.co?foo=bar')).toEqual(true);
+      expect(isDomainSecure('https://wazuh.co/')).toEqual(true);
+      expect(isDomainSecure('https://www.wazuh.co')).toEqual(true);
+      expect(isDomainSecure('https://docs.wazuh.co')).toEqual(true);
+      expect(isDomainSecure('https://stats.wazuh.co')).toEqual(true);
+      expect(isDomainSecure('https://lots.of.kids.wazuh.co')).toEqual(true);
       expect(
-        isDomainSecure('https://elastic.co/cool/url/with?lots=of&params')
+        isDomainSecure('https://wazuh.co/cool/url/with?lots=of&params')
       ).toEqual(true);
     });
 
     it('returns false for unsecure domains', () => {
-      expect(isDomainSecure('https://wwwelastic.co')).toEqual(false);
-      expect(isDomainSecure('https://www.zelastic.co')).toEqual(false);
-      expect(isDomainSecure('https://*elastic.co')).toEqual(false);
-      expect(isDomainSecure('http://elastic.com')).toEqual(false);
-      expect(isDomainSecure('https://elastic.co.now')).toEqual(false);
-      expect(isDomainSecure('elastic.co')).toEqual(false);
-      expect(isDomainSecure('smb://www.elastic.co')).toEqual(false);
+      expect(isDomainSecure('https://wwwwazuh.co')).toEqual(false);
+      expect(isDomainSecure('https://www.zwazuh.co')).toEqual(false);
+      expect(isDomainSecure('https://*wazuh.co')).toEqual(false);
+      expect(isDomainSecure('http://wazuh.com')).toEqual(false);
+      expect(isDomainSecure('https://wazuh.co.now')).toEqual(false);
+      expect(isDomainSecure('wazuh.co')).toEqual(false);
+      expect(isDomainSecure('smb://www.wazuh.co')).toEqual(false);
       expect(
         isDomainSecure(
-          'https://wwwelastic.co/cool/url/with?lots=of&params/https://elastic.co'
+          'https://wwwwazuh.co/cool/url/with?lots=of&params/https://wazuh.co'
         )
       ).toEqual(false);
     });

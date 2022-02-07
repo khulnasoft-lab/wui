@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,25 +41,25 @@ import { CommonProps, ExclusiveUnion } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export interface EuiTabProps extends CommonProps {
+export interface WuiTabProps extends CommonProps {
   isSelected?: boolean;
   disabled?: boolean;
 }
 
-type EuiTabPropsForAnchor = EuiTabProps &
+type WuiTabPropsForAnchor = WuiTabProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'onClick' | 'href'> & {
     href?: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
   };
 
-type EuiTabPropsForButton = EuiTabProps &
+type WuiTabPropsForButton = WuiTabProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> & {
     onClick?: MouseEventHandler<HTMLButtonElement>;
   };
 
-export type Props = ExclusiveUnion<EuiTabPropsForAnchor, EuiTabPropsForButton>;
+export type Props = ExclusiveUnion<WuiTabPropsForAnchor, WuiTabPropsForButton>;
 
-export const EuiTab: FunctionComponent<Props> = ({
+export const WuiTab: FunctionComponent<Props> = ({
   isSelected,
   children,
   className,
@@ -59,9 +72,9 @@ export const EuiTab: FunctionComponent<Props> = ({
   const isHrefValid = !href || validateHref(href);
   const disabled = _disabled || !isHrefValid;
 
-  const classes = classNames('euiTab', className, {
-    'euiTab-isSelected': isSelected,
-    'euiTab-isDisabled': disabled,
+  const classes = classNames('wuiTab', className, {
+    'wuiTab-isSelected': isSelected,
+    'wuiTab-isDisabled': disabled,
   });
 
   //  <a> elements don't respect the `disabled` attribute. So if we're disabled, we'll just pretend
@@ -78,7 +91,7 @@ export const EuiTab: FunctionComponent<Props> = ({
         target={target}
         rel={secureRel}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
-        <span className="euiTab__content">{children}</span>
+        <span className="wuiTab__content">{children}</span>
       </a>
     );
   }
@@ -91,7 +104,7 @@ export const EuiTab: FunctionComponent<Props> = ({
       className={classes}
       disabled={disabled}
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
-      <span className="euiTab__content">{children}</span>
+      <span className="wuiTab__content">{children}</span>
     </button>
   );
 };

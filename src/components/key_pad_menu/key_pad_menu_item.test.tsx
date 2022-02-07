@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +34,14 @@ import React from 'react';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiKeyPadMenuItem } from './key_pad_menu_item';
+import { WuiKeyPadMenuItem } from './key_pad_menu_item';
 
-describe('EuiKeyPadMenuItem', () => {
+describe('WuiKeyPadMenuItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" {...requiredProps} href="#">
+      <WuiKeyPadMenuItem label="Label" {...requiredProps} href="#">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +49,9 @@ describe('EuiKeyPadMenuItem', () => {
 
   test('renders href', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" href="#">
+      <WuiKeyPadMenuItem label="Label" href="#">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -46,9 +59,9 @@ describe('EuiKeyPadMenuItem', () => {
 
   test('renders href with rel', () => {
     const component = render(
-      <EuiKeyPadMenuItem label="Label" href="#" rel="noreferrer">
+      <WuiKeyPadMenuItem label="Label" href="#" rel="noreferrer">
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -58,9 +71,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     const component = render(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -70,9 +83,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     shallow(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     expect(onClickHandler).not.toBeCalled();
@@ -82,9 +95,9 @@ describe('EuiKeyPadMenuItem', () => {
     const onClickHandler = jest.fn();
 
     const $button = shallow(
-      <EuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
+      <WuiKeyPadMenuItem label="Label" onClick={onClickHandler}>
         Icon
-      </EuiKeyPadMenuItem>
+      </WuiKeyPadMenuItem>
     );
 
     $button.simulate('click');

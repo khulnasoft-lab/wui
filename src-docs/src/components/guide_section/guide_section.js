@@ -2,30 +2,30 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiCode,
-  EuiCodeBlock,
-  EuiErrorBoundary,
-  EuiSpacer,
-  EuiTab,
-  EuiTable,
-  EuiTableBody,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTabs,
-  EuiText,
-  EuiTextColor,
-  EuiTitle,
-  EuiLink,
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
+  WuiCode,
+  WuiCodeBlock,
+  WuiErrorBoundary,
+  WuiSpacer,
+  WuiTab,
+  WuiTable,
+  WuiTableBody,
+  WuiTableHeader,
+  WuiTableHeaderCell,
+  WuiTableRow,
+  WuiTableRowCell,
+  WuiTabs,
+  WuiText,
+  WuiTextColor,
+  WuiTitle,
+  WuiLink,
+  WuiButtonEmpty,
+  WuiFlexGroup,
+  WuiFlexItem,
 } from '../../../../src/components';
 
 import { CodeSandboxLink } from '../codesandbox';
 
-import { cleanEuiImports } from '../../services';
+import { cleanWuiImports } from '../../services';
 
 import { extendedTypesInfo } from './guide_section_extends';
 
@@ -42,14 +42,14 @@ export const markup = text => {
           document.getElementById(id).scrollIntoView();
         };
         return (
-          <EuiLink key={`markup-${index}`} onClick={onClick}>
+          <WuiLink key={`markup-${index}`} onClick={onClick}>
             {id}
-          </EuiLink>
+          </WuiLink>
         );
       }
       if (token.startsWith('`')) {
         const code = token.substring(1, token.length - 1);
-        return <EuiCode key={`markup-${index}`}>{code}</EuiCode>;
+        return <WuiCode key={`markup-${index}`}>{code}</WuiCode>;
       }
       if (token.includes('\n')) {
         return token
@@ -196,34 +196,31 @@ export class GuideSection extends Component {
         renderedCode = renderedCode.default
           .replace(
             /(from )'(..\/)+src\/services(\/?';)/g,
-            "from '@elastic/eui/lib/services';"
+            "from '@wazuh/wui/lib/services';"
           )
           .replace(
             /(from )'(..\/)+src\/components\/.*?';/g,
-            "from '@elastic/eui';"
+            "from '@wazuh/wui';"
           );
         renderedCode = renderedCode.split('\n');
         const linesWithImport = [];
         // eslint-disable-next-line guard-for-in
         for (const idx in renderedCode) {
           const line = renderedCode[idx];
-          if (
-            line.includes('import') &&
-            line.includes("from '@elastic/eui';")
-          ) {
+          if (line.includes('import') && line.includes("from '@wazuh/wui';")) {
             linesWithImport.push(line);
             renderedCode[idx] = '';
           }
         }
         if (linesWithImport.length > 1) {
           linesWithImport[0] = linesWithImport[0].replace(
-            " } from '@elastic/eui';",
+            " } from '@wazuh/wui';",
             ','
           );
           for (let i = 1; i < linesWithImport.length - 1; i++) {
             linesWithImport[i] = linesWithImport[i]
               .replace('import {', '')
-              .replace(" } from '@elastic/eui';", ',');
+              .replace(" } from '@wazuh/wui';", ',');
           }
           linesWithImport[linesWithImport.length - 1] = linesWithImport[
             linesWithImport.length - 1
@@ -237,7 +234,7 @@ export class GuideSection extends Component {
           renderedCode = renderedCode.replace('\n\n\n', '\n\n');
           len = renderedCode.replace('\n\n\n', '\n\n').length;
         }
-        renderedCode = cleanEuiImports(renderedCode);
+        renderedCode = cleanWuiImports(renderedCode);
       } else if (name === 'html') {
         renderedCode = code.render();
       }
@@ -246,7 +243,7 @@ export class GuideSection extends Component {
     this.setState({ selectedTab, renderedCode }, () => {
       if (name === 'javascript') {
         requestAnimationFrame(() => {
-          const pre = this.refs.javascript.querySelector('.euiCodeBlock__pre');
+          const pre = this.refs.javascript.querySelector('.wuiCodeBlock__pre');
           if (!pre) return;
           pre.scrollTop = this.memoScroll;
         });
@@ -256,12 +253,12 @@ export class GuideSection extends Component {
 
   renderTabs() {
     return this.tabs.map(tab => (
-      <EuiTab
+      <WuiTab
         onClick={() => this.onSelectedTabChanged(tab)}
         isSelected={tab === this.state.selectedTab}
         key={tab.name}>
         {tab.displayName}
-      </EuiTab>
+      </WuiTab>
     ));
   }
 
@@ -272,7 +269,7 @@ export class GuideSection extends Component {
       return;
     }
 
-    return [<EuiText key="text">{text}</EuiText>];
+    return [<WuiText key="text">{text}</WuiText>];
   }
 
   renderSnippet() {
@@ -286,19 +283,19 @@ export class GuideSection extends Component {
     if (typeof snippet === 'string') {
       snippetCode = (
         <Fragment key="snippet">
-          <EuiSpacer size="m" />
-          <EuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
+          <WuiSpacer size="m" />
+          <WuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
             {snippet}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </Fragment>
       );
     } else {
       snippetCode = snippet.map((snip, index) => (
         <Fragment key={`snippet${index}`}>
-          <EuiSpacer size="m" />
-          <EuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
+          <WuiSpacer size="m" />
+          <WuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
             {snip}
-          </EuiCodeBlock>
+          </WuiCodeBlock>
         </Fragment>
       ));
     }
@@ -351,14 +348,14 @@ export class GuideSection extends Component {
       };
 
       let humanizedName = (
-        <strong className="eui-textBreakNormal">{propName}</strong>
+        <strong className="wui-textBreakNormal">{propName}</strong>
       );
 
       if (required) {
         humanizedName = (
           <span>
             {humanizedName}{' '}
-            <EuiTextColor color="danger">(required)</EuiTextColor>
+            <WuiTextColor color="danger">(required)</WuiTextColor>
           </span>
         );
       }
@@ -371,15 +368,15 @@ export class GuideSection extends Component {
       const types = humanizedType.split(/\([^=]*\) =>\s\w*\)*/);
 
       const typeMarkup = (
-        <span className="eui-textBreakNormal">{markup(humanizedType)}</span>
+        <span className="wui-textBreakNormal">{markup(humanizedType)}</span>
       );
       const descriptionMarkup = markup(propDescription);
       let defaultValueMarkup = '';
       if (defaultValue) {
         defaultValueMarkup = [
-          <EuiCodeBlock {...codeBlockProps} key={`defaultValue-${propName}`}>
+          <WuiCodeBlock {...codeBlockProps} key={`defaultValue-${propName}`}>
             {defaultValue.value}
-          </EuiCodeBlock>,
+          </WuiCodeBlock>,
         ];
         if (defaultValue.comment) {
           defaultValueMarkup.push(`(${defaultValue.comment})`);
@@ -387,9 +384,9 @@ export class GuideSection extends Component {
       }
 
       let defaultTypeCell = (
-        <EuiTableRowCell key="type" header="Type" textOnly={false}>
-          <EuiCodeBlock {...codeBlockProps}>{typeMarkup}</EuiCodeBlock>
-        </EuiTableRowCell>
+        <WuiTableRowCell key="type" header="Type" textOnly={false}>
+          <WuiCodeBlock {...codeBlockProps}>{typeMarkup}</WuiCodeBlock>
+        </WuiTableRowCell>
       );
       if (functionMatches.length > 0) {
         const elements = [];
@@ -416,35 +413,35 @@ export class GuideSection extends Component {
           }
         }
         defaultTypeCell = (
-          <EuiTableRowCell key="type" header="Type" textOnly={false}>
-            <EuiCodeBlock whiteSpace="pre" {...codeBlockProps}>
+          <WuiTableRowCell key="type" header="Type" textOnly={false}>
+            <WuiCodeBlock whiteSpace="pre" {...codeBlockProps}>
               {elements}
-            </EuiCodeBlock>
-          </EuiTableRowCell>
+            </WuiCodeBlock>
+          </WuiTableRowCell>
         );
       }
 
       const cells = [
-        <EuiTableRowCell key="name" header="Prop">
+        <WuiTableRowCell key="name" header="Prop">
           {humanizedName}
-        </EuiTableRowCell>,
+        </WuiTableRowCell>,
         defaultTypeCell,
-        <EuiTableRowCell
+        <WuiTableRowCell
           key="defaultValue"
           header="Default"
           hideForMobile={!defaultValue}>
           {defaultValueMarkup}
-        </EuiTableRowCell>,
-        <EuiTableRowCell
+        </WuiTableRowCell>,
+        <WuiTableRowCell
           key="description"
           header="Note"
           isMobileFullWidth={true}
           hideForMobile={!propDescription}>
           {descriptionMarkup}
-        </EuiTableRowCell>,
+        </WuiTableRowCell>,
       ];
 
-      return <EuiTableRow key={propName}>{cells}</EuiTableRow>;
+      return <WuiTableRow key={propName}>{cells}</WuiTableRow>;
     });
 
     const extendedTypes = extendedInterfaces
@@ -457,9 +454,9 @@ export class GuideSection extends Component {
     }
     const extendedTypesElements = extendedTypes.map((type, index) => (
       <Fragment key={`extendedTypeValue-${extendedTypesInfo[type].name}`}>
-        <EuiLink href={extendedTypesInfo[type].url}>
+        <WuiLink href={extendedTypesInfo[type].url}>
           {extendedTypesInfo[type].name}
-        </EuiLink>
+        </WuiLink>
         {index + 1 < extendedTypes.length && ', '}
       </Fragment>
     ));
@@ -469,10 +466,10 @@ export class GuideSection extends Component {
     if (description) {
       descriptionElement = (
         <div key={`description-${componentName}`}>
-          <EuiText>
+          <WuiText>
             <p>{markup(description)}</p>
-          </EuiText>
-          <EuiSpacer size="m" id={`propsSpacer-${componentName}`} />
+          </WuiText>
+          <WuiSpacer size="m" id={`propsSpacer-${componentName}`} />
         </div>
       );
     }
@@ -481,9 +478,9 @@ export class GuideSection extends Component {
 
     if (rows.length) {
       table = (
-        <EuiTable compressed key={`propsTable-${componentName}`}>
-          <EuiTableHeader>
-            <EuiTableHeaderCell
+        <WuiTable compressed key={`propsTable-${componentName}`}>
+          <WuiTableHeader>
+            <WuiTableHeaderCell
               onSort={() => {
                 this.onSort(componentName);
               }}
@@ -497,46 +494,46 @@ export class GuideSection extends Component {
               }
               style={{ Width: '20%' }}>
               Prop
-            </EuiTableHeaderCell>
+            </WuiTableHeaderCell>
 
-            <EuiTableHeaderCell style={{ width: '15%' }}>
+            <WuiTableHeaderCell style={{ width: '15%' }}>
               Type
-            </EuiTableHeaderCell>
+            </WuiTableHeaderCell>
 
-            <EuiTableHeaderCell style={{ width: '15%' }}>
+            <WuiTableHeaderCell style={{ width: '15%' }}>
               Default
-            </EuiTableHeaderCell>
+            </WuiTableHeaderCell>
 
-            <EuiTableHeaderCell style={{ width: '50%' }}>
+            <WuiTableHeaderCell style={{ width: '50%' }}>
               Note
-            </EuiTableHeaderCell>
-          </EuiTableHeader>
+            </WuiTableHeaderCell>
+          </WuiTableHeader>
 
-          <EuiTableBody>{rows}</EuiTableBody>
-        </EuiTable>
+          <WuiTableBody>{rows}</WuiTableBody>
+        </WuiTable>
       );
     }
 
     return [
-      <EuiSpacer size="m" key={`propsSpacer-${componentName}-1`} />,
-      <EuiFlexGroup
+      <WuiSpacer size="m" key={`propsSpacer-${componentName}-1`} />,
+      <WuiFlexGroup
         key={`propsName-${componentName}`}
         alignItems="baseline"
         wrap>
-        <EuiFlexItem grow={false}>
-          <EuiTitle size="s">
+        <WuiFlexItem grow={false}>
+          <WuiTitle size="s">
             <h3 id={componentName}>{componentName}</h3>
-          </EuiTitle>
-        </EuiFlexItem>
+          </WuiTitle>
+        </WuiFlexItem>
         {extendedTypesElements.length > 0 && (
-          <EuiFlexItem>
-            <EuiText size="s">
+          <WuiFlexItem>
+            <WuiText size="s">
               <p>[ extends {extendedTypesElements} ]</p>
-            </EuiText>
-          </EuiFlexItem>
+            </WuiText>
+          </WuiFlexItem>
         )}
-      </EuiFlexGroup>,
-      <EuiSpacer size="s" key={`propsSpacer-${componentName}-2`} />,
+      </WuiFlexGroup>,
+      <WuiSpacer size="s" key={`propsSpacer-${componentName}-2`} />,
       descriptionElement,
       table,
     ];
@@ -557,10 +554,10 @@ export class GuideSection extends Component {
     if (this.props.title) {
       title = (
         <Fragment>
-          <EuiTitle>
+          <WuiTitle>
             <h2>{this.props.title}</h2>
-          </EuiTitle>
-          <EuiSpacer size="m" key="textSpacer" />
+          </WuiTitle>
+          <WuiSpacer size="m" key="textSpacer" />
         </Fragment>
       );
     }
@@ -573,8 +570,8 @@ export class GuideSection extends Component {
 
         {this.tabs.length > 0 && (
           <>
-            <EuiSpacer size="m" />
-            <EuiTabs>{this.renderTabs()}</EuiTabs>
+            <WuiSpacer size="m" />
+            <WuiTabs>{this.renderTabs()}</WuiTabs>
           </>
         )}
       </div>
@@ -582,10 +579,10 @@ export class GuideSection extends Component {
   }
 
   renderCode(name) {
-    const euiCodeBlock = (
-      <EuiCodeBlock language={nameToCodeClassMap[name]} overflowHeight={400}>
+    const wuiCodeBlock = (
+      <WuiCodeBlock language={nameToCodeClassMap[name]} overflowHeight={400}>
         {this.state.renderedCode}
-      </EuiCodeBlock>
+      </WuiCodeBlock>
     );
 
     const divProps = {
@@ -594,7 +591,7 @@ export class GuideSection extends Component {
     };
 
     const memoScrollUtility = () => {
-      const pre = this.refs.javascript.querySelector('.euiCodeBlock__pre');
+      const pre = this.refs.javascript.querySelector('.wuiCodeBlock__pre');
       this.memoScroll = pre.scrollTop;
     };
 
@@ -602,12 +599,12 @@ export class GuideSection extends Component {
       return (
         <div {...divProps} onScroll={memoScrollUtility}>
           {name === 'javascript' ? this.renderCodeSandBoxButton() : null}
-          {euiCodeBlock}
+          {wuiCodeBlock}
         </div>
       );
     }
 
-    return <div {...divProps}> {euiCodeBlock} </div>;
+    return <div {...divProps}> {wuiCodeBlock} </div>;
   }
 
   renderContent() {
@@ -616,37 +613,37 @@ export class GuideSection extends Component {
     }
 
     if (this.state.selectedTab.name === 'snippet') {
-      return <EuiErrorBoundary>{this.renderSnippet()}</EuiErrorBoundary>;
+      return <WuiErrorBoundary>{this.renderSnippet()}</WuiErrorBoundary>;
     }
 
     if (this.state.selectedTab.isCode) {
       return (
-        <EuiErrorBoundary>
+        <WuiErrorBoundary>
           {this.renderCode(this.state.selectedTab.name)}
-        </EuiErrorBoundary>
+        </WuiErrorBoundary>
       );
     }
 
     if (this.state.selectedTab.name === 'props') {
-      return <EuiErrorBoundary>{this.renderProps()}</EuiErrorBoundary>;
+      return <WuiErrorBoundary>{this.renderProps()}</WuiErrorBoundary>;
     }
 
     return (
-      <EuiErrorBoundary>
+      <WuiErrorBoundary>
         <div>
           <div className="guideSection__space" />
           {this.props.demo}
         </div>
-      </EuiErrorBoundary>
+      </WuiErrorBoundary>
     );
   }
 
   renderCodeSandBoxButton() {
     return (
       <CodeSandboxLink content={this.props.source[0].code.default}>
-        <EuiButtonEmpty size="xs" iconType="logoCodesandbox">
+        <WuiButtonEmpty size="xs" iconType="logoCodesandbox">
           Try out this demo on Code Sandbox
-        </EuiButtonEmpty>
+        </WuiButtonEmpty>
       </CodeSandboxLink>
     );
   }

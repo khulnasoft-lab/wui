@@ -1,40 +1,40 @@
-.euiMarkdownEditorFooter {
+.wuiMarkdownEditorFooter {
   display: inline-flex;
-  padding: $euiSizeXS;
-  border: $euiBorderThin;
+  padding: $wuiSizeXS;
+  border: $wuiBorderThin;
   align-items: center;
-  background: $euiPageBackgroundColor;
+  background: $wuiPageBackgroundColor;
 }
 
-.euiMarkdownEditorFooter__popover {
+.wuiMarkdownEditorFooter__popover {
   width: 300px;
 }
 
-.euiMarkdownEditorFooter__actions {
+.wuiMarkdownEditorFooter__actions {
   flex: 1;
   display: inline-flex;
 
   > button,
   > span {
-    margin-right: $euiSizeXS;
+    margin-right: $wuiSizeXS;
     align-self: center;
   }
 
   // overrides button empty styles so it can match the button icon
   // So when we have an error this button appears smoothly 
-  .euiMarkdownEditorFooter__uploadError {
+  .wuiMarkdownEditorFooter__uploadError {
     position: relative;
     left: -1px;
     line-height: 1;
-    border-radius: $euiBorderRadius;
+    border-radius: $wuiBorderRadius;
 
     > span {
-      padding: 0 $euiSizeXS;
+      padding: 0 $wuiSizeXS;
     }
   }
 }
 
-.euiMarkdownEditorFooter__help {
+.wuiMarkdownEditorFooter__help {
   justify-self: flex-end;
 
   // overrides the default button icon width size
@@ -43,9 +43,9 @@
   }
 }
 
-.euiMarkdownEditorFooter__errors {
+.wuiMarkdownEditorFooter__errors {
   // overrides the default button icon width size
   > svg {
-    color: $euiTextSubduedColor;
+    color: $wuiTextSubduedColor;
   }
 }

@@ -1,4 +1,17 @@
 /*
+ * Copyright 2022 Wazuh Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * NOTICE: THIS FILE HAS BEEN MODIFIED BY WAZUH INC UNDER COMPLIANCE WITH THE APACHE 2.0 LICENSE FROM THE ORIGINAL WORK
+ * OF THE COMPANY Elasticsearch B.V.
+ *
+ * THE FOLLOWING IS THE COPYRIGHT OF THE ORIGINAL DOCUMENT:
+ *
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +34,20 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiFlyout, EuiFlyoutSize } from './flyout';
+import { WuiFlyout, WuiFlyoutSize } from './flyout';
 
 jest.mock('../overlay_mask', () => ({
-  EuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
+  WuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
     <div {...props} />
   ),
 }));
 
-const SIZES: EuiFlyoutSize[] = ['s', 'm', 'l'];
+const SIZES: WuiFlyoutSize[] = ['s', 'm', 'l'];
 
-describe('EuiFlyout', () => {
+describe('WuiFlyout', () => {
   test('is rendered', () => {
     const component = mount(
-      <EuiFlyout {...requiredProps} onClose={() => {}} />
+      <WuiFlyout {...requiredProps} onClose={() => {}} />
     );
 
     expect(takeMountedSnapshot(component)).toMatchSnapshot();
@@ -42,36 +55,36 @@ describe('EuiFlyout', () => {
 
   describe('props', () => {
     test('close button is not rendered', () => {
-      const component = mount(<EuiFlyout onClose={() => {}} hideCloseButton />);
+      const component = mount(<WuiFlyout onClose={() => {}} hideCloseButton />);
 
       expect(takeMountedSnapshot(component)).toMatchSnapshot();
     });
 
     describe('closeButtonLabel', () => {
       test('has a default label for the close button', () => {
-        const component = render(<EuiFlyout onClose={() => {}} />);
+        const component = render(<WuiFlyout onClose={() => {}} />);
         const label = component
-          .find('[data-test-subj="euiFlyoutCloseButton"]')
+          .find('[data-test-subj="wuiFlyoutCloseButton"]')
           .prop('aria-label');
         expect(label).toBe('Close this dialog');
       });
 
       test('sets a custom label for the close button', () => {
         const component = render(
-          <EuiFlyout
+          <WuiFlyout
             onClose={() => {}}
             closeButtonAriaLabel="Closes specific flyout"
           />
         );
         const label = component
-          .find('[data-test-subj="euiFlyoutCloseButton"]')
+          .find('[data-test-subj="wuiFlyoutCloseButton"]')
           .prop('aria-label');
         expect(label).toBe('Closes specific flyout');
       });
     });
 
     test('accepts div props', () => {
-      const component = mount(<EuiFlyout onClose={() => {}} id="imaflyout" />);
+      const component = mount(<WuiFlyout onClose={() => {}} id="imaflyout" />);
 
       expect(takeMountedSnapshot(component)).toMatchSnapshot();
     });
@@ -79,7 +92,7 @@ describe('EuiFlyout', () => {
     describe('size', () => {
       SIZES.forEach(size => {
         it(`${size} is rendered`, () => {
-          const component = mount(<EuiFlyout onClose={() => {}} size={size} />);
+          const component = mount(<WuiFlyout onClose={() => {}} size={size} />);
 
           expect(takeMountedSnapshot(component)).toMatchSnapshot();
         });
@@ -89,7 +102,7 @@ describe('EuiFlyout', () => {
     describe('max width', () => {
       test('can be set to a default', () => {
         const component = mount(
-          <EuiFlyout onClose={() => {}} maxWidth={true} />
+          <WuiFlyout onClose={() => {}} maxWidth={true} />
         );
 
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
@@ -97,7 +110,7 @@ describe('EuiFlyout', () => {
 
       test('can be set to a custom number', () => {
         const component = mount(
-          <EuiFlyout onClose={() => {}} maxWidth={1024} />
+          <WuiFlyout onClose={() => {}} maxWidth={1024} />
         );
 
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
@@ -105,7 +118,7 @@ describe('EuiFlyout', () => {
 
       test('can be set to a custom value and measurement', () => {
         const component = mount(
-          <EuiFlyout onClose={() => {}} maxWidth="24rem" />
+          <WuiFlyout onClose={() => {}} maxWidth="24rem" />
         );
 
         expect(takeMountedSnapshot(component)).toMatchSnapshot();
@@ -115,7 +128,7 @@ describe('EuiFlyout', () => {
     describe('ownFocus', () => {
       test('is rendered', () => {
         const component = mount(
-          <EuiFlyout onClose={() => {}} ownFocus={true} />
+          <WuiFlyout onClose={() => {}} ownFocus={true} />
         );
 
         expect(
@@ -125,7 +138,7 @@ describe('EuiFlyout', () => {
 
       test('can alter mask props with maskProps without throwing error', () => {
         const component = mount(
-          <EuiFlyout
+          <WuiFlyout
             onClose={() => {}}
             ownFocus={true}
             maskProps={{ headerZindexLocation: 'above' }}
